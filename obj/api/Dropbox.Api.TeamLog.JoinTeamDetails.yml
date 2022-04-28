@@ -1,0 +1,1269 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.JoinTeamDetails
+  id: JoinTeamDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.JoinTeamDetails.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.UserLinkedAppLogInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.LinkedDeviceLogInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.FolderLogInfo},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})
+  - Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedApps
+  - Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedDevices
+  - Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedSharedFolders
+  - Dropbox.Api.TeamLog.JoinTeamDetails.LinkedApps
+  - Dropbox.Api.TeamLog.JoinTeamDetails.LinkedDevices
+  - Dropbox.Api.TeamLog.JoinTeamDetails.LinkedSharedFolders
+  - Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedAppsTruncated
+  - Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedDevicesTruncated
+  - Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedSharedFoldersTruncated
+  langs:
+  - csharp
+  - vb
+  name: JoinTeamDetails
+  nameWithType: JoinTeamDetails
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: JoinTeamDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Additional information relevant when a new member joins the team.</p>\n"
+  example: []
+  syntax:
+    content: public class JoinTeamDetails
+    content.vb: Public Class JoinTeamDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.UserLinkedAppLogInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.LinkedDeviceLogInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.FolderLogInfo},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})
+  commentId: M:Dropbox.Api.TeamLog.JoinTeamDetails.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.UserLinkedAppLogInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.LinkedDeviceLogInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.FolderLogInfo},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.UserLinkedAppLogInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.LinkedDeviceLogInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.FolderLogInfo},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})'
+  parent: Dropbox.Api.TeamLog.JoinTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: JoinTeamDetails(IEnumerable<UserLinkedAppLogInfo>, IEnumerable<LinkedDeviceLogInfo>, IEnumerable<FolderLogInfo>, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>)
+  nameWithType: JoinTeamDetails.JoinTeamDetails(IEnumerable<UserLinkedAppLogInfo>, IEnumerable<LinkedDeviceLogInfo>, IEnumerable<FolderLogInfo>, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>)
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.JoinTeamDetails(System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.UserLinkedAppLogInfo>, System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.LinkedDeviceLogInfo>, System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.FolderLogInfo>, System.Nullable<System.Boolean>, System.Nullable<System.Boolean>, System.Nullable<System.Boolean>, System.Nullable<System.Boolean>, System.Nullable<System.Boolean>, System.Nullable<System.Boolean>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.JoinTeamDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public JoinTeamDetails(IEnumerable<UserLinkedAppLogInfo> linkedApps, IEnumerable<LinkedDeviceLogInfo> linkedDevices, IEnumerable<FolderLogInfo> linkedSharedFolders, bool? wasLinkedAppsTruncated = null, bool? wasLinkedDevicesTruncated = null, bool? wasLinkedSharedFoldersTruncated = null, bool? hasLinkedApps = null, bool? hasLinkedDevices = null, bool? hasLinkedSharedFolders = null)
+    parameters:
+    - id: linkedApps
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.UserLinkedAppLogInfo}
+      description: >-
+        Linked applications. (Deprecated) Please use
+
+        has_linked_apps boolean field instead.
+    - id: linkedDevices
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.LinkedDeviceLogInfo}
+      description: >-
+        Linked devices. (Deprecated) Please use
+
+        has_linked_devices boolean field instead.
+    - id: linkedSharedFolders
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.FolderLogInfo}
+      description: >-
+        Linked shared folders. (Deprecated) Please use
+
+        has_linked_shared_folders boolean field instead.
+    - id: wasLinkedAppsTruncated
+      type: System.Nullable{System.Boolean}
+      description: >-
+        (Deprecated) True if the linked_apps list was
+
+        truncated to the maximum supported length (50).
+    - id: wasLinkedDevicesTruncated
+      type: System.Nullable{System.Boolean}
+      description: >-
+        (Deprecated) True if the linked_devices
+
+        list was truncated to the maximum supported length (50).
+    - id: wasLinkedSharedFoldersTruncated
+      type: System.Nullable{System.Boolean}
+      description: >-
+        (Deprecated) True if the
+
+        linked_shared_folders list was truncated to the maximum supported length
+
+        (50).
+    - id: hasLinkedApps
+      type: System.Nullable{System.Boolean}
+      description: True if the user had linked apps at event time.
+    - id: hasLinkedDevices
+      type: System.Nullable{System.Boolean}
+      description: >-
+        True if the user had linked apps at event
+
+        time.
+    - id: hasLinkedSharedFolders
+      type: System.Nullable{System.Boolean}
+      description: >-
+        True if the user had linked shared folders at
+
+        event time.
+    content.vb: Public Sub New(linkedApps As IEnumerable(Of UserLinkedAppLogInfo), linkedDevices As IEnumerable(Of LinkedDeviceLogInfo), linkedSharedFolders As IEnumerable(Of FolderLogInfo), wasLinkedAppsTruncated As Boolean? = Nothing, wasLinkedDevicesTruncated As Boolean? = Nothing, wasLinkedSharedFoldersTruncated As Boolean? = Nothing, hasLinkedApps As Boolean? = Nothing, hasLinkedDevices As Boolean? = Nothing, hasLinkedSharedFolders As Boolean? = Nothing)
+  overload: Dropbox.Api.TeamLog.JoinTeamDetails.#ctor*
+  nameWithType.vb: JoinTeamDetails.JoinTeamDetails(IEnumerable(Of UserLinkedAppLogInfo), IEnumerable(Of LinkedDeviceLogInfo), IEnumerable(Of FolderLogInfo), Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.JoinTeamDetails.JoinTeamDetails(System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.UserLinkedAppLogInfo), System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.LinkedDeviceLogInfo), System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.FolderLogInfo), System.Nullable(Of System.Boolean), System.Nullable(Of System.Boolean), System.Nullable(Of System.Boolean), System.Nullable(Of System.Boolean), System.Nullable(Of System.Boolean), System.Nullable(Of System.Boolean))
+  name.vb: JoinTeamDetails(IEnumerable(Of UserLinkedAppLogInfo), IEnumerable(Of LinkedDeviceLogInfo), IEnumerable(Of FolderLogInfo), Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean))
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedApps
+  commentId: P:Dropbox.Api.TeamLog.JoinTeamDetails.LinkedApps
+  id: LinkedApps
+  parent: Dropbox.Api.TeamLog.JoinTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: LinkedApps
+  nameWithType: JoinTeamDetails.LinkedApps
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedApps
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LinkedApps
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+    startLine: 108
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Linked applications. (Deprecated) Please use has_linked_apps boolean field\ninstead.</p>\n"
+  example: []
+  syntax:
+    content: public IList<UserLinkedAppLogInfo> LinkedApps { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.TeamLog.UserLinkedAppLogInfo}
+    content.vb: Public Property LinkedApps As IList(Of UserLinkedAppLogInfo)
+  overload: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedApps*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedDevices
+  commentId: P:Dropbox.Api.TeamLog.JoinTeamDetails.LinkedDevices
+  id: LinkedDevices
+  parent: Dropbox.Api.TeamLog.JoinTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: LinkedDevices
+  nameWithType: JoinTeamDetails.LinkedDevices
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedDevices
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LinkedDevices
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+    startLine: 114
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Linked devices. (Deprecated) Please use has_linked_devices boolean field\ninstead.</p>\n"
+  example: []
+  syntax:
+    content: public IList<LinkedDeviceLogInfo> LinkedDevices { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.TeamLog.LinkedDeviceLogInfo}
+    content.vb: Public Property LinkedDevices As IList(Of LinkedDeviceLogInfo)
+  overload: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedDevices*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedSharedFolders
+  commentId: P:Dropbox.Api.TeamLog.JoinTeamDetails.LinkedSharedFolders
+  id: LinkedSharedFolders
+  parent: Dropbox.Api.TeamLog.JoinTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: LinkedSharedFolders
+  nameWithType: JoinTeamDetails.LinkedSharedFolders
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedSharedFolders
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LinkedSharedFolders
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+    startLine: 120
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Linked shared folders. (Deprecated) Please use has_linked_shared_folders\nboolean field instead.</p>\n"
+  example: []
+  syntax:
+    content: public IList<FolderLogInfo> LinkedSharedFolders { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.TeamLog.FolderLogInfo}
+    content.vb: Public Property LinkedSharedFolders As IList(Of FolderLogInfo)
+  overload: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedSharedFolders*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedAppsTruncated
+  commentId: P:Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedAppsTruncated
+  id: WasLinkedAppsTruncated
+  parent: Dropbox.Api.TeamLog.JoinTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: WasLinkedAppsTruncated
+  nameWithType: JoinTeamDetails.WasLinkedAppsTruncated
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedAppsTruncated
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: WasLinkedAppsTruncated
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+    startLine: 126
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>(Deprecated) True if the linked_apps list was truncated to the maximum\nsupported length (50).</p>\n"
+  example: []
+  syntax:
+    content: public bool? WasLinkedAppsTruncated { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property WasLinkedAppsTruncated As Boolean?
+  overload: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedAppsTruncated*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedDevicesTruncated
+  commentId: P:Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedDevicesTruncated
+  id: WasLinkedDevicesTruncated
+  parent: Dropbox.Api.TeamLog.JoinTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: WasLinkedDevicesTruncated
+  nameWithType: JoinTeamDetails.WasLinkedDevicesTruncated
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedDevicesTruncated
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: WasLinkedDevicesTruncated
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+    startLine: 132
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>(Deprecated) True if the linked_devices list was truncated to the maximum\nsupported length (50).</p>\n"
+  example: []
+  syntax:
+    content: public bool? WasLinkedDevicesTruncated { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property WasLinkedDevicesTruncated As Boolean?
+  overload: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedDevicesTruncated*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedSharedFoldersTruncated
+  commentId: P:Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedSharedFoldersTruncated
+  id: WasLinkedSharedFoldersTruncated
+  parent: Dropbox.Api.TeamLog.JoinTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: WasLinkedSharedFoldersTruncated
+  nameWithType: JoinTeamDetails.WasLinkedSharedFoldersTruncated
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedSharedFoldersTruncated
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: WasLinkedSharedFoldersTruncated
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>(Deprecated) True if the linked_shared_folders list was truncated to the\nmaximum supported length (50).</p>\n"
+  example: []
+  syntax:
+    content: public bool? WasLinkedSharedFoldersTruncated { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property WasLinkedSharedFoldersTruncated As Boolean?
+  overload: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedSharedFoldersTruncated*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedApps
+  commentId: P:Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedApps
+  id: HasLinkedApps
+  parent: Dropbox.Api.TeamLog.JoinTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: HasLinkedApps
+  nameWithType: JoinTeamDetails.HasLinkedApps
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedApps
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: HasLinkedApps
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+    startLine: 143
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>True if the user had linked apps at event time.</p>\n"
+  example: []
+  syntax:
+    content: public bool? HasLinkedApps { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property HasLinkedApps As Boolean?
+  overload: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedApps*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedDevices
+  commentId: P:Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedDevices
+  id: HasLinkedDevices
+  parent: Dropbox.Api.TeamLog.JoinTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: HasLinkedDevices
+  nameWithType: JoinTeamDetails.HasLinkedDevices
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedDevices
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: HasLinkedDevices
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+    startLine: 148
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>True if the user had linked apps at event time.</p>\n"
+  example: []
+  syntax:
+    content: public bool? HasLinkedDevices { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property HasLinkedDevices As Boolean?
+  overload: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedDevices*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedSharedFolders
+  commentId: P:Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedSharedFolders
+  id: HasLinkedSharedFolders
+  parent: Dropbox.Api.TeamLog.JoinTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: HasLinkedSharedFolders
+  nameWithType: JoinTeamDetails.HasLinkedSharedFolders
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedSharedFolders
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: HasLinkedSharedFolders
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/JoinTeamDetails.cs
+    startLine: 153
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>True if the user had linked shared folders at event time.</p>\n"
+  example: []
+  syntax:
+    content: public bool? HasLinkedSharedFolders { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property HasLinkedSharedFolders As Boolean?
+  overload: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedSharedFolders*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.JoinTeamDetails
+  parent: Dropbox.Api.TeamLog
+  name: JoinTeamDetails
+  nameWithType: JoinTeamDetails
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.JoinTeamDetails.#ctor
+  name: JoinTeamDetails
+  nameWithType: JoinTeamDetails.JoinTeamDetails
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.JoinTeamDetails
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.UserLinkedAppLogInfo}
+  commentId: T:System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.UserLinkedAppLogInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<UserLinkedAppLogInfo>
+  nameWithType: IEnumerable<UserLinkedAppLogInfo>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.UserLinkedAppLogInfo>
+  nameWithType.vb: IEnumerable(Of UserLinkedAppLogInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.UserLinkedAppLogInfo)
+  name.vb: IEnumerable(Of UserLinkedAppLogInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.UserLinkedAppLogInfo
+    name: UserLinkedAppLogInfo
+    nameWithType: UserLinkedAppLogInfo
+    fullName: Dropbox.Api.TeamLog.UserLinkedAppLogInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.UserLinkedAppLogInfo
+    name: UserLinkedAppLogInfo
+    nameWithType: UserLinkedAppLogInfo
+    fullName: Dropbox.Api.TeamLog.UserLinkedAppLogInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.LinkedDeviceLogInfo}
+  commentId: T:System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.LinkedDeviceLogInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<LinkedDeviceLogInfo>
+  nameWithType: IEnumerable<LinkedDeviceLogInfo>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.LinkedDeviceLogInfo>
+  nameWithType.vb: IEnumerable(Of LinkedDeviceLogInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.LinkedDeviceLogInfo)
+  name.vb: IEnumerable(Of LinkedDeviceLogInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+    name: LinkedDeviceLogInfo
+    nameWithType: LinkedDeviceLogInfo
+    fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+    name: LinkedDeviceLogInfo
+    nameWithType: LinkedDeviceLogInfo
+    fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.FolderLogInfo}
+  commentId: T:System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.FolderLogInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<FolderLogInfo>
+  nameWithType: IEnumerable<FolderLogInfo>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.FolderLogInfo>
+  nameWithType.vb: IEnumerable(Of FolderLogInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.FolderLogInfo)
+  name.vb: IEnumerable(Of FolderLogInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.FolderLogInfo
+    name: FolderLogInfo
+    nameWithType: FolderLogInfo
+    fullName: Dropbox.Api.TeamLog.FolderLogInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.FolderLogInfo
+    name: FolderLogInfo
+    nameWithType: FolderLogInfo
+    fullName: Dropbox.Api.TeamLog.FolderLogInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedApps*
+  commentId: Overload:Dropbox.Api.TeamLog.JoinTeamDetails.LinkedApps
+  name: LinkedApps
+  nameWithType: JoinTeamDetails.LinkedApps
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedApps
+- uid: System.Collections.Generic.IList{Dropbox.Api.TeamLog.UserLinkedAppLogInfo}
+  commentId: T:System.Collections.Generic.IList{Dropbox.Api.TeamLog.UserLinkedAppLogInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<UserLinkedAppLogInfo>
+  nameWithType: IList<UserLinkedAppLogInfo>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.TeamLog.UserLinkedAppLogInfo>
+  nameWithType.vb: IList(Of UserLinkedAppLogInfo)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.TeamLog.UserLinkedAppLogInfo)
+  name.vb: IList(Of UserLinkedAppLogInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.UserLinkedAppLogInfo
+    name: UserLinkedAppLogInfo
+    nameWithType: UserLinkedAppLogInfo
+    fullName: Dropbox.Api.TeamLog.UserLinkedAppLogInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.UserLinkedAppLogInfo
+    name: UserLinkedAppLogInfo
+    nameWithType: UserLinkedAppLogInfo
+    fullName: Dropbox.Api.TeamLog.UserLinkedAppLogInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedDevices*
+  commentId: Overload:Dropbox.Api.TeamLog.JoinTeamDetails.LinkedDevices
+  name: LinkedDevices
+  nameWithType: JoinTeamDetails.LinkedDevices
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedDevices
+- uid: System.Collections.Generic.IList{Dropbox.Api.TeamLog.LinkedDeviceLogInfo}
+  commentId: T:System.Collections.Generic.IList{Dropbox.Api.TeamLog.LinkedDeviceLogInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<LinkedDeviceLogInfo>
+  nameWithType: IList<LinkedDeviceLogInfo>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.TeamLog.LinkedDeviceLogInfo>
+  nameWithType.vb: IList(Of LinkedDeviceLogInfo)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.TeamLog.LinkedDeviceLogInfo)
+  name.vb: IList(Of LinkedDeviceLogInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+    name: LinkedDeviceLogInfo
+    nameWithType: LinkedDeviceLogInfo
+    fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+    name: LinkedDeviceLogInfo
+    nameWithType: LinkedDeviceLogInfo
+    fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedSharedFolders*
+  commentId: Overload:Dropbox.Api.TeamLog.JoinTeamDetails.LinkedSharedFolders
+  name: LinkedSharedFolders
+  nameWithType: JoinTeamDetails.LinkedSharedFolders
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.LinkedSharedFolders
+- uid: System.Collections.Generic.IList{Dropbox.Api.TeamLog.FolderLogInfo}
+  commentId: T:System.Collections.Generic.IList{Dropbox.Api.TeamLog.FolderLogInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<FolderLogInfo>
+  nameWithType: IList<FolderLogInfo>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.TeamLog.FolderLogInfo>
+  nameWithType.vb: IList(Of FolderLogInfo)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.TeamLog.FolderLogInfo)
+  name.vb: IList(Of FolderLogInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.FolderLogInfo
+    name: FolderLogInfo
+    nameWithType: FolderLogInfo
+    fullName: Dropbox.Api.TeamLog.FolderLogInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.FolderLogInfo
+    name: FolderLogInfo
+    nameWithType: FolderLogInfo
+    fullName: Dropbox.Api.TeamLog.FolderLogInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedAppsTruncated*
+  commentId: Overload:Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedAppsTruncated
+  name: WasLinkedAppsTruncated
+  nameWithType: JoinTeamDetails.WasLinkedAppsTruncated
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedAppsTruncated
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedDevicesTruncated*
+  commentId: Overload:Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedDevicesTruncated
+  name: WasLinkedDevicesTruncated
+  nameWithType: JoinTeamDetails.WasLinkedDevicesTruncated
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedDevicesTruncated
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedSharedFoldersTruncated*
+  commentId: Overload:Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedSharedFoldersTruncated
+  name: WasLinkedSharedFoldersTruncated
+  nameWithType: JoinTeamDetails.WasLinkedSharedFoldersTruncated
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.WasLinkedSharedFoldersTruncated
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedApps*
+  commentId: Overload:Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedApps
+  name: HasLinkedApps
+  nameWithType: JoinTeamDetails.HasLinkedApps
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedApps
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedDevices*
+  commentId: Overload:Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedDevices
+  name: HasLinkedDevices
+  nameWithType: JoinTeamDetails.HasLinkedDevices
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedDevices
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedSharedFolders*
+  commentId: Overload:Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedSharedFolders
+  name: HasLinkedSharedFolders
+  nameWithType: JoinTeamDetails.HasLinkedSharedFolders
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails.HasLinkedSharedFolders

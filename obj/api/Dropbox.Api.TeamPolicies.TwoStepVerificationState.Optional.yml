@@ -1,0 +1,455 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationState.Optional
+  commentId: T:Dropbox.Api.TeamPolicies.TwoStepVerificationState.Optional
+  id: TwoStepVerificationState.Optional
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationState.Optional.Instance
+  langs:
+  - csharp
+  - vb
+  name: TwoStepVerificationState.Optional
+  nameWithType: TwoStepVerificationState.Optional
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationState.Optional
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationState.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Optional
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationState.cs
+    startLine: 282
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Optional require two factor authorization.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Optional : TwoStepVerificationState'
+    content.vb: >-
+      Public NotInheritable Class Optional
+          Inherits TwoStepVerificationState
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationState
+  inheritedMembers:
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsRequired
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsRequired
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsOptional
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsOptional
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsDisabled
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsDisabled
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsOther
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationState.Optional.Instance
+  commentId: F:Dropbox.Api.TeamPolicies.TwoStepVerificationState.Optional.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationState.Optional
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: TwoStepVerificationState.Optional.Instance
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationState.Optional.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationState.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationState.cs
+    startLine: 306
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>A singleton instance of Optional</p>\n"
+  example: []
+  syntax:
+    content: public static readonly TwoStepVerificationState.Optional Instance
+    return:
+      type: Dropbox.Api.TeamPolicies.TwoStepVerificationState.Optional
+    content.vb: Public Shared ReadOnly Instance As TwoStepVerificationState.Optional
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationState
+  commentId: T:Dropbox.Api.TeamPolicies.TwoStepVerificationState
+  parent: Dropbox.Api.TeamPolicies
+  name: TwoStepVerificationState
+  nameWithType: TwoStepVerificationState
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationState
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsRequired
+  commentId: P:Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsRequired
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationState
+  name: IsRequired
+  nameWithType: TwoStepVerificationState.IsRequired
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsRequired
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsRequired
+  commentId: P:Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsRequired
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationState
+  name: AsRequired
+  nameWithType: TwoStepVerificationState.AsRequired
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsRequired
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsOptional
+  commentId: P:Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsOptional
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationState
+  name: IsOptional
+  nameWithType: TwoStepVerificationState.IsOptional
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsOptional
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsOptional
+  commentId: P:Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsOptional
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationState
+  name: AsOptional
+  nameWithType: TwoStepVerificationState.AsOptional
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsOptional
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsDisabled
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationState
+  name: IsDisabled
+  nameWithType: TwoStepVerificationState.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsDisabled
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsDisabled
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationState
+  name: AsDisabled
+  nameWithType: TwoStepVerificationState.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsDisabled
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsOther
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationState
+  name: IsOther
+  nameWithType: TwoStepVerificationState.IsOther
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationState.IsOther
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsOther
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationState
+  name: AsOther
+  nameWithType: TwoStepVerificationState.AsOther
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationState.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationState.Optional
+  commentId: T:Dropbox.Api.TeamPolicies.TwoStepVerificationState.Optional
+  parent: Dropbox.Api.TeamPolicies
+  name: TwoStepVerificationState.Optional
+  nameWithType: TwoStepVerificationState.Optional
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationState.Optional

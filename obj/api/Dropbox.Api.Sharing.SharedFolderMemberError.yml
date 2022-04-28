@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMemberError
+  id: SharedFolderMemberError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.SharedFolderMemberError.#ctor
+  - Dropbox.Api.Sharing.SharedFolderMemberError.AsInvalidDropboxId
+  - Dropbox.Api.Sharing.SharedFolderMemberError.AsNoExplicitAccess
+  - Dropbox.Api.Sharing.SharedFolderMemberError.AsNotAMember
+  - Dropbox.Api.Sharing.SharedFolderMemberError.AsOther
+  - Dropbox.Api.Sharing.SharedFolderMemberError.IsInvalidDropboxId
+  - Dropbox.Api.Sharing.SharedFolderMemberError.IsNoExplicitAccess
+  - Dropbox.Api.Sharing.SharedFolderMemberError.IsNotAMember
+  - Dropbox.Api.Sharing.SharedFolderMemberError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMemberError
+  nameWithType: SharedFolderMemberError
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SharedFolderMemberError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The shared folder member error object</p>\n"
+  example: []
+  syntax:
+    content: public class SharedFolderMemberError
+    content.vb: Public Class SharedFolderMemberError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.SharedFolderMemberError.InvalidDropboxId
+  - Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess
+  - Dropbox.Api.Sharing.SharedFolderMemberError.NotAMember
+  - Dropbox.Api.Sharing.SharedFolderMemberError.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.#ctor
+  commentId: M:Dropbox.Api.Sharing.SharedFolderMemberError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMemberError()
+  nameWithType: SharedFolderMemberError.SharedFolderMemberError()
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.SharedFolderMemberError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.SharedFolderMemberError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMemberError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.SharedFolderMemberError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.IsInvalidDropboxId
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.IsInvalidDropboxId
+  id: IsInvalidDropboxId
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidDropboxId
+  nameWithType: SharedFolderMemberError.IsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.IsInvalidDropboxId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInvalidDropboxId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidDropboxId</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidDropboxId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidDropboxId As Boolean
+  overload: Dropbox.Api.Sharing.SharedFolderMemberError.IsInvalidDropboxId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.AsInvalidDropboxId
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.AsInvalidDropboxId
+  id: AsInvalidDropboxId
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidDropboxId
+  nameWithType: SharedFolderMemberError.AsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.AsInvalidDropboxId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInvalidDropboxId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InvalidDropboxId, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMemberError.InvalidDropboxId AsInvalidDropboxId { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedFolderMemberError.InvalidDropboxId
+    content.vb: Public ReadOnly Property AsInvalidDropboxId As SharedFolderMemberError.InvalidDropboxId
+  overload: Dropbox.Api.Sharing.SharedFolderMemberError.AsInvalidDropboxId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.IsNotAMember
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.IsNotAMember
+  id: IsNotAMember
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  langs:
+  - csharp
+  - vb
+  name: IsNotAMember
+  nameWithType: SharedFolderMemberError.IsNotAMember
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.IsNotAMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNotAMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is NotAMember</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotAMember { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotAMember As Boolean
+  overload: Dropbox.Api.Sharing.SharedFolderMemberError.IsNotAMember*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.AsNotAMember
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.AsNotAMember
+  id: AsNotAMember
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  langs:
+  - csharp
+  - vb
+  name: AsNotAMember
+  nameWithType: SharedFolderMemberError.AsNotAMember
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.AsNotAMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNotAMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a NotAMember, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMemberError.NotAMember AsNotAMember { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedFolderMemberError.NotAMember
+    content.vb: Public ReadOnly Property AsNotAMember As SharedFolderMemberError.NotAMember
+  overload: Dropbox.Api.Sharing.SharedFolderMemberError.AsNotAMember*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.IsNoExplicitAccess
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.IsNoExplicitAccess
+  id: IsNoExplicitAccess
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  langs:
+  - csharp
+  - vb
+  name: IsNoExplicitAccess
+  nameWithType: SharedFolderMemberError.IsNoExplicitAccess
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.IsNoExplicitAccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNoExplicitAccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is NoExplicitAccess</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNoExplicitAccess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNoExplicitAccess As Boolean
+  overload: Dropbox.Api.Sharing.SharedFolderMemberError.IsNoExplicitAccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.AsNoExplicitAccess
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.AsNoExplicitAccess
+  id: AsNoExplicitAccess
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  langs:
+  - csharp
+  - vb
+  name: AsNoExplicitAccess
+  nameWithType: SharedFolderMemberError.AsNoExplicitAccess
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.AsNoExplicitAccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNoExplicitAccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a NoExplicitAccess, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMemberError.NoExplicitAccess AsNoExplicitAccess { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess
+    content.vb: Public ReadOnly Property AsNoExplicitAccess As SharedFolderMemberError.NoExplicitAccess
+  overload: Dropbox.Api.Sharing.SharedFolderMemberError.AsNoExplicitAccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.IsOther
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SharedFolderMemberError.IsOther
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.SharedFolderMemberError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.AsOther
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SharedFolderMemberError.AsOther
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMemberError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedFolderMemberError.Other
+    content.vb: Public ReadOnly Property AsOther As SharedFolderMemberError.Other
+  overload: Dropbox.Api.Sharing.SharedFolderMemberError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMemberError
+  parent: Dropbox.Api.Sharing
+  name: SharedFolderMemberError
+  nameWithType: SharedFolderMemberError
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMemberError.#ctor
+  name: SharedFolderMemberError
+  nameWithType: SharedFolderMemberError.SharedFolderMemberError
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.SharedFolderMemberError
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.IsInvalidDropboxId*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMemberError.IsInvalidDropboxId
+  name: IsInvalidDropboxId
+  nameWithType: SharedFolderMemberError.IsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.IsInvalidDropboxId
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.AsInvalidDropboxId*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMemberError.AsInvalidDropboxId
+  name: AsInvalidDropboxId
+  nameWithType: SharedFolderMemberError.AsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.AsInvalidDropboxId
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.InvalidDropboxId
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMemberError.InvalidDropboxId
+  parent: Dropbox.Api.Sharing
+  name: SharedFolderMemberError.InvalidDropboxId
+  nameWithType: SharedFolderMemberError.InvalidDropboxId
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.InvalidDropboxId
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.IsNotAMember*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMemberError.IsNotAMember
+  name: IsNotAMember
+  nameWithType: SharedFolderMemberError.IsNotAMember
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.IsNotAMember
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.AsNotAMember*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMemberError.AsNotAMember
+  name: AsNotAMember
+  nameWithType: SharedFolderMemberError.AsNotAMember
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.AsNotAMember
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.NotAMember
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMemberError.NotAMember
+  parent: Dropbox.Api.Sharing
+  name: SharedFolderMemberError.NotAMember
+  nameWithType: SharedFolderMemberError.NotAMember
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.NotAMember
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.IsNoExplicitAccess*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMemberError.IsNoExplicitAccess
+  name: IsNoExplicitAccess
+  nameWithType: SharedFolderMemberError.IsNoExplicitAccess
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.IsNoExplicitAccess
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.AsNoExplicitAccess*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMemberError.AsNoExplicitAccess
+  name: AsNoExplicitAccess
+  nameWithType: SharedFolderMemberError.AsNoExplicitAccess
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.AsNoExplicitAccess
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess
+  parent: Dropbox.Api.Sharing
+  name: SharedFolderMemberError.NoExplicitAccess
+  nameWithType: SharedFolderMemberError.NoExplicitAccess
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMemberError.IsOther
+  name: IsOther
+  nameWithType: SharedFolderMemberError.IsOther
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.IsOther
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMemberError.AsOther
+  name: AsOther
+  nameWithType: SharedFolderMemberError.AsOther
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.AsOther
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.Other
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMemberError.Other
+  parent: Dropbox.Api.Sharing
+  name: SharedFolderMemberError.Other
+  nameWithType: SharedFolderMemberError.Other
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.Other

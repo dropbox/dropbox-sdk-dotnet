@@ -1,0 +1,522 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession
+  commentId: T:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession
+  id: LinkedDeviceLogInfo.LegacyDeviceSession
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.#ctor(Dropbox.Api.TeamLog.LegacyDeviceSessionLogInfo)
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.Value
+  langs:
+  - csharp
+  - vb
+  name: LinkedDeviceLogInfo.LegacyDeviceSession
+  nameWithType: LinkedDeviceLogInfo.LegacyDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LinkedDeviceLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LegacyDeviceSession
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LinkedDeviceLogInfo.cs
+    startLine: 332
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>legacy device session&apos;s details.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class LegacyDeviceSession : LinkedDeviceLogInfo'
+    content.vb: >-
+      Public NotInheritable Class LegacyDeviceSession
+          Inherits LinkedDeviceLogInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsDesktopDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsDesktopDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsLegacyDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsLegacyDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsMobileDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsMobileDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsWebDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsWebDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsOther
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.#ctor(Dropbox.Api.TeamLog.LegacyDeviceSessionLogInfo)
+  commentId: M:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.#ctor(Dropbox.Api.TeamLog.LegacyDeviceSessionLogInfo)
+  id: '#ctor(Dropbox.Api.TeamLog.LegacyDeviceSessionLogInfo)'
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession
+  langs:
+  - csharp
+  - vb
+  name: LegacyDeviceSession(LegacyDeviceSessionLogInfo)
+  nameWithType: LinkedDeviceLogInfo.LegacyDeviceSession.LegacyDeviceSession(LegacyDeviceSessionLogInfo)
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.LegacyDeviceSession(Dropbox.Api.TeamLog.LegacyDeviceSessionLogInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LinkedDeviceLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LinkedDeviceLogInfo.cs
+    startLine: 351
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LegacyDeviceSession(LegacyDeviceSessionLogInfo value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.TeamLog.LegacyDeviceSessionLogInfo
+      description: The value
+    content.vb: Public Sub New(value As LegacyDeviceSessionLogInfo)
+  overload: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.Value
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.Value
+  id: Value
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: LinkedDeviceLogInfo.LegacyDeviceSession.Value
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LinkedDeviceLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LinkedDeviceLogInfo.cs
+    startLine: 366
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public LegacyDeviceSessionLogInfo Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LegacyDeviceSessionLogInfo
+    content.vb: Public ReadOnly Property Value As LegacyDeviceSessionLogInfo
+  overload: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  commentId: T:Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: LinkedDeviceLogInfo
+  nameWithType: LinkedDeviceLogInfo
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsDesktopDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsDesktopDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: IsDesktopDeviceSession
+  nameWithType: LinkedDeviceLogInfo.IsDesktopDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsDesktopDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsDesktopDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsDesktopDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: AsDesktopDeviceSession
+  nameWithType: LinkedDeviceLogInfo.AsDesktopDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsDesktopDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsLegacyDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsLegacyDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: IsLegacyDeviceSession
+  nameWithType: LinkedDeviceLogInfo.IsLegacyDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsLegacyDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsLegacyDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsLegacyDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: AsLegacyDeviceSession
+  nameWithType: LinkedDeviceLogInfo.AsLegacyDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsLegacyDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsMobileDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsMobileDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: IsMobileDeviceSession
+  nameWithType: LinkedDeviceLogInfo.IsMobileDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsMobileDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsMobileDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsMobileDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: AsMobileDeviceSession
+  nameWithType: LinkedDeviceLogInfo.AsMobileDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsMobileDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsWebDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsWebDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: IsWebDeviceSession
+  nameWithType: LinkedDeviceLogInfo.IsWebDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsWebDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsWebDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsWebDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: AsWebDeviceSession
+  nameWithType: LinkedDeviceLogInfo.AsWebDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsWebDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsOther
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsOther
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: IsOther
+  nameWithType: LinkedDeviceLogInfo.IsOther
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsOther
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsOther
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsOther
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: AsOther
+  nameWithType: LinkedDeviceLogInfo.AsOther
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession
+  commentId: T:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession
+  parent: Dropbox.Api.TeamLog
+  name: LinkedDeviceLogInfo.LegacyDeviceSession
+  nameWithType: LinkedDeviceLogInfo.LegacyDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.#ctor
+  name: LegacyDeviceSession
+  nameWithType: LinkedDeviceLogInfo.LegacyDeviceSession.LegacyDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.LegacyDeviceSession
+- uid: Dropbox.Api.TeamLog.LegacyDeviceSessionLogInfo
+  commentId: T:Dropbox.Api.TeamLog.LegacyDeviceSessionLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: LegacyDeviceSessionLogInfo
+  nameWithType: LegacyDeviceSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.LegacyDeviceSessionLogInfo
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.Value*
+  commentId: Overload:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.Value
+  name: Value
+  nameWithType: LinkedDeviceLogInfo.LegacyDeviceSession.Value
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.LegacyDeviceSession.Value

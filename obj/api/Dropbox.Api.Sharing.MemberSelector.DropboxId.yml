@@ -1,0 +1,495 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.MemberSelector.DropboxId
+  commentId: T:Dropbox.Api.Sharing.MemberSelector.DropboxId
+  id: MemberSelector.DropboxId
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.MemberSelector.DropboxId.#ctor(System.String)
+  - Dropbox.Api.Sharing.MemberSelector.DropboxId.Value
+  langs:
+  - csharp
+  - vb
+  name: MemberSelector.DropboxId
+  nameWithType: MemberSelector.DropboxId
+  fullName: Dropbox.Api.Sharing.MemberSelector.DropboxId
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: DropboxId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+    startLine: 181
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Dropbox account, team member, or group ID of member.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class DropboxId : MemberSelector'
+    content.vb: >-
+      Public NotInheritable Class DropboxId
+          Inherits MemberSelector
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.MemberSelector
+  inheritedMembers:
+  - Dropbox.Api.Sharing.MemberSelector.IsDropboxId
+  - Dropbox.Api.Sharing.MemberSelector.AsDropboxId
+  - Dropbox.Api.Sharing.MemberSelector.IsEmail
+  - Dropbox.Api.Sharing.MemberSelector.AsEmail
+  - Dropbox.Api.Sharing.MemberSelector.IsOther
+  - Dropbox.Api.Sharing.MemberSelector.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.MemberSelector.DropboxId.#ctor(System.String)
+  commentId: M:Dropbox.Api.Sharing.MemberSelector.DropboxId.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Sharing.MemberSelector.DropboxId
+  langs:
+  - csharp
+  - vb
+  name: DropboxId(String)
+  nameWithType: MemberSelector.DropboxId.DropboxId(String)
+  fullName: Dropbox.Api.Sharing.MemberSelector.DropboxId.DropboxId(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+    startLine: 199
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.MemberSelector.DropboxId\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DropboxId(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Sharing.MemberSelector.DropboxId.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.MemberSelector.DropboxId.Value
+  commentId: P:Dropbox.Api.Sharing.MemberSelector.DropboxId.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.MemberSelector.DropboxId
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: MemberSelector.DropboxId.Value
+  fullName: Dropbox.Api.Sharing.MemberSelector.DropboxId.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+    startLine: 213
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Sharing.MemberSelector.DropboxId.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.MemberSelector
+  commentId: T:Dropbox.Api.Sharing.MemberSelector
+  parent: Dropbox.Api.Sharing
+  name: MemberSelector
+  nameWithType: MemberSelector
+  fullName: Dropbox.Api.Sharing.MemberSelector
+- uid: Dropbox.Api.Sharing.MemberSelector.IsDropboxId
+  commentId: P:Dropbox.Api.Sharing.MemberSelector.IsDropboxId
+  parent: Dropbox.Api.Sharing.MemberSelector
+  name: IsDropboxId
+  nameWithType: MemberSelector.IsDropboxId
+  fullName: Dropbox.Api.Sharing.MemberSelector.IsDropboxId
+- uid: Dropbox.Api.Sharing.MemberSelector.AsDropboxId
+  commentId: P:Dropbox.Api.Sharing.MemberSelector.AsDropboxId
+  parent: Dropbox.Api.Sharing.MemberSelector
+  name: AsDropboxId
+  nameWithType: MemberSelector.AsDropboxId
+  fullName: Dropbox.Api.Sharing.MemberSelector.AsDropboxId
+- uid: Dropbox.Api.Sharing.MemberSelector.IsEmail
+  commentId: P:Dropbox.Api.Sharing.MemberSelector.IsEmail
+  parent: Dropbox.Api.Sharing.MemberSelector
+  name: IsEmail
+  nameWithType: MemberSelector.IsEmail
+  fullName: Dropbox.Api.Sharing.MemberSelector.IsEmail
+- uid: Dropbox.Api.Sharing.MemberSelector.AsEmail
+  commentId: P:Dropbox.Api.Sharing.MemberSelector.AsEmail
+  parent: Dropbox.Api.Sharing.MemberSelector
+  name: AsEmail
+  nameWithType: MemberSelector.AsEmail
+  fullName: Dropbox.Api.Sharing.MemberSelector.AsEmail
+- uid: Dropbox.Api.Sharing.MemberSelector.IsOther
+  commentId: P:Dropbox.Api.Sharing.MemberSelector.IsOther
+  parent: Dropbox.Api.Sharing.MemberSelector
+  name: IsOther
+  nameWithType: MemberSelector.IsOther
+  fullName: Dropbox.Api.Sharing.MemberSelector.IsOther
+- uid: Dropbox.Api.Sharing.MemberSelector.AsOther
+  commentId: P:Dropbox.Api.Sharing.MemberSelector.AsOther
+  parent: Dropbox.Api.Sharing.MemberSelector
+  name: AsOther
+  nameWithType: MemberSelector.AsOther
+  fullName: Dropbox.Api.Sharing.MemberSelector.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.MemberSelector.DropboxId
+  commentId: T:Dropbox.Api.Sharing.MemberSelector.DropboxId
+  parent: Dropbox.Api.Sharing
+  name: MemberSelector.DropboxId
+  nameWithType: MemberSelector.DropboxId
+  fullName: Dropbox.Api.Sharing.MemberSelector.DropboxId
+- uid: Dropbox.Api.Sharing.MemberSelector.DropboxId.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.MemberSelector.DropboxId.#ctor
+  name: DropboxId
+  nameWithType: MemberSelector.DropboxId.DropboxId
+  fullName: Dropbox.Api.Sharing.MemberSelector.DropboxId.DropboxId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.MemberSelector.DropboxId.Value*
+  commentId: Overload:Dropbox.Api.Sharing.MemberSelector.DropboxId.Value
+  name: Value
+  nameWithType: MemberSelector.DropboxId.Value
+  fullName: Dropbox.Api.Sharing.MemberSelector.DropboxId.Value

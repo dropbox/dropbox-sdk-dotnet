@@ -1,0 +1,497 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ContentSyncSettingArg
+  commentId: T:Dropbox.Api.Files.ContentSyncSettingArg
+  id: ContentSyncSettingArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ContentSyncSettingArg.#ctor(System.String,Dropbox.Api.Files.SyncSettingArg)
+  - Dropbox.Api.Files.ContentSyncSettingArg.Id
+  - Dropbox.Api.Files.ContentSyncSettingArg.SyncSetting
+  langs:
+  - csharp
+  - vb
+  name: ContentSyncSettingArg
+  nameWithType: ContentSyncSettingArg
+  fullName: Dropbox.Api.Files.ContentSyncSettingArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ContentSyncSettingArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ContentSyncSettingArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ContentSyncSettingArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The content sync setting arg object</p>\n"
+  example: []
+  syntax:
+    content: public class ContentSyncSettingArg
+    content.vb: Public Class ContentSyncSettingArg
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ContentSyncSettingArg.#ctor(System.String,Dropbox.Api.Files.SyncSettingArg)
+  commentId: M:Dropbox.Api.Files.ContentSyncSettingArg.#ctor(System.String,Dropbox.Api.Files.SyncSettingArg)
+  id: '#ctor(System.String,Dropbox.Api.Files.SyncSettingArg)'
+  parent: Dropbox.Api.Files.ContentSyncSettingArg
+  langs:
+  - csharp
+  - vb
+  name: ContentSyncSettingArg(String, SyncSettingArg)
+  nameWithType: ContentSyncSettingArg.ContentSyncSettingArg(String, SyncSettingArg)
+  fullName: Dropbox.Api.Files.ContentSyncSettingArg.ContentSyncSettingArg(System.String, Dropbox.Api.Files.SyncSettingArg)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ContentSyncSettingArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ContentSyncSettingArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ContentSyncSettingArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ContentSyncSettingArg(string id, SyncSettingArg syncSetting)
+    parameters:
+    - id: id
+      type: System.String
+      description: Id of the item this setting is applied to.
+    - id: syncSetting
+      type: Dropbox.Api.Files.SyncSettingArg
+      description: Setting for this item.
+    content.vb: Public Sub New(id As String, syncSetting As SyncSettingArg)
+  overload: Dropbox.Api.Files.ContentSyncSettingArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ContentSyncSettingArg.Id
+  commentId: P:Dropbox.Api.Files.ContentSyncSettingArg.Id
+  id: Id
+  parent: Dropbox.Api.Files.ContentSyncSettingArg
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ContentSyncSettingArg.Id
+  fullName: Dropbox.Api.Files.ContentSyncSettingArg.Id
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ContentSyncSettingArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Id
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ContentSyncSettingArg.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Id of the item this setting is applied to.</p>\n"
+  example: []
+  syntax:
+    content: public string Id { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: Dropbox.Api.Files.ContentSyncSettingArg.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ContentSyncSettingArg.SyncSetting
+  commentId: P:Dropbox.Api.Files.ContentSyncSettingArg.SyncSetting
+  id: SyncSetting
+  parent: Dropbox.Api.Files.ContentSyncSettingArg
+  langs:
+  - csharp
+  - vb
+  name: SyncSetting
+  nameWithType: ContentSyncSettingArg.SyncSetting
+  fullName: Dropbox.Api.Files.ContentSyncSettingArg.SyncSetting
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ContentSyncSettingArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SyncSetting
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ContentSyncSettingArg.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Setting for this item.</p>\n"
+  example: []
+  syntax:
+    content: public SyncSettingArg SyncSetting { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SyncSettingArg
+    content.vb: Public Property SyncSetting As SyncSettingArg
+  overload: Dropbox.Api.Files.ContentSyncSettingArg.SyncSetting*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.ContentSyncSettingArg
+  commentId: T:Dropbox.Api.Files.ContentSyncSettingArg
+  name: ContentSyncSettingArg
+  nameWithType: ContentSyncSettingArg
+  fullName: Dropbox.Api.Files.ContentSyncSettingArg
+- uid: Dropbox.Api.Files.ContentSyncSettingArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ContentSyncSettingArg.#ctor
+  name: ContentSyncSettingArg
+  nameWithType: ContentSyncSettingArg.ContentSyncSettingArg
+  fullName: Dropbox.Api.Files.ContentSyncSettingArg.ContentSyncSettingArg
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.SyncSettingArg
+  commentId: T:Dropbox.Api.Files.SyncSettingArg
+  parent: Dropbox.Api.Files
+  name: SyncSettingArg
+  nameWithType: SyncSettingArg
+  fullName: Dropbox.Api.Files.SyncSettingArg
+- uid: Dropbox.Api.Files.ContentSyncSettingArg.Id*
+  commentId: Overload:Dropbox.Api.Files.ContentSyncSettingArg.Id
+  name: Id
+  nameWithType: ContentSyncSettingArg.Id
+  fullName: Dropbox.Api.Files.ContentSyncSettingArg.Id
+- uid: Dropbox.Api.Files.ContentSyncSettingArg.SyncSetting*
+  commentId: Overload:Dropbox.Api.Files.ContentSyncSettingArg.SyncSetting
+  name: SyncSetting
+  nameWithType: ContentSyncSettingArg.SyncSetting
+  fullName: Dropbox.Api.Files.ContentSyncSettingArg.SyncSetting

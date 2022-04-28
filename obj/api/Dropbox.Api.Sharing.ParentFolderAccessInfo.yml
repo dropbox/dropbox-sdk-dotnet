@@ -1,0 +1,764 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ParentFolderAccessInfo
+  commentId: T:Dropbox.Api.Sharing.ParentFolderAccessInfo
+  id: ParentFolderAccessInfo
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ParentFolderAccessInfo.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission},System.String)
+  - Dropbox.Api.Sharing.ParentFolderAccessInfo.FolderName
+  - Dropbox.Api.Sharing.ParentFolderAccessInfo.Path
+  - Dropbox.Api.Sharing.ParentFolderAccessInfo.Permissions
+  - Dropbox.Api.Sharing.ParentFolderAccessInfo.SharedFolderId
+  langs:
+  - csharp
+  - vb
+  name: ParentFolderAccessInfo
+  nameWithType: ParentFolderAccessInfo
+  fullName: Dropbox.Api.Sharing.ParentFolderAccessInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ParentFolderAccessInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ParentFolderAccessInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ParentFolderAccessInfo.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Contains information about a parent folder that a member has access to.</p>\n"
+  example: []
+  syntax:
+    content: public class ParentFolderAccessInfo
+    content.vb: Public Class ParentFolderAccessInfo
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ParentFolderAccessInfo.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission},System.String)
+  commentId: M:Dropbox.Api.Sharing.ParentFolderAccessInfo.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission},System.String)
+  id: '#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission},System.String)'
+  parent: Dropbox.Api.Sharing.ParentFolderAccessInfo
+  langs:
+  - csharp
+  - vb
+  name: ParentFolderAccessInfo(String, String, IEnumerable<MemberPermission>, String)
+  nameWithType: ParentFolderAccessInfo.ParentFolderAccessInfo(String, String, IEnumerable<MemberPermission>, String)
+  fullName: Dropbox.Api.Sharing.ParentFolderAccessInfo.ParentFolderAccessInfo(System.String, System.String, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.MemberPermission>, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ParentFolderAccessInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ParentFolderAccessInfo.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ParentFolderAccessInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ParentFolderAccessInfo(string folderName, string sharedFolderId, IEnumerable<MemberPermission> permissions, string path)
+    parameters:
+    - id: folderName
+      type: System.String
+      description: Display name for the folder.
+    - id: sharedFolderId
+      type: System.String
+      description: The identifier of the parent shared folder.
+    - id: permissions
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission}
+      description: >-
+        The user&apos;s permissions for the parent shared
+
+        folder.
+    - id: path
+      type: System.String
+      description: >-
+        The full path to the parent shared folder relative to the acting
+
+        user&apos;s root.
+    content.vb: Public Sub New(folderName As String, sharedFolderId As String, permissions As IEnumerable(Of MemberPermission), path As String)
+  overload: Dropbox.Api.Sharing.ParentFolderAccessInfo.#ctor*
+  nameWithType.vb: ParentFolderAccessInfo.ParentFolderAccessInfo(String, String, IEnumerable(Of MemberPermission), String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.ParentFolderAccessInfo.ParentFolderAccessInfo(System.String, System.String, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.MemberPermission), System.String)
+  name.vb: ParentFolderAccessInfo(String, String, IEnumerable(Of MemberPermission), String)
+- uid: Dropbox.Api.Sharing.ParentFolderAccessInfo.FolderName
+  commentId: P:Dropbox.Api.Sharing.ParentFolderAccessInfo.FolderName
+  id: FolderName
+  parent: Dropbox.Api.Sharing.ParentFolderAccessInfo
+  langs:
+  - csharp
+  - vb
+  name: FolderName
+  nameWithType: ParentFolderAccessInfo.FolderName
+  fullName: Dropbox.Api.Sharing.ParentFolderAccessInfo.FolderName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ParentFolderAccessInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FolderName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ParentFolderAccessInfo.cs
+    startLine: 90
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Display name for the folder.</p>\n"
+  example: []
+  syntax:
+    content: public string FolderName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FolderName As String
+  overload: Dropbox.Api.Sharing.ParentFolderAccessInfo.FolderName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.ParentFolderAccessInfo.SharedFolderId
+  commentId: P:Dropbox.Api.Sharing.ParentFolderAccessInfo.SharedFolderId
+  id: SharedFolderId
+  parent: Dropbox.Api.Sharing.ParentFolderAccessInfo
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderId
+  nameWithType: ParentFolderAccessInfo.SharedFolderId
+  fullName: Dropbox.Api.Sharing.ParentFolderAccessInfo.SharedFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ParentFolderAccessInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SharedFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ParentFolderAccessInfo.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The identifier of the parent shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public string SharedFolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharedFolderId As String
+  overload: Dropbox.Api.Sharing.ParentFolderAccessInfo.SharedFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.ParentFolderAccessInfo.Permissions
+  commentId: P:Dropbox.Api.Sharing.ParentFolderAccessInfo.Permissions
+  id: Permissions
+  parent: Dropbox.Api.Sharing.ParentFolderAccessInfo
+  langs:
+  - csharp
+  - vb
+  name: Permissions
+  nameWithType: ParentFolderAccessInfo.Permissions
+  fullName: Dropbox.Api.Sharing.ParentFolderAccessInfo.Permissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ParentFolderAccessInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Permissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ParentFolderAccessInfo.cs
+    startLine: 100
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The user&apos;s permissions for the parent shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public IList<MemberPermission> Permissions { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.MemberPermission}
+    content.vb: Public Property Permissions As IList(Of MemberPermission)
+  overload: Dropbox.Api.Sharing.ParentFolderAccessInfo.Permissions*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.ParentFolderAccessInfo.Path
+  commentId: P:Dropbox.Api.Sharing.ParentFolderAccessInfo.Path
+  id: Path
+  parent: Dropbox.Api.Sharing.ParentFolderAccessInfo
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: ParentFolderAccessInfo.Path
+  fullName: Dropbox.Api.Sharing.ParentFolderAccessInfo.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ParentFolderAccessInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ParentFolderAccessInfo.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The full path to the parent shared folder relative to the acting user&apos;s\nroot.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Sharing.ParentFolderAccessInfo.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.ParentFolderAccessInfo
+  commentId: T:Dropbox.Api.Sharing.ParentFolderAccessInfo
+  name: ParentFolderAccessInfo
+  nameWithType: ParentFolderAccessInfo
+  fullName: Dropbox.Api.Sharing.ParentFolderAccessInfo
+- uid: Dropbox.Api.Sharing.ParentFolderAccessInfo.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ParentFolderAccessInfo.#ctor
+  name: ParentFolderAccessInfo
+  nameWithType: ParentFolderAccessInfo.ParentFolderAccessInfo
+  fullName: Dropbox.Api.Sharing.ParentFolderAccessInfo.ParentFolderAccessInfo
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission}
+  commentId: T:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<MemberPermission>
+  nameWithType: IEnumerable<MemberPermission>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.MemberPermission>
+  nameWithType.vb: IEnumerable(Of MemberPermission)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.MemberPermission)
+  name.vb: IEnumerable(Of MemberPermission)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.MemberPermission
+    name: MemberPermission
+    nameWithType: MemberPermission
+    fullName: Dropbox.Api.Sharing.MemberPermission
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.MemberPermission
+    name: MemberPermission
+    nameWithType: MemberPermission
+    fullName: Dropbox.Api.Sharing.MemberPermission
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Dropbox.Api.Sharing.ParentFolderAccessInfo.FolderName*
+  commentId: Overload:Dropbox.Api.Sharing.ParentFolderAccessInfo.FolderName
+  name: FolderName
+  nameWithType: ParentFolderAccessInfo.FolderName
+  fullName: Dropbox.Api.Sharing.ParentFolderAccessInfo.FolderName
+- uid: Dropbox.Api.Sharing.ParentFolderAccessInfo.SharedFolderId*
+  commentId: Overload:Dropbox.Api.Sharing.ParentFolderAccessInfo.SharedFolderId
+  name: SharedFolderId
+  nameWithType: ParentFolderAccessInfo.SharedFolderId
+  fullName: Dropbox.Api.Sharing.ParentFolderAccessInfo.SharedFolderId
+- uid: Dropbox.Api.Sharing.ParentFolderAccessInfo.Permissions*
+  commentId: Overload:Dropbox.Api.Sharing.ParentFolderAccessInfo.Permissions
+  name: Permissions
+  nameWithType: ParentFolderAccessInfo.Permissions
+  fullName: Dropbox.Api.Sharing.ParentFolderAccessInfo.Permissions
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.MemberPermission}
+  commentId: T:System.Collections.Generic.IList{Dropbox.Api.Sharing.MemberPermission}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<MemberPermission>
+  nameWithType: IList<MemberPermission>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.MemberPermission>
+  nameWithType.vb: IList(Of MemberPermission)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.MemberPermission)
+  name.vb: IList(Of MemberPermission)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.MemberPermission
+    name: MemberPermission
+    nameWithType: MemberPermission
+    fullName: Dropbox.Api.Sharing.MemberPermission
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.MemberPermission
+    name: MemberPermission
+    nameWithType: MemberPermission
+    fullName: Dropbox.Api.Sharing.MemberPermission
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.ParentFolderAccessInfo.Path*
+  commentId: Overload:Dropbox.Api.Sharing.ParentFolderAccessInfo.Path
+  name: Path
+  nameWithType: ParentFolderAccessInfo.Path
+  fullName: Dropbox.Api.Sharing.ParentFolderAccessInfo.Path

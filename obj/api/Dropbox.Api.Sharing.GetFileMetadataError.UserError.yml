@@ -1,0 +1,494 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.UserError
+  commentId: T:Dropbox.Api.Sharing.GetFileMetadataError.UserError
+  id: GetFileMetadataError.UserError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.GetFileMetadataError.UserError.#ctor(Dropbox.Api.Sharing.SharingUserError)
+  - Dropbox.Api.Sharing.GetFileMetadataError.UserError.Value
+  langs:
+  - csharp
+  - vb
+  name: GetFileMetadataError.UserError
+  nameWithType: GetFileMetadataError.UserError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.UserError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: UserError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The user error object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class UserError : GetFileMetadataError'
+    content.vb: >-
+      Public NotInheritable Class UserError
+          Inherits GetFileMetadataError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.GetFileMetadataError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.GetFileMetadataError.IsUserError
+  - Dropbox.Api.Sharing.GetFileMetadataError.AsUserError
+  - Dropbox.Api.Sharing.GetFileMetadataError.IsAccessError
+  - Dropbox.Api.Sharing.GetFileMetadataError.AsAccessError
+  - Dropbox.Api.Sharing.GetFileMetadataError.IsOther
+  - Dropbox.Api.Sharing.GetFileMetadataError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.UserError.#ctor(Dropbox.Api.Sharing.SharingUserError)
+  commentId: M:Dropbox.Api.Sharing.GetFileMetadataError.UserError.#ctor(Dropbox.Api.Sharing.SharingUserError)
+  id: '#ctor(Dropbox.Api.Sharing.SharingUserError)'
+  parent: Dropbox.Api.Sharing.GetFileMetadataError.UserError
+  langs:
+  - csharp
+  - vb
+  name: UserError(SharingUserError)
+  nameWithType: GetFileMetadataError.UserError.UserError(SharingUserError)
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.UserError.UserError(Dropbox.Api.Sharing.SharingUserError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+    startLine: 201
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.GetFileMetadataError.UserError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public UserError(SharingUserError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Sharing.SharingUserError
+      description: The value
+    content.vb: Public Sub New(value As SharingUserError)
+  overload: Dropbox.Api.Sharing.GetFileMetadataError.UserError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.UserError.Value
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataError.UserError.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.GetFileMetadataError.UserError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: GetFileMetadataError.UserError.Value
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.UserError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+    startLine: 215
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public SharingUserError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharingUserError
+    content.vb: Public ReadOnly Property Value As SharingUserError
+  overload: Dropbox.Api.Sharing.GetFileMetadataError.UserError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.GetFileMetadataError
+  commentId: T:Dropbox.Api.Sharing.GetFileMetadataError
+  parent: Dropbox.Api.Sharing
+  name: GetFileMetadataError
+  nameWithType: GetFileMetadataError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.IsUserError
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataError.IsUserError
+  parent: Dropbox.Api.Sharing.GetFileMetadataError
+  name: IsUserError
+  nameWithType: GetFileMetadataError.IsUserError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.IsUserError
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.AsUserError
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataError.AsUserError
+  parent: Dropbox.Api.Sharing.GetFileMetadataError
+  name: AsUserError
+  nameWithType: GetFileMetadataError.AsUserError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.AsUserError
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataError.IsAccessError
+  parent: Dropbox.Api.Sharing.GetFileMetadataError
+  name: IsAccessError
+  nameWithType: GetFileMetadataError.IsAccessError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.IsAccessError
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataError.AsAccessError
+  parent: Dropbox.Api.Sharing.GetFileMetadataError
+  name: AsAccessError
+  nameWithType: GetFileMetadataError.AsAccessError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.AsAccessError
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.IsOther
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataError.IsOther
+  parent: Dropbox.Api.Sharing.GetFileMetadataError
+  name: IsOther
+  nameWithType: GetFileMetadataError.IsOther
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.IsOther
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.AsOther
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataError.AsOther
+  parent: Dropbox.Api.Sharing.GetFileMetadataError
+  name: AsOther
+  nameWithType: GetFileMetadataError.AsOther
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.UserError
+  commentId: T:Dropbox.Api.Sharing.GetFileMetadataError.UserError
+  parent: Dropbox.Api.Sharing
+  name: GetFileMetadataError.UserError
+  nameWithType: GetFileMetadataError.UserError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.UserError
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.UserError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.GetFileMetadataError.UserError.#ctor
+  name: UserError
+  nameWithType: GetFileMetadataError.UserError.UserError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.UserError.UserError
+- uid: Dropbox.Api.Sharing.SharingUserError
+  commentId: T:Dropbox.Api.Sharing.SharingUserError
+  parent: Dropbox.Api.Sharing
+  name: SharingUserError
+  nameWithType: SharingUserError
+  fullName: Dropbox.Api.Sharing.SharingUserError
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.UserError.Value*
+  commentId: Overload:Dropbox.Api.Sharing.GetFileMetadataError.UserError.Value
+  name: Value
+  nameWithType: GetFileMetadataError.UserError.Value
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.UserError.Value

@@ -1,0 +1,582 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.MetadataV2
+  commentId: T:Dropbox.Api.Files.MetadataV2
+  id: MetadataV2
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.MetadataV2.#ctor
+  - Dropbox.Api.Files.MetadataV2.AsMetadata
+  - Dropbox.Api.Files.MetadataV2.AsOther
+  - Dropbox.Api.Files.MetadataV2.IsMetadata
+  - Dropbox.Api.Files.MetadataV2.IsOther
+  langs:
+  - csharp
+  - vb
+  name: MetadataV2
+  nameWithType: MetadataV2
+  fullName: Dropbox.Api.Files.MetadataV2
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MetadataV2.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MetadataV2
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MetadataV2.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Metadata for a file, folder or other resource types.</p>\n"
+  example: []
+  syntax:
+    content: public class MetadataV2
+    content.vb: Public Class MetadataV2
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.MetadataV2.Metadata
+  - Dropbox.Api.Files.MetadataV2.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.MetadataV2.#ctor
+  commentId: M:Dropbox.Api.Files.MetadataV2.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.MetadataV2
+  langs:
+  - csharp
+  - vb
+  name: MetadataV2()
+  nameWithType: MetadataV2.MetadataV2()
+  fullName: Dropbox.Api.Files.MetadataV2.MetadataV2()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MetadataV2.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MetadataV2.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.MetadataV2\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MetadataV2()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.MetadataV2.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.MetadataV2.IsMetadata
+  commentId: P:Dropbox.Api.Files.MetadataV2.IsMetadata
+  id: IsMetadata
+  parent: Dropbox.Api.Files.MetadataV2
+  langs:
+  - csharp
+  - vb
+  name: IsMetadata
+  nameWithType: MetadataV2.IsMetadata
+  fullName: Dropbox.Api.Files.MetadataV2.IsMetadata
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MetadataV2.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MetadataV2.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Metadata</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMetadata { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMetadata As Boolean
+  overload: Dropbox.Api.Files.MetadataV2.IsMetadata*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.MetadataV2.AsMetadata
+  commentId: P:Dropbox.Api.Files.MetadataV2.AsMetadata
+  id: AsMetadata
+  parent: Dropbox.Api.Files.MetadataV2
+  langs:
+  - csharp
+  - vb
+  name: AsMetadata
+  nameWithType: MetadataV2.AsMetadata
+  fullName: Dropbox.Api.Files.MetadataV2.AsMetadata
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MetadataV2.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MetadataV2.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Metadata, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MetadataV2.Metadata AsMetadata { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.MetadataV2.Metadata
+    content.vb: Public ReadOnly Property AsMetadata As MetadataV2.Metadata
+  overload: Dropbox.Api.Files.MetadataV2.AsMetadata*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.MetadataV2.IsOther
+  commentId: P:Dropbox.Api.Files.MetadataV2.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.MetadataV2
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MetadataV2.IsOther
+  fullName: Dropbox.Api.Files.MetadataV2.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MetadataV2.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MetadataV2.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.MetadataV2.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.MetadataV2.AsOther
+  commentId: P:Dropbox.Api.Files.MetadataV2.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.MetadataV2
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MetadataV2.AsOther
+  fullName: Dropbox.Api.Files.MetadataV2.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MetadataV2.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MetadataV2.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MetadataV2.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.MetadataV2.Other
+    content.vb: Public ReadOnly Property AsOther As MetadataV2.Other
+  overload: Dropbox.Api.Files.MetadataV2.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.MetadataV2
+  commentId: T:Dropbox.Api.Files.MetadataV2
+  parent: Dropbox.Api.Files
+  name: MetadataV2
+  nameWithType: MetadataV2
+  fullName: Dropbox.Api.Files.MetadataV2
+- uid: Dropbox.Api.Files.MetadataV2.#ctor*
+  commentId: Overload:Dropbox.Api.Files.MetadataV2.#ctor
+  name: MetadataV2
+  nameWithType: MetadataV2.MetadataV2
+  fullName: Dropbox.Api.Files.MetadataV2.MetadataV2
+- uid: Dropbox.Api.Files.MetadataV2.IsMetadata*
+  commentId: Overload:Dropbox.Api.Files.MetadataV2.IsMetadata
+  name: IsMetadata
+  nameWithType: MetadataV2.IsMetadata
+  fullName: Dropbox.Api.Files.MetadataV2.IsMetadata
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.MetadataV2.AsMetadata*
+  commentId: Overload:Dropbox.Api.Files.MetadataV2.AsMetadata
+  name: AsMetadata
+  nameWithType: MetadataV2.AsMetadata
+  fullName: Dropbox.Api.Files.MetadataV2.AsMetadata
+- uid: Dropbox.Api.Files.MetadataV2.Metadata
+  commentId: T:Dropbox.Api.Files.MetadataV2.Metadata
+  parent: Dropbox.Api.Files
+  name: MetadataV2.Metadata
+  nameWithType: MetadataV2.Metadata
+  fullName: Dropbox.Api.Files.MetadataV2.Metadata
+- uid: Dropbox.Api.Files.MetadataV2.IsOther*
+  commentId: Overload:Dropbox.Api.Files.MetadataV2.IsOther
+  name: IsOther
+  nameWithType: MetadataV2.IsOther
+  fullName: Dropbox.Api.Files.MetadataV2.IsOther
+- uid: Dropbox.Api.Files.MetadataV2.AsOther*
+  commentId: Overload:Dropbox.Api.Files.MetadataV2.AsOther
+  name: AsOther
+  nameWithType: MetadataV2.AsOther
+  fullName: Dropbox.Api.Files.MetadataV2.AsOther
+- uid: Dropbox.Api.Files.MetadataV2.Other
+  commentId: T:Dropbox.Api.Files.MetadataV2.Other
+  parent: Dropbox.Api.Files
+  name: MetadataV2.Other
+  nameWithType: MetadataV2.Other
+  fullName: Dropbox.Api.Files.MetadataV2.Other

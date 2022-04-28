@@ -1,0 +1,444 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.Reset
+  commentId: T:Dropbox.Api.Sharing.ListSharedLinksError.Reset
+  id: ListSharedLinksError.Reset
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListSharedLinksError.Reset.Instance
+  langs:
+  - csharp
+  - vb
+  name: ListSharedLinksError.Reset
+  nameWithType: ListSharedLinksError.Reset
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.Reset
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Reset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+    startLine: 280
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Indicates that the cursor has been invalidated. Call <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync(Dropbox.Api.Sharing.ListSharedLinksArg)\" data-throw-if-not-resolved=\"false\"></xref> to\nobtain a new cursor.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Reset : ListSharedLinksError'
+    content.vb: >-
+      Public NotInheritable Class Reset
+          Inherits ListSharedLinksError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.ListSharedLinksError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.ListSharedLinksError.IsPath
+  - Dropbox.Api.Sharing.ListSharedLinksError.AsPath
+  - Dropbox.Api.Sharing.ListSharedLinksError.IsReset
+  - Dropbox.Api.Sharing.ListSharedLinksError.AsReset
+  - Dropbox.Api.Sharing.ListSharedLinksError.IsOther
+  - Dropbox.Api.Sharing.ListSharedLinksError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.Reset.Instance
+  commentId: F:Dropbox.Api.Sharing.ListSharedLinksError.Reset.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.ListSharedLinksError.Reset
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ListSharedLinksError.Reset.Instance
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.Reset.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+    startLine: 304
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of Reset</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ListSharedLinksError.Reset Instance
+    return:
+      type: Dropbox.Api.Sharing.ListSharedLinksError.Reset
+    content.vb: Public Shared ReadOnly Instance As ListSharedLinksError.Reset
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync(Dropbox.Api.Sharing.ListSharedLinksArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync(Dropbox.Api.Sharing.ListSharedLinksArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListSharedLinksError
+  commentId: T:Dropbox.Api.Sharing.ListSharedLinksError
+  parent: Dropbox.Api.Sharing
+  name: ListSharedLinksError
+  nameWithType: ListSharedLinksError
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.IsPath
+  commentId: P:Dropbox.Api.Sharing.ListSharedLinksError.IsPath
+  parent: Dropbox.Api.Sharing.ListSharedLinksError
+  name: IsPath
+  nameWithType: ListSharedLinksError.IsPath
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.IsPath
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.AsPath
+  commentId: P:Dropbox.Api.Sharing.ListSharedLinksError.AsPath
+  parent: Dropbox.Api.Sharing.ListSharedLinksError
+  name: AsPath
+  nameWithType: ListSharedLinksError.AsPath
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.AsPath
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.IsReset
+  commentId: P:Dropbox.Api.Sharing.ListSharedLinksError.IsReset
+  parent: Dropbox.Api.Sharing.ListSharedLinksError
+  name: IsReset
+  nameWithType: ListSharedLinksError.IsReset
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.IsReset
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.AsReset
+  commentId: P:Dropbox.Api.Sharing.ListSharedLinksError.AsReset
+  parent: Dropbox.Api.Sharing.ListSharedLinksError
+  name: AsReset
+  nameWithType: ListSharedLinksError.AsReset
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.AsReset
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.IsOther
+  commentId: P:Dropbox.Api.Sharing.ListSharedLinksError.IsOther
+  parent: Dropbox.Api.Sharing.ListSharedLinksError
+  name: IsOther
+  nameWithType: ListSharedLinksError.IsOther
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.IsOther
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.AsOther
+  commentId: P:Dropbox.Api.Sharing.ListSharedLinksError.AsOther
+  parent: Dropbox.Api.Sharing.ListSharedLinksError
+  name: AsOther
+  nameWithType: ListSharedLinksError.AsOther
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.Reset
+  commentId: T:Dropbox.Api.Sharing.ListSharedLinksError.Reset
+  parent: Dropbox.Api.Sharing
+  name: ListSharedLinksError.Reset
+  nameWithType: ListSharedLinksError.Reset
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.Reset

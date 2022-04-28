@@ -1,0 +1,537 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound
+  commentId: T:Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound
+  id: RemovePropertiesError.TemplateNotFound
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.#ctor(System.String)
+  - Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.Value
+  langs:
+  - csharp
+  - vb
+  name: RemovePropertiesError.TemplateNotFound
+  nameWithType: RemovePropertiesError.TemplateNotFound
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TemplateNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesError.cs
+    startLine: 542
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Template does not exist for the given identifier.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class TemplateNotFound : RemovePropertiesError'
+    content.vb: >-
+      Public NotInheritable Class TemplateNotFound
+          Inherits RemovePropertiesError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileProperties.RemovePropertiesError
+  inheritedMembers:
+  - Dropbox.Api.FileProperties.RemovePropertiesError.IsPropertyGroupLookup
+  - Dropbox.Api.FileProperties.RemovePropertiesError.AsPropertyGroupLookup
+  - Dropbox.Api.FileProperties.RemovePropertiesError.IsPath
+  - Dropbox.Api.FileProperties.RemovePropertiesError.AsPath
+  - Dropbox.Api.FileProperties.RemovePropertiesError.IsUnsupportedFolder
+  - Dropbox.Api.FileProperties.RemovePropertiesError.AsUnsupportedFolder
+  - Dropbox.Api.FileProperties.RemovePropertiesError.IsTemplateNotFound
+  - Dropbox.Api.FileProperties.RemovePropertiesError.AsTemplateNotFound
+  - Dropbox.Api.FileProperties.RemovePropertiesError.IsRestrictedContent
+  - Dropbox.Api.FileProperties.RemovePropertiesError.AsRestrictedContent
+  - Dropbox.Api.FileProperties.RemovePropertiesError.IsOther
+  - Dropbox.Api.FileProperties.RemovePropertiesError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.#ctor(System.String)
+  commentId: M:Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound
+  langs:
+  - csharp
+  - vb
+  name: TemplateNotFound(String)
+  nameWithType: RemovePropertiesError.TemplateNotFound.TemplateNotFound(String)
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.TemplateNotFound(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesError.cs
+    startLine: 561
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateNotFound(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.Value
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.Value
+  id: Value
+  parent: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: RemovePropertiesError.TemplateNotFound.Value
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesError.cs
+    startLine: 576
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError
+  commentId: T:Dropbox.Api.FileProperties.RemovePropertiesError
+  parent: Dropbox.Api.FileProperties
+  name: RemovePropertiesError
+  nameWithType: RemovePropertiesError
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.IsPropertyGroupLookup
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesError.IsPropertyGroupLookup
+  parent: Dropbox.Api.FileProperties.RemovePropertiesError
+  name: IsPropertyGroupLookup
+  nameWithType: RemovePropertiesError.IsPropertyGroupLookup
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.IsPropertyGroupLookup
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.AsPropertyGroupLookup
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesError.AsPropertyGroupLookup
+  parent: Dropbox.Api.FileProperties.RemovePropertiesError
+  name: AsPropertyGroupLookup
+  nameWithType: RemovePropertiesError.AsPropertyGroupLookup
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.AsPropertyGroupLookup
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.IsPath
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesError.IsPath
+  parent: Dropbox.Api.FileProperties.RemovePropertiesError
+  name: IsPath
+  nameWithType: RemovePropertiesError.IsPath
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.IsPath
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.AsPath
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesError.AsPath
+  parent: Dropbox.Api.FileProperties.RemovePropertiesError
+  name: AsPath
+  nameWithType: RemovePropertiesError.AsPath
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.AsPath
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.IsUnsupportedFolder
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesError.IsUnsupportedFolder
+  parent: Dropbox.Api.FileProperties.RemovePropertiesError
+  name: IsUnsupportedFolder
+  nameWithType: RemovePropertiesError.IsUnsupportedFolder
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.IsUnsupportedFolder
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.AsUnsupportedFolder
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesError.AsUnsupportedFolder
+  parent: Dropbox.Api.FileProperties.RemovePropertiesError
+  name: AsUnsupportedFolder
+  nameWithType: RemovePropertiesError.AsUnsupportedFolder
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.AsUnsupportedFolder
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.IsTemplateNotFound
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesError.IsTemplateNotFound
+  parent: Dropbox.Api.FileProperties.RemovePropertiesError
+  name: IsTemplateNotFound
+  nameWithType: RemovePropertiesError.IsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.IsTemplateNotFound
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.AsTemplateNotFound
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesError.AsTemplateNotFound
+  parent: Dropbox.Api.FileProperties.RemovePropertiesError
+  name: AsTemplateNotFound
+  nameWithType: RemovePropertiesError.AsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.AsTemplateNotFound
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.IsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesError.IsRestrictedContent
+  parent: Dropbox.Api.FileProperties.RemovePropertiesError
+  name: IsRestrictedContent
+  nameWithType: RemovePropertiesError.IsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.IsRestrictedContent
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.AsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesError.AsRestrictedContent
+  parent: Dropbox.Api.FileProperties.RemovePropertiesError
+  name: AsRestrictedContent
+  nameWithType: RemovePropertiesError.AsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.AsRestrictedContent
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.IsOther
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesError.IsOther
+  parent: Dropbox.Api.FileProperties.RemovePropertiesError
+  name: IsOther
+  nameWithType: RemovePropertiesError.IsOther
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.IsOther
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.AsOther
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesError.AsOther
+  parent: Dropbox.Api.FileProperties.RemovePropertiesError
+  name: AsOther
+  nameWithType: RemovePropertiesError.AsOther
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound
+  commentId: T:Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound
+  parent: Dropbox.Api.FileProperties
+  name: RemovePropertiesError.TemplateNotFound
+  nameWithType: RemovePropertiesError.TemplateNotFound
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.#ctor
+  name: TemplateNotFound
+  nameWithType: RemovePropertiesError.TemplateNotFound.TemplateNotFound
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.TemplateNotFound
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.Value*
+  commentId: Overload:Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.Value
+  name: Value
+  nameWithType: RemovePropertiesError.TemplateNotFound.Value
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.Value

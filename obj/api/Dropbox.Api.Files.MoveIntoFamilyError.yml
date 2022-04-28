@@ -1,0 +1,582 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.MoveIntoFamilyError
+  commentId: T:Dropbox.Api.Files.MoveIntoFamilyError
+  id: MoveIntoFamilyError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.MoveIntoFamilyError.#ctor
+  - Dropbox.Api.Files.MoveIntoFamilyError.AsIsSharedFolder
+  - Dropbox.Api.Files.MoveIntoFamilyError.AsOther
+  - Dropbox.Api.Files.MoveIntoFamilyError.IsIsSharedFolder
+  - Dropbox.Api.Files.MoveIntoFamilyError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: MoveIntoFamilyError
+  nameWithType: MoveIntoFamilyError
+  fullName: Dropbox.Api.Files.MoveIntoFamilyError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoFamilyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MoveIntoFamilyError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoFamilyError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The move into family error object</p>\n"
+  example: []
+  syntax:
+    content: public class MoveIntoFamilyError
+    content.vb: Public Class MoveIntoFamilyError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.MoveIntoFamilyError.IsSharedFolder
+  - Dropbox.Api.Files.MoveIntoFamilyError.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.MoveIntoFamilyError.#ctor
+  commentId: M:Dropbox.Api.Files.MoveIntoFamilyError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.MoveIntoFamilyError
+  langs:
+  - csharp
+  - vb
+  name: MoveIntoFamilyError()
+  nameWithType: MoveIntoFamilyError.MoveIntoFamilyError()
+  fullName: Dropbox.Api.Files.MoveIntoFamilyError.MoveIntoFamilyError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoFamilyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoFamilyError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.MoveIntoFamilyError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MoveIntoFamilyError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.MoveIntoFamilyError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.MoveIntoFamilyError.IsIsSharedFolder
+  commentId: P:Dropbox.Api.Files.MoveIntoFamilyError.IsIsSharedFolder
+  id: IsIsSharedFolder
+  parent: Dropbox.Api.Files.MoveIntoFamilyError
+  langs:
+  - csharp
+  - vb
+  name: IsIsSharedFolder
+  nameWithType: MoveIntoFamilyError.IsIsSharedFolder
+  fullName: Dropbox.Api.Files.MoveIntoFamilyError.IsIsSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoFamilyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsIsSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoFamilyError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is IsSharedFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsIsSharedFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIsSharedFolder As Boolean
+  overload: Dropbox.Api.Files.MoveIntoFamilyError.IsIsSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.MoveIntoFamilyError.AsIsSharedFolder
+  commentId: P:Dropbox.Api.Files.MoveIntoFamilyError.AsIsSharedFolder
+  id: AsIsSharedFolder
+  parent: Dropbox.Api.Files.MoveIntoFamilyError
+  langs:
+  - csharp
+  - vb
+  name: AsIsSharedFolder
+  nameWithType: MoveIntoFamilyError.AsIsSharedFolder
+  fullName: Dropbox.Api.Files.MoveIntoFamilyError.AsIsSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoFamilyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsIsSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoFamilyError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a IsSharedFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MoveIntoFamilyError.IsSharedFolder AsIsSharedFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.MoveIntoFamilyError.IsSharedFolder
+    content.vb: Public ReadOnly Property AsIsSharedFolder As MoveIntoFamilyError.IsSharedFolder
+  overload: Dropbox.Api.Files.MoveIntoFamilyError.AsIsSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.MoveIntoFamilyError.IsOther
+  commentId: P:Dropbox.Api.Files.MoveIntoFamilyError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.MoveIntoFamilyError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MoveIntoFamilyError.IsOther
+  fullName: Dropbox.Api.Files.MoveIntoFamilyError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoFamilyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoFamilyError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.MoveIntoFamilyError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.MoveIntoFamilyError.AsOther
+  commentId: P:Dropbox.Api.Files.MoveIntoFamilyError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.MoveIntoFamilyError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MoveIntoFamilyError.AsOther
+  fullName: Dropbox.Api.Files.MoveIntoFamilyError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoFamilyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoFamilyError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MoveIntoFamilyError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.MoveIntoFamilyError.Other
+    content.vb: Public ReadOnly Property AsOther As MoveIntoFamilyError.Other
+  overload: Dropbox.Api.Files.MoveIntoFamilyError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.MoveIntoFamilyError
+  commentId: T:Dropbox.Api.Files.MoveIntoFamilyError
+  parent: Dropbox.Api.Files
+  name: MoveIntoFamilyError
+  nameWithType: MoveIntoFamilyError
+  fullName: Dropbox.Api.Files.MoveIntoFamilyError
+- uid: Dropbox.Api.Files.MoveIntoFamilyError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.MoveIntoFamilyError.#ctor
+  name: MoveIntoFamilyError
+  nameWithType: MoveIntoFamilyError.MoveIntoFamilyError
+  fullName: Dropbox.Api.Files.MoveIntoFamilyError.MoveIntoFamilyError
+- uid: Dropbox.Api.Files.MoveIntoFamilyError.IsIsSharedFolder*
+  commentId: Overload:Dropbox.Api.Files.MoveIntoFamilyError.IsIsSharedFolder
+  name: IsIsSharedFolder
+  nameWithType: MoveIntoFamilyError.IsIsSharedFolder
+  fullName: Dropbox.Api.Files.MoveIntoFamilyError.IsIsSharedFolder
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.MoveIntoFamilyError.AsIsSharedFolder*
+  commentId: Overload:Dropbox.Api.Files.MoveIntoFamilyError.AsIsSharedFolder
+  name: AsIsSharedFolder
+  nameWithType: MoveIntoFamilyError.AsIsSharedFolder
+  fullName: Dropbox.Api.Files.MoveIntoFamilyError.AsIsSharedFolder
+- uid: Dropbox.Api.Files.MoveIntoFamilyError.IsSharedFolder
+  commentId: T:Dropbox.Api.Files.MoveIntoFamilyError.IsSharedFolder
+  parent: Dropbox.Api.Files
+  name: MoveIntoFamilyError.IsSharedFolder
+  nameWithType: MoveIntoFamilyError.IsSharedFolder
+  fullName: Dropbox.Api.Files.MoveIntoFamilyError.IsSharedFolder
+- uid: Dropbox.Api.Files.MoveIntoFamilyError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.MoveIntoFamilyError.IsOther
+  name: IsOther
+  nameWithType: MoveIntoFamilyError.IsOther
+  fullName: Dropbox.Api.Files.MoveIntoFamilyError.IsOther
+- uid: Dropbox.Api.Files.MoveIntoFamilyError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.MoveIntoFamilyError.AsOther
+  name: AsOther
+  nameWithType: MoveIntoFamilyError.AsOther
+  fullName: Dropbox.Api.Files.MoveIntoFamilyError.AsOther
+- uid: Dropbox.Api.Files.MoveIntoFamilyError.Other
+  commentId: T:Dropbox.Api.Files.MoveIntoFamilyError.Other
+  parent: Dropbox.Api.Files
+  name: MoveIntoFamilyError.Other
+  nameWithType: MoveIntoFamilyError.Other
+  fullName: Dropbox.Api.Files.MoveIntoFamilyError.Other

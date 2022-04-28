@@ -1,0 +1,497 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  id: WebSessionsChangeIdleLengthPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor(Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy,Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy)
+  - Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: WebSessionsChangeIdleLengthPolicyDetails
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: WebSessionsChangeIdleLengthPolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed how long team members can be idle while signed in to Dropbox.com.</p>\n"
+  example: []
+  syntax:
+    content: public class WebSessionsChangeIdleLengthPolicyDetails
+    content.vb: Public Class WebSessionsChangeIdleLengthPolicyDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor(Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy,Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy)
+  commentId: M:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor(Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy,Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy,Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy)'
+  parent: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: WebSessionsChangeIdleLengthPolicyDetails(WebSessionsIdleLengthPolicy, WebSessionsIdleLengthPolicy)
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails.WebSessionsChangeIdleLengthPolicyDetails(WebSessionsIdleLengthPolicy, WebSessionsIdleLengthPolicy)
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.WebSessionsChangeIdleLengthPolicyDetails(Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy, Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public WebSessionsChangeIdleLengthPolicyDetails(WebSessionsIdleLengthPolicy newValue = null, WebSessionsIdleLengthPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy
+      description: >-
+        New idle length policy. Might be missing due to historical
+
+        data gap.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy
+      description: >-
+        Previous idle length policy. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(newValue As WebSessionsIdleLengthPolicy = Nothing, previousValue As WebSessionsIdleLengthPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New idle length policy. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public WebSessionsIdleLengthPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy
+    content.vb: Public Property NewValue As WebSessionsIdleLengthPolicy
+  overload: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous idle length policy. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public WebSessionsIdleLengthPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy
+    content.vb: Public Property PreviousValue As WebSessionsIdleLengthPolicy
+  overload: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: WebSessionsChangeIdleLengthPolicyDetails
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor
+  name: WebSessionsChangeIdleLengthPolicyDetails
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails.WebSessionsChangeIdleLengthPolicyDetails
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.WebSessionsChangeIdleLengthPolicyDetails
+- uid: Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy
+  commentId: T:Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy
+  parent: Dropbox.Api.TeamLog
+  name: WebSessionsIdleLengthPolicy
+  nameWithType: WebSessionsIdleLengthPolicy
+  fullName: Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue
+  name: NewValue
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue

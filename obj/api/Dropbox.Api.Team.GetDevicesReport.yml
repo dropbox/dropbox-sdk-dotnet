@@ -1,0 +1,577 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GetDevicesReport
+  commentId: T:Dropbox.Api.Team.GetDevicesReport
+  id: GetDevicesReport
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GetDevicesReport.#ctor(System.String,Dropbox.Api.Team.DevicesActive,Dropbox.Api.Team.DevicesActive,Dropbox.Api.Team.DevicesActive)
+  - Dropbox.Api.Team.GetDevicesReport.Active1Day
+  - Dropbox.Api.Team.GetDevicesReport.Active28Day
+  - Dropbox.Api.Team.GetDevicesReport.Active7Day
+  langs:
+  - csharp
+  - vb
+  name: GetDevicesReport
+  nameWithType: GetDevicesReport
+  fullName: Dropbox.Api.Team.GetDevicesReport
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetDevicesReport.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: GetDevicesReport
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetDevicesReport.cs
+    startLine: 19
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Devices Report Result. Contains subsections for different time ranges of\nactivity. Each of the items in each subsection of the storage report is an array of\nvalues, one value per day. If there is no data for a day, then the value will be\nNone.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetDevicesReport : BaseDfbReport'
+    content.vb: >-
+      Public Class GetDevicesReport
+          Inherits BaseDfbReport
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.BaseDfbReport
+  inheritedMembers:
+  - Dropbox.Api.Team.BaseDfbReport.StartDate
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GetDevicesReport.#ctor(System.String,Dropbox.Api.Team.DevicesActive,Dropbox.Api.Team.DevicesActive,Dropbox.Api.Team.DevicesActive)
+  commentId: M:Dropbox.Api.Team.GetDevicesReport.#ctor(System.String,Dropbox.Api.Team.DevicesActive,Dropbox.Api.Team.DevicesActive,Dropbox.Api.Team.DevicesActive)
+  id: '#ctor(System.String,Dropbox.Api.Team.DevicesActive,Dropbox.Api.Team.DevicesActive,Dropbox.Api.Team.DevicesActive)'
+  parent: Dropbox.Api.Team.GetDevicesReport
+  langs:
+  - csharp
+  - vb
+  name: GetDevicesReport(String, DevicesActive, DevicesActive, DevicesActive)
+  nameWithType: GetDevicesReport.GetDevicesReport(String, DevicesActive, DevicesActive, DevicesActive)
+  fullName: Dropbox.Api.Team.GetDevicesReport.GetDevicesReport(System.String, Dropbox.Api.Team.DevicesActive, Dropbox.Api.Team.DevicesActive, Dropbox.Api.Team.DevicesActive)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetDevicesReport.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetDevicesReport.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GetDevicesReport\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetDevicesReport(string startDate, DevicesActive active1Day, DevicesActive active7Day, DevicesActive active28Day)
+    parameters:
+    - id: startDate
+      type: System.String
+      description: >-
+        First date present in the results as &apos;YYYY-MM-DD&apos; or
+
+        None.
+    - id: active1Day
+      type: Dropbox.Api.Team.DevicesActive
+      description: >-
+        Report of the number of devices active in the last
+
+        day.
+    - id: active7Day
+      type: Dropbox.Api.Team.DevicesActive
+      description: >-
+        Report of the number of devices active in the last 7
+
+        days.
+    - id: active28Day
+      type: Dropbox.Api.Team.DevicesActive
+      description: >-
+        Report of the number of devices active in the last 28
+
+        days.
+    content.vb: Public Sub New(startDate As String, active1Day As DevicesActive, active7Day As DevicesActive, active28Day As DevicesActive)
+  overload: Dropbox.Api.Team.GetDevicesReport.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GetDevicesReport.Active1Day
+  commentId: P:Dropbox.Api.Team.GetDevicesReport.Active1Day
+  id: Active1Day
+  parent: Dropbox.Api.Team.GetDevicesReport
+  langs:
+  - csharp
+  - vb
+  name: Active1Day
+  nameWithType: GetDevicesReport.Active1Day
+  fullName: Dropbox.Api.Team.GetDevicesReport.Active1Day
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetDevicesReport.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Active1Day
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetDevicesReport.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Report of the number of devices active in the last day.</p>\n"
+  example: []
+  syntax:
+    content: public DevicesActive Active1Day { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.DevicesActive
+    content.vb: Public Property Active1Day As DevicesActive
+  overload: Dropbox.Api.Team.GetDevicesReport.Active1Day*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GetDevicesReport.Active7Day
+  commentId: P:Dropbox.Api.Team.GetDevicesReport.Active7Day
+  id: Active7Day
+  parent: Dropbox.Api.Team.GetDevicesReport
+  langs:
+  - csharp
+  - vb
+  name: Active7Day
+  nameWithType: GetDevicesReport.Active7Day
+  fullName: Dropbox.Api.Team.GetDevicesReport.Active7Day
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetDevicesReport.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Active7Day
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetDevicesReport.cs
+    startLine: 90
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Report of the number of devices active in the last 7 days.</p>\n"
+  example: []
+  syntax:
+    content: public DevicesActive Active7Day { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.DevicesActive
+    content.vb: Public Property Active7Day As DevicesActive
+  overload: Dropbox.Api.Team.GetDevicesReport.Active7Day*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GetDevicesReport.Active28Day
+  commentId: P:Dropbox.Api.Team.GetDevicesReport.Active28Day
+  id: Active28Day
+  parent: Dropbox.Api.Team.GetDevicesReport
+  langs:
+  - csharp
+  - vb
+  name: Active28Day
+  nameWithType: GetDevicesReport.Active28Day
+  fullName: Dropbox.Api.Team.GetDevicesReport.Active28Day
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetDevicesReport.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Active28Day
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetDevicesReport.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Report of the number of devices active in the last 28 days.</p>\n"
+  example: []
+  syntax:
+    content: public DevicesActive Active28Day { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.DevicesActive
+    content.vb: Public Property Active28Day As DevicesActive
+  overload: Dropbox.Api.Team.GetDevicesReport.Active28Day*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.BaseDfbReport
+  commentId: T:Dropbox.Api.Team.BaseDfbReport
+  parent: Dropbox.Api.Team
+  name: BaseDfbReport
+  nameWithType: BaseDfbReport
+  fullName: Dropbox.Api.Team.BaseDfbReport
+- uid: Dropbox.Api.Team.BaseDfbReport.StartDate
+  commentId: P:Dropbox.Api.Team.BaseDfbReport.StartDate
+  parent: Dropbox.Api.Team.BaseDfbReport
+  name: StartDate
+  nameWithType: BaseDfbReport.StartDate
+  fullName: Dropbox.Api.Team.BaseDfbReport.StartDate
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.GetDevicesReport
+  commentId: T:Dropbox.Api.Team.GetDevicesReport
+  parent: Dropbox.Api.Team
+  name: GetDevicesReport
+  nameWithType: GetDevicesReport
+  fullName: Dropbox.Api.Team.GetDevicesReport
+- uid: Dropbox.Api.Team.GetDevicesReport.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GetDevicesReport.#ctor
+  name: GetDevicesReport
+  nameWithType: GetDevicesReport.GetDevicesReport
+  fullName: Dropbox.Api.Team.GetDevicesReport.GetDevicesReport
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.DevicesActive
+  commentId: T:Dropbox.Api.Team.DevicesActive
+  parent: Dropbox.Api.Team
+  name: DevicesActive
+  nameWithType: DevicesActive
+  fullName: Dropbox.Api.Team.DevicesActive
+- uid: Dropbox.Api.Team.GetDevicesReport.Active1Day*
+  commentId: Overload:Dropbox.Api.Team.GetDevicesReport.Active1Day
+  name: Active1Day
+  nameWithType: GetDevicesReport.Active1Day
+  fullName: Dropbox.Api.Team.GetDevicesReport.Active1Day
+- uid: Dropbox.Api.Team.GetDevicesReport.Active7Day*
+  commentId: Overload:Dropbox.Api.Team.GetDevicesReport.Active7Day
+  name: Active7Day
+  nameWithType: GetDevicesReport.Active7Day
+  fullName: Dropbox.Api.Team.GetDevicesReport.Active7Day
+- uid: Dropbox.Api.Team.GetDevicesReport.Active28Day*
+  commentId: Overload:Dropbox.Api.Team.GetDevicesReport.Active28Day
+  name: Active28Day
+  nameWithType: GetDevicesReport.Active28Day
+  fullName: Dropbox.Api.Team.GetDevicesReport.Active28Day

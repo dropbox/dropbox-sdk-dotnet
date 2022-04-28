@@ -1,0 +1,455 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperMemberPolicy.OnlyTeam
+  commentId: T:Dropbox.Api.TeamLog.PaperMemberPolicy.OnlyTeam
+  id: PaperMemberPolicy.OnlyTeam
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperMemberPolicy.OnlyTeam.Instance
+  langs:
+  - csharp
+  - vb
+  name: PaperMemberPolicy.OnlyTeam
+  nameWithType: PaperMemberPolicy.OnlyTeam
+  fullName: Dropbox.Api.TeamLog.PaperMemberPolicy.OnlyTeam
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperMemberPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: OnlyTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperMemberPolicy.cs
+    startLine: 284
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The only team object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class OnlyTeam : PaperMemberPolicy'
+    content.vb: >-
+      Public NotInheritable Class OnlyTeam
+          Inherits PaperMemberPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.PaperMemberPolicy
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.PaperMemberPolicy.IsAnyoneWithLink
+  - Dropbox.Api.TeamLog.PaperMemberPolicy.AsAnyoneWithLink
+  - Dropbox.Api.TeamLog.PaperMemberPolicy.IsOnlyTeam
+  - Dropbox.Api.TeamLog.PaperMemberPolicy.AsOnlyTeam
+  - Dropbox.Api.TeamLog.PaperMemberPolicy.IsTeamAndExplicitlyShared
+  - Dropbox.Api.TeamLog.PaperMemberPolicy.AsTeamAndExplicitlyShared
+  - Dropbox.Api.TeamLog.PaperMemberPolicy.IsOther
+  - Dropbox.Api.TeamLog.PaperMemberPolicy.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperMemberPolicy.OnlyTeam.Instance
+  commentId: F:Dropbox.Api.TeamLog.PaperMemberPolicy.OnlyTeam.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.PaperMemberPolicy.OnlyTeam
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PaperMemberPolicy.OnlyTeam.Instance
+  fullName: Dropbox.Api.TeamLog.PaperMemberPolicy.OnlyTeam.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperMemberPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperMemberPolicy.cs
+    startLine: 308
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of OnlyTeam</p>\n"
+  example: []
+  syntax:
+    content: public static readonly PaperMemberPolicy.OnlyTeam Instance
+    return:
+      type: Dropbox.Api.TeamLog.PaperMemberPolicy.OnlyTeam
+    content.vb: Public Shared ReadOnly Instance As PaperMemberPolicy.OnlyTeam
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperMemberPolicy
+  commentId: T:Dropbox.Api.TeamLog.PaperMemberPolicy
+  parent: Dropbox.Api.TeamLog
+  name: PaperMemberPolicy
+  nameWithType: PaperMemberPolicy
+  fullName: Dropbox.Api.TeamLog.PaperMemberPolicy
+- uid: Dropbox.Api.TeamLog.PaperMemberPolicy.IsAnyoneWithLink
+  commentId: P:Dropbox.Api.TeamLog.PaperMemberPolicy.IsAnyoneWithLink
+  parent: Dropbox.Api.TeamLog.PaperMemberPolicy
+  name: IsAnyoneWithLink
+  nameWithType: PaperMemberPolicy.IsAnyoneWithLink
+  fullName: Dropbox.Api.TeamLog.PaperMemberPolicy.IsAnyoneWithLink
+- uid: Dropbox.Api.TeamLog.PaperMemberPolicy.AsAnyoneWithLink
+  commentId: P:Dropbox.Api.TeamLog.PaperMemberPolicy.AsAnyoneWithLink
+  parent: Dropbox.Api.TeamLog.PaperMemberPolicy
+  name: AsAnyoneWithLink
+  nameWithType: PaperMemberPolicy.AsAnyoneWithLink
+  fullName: Dropbox.Api.TeamLog.PaperMemberPolicy.AsAnyoneWithLink
+- uid: Dropbox.Api.TeamLog.PaperMemberPolicy.IsOnlyTeam
+  commentId: P:Dropbox.Api.TeamLog.PaperMemberPolicy.IsOnlyTeam
+  parent: Dropbox.Api.TeamLog.PaperMemberPolicy
+  name: IsOnlyTeam
+  nameWithType: PaperMemberPolicy.IsOnlyTeam
+  fullName: Dropbox.Api.TeamLog.PaperMemberPolicy.IsOnlyTeam
+- uid: Dropbox.Api.TeamLog.PaperMemberPolicy.AsOnlyTeam
+  commentId: P:Dropbox.Api.TeamLog.PaperMemberPolicy.AsOnlyTeam
+  parent: Dropbox.Api.TeamLog.PaperMemberPolicy
+  name: AsOnlyTeam
+  nameWithType: PaperMemberPolicy.AsOnlyTeam
+  fullName: Dropbox.Api.TeamLog.PaperMemberPolicy.AsOnlyTeam
+- uid: Dropbox.Api.TeamLog.PaperMemberPolicy.IsTeamAndExplicitlyShared
+  commentId: P:Dropbox.Api.TeamLog.PaperMemberPolicy.IsTeamAndExplicitlyShared
+  parent: Dropbox.Api.TeamLog.PaperMemberPolicy
+  name: IsTeamAndExplicitlyShared
+  nameWithType: PaperMemberPolicy.IsTeamAndExplicitlyShared
+  fullName: Dropbox.Api.TeamLog.PaperMemberPolicy.IsTeamAndExplicitlyShared
+- uid: Dropbox.Api.TeamLog.PaperMemberPolicy.AsTeamAndExplicitlyShared
+  commentId: P:Dropbox.Api.TeamLog.PaperMemberPolicy.AsTeamAndExplicitlyShared
+  parent: Dropbox.Api.TeamLog.PaperMemberPolicy
+  name: AsTeamAndExplicitlyShared
+  nameWithType: PaperMemberPolicy.AsTeamAndExplicitlyShared
+  fullName: Dropbox.Api.TeamLog.PaperMemberPolicy.AsTeamAndExplicitlyShared
+- uid: Dropbox.Api.TeamLog.PaperMemberPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.PaperMemberPolicy.IsOther
+  parent: Dropbox.Api.TeamLog.PaperMemberPolicy
+  name: IsOther
+  nameWithType: PaperMemberPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.PaperMemberPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.PaperMemberPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.PaperMemberPolicy.AsOther
+  parent: Dropbox.Api.TeamLog.PaperMemberPolicy
+  name: AsOther
+  nameWithType: PaperMemberPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.PaperMemberPolicy.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.PaperMemberPolicy.OnlyTeam
+  commentId: T:Dropbox.Api.TeamLog.PaperMemberPolicy.OnlyTeam
+  parent: Dropbox.Api.TeamLog
+  name: PaperMemberPolicy.OnlyTeam
+  nameWithType: PaperMemberPolicy.OnlyTeam
+  fullName: Dropbox.Api.TeamLog.PaperMemberPolicy.OnlyTeam

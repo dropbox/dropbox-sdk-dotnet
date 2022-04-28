@@ -1,0 +1,494 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  id: TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.#ctor(Dropbox.Api.TeamLog.PrimaryTeamRequestCanceledDetails)
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.Value
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PrimaryTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Team merge request cancellation details shown to the primary team.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class PrimaryTeam : TeamMergeRequestCanceledExtraDetails'
+    content.vb: >-
+      Public NotInheritable Class PrimaryTeam
+          Inherits TeamMergeRequestCanceledExtraDetails
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsOther
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.#ctor(Dropbox.Api.TeamLog.PrimaryTeamRequestCanceledDetails)
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.#ctor(Dropbox.Api.TeamLog.PrimaryTeamRequestCanceledDetails)
+  id: '#ctor(Dropbox.Api.TeamLog.PrimaryTeamRequestCanceledDetails)'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  langs:
+  - csharp
+  - vb
+  name: PrimaryTeam(PrimaryTeamRequestCanceledDetails)
+  nameWithType: TeamMergeRequestCanceledExtraDetails.PrimaryTeam.PrimaryTeam(PrimaryTeamRequestCanceledDetails)
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.PrimaryTeam(Dropbox.Api.TeamLog.PrimaryTeamRequestCanceledDetails)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+    startLine: 202
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PrimaryTeam(PrimaryTeamRequestCanceledDetails value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.TeamLog.PrimaryTeamRequestCanceledDetails
+      description: The value
+    content.vb: Public Sub New(value As PrimaryTeamRequestCanceledDetails)
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.Value
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.Value
+  id: Value
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: TeamMergeRequestCanceledExtraDetails.PrimaryTeam.Value
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+    startLine: 217
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public PrimaryTeamRequestCanceledDetails Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PrimaryTeamRequestCanceledDetails
+    content.vb: Public ReadOnly Property Value As PrimaryTeamRequestCanceledDetails
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestCanceledExtraDetails
+  nameWithType: TeamMergeRequestCanceledExtraDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  name: IsPrimaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  name: AsPrimaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  name: IsSecondaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  name: AsSecondaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsOther
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsOther
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  name: IsOther
+  nameWithType: TeamMergeRequestCanceledExtraDetails.IsOther
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsOther
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsOther
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsOther
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  name: AsOther
+  nameWithType: TeamMergeRequestCanceledExtraDetails.AsOther
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.#ctor
+  name: PrimaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.PrimaryTeam.PrimaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.PrimaryTeam
+- uid: Dropbox.Api.TeamLog.PrimaryTeamRequestCanceledDetails
+  commentId: T:Dropbox.Api.TeamLog.PrimaryTeamRequestCanceledDetails
+  parent: Dropbox.Api.TeamLog
+  name: PrimaryTeamRequestCanceledDetails
+  nameWithType: PrimaryTeamRequestCanceledDetails
+  fullName: Dropbox.Api.TeamLog.PrimaryTeamRequestCanceledDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.Value*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.Value
+  name: Value
+  nameWithType: TeamMergeRequestCanceledExtraDetails.PrimaryTeam.Value
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam.Value

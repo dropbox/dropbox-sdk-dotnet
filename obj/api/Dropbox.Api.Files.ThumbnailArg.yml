@@ -1,0 +1,614 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ThumbnailArg
+  commentId: T:Dropbox.Api.Files.ThumbnailArg
+  id: ThumbnailArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ThumbnailArg.#ctor(System.String,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode)
+  - Dropbox.Api.Files.ThumbnailArg.Format
+  - Dropbox.Api.Files.ThumbnailArg.Mode
+  - Dropbox.Api.Files.ThumbnailArg.Path
+  - Dropbox.Api.Files.ThumbnailArg.Size
+  langs:
+  - csharp
+  - vb
+  name: ThumbnailArg
+  nameWithType: ThumbnailArg
+  fullName: Dropbox.Api.Files.ThumbnailArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ThumbnailArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The thumbnail arg object</p>\n"
+  example: []
+  syntax:
+    content: public class ThumbnailArg
+    content.vb: Public Class ThumbnailArg
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ThumbnailArg.#ctor(System.String,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode)
+  commentId: M:Dropbox.Api.Files.ThumbnailArg.#ctor(System.String,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode)
+  id: '#ctor(System.String,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode)'
+  parent: Dropbox.Api.Files.ThumbnailArg
+  langs:
+  - csharp
+  - vb
+  name: ThumbnailArg(String, ThumbnailFormat, ThumbnailSize, ThumbnailMode)
+  nameWithType: ThumbnailArg.ThumbnailArg(String, ThumbnailFormat, ThumbnailSize, ThumbnailMode)
+  fullName: Dropbox.Api.Files.ThumbnailArg.ThumbnailArg(System.String, Dropbox.Api.Files.ThumbnailFormat, Dropbox.Api.Files.ThumbnailSize, Dropbox.Api.Files.ThumbnailMode)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailArg.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ThumbnailArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailArg(string path, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path to the image file you want to thumbnail.
+    - id: format
+      type: Dropbox.Api.Files.ThumbnailFormat
+      description: >-
+        The format for the thumbnail image, jpeg (default) or png. For
+
+        images that are photos, jpeg should be preferred, while png is  better for
+
+        screenshots and digital arts.
+    - id: size
+      type: Dropbox.Api.Files.ThumbnailSize
+      description: The size for the thumbnail image.
+    - id: mode
+      type: Dropbox.Api.Files.ThumbnailMode
+      description: >-
+        How to resize and crop the image to achieve the desired
+
+        size.
+    content.vb: Public Sub New(path As String, format As ThumbnailFormat = Nothing, size As ThumbnailSize = Nothing, mode As ThumbnailMode = Nothing)
+  overload: Dropbox.Api.Files.ThumbnailArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ThumbnailArg.Path
+  commentId: P:Dropbox.Api.Files.ThumbnailArg.Path
+  id: Path
+  parent: Dropbox.Api.Files.ThumbnailArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: ThumbnailArg.Path
+  fullName: Dropbox.Api.Files.ThumbnailArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailArg.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The path to the image file you want to thumbnail.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Files.ThumbnailArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ThumbnailArg.Format
+  commentId: P:Dropbox.Api.Files.ThumbnailArg.Format
+  id: Format
+  parent: Dropbox.Api.Files.ThumbnailArg
+  langs:
+  - csharp
+  - vb
+  name: Format
+  nameWithType: ThumbnailArg.Format
+  fullName: Dropbox.Api.Files.ThumbnailArg.Format
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Format
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailArg.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The format for the thumbnail image, jpeg (default) or png. For  images that\nare photos, jpeg should be preferred, while png is  better for screenshots and\ndigital arts.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailFormat Format { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailFormat
+    content.vb: Public Property Format As ThumbnailFormat
+  overload: Dropbox.Api.Files.ThumbnailArg.Format*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ThumbnailArg.Size
+  commentId: P:Dropbox.Api.Files.ThumbnailArg.Size
+  id: Size
+  parent: Dropbox.Api.Files.ThumbnailArg
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: ThumbnailArg.Size
+  fullName: Dropbox.Api.Files.ThumbnailArg.Size
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Size
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailArg.cs
+    startLine: 99
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The size for the thumbnail image.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailSize Size { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailSize
+    content.vb: Public Property Size As ThumbnailSize
+  overload: Dropbox.Api.Files.ThumbnailArg.Size*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ThumbnailArg.Mode
+  commentId: P:Dropbox.Api.Files.ThumbnailArg.Mode
+  id: Mode
+  parent: Dropbox.Api.Files.ThumbnailArg
+  langs:
+  - csharp
+  - vb
+  name: Mode
+  nameWithType: ThumbnailArg.Mode
+  fullName: Dropbox.Api.Files.ThumbnailArg.Mode
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Mode
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailArg.cs
+    startLine: 104
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>How to resize and crop the image to achieve the desired size.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailMode Mode { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailMode
+    content.vb: Public Property Mode As ThumbnailMode
+  overload: Dropbox.Api.Files.ThumbnailArg.Mode*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.ThumbnailArg
+  commentId: T:Dropbox.Api.Files.ThumbnailArg
+  parent: Dropbox.Api.Files
+  name: ThumbnailArg
+  nameWithType: ThumbnailArg
+  fullName: Dropbox.Api.Files.ThumbnailArg
+- uid: Dropbox.Api.Files.ThumbnailArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailArg.#ctor
+  name: ThumbnailArg
+  nameWithType: ThumbnailArg.ThumbnailArg
+  fullName: Dropbox.Api.Files.ThumbnailArg.ThumbnailArg
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.ThumbnailFormat
+  commentId: T:Dropbox.Api.Files.ThumbnailFormat
+  parent: Dropbox.Api.Files
+  name: ThumbnailFormat
+  nameWithType: ThumbnailFormat
+  fullName: Dropbox.Api.Files.ThumbnailFormat
+- uid: Dropbox.Api.Files.ThumbnailSize
+  commentId: T:Dropbox.Api.Files.ThumbnailSize
+  parent: Dropbox.Api.Files
+  name: ThumbnailSize
+  nameWithType: ThumbnailSize
+  fullName: Dropbox.Api.Files.ThumbnailSize
+- uid: Dropbox.Api.Files.ThumbnailMode
+  commentId: T:Dropbox.Api.Files.ThumbnailMode
+  parent: Dropbox.Api.Files
+  name: ThumbnailMode
+  nameWithType: ThumbnailMode
+  fullName: Dropbox.Api.Files.ThumbnailMode
+- uid: Dropbox.Api.Files.ThumbnailArg.Path*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailArg.Path
+  name: Path
+  nameWithType: ThumbnailArg.Path
+  fullName: Dropbox.Api.Files.ThumbnailArg.Path
+- uid: Dropbox.Api.Files.ThumbnailArg.Format*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailArg.Format
+  name: Format
+  nameWithType: ThumbnailArg.Format
+  fullName: Dropbox.Api.Files.ThumbnailArg.Format
+- uid: Dropbox.Api.Files.ThumbnailArg.Size*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailArg.Size
+  name: Size
+  nameWithType: ThumbnailArg.Size
+  fullName: Dropbox.Api.Files.ThumbnailArg.Size
+- uid: Dropbox.Api.Files.ThumbnailArg.Mode*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailArg.Mode
+  name: Mode
+  nameWithType: ThumbnailArg.Mode
+  fullName: Dropbox.Api.Files.ThumbnailArg.Mode

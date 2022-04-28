@@ -1,0 +1,430 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ListTeamDevicesError.Reset
+  commentId: T:Dropbox.Api.Team.ListTeamDevicesError.Reset
+  id: ListTeamDevicesError.Reset
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ListTeamDevicesError.Reset.Instance
+  langs:
+  - csharp
+  - vb
+  name: ListTeamDevicesError.Reset
+  nameWithType: ListTeamDevicesError.Reset
+  fullName: Dropbox.Api.Team.ListTeamDevicesError.Reset
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamDevicesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Reset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamDevicesError.cs
+    startLine: 154
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Indicates that the cursor has been invalidated. Call <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListTeamDevicesAsync(Dropbox.Api.Team.ListTeamDevicesArg)\" data-throw-if-not-resolved=\"false\"></xref> again\nwith an empty cursor to obtain a new cursor.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Reset : ListTeamDevicesError'
+    content.vb: >-
+      Public NotInheritable Class Reset
+          Inherits ListTeamDevicesError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.ListTeamDevicesError
+  inheritedMembers:
+  - Dropbox.Api.Team.ListTeamDevicesError.IsReset
+  - Dropbox.Api.Team.ListTeamDevicesError.AsReset
+  - Dropbox.Api.Team.ListTeamDevicesError.IsOther
+  - Dropbox.Api.Team.ListTeamDevicesError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.ListTeamDevicesError.Reset.Instance
+  commentId: F:Dropbox.Api.Team.ListTeamDevicesError.Reset.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.ListTeamDevicesError.Reset
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ListTeamDevicesError.Reset.Instance
+  fullName: Dropbox.Api.Team.ListTeamDevicesError.Reset.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamDevicesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamDevicesError.cs
+    startLine: 178
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of Reset</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ListTeamDevicesError.Reset Instance
+    return:
+      type: Dropbox.Api.Team.ListTeamDevicesError.Reset
+    content.vb: Public Shared ReadOnly Instance As ListTeamDevicesError.Reset
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListTeamDevicesAsync(Dropbox.Api.Team.ListTeamDevicesArg)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListTeamDevicesAsync(Dropbox.Api.Team.ListTeamDevicesArg)
+  isExternal: true
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ListTeamDevicesError
+  commentId: T:Dropbox.Api.Team.ListTeamDevicesError
+  parent: Dropbox.Api.Team
+  name: ListTeamDevicesError
+  nameWithType: ListTeamDevicesError
+  fullName: Dropbox.Api.Team.ListTeamDevicesError
+- uid: Dropbox.Api.Team.ListTeamDevicesError.IsReset
+  commentId: P:Dropbox.Api.Team.ListTeamDevicesError.IsReset
+  parent: Dropbox.Api.Team.ListTeamDevicesError
+  name: IsReset
+  nameWithType: ListTeamDevicesError.IsReset
+  fullName: Dropbox.Api.Team.ListTeamDevicesError.IsReset
+- uid: Dropbox.Api.Team.ListTeamDevicesError.AsReset
+  commentId: P:Dropbox.Api.Team.ListTeamDevicesError.AsReset
+  parent: Dropbox.Api.Team.ListTeamDevicesError
+  name: AsReset
+  nameWithType: ListTeamDevicesError.AsReset
+  fullName: Dropbox.Api.Team.ListTeamDevicesError.AsReset
+- uid: Dropbox.Api.Team.ListTeamDevicesError.IsOther
+  commentId: P:Dropbox.Api.Team.ListTeamDevicesError.IsOther
+  parent: Dropbox.Api.Team.ListTeamDevicesError
+  name: IsOther
+  nameWithType: ListTeamDevicesError.IsOther
+  fullName: Dropbox.Api.Team.ListTeamDevicesError.IsOther
+- uid: Dropbox.Api.Team.ListTeamDevicesError.AsOther
+  commentId: P:Dropbox.Api.Team.ListTeamDevicesError.AsOther
+  parent: Dropbox.Api.Team.ListTeamDevicesError
+  name: AsOther
+  nameWithType: ListTeamDevicesError.AsOther
+  fullName: Dropbox.Api.Team.ListTeamDevicesError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.ListTeamDevicesError.Reset
+  commentId: T:Dropbox.Api.Team.ListTeamDevicesError.Reset
+  parent: Dropbox.Api.Team
+  name: ListTeamDevicesError.Reset
+  nameWithType: ListTeamDevicesError.Reset
+  fullName: Dropbox.Api.Team.ListTeamDevicesError.Reset

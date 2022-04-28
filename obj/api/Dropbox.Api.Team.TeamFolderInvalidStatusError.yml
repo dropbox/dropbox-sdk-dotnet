@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError
+  commentId: T:Dropbox.Api.Team.TeamFolderInvalidStatusError
+  id: TeamFolderInvalidStatusError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderInvalidStatusError.#ctor
+  - Dropbox.Api.Team.TeamFolderInvalidStatusError.AsActive
+  - Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchived
+  - Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchiveInProgress
+  - Dropbox.Api.Team.TeamFolderInvalidStatusError.AsOther
+  - Dropbox.Api.Team.TeamFolderInvalidStatusError.IsActive
+  - Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchived
+  - Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchiveInProgress
+  - Dropbox.Api.Team.TeamFolderInvalidStatusError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderInvalidStatusError
+  nameWithType: TeamFolderInvalidStatusError
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TeamFolderInvalidStatusError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team folder invalid status error object</p>\n"
+  example: []
+  syntax:
+    content: public class TeamFolderInvalidStatusError
+    content.vb: Public Class TeamFolderInvalidStatusError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.TeamFolderInvalidStatusError.Active
+  - Dropbox.Api.Team.TeamFolderInvalidStatusError.Archived
+  - Dropbox.Api.Team.TeamFolderInvalidStatusError.ArchiveInProgress
+  - Dropbox.Api.Team.TeamFolderInvalidStatusError.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.#ctor
+  commentId: M:Dropbox.Api.Team.TeamFolderInvalidStatusError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamFolderInvalidStatusError
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderInvalidStatusError()
+  nameWithType: TeamFolderInvalidStatusError.TeamFolderInvalidStatusError()
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.TeamFolderInvalidStatusError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderInvalidStatusError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderInvalidStatusError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamFolderInvalidStatusError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsActive
+  commentId: P:Dropbox.Api.Team.TeamFolderInvalidStatusError.IsActive
+  id: IsActive
+  parent: Dropbox.Api.Team.TeamFolderInvalidStatusError
+  langs:
+  - csharp
+  - vb
+  name: IsActive
+  nameWithType: TeamFolderInvalidStatusError.IsActive
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsActive
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsActive
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Active</p>\n"
+  example: []
+  syntax:
+    content: public bool IsActive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsActive As Boolean
+  overload: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsActive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsActive
+  commentId: P:Dropbox.Api.Team.TeamFolderInvalidStatusError.AsActive
+  id: AsActive
+  parent: Dropbox.Api.Team.TeamFolderInvalidStatusError
+  langs:
+  - csharp
+  - vb
+  name: AsActive
+  nameWithType: TeamFolderInvalidStatusError.AsActive
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsActive
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsActive
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Active, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderInvalidStatusError.Active AsActive { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderInvalidStatusError.Active
+    content.vb: Public ReadOnly Property AsActive As TeamFolderInvalidStatusError.Active
+  overload: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsActive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchived
+  commentId: P:Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchived
+  id: IsArchived
+  parent: Dropbox.Api.Team.TeamFolderInvalidStatusError
+  langs:
+  - csharp
+  - vb
+  name: IsArchived
+  nameWithType: TeamFolderInvalidStatusError.IsArchived
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchived
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsArchived
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Archived</p>\n"
+  example: []
+  syntax:
+    content: public bool IsArchived { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsArchived As Boolean
+  overload: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchived*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchived
+  commentId: P:Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchived
+  id: AsArchived
+  parent: Dropbox.Api.Team.TeamFolderInvalidStatusError
+  langs:
+  - csharp
+  - vb
+  name: AsArchived
+  nameWithType: TeamFolderInvalidStatusError.AsArchived
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchived
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsArchived
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Archived, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderInvalidStatusError.Archived AsArchived { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderInvalidStatusError.Archived
+    content.vb: Public ReadOnly Property AsArchived As TeamFolderInvalidStatusError.Archived
+  overload: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchived*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchiveInProgress
+  commentId: P:Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchiveInProgress
+  id: IsArchiveInProgress
+  parent: Dropbox.Api.Team.TeamFolderInvalidStatusError
+  langs:
+  - csharp
+  - vb
+  name: IsArchiveInProgress
+  nameWithType: TeamFolderInvalidStatusError.IsArchiveInProgress
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchiveInProgress
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsArchiveInProgress
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is ArchiveInProgress</p>\n"
+  example: []
+  syntax:
+    content: public bool IsArchiveInProgress { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsArchiveInProgress As Boolean
+  overload: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchiveInProgress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchiveInProgress
+  commentId: P:Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchiveInProgress
+  id: AsArchiveInProgress
+  parent: Dropbox.Api.Team.TeamFolderInvalidStatusError
+  langs:
+  - csharp
+  - vb
+  name: AsArchiveInProgress
+  nameWithType: TeamFolderInvalidStatusError.AsArchiveInProgress
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchiveInProgress
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsArchiveInProgress
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a ArchiveInProgress, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderInvalidStatusError.ArchiveInProgress AsArchiveInProgress { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderInvalidStatusError.ArchiveInProgress
+    content.vb: Public ReadOnly Property AsArchiveInProgress As TeamFolderInvalidStatusError.ArchiveInProgress
+  overload: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchiveInProgress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderInvalidStatusError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.TeamFolderInvalidStatusError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TeamFolderInvalidStatusError.IsOther
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderInvalidStatusError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.TeamFolderInvalidStatusError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TeamFolderInvalidStatusError.AsOther
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderInvalidStatusError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderInvalidStatusError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderInvalidStatusError.Other
+    content.vb: Public ReadOnly Property AsOther As TeamFolderInvalidStatusError.Other
+  overload: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError
+  commentId: T:Dropbox.Api.Team.TeamFolderInvalidStatusError
+  parent: Dropbox.Api.Team
+  name: TeamFolderInvalidStatusError
+  nameWithType: TeamFolderInvalidStatusError
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderInvalidStatusError.#ctor
+  name: TeamFolderInvalidStatusError
+  nameWithType: TeamFolderInvalidStatusError.TeamFolderInvalidStatusError
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.TeamFolderInvalidStatusError
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsActive*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderInvalidStatusError.IsActive
+  name: IsActive
+  nameWithType: TeamFolderInvalidStatusError.IsActive
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsActive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsActive*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderInvalidStatusError.AsActive
+  name: AsActive
+  nameWithType: TeamFolderInvalidStatusError.AsActive
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsActive
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.Active
+  commentId: T:Dropbox.Api.Team.TeamFolderInvalidStatusError.Active
+  parent: Dropbox.Api.Team
+  name: TeamFolderInvalidStatusError.Active
+  nameWithType: TeamFolderInvalidStatusError.Active
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.Active
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchived*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchived
+  name: IsArchived
+  nameWithType: TeamFolderInvalidStatusError.IsArchived
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchived
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchived*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchived
+  name: AsArchived
+  nameWithType: TeamFolderInvalidStatusError.AsArchived
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchived
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.Archived
+  commentId: T:Dropbox.Api.Team.TeamFolderInvalidStatusError.Archived
+  parent: Dropbox.Api.Team
+  name: TeamFolderInvalidStatusError.Archived
+  nameWithType: TeamFolderInvalidStatusError.Archived
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.Archived
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchiveInProgress*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchiveInProgress
+  name: IsArchiveInProgress
+  nameWithType: TeamFolderInvalidStatusError.IsArchiveInProgress
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsArchiveInProgress
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchiveInProgress*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchiveInProgress
+  name: AsArchiveInProgress
+  nameWithType: TeamFolderInvalidStatusError.AsArchiveInProgress
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsArchiveInProgress
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.ArchiveInProgress
+  commentId: T:Dropbox.Api.Team.TeamFolderInvalidStatusError.ArchiveInProgress
+  parent: Dropbox.Api.Team
+  name: TeamFolderInvalidStatusError.ArchiveInProgress
+  nameWithType: TeamFolderInvalidStatusError.ArchiveInProgress
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.ArchiveInProgress
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderInvalidStatusError.IsOther
+  name: IsOther
+  nameWithType: TeamFolderInvalidStatusError.IsOther
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.IsOther
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderInvalidStatusError.AsOther
+  name: AsOther
+  nameWithType: TeamFolderInvalidStatusError.AsOther
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.AsOther
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError.Other
+  commentId: T:Dropbox.Api.Team.TeamFolderInvalidStatusError.Other
+  parent: Dropbox.Api.Team
+  name: TeamFolderInvalidStatusError.Other
+  nameWithType: TeamFolderInvalidStatusError.Other
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError.Other

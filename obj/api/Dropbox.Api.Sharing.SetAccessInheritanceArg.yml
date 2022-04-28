@@ -1,0 +1,501 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceArg
+  commentId: T:Dropbox.Api.Sharing.SetAccessInheritanceArg
+  id: SetAccessInheritanceArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.SetAccessInheritanceArg.#ctor(System.String,Dropbox.Api.Sharing.AccessInheritance)
+  - Dropbox.Api.Sharing.SetAccessInheritanceArg.AccessInheritance
+  - Dropbox.Api.Sharing.SetAccessInheritanceArg.SharedFolderId
+  langs:
+  - csharp
+  - vb
+  name: SetAccessInheritanceArg
+  nameWithType: SetAccessInheritanceArg
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SetAccessInheritanceArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SetAccessInheritanceArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SetAccessInheritanceArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The set access inheritance arg object</p>\n"
+  example: []
+  syntax:
+    content: public class SetAccessInheritanceArg
+    content.vb: Public Class SetAccessInheritanceArg
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceArg.#ctor(System.String,Dropbox.Api.Sharing.AccessInheritance)
+  commentId: M:Dropbox.Api.Sharing.SetAccessInheritanceArg.#ctor(System.String,Dropbox.Api.Sharing.AccessInheritance)
+  id: '#ctor(System.String,Dropbox.Api.Sharing.AccessInheritance)'
+  parent: Dropbox.Api.Sharing.SetAccessInheritanceArg
+  langs:
+  - csharp
+  - vb
+  name: SetAccessInheritanceArg(String, AccessInheritance)
+  nameWithType: SetAccessInheritanceArg.SetAccessInheritanceArg(String, AccessInheritance)
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceArg.SetAccessInheritanceArg(System.String, Dropbox.Api.Sharing.AccessInheritance)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SetAccessInheritanceArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SetAccessInheritanceArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.SetAccessInheritanceArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SetAccessInheritanceArg(string sharedFolderId, AccessInheritance accessInheritance = null)
+    parameters:
+    - id: sharedFolderId
+      type: System.String
+      description: The ID for the shared folder.
+    - id: accessInheritance
+      type: Dropbox.Api.Sharing.AccessInheritance
+      description: >-
+        The access inheritance settings for the
+
+        folder.
+    content.vb: Public Sub New(sharedFolderId As String, accessInheritance As AccessInheritance = Nothing)
+  overload: Dropbox.Api.Sharing.SetAccessInheritanceArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceArg.SharedFolderId
+  commentId: P:Dropbox.Api.Sharing.SetAccessInheritanceArg.SharedFolderId
+  id: SharedFolderId
+  parent: Dropbox.Api.Sharing.SetAccessInheritanceArg
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderId
+  nameWithType: SetAccessInheritanceArg.SharedFolderId
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceArg.SharedFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SetAccessInheritanceArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SharedFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SetAccessInheritanceArg.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The ID for the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public string SharedFolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharedFolderId As String
+  overload: Dropbox.Api.Sharing.SetAccessInheritanceArg.SharedFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceArg.AccessInheritance
+  commentId: P:Dropbox.Api.Sharing.SetAccessInheritanceArg.AccessInheritance
+  id: AccessInheritance
+  parent: Dropbox.Api.Sharing.SetAccessInheritanceArg
+  langs:
+  - csharp
+  - vb
+  name: AccessInheritance
+  nameWithType: SetAccessInheritanceArg.AccessInheritance
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceArg.AccessInheritance
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SetAccessInheritanceArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AccessInheritance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SetAccessInheritanceArg.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The access inheritance settings for the folder.</p>\n"
+  example: []
+  syntax:
+    content: public AccessInheritance AccessInheritance { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AccessInheritance
+    content.vb: Public Property AccessInheritance As AccessInheritance
+  overload: Dropbox.Api.Sharing.SetAccessInheritanceArg.AccessInheritance*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceArg
+  commentId: T:Dropbox.Api.Sharing.SetAccessInheritanceArg
+  parent: Dropbox.Api.Sharing
+  name: SetAccessInheritanceArg
+  nameWithType: SetAccessInheritanceArg
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceArg
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.SetAccessInheritanceArg.#ctor
+  name: SetAccessInheritanceArg
+  nameWithType: SetAccessInheritanceArg.SetAccessInheritanceArg
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceArg.SetAccessInheritanceArg
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.AccessInheritance
+  commentId: T:Dropbox.Api.Sharing.AccessInheritance
+  parent: Dropbox.Api.Sharing
+  name: AccessInheritance
+  nameWithType: AccessInheritance
+  fullName: Dropbox.Api.Sharing.AccessInheritance
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceArg.SharedFolderId*
+  commentId: Overload:Dropbox.Api.Sharing.SetAccessInheritanceArg.SharedFolderId
+  name: SharedFolderId
+  nameWithType: SetAccessInheritanceArg.SharedFolderId
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceArg.SharedFolderId
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceArg.AccessInheritance*
+  commentId: Overload:Dropbox.Api.Sharing.SetAccessInheritanceArg.AccessInheritance
+  name: AccessInheritance
+  nameWithType: SetAccessInheritanceArg.AccessInheritance
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceArg.AccessInheritance

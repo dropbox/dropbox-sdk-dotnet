@@ -1,0 +1,1512 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersSetProfileError
+  commentId: T:Dropbox.Api.Team.MembersSetProfileError
+  id: MembersSetProfileError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersSetProfileError.#ctor
+  - Dropbox.Api.Team.MembersSetProfileError.AsDirectoryRestrictedOff
+  - Dropbox.Api.Team.MembersSetProfileError.AsEmailReservedForOtherUser
+  - Dropbox.Api.Team.MembersSetProfileError.AsExternalIdAndNewExternalIdUnsafe
+  - Dropbox.Api.Team.MembersSetProfileError.AsExternalIdUsedByOtherUser
+  - Dropbox.Api.Team.MembersSetProfileError.AsNoNewDataSpecified
+  - Dropbox.Api.Team.MembersSetProfileError.AsOther
+  - Dropbox.Api.Team.MembersSetProfileError.AsParamCannotBeEmpty
+  - Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdDisabled
+  - Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdUsedByOtherUser
+  - Dropbox.Api.Team.MembersSetProfileError.AsSetProfileDisallowed
+  - Dropbox.Api.Team.MembersSetProfileError.AsUserNotFound
+  - Dropbox.Api.Team.MembersSetProfileError.AsUserNotInTeam
+  - Dropbox.Api.Team.MembersSetProfileError.IsDirectoryRestrictedOff
+  - Dropbox.Api.Team.MembersSetProfileError.IsEmailReservedForOtherUser
+  - Dropbox.Api.Team.MembersSetProfileError.IsExternalIdAndNewExternalIdUnsafe
+  - Dropbox.Api.Team.MembersSetProfileError.IsExternalIdUsedByOtherUser
+  - Dropbox.Api.Team.MembersSetProfileError.IsNoNewDataSpecified
+  - Dropbox.Api.Team.MembersSetProfileError.IsOther
+  - Dropbox.Api.Team.MembersSetProfileError.IsParamCannotBeEmpty
+  - Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdDisabled
+  - Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdUsedByOtherUser
+  - Dropbox.Api.Team.MembersSetProfileError.IsSetProfileDisallowed
+  - Dropbox.Api.Team.MembersSetProfileError.IsUserNotFound
+  - Dropbox.Api.Team.MembersSetProfileError.IsUserNotInTeam
+  langs:
+  - csharp
+  - vb
+  name: MembersSetProfileError
+  nameWithType: MembersSetProfileError
+  fullName: Dropbox.Api.Team.MembersSetProfileError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MembersSetProfileError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The members set profile error object</p>\n"
+  example: []
+  syntax:
+    content: public class MembersSetProfileError
+    content.vb: Public Class MembersSetProfileError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.MembersSetProfileError.DirectoryRestrictedOff
+  - Dropbox.Api.Team.MembersSetProfileError.EmailReservedForOtherUser
+  - Dropbox.Api.Team.MembersSetProfileError.ExternalIdAndNewExternalIdUnsafe
+  - Dropbox.Api.Team.MembersSetProfileError.ExternalIdUsedByOtherUser
+  - Dropbox.Api.Team.MembersSetProfileError.NoNewDataSpecified
+  - Dropbox.Api.Team.MembersSetProfileError.Other
+  - Dropbox.Api.Team.MembersSetProfileError.ParamCannotBeEmpty
+  - Dropbox.Api.Team.MembersSetProfileError.PersistentIdDisabled
+  - Dropbox.Api.Team.MembersSetProfileError.PersistentIdUsedByOtherUser
+  - Dropbox.Api.Team.MembersSetProfileError.SetProfileDisallowed
+  - Dropbox.Api.Team.MembersSetProfileError.UserNotFound
+  - Dropbox.Api.Team.MembersSetProfileError.UserNotInTeam
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersSetProfileError.#ctor
+  commentId: M:Dropbox.Api.Team.MembersSetProfileError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: MembersSetProfileError()
+  nameWithType: MembersSetProfileError.MembersSetProfileError()
+  fullName: Dropbox.Api.Team.MembersSetProfileError.MembersSetProfileError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersSetProfileError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetProfileError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersSetProfileError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsExternalIdAndNewExternalIdUnsafe
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.IsExternalIdAndNewExternalIdUnsafe
+  id: IsExternalIdAndNewExternalIdUnsafe
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: IsExternalIdAndNewExternalIdUnsafe
+  nameWithType: MembersSetProfileError.IsExternalIdAndNewExternalIdUnsafe
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsExternalIdAndNewExternalIdUnsafe
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsExternalIdAndNewExternalIdUnsafe
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nExternalIdAndNewExternalIdUnsafe</p>\n"
+  example: []
+  syntax:
+    content: public bool IsExternalIdAndNewExternalIdUnsafe { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsExternalIdAndNewExternalIdUnsafe As Boolean
+  overload: Dropbox.Api.Team.MembersSetProfileError.IsExternalIdAndNewExternalIdUnsafe*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsExternalIdAndNewExternalIdUnsafe
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.AsExternalIdAndNewExternalIdUnsafe
+  id: AsExternalIdAndNewExternalIdUnsafe
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: AsExternalIdAndNewExternalIdUnsafe
+  nameWithType: MembersSetProfileError.AsExternalIdAndNewExternalIdUnsafe
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsExternalIdAndNewExternalIdUnsafe
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsExternalIdAndNewExternalIdUnsafe
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a ExternalIdAndNewExternalIdUnsafe, or\n<code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetProfileError.ExternalIdAndNewExternalIdUnsafe AsExternalIdAndNewExternalIdUnsafe { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetProfileError.ExternalIdAndNewExternalIdUnsafe
+    content.vb: Public ReadOnly Property AsExternalIdAndNewExternalIdUnsafe As MembersSetProfileError.ExternalIdAndNewExternalIdUnsafe
+  overload: Dropbox.Api.Team.MembersSetProfileError.AsExternalIdAndNewExternalIdUnsafe*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsNoNewDataSpecified
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.IsNoNewDataSpecified
+  id: IsNoNewDataSpecified
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: IsNoNewDataSpecified
+  nameWithType: MembersSetProfileError.IsNoNewDataSpecified
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsNoNewDataSpecified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNoNewDataSpecified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is NoNewDataSpecified</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNoNewDataSpecified { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNoNewDataSpecified As Boolean
+  overload: Dropbox.Api.Team.MembersSetProfileError.IsNoNewDataSpecified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsNoNewDataSpecified
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.AsNoNewDataSpecified
+  id: AsNoNewDataSpecified
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: AsNoNewDataSpecified
+  nameWithType: MembersSetProfileError.AsNoNewDataSpecified
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsNoNewDataSpecified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNoNewDataSpecified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a NoNewDataSpecified, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetProfileError.NoNewDataSpecified AsNoNewDataSpecified { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetProfileError.NoNewDataSpecified
+    content.vb: Public ReadOnly Property AsNoNewDataSpecified As MembersSetProfileError.NoNewDataSpecified
+  overload: Dropbox.Api.Team.MembersSetProfileError.AsNoNewDataSpecified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsEmailReservedForOtherUser
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.IsEmailReservedForOtherUser
+  id: IsEmailReservedForOtherUser
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: IsEmailReservedForOtherUser
+  nameWithType: MembersSetProfileError.IsEmailReservedForOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsEmailReservedForOtherUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsEmailReservedForOtherUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nEmailReservedForOtherUser</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEmailReservedForOtherUser { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmailReservedForOtherUser As Boolean
+  overload: Dropbox.Api.Team.MembersSetProfileError.IsEmailReservedForOtherUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsEmailReservedForOtherUser
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.AsEmailReservedForOtherUser
+  id: AsEmailReservedForOtherUser
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: AsEmailReservedForOtherUser
+  nameWithType: MembersSetProfileError.AsEmailReservedForOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsEmailReservedForOtherUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsEmailReservedForOtherUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 98
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a EmailReservedForOtherUser, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetProfileError.EmailReservedForOtherUser AsEmailReservedForOtherUser { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetProfileError.EmailReservedForOtherUser
+    content.vb: Public ReadOnly Property AsEmailReservedForOtherUser As MembersSetProfileError.EmailReservedForOtherUser
+  overload: Dropbox.Api.Team.MembersSetProfileError.AsEmailReservedForOtherUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsExternalIdUsedByOtherUser
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.IsExternalIdUsedByOtherUser
+  id: IsExternalIdUsedByOtherUser
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: IsExternalIdUsedByOtherUser
+  nameWithType: MembersSetProfileError.IsExternalIdUsedByOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsExternalIdUsedByOtherUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsExternalIdUsedByOtherUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 110
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nExternalIdUsedByOtherUser</p>\n"
+  example: []
+  syntax:
+    content: public bool IsExternalIdUsedByOtherUser { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsExternalIdUsedByOtherUser As Boolean
+  overload: Dropbox.Api.Team.MembersSetProfileError.IsExternalIdUsedByOtherUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsExternalIdUsedByOtherUser
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.AsExternalIdUsedByOtherUser
+  id: AsExternalIdUsedByOtherUser
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: AsExternalIdUsedByOtherUser
+  nameWithType: MembersSetProfileError.AsExternalIdUsedByOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsExternalIdUsedByOtherUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsExternalIdUsedByOtherUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 121
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a ExternalIdUsedByOtherUser, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetProfileError.ExternalIdUsedByOtherUser AsExternalIdUsedByOtherUser { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetProfileError.ExternalIdUsedByOtherUser
+    content.vb: Public ReadOnly Property AsExternalIdUsedByOtherUser As MembersSetProfileError.ExternalIdUsedByOtherUser
+  overload: Dropbox.Api.Team.MembersSetProfileError.AsExternalIdUsedByOtherUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsSetProfileDisallowed
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.IsSetProfileDisallowed
+  id: IsSetProfileDisallowed
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: IsSetProfileDisallowed
+  nameWithType: MembersSetProfileError.IsSetProfileDisallowed
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsSetProfileDisallowed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSetProfileDisallowed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 132
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is SetProfileDisallowed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSetProfileDisallowed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSetProfileDisallowed As Boolean
+  overload: Dropbox.Api.Team.MembersSetProfileError.IsSetProfileDisallowed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsSetProfileDisallowed
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.AsSetProfileDisallowed
+  id: AsSetProfileDisallowed
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: AsSetProfileDisallowed
+  nameWithType: MembersSetProfileError.AsSetProfileDisallowed
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsSetProfileDisallowed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSetProfileDisallowed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 143
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a SetProfileDisallowed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetProfileError.SetProfileDisallowed AsSetProfileDisallowed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetProfileError.SetProfileDisallowed
+    content.vb: Public ReadOnly Property AsSetProfileDisallowed As MembersSetProfileError.SetProfileDisallowed
+  overload: Dropbox.Api.Team.MembersSetProfileError.AsSetProfileDisallowed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsParamCannotBeEmpty
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.IsParamCannotBeEmpty
+  id: IsParamCannotBeEmpty
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: IsParamCannotBeEmpty
+  nameWithType: MembersSetProfileError.IsParamCannotBeEmpty
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsParamCannotBeEmpty
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsParamCannotBeEmpty
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 154
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is ParamCannotBeEmpty</p>\n"
+  example: []
+  syntax:
+    content: public bool IsParamCannotBeEmpty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsParamCannotBeEmpty As Boolean
+  overload: Dropbox.Api.Team.MembersSetProfileError.IsParamCannotBeEmpty*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsParamCannotBeEmpty
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.AsParamCannotBeEmpty
+  id: AsParamCannotBeEmpty
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: AsParamCannotBeEmpty
+  nameWithType: MembersSetProfileError.AsParamCannotBeEmpty
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsParamCannotBeEmpty
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsParamCannotBeEmpty
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 165
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a ParamCannotBeEmpty, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetProfileError.ParamCannotBeEmpty AsParamCannotBeEmpty { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetProfileError.ParamCannotBeEmpty
+    content.vb: Public ReadOnly Property AsParamCannotBeEmpty As MembersSetProfileError.ParamCannotBeEmpty
+  overload: Dropbox.Api.Team.MembersSetProfileError.AsParamCannotBeEmpty*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdDisabled
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdDisabled
+  id: IsPersistentIdDisabled
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: IsPersistentIdDisabled
+  nameWithType: MembersSetProfileError.IsPersistentIdDisabled
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPersistentIdDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 176
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is PersistentIdDisabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPersistentIdDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPersistentIdDisabled As Boolean
+  overload: Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdDisabled
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdDisabled
+  id: AsPersistentIdDisabled
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: AsPersistentIdDisabled
+  nameWithType: MembersSetProfileError.AsPersistentIdDisabled
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPersistentIdDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 187
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a PersistentIdDisabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetProfileError.PersistentIdDisabled AsPersistentIdDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetProfileError.PersistentIdDisabled
+    content.vb: Public ReadOnly Property AsPersistentIdDisabled As MembersSetProfileError.PersistentIdDisabled
+  overload: Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdUsedByOtherUser
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdUsedByOtherUser
+  id: IsPersistentIdUsedByOtherUser
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: IsPersistentIdUsedByOtherUser
+  nameWithType: MembersSetProfileError.IsPersistentIdUsedByOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdUsedByOtherUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPersistentIdUsedByOtherUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 199
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nPersistentIdUsedByOtherUser</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPersistentIdUsedByOtherUser { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPersistentIdUsedByOtherUser As Boolean
+  overload: Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdUsedByOtherUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdUsedByOtherUser
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdUsedByOtherUser
+  id: AsPersistentIdUsedByOtherUser
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: AsPersistentIdUsedByOtherUser
+  nameWithType: MembersSetProfileError.AsPersistentIdUsedByOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdUsedByOtherUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPersistentIdUsedByOtherUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 210
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a PersistentIdUsedByOtherUser, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetProfileError.PersistentIdUsedByOtherUser AsPersistentIdUsedByOtherUser { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetProfileError.PersistentIdUsedByOtherUser
+    content.vb: Public ReadOnly Property AsPersistentIdUsedByOtherUser As MembersSetProfileError.PersistentIdUsedByOtherUser
+  overload: Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdUsedByOtherUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsDirectoryRestrictedOff
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.IsDirectoryRestrictedOff
+  id: IsDirectoryRestrictedOff
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: IsDirectoryRestrictedOff
+  nameWithType: MembersSetProfileError.IsDirectoryRestrictedOff
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsDirectoryRestrictedOff
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDirectoryRestrictedOff
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 222
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nDirectoryRestrictedOff</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDirectoryRestrictedOff { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDirectoryRestrictedOff As Boolean
+  overload: Dropbox.Api.Team.MembersSetProfileError.IsDirectoryRestrictedOff*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsDirectoryRestrictedOff
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.AsDirectoryRestrictedOff
+  id: AsDirectoryRestrictedOff
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: AsDirectoryRestrictedOff
+  nameWithType: MembersSetProfileError.AsDirectoryRestrictedOff
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsDirectoryRestrictedOff
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDirectoryRestrictedOff
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 233
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a DirectoryRestrictedOff, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetProfileError.DirectoryRestrictedOff AsDirectoryRestrictedOff { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetProfileError.DirectoryRestrictedOff
+    content.vb: Public ReadOnly Property AsDirectoryRestrictedOff As MembersSetProfileError.DirectoryRestrictedOff
+  overload: Dropbox.Api.Team.MembersSetProfileError.AsDirectoryRestrictedOff*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsOther
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MembersSetProfileError.IsOther
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 244
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.MembersSetProfileError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsOther
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MembersSetProfileError.AsOther
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 255
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetProfileError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetProfileError.Other
+    content.vb: Public ReadOnly Property AsOther As MembersSetProfileError.Other
+  overload: Dropbox.Api.Team.MembersSetProfileError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.IsUserNotInTeam
+  id: IsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotInTeam
+  nameWithType: MembersSetProfileError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 266
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotInTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotInTeam As Boolean
+  overload: Dropbox.Api.Team.MembersSetProfileError.IsUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.AsUserNotInTeam
+  id: AsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotInTeam
+  nameWithType: MembersSetProfileError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 277
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UserNotInTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetProfileError.UserNotInTeam AsUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetProfileError.UserNotInTeam
+    content.vb: Public ReadOnly Property AsUserNotInTeam As MembersSetProfileError.UserNotInTeam
+  overload: Dropbox.Api.Team.MembersSetProfileError.AsUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.IsUserNotFound
+  id: IsUserNotFound
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotFound
+  nameWithType: MembersSetProfileError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 288
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotFound As Boolean
+  overload: Dropbox.Api.Team.MembersSetProfileError.IsUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersSetProfileError.AsUserNotFound
+  id: AsUserNotFound
+  parent: Dropbox.Api.Team.MembersSetProfileError
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotFound
+  nameWithType: MembersSetProfileError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs
+    startLine: 299
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UserNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetProfileError.UserNotFound AsUserNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetProfileError.UserNotFound
+    content.vb: Public ReadOnly Property AsUserNotFound As MembersSetProfileError.UserNotFound
+  overload: Dropbox.Api.Team.MembersSetProfileError.AsUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.MembersSetProfileError
+  commentId: T:Dropbox.Api.Team.MembersSetProfileError
+  parent: Dropbox.Api.Team
+  name: MembersSetProfileError
+  nameWithType: MembersSetProfileError
+  fullName: Dropbox.Api.Team.MembersSetProfileError
+- uid: Dropbox.Api.Team.MembersSetProfileError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.#ctor
+  name: MembersSetProfileError
+  nameWithType: MembersSetProfileError.MembersSetProfileError
+  fullName: Dropbox.Api.Team.MembersSetProfileError.MembersSetProfileError
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsExternalIdAndNewExternalIdUnsafe*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.IsExternalIdAndNewExternalIdUnsafe
+  name: IsExternalIdAndNewExternalIdUnsafe
+  nameWithType: MembersSetProfileError.IsExternalIdAndNewExternalIdUnsafe
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsExternalIdAndNewExternalIdUnsafe
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsExternalIdAndNewExternalIdUnsafe*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.AsExternalIdAndNewExternalIdUnsafe
+  name: AsExternalIdAndNewExternalIdUnsafe
+  nameWithType: MembersSetProfileError.AsExternalIdAndNewExternalIdUnsafe
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsExternalIdAndNewExternalIdUnsafe
+- uid: Dropbox.Api.Team.MembersSetProfileError.ExternalIdAndNewExternalIdUnsafe
+  commentId: T:Dropbox.Api.Team.MembersSetProfileError.ExternalIdAndNewExternalIdUnsafe
+  parent: Dropbox.Api.Team
+  name: MembersSetProfileError.ExternalIdAndNewExternalIdUnsafe
+  nameWithType: MembersSetProfileError.ExternalIdAndNewExternalIdUnsafe
+  fullName: Dropbox.Api.Team.MembersSetProfileError.ExternalIdAndNewExternalIdUnsafe
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsNoNewDataSpecified*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.IsNoNewDataSpecified
+  name: IsNoNewDataSpecified
+  nameWithType: MembersSetProfileError.IsNoNewDataSpecified
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsNoNewDataSpecified
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsNoNewDataSpecified*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.AsNoNewDataSpecified
+  name: AsNoNewDataSpecified
+  nameWithType: MembersSetProfileError.AsNoNewDataSpecified
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsNoNewDataSpecified
+- uid: Dropbox.Api.Team.MembersSetProfileError.NoNewDataSpecified
+  commentId: T:Dropbox.Api.Team.MembersSetProfileError.NoNewDataSpecified
+  parent: Dropbox.Api.Team
+  name: MembersSetProfileError.NoNewDataSpecified
+  nameWithType: MembersSetProfileError.NoNewDataSpecified
+  fullName: Dropbox.Api.Team.MembersSetProfileError.NoNewDataSpecified
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsEmailReservedForOtherUser*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.IsEmailReservedForOtherUser
+  name: IsEmailReservedForOtherUser
+  nameWithType: MembersSetProfileError.IsEmailReservedForOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsEmailReservedForOtherUser
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsEmailReservedForOtherUser*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.AsEmailReservedForOtherUser
+  name: AsEmailReservedForOtherUser
+  nameWithType: MembersSetProfileError.AsEmailReservedForOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsEmailReservedForOtherUser
+- uid: Dropbox.Api.Team.MembersSetProfileError.EmailReservedForOtherUser
+  commentId: T:Dropbox.Api.Team.MembersSetProfileError.EmailReservedForOtherUser
+  parent: Dropbox.Api.Team
+  name: MembersSetProfileError.EmailReservedForOtherUser
+  nameWithType: MembersSetProfileError.EmailReservedForOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.EmailReservedForOtherUser
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsExternalIdUsedByOtherUser*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.IsExternalIdUsedByOtherUser
+  name: IsExternalIdUsedByOtherUser
+  nameWithType: MembersSetProfileError.IsExternalIdUsedByOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsExternalIdUsedByOtherUser
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsExternalIdUsedByOtherUser*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.AsExternalIdUsedByOtherUser
+  name: AsExternalIdUsedByOtherUser
+  nameWithType: MembersSetProfileError.AsExternalIdUsedByOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsExternalIdUsedByOtherUser
+- uid: Dropbox.Api.Team.MembersSetProfileError.ExternalIdUsedByOtherUser
+  commentId: T:Dropbox.Api.Team.MembersSetProfileError.ExternalIdUsedByOtherUser
+  parent: Dropbox.Api.Team
+  name: MembersSetProfileError.ExternalIdUsedByOtherUser
+  nameWithType: MembersSetProfileError.ExternalIdUsedByOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.ExternalIdUsedByOtherUser
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsSetProfileDisallowed*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.IsSetProfileDisallowed
+  name: IsSetProfileDisallowed
+  nameWithType: MembersSetProfileError.IsSetProfileDisallowed
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsSetProfileDisallowed
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsSetProfileDisallowed*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.AsSetProfileDisallowed
+  name: AsSetProfileDisallowed
+  nameWithType: MembersSetProfileError.AsSetProfileDisallowed
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsSetProfileDisallowed
+- uid: Dropbox.Api.Team.MembersSetProfileError.SetProfileDisallowed
+  commentId: T:Dropbox.Api.Team.MembersSetProfileError.SetProfileDisallowed
+  parent: Dropbox.Api.Team
+  name: MembersSetProfileError.SetProfileDisallowed
+  nameWithType: MembersSetProfileError.SetProfileDisallowed
+  fullName: Dropbox.Api.Team.MembersSetProfileError.SetProfileDisallowed
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsParamCannotBeEmpty*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.IsParamCannotBeEmpty
+  name: IsParamCannotBeEmpty
+  nameWithType: MembersSetProfileError.IsParamCannotBeEmpty
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsParamCannotBeEmpty
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsParamCannotBeEmpty*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.AsParamCannotBeEmpty
+  name: AsParamCannotBeEmpty
+  nameWithType: MembersSetProfileError.AsParamCannotBeEmpty
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsParamCannotBeEmpty
+- uid: Dropbox.Api.Team.MembersSetProfileError.ParamCannotBeEmpty
+  commentId: T:Dropbox.Api.Team.MembersSetProfileError.ParamCannotBeEmpty
+  parent: Dropbox.Api.Team
+  name: MembersSetProfileError.ParamCannotBeEmpty
+  nameWithType: MembersSetProfileError.ParamCannotBeEmpty
+  fullName: Dropbox.Api.Team.MembersSetProfileError.ParamCannotBeEmpty
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdDisabled*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdDisabled
+  name: IsPersistentIdDisabled
+  nameWithType: MembersSetProfileError.IsPersistentIdDisabled
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdDisabled
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdDisabled*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdDisabled
+  name: AsPersistentIdDisabled
+  nameWithType: MembersSetProfileError.AsPersistentIdDisabled
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdDisabled
+- uid: Dropbox.Api.Team.MembersSetProfileError.PersistentIdDisabled
+  commentId: T:Dropbox.Api.Team.MembersSetProfileError.PersistentIdDisabled
+  parent: Dropbox.Api.Team
+  name: MembersSetProfileError.PersistentIdDisabled
+  nameWithType: MembersSetProfileError.PersistentIdDisabled
+  fullName: Dropbox.Api.Team.MembersSetProfileError.PersistentIdDisabled
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdUsedByOtherUser*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdUsedByOtherUser
+  name: IsPersistentIdUsedByOtherUser
+  nameWithType: MembersSetProfileError.IsPersistentIdUsedByOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdUsedByOtherUser
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdUsedByOtherUser*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdUsedByOtherUser
+  name: AsPersistentIdUsedByOtherUser
+  nameWithType: MembersSetProfileError.AsPersistentIdUsedByOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdUsedByOtherUser
+- uid: Dropbox.Api.Team.MembersSetProfileError.PersistentIdUsedByOtherUser
+  commentId: T:Dropbox.Api.Team.MembersSetProfileError.PersistentIdUsedByOtherUser
+  parent: Dropbox.Api.Team
+  name: MembersSetProfileError.PersistentIdUsedByOtherUser
+  nameWithType: MembersSetProfileError.PersistentIdUsedByOtherUser
+  fullName: Dropbox.Api.Team.MembersSetProfileError.PersistentIdUsedByOtherUser
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsDirectoryRestrictedOff*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.IsDirectoryRestrictedOff
+  name: IsDirectoryRestrictedOff
+  nameWithType: MembersSetProfileError.IsDirectoryRestrictedOff
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsDirectoryRestrictedOff
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsDirectoryRestrictedOff*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.AsDirectoryRestrictedOff
+  name: AsDirectoryRestrictedOff
+  nameWithType: MembersSetProfileError.AsDirectoryRestrictedOff
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsDirectoryRestrictedOff
+- uid: Dropbox.Api.Team.MembersSetProfileError.DirectoryRestrictedOff
+  commentId: T:Dropbox.Api.Team.MembersSetProfileError.DirectoryRestrictedOff
+  parent: Dropbox.Api.Team
+  name: MembersSetProfileError.DirectoryRestrictedOff
+  nameWithType: MembersSetProfileError.DirectoryRestrictedOff
+  fullName: Dropbox.Api.Team.MembersSetProfileError.DirectoryRestrictedOff
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.IsOther
+  name: IsOther
+  nameWithType: MembersSetProfileError.IsOther
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsOther
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.AsOther
+  name: AsOther
+  nameWithType: MembersSetProfileError.AsOther
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsOther
+- uid: Dropbox.Api.Team.MembersSetProfileError.Other
+  commentId: T:Dropbox.Api.Team.MembersSetProfileError.Other
+  parent: Dropbox.Api.Team
+  name: MembersSetProfileError.Other
+  nameWithType: MembersSetProfileError.Other
+  fullName: Dropbox.Api.Team.MembersSetProfileError.Other
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.IsUserNotInTeam
+  name: IsUserNotInTeam
+  nameWithType: MembersSetProfileError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.AsUserNotInTeam
+  name: AsUserNotInTeam
+  nameWithType: MembersSetProfileError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersSetProfileError.UserNotInTeam
+  commentId: T:Dropbox.Api.Team.MembersSetProfileError.UserNotInTeam
+  parent: Dropbox.Api.Team
+  name: MembersSetProfileError.UserNotInTeam
+  nameWithType: MembersSetProfileError.UserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSetProfileError.UserNotInTeam
+- uid: Dropbox.Api.Team.MembersSetProfileError.IsUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.IsUserNotFound
+  name: IsUserNotFound
+  nameWithType: MembersSetProfileError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSetProfileError.IsUserNotFound
+- uid: Dropbox.Api.Team.MembersSetProfileError.AsUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileError.AsUserNotFound
+  name: AsUserNotFound
+  nameWithType: MembersSetProfileError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSetProfileError.AsUserNotFound
+- uid: Dropbox.Api.Team.MembersSetProfileError.UserNotFound
+  commentId: T:Dropbox.Api.Team.MembersSetProfileError.UserNotFound
+  parent: Dropbox.Api.Team
+  name: MembersSetProfileError.UserNotFound
+  nameWithType: MembersSetProfileError.UserNotFound
+  fullName: Dropbox.Api.Team.MembersSetProfileError.UserNotFound

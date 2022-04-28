@@ -1,0 +1,792 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.Routes.AuthAppRoutes
+  commentId: T:Dropbox.Api.Auth.Routes.AuthAppRoutes
+  id: AuthAppRoutes
+  parent: Dropbox.Api.Auth.Routes
+  children:
+  - Dropbox.Api.Auth.Routes.AuthAppRoutes.BeginTokenFromOauth1(Dropbox.Api.Auth.TokenFromOAuth1Arg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.Auth.Routes.AuthAppRoutes.BeginTokenFromOauth1(System.String,System.String,System.AsyncCallback,System.Object)
+  - Dropbox.Api.Auth.Routes.AuthAppRoutes.EndTokenFromOauth1(System.IAsyncResult)
+  - Dropbox.Api.Auth.Routes.AuthAppRoutes.TokenFromOauth1Async(Dropbox.Api.Auth.TokenFromOAuth1Arg)
+  - Dropbox.Api.Auth.Routes.AuthAppRoutes.TokenFromOauth1Async(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: AuthAppRoutes
+  nameWithType: AuthAppRoutes
+  fullName: Dropbox.Api.Auth.Routes.AuthAppRoutes
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthAppRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AuthAppRoutes
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthAppRoutes.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth.Routes
+  summary: "\n<p>The routes for the <xref href=\"Dropbox.Api.Auth\" data-throw-if-not-resolved=\"false\"></xref> namespace</p>\n"
+  example: []
+  syntax:
+    content: public class AuthAppRoutes
+    content.vb: Public Class AuthAppRoutes
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Auth.Routes.AuthAppRoutes.TokenFromOauth1Async(Dropbox.Api.Auth.TokenFromOAuth1Arg)
+  commentId: M:Dropbox.Api.Auth.Routes.AuthAppRoutes.TokenFromOauth1Async(Dropbox.Api.Auth.TokenFromOAuth1Arg)
+  id: TokenFromOauth1Async(Dropbox.Api.Auth.TokenFromOAuth1Arg)
+  parent: Dropbox.Api.Auth.Routes.AuthAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: TokenFromOauth1Async(TokenFromOAuth1Arg)
+  nameWithType: AuthAppRoutes.TokenFromOauth1Async(TokenFromOAuth1Arg)
+  fullName: Dropbox.Api.Auth.Routes.AuthAppRoutes.TokenFromOauth1Async(Dropbox.Api.Auth.TokenFromOAuth1Arg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthAppRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TokenFromOauth1Async
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthAppRoutes.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth.Routes
+  summary: "\n<p>Creates an OAuth 2.0 access token from the supplied OAuth 1.0 access\ntoken.</p>\n"
+  example: []
+  syntax:
+    content: public Task<TokenFromOAuth1Result> TokenFromOauth1Async(TokenFromOAuth1Arg tokenFromOAuth1Arg)
+    parameters:
+    - id: tokenFromOAuth1Arg
+      type: Dropbox.Api.Auth.TokenFromOAuth1Arg
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Auth.TokenFromOAuth1Result}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function TokenFromOauth1Async(tokenFromOAuth1Arg As TokenFromOAuth1Arg) As Task(Of TokenFromOAuth1Result)
+  overload: Dropbox.Api.Auth.Routes.AuthAppRoutes.TokenFromOauth1Async*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Auth.TokenFromOAuth1Error" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.Routes.AuthAppRoutes.BeginTokenFromOauth1(Dropbox.Api.Auth.TokenFromOAuth1Arg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Auth.Routes.AuthAppRoutes.BeginTokenFromOauth1(Dropbox.Api.Auth.TokenFromOAuth1Arg,System.AsyncCallback,System.Object)
+  id: BeginTokenFromOauth1(Dropbox.Api.Auth.TokenFromOAuth1Arg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Auth.Routes.AuthAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginTokenFromOauth1(TokenFromOAuth1Arg, AsyncCallback, Object)
+  nameWithType: AuthAppRoutes.BeginTokenFromOauth1(TokenFromOAuth1Arg, AsyncCallback, Object)
+  fullName: Dropbox.Api.Auth.Routes.AuthAppRoutes.BeginTokenFromOauth1(Dropbox.Api.Auth.TokenFromOAuth1Arg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthAppRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: BeginTokenFromOauth1
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthAppRoutes.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth.Routes
+  summary: "\n<p>Begins an asynchronous send to the token from oauth1 route.</p>\n"
+  example: []
+  syntax:
+    content: public IAsyncResult BeginTokenFromOauth1(TokenFromOAuth1Arg tokenFromOAuth1Arg, AsyncCallback callback, object state = null)
+    parameters:
+    - id: tokenFromOAuth1Arg
+      type: Dropbox.Api.Auth.TokenFromOAuth1Arg
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginTokenFromOauth1(tokenFromOAuth1Arg As TokenFromOAuth1Arg, callback As AsyncCallback, state As Object = Nothing) As IAsyncResult
+  overload: Dropbox.Api.Auth.Routes.AuthAppRoutes.BeginTokenFromOauth1*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.Routes.AuthAppRoutes.TokenFromOauth1Async(System.String,System.String)
+  commentId: M:Dropbox.Api.Auth.Routes.AuthAppRoutes.TokenFromOauth1Async(System.String,System.String)
+  id: TokenFromOauth1Async(System.String,System.String)
+  parent: Dropbox.Api.Auth.Routes.AuthAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: TokenFromOauth1Async(String, String)
+  nameWithType: AuthAppRoutes.TokenFromOauth1Async(String, String)
+  fullName: Dropbox.Api.Auth.Routes.AuthAppRoutes.TokenFromOauth1Async(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthAppRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TokenFromOauth1Async
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthAppRoutes.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth.Routes
+  summary: "\n<p>Creates an OAuth 2.0 access token from the supplied OAuth 1.0 access\ntoken.</p>\n"
+  example: []
+  syntax:
+    content: public Task<TokenFromOAuth1Result> TokenFromOauth1Async(string oauth1Token, string oauth1TokenSecret)
+    parameters:
+    - id: oauth1Token
+      type: System.String
+      description: The supplied OAuth 1.0 access token.
+    - id: oauth1TokenSecret
+      type: System.String
+      description: >-
+        The token secret associated with the supplied
+
+        access token.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Auth.TokenFromOAuth1Result}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function TokenFromOauth1Async(oauth1Token As String, oauth1TokenSecret As String) As Task(Of TokenFromOAuth1Result)
+  overload: Dropbox.Api.Auth.Routes.AuthAppRoutes.TokenFromOauth1Async*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Auth.TokenFromOAuth1Error" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.Routes.AuthAppRoutes.BeginTokenFromOauth1(System.String,System.String,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Auth.Routes.AuthAppRoutes.BeginTokenFromOauth1(System.String,System.String,System.AsyncCallback,System.Object)
+  id: BeginTokenFromOauth1(System.String,System.String,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Auth.Routes.AuthAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginTokenFromOauth1(String, String, AsyncCallback, Object)
+  nameWithType: AuthAppRoutes.BeginTokenFromOauth1(String, String, AsyncCallback, Object)
+  fullName: Dropbox.Api.Auth.Routes.AuthAppRoutes.BeginTokenFromOauth1(System.String, System.String, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthAppRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: BeginTokenFromOauth1
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthAppRoutes.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth.Routes
+  summary: "\n<p>Begins an asynchronous send to the token from oauth1 route.</p>\n"
+  example: []
+  syntax:
+    content: public IAsyncResult BeginTokenFromOauth1(string oauth1Token, string oauth1TokenSecret, AsyncCallback callback, object callbackState = null)
+    parameters:
+    - id: oauth1Token
+      type: System.String
+      description: The supplied OAuth 1.0 access token.
+    - id: oauth1TokenSecret
+      type: System.String
+      description: >-
+        The token secret associated with the supplied
+
+        access token.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginTokenFromOauth1(oauth1Token As String, oauth1TokenSecret As String, callback As AsyncCallback, callbackState As Object = Nothing) As IAsyncResult
+  overload: Dropbox.Api.Auth.Routes.AuthAppRoutes.BeginTokenFromOauth1*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.Routes.AuthAppRoutes.EndTokenFromOauth1(System.IAsyncResult)
+  commentId: M:Dropbox.Api.Auth.Routes.AuthAppRoutes.EndTokenFromOauth1(System.IAsyncResult)
+  id: EndTokenFromOauth1(System.IAsyncResult)
+  parent: Dropbox.Api.Auth.Routes.AuthAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndTokenFromOauth1(IAsyncResult)
+  nameWithType: AuthAppRoutes.EndTokenFromOauth1(IAsyncResult)
+  fullName: Dropbox.Api.Auth.Routes.AuthAppRoutes.EndTokenFromOauth1(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthAppRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: EndTokenFromOauth1
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthAppRoutes.cs
+    startLine: 115
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the token from oauth1 route to\ncomplete</p>\n"
+  example: []
+  syntax:
+    content: public TokenFromOAuth1Result EndTokenFromOauth1(IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.Auth.TokenFromOAuth1Result
+      description: The response to the send request
+    content.vb: Public Function EndTokenFromOauth1(asyncResult As IAsyncResult) As TokenFromOAuth1Result
+  overload: Dropbox.Api.Auth.Routes.AuthAppRoutes.EndTokenFromOauth1*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Auth.TokenFromOAuth1Error" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: Dropbox.Api.Auth.Routes
+  commentId: N:Dropbox.Api.Auth.Routes
+  name: Dropbox.Api.Auth.Routes
+  nameWithType: Dropbox.Api.Auth.Routes
+  fullName: Dropbox.Api.Auth.Routes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error
+  commentId: T:Dropbox.Api.Auth.TokenFromOAuth1Error
+  parent: Dropbox.Api.Auth
+  name: TokenFromOAuth1Error
+  nameWithType: TokenFromOAuth1Error
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error
+- uid: Dropbox.Api.ApiException`1
+  commentId: T:Dropbox.Api.ApiException`1
+  name: ApiException<TError>
+  nameWithType: ApiException<TError>
+  fullName: Dropbox.Api.ApiException<TError>
+  nameWithType.vb: ApiException(Of TError)
+  fullName.vb: Dropbox.Api.ApiException(Of TError)
+  name.vb: ApiException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.ApiException`1
+    name: ApiException
+    nameWithType: ApiException
+    fullName: Dropbox.Api.ApiException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.ApiException`1
+    name: ApiException
+    nameWithType: ApiException
+    fullName: Dropbox.Api.ApiException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Auth.Routes.AuthAppRoutes.TokenFromOauth1Async*
+  commentId: Overload:Dropbox.Api.Auth.Routes.AuthAppRoutes.TokenFromOauth1Async
+  name: TokenFromOauth1Async
+  nameWithType: AuthAppRoutes.TokenFromOauth1Async
+  fullName: Dropbox.Api.Auth.Routes.AuthAppRoutes.TokenFromOauth1Async
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Arg
+  commentId: T:Dropbox.Api.Auth.TokenFromOAuth1Arg
+  parent: Dropbox.Api.Auth
+  name: TokenFromOAuth1Arg
+  nameWithType: TokenFromOAuth1Arg
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Arg
+- uid: System.Threading.Tasks.Task{Dropbox.Api.Auth.TokenFromOAuth1Result}
+  commentId: T:System.Threading.Tasks.Task{Dropbox.Api.Auth.TokenFromOAuth1Result}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<TokenFromOAuth1Result>
+  nameWithType: Task<TokenFromOAuth1Result>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.Auth.TokenFromOAuth1Result>
+  nameWithType.vb: Task(Of TokenFromOAuth1Result)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.Auth.TokenFromOAuth1Result)
+  name.vb: Task(Of TokenFromOAuth1Result)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Auth.TokenFromOAuth1Result
+    name: TokenFromOAuth1Result
+    nameWithType: TokenFromOAuth1Result
+    fullName: Dropbox.Api.Auth.TokenFromOAuth1Result
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Auth.TokenFromOAuth1Result
+    name: TokenFromOAuth1Result
+    nameWithType: TokenFromOAuth1Result
+    fullName: Dropbox.Api.Auth.TokenFromOAuth1Result
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: Dropbox.Api.Auth.Routes.AuthAppRoutes.BeginTokenFromOauth1*
+  commentId: Overload:Dropbox.Api.Auth.Routes.AuthAppRoutes.BeginTokenFromOauth1
+  name: BeginTokenFromOauth1
+  nameWithType: AuthAppRoutes.BeginTokenFromOauth1
+  fullName: Dropbox.Api.Auth.Routes.AuthAppRoutes.BeginTokenFromOauth1
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Auth.Routes.AuthAppRoutes.EndTokenFromOauth1*
+  commentId: Overload:Dropbox.Api.Auth.Routes.AuthAppRoutes.EndTokenFromOauth1
+  name: EndTokenFromOauth1
+  nameWithType: AuthAppRoutes.EndTokenFromOauth1
+  fullName: Dropbox.Api.Auth.Routes.AuthAppRoutes.EndTokenFromOauth1
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Result
+  commentId: T:Dropbox.Api.Auth.TokenFromOAuth1Result
+  parent: Dropbox.Api.Auth
+  name: TokenFromOAuth1Result
+  nameWithType: TokenFromOAuth1Result
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Result

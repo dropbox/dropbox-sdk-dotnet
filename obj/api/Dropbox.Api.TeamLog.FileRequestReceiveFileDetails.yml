@@ -1,0 +1,823 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestReceiveFileDetails
+  id: FileRequestReceiveFileDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.#ctor(System.Collections.Generic.IEnumerable{System.String},System.String,Dropbox.Api.TeamLog.FileRequestDetails,System.String,System.String)
+  - Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestDetails
+  - Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestId
+  - Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmittedFileNames
+  - Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterEmail
+  - Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterName
+  langs:
+  - csharp
+  - vb
+  name: FileRequestReceiveFileDetails
+  nameWithType: FileRequestReceiveFileDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestReceiveFileDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FileRequestReceiveFileDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestReceiveFileDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Received files for file request.</p>\n"
+  example: []
+  syntax:
+    content: public class FileRequestReceiveFileDetails
+    content.vb: Public Class FileRequestReceiveFileDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.#ctor(System.Collections.Generic.IEnumerable{System.String},System.String,Dropbox.Api.TeamLog.FileRequestDetails,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.#ctor(System.Collections.Generic.IEnumerable{System.String},System.String,Dropbox.Api.TeamLog.FileRequestDetails,System.String,System.String)
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.String},System.String,Dropbox.Api.TeamLog.FileRequestDetails,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestReceiveFileDetails(IEnumerable<String>, String, FileRequestDetails, String, String)
+  nameWithType: FileRequestReceiveFileDetails.FileRequestReceiveFileDetails(IEnumerable<String>, String, FileRequestDetails, String, String)
+  fullName: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestReceiveFileDetails(System.Collections.Generic.IEnumerable<System.String>, System.String, Dropbox.Api.TeamLog.FileRequestDetails, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestReceiveFileDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestReceiveFileDetails.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestReceiveFileDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestReceiveFileDetails(IEnumerable<string> submittedFileNames, string fileRequestId = null, FileRequestDetails fileRequestDetails = null, string submitterName = null, string submitterEmail = null)
+    parameters:
+    - id: submittedFileNames
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Submitted file names.
+    - id: fileRequestId
+      type: System.String
+      description: >-
+        File request id. Might be missing due to historical
+
+        data gap.
+    - id: fileRequestDetails
+      type: Dropbox.Api.TeamLog.FileRequestDetails
+      description: >-
+        File request details. Might be missing due to
+
+        historical data gap.
+    - id: submitterName
+      type: System.String
+      description: The name as provided by the submitter.
+    - id: submitterEmail
+      type: System.String
+      description: The email as provided by the submitter.
+    content.vb: Public Sub New(submittedFileNames As IEnumerable(Of String), fileRequestId As String = Nothing, fileRequestDetails As FileRequestDetails = Nothing, submitterName As String = Nothing, submitterEmail As String = Nothing)
+  overload: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.#ctor*
+  nameWithType.vb: FileRequestReceiveFileDetails.FileRequestReceiveFileDetails(IEnumerable(Of String), String, FileRequestDetails, String, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestReceiveFileDetails(System.Collections.Generic.IEnumerable(Of System.String), System.String, Dropbox.Api.TeamLog.FileRequestDetails, System.String, System.String)
+  name.vb: FileRequestReceiveFileDetails(IEnumerable(Of String), String, FileRequestDetails, String, String)
+- uid: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmittedFileNames
+  commentId: P:Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmittedFileNames
+  id: SubmittedFileNames
+  parent: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails
+  langs:
+  - csharp
+  - vb
+  name: SubmittedFileNames
+  nameWithType: FileRequestReceiveFileDetails.SubmittedFileNames
+  fullName: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmittedFileNames
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestReceiveFileDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SubmittedFileNames
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestReceiveFileDetails.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Submitted file names.</p>\n"
+  example: []
+  syntax:
+    content: public IList<string> SubmittedFileNames { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property SubmittedFileNames As IList(Of String)
+  overload: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmittedFileNames*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestId
+  commentId: P:Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestId
+  id: FileRequestId
+  parent: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestId
+  nameWithType: FileRequestReceiveFileDetails.FileRequestId
+  fullName: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestReceiveFileDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FileRequestId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestReceiveFileDetails.cs
+    startLine: 99
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>File request id. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public string FileRequestId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FileRequestId As String
+  overload: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestDetails
+  commentId: P:Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestDetails
+  id: FileRequestDetails
+  parent: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestDetails
+  nameWithType: FileRequestReceiveFileDetails.FileRequestDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestReceiveFileDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FileRequestDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestReceiveFileDetails.cs
+    startLine: 104
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>File request details. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestDetails FileRequestDetails { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FileRequestDetails
+    content.vb: Public Property FileRequestDetails As FileRequestDetails
+  overload: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestDetails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterName
+  commentId: P:Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterName
+  id: SubmitterName
+  parent: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails
+  langs:
+  - csharp
+  - vb
+  name: SubmitterName
+  nameWithType: FileRequestReceiveFileDetails.SubmitterName
+  fullName: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestReceiveFileDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SubmitterName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestReceiveFileDetails.cs
+    startLine: 109
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The name as provided by the submitter.</p>\n"
+  example: []
+  syntax:
+    content: public string SubmitterName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SubmitterName As String
+  overload: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterEmail
+  commentId: P:Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterEmail
+  id: SubmitterEmail
+  parent: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails
+  langs:
+  - csharp
+  - vb
+  name: SubmitterEmail
+  nameWithType: FileRequestReceiveFileDetails.SubmitterEmail
+  fullName: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterEmail
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestReceiveFileDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SubmitterEmail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestReceiveFileDetails.cs
+    startLine: 114
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The email as provided by the submitter.</p>\n"
+  example: []
+  syntax:
+    content: public string SubmitterEmail { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SubmitterEmail As String
+  overload: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterEmail*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestReceiveFileDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestReceiveFileDetails
+  nameWithType: FileRequestReceiveFileDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails
+- uid: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.#ctor
+  name: FileRequestReceiveFileDetails
+  nameWithType: FileRequestReceiveFileDetails.FileRequestReceiveFileDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestReceiveFileDetails
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.FileRequestDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestDetails
+  nameWithType: FileRequestDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestDetails
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmittedFileNames*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmittedFileNames
+  name: SubmittedFileNames
+  nameWithType: FileRequestReceiveFileDetails.SubmittedFileNames
+  fullName: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmittedFileNames
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: T:System.Collections.Generic.IList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<String>
+  nameWithType: IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestId*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestId
+  name: FileRequestId
+  nameWithType: FileRequestReceiveFileDetails.FileRequestId
+  fullName: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestId
+- uid: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestDetails
+  name: FileRequestDetails
+  nameWithType: FileRequestReceiveFileDetails.FileRequestDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.FileRequestDetails
+- uid: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterName*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterName
+  name: SubmitterName
+  nameWithType: FileRequestReceiveFileDetails.SubmitterName
+  fullName: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterName
+- uid: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterEmail*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterEmail
+  name: SubmitterEmail
+  nameWithType: FileRequestReceiveFileDetails.SubmitterEmail
+  fullName: Dropbox.Api.TeamLog.FileRequestReceiveFileDetails.SubmitterEmail

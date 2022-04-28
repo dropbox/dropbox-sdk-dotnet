@@ -1,0 +1,455 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamCommon.GroupManagementType.CompanyManaged
+  commentId: T:Dropbox.Api.TeamCommon.GroupManagementType.CompanyManaged
+  id: GroupManagementType.CompanyManaged
+  parent: Dropbox.Api.TeamCommon
+  children:
+  - Dropbox.Api.TeamCommon.GroupManagementType.CompanyManaged.Instance
+  langs:
+  - csharp
+  - vb
+  name: GroupManagementType.CompanyManaged
+  nameWithType: GroupManagementType.CompanyManaged
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType.CompanyManaged
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupManagementType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: CompanyManaged
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupManagementType.cs
+    startLine: 282
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>A group which is managed by team admins only.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class CompanyManaged : GroupManagementType'
+    content.vb: >-
+      Public NotInheritable Class CompanyManaged
+          Inherits GroupManagementType
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamCommon.GroupManagementType
+  inheritedMembers:
+  - Dropbox.Api.TeamCommon.GroupManagementType.IsUserManaged
+  - Dropbox.Api.TeamCommon.GroupManagementType.AsUserManaged
+  - Dropbox.Api.TeamCommon.GroupManagementType.IsCompanyManaged
+  - Dropbox.Api.TeamCommon.GroupManagementType.AsCompanyManaged
+  - Dropbox.Api.TeamCommon.GroupManagementType.IsSystemManaged
+  - Dropbox.Api.TeamCommon.GroupManagementType.AsSystemManaged
+  - Dropbox.Api.TeamCommon.GroupManagementType.IsOther
+  - Dropbox.Api.TeamCommon.GroupManagementType.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamCommon.GroupManagementType.CompanyManaged.Instance
+  commentId: F:Dropbox.Api.TeamCommon.GroupManagementType.CompanyManaged.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamCommon.GroupManagementType.CompanyManaged
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: GroupManagementType.CompanyManaged.Instance
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType.CompanyManaged.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupManagementType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupManagementType.cs
+    startLine: 307
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>A singleton instance of CompanyManaged</p>\n"
+  example: []
+  syntax:
+    content: public static readonly GroupManagementType.CompanyManaged Instance
+    return:
+      type: Dropbox.Api.TeamCommon.GroupManagementType.CompanyManaged
+    content.vb: Public Shared ReadOnly Instance As GroupManagementType.CompanyManaged
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamCommon
+  commentId: N:Dropbox.Api.TeamCommon
+  name: Dropbox.Api.TeamCommon
+  nameWithType: Dropbox.Api.TeamCommon
+  fullName: Dropbox.Api.TeamCommon
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamCommon.GroupManagementType
+  commentId: T:Dropbox.Api.TeamCommon.GroupManagementType
+  parent: Dropbox.Api.TeamCommon
+  name: GroupManagementType
+  nameWithType: GroupManagementType
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType
+- uid: Dropbox.Api.TeamCommon.GroupManagementType.IsUserManaged
+  commentId: P:Dropbox.Api.TeamCommon.GroupManagementType.IsUserManaged
+  parent: Dropbox.Api.TeamCommon.GroupManagementType
+  name: IsUserManaged
+  nameWithType: GroupManagementType.IsUserManaged
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType.IsUserManaged
+- uid: Dropbox.Api.TeamCommon.GroupManagementType.AsUserManaged
+  commentId: P:Dropbox.Api.TeamCommon.GroupManagementType.AsUserManaged
+  parent: Dropbox.Api.TeamCommon.GroupManagementType
+  name: AsUserManaged
+  nameWithType: GroupManagementType.AsUserManaged
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType.AsUserManaged
+- uid: Dropbox.Api.TeamCommon.GroupManagementType.IsCompanyManaged
+  commentId: P:Dropbox.Api.TeamCommon.GroupManagementType.IsCompanyManaged
+  parent: Dropbox.Api.TeamCommon.GroupManagementType
+  name: IsCompanyManaged
+  nameWithType: GroupManagementType.IsCompanyManaged
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType.IsCompanyManaged
+- uid: Dropbox.Api.TeamCommon.GroupManagementType.AsCompanyManaged
+  commentId: P:Dropbox.Api.TeamCommon.GroupManagementType.AsCompanyManaged
+  parent: Dropbox.Api.TeamCommon.GroupManagementType
+  name: AsCompanyManaged
+  nameWithType: GroupManagementType.AsCompanyManaged
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType.AsCompanyManaged
+- uid: Dropbox.Api.TeamCommon.GroupManagementType.IsSystemManaged
+  commentId: P:Dropbox.Api.TeamCommon.GroupManagementType.IsSystemManaged
+  parent: Dropbox.Api.TeamCommon.GroupManagementType
+  name: IsSystemManaged
+  nameWithType: GroupManagementType.IsSystemManaged
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType.IsSystemManaged
+- uid: Dropbox.Api.TeamCommon.GroupManagementType.AsSystemManaged
+  commentId: P:Dropbox.Api.TeamCommon.GroupManagementType.AsSystemManaged
+  parent: Dropbox.Api.TeamCommon.GroupManagementType
+  name: AsSystemManaged
+  nameWithType: GroupManagementType.AsSystemManaged
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType.AsSystemManaged
+- uid: Dropbox.Api.TeamCommon.GroupManagementType.IsOther
+  commentId: P:Dropbox.Api.TeamCommon.GroupManagementType.IsOther
+  parent: Dropbox.Api.TeamCommon.GroupManagementType
+  name: IsOther
+  nameWithType: GroupManagementType.IsOther
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType.IsOther
+- uid: Dropbox.Api.TeamCommon.GroupManagementType.AsOther
+  commentId: P:Dropbox.Api.TeamCommon.GroupManagementType.AsOther
+  parent: Dropbox.Api.TeamCommon.GroupManagementType
+  name: AsOther
+  nameWithType: GroupManagementType.AsOther
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamCommon.GroupManagementType.CompanyManaged
+  commentId: T:Dropbox.Api.TeamCommon.GroupManagementType.CompanyManaged
+  parent: Dropbox.Api.TeamCommon
+  name: GroupManagementType.CompanyManaged
+  nameWithType: GroupManagementType.CompanyManaged
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType.CompanyManaged

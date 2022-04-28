@@ -1,0 +1,492 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.RevokeLinkedAppBatchError
+  commentId: T:Dropbox.Api.Team.RevokeLinkedAppBatchError
+  id: RevokeLinkedAppBatchError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.RevokeLinkedAppBatchError.#ctor
+  - Dropbox.Api.Team.RevokeLinkedAppBatchError.AsOther
+  - Dropbox.Api.Team.RevokeLinkedAppBatchError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: RevokeLinkedAppBatchError
+  nameWithType: RevokeLinkedAppBatchError
+  fullName: Dropbox.Api.Team.RevokeLinkedAppBatchError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: RevokeLinkedAppBatchError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppBatchError.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Error returned by <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsRevokeLinkedAppBatchAsync(Dropbox.Api.Team.RevokeLinkedApiAppBatchArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public class RevokeLinkedAppBatchError
+    content.vb: Public Class RevokeLinkedAppBatchError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.RevokeLinkedAppBatchError.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.RevokeLinkedAppBatchError.#ctor
+  commentId: M:Dropbox.Api.Team.RevokeLinkedAppBatchError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.RevokeLinkedAppBatchError
+  langs:
+  - csharp
+  - vb
+  name: RevokeLinkedAppBatchError()
+  nameWithType: RevokeLinkedAppBatchError.RevokeLinkedAppBatchError()
+  fullName: Dropbox.Api.Team.RevokeLinkedAppBatchError.RevokeLinkedAppBatchError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppBatchError.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeLinkedAppBatchError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeLinkedAppBatchError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.RevokeLinkedAppBatchError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RevokeLinkedAppBatchError.IsOther
+  commentId: P:Dropbox.Api.Team.RevokeLinkedAppBatchError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.RevokeLinkedAppBatchError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: RevokeLinkedAppBatchError.IsOther
+  fullName: Dropbox.Api.Team.RevokeLinkedAppBatchError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppBatchError.cs
+    startLine: 42
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.RevokeLinkedAppBatchError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.RevokeLinkedAppBatchError.AsOther
+  commentId: P:Dropbox.Api.Team.RevokeLinkedAppBatchError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.RevokeLinkedAppBatchError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: RevokeLinkedAppBatchError.AsOther
+  fullName: Dropbox.Api.Team.RevokeLinkedAppBatchError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppBatchError.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeLinkedAppBatchError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.RevokeLinkedAppBatchError.Other
+    content.vb: Public ReadOnly Property AsOther As RevokeLinkedAppBatchError.Other
+  overload: Dropbox.Api.Team.RevokeLinkedAppBatchError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsRevokeLinkedAppBatchAsync(Dropbox.Api.Team.RevokeLinkedApiAppBatchArg)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsRevokeLinkedAppBatchAsync(Dropbox.Api.Team.RevokeLinkedApiAppBatchArg)
+  isExternal: true
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.RevokeLinkedAppBatchError
+  commentId: T:Dropbox.Api.Team.RevokeLinkedAppBatchError
+  parent: Dropbox.Api.Team
+  name: RevokeLinkedAppBatchError
+  nameWithType: RevokeLinkedAppBatchError
+  fullName: Dropbox.Api.Team.RevokeLinkedAppBatchError
+- uid: Dropbox.Api.Team.RevokeLinkedAppBatchError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppBatchError.#ctor
+  name: RevokeLinkedAppBatchError
+  nameWithType: RevokeLinkedAppBatchError.RevokeLinkedAppBatchError
+  fullName: Dropbox.Api.Team.RevokeLinkedAppBatchError.RevokeLinkedAppBatchError
+- uid: Dropbox.Api.Team.RevokeLinkedAppBatchError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppBatchError.IsOther
+  name: IsOther
+  nameWithType: RevokeLinkedAppBatchError.IsOther
+  fullName: Dropbox.Api.Team.RevokeLinkedAppBatchError.IsOther
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.RevokeLinkedAppBatchError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppBatchError.AsOther
+  name: AsOther
+  nameWithType: RevokeLinkedAppBatchError.AsOther
+  fullName: Dropbox.Api.Team.RevokeLinkedAppBatchError.AsOther
+- uid: Dropbox.Api.Team.RevokeLinkedAppBatchError.Other
+  commentId: T:Dropbox.Api.Team.RevokeLinkedAppBatchError.Other
+  parent: Dropbox.Api.Team
+  name: RevokeLinkedAppBatchError.Other
+  nameWithType: RevokeLinkedAppBatchError.Other
+  fullName: Dropbox.Api.Team.RevokeLinkedAppBatchError.Other

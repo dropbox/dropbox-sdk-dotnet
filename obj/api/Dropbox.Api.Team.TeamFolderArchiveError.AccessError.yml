@@ -1,0 +1,508 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.AccessError
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveError.AccessError
+  id: TeamFolderArchiveError.AccessError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderArchiveError.AccessError.#ctor(Dropbox.Api.Team.TeamFolderAccessError)
+  - Dropbox.Api.Team.TeamFolderArchiveError.AccessError.Value
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderArchiveError.AccessError
+  nameWithType: TeamFolderArchiveError.AccessError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.AccessError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveError.cs
+    startLine: 216
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The access error object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class AccessError : TeamFolderArchiveError'
+    content.vb: >-
+      Public NotInheritable Class AccessError
+          Inherits TeamFolderArchiveError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.TeamFolderArchiveError
+  inheritedMembers:
+  - Dropbox.Api.Team.TeamFolderArchiveError.IsAccessError
+  - Dropbox.Api.Team.TeamFolderArchiveError.AsAccessError
+  - Dropbox.Api.Team.TeamFolderArchiveError.IsStatusError
+  - Dropbox.Api.Team.TeamFolderArchiveError.AsStatusError
+  - Dropbox.Api.Team.TeamFolderArchiveError.IsTeamSharedDropboxError
+  - Dropbox.Api.Team.TeamFolderArchiveError.AsTeamSharedDropboxError
+  - Dropbox.Api.Team.TeamFolderArchiveError.IsOther
+  - Dropbox.Api.Team.TeamFolderArchiveError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.AccessError.#ctor(Dropbox.Api.Team.TeamFolderAccessError)
+  commentId: M:Dropbox.Api.Team.TeamFolderArchiveError.AccessError.#ctor(Dropbox.Api.Team.TeamFolderAccessError)
+  id: '#ctor(Dropbox.Api.Team.TeamFolderAccessError)'
+  parent: Dropbox.Api.Team.TeamFolderArchiveError.AccessError
+  langs:
+  - csharp
+  - vb
+  name: AccessError(TeamFolderAccessError)
+  nameWithType: TeamFolderArchiveError.AccessError.AccessError(TeamFolderAccessError)
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.AccessError.AccessError(Dropbox.Api.Team.TeamFolderAccessError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveError.cs
+    startLine: 235
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderArchiveError.AccessError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AccessError(TeamFolderAccessError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Team.TeamFolderAccessError
+      description: The value
+    content.vb: Public Sub New(value As TeamFolderAccessError)
+  overload: Dropbox.Api.Team.TeamFolderArchiveError.AccessError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.AccessError.Value
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.AccessError.Value
+  id: Value
+  parent: Dropbox.Api.Team.TeamFolderArchiveError.AccessError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: TeamFolderArchiveError.AccessError.Value
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.AccessError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveError.cs
+    startLine: 250
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderAccessError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderAccessError
+    content.vb: Public ReadOnly Property Value As TeamFolderAccessError
+  overload: Dropbox.Api.Team.TeamFolderArchiveError.AccessError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderArchiveError
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveError
+  parent: Dropbox.Api.Team
+  name: TeamFolderArchiveError
+  nameWithType: TeamFolderArchiveError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.IsAccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.IsAccessError
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: IsAccessError
+  nameWithType: TeamFolderArchiveError.IsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.IsAccessError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.AsAccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.AsAccessError
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: AsAccessError
+  nameWithType: TeamFolderArchiveError.AsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.AsAccessError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.IsStatusError
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.IsStatusError
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: IsStatusError
+  nameWithType: TeamFolderArchiveError.IsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.IsStatusError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.AsStatusError
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.AsStatusError
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: AsStatusError
+  nameWithType: TeamFolderArchiveError.AsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.AsStatusError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.IsTeamSharedDropboxError
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.IsTeamSharedDropboxError
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: IsTeamSharedDropboxError
+  nameWithType: TeamFolderArchiveError.IsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.IsTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.AsTeamSharedDropboxError
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.AsTeamSharedDropboxError
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: AsTeamSharedDropboxError
+  nameWithType: TeamFolderArchiveError.AsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.AsTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.IsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.IsOther
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: IsOther
+  nameWithType: TeamFolderArchiveError.IsOther
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.IsOther
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.AsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.AsOther
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: AsOther
+  nameWithType: TeamFolderArchiveError.AsOther
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.AccessError
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveError.AccessError
+  parent: Dropbox.Api.Team
+  name: TeamFolderArchiveError.AccessError
+  nameWithType: TeamFolderArchiveError.AccessError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.AccessError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.AccessError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveError.AccessError.#ctor
+  name: AccessError
+  nameWithType: TeamFolderArchiveError.AccessError.AccessError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.AccessError.AccessError
+- uid: Dropbox.Api.Team.TeamFolderAccessError
+  commentId: T:Dropbox.Api.Team.TeamFolderAccessError
+  parent: Dropbox.Api.Team
+  name: TeamFolderAccessError
+  nameWithType: TeamFolderAccessError
+  fullName: Dropbox.Api.Team.TeamFolderAccessError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.AccessError.Value*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveError.AccessError.Value
+  name: Value
+  nameWithType: TeamFolderArchiveError.AccessError.Value
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.AccessError.Value

@@ -1,0 +1,582 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Users.GetAccountBatchError
+  commentId: T:Dropbox.Api.Users.GetAccountBatchError
+  id: GetAccountBatchError
+  parent: Dropbox.Api.Users
+  children:
+  - Dropbox.Api.Users.GetAccountBatchError.#ctor
+  - Dropbox.Api.Users.GetAccountBatchError.AsNoAccount
+  - Dropbox.Api.Users.GetAccountBatchError.AsOther
+  - Dropbox.Api.Users.GetAccountBatchError.IsNoAccount
+  - Dropbox.Api.Users.GetAccountBatchError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: GetAccountBatchError
+  nameWithType: GetAccountBatchError
+  fullName: Dropbox.Api.Users.GetAccountBatchError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: GetAccountBatchError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The get account batch error object</p>\n"
+  example: []
+  syntax:
+    content: public class GetAccountBatchError
+    content.vb: Public Class GetAccountBatchError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Users.GetAccountBatchError.NoAccount
+  - Dropbox.Api.Users.GetAccountBatchError.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Users.GetAccountBatchError.#ctor
+  commentId: M:Dropbox.Api.Users.GetAccountBatchError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Users.GetAccountBatchError
+  langs:
+  - csharp
+  - vb
+  name: GetAccountBatchError()
+  nameWithType: GetAccountBatchError.GetAccountBatchError()
+  fullName: Dropbox.Api.Users.GetAccountBatchError.GetAccountBatchError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.GetAccountBatchError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetAccountBatchError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Users.GetAccountBatchError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.GetAccountBatchError.IsNoAccount
+  commentId: P:Dropbox.Api.Users.GetAccountBatchError.IsNoAccount
+  id: IsNoAccount
+  parent: Dropbox.Api.Users.GetAccountBatchError
+  langs:
+  - csharp
+  - vb
+  name: IsNoAccount
+  nameWithType: GetAccountBatchError.IsNoAccount
+  fullName: Dropbox.Api.Users.GetAccountBatchError.IsNoAccount
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNoAccount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Gets a value indicating whether this instance is NoAccount</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNoAccount { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNoAccount As Boolean
+  overload: Dropbox.Api.Users.GetAccountBatchError.IsNoAccount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Users.GetAccountBatchError.AsNoAccount
+  commentId: P:Dropbox.Api.Users.GetAccountBatchError.AsNoAccount
+  id: AsNoAccount
+  parent: Dropbox.Api.Users.GetAccountBatchError
+  langs:
+  - csharp
+  - vb
+  name: AsNoAccount
+  nameWithType: GetAccountBatchError.AsNoAccount
+  fullName: Dropbox.Api.Users.GetAccountBatchError.AsNoAccount
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNoAccount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Gets this instance as a NoAccount, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetAccountBatchError.NoAccount AsNoAccount { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Users.GetAccountBatchError.NoAccount
+    content.vb: Public ReadOnly Property AsNoAccount As GetAccountBatchError.NoAccount
+  overload: Dropbox.Api.Users.GetAccountBatchError.AsNoAccount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Users.GetAccountBatchError.IsOther
+  commentId: P:Dropbox.Api.Users.GetAccountBatchError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Users.GetAccountBatchError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: GetAccountBatchError.IsOther
+  fullName: Dropbox.Api.Users.GetAccountBatchError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Users.GetAccountBatchError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Users.GetAccountBatchError.AsOther
+  commentId: P:Dropbox.Api.Users.GetAccountBatchError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Users.GetAccountBatchError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: GetAccountBatchError.AsOther
+  fullName: Dropbox.Api.Users.GetAccountBatchError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetAccountBatchError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Users.GetAccountBatchError.Other
+    content.vb: Public ReadOnly Property AsOther As GetAccountBatchError.Other
+  overload: Dropbox.Api.Users.GetAccountBatchError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Users.GetAccountBatchError
+  commentId: T:Dropbox.Api.Users.GetAccountBatchError
+  parent: Dropbox.Api.Users
+  name: GetAccountBatchError
+  nameWithType: GetAccountBatchError
+  fullName: Dropbox.Api.Users.GetAccountBatchError
+- uid: Dropbox.Api.Users.GetAccountBatchError.#ctor*
+  commentId: Overload:Dropbox.Api.Users.GetAccountBatchError.#ctor
+  name: GetAccountBatchError
+  nameWithType: GetAccountBatchError.GetAccountBatchError
+  fullName: Dropbox.Api.Users.GetAccountBatchError.GetAccountBatchError
+- uid: Dropbox.Api.Users.GetAccountBatchError.IsNoAccount*
+  commentId: Overload:Dropbox.Api.Users.GetAccountBatchError.IsNoAccount
+  name: IsNoAccount
+  nameWithType: GetAccountBatchError.IsNoAccount
+  fullName: Dropbox.Api.Users.GetAccountBatchError.IsNoAccount
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Users.GetAccountBatchError.AsNoAccount*
+  commentId: Overload:Dropbox.Api.Users.GetAccountBatchError.AsNoAccount
+  name: AsNoAccount
+  nameWithType: GetAccountBatchError.AsNoAccount
+  fullName: Dropbox.Api.Users.GetAccountBatchError.AsNoAccount
+- uid: Dropbox.Api.Users.GetAccountBatchError.NoAccount
+  commentId: T:Dropbox.Api.Users.GetAccountBatchError.NoAccount
+  parent: Dropbox.Api.Users
+  name: GetAccountBatchError.NoAccount
+  nameWithType: GetAccountBatchError.NoAccount
+  fullName: Dropbox.Api.Users.GetAccountBatchError.NoAccount
+- uid: Dropbox.Api.Users.GetAccountBatchError.IsOther*
+  commentId: Overload:Dropbox.Api.Users.GetAccountBatchError.IsOther
+  name: IsOther
+  nameWithType: GetAccountBatchError.IsOther
+  fullName: Dropbox.Api.Users.GetAccountBatchError.IsOther
+- uid: Dropbox.Api.Users.GetAccountBatchError.AsOther*
+  commentId: Overload:Dropbox.Api.Users.GetAccountBatchError.AsOther
+  name: AsOther
+  nameWithType: GetAccountBatchError.AsOther
+  fullName: Dropbox.Api.Users.GetAccountBatchError.AsOther
+- uid: Dropbox.Api.Users.GetAccountBatchError.Other
+  commentId: T:Dropbox.Api.Users.GetAccountBatchError.Other
+  parent: Dropbox.Api.Users
+  name: GetAccountBatchError.Other
+  nameWithType: GetAccountBatchError.Other
+  fullName: Dropbox.Api.Users.GetAccountBatchError.Other

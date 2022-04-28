@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  commentId: T:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  id: FederationStatusChangeAdditionalInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.#ctor
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsConnectedTeamName
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOrganizationName
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOther
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsConnectedTeamName
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOrganizationName
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOther
+  langs:
+  - csharp
+  - vb
+  name: FederationStatusChangeAdditionalInfo
+  nameWithType: FederationStatusChangeAdditionalInfo
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FederationStatusChangeAdditionalInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Additional information about the organization or connected team</p>\n"
+  example: []
+  syntax:
+    content: public class FederationStatusChangeAdditionalInfo
+    content.vb: Public Class FederationStatusChangeAdditionalInfo
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.ConnectedTeamName
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.OrganizationName
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  langs:
+  - csharp
+  - vb
+  name: FederationStatusChangeAdditionalInfo()
+  nameWithType: FederationStatusChangeAdditionalInfo.FederationStatusChangeAdditionalInfo()
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.FederationStatusChangeAdditionalInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FederationStatusChangeAdditionalInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsConnectedTeamName
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsConnectedTeamName
+  id: IsConnectedTeamName
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  langs:
+  - csharp
+  - vb
+  name: IsConnectedTeamName
+  nameWithType: FederationStatusChangeAdditionalInfo.IsConnectedTeamName
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsConnectedTeamName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsConnectedTeamName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is ConnectedTeamName</p>\n"
+  example: []
+  syntax:
+    content: public bool IsConnectedTeamName { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsConnectedTeamName As Boolean
+  overload: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsConnectedTeamName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsConnectedTeamName
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsConnectedTeamName
+  id: AsConnectedTeamName
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  langs:
+  - csharp
+  - vb
+  name: AsConnectedTeamName
+  nameWithType: FederationStatusChangeAdditionalInfo.AsConnectedTeamName
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsConnectedTeamName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsConnectedTeamName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a ConnectedTeamName, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FederationStatusChangeAdditionalInfo.ConnectedTeamName AsConnectedTeamName { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.ConnectedTeamName
+    content.vb: Public ReadOnly Property AsConnectedTeamName As FederationStatusChangeAdditionalInfo.ConnectedTeamName
+  overload: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsConnectedTeamName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails
+  id: IsNonTrustedTeamDetails
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  langs:
+  - csharp
+  - vb
+  name: IsNonTrustedTeamDetails
+  nameWithType: FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNonTrustedTeamDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is NonTrustedTeamDetails</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNonTrustedTeamDetails { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNonTrustedTeamDetails As Boolean
+  overload: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails
+  id: AsNonTrustedTeamDetails
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  langs:
+  - csharp
+  - vb
+  name: AsNonTrustedTeamDetails
+  nameWithType: FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNonTrustedTeamDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a NonTrustedTeamDetails, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails AsNonTrustedTeamDetails { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+    content.vb: Public ReadOnly Property AsNonTrustedTeamDetails As FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  overload: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOrganizationName
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOrganizationName
+  id: IsOrganizationName
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  langs:
+  - csharp
+  - vb
+  name: IsOrganizationName
+  nameWithType: FederationStatusChangeAdditionalInfo.IsOrganizationName
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOrganizationName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOrganizationName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is OrganizationName</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOrganizationName { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOrganizationName As Boolean
+  overload: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOrganizationName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOrganizationName
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOrganizationName
+  id: AsOrganizationName
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  langs:
+  - csharp
+  - vb
+  name: AsOrganizationName
+  nameWithType: FederationStatusChangeAdditionalInfo.AsOrganizationName
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOrganizationName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOrganizationName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a OrganizationName, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FederationStatusChangeAdditionalInfo.OrganizationName AsOrganizationName { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.OrganizationName
+    content.vb: Public ReadOnly Property AsOrganizationName As FederationStatusChangeAdditionalInfo.OrganizationName
+  overload: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOrganizationName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOther
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: FederationStatusChangeAdditionalInfo.IsOther
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOther
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: FederationStatusChangeAdditionalInfo.AsOther
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FederationStatusChangeAdditionalInfo.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.Other
+    content.vb: Public ReadOnly Property AsOther As FederationStatusChangeAdditionalInfo.Other
+  overload: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  commentId: T:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  parent: Dropbox.Api.TeamLog
+  name: FederationStatusChangeAdditionalInfo
+  nameWithType: FederationStatusChangeAdditionalInfo
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.#ctor
+  name: FederationStatusChangeAdditionalInfo
+  nameWithType: FederationStatusChangeAdditionalInfo.FederationStatusChangeAdditionalInfo
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.FederationStatusChangeAdditionalInfo
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsConnectedTeamName*
+  commentId: Overload:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsConnectedTeamName
+  name: IsConnectedTeamName
+  nameWithType: FederationStatusChangeAdditionalInfo.IsConnectedTeamName
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsConnectedTeamName
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsConnectedTeamName*
+  commentId: Overload:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsConnectedTeamName
+  name: AsConnectedTeamName
+  nameWithType: FederationStatusChangeAdditionalInfo.AsConnectedTeamName
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsConnectedTeamName
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.ConnectedTeamName
+  commentId: T:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.ConnectedTeamName
+  parent: Dropbox.Api.TeamLog
+  name: FederationStatusChangeAdditionalInfo.ConnectedTeamName
+  nameWithType: FederationStatusChangeAdditionalInfo.ConnectedTeamName
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.ConnectedTeamName
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails
+  name: IsNonTrustedTeamDetails
+  nameWithType: FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails
+  name: AsNonTrustedTeamDetails
+  nameWithType: FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  parent: Dropbox.Api.TeamLog
+  name: FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  nameWithType: FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOrganizationName*
+  commentId: Overload:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOrganizationName
+  name: IsOrganizationName
+  nameWithType: FederationStatusChangeAdditionalInfo.IsOrganizationName
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOrganizationName
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOrganizationName*
+  commentId: Overload:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOrganizationName
+  name: AsOrganizationName
+  nameWithType: FederationStatusChangeAdditionalInfo.AsOrganizationName
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOrganizationName
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.OrganizationName
+  commentId: T:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.OrganizationName
+  parent: Dropbox.Api.TeamLog
+  name: FederationStatusChangeAdditionalInfo.OrganizationName
+  nameWithType: FederationStatusChangeAdditionalInfo.OrganizationName
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.OrganizationName
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOther
+  name: IsOther
+  nameWithType: FederationStatusChangeAdditionalInfo.IsOther
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOther
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOther
+  name: AsOther
+  nameWithType: FederationStatusChangeAdditionalInfo.AsOther
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOther
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.Other
+  commentId: T:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.Other
+  parent: Dropbox.Api.TeamLog
+  name: FederationStatusChangeAdditionalInfo.Other
+  nameWithType: FederationStatusChangeAdditionalInfo.Other
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.Other

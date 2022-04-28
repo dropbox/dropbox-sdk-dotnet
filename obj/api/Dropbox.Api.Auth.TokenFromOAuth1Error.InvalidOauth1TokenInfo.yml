@@ -1,0 +1,441 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.InvalidOauth1TokenInfo
+  commentId: T:Dropbox.Api.Auth.TokenFromOAuth1Error.InvalidOauth1TokenInfo
+  id: TokenFromOAuth1Error.InvalidOauth1TokenInfo
+  parent: Dropbox.Api.Auth
+  children:
+  - Dropbox.Api.Auth.TokenFromOAuth1Error.InvalidOauth1TokenInfo.Instance
+  langs:
+  - csharp
+  - vb
+  name: TokenFromOAuth1Error.InvalidOauth1TokenInfo
+  nameWithType: TokenFromOAuth1Error.InvalidOauth1TokenInfo
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.InvalidOauth1TokenInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Error.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: InvalidOauth1TokenInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Error.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Part or all of the OAuth 1.0 access token info is invalid.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class InvalidOauth1TokenInfo : TokenFromOAuth1Error'
+    content.vb: >-
+      Public NotInheritable Class InvalidOauth1TokenInfo
+          Inherits TokenFromOAuth1Error
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Auth.TokenFromOAuth1Error
+  inheritedMembers:
+  - Dropbox.Api.Auth.TokenFromOAuth1Error.IsInvalidOauth1TokenInfo
+  - Dropbox.Api.Auth.TokenFromOAuth1Error.AsInvalidOauth1TokenInfo
+  - Dropbox.Api.Auth.TokenFromOAuth1Error.IsAppIdMismatch
+  - Dropbox.Api.Auth.TokenFromOAuth1Error.AsAppIdMismatch
+  - Dropbox.Api.Auth.TokenFromOAuth1Error.IsOther
+  - Dropbox.Api.Auth.TokenFromOAuth1Error.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.InvalidOauth1TokenInfo.Instance
+  commentId: F:Dropbox.Api.Auth.TokenFromOAuth1Error.InvalidOauth1TokenInfo.Instance
+  id: Instance
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Error.InvalidOauth1TokenInfo
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: TokenFromOAuth1Error.InvalidOauth1TokenInfo.Instance
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.InvalidOauth1TokenInfo.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Error.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Error.cs
+    startLine: 208
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>A singleton instance of InvalidOauth1TokenInfo</p>\n"
+  example: []
+  syntax:
+    content: public static readonly TokenFromOAuth1Error.InvalidOauth1TokenInfo Instance
+    return:
+      type: Dropbox.Api.Auth.TokenFromOAuth1Error.InvalidOauth1TokenInfo
+    content.vb: Public Shared ReadOnly Instance As TokenFromOAuth1Error.InvalidOauth1TokenInfo
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error
+  commentId: T:Dropbox.Api.Auth.TokenFromOAuth1Error
+  parent: Dropbox.Api.Auth
+  name: TokenFromOAuth1Error
+  nameWithType: TokenFromOAuth1Error
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.IsInvalidOauth1TokenInfo
+  commentId: P:Dropbox.Api.Auth.TokenFromOAuth1Error.IsInvalidOauth1TokenInfo
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Error
+  name: IsInvalidOauth1TokenInfo
+  nameWithType: TokenFromOAuth1Error.IsInvalidOauth1TokenInfo
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.IsInvalidOauth1TokenInfo
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.AsInvalidOauth1TokenInfo
+  commentId: P:Dropbox.Api.Auth.TokenFromOAuth1Error.AsInvalidOauth1TokenInfo
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Error
+  name: AsInvalidOauth1TokenInfo
+  nameWithType: TokenFromOAuth1Error.AsInvalidOauth1TokenInfo
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.AsInvalidOauth1TokenInfo
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.IsAppIdMismatch
+  commentId: P:Dropbox.Api.Auth.TokenFromOAuth1Error.IsAppIdMismatch
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Error
+  name: IsAppIdMismatch
+  nameWithType: TokenFromOAuth1Error.IsAppIdMismatch
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.IsAppIdMismatch
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.AsAppIdMismatch
+  commentId: P:Dropbox.Api.Auth.TokenFromOAuth1Error.AsAppIdMismatch
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Error
+  name: AsAppIdMismatch
+  nameWithType: TokenFromOAuth1Error.AsAppIdMismatch
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.AsAppIdMismatch
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.IsOther
+  commentId: P:Dropbox.Api.Auth.TokenFromOAuth1Error.IsOther
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Error
+  name: IsOther
+  nameWithType: TokenFromOAuth1Error.IsOther
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.IsOther
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.AsOther
+  commentId: P:Dropbox.Api.Auth.TokenFromOAuth1Error.AsOther
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Error
+  name: AsOther
+  nameWithType: TokenFromOAuth1Error.AsOther
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.InvalidOauth1TokenInfo
+  commentId: T:Dropbox.Api.Auth.TokenFromOAuth1Error.InvalidOauth1TokenInfo
+  parent: Dropbox.Api.Auth
+  name: TokenFromOAuth1Error.InvalidOauth1TokenInfo
+  nameWithType: TokenFromOAuth1Error.InvalidOauth1TokenInfo
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.InvalidOauth1TokenInfo

@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+  id: SuggestMembersPolicy
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.SuggestMembersPolicy.#ctor
+  - Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsDisabled
+  - Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsEnabled
+  - Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsOther
+  - Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsDisabled
+  - Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsEnabled
+  - Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: SuggestMembersPolicy
+  nameWithType: SuggestMembersPolicy
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SuggestMembersPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>The suggest members policy object</p>\n"
+  example: []
+  syntax:
+    content: public class SuggestMembersPolicy
+    content.vb: Public Class SuggestMembersPolicy
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Disabled
+  - Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Enabled
+  - Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+  langs:
+  - csharp
+  - vb
+  name: SuggestMembersPolicy()
+  nameWithType: SuggestMembersPolicy.SuggestMembersPolicy()
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.SuggestMembersPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamPolicies.SuggestMembersPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SuggestMembersPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: SuggestMembersPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: SuggestMembersPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SuggestMembersPolicy.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As SuggestMembersPolicy.Disabled
+  overload: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsEnabled
+  id: IsEnabled
+  parent: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: SuggestMembersPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Enabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnabled As Boolean
+  overload: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsEnabled
+  id: AsEnabled
+  parent: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsEnabled
+  nameWithType: SuggestMembersPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Enabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SuggestMembersPolicy.Enabled AsEnabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Enabled
+    content.vb: Public ReadOnly Property AsEnabled As SuggestMembersPolicy.Enabled
+  overload: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SuggestMembersPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SuggestMembersPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SuggestMembersPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SuggestMembersPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As SuggestMembersPolicy.Other
+  overload: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: SuggestMembersPolicy
+  nameWithType: SuggestMembersPolicy
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.#ctor
+  name: SuggestMembersPolicy
+  nameWithType: SuggestMembersPolicy.SuggestMembersPolicy
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.SuggestMembersPolicy
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsDisabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsDisabled
+  name: IsDisabled
+  nameWithType: SuggestMembersPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsDisabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsDisabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsDisabled
+  name: AsDisabled
+  nameWithType: SuggestMembersPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsDisabled
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Disabled
+  commentId: T:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Disabled
+  parent: Dropbox.Api.TeamPolicies
+  name: SuggestMembersPolicy.Disabled
+  nameWithType: SuggestMembersPolicy.Disabled
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Disabled
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsEnabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsEnabled
+  name: IsEnabled
+  nameWithType: SuggestMembersPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsEnabled
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsEnabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsEnabled
+  name: AsEnabled
+  nameWithType: SuggestMembersPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsEnabled
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Enabled
+  commentId: T:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Enabled
+  parent: Dropbox.Api.TeamPolicies
+  name: SuggestMembersPolicy.Enabled
+  nameWithType: SuggestMembersPolicy.Enabled
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Enabled
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsOther
+  name: IsOther
+  nameWithType: SuggestMembersPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.IsOther
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsOther
+  name: AsOther
+  nameWithType: SuggestMembersPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.AsOther
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Other
+  commentId: T:Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Other
+  parent: Dropbox.Api.TeamPolicies
+  name: SuggestMembersPolicy.Other
+  nameWithType: SuggestMembersPolicy.Other
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Other

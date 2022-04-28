@@ -1,0 +1,562 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.LinkAudienceOption
+  commentId: T:Dropbox.Api.Sharing.LinkAudienceOption
+  id: LinkAudienceOption
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.LinkAudienceOption.#ctor(Dropbox.Api.Sharing.LinkAudience,System.Boolean,Dropbox.Api.Sharing.LinkAudienceDisallowedReason)
+  - Dropbox.Api.Sharing.LinkAudienceOption.Allowed
+  - Dropbox.Api.Sharing.LinkAudienceOption.Audience
+  - Dropbox.Api.Sharing.LinkAudienceOption.DisallowedReason
+  langs:
+  - csharp
+  - vb
+  name: LinkAudienceOption
+  nameWithType: LinkAudienceOption
+  fullName: Dropbox.Api.Sharing.LinkAudienceOption
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudienceOption.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LinkAudienceOption
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudienceOption.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The link audience option object</p>\n"
+  example: []
+  syntax:
+    content: public class LinkAudienceOption
+    content.vb: Public Class LinkAudienceOption
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.LinkAudienceOption.#ctor(Dropbox.Api.Sharing.LinkAudience,System.Boolean,Dropbox.Api.Sharing.LinkAudienceDisallowedReason)
+  commentId: M:Dropbox.Api.Sharing.LinkAudienceOption.#ctor(Dropbox.Api.Sharing.LinkAudience,System.Boolean,Dropbox.Api.Sharing.LinkAudienceDisallowedReason)
+  id: '#ctor(Dropbox.Api.Sharing.LinkAudience,System.Boolean,Dropbox.Api.Sharing.LinkAudienceDisallowedReason)'
+  parent: Dropbox.Api.Sharing.LinkAudienceOption
+  langs:
+  - csharp
+  - vb
+  name: LinkAudienceOption(LinkAudience, Boolean, LinkAudienceDisallowedReason)
+  nameWithType: LinkAudienceOption.LinkAudienceOption(LinkAudience, Boolean, LinkAudienceDisallowedReason)
+  fullName: Dropbox.Api.Sharing.LinkAudienceOption.LinkAudienceOption(Dropbox.Api.Sharing.LinkAudience, System.Boolean, Dropbox.Api.Sharing.LinkAudienceDisallowedReason)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudienceOption.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudienceOption.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.LinkAudienceOption\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAudienceOption(LinkAudience audience, bool allowed, LinkAudienceDisallowedReason disallowedReason = null)
+    parameters:
+    - id: audience
+      type: Dropbox.Api.Sharing.LinkAudience
+      description: Specifies who can access the link.
+    - id: allowed
+      type: System.Boolean
+      description: >-
+        Whether the user calling this API can select this audience
+
+        option.
+    - id: disallowedReason
+      type: Dropbox.Api.Sharing.LinkAudienceDisallowedReason
+      description: >-
+        If <code data-dev-comment-type="paramref" class="paramref">allowed</code> is <code>false</code>, this
+
+        will provide the reason that the user is not permitted to set the visibility to
+
+        this policy.
+    content.vb: Public Sub New(audience As LinkAudience, allowed As Boolean, disallowedReason As LinkAudienceDisallowedReason = Nothing)
+  overload: Dropbox.Api.Sharing.LinkAudienceOption.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.LinkAudienceOption.Audience
+  commentId: P:Dropbox.Api.Sharing.LinkAudienceOption.Audience
+  id: Audience
+  parent: Dropbox.Api.Sharing.LinkAudienceOption
+  langs:
+  - csharp
+  - vb
+  name: Audience
+  nameWithType: LinkAudienceOption.Audience
+  fullName: Dropbox.Api.Sharing.LinkAudienceOption.Audience
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudienceOption.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Audience
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudienceOption.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Specifies who can access the link.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAudience Audience { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAudience
+    content.vb: Public Property Audience As LinkAudience
+  overload: Dropbox.Api.Sharing.LinkAudienceOption.Audience*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkAudienceOption.Allowed
+  commentId: P:Dropbox.Api.Sharing.LinkAudienceOption.Allowed
+  id: Allowed
+  parent: Dropbox.Api.Sharing.LinkAudienceOption
+  langs:
+  - csharp
+  - vb
+  name: Allowed
+  nameWithType: LinkAudienceOption.Allowed
+  fullName: Dropbox.Api.Sharing.LinkAudienceOption.Allowed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudienceOption.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Allowed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudienceOption.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the user calling this API can select this audience option.</p>\n"
+  example: []
+  syntax:
+    content: public bool Allowed { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Allowed As Boolean
+  overload: Dropbox.Api.Sharing.LinkAudienceOption.Allowed*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkAudienceOption.DisallowedReason
+  commentId: P:Dropbox.Api.Sharing.LinkAudienceOption.DisallowedReason
+  id: DisallowedReason
+  parent: Dropbox.Api.Sharing.LinkAudienceOption
+  langs:
+  - csharp
+  - vb
+  name: DisallowedReason
+  nameWithType: LinkAudienceOption.DisallowedReason
+  fullName: Dropbox.Api.Sharing.LinkAudienceOption.DisallowedReason
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudienceOption.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: DisallowedReason
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudienceOption.cs
+    startLine: 78
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>If <xref href=\"Dropbox.Api.Sharing.LinkAudienceOption.Allowed\" data-throw-if-not-resolved=\"false\"></xref> is <code>false</code>, this will provide the reason that\nthe user is not permitted to set the visibility to this policy.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAudienceDisallowedReason DisallowedReason { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAudienceDisallowedReason
+    content.vb: Public Property DisallowedReason As LinkAudienceDisallowedReason
+  overload: Dropbox.Api.Sharing.LinkAudienceOption.DisallowedReason*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.LinkAudienceOption
+  commentId: T:Dropbox.Api.Sharing.LinkAudienceOption
+  name: LinkAudienceOption
+  nameWithType: LinkAudienceOption
+  fullName: Dropbox.Api.Sharing.LinkAudienceOption
+- uid: Dropbox.Api.Sharing.LinkAudienceOption.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudienceOption.#ctor
+  name: LinkAudienceOption
+  nameWithType: LinkAudienceOption.LinkAudienceOption
+  fullName: Dropbox.Api.Sharing.LinkAudienceOption.LinkAudienceOption
+- uid: Dropbox.Api.Sharing.LinkAudience
+  commentId: T:Dropbox.Api.Sharing.LinkAudience
+  parent: Dropbox.Api.Sharing
+  name: LinkAudience
+  nameWithType: LinkAudience
+  fullName: Dropbox.Api.Sharing.LinkAudience
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.LinkAudienceDisallowedReason
+  commentId: T:Dropbox.Api.Sharing.LinkAudienceDisallowedReason
+  parent: Dropbox.Api.Sharing
+  name: LinkAudienceDisallowedReason
+  nameWithType: LinkAudienceDisallowedReason
+  fullName: Dropbox.Api.Sharing.LinkAudienceDisallowedReason
+- uid: Dropbox.Api.Sharing.LinkAudienceOption.Audience*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudienceOption.Audience
+  name: Audience
+  nameWithType: LinkAudienceOption.Audience
+  fullName: Dropbox.Api.Sharing.LinkAudienceOption.Audience
+- uid: Dropbox.Api.Sharing.LinkAudienceOption.Allowed*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudienceOption.Allowed
+  name: Allowed
+  nameWithType: LinkAudienceOption.Allowed
+  fullName: Dropbox.Api.Sharing.LinkAudienceOption.Allowed
+- uid: Dropbox.Api.Sharing.LinkAudienceOption.Allowed
+  commentId: P:Dropbox.Api.Sharing.LinkAudienceOption.Allowed
+  isExternal: true
+- uid: Dropbox.Api.Sharing.LinkAudienceOption.DisallowedReason*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudienceOption.DisallowedReason
+  name: DisallowedReason
+  nameWithType: LinkAudienceOption.DisallowedReason
+  fullName: Dropbox.Api.Sharing.LinkAudienceOption.DisallowedReason

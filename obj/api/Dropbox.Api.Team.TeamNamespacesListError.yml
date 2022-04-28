@@ -1,0 +1,582 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamNamespacesListError
+  commentId: T:Dropbox.Api.Team.TeamNamespacesListError
+  id: TeamNamespacesListError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamNamespacesListError.#ctor
+  - Dropbox.Api.Team.TeamNamespacesListError.AsInvalidArg
+  - Dropbox.Api.Team.TeamNamespacesListError.AsOther
+  - Dropbox.Api.Team.TeamNamespacesListError.IsInvalidArg
+  - Dropbox.Api.Team.TeamNamespacesListError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: TeamNamespacesListError
+  nameWithType: TeamNamespacesListError
+  fullName: Dropbox.Api.Team.TeamNamespacesListError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TeamNamespacesListError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team namespaces list error object</p>\n"
+  example: []
+  syntax:
+    content: public class TeamNamespacesListError
+    content.vb: Public Class TeamNamespacesListError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.TeamNamespacesListError.InvalidArg
+  - Dropbox.Api.Team.TeamNamespacesListError.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamNamespacesListError.#ctor
+  commentId: M:Dropbox.Api.Team.TeamNamespacesListError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamNamespacesListError
+  langs:
+  - csharp
+  - vb
+  name: TeamNamespacesListError()
+  nameWithType: TeamNamespacesListError.TeamNamespacesListError()
+  fullName: Dropbox.Api.Team.TeamNamespacesListError.TeamNamespacesListError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamNamespacesListError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamNamespacesListError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamNamespacesListError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamNamespacesListError.IsInvalidArg
+  commentId: P:Dropbox.Api.Team.TeamNamespacesListError.IsInvalidArg
+  id: IsInvalidArg
+  parent: Dropbox.Api.Team.TeamNamespacesListError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidArg
+  nameWithType: TeamNamespacesListError.IsInvalidArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListError.IsInvalidArg
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInvalidArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidArg</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidArg { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidArg As Boolean
+  overload: Dropbox.Api.Team.TeamNamespacesListError.IsInvalidArg*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamNamespacesListError.AsInvalidArg
+  commentId: P:Dropbox.Api.Team.TeamNamespacesListError.AsInvalidArg
+  id: AsInvalidArg
+  parent: Dropbox.Api.Team.TeamNamespacesListError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidArg
+  nameWithType: TeamNamespacesListError.AsInvalidArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListError.AsInvalidArg
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInvalidArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a InvalidArg, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamNamespacesListError.InvalidArg AsInvalidArg { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamNamespacesListError.InvalidArg
+    content.vb: Public ReadOnly Property AsInvalidArg As TeamNamespacesListError.InvalidArg
+  overload: Dropbox.Api.Team.TeamNamespacesListError.AsInvalidArg*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamNamespacesListError.IsOther
+  commentId: P:Dropbox.Api.Team.TeamNamespacesListError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.TeamNamespacesListError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TeamNamespacesListError.IsOther
+  fullName: Dropbox.Api.Team.TeamNamespacesListError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.TeamNamespacesListError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamNamespacesListError.AsOther
+  commentId: P:Dropbox.Api.Team.TeamNamespacesListError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.TeamNamespacesListError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TeamNamespacesListError.AsOther
+  fullName: Dropbox.Api.Team.TeamNamespacesListError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamNamespacesListError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamNamespacesListError.Other
+    content.vb: Public ReadOnly Property AsOther As TeamNamespacesListError.Other
+  overload: Dropbox.Api.Team.TeamNamespacesListError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.TeamNamespacesListError
+  commentId: T:Dropbox.Api.Team.TeamNamespacesListError
+  parent: Dropbox.Api.Team
+  name: TeamNamespacesListError
+  nameWithType: TeamNamespacesListError
+  fullName: Dropbox.Api.Team.TeamNamespacesListError
+- uid: Dropbox.Api.Team.TeamNamespacesListError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListError.#ctor
+  name: TeamNamespacesListError
+  nameWithType: TeamNamespacesListError.TeamNamespacesListError
+  fullName: Dropbox.Api.Team.TeamNamespacesListError.TeamNamespacesListError
+- uid: Dropbox.Api.Team.TeamNamespacesListError.IsInvalidArg*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListError.IsInvalidArg
+  name: IsInvalidArg
+  nameWithType: TeamNamespacesListError.IsInvalidArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListError.IsInvalidArg
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.TeamNamespacesListError.AsInvalidArg*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListError.AsInvalidArg
+  name: AsInvalidArg
+  nameWithType: TeamNamespacesListError.AsInvalidArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListError.AsInvalidArg
+- uid: Dropbox.Api.Team.TeamNamespacesListError.InvalidArg
+  commentId: T:Dropbox.Api.Team.TeamNamespacesListError.InvalidArg
+  parent: Dropbox.Api.Team
+  name: TeamNamespacesListError.InvalidArg
+  nameWithType: TeamNamespacesListError.InvalidArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListError.InvalidArg
+- uid: Dropbox.Api.Team.TeamNamespacesListError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListError.IsOther
+  name: IsOther
+  nameWithType: TeamNamespacesListError.IsOther
+  fullName: Dropbox.Api.Team.TeamNamespacesListError.IsOther
+- uid: Dropbox.Api.Team.TeamNamespacesListError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListError.AsOther
+  name: AsOther
+  nameWithType: TeamNamespacesListError.AsOther
+  fullName: Dropbox.Api.Team.TeamNamespacesListError.AsOther
+- uid: Dropbox.Api.Team.TeamNamespacesListError.Other
+  commentId: T:Dropbox.Api.Team.TeamNamespacesListError.Other
+  parent: Dropbox.Api.Team
+  name: TeamNamespacesListError.Other
+  nameWithType: TeamNamespacesListError.Other
+  fullName: Dropbox.Api.Team.TeamNamespacesListError.Other

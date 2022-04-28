@@ -1,0 +1,568 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadSessionAppendArg
+  commentId: T:Dropbox.Api.Files.UploadSessionAppendArg
+  id: UploadSessionAppendArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadSessionAppendArg.#ctor(Dropbox.Api.Files.UploadSessionCursor,System.Boolean,System.String)
+  - Dropbox.Api.Files.UploadSessionAppendArg.Close
+  - Dropbox.Api.Files.UploadSessionAppendArg.ContentHash
+  - Dropbox.Api.Files.UploadSessionAppendArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionAppendArg
+  nameWithType: UploadSessionAppendArg
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: UploadSessionAppendArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The upload session append arg object</p>\n"
+  example: []
+  syntax:
+    content: public class UploadSessionAppendArg
+    content.vb: Public Class UploadSessionAppendArg
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.#ctor(Dropbox.Api.Files.UploadSessionCursor,System.Boolean,System.String)
+  commentId: M:Dropbox.Api.Files.UploadSessionAppendArg.#ctor(Dropbox.Api.Files.UploadSessionCursor,System.Boolean,System.String)
+  id: '#ctor(Dropbox.Api.Files.UploadSessionCursor,System.Boolean,System.String)'
+  parent: Dropbox.Api.Files.UploadSessionAppendArg
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionAppendArg(UploadSessionCursor, Boolean, String)
+  nameWithType: UploadSessionAppendArg.UploadSessionAppendArg(UploadSessionCursor, Boolean, String)
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.UploadSessionAppendArg(Dropbox.Api.Files.UploadSessionCursor, System.Boolean, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+    startLine: 43
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadSessionAppendArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionAppendArg(UploadSessionCursor cursor, bool close = false, string contentHash = null)
+    parameters:
+    - id: cursor
+      type: Dropbox.Api.Files.UploadSessionCursor
+      description: Contains the upload session ID and the offset.
+    - id: close
+      type: System.Boolean
+      description: >-
+        If true, the current session will be closed, at which point you
+
+        won&apos;t be able to call <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async(Dropbox.Api.Files.UploadSessionAppendArg%2cSystem.IO.Stream)" data-throw-if-not-resolved="false"></xref>
+
+        anymore with the current session.
+    - id: contentHash
+      type: System.String
+      description: >-
+        A hash of the file content uploaded in this call. If
+
+        provided and the uploaded content does not match this hash, an error will be
+
+        returned. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+
+        page.
+    content.vb: Public Sub New(cursor As UploadSessionCursor, close As Boolean = False, contentHash As String = Nothing)
+  overload: Dropbox.Api.Files.UploadSessionAppendArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.Cursor
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Files.UploadSessionAppendArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: UploadSessionAppendArg.Cursor
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Contains the upload session ID and the offset.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionCursor Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadSessionCursor
+    content.vb: Public Property Cursor As UploadSessionCursor
+  overload: Dropbox.Api.Files.UploadSessionAppendArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.Close
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendArg.Close
+  id: Close
+  parent: Dropbox.Api.Files.UploadSessionAppendArg
+  langs:
+  - csharp
+  - vb
+  name: Close
+  nameWithType: UploadSessionAppendArg.Close
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.Close
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Close
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If true, the current session will be closed, at which point you won&apos;t be able\nto call <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async(Dropbox.Api.Files.UploadSessionAppendArg%2cSystem.IO.Stream)\" data-throw-if-not-resolved=\"false\"></xref>\nanymore with the current session.</p>\n"
+  example: []
+  syntax:
+    content: public bool Close { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Close As Boolean
+  overload: Dropbox.Api.Files.UploadSessionAppendArg.Close*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.ContentHash
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendArg.ContentHash
+  id: ContentHash
+  parent: Dropbox.Api.Files.UploadSessionAppendArg
+  langs:
+  - csharp
+  - vb
+  name: ContentHash
+  nameWithType: UploadSessionAppendArg.ContentHash
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.ContentHash
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ContentHash
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+    startLine: 101
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A hash of the file content uploaded in this call. If provided and the\nuploaded content does not match this hash, an error will be returned. For more\ninformation see our <a href=\"https://www.dropbox.com/developers/reference/content-hash\">Content hash</a>\npage.</p>\n"
+  example: []
+  syntax:
+    content: public string ContentHash { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ContentHash As String
+  overload: Dropbox.Api.Files.UploadSessionAppendArg.ContentHash*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.UploadSessionAppendArg
+  commentId: T:Dropbox.Api.Files.UploadSessionAppendArg
+  parent: Dropbox.Api.Files
+  name: UploadSessionAppendArg
+  nameWithType: UploadSessionAppendArg
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg
+- uid: Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async(Dropbox.Api.Files.UploadSessionAppendArg,System.IO.Stream)
+  commentId: M:Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async(Dropbox.Api.Files.UploadSessionAppendArg,System.IO.Stream)
+  isExternal: true
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionAppendArg.#ctor
+  name: UploadSessionAppendArg
+  nameWithType: UploadSessionAppendArg.UploadSessionAppendArg
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.UploadSessionAppendArg
+- uid: Dropbox.Api.Files.UploadSessionCursor
+  commentId: T:Dropbox.Api.Files.UploadSessionCursor
+  parent: Dropbox.Api.Files
+  name: UploadSessionCursor
+  nameWithType: UploadSessionCursor
+  fullName: Dropbox.Api.Files.UploadSessionCursor
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.Cursor*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionAppendArg.Cursor
+  name: Cursor
+  nameWithType: UploadSessionAppendArg.Cursor
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.Cursor
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.Close*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionAppendArg.Close
+  name: Close
+  nameWithType: UploadSessionAppendArg.Close
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.Close
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.ContentHash*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionAppendArg.ContentHash
+  name: ContentHash
+  nameWithType: UploadSessionAppendArg.ContentHash
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.ContentHash

@@ -1,0 +1,525 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.Other
+  commentId: T:Dropbox.Api.FileProperties.AddPropertiesError.Other
+  id: AddPropertiesError.Other
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.AddPropertiesError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: AddPropertiesError.Other
+  nameWithType: AddPropertiesError.Other
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/AddPropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/AddPropertiesError.cs
+    startLine: 990
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : AddPropertiesError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits AddPropertiesError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileProperties.AddPropertiesError
+  inheritedMembers:
+  - Dropbox.Api.FileProperties.AddPropertiesError.IsPropertyGroupAlreadyExists
+  - Dropbox.Api.FileProperties.AddPropertiesError.AsPropertyGroupAlreadyExists
+  - Dropbox.Api.FileProperties.AddPropertiesError.IsPropertyFieldTooLarge
+  - Dropbox.Api.FileProperties.AddPropertiesError.AsPropertyFieldTooLarge
+  - Dropbox.Api.FileProperties.AddPropertiesError.IsDoesNotFitTemplate
+  - Dropbox.Api.FileProperties.AddPropertiesError.AsDoesNotFitTemplate
+  - Dropbox.Api.FileProperties.AddPropertiesError.IsDuplicatePropertyGroups
+  - Dropbox.Api.FileProperties.AddPropertiesError.AsDuplicatePropertyGroups
+  - Dropbox.Api.FileProperties.AddPropertiesError.IsPath
+  - Dropbox.Api.FileProperties.AddPropertiesError.AsPath
+  - Dropbox.Api.FileProperties.AddPropertiesError.IsUnsupportedFolder
+  - Dropbox.Api.FileProperties.AddPropertiesError.AsUnsupportedFolder
+  - Dropbox.Api.FileProperties.AddPropertiesError.IsTemplateNotFound
+  - Dropbox.Api.FileProperties.AddPropertiesError.AsTemplateNotFound
+  - Dropbox.Api.FileProperties.AddPropertiesError.IsRestrictedContent
+  - Dropbox.Api.FileProperties.AddPropertiesError.AsRestrictedContent
+  - Dropbox.Api.FileProperties.AddPropertiesError.IsOther
+  - Dropbox.Api.FileProperties.AddPropertiesError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.Other.Instance
+  commentId: F:Dropbox.Api.FileProperties.AddPropertiesError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.FileProperties.AddPropertiesError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: AddPropertiesError.Other.Instance
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/AddPropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/AddPropertiesError.cs
+    startLine: 1014
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly AddPropertiesError.Other Instance
+    return:
+      type: Dropbox.Api.FileProperties.AddPropertiesError.Other
+    content.vb: Public Shared ReadOnly Instance As AddPropertiesError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.AddPropertiesError
+  commentId: T:Dropbox.Api.FileProperties.AddPropertiesError
+  parent: Dropbox.Api.FileProperties
+  name: AddPropertiesError
+  nameWithType: AddPropertiesError
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.IsPropertyGroupAlreadyExists
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.IsPropertyGroupAlreadyExists
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: IsPropertyGroupAlreadyExists
+  nameWithType: AddPropertiesError.IsPropertyGroupAlreadyExists
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.IsPropertyGroupAlreadyExists
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.AsPropertyGroupAlreadyExists
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.AsPropertyGroupAlreadyExists
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: AsPropertyGroupAlreadyExists
+  nameWithType: AddPropertiesError.AsPropertyGroupAlreadyExists
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.AsPropertyGroupAlreadyExists
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.IsPropertyFieldTooLarge
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.IsPropertyFieldTooLarge
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: IsPropertyFieldTooLarge
+  nameWithType: AddPropertiesError.IsPropertyFieldTooLarge
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.IsPropertyFieldTooLarge
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.AsPropertyFieldTooLarge
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.AsPropertyFieldTooLarge
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: AsPropertyFieldTooLarge
+  nameWithType: AddPropertiesError.AsPropertyFieldTooLarge
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.AsPropertyFieldTooLarge
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.IsDoesNotFitTemplate
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.IsDoesNotFitTemplate
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: IsDoesNotFitTemplate
+  nameWithType: AddPropertiesError.IsDoesNotFitTemplate
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.IsDoesNotFitTemplate
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.AsDoesNotFitTemplate
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.AsDoesNotFitTemplate
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: AsDoesNotFitTemplate
+  nameWithType: AddPropertiesError.AsDoesNotFitTemplate
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.AsDoesNotFitTemplate
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.IsDuplicatePropertyGroups
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.IsDuplicatePropertyGroups
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: IsDuplicatePropertyGroups
+  nameWithType: AddPropertiesError.IsDuplicatePropertyGroups
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.IsDuplicatePropertyGroups
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.AsDuplicatePropertyGroups
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.AsDuplicatePropertyGroups
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: AsDuplicatePropertyGroups
+  nameWithType: AddPropertiesError.AsDuplicatePropertyGroups
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.AsDuplicatePropertyGroups
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.IsPath
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.IsPath
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: IsPath
+  nameWithType: AddPropertiesError.IsPath
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.IsPath
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.AsPath
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.AsPath
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: AsPath
+  nameWithType: AddPropertiesError.AsPath
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.AsPath
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.IsUnsupportedFolder
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.IsUnsupportedFolder
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: IsUnsupportedFolder
+  nameWithType: AddPropertiesError.IsUnsupportedFolder
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.IsUnsupportedFolder
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.AsUnsupportedFolder
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.AsUnsupportedFolder
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: AsUnsupportedFolder
+  nameWithType: AddPropertiesError.AsUnsupportedFolder
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.AsUnsupportedFolder
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.IsTemplateNotFound
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.IsTemplateNotFound
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: IsTemplateNotFound
+  nameWithType: AddPropertiesError.IsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.IsTemplateNotFound
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.AsTemplateNotFound
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.AsTemplateNotFound
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: AsTemplateNotFound
+  nameWithType: AddPropertiesError.AsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.AsTemplateNotFound
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.IsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.IsRestrictedContent
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: IsRestrictedContent
+  nameWithType: AddPropertiesError.IsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.IsRestrictedContent
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.AsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.AsRestrictedContent
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: AsRestrictedContent
+  nameWithType: AddPropertiesError.AsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.AsRestrictedContent
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.IsOther
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.IsOther
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: IsOther
+  nameWithType: AddPropertiesError.IsOther
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.IsOther
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.AsOther
+  commentId: P:Dropbox.Api.FileProperties.AddPropertiesError.AsOther
+  parent: Dropbox.Api.FileProperties.AddPropertiesError
+  name: AsOther
+  nameWithType: AddPropertiesError.AsOther
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.FileProperties.AddPropertiesError.Other
+  commentId: T:Dropbox.Api.FileProperties.AddPropertiesError.Other
+  parent: Dropbox.Api.FileProperties
+  name: AddPropertiesError.Other
+  nameWithType: AddPropertiesError.Other
+  fullName: Dropbox.Api.FileProperties.AddPropertiesError.Other

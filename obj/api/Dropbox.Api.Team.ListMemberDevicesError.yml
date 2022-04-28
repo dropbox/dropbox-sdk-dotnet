@@ -1,0 +1,582 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ListMemberDevicesError
+  commentId: T:Dropbox.Api.Team.ListMemberDevicesError
+  id: ListMemberDevicesError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ListMemberDevicesError.#ctor
+  - Dropbox.Api.Team.ListMemberDevicesError.AsMemberNotFound
+  - Dropbox.Api.Team.ListMemberDevicesError.AsOther
+  - Dropbox.Api.Team.ListMemberDevicesError.IsMemberNotFound
+  - Dropbox.Api.Team.ListMemberDevicesError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: ListMemberDevicesError
+  nameWithType: ListMemberDevicesError
+  fullName: Dropbox.Api.Team.ListMemberDevicesError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberDevicesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ListMemberDevicesError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberDevicesError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The list member devices error object</p>\n"
+  example: []
+  syntax:
+    content: public class ListMemberDevicesError
+    content.vb: Public Class ListMemberDevicesError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.ListMemberDevicesError.MemberNotFound
+  - Dropbox.Api.Team.ListMemberDevicesError.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.ListMemberDevicesError.#ctor
+  commentId: M:Dropbox.Api.Team.ListMemberDevicesError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.ListMemberDevicesError
+  langs:
+  - csharp
+  - vb
+  name: ListMemberDevicesError()
+  nameWithType: ListMemberDevicesError.ListMemberDevicesError()
+  fullName: Dropbox.Api.Team.ListMemberDevicesError.ListMemberDevicesError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberDevicesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberDevicesError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ListMemberDevicesError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListMemberDevicesError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.ListMemberDevicesError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ListMemberDevicesError.IsMemberNotFound
+  commentId: P:Dropbox.Api.Team.ListMemberDevicesError.IsMemberNotFound
+  id: IsMemberNotFound
+  parent: Dropbox.Api.Team.ListMemberDevicesError
+  langs:
+  - csharp
+  - vb
+  name: IsMemberNotFound
+  nameWithType: ListMemberDevicesError.IsMemberNotFound
+  fullName: Dropbox.Api.Team.ListMemberDevicesError.IsMemberNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberDevicesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsMemberNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberDevicesError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is MemberNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMemberNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMemberNotFound As Boolean
+  overload: Dropbox.Api.Team.ListMemberDevicesError.IsMemberNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ListMemberDevicesError.AsMemberNotFound
+  commentId: P:Dropbox.Api.Team.ListMemberDevicesError.AsMemberNotFound
+  id: AsMemberNotFound
+  parent: Dropbox.Api.Team.ListMemberDevicesError
+  langs:
+  - csharp
+  - vb
+  name: AsMemberNotFound
+  nameWithType: ListMemberDevicesError.AsMemberNotFound
+  fullName: Dropbox.Api.Team.ListMemberDevicesError.AsMemberNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberDevicesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsMemberNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberDevicesError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a MemberNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListMemberDevicesError.MemberNotFound AsMemberNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.ListMemberDevicesError.MemberNotFound
+    content.vb: Public ReadOnly Property AsMemberNotFound As ListMemberDevicesError.MemberNotFound
+  overload: Dropbox.Api.Team.ListMemberDevicesError.AsMemberNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ListMemberDevicesError.IsOther
+  commentId: P:Dropbox.Api.Team.ListMemberDevicesError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.ListMemberDevicesError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ListMemberDevicesError.IsOther
+  fullName: Dropbox.Api.Team.ListMemberDevicesError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberDevicesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberDevicesError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.ListMemberDevicesError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ListMemberDevicesError.AsOther
+  commentId: P:Dropbox.Api.Team.ListMemberDevicesError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.ListMemberDevicesError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ListMemberDevicesError.AsOther
+  fullName: Dropbox.Api.Team.ListMemberDevicesError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberDevicesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberDevicesError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListMemberDevicesError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.ListMemberDevicesError.Other
+    content.vb: Public ReadOnly Property AsOther As ListMemberDevicesError.Other
+  overload: Dropbox.Api.Team.ListMemberDevicesError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.ListMemberDevicesError
+  commentId: T:Dropbox.Api.Team.ListMemberDevicesError
+  parent: Dropbox.Api.Team
+  name: ListMemberDevicesError
+  nameWithType: ListMemberDevicesError
+  fullName: Dropbox.Api.Team.ListMemberDevicesError
+- uid: Dropbox.Api.Team.ListMemberDevicesError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ListMemberDevicesError.#ctor
+  name: ListMemberDevicesError
+  nameWithType: ListMemberDevicesError.ListMemberDevicesError
+  fullName: Dropbox.Api.Team.ListMemberDevicesError.ListMemberDevicesError
+- uid: Dropbox.Api.Team.ListMemberDevicesError.IsMemberNotFound*
+  commentId: Overload:Dropbox.Api.Team.ListMemberDevicesError.IsMemberNotFound
+  name: IsMemberNotFound
+  nameWithType: ListMemberDevicesError.IsMemberNotFound
+  fullName: Dropbox.Api.Team.ListMemberDevicesError.IsMemberNotFound
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.ListMemberDevicesError.AsMemberNotFound*
+  commentId: Overload:Dropbox.Api.Team.ListMemberDevicesError.AsMemberNotFound
+  name: AsMemberNotFound
+  nameWithType: ListMemberDevicesError.AsMemberNotFound
+  fullName: Dropbox.Api.Team.ListMemberDevicesError.AsMemberNotFound
+- uid: Dropbox.Api.Team.ListMemberDevicesError.MemberNotFound
+  commentId: T:Dropbox.Api.Team.ListMemberDevicesError.MemberNotFound
+  parent: Dropbox.Api.Team
+  name: ListMemberDevicesError.MemberNotFound
+  nameWithType: ListMemberDevicesError.MemberNotFound
+  fullName: Dropbox.Api.Team.ListMemberDevicesError.MemberNotFound
+- uid: Dropbox.Api.Team.ListMemberDevicesError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.ListMemberDevicesError.IsOther
+  name: IsOther
+  nameWithType: ListMemberDevicesError.IsOther
+  fullName: Dropbox.Api.Team.ListMemberDevicesError.IsOther
+- uid: Dropbox.Api.Team.ListMemberDevicesError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.ListMemberDevicesError.AsOther
+  name: AsOther
+  nameWithType: ListMemberDevicesError.AsOther
+  fullName: Dropbox.Api.Team.ListMemberDevicesError.AsOther
+- uid: Dropbox.Api.Team.ListMemberDevicesError.Other
+  commentId: T:Dropbox.Api.Team.ListMemberDevicesError.Other
+  parent: Dropbox.Api.Team
+  name: ListMemberDevicesError.Other
+  nameWithType: ListMemberDevicesError.Other
+  fullName: Dropbox.Api.Team.ListMemberDevicesError.Other

@@ -1,0 +1,230 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  id: Dropbox.Api
+  children:
+  - Dropbox.Api.AccessException
+  - Dropbox.Api.ApiException`1
+  - Dropbox.Api.AuthException
+  - Dropbox.Api.BadInputException
+  - Dropbox.Api.DropboxAppClient
+  - Dropbox.Api.DropboxCertHelper
+  - Dropbox.Api.DropboxClient
+  - Dropbox.Api.DropboxClientBase
+  - Dropbox.Api.DropboxClientConfig
+  - Dropbox.Api.DropboxException
+  - Dropbox.Api.DropboxOAuth2Helper
+  - Dropbox.Api.DropboxTeamClient
+  - Dropbox.Api.HttpException
+  - Dropbox.Api.IncludeGrantedScopes
+  - Dropbox.Api.OAuth2Exception
+  - Dropbox.Api.OAuth2Response
+  - Dropbox.Api.OAuthResponseType
+  - Dropbox.Api.PathRootException
+  - Dropbox.Api.PKCEOAuthFlow
+  - Dropbox.Api.RateLimitException
+  - Dropbox.Api.RetryException
+  - Dropbox.Api.StructuredException`1
+  - Dropbox.Api.TokenAccessType
+  langs:
+  - csharp
+  - vb
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api
+  type: Namespace
+  assemblies:
+  - Dropbox.Api
+references:
+- uid: Dropbox.Api.ApiException`1
+  commentId: T:Dropbox.Api.ApiException`1
+  name: ApiException<TError>
+  nameWithType: ApiException<TError>
+  fullName: Dropbox.Api.ApiException<TError>
+  nameWithType.vb: ApiException(Of TError)
+  fullName.vb: Dropbox.Api.ApiException(Of TError)
+  name.vb: ApiException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.ApiException`1
+    name: ApiException
+    nameWithType: ApiException
+    fullName: Dropbox.Api.ApiException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.ApiException`1
+    name: ApiException
+    nameWithType: ApiException
+    fullName: Dropbox.Api.ApiException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.DropboxAppClient
+  commentId: T:Dropbox.Api.DropboxAppClient
+  name: DropboxAppClient
+  nameWithType: DropboxAppClient
+  fullName: Dropbox.Api.DropboxAppClient
+- uid: Dropbox.Api.DropboxCertHelper
+  commentId: T:Dropbox.Api.DropboxCertHelper
+  name: DropboxCertHelper
+  nameWithType: DropboxCertHelper
+  fullName: Dropbox.Api.DropboxCertHelper
+- uid: Dropbox.Api.DropboxClient
+  commentId: T:Dropbox.Api.DropboxClient
+  parent: Dropbox.Api
+  name: DropboxClient
+  nameWithType: DropboxClient
+  fullName: Dropbox.Api.DropboxClient
+- uid: Dropbox.Api.DropboxClientBase
+  commentId: T:Dropbox.Api.DropboxClientBase
+  parent: Dropbox.Api
+  name: DropboxClientBase
+  nameWithType: DropboxClientBase
+  fullName: Dropbox.Api.DropboxClientBase
+- uid: Dropbox.Api.DropboxClientConfig
+  commentId: T:Dropbox.Api.DropboxClientConfig
+  parent: Dropbox.Api
+  name: DropboxClientConfig
+  nameWithType: DropboxClientConfig
+  fullName: Dropbox.Api.DropboxClientConfig
+- uid: Dropbox.Api.DropboxException
+  commentId: T:Dropbox.Api.DropboxException
+  parent: Dropbox.Api
+  name: DropboxException
+  nameWithType: DropboxException
+  fullName: Dropbox.Api.DropboxException
+- uid: Dropbox.Api.HttpException
+  commentId: T:Dropbox.Api.HttpException
+  parent: Dropbox.Api
+  name: HttpException
+  nameWithType: HttpException
+  fullName: Dropbox.Api.HttpException
+- uid: Dropbox.Api.BadInputException
+  commentId: T:Dropbox.Api.BadInputException
+  name: BadInputException
+  nameWithType: BadInputException
+  fullName: Dropbox.Api.BadInputException
+- uid: Dropbox.Api.AuthException
+  commentId: T:Dropbox.Api.AuthException
+  name: AuthException
+  nameWithType: AuthException
+  fullName: Dropbox.Api.AuthException
+- uid: Dropbox.Api.AccessException
+  commentId: T:Dropbox.Api.AccessException
+  name: AccessException
+  nameWithType: AccessException
+  fullName: Dropbox.Api.AccessException
+- uid: Dropbox.Api.PathRootException
+  commentId: T:Dropbox.Api.PathRootException
+  name: PathRootException
+  nameWithType: PathRootException
+  fullName: Dropbox.Api.PathRootException
+- uid: Dropbox.Api.RetryException
+  commentId: T:Dropbox.Api.RetryException
+  name: RetryException
+  nameWithType: RetryException
+  fullName: Dropbox.Api.RetryException
+- uid: Dropbox.Api.RateLimitException
+  commentId: T:Dropbox.Api.RateLimitException
+  name: RateLimitException
+  nameWithType: RateLimitException
+  fullName: Dropbox.Api.RateLimitException
+- uid: Dropbox.Api.OAuthResponseType
+  commentId: T:Dropbox.Api.OAuthResponseType
+  parent: Dropbox.Api
+  name: OAuthResponseType
+  nameWithType: OAuthResponseType
+  fullName: Dropbox.Api.OAuthResponseType
+- uid: Dropbox.Api.TokenAccessType
+  commentId: T:Dropbox.Api.TokenAccessType
+  parent: Dropbox.Api
+  name: TokenAccessType
+  nameWithType: TokenAccessType
+  fullName: Dropbox.Api.TokenAccessType
+- uid: Dropbox.Api.IncludeGrantedScopes
+  commentId: T:Dropbox.Api.IncludeGrantedScopes
+  parent: Dropbox.Api
+  name: IncludeGrantedScopes
+  nameWithType: IncludeGrantedScopes
+  fullName: Dropbox.Api.IncludeGrantedScopes
+- uid: Dropbox.Api.DropboxOAuth2Helper
+  commentId: T:Dropbox.Api.DropboxOAuth2Helper
+  name: DropboxOAuth2Helper
+  nameWithType: DropboxOAuth2Helper
+  fullName: Dropbox.Api.DropboxOAuth2Helper
+- uid: Dropbox.Api.PKCEOAuthFlow
+  commentId: T:Dropbox.Api.PKCEOAuthFlow
+  name: PKCEOAuthFlow
+  nameWithType: PKCEOAuthFlow
+  fullName: Dropbox.Api.PKCEOAuthFlow
+- uid: Dropbox.Api.OAuth2Response
+  commentId: T:Dropbox.Api.OAuth2Response
+  parent: Dropbox.Api
+  name: OAuth2Response
+  nameWithType: OAuth2Response
+  fullName: Dropbox.Api.OAuth2Response
+- uid: Dropbox.Api.OAuth2Exception
+  commentId: T:Dropbox.Api.OAuth2Exception
+  name: OAuth2Exception
+  nameWithType: OAuth2Exception
+  fullName: Dropbox.Api.OAuth2Exception
+- uid: Dropbox.Api.DropboxTeamClient
+  commentId: T:Dropbox.Api.DropboxTeamClient
+  name: DropboxTeamClient
+  nameWithType: DropboxTeamClient
+  fullName: Dropbox.Api.DropboxTeamClient
+- uid: Dropbox.Api.StructuredException`1
+  commentId: T:Dropbox.Api.StructuredException`1
+  name: StructuredException<TError>
+  nameWithType: StructuredException<TError>
+  fullName: Dropbox.Api.StructuredException<TError>
+  nameWithType.vb: StructuredException(Of TError)
+  fullName.vb: Dropbox.Api.StructuredException(Of TError)
+  name.vb: StructuredException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api

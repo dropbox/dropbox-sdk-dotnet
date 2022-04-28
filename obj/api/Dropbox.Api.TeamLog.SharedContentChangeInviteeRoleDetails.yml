@@ -1,0 +1,554 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails
+  id: SharedContentChangeInviteeRoleDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.#ctor(Dropbox.Api.Sharing.AccessLevel,System.String,Dropbox.Api.Sharing.AccessLevel)
+  - Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.Invitee
+  - Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.NewAccessLevel
+  - Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.PreviousAccessLevel
+  langs:
+  - csharp
+  - vb
+  name: SharedContentChangeInviteeRoleDetails
+  nameWithType: SharedContentChangeInviteeRoleDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeInviteeRoleDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SharedContentChangeInviteeRoleDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeInviteeRoleDetails.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed access type of invitee to shared file/folder before invite was\naccepted.</p>\n"
+  example: []
+  syntax:
+    content: public class SharedContentChangeInviteeRoleDetails
+    content.vb: Public Class SharedContentChangeInviteeRoleDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.#ctor(Dropbox.Api.Sharing.AccessLevel,System.String,Dropbox.Api.Sharing.AccessLevel)
+  commentId: M:Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.#ctor(Dropbox.Api.Sharing.AccessLevel,System.String,Dropbox.Api.Sharing.AccessLevel)
+  id: '#ctor(Dropbox.Api.Sharing.AccessLevel,System.String,Dropbox.Api.Sharing.AccessLevel)'
+  parent: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentChangeInviteeRoleDetails(AccessLevel, String, AccessLevel)
+  nameWithType: SharedContentChangeInviteeRoleDetails.SharedContentChangeInviteeRoleDetails(AccessLevel, String, AccessLevel)
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.SharedContentChangeInviteeRoleDetails(Dropbox.Api.Sharing.AccessLevel, System.String, Dropbox.Api.Sharing.AccessLevel)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeInviteeRoleDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeInviteeRoleDetails.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedContentChangeInviteeRoleDetails(AccessLevel newAccessLevel, string invitee, AccessLevel previousAccessLevel = null)
+    parameters:
+    - id: newAccessLevel
+      type: Dropbox.Api.Sharing.AccessLevel
+      description: New access level.
+    - id: invitee
+      type: System.String
+      description: The invitee whose role was changed.
+    - id: previousAccessLevel
+      type: Dropbox.Api.Sharing.AccessLevel
+      description: >-
+        Previous access level. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(newAccessLevel As AccessLevel, invitee As String, previousAccessLevel As AccessLevel = Nothing)
+  overload: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.NewAccessLevel
+  commentId: P:Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.NewAccessLevel
+  id: NewAccessLevel
+  parent: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: NewAccessLevel
+  nameWithType: SharedContentChangeInviteeRoleDetails.NewAccessLevel
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.NewAccessLevel
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeInviteeRoleDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NewAccessLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeInviteeRoleDetails.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New access level.</p>\n"
+  example: []
+  syntax:
+    content: public AccessLevel NewAccessLevel { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AccessLevel
+    content.vb: Public Property NewAccessLevel As AccessLevel
+  overload: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.NewAccessLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.Invitee
+  commentId: P:Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.Invitee
+  id: Invitee
+  parent: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: Invitee
+  nameWithType: SharedContentChangeInviteeRoleDetails.Invitee
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.Invitee
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeInviteeRoleDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Invitee
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeInviteeRoleDetails.cs
+    startLine: 80
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The invitee whose role was changed.</p>\n"
+  example: []
+  syntax:
+    content: public string Invitee { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Invitee As String
+  overload: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.Invitee*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.PreviousAccessLevel
+  commentId: P:Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.PreviousAccessLevel
+  id: PreviousAccessLevel
+  parent: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousAccessLevel
+  nameWithType: SharedContentChangeInviteeRoleDetails.PreviousAccessLevel
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.PreviousAccessLevel
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeInviteeRoleDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PreviousAccessLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeInviteeRoleDetails.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous access level. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public AccessLevel PreviousAccessLevel { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AccessLevel
+    content.vb: Public Property PreviousAccessLevel As AccessLevel
+  overload: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.PreviousAccessLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedContentChangeInviteeRoleDetails
+  nameWithType: SharedContentChangeInviteeRoleDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails
+- uid: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.#ctor
+  name: SharedContentChangeInviteeRoleDetails
+  nameWithType: SharedContentChangeInviteeRoleDetails.SharedContentChangeInviteeRoleDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.SharedContentChangeInviteeRoleDetails
+- uid: Dropbox.Api.Sharing.AccessLevel
+  commentId: T:Dropbox.Api.Sharing.AccessLevel
+  parent: Dropbox.Api.Sharing
+  name: AccessLevel
+  nameWithType: AccessLevel
+  fullName: Dropbox.Api.Sharing.AccessLevel
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.NewAccessLevel*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.NewAccessLevel
+  name: NewAccessLevel
+  nameWithType: SharedContentChangeInviteeRoleDetails.NewAccessLevel
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.NewAccessLevel
+- uid: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.Invitee*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.Invitee
+  name: Invitee
+  nameWithType: SharedContentChangeInviteeRoleDetails.Invitee
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.Invitee
+- uid: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.PreviousAccessLevel*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.PreviousAccessLevel
+  name: PreviousAccessLevel
+  nameWithType: SharedContentChangeInviteeRoleDetails.PreviousAccessLevel
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeInviteeRoleDetails.PreviousAccessLevel

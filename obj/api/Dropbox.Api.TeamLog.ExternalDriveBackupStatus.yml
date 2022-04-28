@@ -1,0 +1,1047 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  commentId: T:Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  id: ExternalDriveBackupStatus
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.#ctor
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsBroken
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreated
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreatedOrBroken
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsDeleted
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsEmpty
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsOther
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsUnknown
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsBroken
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreated
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreatedOrBroken
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsDeleted
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsEmpty
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsOther
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsUnknown
+  langs:
+  - csharp
+  - vb
+  name: ExternalDriveBackupStatus
+  nameWithType: ExternalDriveBackupStatus
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ExternalDriveBackupStatus
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>External Drive Backup status</p>\n"
+  example: []
+  syntax:
+    content: public class ExternalDriveBackupStatus
+    content.vb: Public Class ExternalDriveBackupStatus
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Broken
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Created
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.CreatedOrBroken
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Deleted
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Empty
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Other
+  - Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Unknown
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: ExternalDriveBackupStatus()
+  nameWithType: ExternalDriveBackupStatus.ExternalDriveBackupStatus()
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.ExternalDriveBackupStatus()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ExternalDriveBackupStatus\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ExternalDriveBackupStatus()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsBroken
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsBroken
+  id: IsBroken
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: IsBroken
+  nameWithType: ExternalDriveBackupStatus.IsBroken
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsBroken
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsBroken
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Broken</p>\n"
+  example: []
+  syntax:
+    content: public bool IsBroken { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsBroken As Boolean
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsBroken*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsBroken
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsBroken
+  id: AsBroken
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: AsBroken
+  nameWithType: ExternalDriveBackupStatus.AsBroken
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsBroken
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsBroken
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Broken, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExternalDriveBackupStatus.Broken AsBroken { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Broken
+    content.vb: Public ReadOnly Property AsBroken As ExternalDriveBackupStatus.Broken
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsBroken*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreated
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreated
+  id: IsCreated
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: IsCreated
+  nameWithType: ExternalDriveBackupStatus.IsCreated
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreated
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsCreated
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Created</p>\n"
+  example: []
+  syntax:
+    content: public bool IsCreated { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCreated As Boolean
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreated*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreated
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreated
+  id: AsCreated
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: AsCreated
+  nameWithType: ExternalDriveBackupStatus.AsCreated
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreated
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsCreated
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Created, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExternalDriveBackupStatus.Created AsCreated { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Created
+    content.vb: Public ReadOnly Property AsCreated As ExternalDriveBackupStatus.Created
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreated*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreatedOrBroken
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreatedOrBroken
+  id: IsCreatedOrBroken
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: IsCreatedOrBroken
+  nameWithType: ExternalDriveBackupStatus.IsCreatedOrBroken
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreatedOrBroken
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsCreatedOrBroken
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is CreatedOrBroken</p>\n"
+  example: []
+  syntax:
+    content: public bool IsCreatedOrBroken { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCreatedOrBroken As Boolean
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreatedOrBroken*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreatedOrBroken
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreatedOrBroken
+  id: AsCreatedOrBroken
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: AsCreatedOrBroken
+  nameWithType: ExternalDriveBackupStatus.AsCreatedOrBroken
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreatedOrBroken
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsCreatedOrBroken
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a CreatedOrBroken, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExternalDriveBackupStatus.CreatedOrBroken AsCreatedOrBroken { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.CreatedOrBroken
+    content.vb: Public ReadOnly Property AsCreatedOrBroken As ExternalDriveBackupStatus.CreatedOrBroken
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreatedOrBroken*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsDeleted
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsDeleted
+  id: IsDeleted
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: IsDeleted
+  nameWithType: ExternalDriveBackupStatus.IsDeleted
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsDeleted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDeleted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Deleted</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDeleted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDeleted As Boolean
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsDeleted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsDeleted
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsDeleted
+  id: AsDeleted
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: AsDeleted
+  nameWithType: ExternalDriveBackupStatus.AsDeleted
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsDeleted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDeleted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Deleted, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExternalDriveBackupStatus.Deleted AsDeleted { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Deleted
+    content.vb: Public ReadOnly Property AsDeleted As ExternalDriveBackupStatus.Deleted
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsDeleted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsEmpty
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsEmpty
+  id: IsEmpty
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: IsEmpty
+  nameWithType: ExternalDriveBackupStatus.IsEmpty
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsEmpty
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsEmpty
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Empty</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEmpty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmpty As Boolean
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsEmpty*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsEmpty
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsEmpty
+  id: AsEmpty
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: AsEmpty
+  nameWithType: ExternalDriveBackupStatus.AsEmpty
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsEmpty
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsEmpty
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Empty, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExternalDriveBackupStatus.Empty AsEmpty { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Empty
+    content.vb: Public ReadOnly Property AsEmpty As ExternalDriveBackupStatus.Empty
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsEmpty*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsUnknown
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsUnknown
+  id: IsUnknown
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: IsUnknown
+  nameWithType: ExternalDriveBackupStatus.IsUnknown
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsUnknown
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUnknown
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 150
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Unknown</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnknown { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnknown As Boolean
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsUnknown*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsUnknown
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsUnknown
+  id: AsUnknown
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: AsUnknown
+  nameWithType: ExternalDriveBackupStatus.AsUnknown
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsUnknown
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUnknown
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Unknown, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExternalDriveBackupStatus.Unknown AsUnknown { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Unknown
+    content.vb: Public ReadOnly Property AsUnknown As ExternalDriveBackupStatus.Unknown
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsUnknown*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsOther
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ExternalDriveBackupStatus.IsOther
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 172
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsOther
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ExternalDriveBackupStatus.AsOther
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupStatus.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExternalDriveBackupStatus.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Other
+    content.vb: Public ReadOnly Property AsOther As ExternalDriveBackupStatus.Other
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  commentId: T:Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+  parent: Dropbox.Api.TeamLog
+  name: ExternalDriveBackupStatus
+  nameWithType: ExternalDriveBackupStatus
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.#ctor
+  name: ExternalDriveBackupStatus
+  nameWithType: ExternalDriveBackupStatus.ExternalDriveBackupStatus
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.ExternalDriveBackupStatus
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsBroken*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsBroken
+  name: IsBroken
+  nameWithType: ExternalDriveBackupStatus.IsBroken
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsBroken
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsBroken*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsBroken
+  name: AsBroken
+  nameWithType: ExternalDriveBackupStatus.AsBroken
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsBroken
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Broken
+  commentId: T:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Broken
+  parent: Dropbox.Api.TeamLog
+  name: ExternalDriveBackupStatus.Broken
+  nameWithType: ExternalDriveBackupStatus.Broken
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Broken
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreated*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreated
+  name: IsCreated
+  nameWithType: ExternalDriveBackupStatus.IsCreated
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreated
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreated*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreated
+  name: AsCreated
+  nameWithType: ExternalDriveBackupStatus.AsCreated
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreated
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Created
+  commentId: T:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Created
+  parent: Dropbox.Api.TeamLog
+  name: ExternalDriveBackupStatus.Created
+  nameWithType: ExternalDriveBackupStatus.Created
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Created
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreatedOrBroken*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreatedOrBroken
+  name: IsCreatedOrBroken
+  nameWithType: ExternalDriveBackupStatus.IsCreatedOrBroken
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsCreatedOrBroken
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreatedOrBroken*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreatedOrBroken
+  name: AsCreatedOrBroken
+  nameWithType: ExternalDriveBackupStatus.AsCreatedOrBroken
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsCreatedOrBroken
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.CreatedOrBroken
+  commentId: T:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.CreatedOrBroken
+  parent: Dropbox.Api.TeamLog
+  name: ExternalDriveBackupStatus.CreatedOrBroken
+  nameWithType: ExternalDriveBackupStatus.CreatedOrBroken
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.CreatedOrBroken
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsDeleted*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsDeleted
+  name: IsDeleted
+  nameWithType: ExternalDriveBackupStatus.IsDeleted
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsDeleted
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsDeleted*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsDeleted
+  name: AsDeleted
+  nameWithType: ExternalDriveBackupStatus.AsDeleted
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsDeleted
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Deleted
+  commentId: T:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Deleted
+  parent: Dropbox.Api.TeamLog
+  name: ExternalDriveBackupStatus.Deleted
+  nameWithType: ExternalDriveBackupStatus.Deleted
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Deleted
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsEmpty*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsEmpty
+  name: IsEmpty
+  nameWithType: ExternalDriveBackupStatus.IsEmpty
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsEmpty
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsEmpty*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsEmpty
+  name: AsEmpty
+  nameWithType: ExternalDriveBackupStatus.AsEmpty
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsEmpty
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Empty
+  commentId: T:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Empty
+  parent: Dropbox.Api.TeamLog
+  name: ExternalDriveBackupStatus.Empty
+  nameWithType: ExternalDriveBackupStatus.Empty
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Empty
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsUnknown*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsUnknown
+  name: IsUnknown
+  nameWithType: ExternalDriveBackupStatus.IsUnknown
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsUnknown
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsUnknown*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsUnknown
+  name: AsUnknown
+  nameWithType: ExternalDriveBackupStatus.AsUnknown
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsUnknown
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Unknown
+  commentId: T:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Unknown
+  parent: Dropbox.Api.TeamLog
+  name: ExternalDriveBackupStatus.Unknown
+  nameWithType: ExternalDriveBackupStatus.Unknown
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Unknown
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsOther
+  name: IsOther
+  nameWithType: ExternalDriveBackupStatus.IsOther
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.IsOther
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsOther
+  name: AsOther
+  nameWithType: ExternalDriveBackupStatus.AsOther
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.AsOther
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Other
+  commentId: T:Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Other
+  parent: Dropbox.Api.TeamLog
+  name: ExternalDriveBackupStatus.Other
+  nameWithType: ExternalDriveBackupStatus.Other
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupStatus.Other

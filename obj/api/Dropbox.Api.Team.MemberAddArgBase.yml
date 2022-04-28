@@ -1,0 +1,853 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MemberAddArgBase
+  commentId: T:Dropbox.Api.Team.MemberAddArgBase
+  id: MemberAddArgBase
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MemberAddArgBase.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Nullable{System.Boolean})
+  - Dropbox.Api.Team.MemberAddArgBase.IsDirectoryRestricted
+  - Dropbox.Api.Team.MemberAddArgBase.MemberEmail
+  - Dropbox.Api.Team.MemberAddArgBase.MemberExternalId
+  - Dropbox.Api.Team.MemberAddArgBase.MemberGivenName
+  - Dropbox.Api.Team.MemberAddArgBase.MemberPersistentId
+  - Dropbox.Api.Team.MemberAddArgBase.MemberSurname
+  - Dropbox.Api.Team.MemberAddArgBase.SendWelcomeEmail
+  langs:
+  - csharp
+  - vb
+  name: MemberAddArgBase
+  nameWithType: MemberAddArgBase
+  fullName: Dropbox.Api.Team.MemberAddArgBase
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MemberAddArgBase
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The member add arg base object</p>\n"
+  example: []
+  syntax:
+    content: public class MemberAddArgBase
+    content.vb: Public Class MemberAddArgBase
+  seealso:
+  - linkId: Dropbox.Api.Team.MemberAddArg
+    commentId: T:Dropbox.Api.Team.MemberAddArg
+  - linkId: Dropbox.Api.Team.MemberAddV2Arg
+    commentId: T:Dropbox.Api.Team.MemberAddV2Arg
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.MemberAddArg
+  - Dropbox.Api.Team.MemberAddV2Arg
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MemberAddArgBase.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Nullable{System.Boolean})
+  commentId: M:Dropbox.Api.Team.MemberAddArgBase.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Nullable{System.Boolean})
+  id: '#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Nullable{System.Boolean})'
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  langs:
+  - csharp
+  - vb
+  name: MemberAddArgBase(String, String, String, String, String, Boolean, Nullable<Boolean>)
+  nameWithType: MemberAddArgBase.MemberAddArgBase(String, String, String, String, String, Boolean, Nullable<Boolean>)
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberAddArgBase(System.String, System.String, System.String, System.String, System.String, System.Boolean, System.Nullable<System.Boolean>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MemberAddArgBase\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MemberAddArgBase(string memberEmail, string memberGivenName = null, string memberSurname = null, string memberExternalId = null, string memberPersistentId = null, bool sendWelcomeEmail = true, bool? isDirectoryRestricted = null)
+    parameters:
+    - id: memberEmail
+      type: System.String
+      description: The member email
+    - id: memberGivenName
+      type: System.String
+      description: Member&apos;s first name.
+    - id: memberSurname
+      type: System.String
+      description: Member&apos;s last name.
+    - id: memberExternalId
+      type: System.String
+      description: External ID for member.
+    - id: memberPersistentId
+      type: System.String
+      description: >-
+        Persistent ID for member. This field is only
+
+        available to teams using persistent ID SAML configuration.
+    - id: sendWelcomeEmail
+      type: System.Boolean
+      description: >-
+        Whether to send a welcome email to the member. If
+
+        send_welcome_email is false, no email invitation will be sent to the user. This may
+
+        be useful for apps using single sign-on (SSO) flows for onboarding that want to
+
+        handle announcements themselves.
+    - id: isDirectoryRestricted
+      type: System.Nullable{System.Boolean}
+      description: Whether a user is directory restricted.
+    content.vb: Public Sub New(memberEmail As String, memberGivenName As String = Nothing, memberSurname As String = Nothing, memberExternalId As String = Nothing, memberPersistentId As String = Nothing, sendWelcomeEmail As Boolean = True, isDirectoryRestricted As Boolean? = Nothing)
+  overload: Dropbox.Api.Team.MemberAddArgBase.#ctor*
+  nameWithType.vb: MemberAddArgBase.MemberAddArgBase(String, String, String, String, String, Boolean, Nullable(Of Boolean))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.MemberAddArgBase.MemberAddArgBase(System.String, System.String, System.String, System.String, System.String, System.Boolean, System.Nullable(Of System.Boolean))
+  name.vb: MemberAddArgBase(String, String, String, String, String, Boolean, Nullable(Of Boolean))
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberEmail
+  commentId: P:Dropbox.Api.Team.MemberAddArgBase.MemberEmail
+  id: MemberEmail
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  langs:
+  - csharp
+  - vb
+  name: MemberEmail
+  nameWithType: MemberAddArgBase.MemberEmail
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberEmail
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MemberEmail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+    startLine: 123
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the member email of the member add arg base</p>\n"
+  example: []
+  syntax:
+    content: public string MemberEmail { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MemberEmail As String
+  overload: Dropbox.Api.Team.MemberAddArgBase.MemberEmail*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberGivenName
+  commentId: P:Dropbox.Api.Team.MemberAddArgBase.MemberGivenName
+  id: MemberGivenName
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  langs:
+  - csharp
+  - vb
+  name: MemberGivenName
+  nameWithType: MemberAddArgBase.MemberGivenName
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberGivenName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MemberGivenName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Member&apos;s first name.</p>\n"
+  example: []
+  syntax:
+    content: public string MemberGivenName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MemberGivenName As String
+  overload: Dropbox.Api.Team.MemberAddArgBase.MemberGivenName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberSurname
+  commentId: P:Dropbox.Api.Team.MemberAddArgBase.MemberSurname
+  id: MemberSurname
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  langs:
+  - csharp
+  - vb
+  name: MemberSurname
+  nameWithType: MemberAddArgBase.MemberSurname
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberSurname
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MemberSurname
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+    startLine: 133
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Member&apos;s last name.</p>\n"
+  example: []
+  syntax:
+    content: public string MemberSurname { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MemberSurname As String
+  overload: Dropbox.Api.Team.MemberAddArgBase.MemberSurname*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberExternalId
+  commentId: P:Dropbox.Api.Team.MemberAddArgBase.MemberExternalId
+  id: MemberExternalId
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  langs:
+  - csharp
+  - vb
+  name: MemberExternalId
+  nameWithType: MemberAddArgBase.MemberExternalId
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberExternalId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MemberExternalId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>External ID for member.</p>\n"
+  example: []
+  syntax:
+    content: public string MemberExternalId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MemberExternalId As String
+  overload: Dropbox.Api.Team.MemberAddArgBase.MemberExternalId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberPersistentId
+  commentId: P:Dropbox.Api.Team.MemberAddArgBase.MemberPersistentId
+  id: MemberPersistentId
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  langs:
+  - csharp
+  - vb
+  name: MemberPersistentId
+  nameWithType: MemberAddArgBase.MemberPersistentId
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberPersistentId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MemberPersistentId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+    startLine: 144
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Persistent ID for member. This field is only available to teams using\npersistent ID SAML configuration.</p>\n"
+  example: []
+  syntax:
+    content: public string MemberPersistentId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MemberPersistentId As String
+  overload: Dropbox.Api.Team.MemberAddArgBase.MemberPersistentId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MemberAddArgBase.SendWelcomeEmail
+  commentId: P:Dropbox.Api.Team.MemberAddArgBase.SendWelcomeEmail
+  id: SendWelcomeEmail
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  langs:
+  - csharp
+  - vb
+  name: SendWelcomeEmail
+  nameWithType: MemberAddArgBase.SendWelcomeEmail
+  fullName: Dropbox.Api.Team.MemberAddArgBase.SendWelcomeEmail
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SendWelcomeEmail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+    startLine: 152
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Whether to send a welcome email to the member. If send_welcome_email is\nfalse, no email invitation will be sent to the user. This may be useful for apps\nusing single sign-on (SSO) flows for onboarding that want to handle announcements\nthemselves.</p>\n"
+  example: []
+  syntax:
+    content: public bool SendWelcomeEmail { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property SendWelcomeEmail As Boolean
+  overload: Dropbox.Api.Team.MemberAddArgBase.SendWelcomeEmail*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MemberAddArgBase.IsDirectoryRestricted
+  commentId: P:Dropbox.Api.Team.MemberAddArgBase.IsDirectoryRestricted
+  id: IsDirectoryRestricted
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  langs:
+  - csharp
+  - vb
+  name: IsDirectoryRestricted
+  nameWithType: MemberAddArgBase.IsDirectoryRestricted
+  fullName: Dropbox.Api.Team.MemberAddArgBase.IsDirectoryRestricted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDirectoryRestricted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddArgBase.cs
+    startLine: 157
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Whether a user is directory restricted.</p>\n"
+  example: []
+  syntax:
+    content: public bool? IsDirectoryRestricted { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property IsDirectoryRestricted As Boolean?
+  overload: Dropbox.Api.Team.MemberAddArgBase.IsDirectoryRestricted*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team.MemberAddArg
+  commentId: T:Dropbox.Api.Team.MemberAddArg
+  name: MemberAddArg
+  nameWithType: MemberAddArg
+  fullName: Dropbox.Api.Team.MemberAddArg
+- uid: Dropbox.Api.Team.MemberAddV2Arg
+  commentId: T:Dropbox.Api.Team.MemberAddV2Arg
+  name: MemberAddV2Arg
+  nameWithType: MemberAddV2Arg
+  fullName: Dropbox.Api.Team.MemberAddV2Arg
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.MemberAddArgBase
+  commentId: T:Dropbox.Api.Team.MemberAddArgBase
+  parent: Dropbox.Api.Team
+  name: MemberAddArgBase
+  nameWithType: MemberAddArgBase
+  fullName: Dropbox.Api.Team.MemberAddArgBase
+- uid: Dropbox.Api.Team.MemberAddArgBase.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MemberAddArgBase.#ctor
+  name: MemberAddArgBase
+  nameWithType: MemberAddArgBase.MemberAddArgBase
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberAddArgBase
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberEmail*
+  commentId: Overload:Dropbox.Api.Team.MemberAddArgBase.MemberEmail
+  name: MemberEmail
+  nameWithType: MemberAddArgBase.MemberEmail
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberEmail
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberGivenName*
+  commentId: Overload:Dropbox.Api.Team.MemberAddArgBase.MemberGivenName
+  name: MemberGivenName
+  nameWithType: MemberAddArgBase.MemberGivenName
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberGivenName
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberSurname*
+  commentId: Overload:Dropbox.Api.Team.MemberAddArgBase.MemberSurname
+  name: MemberSurname
+  nameWithType: MemberAddArgBase.MemberSurname
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberSurname
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberExternalId*
+  commentId: Overload:Dropbox.Api.Team.MemberAddArgBase.MemberExternalId
+  name: MemberExternalId
+  nameWithType: MemberAddArgBase.MemberExternalId
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberExternalId
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberPersistentId*
+  commentId: Overload:Dropbox.Api.Team.MemberAddArgBase.MemberPersistentId
+  name: MemberPersistentId
+  nameWithType: MemberAddArgBase.MemberPersistentId
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberPersistentId
+- uid: Dropbox.Api.Team.MemberAddArgBase.SendWelcomeEmail*
+  commentId: Overload:Dropbox.Api.Team.MemberAddArgBase.SendWelcomeEmail
+  name: SendWelcomeEmail
+  nameWithType: MemberAddArgBase.SendWelcomeEmail
+  fullName: Dropbox.Api.Team.MemberAddArgBase.SendWelcomeEmail
+- uid: Dropbox.Api.Team.MemberAddArgBase.IsDirectoryRestricted*
+  commentId: Overload:Dropbox.Api.Team.MemberAddArgBase.IsDirectoryRestricted
+  name: IsDirectoryRestricted
+  nameWithType: MemberAddArgBase.IsDirectoryRestricted
+  fullName: Dropbox.Api.Team.MemberAddArgBase.IsDirectoryRestricted

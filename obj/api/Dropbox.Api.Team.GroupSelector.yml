@@ -1,0 +1,582 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupSelector
+  commentId: T:Dropbox.Api.Team.GroupSelector
+  id: GroupSelector
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupSelector.#ctor
+  - Dropbox.Api.Team.GroupSelector.AsGroupExternalId
+  - Dropbox.Api.Team.GroupSelector.AsGroupId
+  - Dropbox.Api.Team.GroupSelector.IsGroupExternalId
+  - Dropbox.Api.Team.GroupSelector.IsGroupId
+  langs:
+  - csharp
+  - vb
+  name: GroupSelector
+  nameWithType: GroupSelector
+  fullName: Dropbox.Api.Team.GroupSelector
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelector.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: GroupSelector
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelector.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Argument for selecting a single group, either by group_id or by external group\nID.</p>\n"
+  example: []
+  syntax:
+    content: public class GroupSelector
+    content.vb: Public Class GroupSelector
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.GroupSelector.GroupExternalId
+  - Dropbox.Api.Team.GroupSelector.GroupId
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GroupSelector.#ctor
+  commentId: M:Dropbox.Api.Team.GroupSelector.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.GroupSelector
+  langs:
+  - csharp
+  - vb
+  name: GroupSelector()
+  nameWithType: GroupSelector.GroupSelector()
+  fullName: Dropbox.Api.Team.GroupSelector.GroupSelector()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelector.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelector.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupSelector\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GroupSelector()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.GroupSelector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupSelector.IsGroupId
+  commentId: P:Dropbox.Api.Team.GroupSelector.IsGroupId
+  id: IsGroupId
+  parent: Dropbox.Api.Team.GroupSelector
+  langs:
+  - csharp
+  - vb
+  name: IsGroupId
+  nameWithType: GroupSelector.IsGroupId
+  fullName: Dropbox.Api.Team.GroupSelector.IsGroupId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelector.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsGroupId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelector.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is GroupId</p>\n"
+  example: []
+  syntax:
+    content: public bool IsGroupId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGroupId As Boolean
+  overload: Dropbox.Api.Team.GroupSelector.IsGroupId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupSelector.AsGroupId
+  commentId: P:Dropbox.Api.Team.GroupSelector.AsGroupId
+  id: AsGroupId
+  parent: Dropbox.Api.Team.GroupSelector
+  langs:
+  - csharp
+  - vb
+  name: AsGroupId
+  nameWithType: GroupSelector.AsGroupId
+  fullName: Dropbox.Api.Team.GroupSelector.AsGroupId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelector.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsGroupId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelector.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a GroupId, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupSelector.GroupId AsGroupId { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupSelector.GroupId
+    content.vb: Public ReadOnly Property AsGroupId As GroupSelector.GroupId
+  overload: Dropbox.Api.Team.GroupSelector.AsGroupId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupSelector.IsGroupExternalId
+  commentId: P:Dropbox.Api.Team.GroupSelector.IsGroupExternalId
+  id: IsGroupExternalId
+  parent: Dropbox.Api.Team.GroupSelector
+  langs:
+  - csharp
+  - vb
+  name: IsGroupExternalId
+  nameWithType: GroupSelector.IsGroupExternalId
+  fullName: Dropbox.Api.Team.GroupSelector.IsGroupExternalId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelector.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsGroupExternalId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelector.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is GroupExternalId</p>\n"
+  example: []
+  syntax:
+    content: public bool IsGroupExternalId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGroupExternalId As Boolean
+  overload: Dropbox.Api.Team.GroupSelector.IsGroupExternalId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupSelector.AsGroupExternalId
+  commentId: P:Dropbox.Api.Team.GroupSelector.AsGroupExternalId
+  id: AsGroupExternalId
+  parent: Dropbox.Api.Team.GroupSelector
+  langs:
+  - csharp
+  - vb
+  name: AsGroupExternalId
+  nameWithType: GroupSelector.AsGroupExternalId
+  fullName: Dropbox.Api.Team.GroupSelector.AsGroupExternalId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelector.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsGroupExternalId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelector.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a GroupExternalId, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupSelector.GroupExternalId AsGroupExternalId { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupSelector.GroupExternalId
+    content.vb: Public ReadOnly Property AsGroupExternalId As GroupSelector.GroupExternalId
+  overload: Dropbox.Api.Team.GroupSelector.AsGroupExternalId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.GroupSelector
+  commentId: T:Dropbox.Api.Team.GroupSelector
+  parent: Dropbox.Api.Team
+  name: GroupSelector
+  nameWithType: GroupSelector
+  fullName: Dropbox.Api.Team.GroupSelector
+- uid: Dropbox.Api.Team.GroupSelector.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupSelector.#ctor
+  name: GroupSelector
+  nameWithType: GroupSelector.GroupSelector
+  fullName: Dropbox.Api.Team.GroupSelector.GroupSelector
+- uid: Dropbox.Api.Team.GroupSelector.IsGroupId*
+  commentId: Overload:Dropbox.Api.Team.GroupSelector.IsGroupId
+  name: IsGroupId
+  nameWithType: GroupSelector.IsGroupId
+  fullName: Dropbox.Api.Team.GroupSelector.IsGroupId
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.GroupSelector.AsGroupId*
+  commentId: Overload:Dropbox.Api.Team.GroupSelector.AsGroupId
+  name: AsGroupId
+  nameWithType: GroupSelector.AsGroupId
+  fullName: Dropbox.Api.Team.GroupSelector.AsGroupId
+- uid: Dropbox.Api.Team.GroupSelector.GroupId
+  commentId: T:Dropbox.Api.Team.GroupSelector.GroupId
+  parent: Dropbox.Api.Team
+  name: GroupSelector.GroupId
+  nameWithType: GroupSelector.GroupId
+  fullName: Dropbox.Api.Team.GroupSelector.GroupId
+- uid: Dropbox.Api.Team.GroupSelector.IsGroupExternalId*
+  commentId: Overload:Dropbox.Api.Team.GroupSelector.IsGroupExternalId
+  name: IsGroupExternalId
+  nameWithType: GroupSelector.IsGroupExternalId
+  fullName: Dropbox.Api.Team.GroupSelector.IsGroupExternalId
+- uid: Dropbox.Api.Team.GroupSelector.AsGroupExternalId*
+  commentId: Overload:Dropbox.Api.Team.GroupSelector.AsGroupExternalId
+  name: AsGroupExternalId
+  nameWithType: GroupSelector.AsGroupExternalId
+  fullName: Dropbox.Api.Team.GroupSelector.AsGroupExternalId
+- uid: Dropbox.Api.Team.GroupSelector.GroupExternalId
+  commentId: T:Dropbox.Api.Team.GroupSelector.GroupExternalId
+  parent: Dropbox.Api.Team
+  name: GroupSelector.GroupExternalId
+  nameWithType: GroupSelector.GroupExternalId
+  fullName: Dropbox.Api.Team.GroupSelector.GroupExternalId

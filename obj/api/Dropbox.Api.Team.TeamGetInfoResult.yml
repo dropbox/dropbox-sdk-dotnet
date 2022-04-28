@@ -1,0 +1,660 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamGetInfoResult
+  commentId: T:Dropbox.Api.Team.TeamGetInfoResult
+  id: TeamGetInfoResult
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamGetInfoResult.#ctor(System.String,System.String,System.UInt32,System.UInt32,Dropbox.Api.TeamPolicies.TeamMemberPolicies)
+  - Dropbox.Api.Team.TeamGetInfoResult.Name
+  - Dropbox.Api.Team.TeamGetInfoResult.NumLicensedUsers
+  - Dropbox.Api.Team.TeamGetInfoResult.NumProvisionedUsers
+  - Dropbox.Api.Team.TeamGetInfoResult.Policies
+  - Dropbox.Api.Team.TeamGetInfoResult.TeamId
+  langs:
+  - csharp
+  - vb
+  name: TeamGetInfoResult
+  nameWithType: TeamGetInfoResult
+  fullName: Dropbox.Api.Team.TeamGetInfoResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamGetInfoResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TeamGetInfoResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamGetInfoResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team get info result object</p>\n"
+  example: []
+  syntax:
+    content: public class TeamGetInfoResult
+    content.vb: Public Class TeamGetInfoResult
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamGetInfoResult.#ctor(System.String,System.String,System.UInt32,System.UInt32,Dropbox.Api.TeamPolicies.TeamMemberPolicies)
+  commentId: M:Dropbox.Api.Team.TeamGetInfoResult.#ctor(System.String,System.String,System.UInt32,System.UInt32,Dropbox.Api.TeamPolicies.TeamMemberPolicies)
+  id: '#ctor(System.String,System.String,System.UInt32,System.UInt32,Dropbox.Api.TeamPolicies.TeamMemberPolicies)'
+  parent: Dropbox.Api.Team.TeamGetInfoResult
+  langs:
+  - csharp
+  - vb
+  name: TeamGetInfoResult(String, String, UInt32, UInt32, TeamMemberPolicies)
+  nameWithType: TeamGetInfoResult.TeamGetInfoResult(String, String, UInt32, UInt32, TeamMemberPolicies)
+  fullName: Dropbox.Api.Team.TeamGetInfoResult.TeamGetInfoResult(System.String, System.String, System.UInt32, System.UInt32, Dropbox.Api.TeamPolicies.TeamMemberPolicies)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamGetInfoResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamGetInfoResult.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamGetInfoResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamGetInfoResult(string name, string teamId, uint numLicensedUsers, uint numProvisionedUsers, TeamMemberPolicies policies)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the team.
+    - id: teamId
+      type: System.String
+      description: The ID of the team.
+    - id: numLicensedUsers
+      type: System.UInt32
+      description: >-
+        The number of licenses available to the
+
+        team.
+    - id: numProvisionedUsers
+      type: System.UInt32
+      description: >-
+        The number of accounts that have been invited or
+
+        are already active members of the team.
+    - id: policies
+      type: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+      description: The policies
+    content.vb: Public Sub New(name As String, teamId As String, numLicensedUsers As UInteger, numProvisionedUsers As UInteger, policies As TeamMemberPolicies)
+  overload: Dropbox.Api.Team.TeamGetInfoResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamGetInfoResult.Name
+  commentId: P:Dropbox.Api.Team.TeamGetInfoResult.Name
+  id: Name
+  parent: Dropbox.Api.Team.TeamGetInfoResult
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: TeamGetInfoResult.Name
+  fullName: Dropbox.Api.Team.TeamGetInfoResult.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamGetInfoResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamGetInfoResult.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The name of the team.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.Team.TeamGetInfoResult.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.TeamGetInfoResult.TeamId
+  commentId: P:Dropbox.Api.Team.TeamGetInfoResult.TeamId
+  id: TeamId
+  parent: Dropbox.Api.Team.TeamGetInfoResult
+  langs:
+  - csharp
+  - vb
+  name: TeamId
+  nameWithType: TeamGetInfoResult.TeamId
+  fullName: Dropbox.Api.Team.TeamGetInfoResult.TeamId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamGetInfoResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TeamId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamGetInfoResult.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The ID of the team.</p>\n"
+  example: []
+  syntax:
+    content: public string TeamId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TeamId As String
+  overload: Dropbox.Api.Team.TeamGetInfoResult.TeamId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.TeamGetInfoResult.NumLicensedUsers
+  commentId: P:Dropbox.Api.Team.TeamGetInfoResult.NumLicensedUsers
+  id: NumLicensedUsers
+  parent: Dropbox.Api.Team.TeamGetInfoResult
+  langs:
+  - csharp
+  - vb
+  name: NumLicensedUsers
+  nameWithType: TeamGetInfoResult.NumLicensedUsers
+  fullName: Dropbox.Api.Team.TeamGetInfoResult.NumLicensedUsers
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamGetInfoResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NumLicensedUsers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamGetInfoResult.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The number of licenses available to the team.</p>\n"
+  example: []
+  syntax:
+    content: public uint NumLicensedUsers { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property NumLicensedUsers As UInteger
+  overload: Dropbox.Api.Team.TeamGetInfoResult.NumLicensedUsers*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.TeamGetInfoResult.NumProvisionedUsers
+  commentId: P:Dropbox.Api.Team.TeamGetInfoResult.NumProvisionedUsers
+  id: NumProvisionedUsers
+  parent: Dropbox.Api.Team.TeamGetInfoResult
+  langs:
+  - csharp
+  - vb
+  name: NumProvisionedUsers
+  nameWithType: TeamGetInfoResult.NumProvisionedUsers
+  fullName: Dropbox.Api.Team.TeamGetInfoResult.NumProvisionedUsers
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamGetInfoResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NumProvisionedUsers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamGetInfoResult.cs
+    startLine: 98
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The number of accounts that have been invited or are already active members\nof the team.</p>\n"
+  example: []
+  syntax:
+    content: public uint NumProvisionedUsers { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property NumProvisionedUsers As UInteger
+  overload: Dropbox.Api.Team.TeamGetInfoResult.NumProvisionedUsers*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.TeamGetInfoResult.Policies
+  commentId: P:Dropbox.Api.Team.TeamGetInfoResult.Policies
+  id: Policies
+  parent: Dropbox.Api.Team.TeamGetInfoResult
+  langs:
+  - csharp
+  - vb
+  name: Policies
+  nameWithType: TeamGetInfoResult.Policies
+  fullName: Dropbox.Api.Team.TeamGetInfoResult.Policies
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamGetInfoResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Policies
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamGetInfoResult.cs
+    startLine: 103
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the policies of the team get info result</p>\n"
+  example: []
+  syntax:
+    content: public TeamMemberPolicies Policies { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+    content.vb: Public Property Policies As TeamMemberPolicies
+  overload: Dropbox.Api.Team.TeamGetInfoResult.Policies*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.TeamGetInfoResult
+  commentId: T:Dropbox.Api.Team.TeamGetInfoResult
+  parent: Dropbox.Api.Team
+  name: TeamGetInfoResult
+  nameWithType: TeamGetInfoResult
+  fullName: Dropbox.Api.Team.TeamGetInfoResult
+- uid: Dropbox.Api.Team.TeamGetInfoResult.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamGetInfoResult.#ctor
+  name: TeamGetInfoResult
+  nameWithType: TeamGetInfoResult.TeamGetInfoResult
+  fullName: Dropbox.Api.Team.TeamGetInfoResult.TeamGetInfoResult
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  commentId: T:Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  parent: Dropbox.Api.TeamPolicies
+  name: TeamMemberPolicies
+  nameWithType: TeamMemberPolicies
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: Dropbox.Api.Team.TeamGetInfoResult.Name*
+  commentId: Overload:Dropbox.Api.Team.TeamGetInfoResult.Name
+  name: Name
+  nameWithType: TeamGetInfoResult.Name
+  fullName: Dropbox.Api.Team.TeamGetInfoResult.Name
+- uid: Dropbox.Api.Team.TeamGetInfoResult.TeamId*
+  commentId: Overload:Dropbox.Api.Team.TeamGetInfoResult.TeamId
+  name: TeamId
+  nameWithType: TeamGetInfoResult.TeamId
+  fullName: Dropbox.Api.Team.TeamGetInfoResult.TeamId
+- uid: Dropbox.Api.Team.TeamGetInfoResult.NumLicensedUsers*
+  commentId: Overload:Dropbox.Api.Team.TeamGetInfoResult.NumLicensedUsers
+  name: NumLicensedUsers
+  nameWithType: TeamGetInfoResult.NumLicensedUsers
+  fullName: Dropbox.Api.Team.TeamGetInfoResult.NumLicensedUsers
+- uid: Dropbox.Api.Team.TeamGetInfoResult.NumProvisionedUsers*
+  commentId: Overload:Dropbox.Api.Team.TeamGetInfoResult.NumProvisionedUsers
+  name: NumProvisionedUsers
+  nameWithType: TeamGetInfoResult.NumProvisionedUsers
+  fullName: Dropbox.Api.Team.TeamGetInfoResult.NumProvisionedUsers
+- uid: Dropbox.Api.Team.TeamGetInfoResult.Policies*
+  commentId: Overload:Dropbox.Api.Team.TeamGetInfoResult.Policies
+  name: Policies
+  nameWithType: TeamGetInfoResult.Policies
+  fullName: Dropbox.Api.Team.TeamGetInfoResult.Policies

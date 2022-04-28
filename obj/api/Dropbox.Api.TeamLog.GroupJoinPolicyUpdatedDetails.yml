@@ -1,0 +1,577 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails
+  id: GroupJoinPolicyUpdatedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.#ctor(System.Nullable{System.Boolean},Dropbox.Api.TeamLog.GroupJoinPolicy)
+  - Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.IsCompanyManaged
+  - Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.JoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: GroupJoinPolicyUpdatedDetails
+  nameWithType: GroupJoinPolicyUpdatedDetails
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicyUpdatedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: GroupJoinPolicyUpdatedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicyUpdatedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Updated group join policy.</p>\n"
+  example: []
+  syntax:
+    content: public class GroupJoinPolicyUpdatedDetails
+    content.vb: Public Class GroupJoinPolicyUpdatedDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.#ctor(System.Nullable{System.Boolean},Dropbox.Api.TeamLog.GroupJoinPolicy)
+  commentId: M:Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.#ctor(System.Nullable{System.Boolean},Dropbox.Api.TeamLog.GroupJoinPolicy)
+  id: '#ctor(System.Nullable{System.Boolean},Dropbox.Api.TeamLog.GroupJoinPolicy)'
+  parent: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupJoinPolicyUpdatedDetails(Nullable<Boolean>, GroupJoinPolicy)
+  nameWithType: GroupJoinPolicyUpdatedDetails.GroupJoinPolicyUpdatedDetails(Nullable<Boolean>, GroupJoinPolicy)
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.GroupJoinPolicyUpdatedDetails(System.Nullable<System.Boolean>, Dropbox.Api.TeamLog.GroupJoinPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicyUpdatedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicyUpdatedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GroupJoinPolicyUpdatedDetails(bool? isCompanyManaged = null, GroupJoinPolicy joinPolicy = null)
+    parameters:
+    - id: isCompanyManaged
+      type: System.Nullable{System.Boolean}
+      description: Is company managed group.
+    - id: joinPolicy
+      type: Dropbox.Api.TeamLog.GroupJoinPolicy
+      description: Group join policy.
+    content.vb: Public Sub New(isCompanyManaged As Boolean? = Nothing, joinPolicy As GroupJoinPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.#ctor*
+  nameWithType.vb: GroupJoinPolicyUpdatedDetails.GroupJoinPolicyUpdatedDetails(Nullable(Of Boolean), GroupJoinPolicy)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.GroupJoinPolicyUpdatedDetails(System.Nullable(Of System.Boolean), Dropbox.Api.TeamLog.GroupJoinPolicy)
+  name.vb: GroupJoinPolicyUpdatedDetails(Nullable(Of Boolean), GroupJoinPolicy)
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.IsCompanyManaged
+  commentId: P:Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.IsCompanyManaged
+  id: IsCompanyManaged
+  parent: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails
+  langs:
+  - csharp
+  - vb
+  name: IsCompanyManaged
+  nameWithType: GroupJoinPolicyUpdatedDetails.IsCompanyManaged
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.IsCompanyManaged
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicyUpdatedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsCompanyManaged
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicyUpdatedDetails.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Is company managed group.</p>\n"
+  example: []
+  syntax:
+    content: public bool? IsCompanyManaged { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property IsCompanyManaged As Boolean?
+  overload: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.IsCompanyManaged*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.JoinPolicy
+  commentId: P:Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.JoinPolicy
+  id: JoinPolicy
+  parent: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails
+  langs:
+  - csharp
+  - vb
+  name: JoinPolicy
+  nameWithType: GroupJoinPolicyUpdatedDetails.JoinPolicy
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.JoinPolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicyUpdatedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: JoinPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicyUpdatedDetails.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Group join policy.</p>\n"
+  example: []
+  syntax:
+    content: public GroupJoinPolicy JoinPolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.GroupJoinPolicy
+    content.vb: Public Property JoinPolicy As GroupJoinPolicy
+  overload: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.JoinPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails
+  parent: Dropbox.Api.TeamLog
+  name: GroupJoinPolicyUpdatedDetails
+  nameWithType: GroupJoinPolicyUpdatedDetails
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.#ctor
+  name: GroupJoinPolicyUpdatedDetails
+  nameWithType: GroupJoinPolicyUpdatedDetails.GroupJoinPolicyUpdatedDetails
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.GroupJoinPolicyUpdatedDetails
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy
+  commentId: T:Dropbox.Api.TeamLog.GroupJoinPolicy
+  parent: Dropbox.Api.TeamLog
+  name: GroupJoinPolicy
+  nameWithType: GroupJoinPolicy
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.IsCompanyManaged*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.IsCompanyManaged
+  name: IsCompanyManaged
+  nameWithType: GroupJoinPolicyUpdatedDetails.IsCompanyManaged
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.IsCompanyManaged
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.JoinPolicy*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.JoinPolicy
+  name: JoinPolicy
+  nameWithType: GroupJoinPolicyUpdatedDetails.JoinPolicy
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicyUpdatedDetails.JoinPolicy

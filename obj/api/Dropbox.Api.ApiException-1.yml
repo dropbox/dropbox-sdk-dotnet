@@ -1,0 +1,662 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.ApiException`1
+  commentId: T:Dropbox.Api.ApiException`1
+  id: ApiException`1
+  parent: Dropbox.Api
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ApiException<TError>
+  nameWithType: ApiException<TError>
+  fullName: Dropbox.Api.ApiException<TError>
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/ApiException.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ApiException
+    path: dropbox-sdk-dotnet/Dropbox.Api/ApiException.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nThe exception type that will be raised by an <xref href=\"Dropbox.Api.Stone.ITransport\" data-throw-if-not-resolved=\"false\"></xref>\nimplementation if there is an error processing the request which is caused by\nfailure in API route.\n"
+  example: []
+  syntax:
+    content: 'public sealed class ApiException<TError> : StructuredException<TError>, _Exception, ISerializable'
+    typeParameters:
+    - id: TError
+      description: The type of the error.
+    content.vb: >-
+      Public NotInheritable Class ApiException(Of TError)
+          Inherits StructuredException(Of TError)
+          Implements _Exception, ISerializable
+  inheritance:
+  - System.Object
+  - System.Exception
+  - Dropbox.Api.DropboxException
+  - Dropbox.Api.StructuredException{{TError}}
+  implements:
+  - System.Runtime.InteropServices._Exception
+  - System.Runtime.Serialization.ISerializable
+  inheritedMembers:
+  - Dropbox.Api.StructuredException{{TError}}.ErrorResponse
+  - Dropbox.Api.StructuredException{{TError}}.Message
+  - Dropbox.Api.DropboxException.ToString
+  - System.Exception.GetBaseException
+  - System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  - System.Exception.GetType
+  - System.Exception.Data
+  - System.Exception.HelpLink
+  - System.Exception.HResult
+  - System.Exception.InnerException
+  - System.Exception.Source
+  - System.Exception.StackTrace
+  - System.Exception.TargetSite
+  - System.Exception.SerializeObjectState
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  nameWithType.vb: ApiException(Of TError)
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+  fullName.vb: Dropbox.Api.ApiException(Of TError)
+  name.vb: ApiException(Of TError)
+references:
+- uid: Dropbox.Api.Stone.ITransport
+  commentId: T:Dropbox.Api.Stone.ITransport
+  isExternal: true
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: Dropbox.Api.DropboxException
+  commentId: T:Dropbox.Api.DropboxException
+  parent: Dropbox.Api
+  name: DropboxException
+  nameWithType: DropboxException
+  fullName: Dropbox.Api.DropboxException
+- uid: Dropbox.Api.StructuredException{{TError}}
+  commentId: T:Dropbox.Api.StructuredException{`0}
+  parent: Dropbox.Api
+  definition: Dropbox.Api.StructuredException`1
+  name: StructuredException<TError>
+  nameWithType: StructuredException<TError>
+  fullName: Dropbox.Api.StructuredException<TError>
+  nameWithType.vb: StructuredException(Of TError)
+  fullName.vb: Dropbox.Api.StructuredException(Of TError)
+  name.vb: StructuredException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Runtime.InteropServices._Exception
+  commentId: T:System.Runtime.InteropServices._Exception
+  parent: System.Runtime.InteropServices
+  isExternal: true
+  name: _Exception
+  nameWithType: _Exception
+  fullName: System.Runtime.InteropServices._Exception
+- uid: System.Runtime.Serialization.ISerializable
+  commentId: T:System.Runtime.Serialization.ISerializable
+  parent: System.Runtime.Serialization
+  isExternal: true
+  name: ISerializable
+  nameWithType: ISerializable
+  fullName: System.Runtime.Serialization.ISerializable
+- uid: Dropbox.Api.StructuredException{{TError}}.ErrorResponse
+  commentId: P:Dropbox.Api.StructuredException{`0}.ErrorResponse
+  parent: Dropbox.Api.StructuredException{{TError}}
+  definition: Dropbox.Api.StructuredException`1.ErrorResponse
+  name: ErrorResponse
+  nameWithType: StructuredException<TError>.ErrorResponse
+  fullName: Dropbox.Api.StructuredException<TError>.ErrorResponse
+  nameWithType.vb: StructuredException(Of TError).ErrorResponse
+  fullName.vb: Dropbox.Api.StructuredException(Of TError).ErrorResponse
+- uid: Dropbox.Api.StructuredException{{TError}}.Message
+  commentId: P:Dropbox.Api.StructuredException{`0}.Message
+  parent: Dropbox.Api.StructuredException{{TError}}
+  definition: Dropbox.Api.StructuredException`1.Message
+  name: Message
+  nameWithType: StructuredException<TError>.Message
+  fullName: Dropbox.Api.StructuredException<TError>.Message
+  nameWithType.vb: StructuredException(Of TError).Message
+  fullName.vb: Dropbox.Api.StructuredException(Of TError).Message
+- uid: Dropbox.Api.DropboxException.ToString
+  commentId: M:Dropbox.Api.DropboxException.ToString
+  parent: Dropbox.Api.DropboxException
+  name: ToString()
+  nameWithType: DropboxException.ToString()
+  fullName: Dropbox.Api.DropboxException.ToString()
+  spec.csharp:
+  - uid: Dropbox.Api.DropboxException.ToString
+    name: ToString
+    nameWithType: DropboxException.ToString
+    fullName: Dropbox.Api.DropboxException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Dropbox.Api.DropboxException.ToString
+    name: ToString
+    nameWithType: DropboxException.ToString
+    fullName: Dropbox.Api.DropboxException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.GetBaseException
+  commentId: M:System.Exception.GetBaseException
+  parent: System.Exception
+  isExternal: true
+  name: GetBaseException()
+  nameWithType: Exception.GetBaseException()
+  fullName: System.Exception.GetBaseException()
+  spec.csharp:
+  - uid: System.Exception.GetBaseException
+    name: GetBaseException
+    nameWithType: Exception.GetBaseException
+    fullName: System.Exception.GetBaseException
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Exception.GetBaseException
+    name: GetBaseException
+    nameWithType: Exception.GetBaseException
+    fullName: System.Exception.GetBaseException
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  parent: System.Exception
+  isExternal: true
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: Exception.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  spec.csharp:
+  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    nameWithType: Exception.GetObjectData
+    fullName: System.Exception.GetObjectData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    nameWithType: SerializationInfo
+    fullName: System.Runtime.Serialization.SerializationInfo
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    nameWithType: StreamingContext
+    fullName: System.Runtime.Serialization.StreamingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    nameWithType: Exception.GetObjectData
+    fullName: System.Exception.GetObjectData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    nameWithType: SerializationInfo
+    fullName: System.Runtime.Serialization.SerializationInfo
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    nameWithType: StreamingContext
+    fullName: System.Runtime.Serialization.StreamingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.GetType
+  commentId: M:System.Exception.GetType
+  parent: System.Exception
+  isExternal: true
+  name: GetType()
+  nameWithType: Exception.GetType()
+  fullName: System.Exception.GetType()
+  spec.csharp:
+  - uid: System.Exception.GetType
+    name: GetType
+    nameWithType: Exception.GetType
+    fullName: System.Exception.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Exception.GetType
+    name: GetType
+    nameWithType: Exception.GetType
+    fullName: System.Exception.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Exception.Data
+  commentId: P:System.Exception.Data
+  parent: System.Exception
+  isExternal: true
+  name: Data
+  nameWithType: Exception.Data
+  fullName: System.Exception.Data
+- uid: System.Exception.HelpLink
+  commentId: P:System.Exception.HelpLink
+  parent: System.Exception
+  isExternal: true
+  name: HelpLink
+  nameWithType: Exception.HelpLink
+  fullName: System.Exception.HelpLink
+- uid: System.Exception.HResult
+  commentId: P:System.Exception.HResult
+  parent: System.Exception
+  isExternal: true
+  name: HResult
+  nameWithType: Exception.HResult
+  fullName: System.Exception.HResult
+- uid: System.Exception.InnerException
+  commentId: P:System.Exception.InnerException
+  parent: System.Exception
+  isExternal: true
+  name: InnerException
+  nameWithType: Exception.InnerException
+  fullName: System.Exception.InnerException
+- uid: System.Exception.Source
+  commentId: P:System.Exception.Source
+  parent: System.Exception
+  isExternal: true
+  name: Source
+  nameWithType: Exception.Source
+  fullName: System.Exception.Source
+- uid: System.Exception.StackTrace
+  commentId: P:System.Exception.StackTrace
+  parent: System.Exception
+  isExternal: true
+  name: StackTrace
+  nameWithType: Exception.StackTrace
+  fullName: System.Exception.StackTrace
+- uid: System.Exception.TargetSite
+  commentId: P:System.Exception.TargetSite
+  parent: System.Exception
+  isExternal: true
+  name: TargetSite
+  nameWithType: Exception.TargetSite
+  fullName: System.Exception.TargetSite
+- uid: System.Exception.SerializeObjectState
+  commentId: E:System.Exception.SerializeObjectState
+  parent: System.Exception
+  isExternal: true
+  name: SerializeObjectState
+  nameWithType: Exception.SerializeObjectState
+  fullName: System.Exception.SerializeObjectState
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.StructuredException`1
+  commentId: T:Dropbox.Api.StructuredException`1
+  name: StructuredException<TError>
+  nameWithType: StructuredException<TError>
+  fullName: Dropbox.Api.StructuredException<TError>
+  nameWithType.vb: StructuredException(Of TError)
+  fullName.vb: Dropbox.Api.StructuredException(Of TError)
+  name.vb: StructuredException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Runtime.InteropServices
+  commentId: N:System.Runtime.InteropServices
+  isExternal: true
+  name: System.Runtime.InteropServices
+  nameWithType: System.Runtime.InteropServices
+  fullName: System.Runtime.InteropServices
+- uid: System.Runtime.Serialization
+  commentId: N:System.Runtime.Serialization
+  isExternal: true
+  name: System.Runtime.Serialization
+  nameWithType: System.Runtime.Serialization
+  fullName: System.Runtime.Serialization
+- uid: Dropbox.Api.StructuredException`1.ErrorResponse
+  commentId: P:Dropbox.Api.StructuredException`1.ErrorResponse
+  name: ErrorResponse
+  nameWithType: StructuredException<TError>.ErrorResponse
+  fullName: Dropbox.Api.StructuredException<TError>.ErrorResponse
+  nameWithType.vb: StructuredException(Of TError).ErrorResponse
+  fullName.vb: Dropbox.Api.StructuredException(Of TError).ErrorResponse
+- uid: Dropbox.Api.StructuredException`1.Message
+  commentId: P:Dropbox.Api.StructuredException`1.Message
+  name: Message
+  nameWithType: StructuredException<TError>.Message
+  fullName: Dropbox.Api.StructuredException<TError>.Message
+  nameWithType.vb: StructuredException(Of TError).Message
+  fullName.vb: Dropbox.Api.StructuredException(Of TError).Message

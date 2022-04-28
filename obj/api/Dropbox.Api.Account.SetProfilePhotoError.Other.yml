@@ -1,0 +1,483 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Account.SetProfilePhotoError.Other
+  commentId: T:Dropbox.Api.Account.SetProfilePhotoError.Other
+  id: SetProfilePhotoError.Other
+  parent: Dropbox.Api.Account
+  children:
+  - Dropbox.Api.Account.SetProfilePhotoError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: SetProfilePhotoError.Other
+  nameWithType: SetProfilePhotoError.Other
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs
+    startLine: 622
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : SetProfilePhotoError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits SetProfilePhotoError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Account.SetProfilePhotoError
+  inheritedMembers:
+  - Dropbox.Api.Account.SetProfilePhotoError.IsFileTypeError
+  - Dropbox.Api.Account.SetProfilePhotoError.AsFileTypeError
+  - Dropbox.Api.Account.SetProfilePhotoError.IsFileSizeError
+  - Dropbox.Api.Account.SetProfilePhotoError.AsFileSizeError
+  - Dropbox.Api.Account.SetProfilePhotoError.IsDimensionError
+  - Dropbox.Api.Account.SetProfilePhotoError.AsDimensionError
+  - Dropbox.Api.Account.SetProfilePhotoError.IsThumbnailError
+  - Dropbox.Api.Account.SetProfilePhotoError.AsThumbnailError
+  - Dropbox.Api.Account.SetProfilePhotoError.IsTransientError
+  - Dropbox.Api.Account.SetProfilePhotoError.AsTransientError
+  - Dropbox.Api.Account.SetProfilePhotoError.IsOther
+  - Dropbox.Api.Account.SetProfilePhotoError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Account.SetProfilePhotoError.Other.Instance
+  commentId: F:Dropbox.Api.Account.SetProfilePhotoError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Account.SetProfilePhotoError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SetProfilePhotoError.Other.Instance
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs
+    startLine: 646
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SetProfilePhotoError.Other Instance
+    return:
+      type: Dropbox.Api.Account.SetProfilePhotoError.Other
+    content.vb: Public Shared ReadOnly Instance As SetProfilePhotoError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Account
+  commentId: N:Dropbox.Api.Account
+  name: Dropbox.Api.Account
+  nameWithType: Dropbox.Api.Account
+  fullName: Dropbox.Api.Account
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Account.SetProfilePhotoError
+  commentId: T:Dropbox.Api.Account.SetProfilePhotoError
+  parent: Dropbox.Api.Account
+  name: SetProfilePhotoError
+  nameWithType: SetProfilePhotoError
+  fullName: Dropbox.Api.Account.SetProfilePhotoError
+- uid: Dropbox.Api.Account.SetProfilePhotoError.IsFileTypeError
+  commentId: P:Dropbox.Api.Account.SetProfilePhotoError.IsFileTypeError
+  parent: Dropbox.Api.Account.SetProfilePhotoError
+  name: IsFileTypeError
+  nameWithType: SetProfilePhotoError.IsFileTypeError
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.IsFileTypeError
+- uid: Dropbox.Api.Account.SetProfilePhotoError.AsFileTypeError
+  commentId: P:Dropbox.Api.Account.SetProfilePhotoError.AsFileTypeError
+  parent: Dropbox.Api.Account.SetProfilePhotoError
+  name: AsFileTypeError
+  nameWithType: SetProfilePhotoError.AsFileTypeError
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.AsFileTypeError
+- uid: Dropbox.Api.Account.SetProfilePhotoError.IsFileSizeError
+  commentId: P:Dropbox.Api.Account.SetProfilePhotoError.IsFileSizeError
+  parent: Dropbox.Api.Account.SetProfilePhotoError
+  name: IsFileSizeError
+  nameWithType: SetProfilePhotoError.IsFileSizeError
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.IsFileSizeError
+- uid: Dropbox.Api.Account.SetProfilePhotoError.AsFileSizeError
+  commentId: P:Dropbox.Api.Account.SetProfilePhotoError.AsFileSizeError
+  parent: Dropbox.Api.Account.SetProfilePhotoError
+  name: AsFileSizeError
+  nameWithType: SetProfilePhotoError.AsFileSizeError
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.AsFileSizeError
+- uid: Dropbox.Api.Account.SetProfilePhotoError.IsDimensionError
+  commentId: P:Dropbox.Api.Account.SetProfilePhotoError.IsDimensionError
+  parent: Dropbox.Api.Account.SetProfilePhotoError
+  name: IsDimensionError
+  nameWithType: SetProfilePhotoError.IsDimensionError
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.IsDimensionError
+- uid: Dropbox.Api.Account.SetProfilePhotoError.AsDimensionError
+  commentId: P:Dropbox.Api.Account.SetProfilePhotoError.AsDimensionError
+  parent: Dropbox.Api.Account.SetProfilePhotoError
+  name: AsDimensionError
+  nameWithType: SetProfilePhotoError.AsDimensionError
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.AsDimensionError
+- uid: Dropbox.Api.Account.SetProfilePhotoError.IsThumbnailError
+  commentId: P:Dropbox.Api.Account.SetProfilePhotoError.IsThumbnailError
+  parent: Dropbox.Api.Account.SetProfilePhotoError
+  name: IsThumbnailError
+  nameWithType: SetProfilePhotoError.IsThumbnailError
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.IsThumbnailError
+- uid: Dropbox.Api.Account.SetProfilePhotoError.AsThumbnailError
+  commentId: P:Dropbox.Api.Account.SetProfilePhotoError.AsThumbnailError
+  parent: Dropbox.Api.Account.SetProfilePhotoError
+  name: AsThumbnailError
+  nameWithType: SetProfilePhotoError.AsThumbnailError
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.AsThumbnailError
+- uid: Dropbox.Api.Account.SetProfilePhotoError.IsTransientError
+  commentId: P:Dropbox.Api.Account.SetProfilePhotoError.IsTransientError
+  parent: Dropbox.Api.Account.SetProfilePhotoError
+  name: IsTransientError
+  nameWithType: SetProfilePhotoError.IsTransientError
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.IsTransientError
+- uid: Dropbox.Api.Account.SetProfilePhotoError.AsTransientError
+  commentId: P:Dropbox.Api.Account.SetProfilePhotoError.AsTransientError
+  parent: Dropbox.Api.Account.SetProfilePhotoError
+  name: AsTransientError
+  nameWithType: SetProfilePhotoError.AsTransientError
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.AsTransientError
+- uid: Dropbox.Api.Account.SetProfilePhotoError.IsOther
+  commentId: P:Dropbox.Api.Account.SetProfilePhotoError.IsOther
+  parent: Dropbox.Api.Account.SetProfilePhotoError
+  name: IsOther
+  nameWithType: SetProfilePhotoError.IsOther
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.IsOther
+- uid: Dropbox.Api.Account.SetProfilePhotoError.AsOther
+  commentId: P:Dropbox.Api.Account.SetProfilePhotoError.AsOther
+  parent: Dropbox.Api.Account.SetProfilePhotoError
+  name: AsOther
+  nameWithType: SetProfilePhotoError.AsOther
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Account.SetProfilePhotoError.Other
+  commentId: T:Dropbox.Api.Account.SetProfilePhotoError.Other
+  parent: Dropbox.Api.Account
+  name: SetProfilePhotoError.Other
+  nameWithType: SetProfilePhotoError.Other
+  fullName: Dropbox.Api.Account.SetProfilePhotoError.Other

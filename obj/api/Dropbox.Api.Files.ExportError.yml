@@ -1,0 +1,861 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ExportError
+  commentId: T:Dropbox.Api.Files.ExportError
+  id: ExportError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ExportError.#ctor
+  - Dropbox.Api.Files.ExportError.AsInvalidExportFormat
+  - Dropbox.Api.Files.ExportError.AsNonExportable
+  - Dropbox.Api.Files.ExportError.AsOther
+  - Dropbox.Api.Files.ExportError.AsPath
+  - Dropbox.Api.Files.ExportError.AsRetryError
+  - Dropbox.Api.Files.ExportError.IsInvalidExportFormat
+  - Dropbox.Api.Files.ExportError.IsNonExportable
+  - Dropbox.Api.Files.ExportError.IsOther
+  - Dropbox.Api.Files.ExportError.IsPath
+  - Dropbox.Api.Files.ExportError.IsRetryError
+  langs:
+  - csharp
+  - vb
+  name: ExportError
+  nameWithType: ExportError
+  fullName: Dropbox.Api.Files.ExportError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ExportError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The export error object</p>\n"
+  example: []
+  syntax:
+    content: public class ExportError
+    content.vb: Public Class ExportError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.ExportError.InvalidExportFormat
+  - Dropbox.Api.Files.ExportError.NonExportable
+  - Dropbox.Api.Files.ExportError.Other
+  - Dropbox.Api.Files.ExportError.Path
+  - Dropbox.Api.Files.ExportError.RetryError
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ExportError.#ctor
+  commentId: M:Dropbox.Api.Files.ExportError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.ExportError
+  langs:
+  - csharp
+  - vb
+  name: ExportError()
+  nameWithType: ExportError.ExportError()
+  fullName: Dropbox.Api.Files.ExportError.ExportError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ExportError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ExportError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.ExportError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ExportError.IsPath
+  commentId: P:Dropbox.Api.Files.ExportError.IsPath
+  id: IsPath
+  parent: Dropbox.Api.Files.ExportError
+  langs:
+  - csharp
+  - vb
+  name: IsPath
+  nameWithType: ExportError.IsPath
+  fullName: Dropbox.Api.Files.ExportError.IsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Path</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPath As Boolean
+  overload: Dropbox.Api.Files.ExportError.IsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ExportError.AsPath
+  commentId: P:Dropbox.Api.Files.ExportError.AsPath
+  id: AsPath
+  parent: Dropbox.Api.Files.ExportError
+  langs:
+  - csharp
+  - vb
+  name: AsPath
+  nameWithType: ExportError.AsPath
+  fullName: Dropbox.Api.Files.ExportError.AsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Path, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExportError.Path AsPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ExportError.Path
+    content.vb: Public ReadOnly Property AsPath As ExportError.Path
+  overload: Dropbox.Api.Files.ExportError.AsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ExportError.IsNonExportable
+  commentId: P:Dropbox.Api.Files.ExportError.IsNonExportable
+  id: IsNonExportable
+  parent: Dropbox.Api.Files.ExportError
+  langs:
+  - csharp
+  - vb
+  name: IsNonExportable
+  nameWithType: ExportError.IsNonExportable
+  fullName: Dropbox.Api.Files.ExportError.IsNonExportable
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNonExportable
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is NonExportable</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNonExportable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNonExportable As Boolean
+  overload: Dropbox.Api.Files.ExportError.IsNonExportable*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ExportError.AsNonExportable
+  commentId: P:Dropbox.Api.Files.ExportError.AsNonExportable
+  id: AsNonExportable
+  parent: Dropbox.Api.Files.ExportError
+  langs:
+  - csharp
+  - vb
+  name: AsNonExportable
+  nameWithType: ExportError.AsNonExportable
+  fullName: Dropbox.Api.Files.ExportError.AsNonExportable
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNonExportable
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a NonExportable, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExportError.NonExportable AsNonExportable { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ExportError.NonExportable
+    content.vb: Public ReadOnly Property AsNonExportable As ExportError.NonExportable
+  overload: Dropbox.Api.Files.ExportError.AsNonExportable*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ExportError.IsInvalidExportFormat
+  commentId: P:Dropbox.Api.Files.ExportError.IsInvalidExportFormat
+  id: IsInvalidExportFormat
+  parent: Dropbox.Api.Files.ExportError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidExportFormat
+  nameWithType: ExportError.IsInvalidExportFormat
+  fullName: Dropbox.Api.Files.ExportError.IsInvalidExportFormat
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInvalidExportFormat
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidExportFormat</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidExportFormat { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidExportFormat As Boolean
+  overload: Dropbox.Api.Files.ExportError.IsInvalidExportFormat*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ExportError.AsInvalidExportFormat
+  commentId: P:Dropbox.Api.Files.ExportError.AsInvalidExportFormat
+  id: AsInvalidExportFormat
+  parent: Dropbox.Api.Files.ExportError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidExportFormat
+  nameWithType: ExportError.AsInvalidExportFormat
+  fullName: Dropbox.Api.Files.ExportError.AsInvalidExportFormat
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInvalidExportFormat
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a InvalidExportFormat, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExportError.InvalidExportFormat AsInvalidExportFormat { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ExportError.InvalidExportFormat
+    content.vb: Public ReadOnly Property AsInvalidExportFormat As ExportError.InvalidExportFormat
+  overload: Dropbox.Api.Files.ExportError.AsInvalidExportFormat*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ExportError.IsRetryError
+  commentId: P:Dropbox.Api.Files.ExportError.IsRetryError
+  id: IsRetryError
+  parent: Dropbox.Api.Files.ExportError
+  langs:
+  - csharp
+  - vb
+  name: IsRetryError
+  nameWithType: ExportError.IsRetryError
+  fullName: Dropbox.Api.Files.ExportError.IsRetryError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsRetryError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is RetryError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRetryError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRetryError As Boolean
+  overload: Dropbox.Api.Files.ExportError.IsRetryError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ExportError.AsRetryError
+  commentId: P:Dropbox.Api.Files.ExportError.AsRetryError
+  id: AsRetryError
+  parent: Dropbox.Api.Files.ExportError
+  langs:
+  - csharp
+  - vb
+  name: AsRetryError
+  nameWithType: ExportError.AsRetryError
+  fullName: Dropbox.Api.Files.ExportError.AsRetryError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsRetryError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a RetryError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExportError.RetryError AsRetryError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ExportError.RetryError
+    content.vb: Public ReadOnly Property AsRetryError As ExportError.RetryError
+  overload: Dropbox.Api.Files.ExportError.AsRetryError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ExportError.IsOther
+  commentId: P:Dropbox.Api.Files.ExportError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.ExportError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ExportError.IsOther
+  fullName: Dropbox.Api.Files.ExportError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.ExportError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ExportError.AsOther
+  commentId: P:Dropbox.Api.Files.ExportError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.ExportError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ExportError.AsOther
+  fullName: Dropbox.Api.Files.ExportError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExportError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ExportError.Other
+    content.vb: Public ReadOnly Property AsOther As ExportError.Other
+  overload: Dropbox.Api.Files.ExportError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.ExportError
+  commentId: T:Dropbox.Api.Files.ExportError
+  parent: Dropbox.Api.Files
+  name: ExportError
+  nameWithType: ExportError
+  fullName: Dropbox.Api.Files.ExportError
+- uid: Dropbox.Api.Files.ExportError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ExportError.#ctor
+  name: ExportError
+  nameWithType: ExportError.ExportError
+  fullName: Dropbox.Api.Files.ExportError.ExportError
+- uid: Dropbox.Api.Files.ExportError.IsPath*
+  commentId: Overload:Dropbox.Api.Files.ExportError.IsPath
+  name: IsPath
+  nameWithType: ExportError.IsPath
+  fullName: Dropbox.Api.Files.ExportError.IsPath
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.ExportError.AsPath*
+  commentId: Overload:Dropbox.Api.Files.ExportError.AsPath
+  name: AsPath
+  nameWithType: ExportError.AsPath
+  fullName: Dropbox.Api.Files.ExportError.AsPath
+- uid: Dropbox.Api.Files.ExportError.Path
+  commentId: T:Dropbox.Api.Files.ExportError.Path
+  parent: Dropbox.Api.Files
+  name: ExportError.Path
+  nameWithType: ExportError.Path
+  fullName: Dropbox.Api.Files.ExportError.Path
+- uid: Dropbox.Api.Files.ExportError.IsNonExportable*
+  commentId: Overload:Dropbox.Api.Files.ExportError.IsNonExportable
+  name: IsNonExportable
+  nameWithType: ExportError.IsNonExportable
+  fullName: Dropbox.Api.Files.ExportError.IsNonExportable
+- uid: Dropbox.Api.Files.ExportError.AsNonExportable*
+  commentId: Overload:Dropbox.Api.Files.ExportError.AsNonExportable
+  name: AsNonExportable
+  nameWithType: ExportError.AsNonExportable
+  fullName: Dropbox.Api.Files.ExportError.AsNonExportable
+- uid: Dropbox.Api.Files.ExportError.NonExportable
+  commentId: T:Dropbox.Api.Files.ExportError.NonExportable
+  parent: Dropbox.Api.Files
+  name: ExportError.NonExportable
+  nameWithType: ExportError.NonExportable
+  fullName: Dropbox.Api.Files.ExportError.NonExportable
+- uid: Dropbox.Api.Files.ExportError.IsInvalidExportFormat*
+  commentId: Overload:Dropbox.Api.Files.ExportError.IsInvalidExportFormat
+  name: IsInvalidExportFormat
+  nameWithType: ExportError.IsInvalidExportFormat
+  fullName: Dropbox.Api.Files.ExportError.IsInvalidExportFormat
+- uid: Dropbox.Api.Files.ExportError.AsInvalidExportFormat*
+  commentId: Overload:Dropbox.Api.Files.ExportError.AsInvalidExportFormat
+  name: AsInvalidExportFormat
+  nameWithType: ExportError.AsInvalidExportFormat
+  fullName: Dropbox.Api.Files.ExportError.AsInvalidExportFormat
+- uid: Dropbox.Api.Files.ExportError.InvalidExportFormat
+  commentId: T:Dropbox.Api.Files.ExportError.InvalidExportFormat
+  parent: Dropbox.Api.Files
+  name: ExportError.InvalidExportFormat
+  nameWithType: ExportError.InvalidExportFormat
+  fullName: Dropbox.Api.Files.ExportError.InvalidExportFormat
+- uid: Dropbox.Api.Files.ExportError.IsRetryError*
+  commentId: Overload:Dropbox.Api.Files.ExportError.IsRetryError
+  name: IsRetryError
+  nameWithType: ExportError.IsRetryError
+  fullName: Dropbox.Api.Files.ExportError.IsRetryError
+- uid: Dropbox.Api.Files.ExportError.AsRetryError*
+  commentId: Overload:Dropbox.Api.Files.ExportError.AsRetryError
+  name: AsRetryError
+  nameWithType: ExportError.AsRetryError
+  fullName: Dropbox.Api.Files.ExportError.AsRetryError
+- uid: Dropbox.Api.Files.ExportError.RetryError
+  commentId: T:Dropbox.Api.Files.ExportError.RetryError
+  parent: Dropbox.Api.Files
+  name: ExportError.RetryError
+  nameWithType: ExportError.RetryError
+  fullName: Dropbox.Api.Files.ExportError.RetryError
+- uid: Dropbox.Api.Files.ExportError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.ExportError.IsOther
+  name: IsOther
+  nameWithType: ExportError.IsOther
+  fullName: Dropbox.Api.Files.ExportError.IsOther
+- uid: Dropbox.Api.Files.ExportError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.ExportError.AsOther
+  name: AsOther
+  nameWithType: ExportError.AsOther
+  fullName: Dropbox.Api.Files.ExportError.AsOther
+- uid: Dropbox.Api.Files.ExportError.Other
+  commentId: T:Dropbox.Api.Files.ExportError.Other
+  parent: Dropbox.Api.Files
+  name: ExportError.Other
+  nameWithType: ExportError.Other
+  fullName: Dropbox.Api.Files.ExportError.Other

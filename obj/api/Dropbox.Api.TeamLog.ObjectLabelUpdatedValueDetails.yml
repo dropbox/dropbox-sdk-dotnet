@@ -1,0 +1,443 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails
+  commentId: T:Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails
+  id: ObjectLabelUpdatedValueDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.#ctor(Dropbox.Api.TeamLog.LabelType)
+  - Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.LabelType
+  langs:
+  - csharp
+  - vb
+  name: ObjectLabelUpdatedValueDetails
+  nameWithType: ObjectLabelUpdatedValueDetails
+  fullName: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ObjectLabelUpdatedValueDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ObjectLabelUpdatedValueDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ObjectLabelUpdatedValueDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Updated a label&apos;s value.</p>\n"
+  example: []
+  syntax:
+    content: public class ObjectLabelUpdatedValueDetails
+    content.vb: Public Class ObjectLabelUpdatedValueDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.#ctor(Dropbox.Api.TeamLog.LabelType)
+  commentId: M:Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.#ctor(Dropbox.Api.TeamLog.LabelType)
+  id: '#ctor(Dropbox.Api.TeamLog.LabelType)'
+  parent: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails
+  langs:
+  - csharp
+  - vb
+  name: ObjectLabelUpdatedValueDetails(LabelType)
+  nameWithType: ObjectLabelUpdatedValueDetails.ObjectLabelUpdatedValueDetails(LabelType)
+  fullName: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.ObjectLabelUpdatedValueDetails(Dropbox.Api.TeamLog.LabelType)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ObjectLabelUpdatedValueDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ObjectLabelUpdatedValueDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ObjectLabelUpdatedValueDetails(LabelType labelType)
+    parameters:
+    - id: labelType
+      type: Dropbox.Api.TeamLog.LabelType
+      description: Labels mark a file or folder.
+    content.vb: Public Sub New(labelType As LabelType)
+  overload: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.LabelType
+  commentId: P:Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.LabelType
+  id: LabelType
+  parent: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails
+  langs:
+  - csharp
+  - vb
+  name: LabelType
+  nameWithType: ObjectLabelUpdatedValueDetails.LabelType
+  fullName: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.LabelType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ObjectLabelUpdatedValueDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LabelType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ObjectLabelUpdatedValueDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Labels mark a file or folder.</p>\n"
+  example: []
+  syntax:
+    content: public LabelType LabelType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LabelType
+    content.vb: Public Property LabelType As LabelType
+  overload: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.LabelType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails
+  commentId: T:Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails
+  parent: Dropbox.Api.TeamLog
+  name: ObjectLabelUpdatedValueDetails
+  nameWithType: ObjectLabelUpdatedValueDetails
+  fullName: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails
+- uid: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.#ctor
+  name: ObjectLabelUpdatedValueDetails
+  nameWithType: ObjectLabelUpdatedValueDetails.ObjectLabelUpdatedValueDetails
+  fullName: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.ObjectLabelUpdatedValueDetails
+- uid: Dropbox.Api.TeamLog.LabelType
+  commentId: T:Dropbox.Api.TeamLog.LabelType
+  parent: Dropbox.Api.TeamLog
+  name: LabelType
+  nameWithType: LabelType
+  fullName: Dropbox.Api.TeamLog.LabelType
+- uid: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.LabelType*
+  commentId: Overload:Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.LabelType
+  name: LabelType
+  nameWithType: ObjectLabelUpdatedValueDetails.LabelType
+  fullName: Dropbox.Api.TeamLog.ObjectLabelUpdatedValueDetails.LabelType

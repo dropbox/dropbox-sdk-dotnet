@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.DocLookupError
+  commentId: T:Dropbox.Api.Paper.DocLookupError
+  id: DocLookupError
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.DocLookupError.#ctor
+  - Dropbox.Api.Paper.DocLookupError.AsDocNotFound
+  - Dropbox.Api.Paper.DocLookupError.AsInsufficientPermissions
+  - Dropbox.Api.Paper.DocLookupError.AsOther
+  - Dropbox.Api.Paper.DocLookupError.IsDocNotFound
+  - Dropbox.Api.Paper.DocLookupError.IsInsufficientPermissions
+  - Dropbox.Api.Paper.DocLookupError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: DocLookupError
+  nameWithType: DocLookupError
+  fullName: Dropbox.Api.Paper.DocLookupError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: DocLookupError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The doc lookup error object</p>\n"
+  example: []
+  syntax:
+    content: public class DocLookupError
+    content.vb: Public Class DocLookupError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Paper.DocLookupError.DocNotFound
+  - Dropbox.Api.Paper.DocLookupError.InsufficientPermissions
+  - Dropbox.Api.Paper.DocLookupError.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.DocLookupError.#ctor
+  commentId: M:Dropbox.Api.Paper.DocLookupError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.DocLookupError
+  langs:
+  - csharp
+  - vb
+  name: DocLookupError()
+  nameWithType: DocLookupError.DocLookupError()
+  fullName: Dropbox.Api.Paper.DocLookupError.DocLookupError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.DocLookupError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DocLookupError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.DocLookupError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.DocLookupError.IsDocNotFound
+  commentId: P:Dropbox.Api.Paper.DocLookupError.IsDocNotFound
+  id: IsDocNotFound
+  parent: Dropbox.Api.Paper.DocLookupError
+  langs:
+  - csharp
+  - vb
+  name: IsDocNotFound
+  nameWithType: DocLookupError.IsDocNotFound
+  fullName: Dropbox.Api.Paper.DocLookupError.IsDocNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDocNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is DocNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDocNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDocNotFound As Boolean
+  overload: Dropbox.Api.Paper.DocLookupError.IsDocNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.DocLookupError.AsDocNotFound
+  commentId: P:Dropbox.Api.Paper.DocLookupError.AsDocNotFound
+  id: AsDocNotFound
+  parent: Dropbox.Api.Paper.DocLookupError
+  langs:
+  - csharp
+  - vb
+  name: AsDocNotFound
+  nameWithType: DocLookupError.AsDocNotFound
+  fullName: Dropbox.Api.Paper.DocLookupError.AsDocNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDocNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a DocNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DocLookupError.DocNotFound AsDocNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.DocLookupError.DocNotFound
+    content.vb: Public ReadOnly Property AsDocNotFound As DocLookupError.DocNotFound
+  overload: Dropbox.Api.Paper.DocLookupError.AsDocNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.DocLookupError.IsInsufficientPermissions
+  commentId: P:Dropbox.Api.Paper.DocLookupError.IsInsufficientPermissions
+  id: IsInsufficientPermissions
+  parent: Dropbox.Api.Paper.DocLookupError
+  langs:
+  - csharp
+  - vb
+  name: IsInsufficientPermissions
+  nameWithType: DocLookupError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.DocLookupError.IsInsufficientPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInsufficientPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is\nInsufficientPermissions</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInsufficientPermissions { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInsufficientPermissions As Boolean
+  overload: Dropbox.Api.Paper.DocLookupError.IsInsufficientPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.DocLookupError.AsInsufficientPermissions
+  commentId: P:Dropbox.Api.Paper.DocLookupError.AsInsufficientPermissions
+  id: AsInsufficientPermissions
+  parent: Dropbox.Api.Paper.DocLookupError
+  langs:
+  - csharp
+  - vb
+  name: AsInsufficientPermissions
+  nameWithType: DocLookupError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.DocLookupError.AsInsufficientPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInsufficientPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a InsufficientPermissions, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DocLookupError.InsufficientPermissions AsInsufficientPermissions { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.DocLookupError.InsufficientPermissions
+    content.vb: Public ReadOnly Property AsInsufficientPermissions As DocLookupError.InsufficientPermissions
+  overload: Dropbox.Api.Paper.DocLookupError.AsInsufficientPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.DocLookupError.IsOther
+  commentId: P:Dropbox.Api.Paper.DocLookupError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Paper.DocLookupError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: DocLookupError.IsOther
+  fullName: Dropbox.Api.Paper.DocLookupError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Paper.DocLookupError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.DocLookupError.AsOther
+  commentId: P:Dropbox.Api.Paper.DocLookupError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Paper.DocLookupError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: DocLookupError.AsOther
+  fullName: Dropbox.Api.Paper.DocLookupError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/DocLookupError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DocLookupError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.DocLookupError.Other
+    content.vb: Public ReadOnly Property AsOther As DocLookupError.Other
+  overload: Dropbox.Api.Paper.DocLookupError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Paper.DocLookupError
+  commentId: T:Dropbox.Api.Paper.DocLookupError
+  parent: Dropbox.Api.Paper
+  name: DocLookupError
+  nameWithType: DocLookupError
+  fullName: Dropbox.Api.Paper.DocLookupError
+- uid: Dropbox.Api.Paper.DocLookupError.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.DocLookupError.#ctor
+  name: DocLookupError
+  nameWithType: DocLookupError.DocLookupError
+  fullName: Dropbox.Api.Paper.DocLookupError.DocLookupError
+- uid: Dropbox.Api.Paper.DocLookupError.IsDocNotFound*
+  commentId: Overload:Dropbox.Api.Paper.DocLookupError.IsDocNotFound
+  name: IsDocNotFound
+  nameWithType: DocLookupError.IsDocNotFound
+  fullName: Dropbox.Api.Paper.DocLookupError.IsDocNotFound
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Paper.DocLookupError.AsDocNotFound*
+  commentId: Overload:Dropbox.Api.Paper.DocLookupError.AsDocNotFound
+  name: AsDocNotFound
+  nameWithType: DocLookupError.AsDocNotFound
+  fullName: Dropbox.Api.Paper.DocLookupError.AsDocNotFound
+- uid: Dropbox.Api.Paper.DocLookupError.DocNotFound
+  commentId: T:Dropbox.Api.Paper.DocLookupError.DocNotFound
+  parent: Dropbox.Api.Paper
+  name: DocLookupError.DocNotFound
+  nameWithType: DocLookupError.DocNotFound
+  fullName: Dropbox.Api.Paper.DocLookupError.DocNotFound
+- uid: Dropbox.Api.Paper.DocLookupError.IsInsufficientPermissions*
+  commentId: Overload:Dropbox.Api.Paper.DocLookupError.IsInsufficientPermissions
+  name: IsInsufficientPermissions
+  nameWithType: DocLookupError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.DocLookupError.IsInsufficientPermissions
+- uid: Dropbox.Api.Paper.DocLookupError.AsInsufficientPermissions*
+  commentId: Overload:Dropbox.Api.Paper.DocLookupError.AsInsufficientPermissions
+  name: AsInsufficientPermissions
+  nameWithType: DocLookupError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.DocLookupError.AsInsufficientPermissions
+- uid: Dropbox.Api.Paper.DocLookupError.InsufficientPermissions
+  commentId: T:Dropbox.Api.Paper.DocLookupError.InsufficientPermissions
+  parent: Dropbox.Api.Paper
+  name: DocLookupError.InsufficientPermissions
+  nameWithType: DocLookupError.InsufficientPermissions
+  fullName: Dropbox.Api.Paper.DocLookupError.InsufficientPermissions
+- uid: Dropbox.Api.Paper.DocLookupError.IsOther*
+  commentId: Overload:Dropbox.Api.Paper.DocLookupError.IsOther
+  name: IsOther
+  nameWithType: DocLookupError.IsOther
+  fullName: Dropbox.Api.Paper.DocLookupError.IsOther
+- uid: Dropbox.Api.Paper.DocLookupError.AsOther*
+  commentId: Overload:Dropbox.Api.Paper.DocLookupError.AsOther
+  name: AsOther
+  nameWithType: DocLookupError.AsOther
+  fullName: Dropbox.Api.Paper.DocLookupError.AsOther
+- uid: Dropbox.Api.Paper.DocLookupError.Other
+  commentId: T:Dropbox.Api.Paper.DocLookupError.Other
+  parent: Dropbox.Api.Paper
+  name: DocLookupError.Other
+  nameWithType: DocLookupError.Other
+  fullName: Dropbox.Api.Paper.DocLookupError.Other

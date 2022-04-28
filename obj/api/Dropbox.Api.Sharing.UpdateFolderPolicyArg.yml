@@ -1,0 +1,961 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg
+  commentId: T:Dropbox.Api.Sharing.UpdateFolderPolicyArg
+  id: UpdateFolderPolicyArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.UpdateFolderPolicyArg.#ctor(System.String,Dropbox.Api.Sharing.MemberPolicy,Dropbox.Api.Sharing.AclUpdatePolicy,Dropbox.Api.Sharing.ViewerInfoPolicy,Dropbox.Api.Sharing.SharedLinkPolicy,Dropbox.Api.Sharing.LinkSettings,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FolderAction})
+  - Dropbox.Api.Sharing.UpdateFolderPolicyArg.AclUpdatePolicy
+  - Dropbox.Api.Sharing.UpdateFolderPolicyArg.Actions
+  - Dropbox.Api.Sharing.UpdateFolderPolicyArg.LinkSettings
+  - Dropbox.Api.Sharing.UpdateFolderPolicyArg.MemberPolicy
+  - Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedFolderId
+  - Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedLinkPolicy
+  - Dropbox.Api.Sharing.UpdateFolderPolicyArg.ViewerInfoPolicy
+  langs:
+  - csharp
+  - vb
+  name: UpdateFolderPolicyArg
+  nameWithType: UpdateFolderPolicyArg
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: UpdateFolderPolicyArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>If any of the policies are unset, then they retain their current setting.</p>\n"
+  example: []
+  syntax:
+    content: public class UpdateFolderPolicyArg
+    content.vb: Public Class UpdateFolderPolicyArg
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.#ctor(System.String,Dropbox.Api.Sharing.MemberPolicy,Dropbox.Api.Sharing.AclUpdatePolicy,Dropbox.Api.Sharing.ViewerInfoPolicy,Dropbox.Api.Sharing.SharedLinkPolicy,Dropbox.Api.Sharing.LinkSettings,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FolderAction})
+  commentId: M:Dropbox.Api.Sharing.UpdateFolderPolicyArg.#ctor(System.String,Dropbox.Api.Sharing.MemberPolicy,Dropbox.Api.Sharing.AclUpdatePolicy,Dropbox.Api.Sharing.ViewerInfoPolicy,Dropbox.Api.Sharing.SharedLinkPolicy,Dropbox.Api.Sharing.LinkSettings,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FolderAction})
+  id: '#ctor(System.String,Dropbox.Api.Sharing.MemberPolicy,Dropbox.Api.Sharing.AclUpdatePolicy,Dropbox.Api.Sharing.ViewerInfoPolicy,Dropbox.Api.Sharing.SharedLinkPolicy,Dropbox.Api.Sharing.LinkSettings,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FolderAction})'
+  parent: Dropbox.Api.Sharing.UpdateFolderPolicyArg
+  langs:
+  - csharp
+  - vb
+  name: UpdateFolderPolicyArg(String, MemberPolicy, AclUpdatePolicy, ViewerInfoPolicy, SharedLinkPolicy, LinkSettings, IEnumerable<FolderAction>)
+  nameWithType: UpdateFolderPolicyArg.UpdateFolderPolicyArg(String, MemberPolicy, AclUpdatePolicy, ViewerInfoPolicy, SharedLinkPolicy, LinkSettings, IEnumerable<FolderAction>)
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.UpdateFolderPolicyArg(System.String, Dropbox.Api.Sharing.MemberPolicy, Dropbox.Api.Sharing.AclUpdatePolicy, Dropbox.Api.Sharing.ViewerInfoPolicy, Dropbox.Api.Sharing.SharedLinkPolicy, Dropbox.Api.Sharing.LinkSettings, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.FolderAction>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.UpdateFolderPolicyArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UpdateFolderPolicyArg(string sharedFolderId, MemberPolicy memberPolicy = null, AclUpdatePolicy aclUpdatePolicy = null, ViewerInfoPolicy viewerInfoPolicy = null, SharedLinkPolicy sharedLinkPolicy = null, LinkSettings linkSettings = null, IEnumerable<FolderAction> actions = null)
+    parameters:
+    - id: sharedFolderId
+      type: System.String
+      description: The ID for the shared folder.
+    - id: memberPolicy
+      type: Dropbox.Api.Sharing.MemberPolicy
+      description: >-
+        Who can be a member of this shared folder. Only
+
+        applicable if the current user is on a team.
+    - id: aclUpdatePolicy
+      type: Dropbox.Api.Sharing.AclUpdatePolicy
+      description: >-
+        Who can add and remove members of this shared
+
+        folder.
+    - id: viewerInfoPolicy
+      type: Dropbox.Api.Sharing.ViewerInfoPolicy
+      description: >-
+        Who can enable/disable viewer info for this shared
+
+        folder.
+    - id: sharedLinkPolicy
+      type: Dropbox.Api.Sharing.SharedLinkPolicy
+      description: >-
+        The policy to apply to shared links created for
+
+        content inside this shared folder. The current user must be on a team to set this
+
+        policy to <xref href="Dropbox.Api.Sharing.SharedLinkPolicy.Members" data-throw-if-not-resolved="false"></xref>.
+    - id: linkSettings
+      type: Dropbox.Api.Sharing.LinkSettings
+      description: Settings on the link for this folder.
+    - id: actions
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FolderAction}
+      description: >-
+        A list of `FolderAction`s corresponding to
+
+        `FolderPermission`s that should appear in the  response&apos;s <xref href="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" data-throw-if-not-resolved="false"></xref> field describing the
+
+        actions the  authenticated user can perform on the folder.
+    content.vb: Public Sub New(sharedFolderId As String, memberPolicy As MemberPolicy = Nothing, aclUpdatePolicy As AclUpdatePolicy = Nothing, viewerInfoPolicy As ViewerInfoPolicy = Nothing, sharedLinkPolicy As SharedLinkPolicy = Nothing, linkSettings As LinkSettings = Nothing, actions As IEnumerable(Of FolderAction) = Nothing)
+  overload: Dropbox.Api.Sharing.UpdateFolderPolicyArg.#ctor*
+  nameWithType.vb: UpdateFolderPolicyArg.UpdateFolderPolicyArg(String, MemberPolicy, AclUpdatePolicy, ViewerInfoPolicy, SharedLinkPolicy, LinkSettings, IEnumerable(Of FolderAction))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.UpdateFolderPolicyArg.UpdateFolderPolicyArg(System.String, Dropbox.Api.Sharing.MemberPolicy, Dropbox.Api.Sharing.AclUpdatePolicy, Dropbox.Api.Sharing.ViewerInfoPolicy, Dropbox.Api.Sharing.SharedLinkPolicy, Dropbox.Api.Sharing.LinkSettings, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.FolderAction))
+  name.vb: UpdateFolderPolicyArg(String, MemberPolicy, AclUpdatePolicy, ViewerInfoPolicy, SharedLinkPolicy, LinkSettings, IEnumerable(Of FolderAction))
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedFolderId
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedFolderId
+  id: SharedFolderId
+  parent: Dropbox.Api.Sharing.UpdateFolderPolicyArg
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderId
+  nameWithType: UpdateFolderPolicyArg.SharedFolderId
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SharedFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+    startLine: 90
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The ID for the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public string SharedFolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharedFolderId As String
+  overload: Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.MemberPolicy
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderPolicyArg.MemberPolicy
+  id: MemberPolicy
+  parent: Dropbox.Api.Sharing.UpdateFolderPolicyArg
+  langs:
+  - csharp
+  - vb
+  name: MemberPolicy
+  nameWithType: UpdateFolderPolicyArg.MemberPolicy
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.MemberPolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MemberPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Who can be a member of this shared folder. Only applicable if the current\nuser is on a team.</p>\n"
+  example: []
+  syntax:
+    content: public MemberPolicy MemberPolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MemberPolicy
+    content.vb: Public Property MemberPolicy As MemberPolicy
+  overload: Dropbox.Api.Sharing.UpdateFolderPolicyArg.MemberPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.AclUpdatePolicy
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderPolicyArg.AclUpdatePolicy
+  id: AclUpdatePolicy
+  parent: Dropbox.Api.Sharing.UpdateFolderPolicyArg
+  langs:
+  - csharp
+  - vb
+  name: AclUpdatePolicy
+  nameWithType: UpdateFolderPolicyArg.AclUpdatePolicy
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.AclUpdatePolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AclUpdatePolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+    startLine: 101
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Who can add and remove members of this shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public AclUpdatePolicy AclUpdatePolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AclUpdatePolicy
+    content.vb: Public Property AclUpdatePolicy As AclUpdatePolicy
+  overload: Dropbox.Api.Sharing.UpdateFolderPolicyArg.AclUpdatePolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.ViewerInfoPolicy
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderPolicyArg.ViewerInfoPolicy
+  id: ViewerInfoPolicy
+  parent: Dropbox.Api.Sharing.UpdateFolderPolicyArg
+  langs:
+  - csharp
+  - vb
+  name: ViewerInfoPolicy
+  nameWithType: UpdateFolderPolicyArg.ViewerInfoPolicy
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.ViewerInfoPolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ViewerInfoPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Who can enable/disable viewer info for this shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public ViewerInfoPolicy ViewerInfoPolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ViewerInfoPolicy
+    content.vb: Public Property ViewerInfoPolicy As ViewerInfoPolicy
+  overload: Dropbox.Api.Sharing.UpdateFolderPolicyArg.ViewerInfoPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedLinkPolicy
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedLinkPolicy
+  id: SharedLinkPolicy
+  parent: Dropbox.Api.Sharing.UpdateFolderPolicyArg
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkPolicy
+  nameWithType: UpdateFolderPolicyArg.SharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedLinkPolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SharedLinkPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+    startLine: 113
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The policy to apply to shared links created for content inside this shared\nfolder. The current user must be on a team to set this policy to <xref href=\"Dropbox.Api.Sharing.SharedLinkPolicy.Members\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkPolicy SharedLinkPolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedLinkPolicy
+    content.vb: Public Property SharedLinkPolicy As SharedLinkPolicy
+  overload: Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedLinkPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.LinkSettings
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderPolicyArg.LinkSettings
+  id: LinkSettings
+  parent: Dropbox.Api.Sharing.UpdateFolderPolicyArg
+  langs:
+  - csharp
+  - vb
+  name: LinkSettings
+  nameWithType: UpdateFolderPolicyArg.LinkSettings
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.LinkSettings
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LinkSettings
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Settings on the link for this folder.</p>\n"
+  example: []
+  syntax:
+    content: public LinkSettings LinkSettings { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkSettings
+    content.vb: Public Property LinkSettings As LinkSettings
+  overload: Dropbox.Api.Sharing.UpdateFolderPolicyArg.LinkSettings*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.Actions
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderPolicyArg.Actions
+  id: Actions
+  parent: Dropbox.Api.Sharing.UpdateFolderPolicyArg
+  langs:
+  - csharp
+  - vb
+  name: Actions
+  nameWithType: UpdateFolderPolicyArg.Actions
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.Actions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Actions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderPolicyArg.cs
+    startLine: 126
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A list of `FolderAction`s corresponding to `FolderPermission`s that should\nappear in the  response&apos;s <xref href=\"Dropbox.Api.Sharing.SharedFolderMetadata.Permissions\" data-throw-if-not-resolved=\"false\"></xref> field describing the\nactions the  authenticated user can perform on the folder.</p>\n"
+  example: []
+  syntax:
+    content: public IList<FolderAction> Actions { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.FolderAction}
+    content.vb: Public Property Actions As IList(Of FolderAction)
+  overload: Dropbox.Api.Sharing.UpdateFolderPolicyArg.Actions*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg
+  commentId: T:Dropbox.Api.Sharing.UpdateFolderPolicyArg
+  parent: Dropbox.Api.Sharing
+  name: UpdateFolderPolicyArg
+  nameWithType: UpdateFolderPolicyArg
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg
+- uid: Dropbox.Api.Sharing.SharedLinkPolicy.Members
+  commentId: T:Dropbox.Api.Sharing.SharedLinkPolicy.Members
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkPolicy.Members
+  nameWithType: SharedLinkPolicy.Members
+  fullName: Dropbox.Api.Sharing.SharedLinkPolicy.Members
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.Permissions
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadata.Permissions
+  isExternal: true
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.UpdateFolderPolicyArg.#ctor
+  name: UpdateFolderPolicyArg
+  nameWithType: UpdateFolderPolicyArg.UpdateFolderPolicyArg
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.UpdateFolderPolicyArg
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.MemberPolicy
+  commentId: T:Dropbox.Api.Sharing.MemberPolicy
+  parent: Dropbox.Api.Sharing
+  name: MemberPolicy
+  nameWithType: MemberPolicy
+  fullName: Dropbox.Api.Sharing.MemberPolicy
+- uid: Dropbox.Api.Sharing.AclUpdatePolicy
+  commentId: T:Dropbox.Api.Sharing.AclUpdatePolicy
+  parent: Dropbox.Api.Sharing
+  name: AclUpdatePolicy
+  nameWithType: AclUpdatePolicy
+  fullName: Dropbox.Api.Sharing.AclUpdatePolicy
+- uid: Dropbox.Api.Sharing.ViewerInfoPolicy
+  commentId: T:Dropbox.Api.Sharing.ViewerInfoPolicy
+  parent: Dropbox.Api.Sharing
+  name: ViewerInfoPolicy
+  nameWithType: ViewerInfoPolicy
+  fullName: Dropbox.Api.Sharing.ViewerInfoPolicy
+- uid: Dropbox.Api.Sharing.SharedLinkPolicy
+  commentId: T:Dropbox.Api.Sharing.SharedLinkPolicy
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkPolicy
+  nameWithType: SharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.SharedLinkPolicy
+- uid: Dropbox.Api.Sharing.LinkSettings
+  commentId: T:Dropbox.Api.Sharing.LinkSettings
+  parent: Dropbox.Api.Sharing
+  name: LinkSettings
+  nameWithType: LinkSettings
+  fullName: Dropbox.Api.Sharing.LinkSettings
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FolderAction}
+  commentId: T:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FolderAction}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<FolderAction>
+  nameWithType: IEnumerable<FolderAction>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.FolderAction>
+  nameWithType.vb: IEnumerable(Of FolderAction)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.FolderAction)
+  name.vb: IEnumerable(Of FolderAction)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.FolderAction
+    name: FolderAction
+    nameWithType: FolderAction
+    fullName: Dropbox.Api.Sharing.FolderAction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.FolderAction
+    name: FolderAction
+    nameWithType: FolderAction
+    fullName: Dropbox.Api.Sharing.FolderAction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedFolderId*
+  commentId: Overload:Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedFolderId
+  name: SharedFolderId
+  nameWithType: UpdateFolderPolicyArg.SharedFolderId
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedFolderId
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.MemberPolicy*
+  commentId: Overload:Dropbox.Api.Sharing.UpdateFolderPolicyArg.MemberPolicy
+  name: MemberPolicy
+  nameWithType: UpdateFolderPolicyArg.MemberPolicy
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.MemberPolicy
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.AclUpdatePolicy*
+  commentId: Overload:Dropbox.Api.Sharing.UpdateFolderPolicyArg.AclUpdatePolicy
+  name: AclUpdatePolicy
+  nameWithType: UpdateFolderPolicyArg.AclUpdatePolicy
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.AclUpdatePolicy
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.ViewerInfoPolicy*
+  commentId: Overload:Dropbox.Api.Sharing.UpdateFolderPolicyArg.ViewerInfoPolicy
+  name: ViewerInfoPolicy
+  nameWithType: UpdateFolderPolicyArg.ViewerInfoPolicy
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.ViewerInfoPolicy
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedLinkPolicy*
+  commentId: Overload:Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedLinkPolicy
+  name: SharedLinkPolicy
+  nameWithType: UpdateFolderPolicyArg.SharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.SharedLinkPolicy
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.LinkSettings*
+  commentId: Overload:Dropbox.Api.Sharing.UpdateFolderPolicyArg.LinkSettings
+  name: LinkSettings
+  nameWithType: UpdateFolderPolicyArg.LinkSettings
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.LinkSettings
+- uid: Dropbox.Api.Sharing.UpdateFolderPolicyArg.Actions*
+  commentId: Overload:Dropbox.Api.Sharing.UpdateFolderPolicyArg.Actions
+  name: Actions
+  nameWithType: UpdateFolderPolicyArg.Actions
+  fullName: Dropbox.Api.Sharing.UpdateFolderPolicyArg.Actions
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.FolderAction}
+  commentId: T:System.Collections.Generic.IList{Dropbox.Api.Sharing.FolderAction}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<FolderAction>
+  nameWithType: IList<FolderAction>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.FolderAction>
+  nameWithType.vb: IList(Of FolderAction)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.FolderAction)
+  name.vb: IList(Of FolderAction)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.FolderAction
+    name: FolderAction
+    nameWithType: FolderAction
+    fullName: Dropbox.Api.Sharing.FolderAction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.FolderAction
+    name: FolderAction
+    nameWithType: FolderAction
+    fullName: Dropbox.Api.Sharing.FolderAction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

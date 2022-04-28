@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionError
+  id: RevokeDeviceSessionError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.RevokeDeviceSessionError.#ctor
+  - Dropbox.Api.Team.RevokeDeviceSessionError.AsDeviceSessionNotFound
+  - Dropbox.Api.Team.RevokeDeviceSessionError.AsMemberNotFound
+  - Dropbox.Api.Team.RevokeDeviceSessionError.AsOther
+  - Dropbox.Api.Team.RevokeDeviceSessionError.IsDeviceSessionNotFound
+  - Dropbox.Api.Team.RevokeDeviceSessionError.IsMemberNotFound
+  - Dropbox.Api.Team.RevokeDeviceSessionError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: RevokeDeviceSessionError
+  nameWithType: RevokeDeviceSessionError
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: RevokeDeviceSessionError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The revoke device session error object</p>\n"
+  example: []
+  syntax:
+    content: public class RevokeDeviceSessionError
+    content.vb: Public Class RevokeDeviceSessionError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.RevokeDeviceSessionError.DeviceSessionNotFound
+  - Dropbox.Api.Team.RevokeDeviceSessionError.MemberNotFound
+  - Dropbox.Api.Team.RevokeDeviceSessionError.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.#ctor
+  commentId: M:Dropbox.Api.Team.RevokeDeviceSessionError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.RevokeDeviceSessionError
+  langs:
+  - csharp
+  - vb
+  name: RevokeDeviceSessionError()
+  nameWithType: RevokeDeviceSessionError.RevokeDeviceSessionError()
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.RevokeDeviceSessionError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeDeviceSessionError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeDeviceSessionError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.RevokeDeviceSessionError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.IsDeviceSessionNotFound
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionError.IsDeviceSessionNotFound
+  id: IsDeviceSessionNotFound
+  parent: Dropbox.Api.Team.RevokeDeviceSessionError
+  langs:
+  - csharp
+  - vb
+  name: IsDeviceSessionNotFound
+  nameWithType: RevokeDeviceSessionError.IsDeviceSessionNotFound
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.IsDeviceSessionNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDeviceSessionNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is DeviceSessionNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDeviceSessionNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDeviceSessionNotFound As Boolean
+  overload: Dropbox.Api.Team.RevokeDeviceSessionError.IsDeviceSessionNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.AsDeviceSessionNotFound
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionError.AsDeviceSessionNotFound
+  id: AsDeviceSessionNotFound
+  parent: Dropbox.Api.Team.RevokeDeviceSessionError
+  langs:
+  - csharp
+  - vb
+  name: AsDeviceSessionNotFound
+  nameWithType: RevokeDeviceSessionError.AsDeviceSessionNotFound
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.AsDeviceSessionNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDeviceSessionNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a DeviceSessionNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeDeviceSessionError.DeviceSessionNotFound AsDeviceSessionNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.RevokeDeviceSessionError.DeviceSessionNotFound
+    content.vb: Public ReadOnly Property AsDeviceSessionNotFound As RevokeDeviceSessionError.DeviceSessionNotFound
+  overload: Dropbox.Api.Team.RevokeDeviceSessionError.AsDeviceSessionNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.IsMemberNotFound
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionError.IsMemberNotFound
+  id: IsMemberNotFound
+  parent: Dropbox.Api.Team.RevokeDeviceSessionError
+  langs:
+  - csharp
+  - vb
+  name: IsMemberNotFound
+  nameWithType: RevokeDeviceSessionError.IsMemberNotFound
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.IsMemberNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsMemberNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is MemberNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMemberNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMemberNotFound As Boolean
+  overload: Dropbox.Api.Team.RevokeDeviceSessionError.IsMemberNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.AsMemberNotFound
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionError.AsMemberNotFound
+  id: AsMemberNotFound
+  parent: Dropbox.Api.Team.RevokeDeviceSessionError
+  langs:
+  - csharp
+  - vb
+  name: AsMemberNotFound
+  nameWithType: RevokeDeviceSessionError.AsMemberNotFound
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.AsMemberNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsMemberNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a MemberNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeDeviceSessionError.MemberNotFound AsMemberNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.RevokeDeviceSessionError.MemberNotFound
+    content.vb: Public ReadOnly Property AsMemberNotFound As RevokeDeviceSessionError.MemberNotFound
+  overload: Dropbox.Api.Team.RevokeDeviceSessionError.AsMemberNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.IsOther
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.RevokeDeviceSessionError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: RevokeDeviceSessionError.IsOther
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.RevokeDeviceSessionError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.AsOther
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.RevokeDeviceSessionError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: RevokeDeviceSessionError.AsOther
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeDeviceSessionError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.RevokeDeviceSessionError.Other
+    content.vb: Public ReadOnly Property AsOther As RevokeDeviceSessionError.Other
+  overload: Dropbox.Api.Team.RevokeDeviceSessionError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionError
+  parent: Dropbox.Api.Team
+  name: RevokeDeviceSessionError
+  nameWithType: RevokeDeviceSessionError
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionError.#ctor
+  name: RevokeDeviceSessionError
+  nameWithType: RevokeDeviceSessionError.RevokeDeviceSessionError
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.RevokeDeviceSessionError
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.IsDeviceSessionNotFound*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionError.IsDeviceSessionNotFound
+  name: IsDeviceSessionNotFound
+  nameWithType: RevokeDeviceSessionError.IsDeviceSessionNotFound
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.IsDeviceSessionNotFound
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.AsDeviceSessionNotFound*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionError.AsDeviceSessionNotFound
+  name: AsDeviceSessionNotFound
+  nameWithType: RevokeDeviceSessionError.AsDeviceSessionNotFound
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.AsDeviceSessionNotFound
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.DeviceSessionNotFound
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionError.DeviceSessionNotFound
+  parent: Dropbox.Api.Team
+  name: RevokeDeviceSessionError.DeviceSessionNotFound
+  nameWithType: RevokeDeviceSessionError.DeviceSessionNotFound
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.DeviceSessionNotFound
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.IsMemberNotFound*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionError.IsMemberNotFound
+  name: IsMemberNotFound
+  nameWithType: RevokeDeviceSessionError.IsMemberNotFound
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.IsMemberNotFound
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.AsMemberNotFound*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionError.AsMemberNotFound
+  name: AsMemberNotFound
+  nameWithType: RevokeDeviceSessionError.AsMemberNotFound
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.AsMemberNotFound
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.MemberNotFound
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionError.MemberNotFound
+  parent: Dropbox.Api.Team
+  name: RevokeDeviceSessionError.MemberNotFound
+  nameWithType: RevokeDeviceSessionError.MemberNotFound
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.MemberNotFound
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionError.IsOther
+  name: IsOther
+  nameWithType: RevokeDeviceSessionError.IsOther
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.IsOther
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionError.AsOther
+  name: AsOther
+  nameWithType: RevokeDeviceSessionError.AsOther
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.AsOther
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError.Other
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionError.Other
+  parent: Dropbox.Api.Team
+  name: RevokeDeviceSessionError.Other
+  nameWithType: RevokeDeviceSessionError.Other
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError.Other

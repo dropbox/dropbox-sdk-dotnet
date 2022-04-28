@@ -1,0 +1,481 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId
+  commentId: T:Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId
+  id: ShareFolderLaunch.AsyncJobId
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.#ctor(System.String)
+  - Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.Value
+  langs:
+  - csharp
+  - vb
+  name: ShareFolderLaunch.AsyncJobId
+  nameWithType: ShareFolderLaunch.AsyncJobId
+  fullName: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderLaunch.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsyncJobId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderLaunch.cs
+    startLine: 242
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>This response indicates that the processing is asynchronous. The string is an\nid that can be used to obtain the status of the asynchronous job.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class AsyncJobId : ShareFolderLaunch'
+    content.vb: >-
+      Public NotInheritable Class AsyncJobId
+          Inherits ShareFolderLaunch
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.ShareFolderLaunch
+  inheritedMembers:
+  - Dropbox.Api.Sharing.ShareFolderLaunch.IsComplete
+  - Dropbox.Api.Sharing.ShareFolderLaunch.AsComplete
+  - Dropbox.Api.Sharing.ShareFolderLaunch.IsAsyncJobId
+  - Dropbox.Api.Sharing.ShareFolderLaunch.AsAsyncJobId
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.#ctor(System.String)
+  commentId: M:Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId
+  langs:
+  - csharp
+  - vb
+  name: AsyncJobId(String)
+  nameWithType: ShareFolderLaunch.AsyncJobId.AsyncJobId(String)
+  fullName: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.AsyncJobId(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderLaunch.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderLaunch.cs
+    startLine: 260
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AsyncJobId(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.Value
+  commentId: P:Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ShareFolderLaunch.AsyncJobId.Value
+  fullName: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderLaunch.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderLaunch.cs
+    startLine: 274
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ShareFolderLaunch
+  commentId: T:Dropbox.Api.Sharing.ShareFolderLaunch
+  parent: Dropbox.Api.Sharing
+  name: ShareFolderLaunch
+  nameWithType: ShareFolderLaunch
+  fullName: Dropbox.Api.Sharing.ShareFolderLaunch
+- uid: Dropbox.Api.Sharing.ShareFolderLaunch.IsComplete
+  commentId: P:Dropbox.Api.Sharing.ShareFolderLaunch.IsComplete
+  parent: Dropbox.Api.Sharing.ShareFolderLaunch
+  name: IsComplete
+  nameWithType: ShareFolderLaunch.IsComplete
+  fullName: Dropbox.Api.Sharing.ShareFolderLaunch.IsComplete
+- uid: Dropbox.Api.Sharing.ShareFolderLaunch.AsComplete
+  commentId: P:Dropbox.Api.Sharing.ShareFolderLaunch.AsComplete
+  parent: Dropbox.Api.Sharing.ShareFolderLaunch
+  name: AsComplete
+  nameWithType: ShareFolderLaunch.AsComplete
+  fullName: Dropbox.Api.Sharing.ShareFolderLaunch.AsComplete
+- uid: Dropbox.Api.Sharing.ShareFolderLaunch.IsAsyncJobId
+  commentId: P:Dropbox.Api.Sharing.ShareFolderLaunch.IsAsyncJobId
+  parent: Dropbox.Api.Sharing.ShareFolderLaunch
+  name: IsAsyncJobId
+  nameWithType: ShareFolderLaunch.IsAsyncJobId
+  fullName: Dropbox.Api.Sharing.ShareFolderLaunch.IsAsyncJobId
+- uid: Dropbox.Api.Sharing.ShareFolderLaunch.AsAsyncJobId
+  commentId: P:Dropbox.Api.Sharing.ShareFolderLaunch.AsAsyncJobId
+  parent: Dropbox.Api.Sharing.ShareFolderLaunch
+  name: AsAsyncJobId
+  nameWithType: ShareFolderLaunch.AsAsyncJobId
+  fullName: Dropbox.Api.Sharing.ShareFolderLaunch.AsAsyncJobId
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId
+  commentId: T:Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId
+  parent: Dropbox.Api.Sharing
+  name: ShareFolderLaunch.AsyncJobId
+  nameWithType: ShareFolderLaunch.AsyncJobId
+  fullName: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId
+- uid: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.#ctor
+  name: AsyncJobId
+  nameWithType: ShareFolderLaunch.AsyncJobId.AsyncJobId
+  fullName: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.AsyncJobId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.Value*
+  commentId: Overload:Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.Value
+  name: Value
+  nameWithType: ShareFolderLaunch.AsyncJobId.Value
+  fullName: Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId.Value

@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveJobStatus
+  id: TeamFolderArchiveJobStatus
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderArchiveJobStatus.#ctor
+  - Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsComplete
+  - Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsFailed
+  - Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsInProgress
+  - Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsComplete
+  - Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsFailed
+  - Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsInProgress
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderArchiveJobStatus
+  nameWithType: TeamFolderArchiveJobStatus
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TeamFolderArchiveJobStatus
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team folder archive job status object</p>\n"
+  example: []
+  syntax:
+    content: public class TeamFolderArchiveJobStatus
+    content.vb: Public Class TeamFolderArchiveJobStatus
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.TeamFolderArchiveJobStatus.Complete
+  - Dropbox.Api.Team.TeamFolderArchiveJobStatus.Failed
+  - Dropbox.Api.Team.TeamFolderArchiveJobStatus.InProgress
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.#ctor
+  commentId: M:Dropbox.Api.Team.TeamFolderArchiveJobStatus.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamFolderArchiveJobStatus
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderArchiveJobStatus()
+  nameWithType: TeamFolderArchiveJobStatus.TeamFolderArchiveJobStatus()
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.TeamFolderArchiveJobStatus()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderArchiveJobStatus\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderArchiveJobStatus()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamFolderArchiveJobStatus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsComplete
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsComplete
+  id: IsComplete
+  parent: Dropbox.Api.Team.TeamFolderArchiveJobStatus
+  langs:
+  - csharp
+  - vb
+  name: IsComplete
+  nameWithType: TeamFolderArchiveJobStatus.IsComplete
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsComplete
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsComplete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Complete</p>\n"
+  example: []
+  syntax:
+    content: public bool IsComplete { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsComplete As Boolean
+  overload: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsComplete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsComplete
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsComplete
+  id: AsComplete
+  parent: Dropbox.Api.Team.TeamFolderArchiveJobStatus
+  langs:
+  - csharp
+  - vb
+  name: AsComplete
+  nameWithType: TeamFolderArchiveJobStatus.AsComplete
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsComplete
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsComplete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Complete, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderArchiveJobStatus.Complete AsComplete { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderArchiveJobStatus.Complete
+    content.vb: Public ReadOnly Property AsComplete As TeamFolderArchiveJobStatus.Complete
+  overload: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsComplete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsFailed
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsFailed
+  id: IsFailed
+  parent: Dropbox.Api.Team.TeamFolderArchiveJobStatus
+  langs:
+  - csharp
+  - vb
+  name: IsFailed
+  nameWithType: TeamFolderArchiveJobStatus.IsFailed
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsFailed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsFailed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Failed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFailed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFailed As Boolean
+  overload: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsFailed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsFailed
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsFailed
+  id: AsFailed
+  parent: Dropbox.Api.Team.TeamFolderArchiveJobStatus
+  langs:
+  - csharp
+  - vb
+  name: AsFailed
+  nameWithType: TeamFolderArchiveJobStatus.AsFailed
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsFailed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsFailed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Failed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderArchiveJobStatus.Failed AsFailed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderArchiveJobStatus.Failed
+    content.vb: Public ReadOnly Property AsFailed As TeamFolderArchiveJobStatus.Failed
+  overload: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsFailed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsInProgress
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsInProgress
+  id: IsInProgress
+  parent: Dropbox.Api.Team.TeamFolderArchiveJobStatus
+  langs:
+  - csharp
+  - vb
+  name: IsInProgress
+  nameWithType: TeamFolderArchiveJobStatus.IsInProgress
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsInProgress
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInProgress
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is InProgress</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInProgress { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInProgress As Boolean
+  overload: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsInProgress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsInProgress
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsInProgress
+  id: AsInProgress
+  parent: Dropbox.Api.Team.TeamFolderArchiveJobStatus
+  langs:
+  - csharp
+  - vb
+  name: AsInProgress
+  nameWithType: TeamFolderArchiveJobStatus.AsInProgress
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsInProgress
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInProgress
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveJobStatus.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a InProgress, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderArchiveJobStatus.InProgress AsInProgress { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderArchiveJobStatus.InProgress
+    content.vb: Public ReadOnly Property AsInProgress As TeamFolderArchiveJobStatus.InProgress
+  overload: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsInProgress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveJobStatus
+  parent: Dropbox.Api.Team
+  name: TeamFolderArchiveJobStatus
+  nameWithType: TeamFolderArchiveJobStatus
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveJobStatus.#ctor
+  name: TeamFolderArchiveJobStatus
+  nameWithType: TeamFolderArchiveJobStatus.TeamFolderArchiveJobStatus
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.TeamFolderArchiveJobStatus
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsComplete*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsComplete
+  name: IsComplete
+  nameWithType: TeamFolderArchiveJobStatus.IsComplete
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsComplete
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsComplete*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsComplete
+  name: AsComplete
+  nameWithType: TeamFolderArchiveJobStatus.AsComplete
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsComplete
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.Complete
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveJobStatus.Complete
+  parent: Dropbox.Api.Team
+  name: TeamFolderArchiveJobStatus.Complete
+  nameWithType: TeamFolderArchiveJobStatus.Complete
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.Complete
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsFailed*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsFailed
+  name: IsFailed
+  nameWithType: TeamFolderArchiveJobStatus.IsFailed
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsFailed
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsFailed*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsFailed
+  name: AsFailed
+  nameWithType: TeamFolderArchiveJobStatus.AsFailed
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsFailed
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.Failed
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveJobStatus.Failed
+  parent: Dropbox.Api.Team
+  name: TeamFolderArchiveJobStatus.Failed
+  nameWithType: TeamFolderArchiveJobStatus.Failed
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.Failed
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsInProgress*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsInProgress
+  name: IsInProgress
+  nameWithType: TeamFolderArchiveJobStatus.IsInProgress
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.IsInProgress
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsInProgress*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsInProgress
+  name: AsInProgress
+  nameWithType: TeamFolderArchiveJobStatus.AsInProgress
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.AsInProgress
+- uid: Dropbox.Api.Team.TeamFolderArchiveJobStatus.InProgress
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveJobStatus.InProgress
+  parent: Dropbox.Api.Team
+  name: TeamFolderArchiveJobStatus.InProgress
+  nameWithType: TeamFolderArchiveJobStatus.InProgress
+  fullName: Dropbox.Api.Team.TeamFolderArchiveJobStatus.InProgress

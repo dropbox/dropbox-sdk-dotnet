@@ -1,0 +1,954 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  commentId: T:Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  id: TrustedTeamsRequestAction
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.#ctor
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsAccepted
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsDeclined
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsExpired
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsInvited
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsOther
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsRevoked
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsAccepted
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsDeclined
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsExpired
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsInvited
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsOther
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsRevoked
+  langs:
+  - csharp
+  - vb
+  name: TrustedTeamsRequestAction
+  nameWithType: TrustedTeamsRequestAction
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TrustedTeamsRequestAction
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The trusted teams request action object</p>\n"
+  example: []
+  syntax:
+    content: public class TrustedTeamsRequestAction
+    content.vb: Public Class TrustedTeamsRequestAction
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Accepted
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Declined
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Expired
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Invited
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Other
+  - Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Revoked
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  langs:
+  - csharp
+  - vb
+  name: TrustedTeamsRequestAction()
+  nameWithType: TrustedTeamsRequestAction.TrustedTeamsRequestAction()
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.TrustedTeamsRequestAction()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TrustedTeamsRequestAction\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TrustedTeamsRequestAction()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsAccepted
+  commentId: P:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsAccepted
+  id: IsAccepted
+  parent: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  langs:
+  - csharp
+  - vb
+  name: IsAccepted
+  nameWithType: TrustedTeamsRequestAction.IsAccepted
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsAccepted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAccepted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Accepted</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAccepted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAccepted As Boolean
+  overload: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsAccepted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsAccepted
+  commentId: P:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsAccepted
+  id: AsAccepted
+  parent: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  langs:
+  - csharp
+  - vb
+  name: AsAccepted
+  nameWithType: TrustedTeamsRequestAction.AsAccepted
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsAccepted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAccepted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Accepted, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TrustedTeamsRequestAction.Accepted AsAccepted { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Accepted
+    content.vb: Public ReadOnly Property AsAccepted As TrustedTeamsRequestAction.Accepted
+  overload: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsAccepted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsDeclined
+  commentId: P:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsDeclined
+  id: IsDeclined
+  parent: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  langs:
+  - csharp
+  - vb
+  name: IsDeclined
+  nameWithType: TrustedTeamsRequestAction.IsDeclined
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsDeclined
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDeclined
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Declined</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDeclined { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDeclined As Boolean
+  overload: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsDeclined*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsDeclined
+  commentId: P:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsDeclined
+  id: AsDeclined
+  parent: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  langs:
+  - csharp
+  - vb
+  name: AsDeclined
+  nameWithType: TrustedTeamsRequestAction.AsDeclined
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsDeclined
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDeclined
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Declined, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TrustedTeamsRequestAction.Declined AsDeclined { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Declined
+    content.vb: Public ReadOnly Property AsDeclined As TrustedTeamsRequestAction.Declined
+  overload: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsDeclined*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsExpired
+  commentId: P:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsExpired
+  id: IsExpired
+  parent: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  langs:
+  - csharp
+  - vb
+  name: IsExpired
+  nameWithType: TrustedTeamsRequestAction.IsExpired
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsExpired
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsExpired
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Expired</p>\n"
+  example: []
+  syntax:
+    content: public bool IsExpired { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsExpired As Boolean
+  overload: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsExpired*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsExpired
+  commentId: P:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsExpired
+  id: AsExpired
+  parent: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  langs:
+  - csharp
+  - vb
+  name: AsExpired
+  nameWithType: TrustedTeamsRequestAction.AsExpired
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsExpired
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsExpired
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Expired, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TrustedTeamsRequestAction.Expired AsExpired { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Expired
+    content.vb: Public ReadOnly Property AsExpired As TrustedTeamsRequestAction.Expired
+  overload: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsExpired*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsInvited
+  commentId: P:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsInvited
+  id: IsInvited
+  parent: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  langs:
+  - csharp
+  - vb
+  name: IsInvited
+  nameWithType: TrustedTeamsRequestAction.IsInvited
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsInvited
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInvited
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Invited</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvited { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvited As Boolean
+  overload: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsInvited*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsInvited
+  commentId: P:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsInvited
+  id: AsInvited
+  parent: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  langs:
+  - csharp
+  - vb
+  name: AsInvited
+  nameWithType: TrustedTeamsRequestAction.AsInvited
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsInvited
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInvited
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Invited, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TrustedTeamsRequestAction.Invited AsInvited { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Invited
+    content.vb: Public ReadOnly Property AsInvited As TrustedTeamsRequestAction.Invited
+  overload: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsInvited*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsRevoked
+  commentId: P:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsRevoked
+  id: IsRevoked
+  parent: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  langs:
+  - csharp
+  - vb
+  name: IsRevoked
+  nameWithType: TrustedTeamsRequestAction.IsRevoked
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsRevoked
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsRevoked
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Revoked</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRevoked { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRevoked As Boolean
+  overload: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsRevoked*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsRevoked
+  commentId: P:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsRevoked
+  id: AsRevoked
+  parent: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  langs:
+  - csharp
+  - vb
+  name: AsRevoked
+  nameWithType: TrustedTeamsRequestAction.AsRevoked
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsRevoked
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsRevoked
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Revoked, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TrustedTeamsRequestAction.Revoked AsRevoked { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Revoked
+    content.vb: Public ReadOnly Property AsRevoked As TrustedTeamsRequestAction.Revoked
+  overload: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsRevoked*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsOther
+  commentId: P:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TrustedTeamsRequestAction.IsOther
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+    startLine: 150
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsOther
+  commentId: P:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TrustedTeamsRequestAction.AsOther
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TrustedTeamsRequestAction.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TrustedTeamsRequestAction.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Other
+    content.vb: Public ReadOnly Property AsOther As TrustedTeamsRequestAction.Other
+  overload: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  commentId: T:Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+  parent: Dropbox.Api.TeamLog
+  name: TrustedTeamsRequestAction
+  nameWithType: TrustedTeamsRequestAction
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.#ctor
+  name: TrustedTeamsRequestAction
+  nameWithType: TrustedTeamsRequestAction.TrustedTeamsRequestAction
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.TrustedTeamsRequestAction
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsAccepted*
+  commentId: Overload:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsAccepted
+  name: IsAccepted
+  nameWithType: TrustedTeamsRequestAction.IsAccepted
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsAccepted
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsAccepted*
+  commentId: Overload:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsAccepted
+  name: AsAccepted
+  nameWithType: TrustedTeamsRequestAction.AsAccepted
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsAccepted
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Accepted
+  commentId: T:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Accepted
+  parent: Dropbox.Api.TeamLog
+  name: TrustedTeamsRequestAction.Accepted
+  nameWithType: TrustedTeamsRequestAction.Accepted
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Accepted
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsDeclined*
+  commentId: Overload:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsDeclined
+  name: IsDeclined
+  nameWithType: TrustedTeamsRequestAction.IsDeclined
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsDeclined
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsDeclined*
+  commentId: Overload:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsDeclined
+  name: AsDeclined
+  nameWithType: TrustedTeamsRequestAction.AsDeclined
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsDeclined
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Declined
+  commentId: T:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Declined
+  parent: Dropbox.Api.TeamLog
+  name: TrustedTeamsRequestAction.Declined
+  nameWithType: TrustedTeamsRequestAction.Declined
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Declined
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsExpired*
+  commentId: Overload:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsExpired
+  name: IsExpired
+  nameWithType: TrustedTeamsRequestAction.IsExpired
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsExpired
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsExpired*
+  commentId: Overload:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsExpired
+  name: AsExpired
+  nameWithType: TrustedTeamsRequestAction.AsExpired
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsExpired
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Expired
+  commentId: T:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Expired
+  parent: Dropbox.Api.TeamLog
+  name: TrustedTeamsRequestAction.Expired
+  nameWithType: TrustedTeamsRequestAction.Expired
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Expired
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsInvited*
+  commentId: Overload:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsInvited
+  name: IsInvited
+  nameWithType: TrustedTeamsRequestAction.IsInvited
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsInvited
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsInvited*
+  commentId: Overload:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsInvited
+  name: AsInvited
+  nameWithType: TrustedTeamsRequestAction.AsInvited
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsInvited
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Invited
+  commentId: T:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Invited
+  parent: Dropbox.Api.TeamLog
+  name: TrustedTeamsRequestAction.Invited
+  nameWithType: TrustedTeamsRequestAction.Invited
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Invited
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsRevoked*
+  commentId: Overload:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsRevoked
+  name: IsRevoked
+  nameWithType: TrustedTeamsRequestAction.IsRevoked
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsRevoked
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsRevoked*
+  commentId: Overload:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsRevoked
+  name: AsRevoked
+  nameWithType: TrustedTeamsRequestAction.AsRevoked
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsRevoked
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Revoked
+  commentId: T:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Revoked
+  parent: Dropbox.Api.TeamLog
+  name: TrustedTeamsRequestAction.Revoked
+  nameWithType: TrustedTeamsRequestAction.Revoked
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Revoked
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsOther
+  name: IsOther
+  nameWithType: TrustedTeamsRequestAction.IsOther
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.IsOther
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsOther
+  name: AsOther
+  nameWithType: TrustedTeamsRequestAction.AsOther
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.AsOther
+- uid: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Other
+  commentId: T:Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Other
+  parent: Dropbox.Api.TeamLog
+  name: TrustedTeamsRequestAction.Other
+  nameWithType: TrustedTeamsRequestAction.Other
+  fullName: Dropbox.Api.TeamLog.TrustedTeamsRequestAction.Other

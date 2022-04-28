@@ -1,0 +1,1286 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamEvent
+  commentId: T:Dropbox.Api.TeamLog.TeamEvent
+  id: TeamEvent
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamEvent.#ctor(System.DateTime,Dropbox.Api.TeamLog.EventCategory,Dropbox.Api.TeamLog.EventType,Dropbox.Api.TeamLog.EventDetails,Dropbox.Api.TeamLog.ActorLogInfo,Dropbox.Api.TeamLog.OriginLogInfo,System.Nullable{System.Boolean},Dropbox.Api.TeamLog.ContextLogInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.ParticipantLogInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.AssetLogInfo})
+  - Dropbox.Api.TeamLog.TeamEvent.Actor
+  - Dropbox.Api.TeamLog.TeamEvent.Assets
+  - Dropbox.Api.TeamLog.TeamEvent.Context
+  - Dropbox.Api.TeamLog.TeamEvent.Details
+  - Dropbox.Api.TeamLog.TeamEvent.EventCategory
+  - Dropbox.Api.TeamLog.TeamEvent.EventType
+  - Dropbox.Api.TeamLog.TeamEvent.InvolveNonTeamMember
+  - Dropbox.Api.TeamLog.TeamEvent.Origin
+  - Dropbox.Api.TeamLog.TeamEvent.Participants
+  - Dropbox.Api.TeamLog.TeamEvent.Timestamp
+  langs:
+  - csharp
+  - vb
+  name: TeamEvent
+  nameWithType: TeamEvent
+  fullName: Dropbox.Api.TeamLog.TeamEvent
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TeamEvent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>An audit log event.</p>\n"
+  example: []
+  syntax:
+    content: public class TeamEvent
+    content.vb: Public Class TeamEvent
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamEvent.#ctor(System.DateTime,Dropbox.Api.TeamLog.EventCategory,Dropbox.Api.TeamLog.EventType,Dropbox.Api.TeamLog.EventDetails,Dropbox.Api.TeamLog.ActorLogInfo,Dropbox.Api.TeamLog.OriginLogInfo,System.Nullable{System.Boolean},Dropbox.Api.TeamLog.ContextLogInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.ParticipantLogInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.AssetLogInfo})
+  commentId: M:Dropbox.Api.TeamLog.TeamEvent.#ctor(System.DateTime,Dropbox.Api.TeamLog.EventCategory,Dropbox.Api.TeamLog.EventType,Dropbox.Api.TeamLog.EventDetails,Dropbox.Api.TeamLog.ActorLogInfo,Dropbox.Api.TeamLog.OriginLogInfo,System.Nullable{System.Boolean},Dropbox.Api.TeamLog.ContextLogInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.ParticipantLogInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.AssetLogInfo})
+  id: '#ctor(System.DateTime,Dropbox.Api.TeamLog.EventCategory,Dropbox.Api.TeamLog.EventType,Dropbox.Api.TeamLog.EventDetails,Dropbox.Api.TeamLog.ActorLogInfo,Dropbox.Api.TeamLog.OriginLogInfo,System.Nullable{System.Boolean},Dropbox.Api.TeamLog.ContextLogInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.ParticipantLogInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.AssetLogInfo})'
+  parent: Dropbox.Api.TeamLog.TeamEvent
+  langs:
+  - csharp
+  - vb
+  name: TeamEvent(DateTime, EventCategory, EventType, EventDetails, ActorLogInfo, OriginLogInfo, Nullable<Boolean>, ContextLogInfo, IEnumerable<ParticipantLogInfo>, IEnumerable<AssetLogInfo>)
+  nameWithType: TeamEvent.TeamEvent(DateTime, EventCategory, EventType, EventDetails, ActorLogInfo, OriginLogInfo, Nullable<Boolean>, ContextLogInfo, IEnumerable<ParticipantLogInfo>, IEnumerable<AssetLogInfo>)
+  fullName: Dropbox.Api.TeamLog.TeamEvent.TeamEvent(System.DateTime, Dropbox.Api.TeamLog.EventCategory, Dropbox.Api.TeamLog.EventType, Dropbox.Api.TeamLog.EventDetails, Dropbox.Api.TeamLog.ActorLogInfo, Dropbox.Api.TeamLog.OriginLogInfo, System.Nullable<System.Boolean>, Dropbox.Api.TeamLog.ContextLogInfo, System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.ParticipantLogInfo>, System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.AssetLogInfo>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamEvent\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamEvent(DateTime timestamp, EventCategory eventCategory, EventType eventType, EventDetails details, ActorLogInfo actor = null, OriginLogInfo origin = null, bool? involveNonTeamMember = null, ContextLogInfo context = null, IEnumerable<ParticipantLogInfo> participants = null, IEnumerable<AssetLogInfo> assets = null)
+    parameters:
+    - id: timestamp
+      type: System.DateTime
+      description: >-
+        The Dropbox timestamp representing when the action was
+
+        taken.
+    - id: eventCategory
+      type: Dropbox.Api.TeamLog.EventCategory
+      description: >-
+        The category that this type of action belongs
+
+        to.
+    - id: eventType
+      type: Dropbox.Api.TeamLog.EventType
+      description: The particular type of action taken.
+    - id: details
+      type: Dropbox.Api.TeamLog.EventDetails
+      description: >-
+        The variable event schema applicable to this type of action,
+
+        instantiated with respect to this particular action.
+    - id: actor
+      type: Dropbox.Api.TeamLog.ActorLogInfo
+      description: >-
+        The entity who actually performed the action. Might be missing
+
+        due to historical data gap.
+    - id: origin
+      type: Dropbox.Api.TeamLog.OriginLogInfo
+      description: >-
+        The origin from which the actor performed the action including
+
+        information about host, ip address, location, session, etc. If the action was
+
+        performed programmatically via the API the origin represents the API
+
+        client.
+    - id: involveNonTeamMember
+      type: System.Nullable{System.Boolean}
+      description: >-
+        True if the action involved a non team member
+
+        either as the actor or as one of the affected users. Might be missing due to
+
+        historical data gap.
+    - id: context
+      type: Dropbox.Api.TeamLog.ContextLogInfo
+      description: >-
+        The user or team on whose behalf the actor performed the
+
+        action. Might be missing due to historical data gap.
+    - id: participants
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.ParticipantLogInfo}
+      description: >-
+        Zero or more users and/or groups that are affected by
+
+        the action. Note that this list doesn&apos;t include any actors or users in
+
+        context.
+    - id: assets
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.AssetLogInfo}
+      description: >-
+        Zero or more content assets involved in the action. Currently
+
+        these include Dropbox files and folders but in the future we might add other asset
+
+        types such as Paper documents, folders, projects, etc.
+    content.vb: Public Sub New(timestamp As Date, eventCategory As EventCategory, eventType As EventType, details As EventDetails, actor As ActorLogInfo = Nothing, origin As OriginLogInfo = Nothing, involveNonTeamMember As Boolean? = Nothing, context As ContextLogInfo = Nothing, participants As IEnumerable(Of ParticipantLogInfo) = Nothing, assets As IEnumerable(Of AssetLogInfo) = Nothing)
+  overload: Dropbox.Api.TeamLog.TeamEvent.#ctor*
+  nameWithType.vb: TeamEvent.TeamEvent(DateTime, EventCategory, EventType, EventDetails, ActorLogInfo, OriginLogInfo, Nullable(Of Boolean), ContextLogInfo, IEnumerable(Of ParticipantLogInfo), IEnumerable(Of AssetLogInfo))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.TeamEvent.TeamEvent(System.DateTime, Dropbox.Api.TeamLog.EventCategory, Dropbox.Api.TeamLog.EventType, Dropbox.Api.TeamLog.EventDetails, Dropbox.Api.TeamLog.ActorLogInfo, Dropbox.Api.TeamLog.OriginLogInfo, System.Nullable(Of System.Boolean), Dropbox.Api.TeamLog.ContextLogInfo, System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.ParticipantLogInfo), System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.AssetLogInfo))
+  name.vb: TeamEvent(DateTime, EventCategory, EventType, EventDetails, ActorLogInfo, OriginLogInfo, Nullable(Of Boolean), ContextLogInfo, IEnumerable(Of ParticipantLogInfo), IEnumerable(Of AssetLogInfo))
+- uid: Dropbox.Api.TeamLog.TeamEvent.Timestamp
+  commentId: P:Dropbox.Api.TeamLog.TeamEvent.Timestamp
+  id: Timestamp
+  parent: Dropbox.Api.TeamLog.TeamEvent
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: TeamEvent.Timestamp
+  fullName: Dropbox.Api.TeamLog.TeamEvent.Timestamp
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Timestamp
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+    startLine: 111
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The Dropbox timestamp representing when the action was taken.</p>\n"
+  example: []
+  syntax:
+    content: public DateTime Timestamp { get; protected set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Timestamp As Date
+  overload: Dropbox.Api.TeamLog.TeamEvent.Timestamp*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamEvent.EventCategory
+  commentId: P:Dropbox.Api.TeamLog.TeamEvent.EventCategory
+  id: EventCategory
+  parent: Dropbox.Api.TeamLog.TeamEvent
+  langs:
+  - csharp
+  - vb
+  name: EventCategory
+  nameWithType: TeamEvent.EventCategory
+  fullName: Dropbox.Api.TeamLog.TeamEvent.EventCategory
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: EventCategory
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The category that this type of action belongs to.</p>\n"
+  example: []
+  syntax:
+    content: public EventCategory EventCategory { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.EventCategory
+    content.vb: Public Property EventCategory As EventCategory
+  overload: Dropbox.Api.TeamLog.TeamEvent.EventCategory*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamEvent.EventType
+  commentId: P:Dropbox.Api.TeamLog.TeamEvent.EventType
+  id: EventType
+  parent: Dropbox.Api.TeamLog.TeamEvent
+  langs:
+  - csharp
+  - vb
+  name: EventType
+  nameWithType: TeamEvent.EventType
+  fullName: Dropbox.Api.TeamLog.TeamEvent.EventType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: EventType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+    startLine: 121
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The particular type of action taken.</p>\n"
+  example: []
+  syntax:
+    content: public EventType EventType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.EventType
+    content.vb: Public Property EventType As EventType
+  overload: Dropbox.Api.TeamLog.TeamEvent.EventType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamEvent.Details
+  commentId: P:Dropbox.Api.TeamLog.TeamEvent.Details
+  id: Details
+  parent: Dropbox.Api.TeamLog.TeamEvent
+  langs:
+  - csharp
+  - vb
+  name: Details
+  nameWithType: TeamEvent.Details
+  fullName: Dropbox.Api.TeamLog.TeamEvent.Details
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Details
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The variable event schema applicable to this type of action, instantiated\nwith respect to this particular action.</p>\n"
+  example: []
+  syntax:
+    content: public EventDetails Details { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.EventDetails
+    content.vb: Public Property Details As EventDetails
+  overload: Dropbox.Api.TeamLog.TeamEvent.Details*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamEvent.Actor
+  commentId: P:Dropbox.Api.TeamLog.TeamEvent.Actor
+  id: Actor
+  parent: Dropbox.Api.TeamLog.TeamEvent
+  langs:
+  - csharp
+  - vb
+  name: Actor
+  nameWithType: TeamEvent.Actor
+  fullName: Dropbox.Api.TeamLog.TeamEvent.Actor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Actor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+    startLine: 133
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The entity who actually performed the action. Might be missing due to\nhistorical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public ActorLogInfo Actor { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ActorLogInfo
+    content.vb: Public Property Actor As ActorLogInfo
+  overload: Dropbox.Api.TeamLog.TeamEvent.Actor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamEvent.Origin
+  commentId: P:Dropbox.Api.TeamLog.TeamEvent.Origin
+  id: Origin
+  parent: Dropbox.Api.TeamLog.TeamEvent
+  langs:
+  - csharp
+  - vb
+  name: Origin
+  nameWithType: TeamEvent.Origin
+  fullName: Dropbox.Api.TeamLog.TeamEvent.Origin
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Origin
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+    startLine: 140
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The origin from which the actor performed the action including information\nabout host, ip address, location, session, etc. If the action was performed\nprogrammatically via the API the origin represents the API client.</p>\n"
+  example: []
+  syntax:
+    content: public OriginLogInfo Origin { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.OriginLogInfo
+    content.vb: Public Property Origin As OriginLogInfo
+  overload: Dropbox.Api.TeamLog.TeamEvent.Origin*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamEvent.InvolveNonTeamMember
+  commentId: P:Dropbox.Api.TeamLog.TeamEvent.InvolveNonTeamMember
+  id: InvolveNonTeamMember
+  parent: Dropbox.Api.TeamLog.TeamEvent
+  langs:
+  - csharp
+  - vb
+  name: InvolveNonTeamMember
+  nameWithType: TeamEvent.InvolveNonTeamMember
+  fullName: Dropbox.Api.TeamLog.TeamEvent.InvolveNonTeamMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: InvolveNonTeamMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+    startLine: 146
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>True if the action involved a non team member either as the actor or as one\nof the affected users. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public bool? InvolveNonTeamMember { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property InvolveNonTeamMember As Boolean?
+  overload: Dropbox.Api.TeamLog.TeamEvent.InvolveNonTeamMember*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamEvent.Context
+  commentId: P:Dropbox.Api.TeamLog.TeamEvent.Context
+  id: Context
+  parent: Dropbox.Api.TeamLog.TeamEvent
+  langs:
+  - csharp
+  - vb
+  name: Context
+  nameWithType: TeamEvent.Context
+  fullName: Dropbox.Api.TeamLog.TeamEvent.Context
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Context
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+    startLine: 152
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The user or team on whose behalf the actor performed the action. Might be\nmissing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public ContextLogInfo Context { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ContextLogInfo
+    content.vb: Public Property Context As ContextLogInfo
+  overload: Dropbox.Api.TeamLog.TeamEvent.Context*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamEvent.Participants
+  commentId: P:Dropbox.Api.TeamLog.TeamEvent.Participants
+  id: Participants
+  parent: Dropbox.Api.TeamLog.TeamEvent
+  langs:
+  - csharp
+  - vb
+  name: Participants
+  nameWithType: TeamEvent.Participants
+  fullName: Dropbox.Api.TeamLog.TeamEvent.Participants
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Participants
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+    startLine: 158
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Zero or more users and/or groups that are affected by the action. Note that\nthis list doesn&apos;t include any actors or users in context.</p>\n"
+  example: []
+  syntax:
+    content: public IList<ParticipantLogInfo> Participants { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.TeamLog.ParticipantLogInfo}
+    content.vb: Public Property Participants As IList(Of ParticipantLogInfo)
+  overload: Dropbox.Api.TeamLog.TeamEvent.Participants*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamEvent.Assets
+  commentId: P:Dropbox.Api.TeamLog.TeamEvent.Assets
+  id: Assets
+  parent: Dropbox.Api.TeamLog.TeamEvent
+  langs:
+  - csharp
+  - vb
+  name: Assets
+  nameWithType: TeamEvent.Assets
+  fullName: Dropbox.Api.TeamLog.TeamEvent.Assets
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Assets
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamEvent.cs
+    startLine: 165
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Zero or more content assets involved in the action. Currently these include\nDropbox files and folders but in the future we might add other asset types such as\nPaper documents, folders, projects, etc.</p>\n"
+  example: []
+  syntax:
+    content: public IList<AssetLogInfo> Assets { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.TeamLog.AssetLogInfo}
+    content.vb: Public Property Assets As IList(Of AssetLogInfo)
+  overload: Dropbox.Api.TeamLog.TeamEvent.Assets*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.TeamEvent
+  commentId: T:Dropbox.Api.TeamLog.TeamEvent
+  name: TeamEvent
+  nameWithType: TeamEvent
+  fullName: Dropbox.Api.TeamLog.TeamEvent
+- uid: Dropbox.Api.TeamLog.TeamEvent.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamEvent.#ctor
+  name: TeamEvent
+  nameWithType: TeamEvent.TeamEvent
+  fullName: Dropbox.Api.TeamLog.TeamEvent.TeamEvent
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: Dropbox.Api.TeamLog.EventCategory
+  commentId: T:Dropbox.Api.TeamLog.EventCategory
+  parent: Dropbox.Api.TeamLog
+  name: EventCategory
+  nameWithType: EventCategory
+  fullName: Dropbox.Api.TeamLog.EventCategory
+- uid: Dropbox.Api.TeamLog.EventType
+  commentId: T:Dropbox.Api.TeamLog.EventType
+  parent: Dropbox.Api.TeamLog
+  name: EventType
+  nameWithType: EventType
+  fullName: Dropbox.Api.TeamLog.EventType
+- uid: Dropbox.Api.TeamLog.EventDetails
+  commentId: T:Dropbox.Api.TeamLog.EventDetails
+  parent: Dropbox.Api.TeamLog
+  name: EventDetails
+  nameWithType: EventDetails
+  fullName: Dropbox.Api.TeamLog.EventDetails
+- uid: Dropbox.Api.TeamLog.ActorLogInfo
+  commentId: T:Dropbox.Api.TeamLog.ActorLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: ActorLogInfo
+  nameWithType: ActorLogInfo
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo
+- uid: Dropbox.Api.TeamLog.OriginLogInfo
+  commentId: T:Dropbox.Api.TeamLog.OriginLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: OriginLogInfo
+  nameWithType: OriginLogInfo
+  fullName: Dropbox.Api.TeamLog.OriginLogInfo
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.ContextLogInfo
+  commentId: T:Dropbox.Api.TeamLog.ContextLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: ContextLogInfo
+  nameWithType: ContextLogInfo
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.ParticipantLogInfo}
+  commentId: T:System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.ParticipantLogInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<ParticipantLogInfo>
+  nameWithType: IEnumerable<ParticipantLogInfo>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.ParticipantLogInfo>
+  nameWithType.vb: IEnumerable(Of ParticipantLogInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.ParticipantLogInfo)
+  name.vb: IEnumerable(Of ParticipantLogInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.ParticipantLogInfo
+    name: ParticipantLogInfo
+    nameWithType: ParticipantLogInfo
+    fullName: Dropbox.Api.TeamLog.ParticipantLogInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.ParticipantLogInfo
+    name: ParticipantLogInfo
+    nameWithType: ParticipantLogInfo
+    fullName: Dropbox.Api.TeamLog.ParticipantLogInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.AssetLogInfo}
+  commentId: T:System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.AssetLogInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<AssetLogInfo>
+  nameWithType: IEnumerable<AssetLogInfo>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.AssetLogInfo>
+  nameWithType.vb: IEnumerable(Of AssetLogInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.AssetLogInfo)
+  name.vb: IEnumerable(Of AssetLogInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.AssetLogInfo
+    name: AssetLogInfo
+    nameWithType: AssetLogInfo
+    fullName: Dropbox.Api.TeamLog.AssetLogInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.AssetLogInfo
+    name: AssetLogInfo
+    nameWithType: AssetLogInfo
+    fullName: Dropbox.Api.TeamLog.AssetLogInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Dropbox.Api.TeamLog.TeamEvent.Timestamp*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamEvent.Timestamp
+  name: Timestamp
+  nameWithType: TeamEvent.Timestamp
+  fullName: Dropbox.Api.TeamLog.TeamEvent.Timestamp
+- uid: Dropbox.Api.TeamLog.TeamEvent.EventCategory*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamEvent.EventCategory
+  name: EventCategory
+  nameWithType: TeamEvent.EventCategory
+  fullName: Dropbox.Api.TeamLog.TeamEvent.EventCategory
+- uid: Dropbox.Api.TeamLog.TeamEvent.EventType*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamEvent.EventType
+  name: EventType
+  nameWithType: TeamEvent.EventType
+  fullName: Dropbox.Api.TeamLog.TeamEvent.EventType
+- uid: Dropbox.Api.TeamLog.TeamEvent.Details*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamEvent.Details
+  name: Details
+  nameWithType: TeamEvent.Details
+  fullName: Dropbox.Api.TeamLog.TeamEvent.Details
+- uid: Dropbox.Api.TeamLog.TeamEvent.Actor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamEvent.Actor
+  name: Actor
+  nameWithType: TeamEvent.Actor
+  fullName: Dropbox.Api.TeamLog.TeamEvent.Actor
+- uid: Dropbox.Api.TeamLog.TeamEvent.Origin*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamEvent.Origin
+  name: Origin
+  nameWithType: TeamEvent.Origin
+  fullName: Dropbox.Api.TeamLog.TeamEvent.Origin
+- uid: Dropbox.Api.TeamLog.TeamEvent.InvolveNonTeamMember*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamEvent.InvolveNonTeamMember
+  name: InvolveNonTeamMember
+  nameWithType: TeamEvent.InvolveNonTeamMember
+  fullName: Dropbox.Api.TeamLog.TeamEvent.InvolveNonTeamMember
+- uid: Dropbox.Api.TeamLog.TeamEvent.Context*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamEvent.Context
+  name: Context
+  nameWithType: TeamEvent.Context
+  fullName: Dropbox.Api.TeamLog.TeamEvent.Context
+- uid: Dropbox.Api.TeamLog.TeamEvent.Participants*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamEvent.Participants
+  name: Participants
+  nameWithType: TeamEvent.Participants
+  fullName: Dropbox.Api.TeamLog.TeamEvent.Participants
+- uid: System.Collections.Generic.IList{Dropbox.Api.TeamLog.ParticipantLogInfo}
+  commentId: T:System.Collections.Generic.IList{Dropbox.Api.TeamLog.ParticipantLogInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<ParticipantLogInfo>
+  nameWithType: IList<ParticipantLogInfo>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.TeamLog.ParticipantLogInfo>
+  nameWithType.vb: IList(Of ParticipantLogInfo)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.TeamLog.ParticipantLogInfo)
+  name.vb: IList(Of ParticipantLogInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.ParticipantLogInfo
+    name: ParticipantLogInfo
+    nameWithType: ParticipantLogInfo
+    fullName: Dropbox.Api.TeamLog.ParticipantLogInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.ParticipantLogInfo
+    name: ParticipantLogInfo
+    nameWithType: ParticipantLogInfo
+    fullName: Dropbox.Api.TeamLog.ParticipantLogInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.TeamEvent.Assets*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamEvent.Assets
+  name: Assets
+  nameWithType: TeamEvent.Assets
+  fullName: Dropbox.Api.TeamLog.TeamEvent.Assets
+- uid: System.Collections.Generic.IList{Dropbox.Api.TeamLog.AssetLogInfo}
+  commentId: T:System.Collections.Generic.IList{Dropbox.Api.TeamLog.AssetLogInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<AssetLogInfo>
+  nameWithType: IList<AssetLogInfo>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.TeamLog.AssetLogInfo>
+  nameWithType.vb: IList(Of AssetLogInfo)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.TeamLog.AssetLogInfo)
+  name.vb: IList(Of AssetLogInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.AssetLogInfo
+    name: AssetLogInfo
+    nameWithType: AssetLogInfo
+    fullName: Dropbox.Api.TeamLog.AssetLogInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.AssetLogInfo
+    name: AssetLogInfo
+    nameWithType: AssetLogInfo
+    fullName: Dropbox.Api.TeamLog.AssetLogInfo
+  - name: )
+    nameWithType: )
+    fullName: )

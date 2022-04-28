@@ -1,0 +1,545 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.ClassificationChangePolicyDetails
+  id: ClassificationChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper,Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper,Dropbox.Api.TeamLog.ClassificationType)
+  - Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.ClassificationType
+  - Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: ClassificationChangePolicyDetails
+  nameWithType: ClassificationChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationChangePolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ClassificationChangePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationChangePolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed classification policy for team.</p>\n"
+  example: []
+  syntax:
+    content: public class ClassificationChangePolicyDetails
+    content.vb: Public Class ClassificationChangePolicyDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper,Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper,Dropbox.Api.TeamLog.ClassificationType)
+  commentId: M:Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper,Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper,Dropbox.Api.TeamLog.ClassificationType)
+  id: '#ctor(Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper,Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper,Dropbox.Api.TeamLog.ClassificationType)'
+  parent: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: ClassificationChangePolicyDetails(ClassificationPolicyEnumWrapper, ClassificationPolicyEnumWrapper, ClassificationType)
+  nameWithType: ClassificationChangePolicyDetails.ClassificationChangePolicyDetails(ClassificationPolicyEnumWrapper, ClassificationPolicyEnumWrapper, ClassificationType)
+  fullName: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.ClassificationChangePolicyDetails(Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper, Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper, Dropbox.Api.TeamLog.ClassificationType)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationChangePolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationChangePolicyDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ClassificationChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ClassificationChangePolicyDetails(ClassificationPolicyEnumWrapper previousValue, ClassificationPolicyEnumWrapper newValue, ClassificationType classificationType)
+    parameters:
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+      description: Previous classification policy.
+    - id: newValue
+      type: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+      description: New classification policy.
+    - id: classificationType
+      type: Dropbox.Api.TeamLog.ClassificationType
+      description: Policy type.
+    content.vb: Public Sub New(previousValue As ClassificationPolicyEnumWrapper, newValue As ClassificationPolicyEnumWrapper, classificationType As ClassificationType)
+  overload: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: ClassificationChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationChangePolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationChangePolicyDetails.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous classification policy.</p>\n"
+  example: []
+  syntax:
+    content: public ClassificationPolicyEnumWrapper PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+    content.vb: Public Property PreviousValue As ClassificationPolicyEnumWrapper
+  overload: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: ClassificationChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationChangePolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationChangePolicyDetails.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New classification policy.</p>\n"
+  example: []
+  syntax:
+    content: public ClassificationPolicyEnumWrapper NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+    content.vb: Public Property NewValue As ClassificationPolicyEnumWrapper
+  overload: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.ClassificationType
+  commentId: P:Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.ClassificationType
+  id: ClassificationType
+  parent: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: ClassificationType
+  nameWithType: ClassificationChangePolicyDetails.ClassificationType
+  fullName: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.ClassificationType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationChangePolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ClassificationType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationChangePolicyDetails.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy type.</p>\n"
+  example: []
+  syntax:
+    content: public ClassificationType ClassificationType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ClassificationType
+    content.vb: Public Property ClassificationType As ClassificationType
+  overload: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.ClassificationType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.ClassificationChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: ClassificationChangePolicyDetails
+  nameWithType: ClassificationChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.#ctor
+  name: ClassificationChangePolicyDetails
+  nameWithType: ClassificationChangePolicyDetails.ClassificationChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.ClassificationChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  commentId: T:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  parent: Dropbox.Api.TeamLog
+  name: ClassificationPolicyEnumWrapper
+  nameWithType: ClassificationPolicyEnumWrapper
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+- uid: Dropbox.Api.TeamLog.ClassificationType
+  commentId: T:Dropbox.Api.TeamLog.ClassificationType
+  parent: Dropbox.Api.TeamLog
+  name: ClassificationType
+  nameWithType: ClassificationType
+  fullName: Dropbox.Api.TeamLog.ClassificationType
+- uid: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: ClassificationChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.PreviousValue
+- uid: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: ClassificationChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.ClassificationType*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.ClassificationType
+  name: ClassificationType
+  nameWithType: ClassificationChangePolicyDetails.ClassificationType
+  fullName: Dropbox.Api.TeamLog.ClassificationChangePolicyDetails.ClassificationType

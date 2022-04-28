@@ -1,0 +1,629 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.Cursor
+  commentId: T:Dropbox.Api.Paper.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.Cursor.#ctor(System.String,System.Nullable{System.DateTime})
+  - Dropbox.Api.Paper.Cursor.Expiration
+  - Dropbox.Api.Paper.Cursor.Value
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: Cursor
+  fullName: Dropbox.Api.Paper.Cursor
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/Cursor.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/Cursor.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The cursor object</p>\n"
+  example: []
+  syntax:
+    content: public class Cursor
+    content.vb: Public Class Cursor
+  seealso:
+  - linkId: Dropbox.Api.Paper.ListPaperDocsResponse
+    commentId: T:Dropbox.Api.Paper.ListPaperDocsResponse
+  - linkId: Dropbox.Api.Paper.ListUsersOnFolderResponse
+    commentId: T:Dropbox.Api.Paper.ListUsersOnFolderResponse
+  - linkId: Dropbox.Api.Paper.ListUsersOnPaperDocResponse
+    commentId: T:Dropbox.Api.Paper.ListUsersOnPaperDocResponse
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.Cursor.#ctor(System.String,System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.Paper.Cursor.#ctor(System.String,System.Nullable{System.DateTime})
+  id: '#ctor(System.String,System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.Paper.Cursor
+  langs:
+  - csharp
+  - vb
+  name: Cursor(String, Nullable<DateTime>)
+  nameWithType: Cursor.Cursor(String, Nullable<DateTime>)
+  fullName: Dropbox.Api.Paper.Cursor.Cursor(System.String, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/Cursor.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/Cursor.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.Cursor\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Cursor(string value, DateTime? expiration = null)
+    parameters:
+    - id: value
+      type: System.String
+      description: The actual cursor value.
+    - id: expiration
+      type: System.Nullable{System.DateTime}
+      description: >-
+        Expiration time of <code data-dev-comment-type="paramref" class="paramref">value</code>. Some cursors
+
+        might have expiration time assigned. This is a UTC value after which the cursor is
+
+        no longer valid and the API starts returning an error. If cursor expires a new one
+
+        needs to be obtained and pagination needs to be restarted. Some cursors might be
+
+        short-lived some cursors might be long-lived. This really depends on the sorting
+
+        type and order, e.g.: 1. on one hand, listing docs created by the user, sorted by
+
+        the created time ascending will have undefinite expiration because the results
+
+        cannot change while the iteration is happening. This cursor would be suitable for
+
+        long term polling. 2. on the other hand, listing docs sorted by the last modified
+
+        time will have a very short expiration as docs do get modified very often and the
+
+        modified time can be changed while the iteration is happening thus altering the
+
+        results.
+    content.vb: Public Sub New(value As String, expiration As Date? = Nothing)
+  overload: Dropbox.Api.Paper.Cursor.#ctor*
+  nameWithType.vb: Cursor.Cursor(String, Nullable(Of DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Paper.Cursor.Cursor(System.String, System.Nullable(Of System.DateTime))
+  name.vb: Cursor(String, Nullable(Of DateTime))
+- uid: Dropbox.Api.Paper.Cursor.Value
+  commentId: P:Dropbox.Api.Paper.Cursor.Value
+  id: Value
+  parent: Dropbox.Api.Paper.Cursor
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: Cursor.Value
+  fullName: Dropbox.Api.Paper.Cursor.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/Cursor.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/Cursor.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The actual cursor value.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Value As String
+  overload: Dropbox.Api.Paper.Cursor.Value*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.Cursor.Expiration
+  commentId: P:Dropbox.Api.Paper.Cursor.Expiration
+  id: Expiration
+  parent: Dropbox.Api.Paper.Cursor
+  langs:
+  - csharp
+  - vb
+  name: Expiration
+  nameWithType: Cursor.Expiration
+  fullName: Dropbox.Api.Paper.Cursor.Expiration
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/Cursor.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Expiration
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/Cursor.cs
+    startLine: 90
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Expiration time of <xref href=\"Dropbox.Api.Paper.Cursor.Value\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n<p>Some cursors might have expiration time assigned. This is a UTC value after\nwhich the cursor is no longer valid and the API starts returning an error. If\ncursor expires a new one needs to be obtained and pagination needs to be restarted.\nSome cursors might be short-lived some cursors might be long-lived.</p>\n<p>This really depends on the sorting type and order, e.g.:</p>\n<p>1. on one hand, listing docs created by the user, sorted by the created time\nascending will have undefinite expiration because the results cannot change while\nthe iteration is happening. This cursor would be suitable for long term\npolling.</p>\n<p>2. on the other hand, listing docs sorted by the last modified time will have\na very short expiration as docs do get modified very often and the modified time\ncan be changed while the iteration is happening thus altering the results.</p>\n"
+  example: []
+  syntax:
+    content: public DateTime? Expiration { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property Expiration As Date?
+  overload: Dropbox.Api.Paper.Cursor.Expiration*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper.ListPaperDocsResponse
+  commentId: T:Dropbox.Api.Paper.ListPaperDocsResponse
+  parent: Dropbox.Api.Paper
+  name: ListPaperDocsResponse
+  nameWithType: ListPaperDocsResponse
+  fullName: Dropbox.Api.Paper.ListPaperDocsResponse
+- uid: Dropbox.Api.Paper.ListUsersOnFolderResponse
+  commentId: T:Dropbox.Api.Paper.ListUsersOnFolderResponse
+  parent: Dropbox.Api.Paper
+  name: ListUsersOnFolderResponse
+  nameWithType: ListUsersOnFolderResponse
+  fullName: Dropbox.Api.Paper.ListUsersOnFolderResponse
+- uid: Dropbox.Api.Paper.ListUsersOnPaperDocResponse
+  commentId: T:Dropbox.Api.Paper.ListUsersOnPaperDocResponse
+  parent: Dropbox.Api.Paper
+  name: ListUsersOnPaperDocResponse
+  nameWithType: ListUsersOnPaperDocResponse
+  fullName: Dropbox.Api.Paper.ListUsersOnPaperDocResponse
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Paper.Cursor
+  commentId: T:Dropbox.Api.Paper.Cursor
+  parent: Dropbox.Api.Paper
+  name: Cursor
+  nameWithType: Cursor
+  fullName: Dropbox.Api.Paper.Cursor
+- uid: Dropbox.Api.Paper.Cursor.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.Cursor.#ctor
+  name: Cursor
+  nameWithType: Cursor.Cursor
+  fullName: Dropbox.Api.Paper.Cursor.Cursor
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Paper.Cursor.Value*
+  commentId: Overload:Dropbox.Api.Paper.Cursor.Value
+  name: Value
+  nameWithType: Cursor.Value
+  fullName: Dropbox.Api.Paper.Cursor.Value
+- uid: Dropbox.Api.Paper.Cursor.Value
+  commentId: P:Dropbox.Api.Paper.Cursor.Value
+  isExternal: true
+- uid: Dropbox.Api.Paper.Cursor.Expiration*
+  commentId: Overload:Dropbox.Api.Paper.Cursor.Expiration
+  name: Expiration
+  nameWithType: Cursor.Expiration
+  fullName: Dropbox.Api.Paper.Cursor.Expiration

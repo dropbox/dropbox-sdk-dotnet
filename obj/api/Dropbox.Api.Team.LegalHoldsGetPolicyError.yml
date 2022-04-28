@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError
+  commentId: T:Dropbox.Api.Team.LegalHoldsGetPolicyError
+  id: LegalHoldsGetPolicyError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.LegalHoldsGetPolicyError.#ctor
+  - Dropbox.Api.Team.LegalHoldsGetPolicyError.AsInsufficientPermissions
+  - Dropbox.Api.Team.LegalHoldsGetPolicyError.AsLegalHoldPolicyNotFound
+  - Dropbox.Api.Team.LegalHoldsGetPolicyError.AsOther
+  - Dropbox.Api.Team.LegalHoldsGetPolicyError.AsUnknownLegalHoldError
+  - Dropbox.Api.Team.LegalHoldsGetPolicyError.IsInsufficientPermissions
+  - Dropbox.Api.Team.LegalHoldsGetPolicyError.IsLegalHoldPolicyNotFound
+  - Dropbox.Api.Team.LegalHoldsGetPolicyError.IsOther
+  - Dropbox.Api.Team.LegalHoldsGetPolicyError.IsUnknownLegalHoldError
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsGetPolicyError
+  nameWithType: LegalHoldsGetPolicyError
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LegalHoldsGetPolicyError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The legal holds get policy error object</p>\n"
+  example: []
+  syntax:
+    content: public class LegalHoldsGetPolicyError
+    content.vb: Public Class LegalHoldsGetPolicyError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.LegalHoldsGetPolicyError.InsufficientPermissions
+  - Dropbox.Api.Team.LegalHoldsGetPolicyError.LegalHoldPolicyNotFound
+  - Dropbox.Api.Team.LegalHoldsGetPolicyError.Other
+  - Dropbox.Api.Team.LegalHoldsGetPolicyError.UnknownLegalHoldError
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.#ctor
+  commentId: M:Dropbox.Api.Team.LegalHoldsGetPolicyError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.LegalHoldsGetPolicyError
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsGetPolicyError()
+  nameWithType: LegalHoldsGetPolicyError.LegalHoldsGetPolicyError()
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.LegalHoldsGetPolicyError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.LegalHoldsGetPolicyError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsGetPolicyError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.LegalHoldsGetPolicyError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsLegalHoldPolicyNotFound
+  commentId: P:Dropbox.Api.Team.LegalHoldsGetPolicyError.IsLegalHoldPolicyNotFound
+  id: IsLegalHoldPolicyNotFound
+  parent: Dropbox.Api.Team.LegalHoldsGetPolicyError
+  langs:
+  - csharp
+  - vb
+  name: IsLegalHoldPolicyNotFound
+  nameWithType: LegalHoldsGetPolicyError.IsLegalHoldPolicyNotFound
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsLegalHoldPolicyNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsLegalHoldPolicyNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nLegalHoldPolicyNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsLegalHoldPolicyNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLegalHoldPolicyNotFound As Boolean
+  overload: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsLegalHoldPolicyNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsLegalHoldPolicyNotFound
+  commentId: P:Dropbox.Api.Team.LegalHoldsGetPolicyError.AsLegalHoldPolicyNotFound
+  id: AsLegalHoldPolicyNotFound
+  parent: Dropbox.Api.Team.LegalHoldsGetPolicyError
+  langs:
+  - csharp
+  - vb
+  name: AsLegalHoldPolicyNotFound
+  nameWithType: LegalHoldsGetPolicyError.AsLegalHoldPolicyNotFound
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsLegalHoldPolicyNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsLegalHoldPolicyNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a LegalHoldPolicyNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsGetPolicyError.LegalHoldPolicyNotFound AsLegalHoldPolicyNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.LegalHoldsGetPolicyError.LegalHoldPolicyNotFound
+    content.vb: Public ReadOnly Property AsLegalHoldPolicyNotFound As LegalHoldsGetPolicyError.LegalHoldPolicyNotFound
+  overload: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsLegalHoldPolicyNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsUnknownLegalHoldError
+  commentId: P:Dropbox.Api.Team.LegalHoldsGetPolicyError.IsUnknownLegalHoldError
+  id: IsUnknownLegalHoldError
+  parent: Dropbox.Api.Team.LegalHoldsGetPolicyError
+  langs:
+  - csharp
+  - vb
+  name: IsUnknownLegalHoldError
+  nameWithType: LegalHoldsGetPolicyError.IsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsUnknownLegalHoldError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUnknownLegalHoldError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UnknownLegalHoldError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnknownLegalHoldError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnknownLegalHoldError As Boolean
+  overload: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsUnknownLegalHoldError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsUnknownLegalHoldError
+  commentId: P:Dropbox.Api.Team.LegalHoldsGetPolicyError.AsUnknownLegalHoldError
+  id: AsUnknownLegalHoldError
+  parent: Dropbox.Api.Team.LegalHoldsGetPolicyError
+  langs:
+  - csharp
+  - vb
+  name: AsUnknownLegalHoldError
+  nameWithType: LegalHoldsGetPolicyError.AsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsUnknownLegalHoldError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUnknownLegalHoldError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UnknownLegalHoldError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsGetPolicyError.UnknownLegalHoldError AsUnknownLegalHoldError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.LegalHoldsGetPolicyError.UnknownLegalHoldError
+    content.vb: Public ReadOnly Property AsUnknownLegalHoldError As LegalHoldsGetPolicyError.UnknownLegalHoldError
+  overload: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsUnknownLegalHoldError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsInsufficientPermissions
+  commentId: P:Dropbox.Api.Team.LegalHoldsGetPolicyError.IsInsufficientPermissions
+  id: IsInsufficientPermissions
+  parent: Dropbox.Api.Team.LegalHoldsGetPolicyError
+  langs:
+  - csharp
+  - vb
+  name: IsInsufficientPermissions
+  nameWithType: LegalHoldsGetPolicyError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsInsufficientPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInsufficientPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+    startLine: 86
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nInsufficientPermissions</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInsufficientPermissions { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInsufficientPermissions As Boolean
+  overload: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsInsufficientPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsInsufficientPermissions
+  commentId: P:Dropbox.Api.Team.LegalHoldsGetPolicyError.AsInsufficientPermissions
+  id: AsInsufficientPermissions
+  parent: Dropbox.Api.Team.LegalHoldsGetPolicyError
+  langs:
+  - csharp
+  - vb
+  name: AsInsufficientPermissions
+  nameWithType: LegalHoldsGetPolicyError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsInsufficientPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInsufficientPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a InsufficientPermissions, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsGetPolicyError.InsufficientPermissions AsInsufficientPermissions { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.LegalHoldsGetPolicyError.InsufficientPermissions
+    content.vb: Public ReadOnly Property AsInsufficientPermissions As LegalHoldsGetPolicyError.InsufficientPermissions
+  overload: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsInsufficientPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsOther
+  commentId: P:Dropbox.Api.Team.LegalHoldsGetPolicyError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.LegalHoldsGetPolicyError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: LegalHoldsGetPolicyError.IsOther
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+    startLine: 108
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsOther
+  commentId: P:Dropbox.Api.Team.LegalHoldsGetPolicyError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.LegalHoldsGetPolicyError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: LegalHoldsGetPolicyError.AsOther
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyError.cs
+    startLine: 119
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsGetPolicyError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.LegalHoldsGetPolicyError.Other
+    content.vb: Public ReadOnly Property AsOther As LegalHoldsGetPolicyError.Other
+  overload: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError
+  commentId: T:Dropbox.Api.Team.LegalHoldsGetPolicyError
+  parent: Dropbox.Api.Team
+  name: LegalHoldsGetPolicyError
+  nameWithType: LegalHoldsGetPolicyError
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsGetPolicyError.#ctor
+  name: LegalHoldsGetPolicyError
+  nameWithType: LegalHoldsGetPolicyError.LegalHoldsGetPolicyError
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.LegalHoldsGetPolicyError
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsLegalHoldPolicyNotFound*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsGetPolicyError.IsLegalHoldPolicyNotFound
+  name: IsLegalHoldPolicyNotFound
+  nameWithType: LegalHoldsGetPolicyError.IsLegalHoldPolicyNotFound
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsLegalHoldPolicyNotFound
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsLegalHoldPolicyNotFound*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsGetPolicyError.AsLegalHoldPolicyNotFound
+  name: AsLegalHoldPolicyNotFound
+  nameWithType: LegalHoldsGetPolicyError.AsLegalHoldPolicyNotFound
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsLegalHoldPolicyNotFound
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.LegalHoldPolicyNotFound
+  commentId: T:Dropbox.Api.Team.LegalHoldsGetPolicyError.LegalHoldPolicyNotFound
+  parent: Dropbox.Api.Team
+  name: LegalHoldsGetPolicyError.LegalHoldPolicyNotFound
+  nameWithType: LegalHoldsGetPolicyError.LegalHoldPolicyNotFound
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.LegalHoldPolicyNotFound
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsUnknownLegalHoldError*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsGetPolicyError.IsUnknownLegalHoldError
+  name: IsUnknownLegalHoldError
+  nameWithType: LegalHoldsGetPolicyError.IsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsUnknownLegalHoldError
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsUnknownLegalHoldError*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsGetPolicyError.AsUnknownLegalHoldError
+  name: AsUnknownLegalHoldError
+  nameWithType: LegalHoldsGetPolicyError.AsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsUnknownLegalHoldError
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.UnknownLegalHoldError
+  commentId: T:Dropbox.Api.Team.LegalHoldsGetPolicyError.UnknownLegalHoldError
+  parent: Dropbox.Api.Team
+  name: LegalHoldsGetPolicyError.UnknownLegalHoldError
+  nameWithType: LegalHoldsGetPolicyError.UnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.UnknownLegalHoldError
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsInsufficientPermissions*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsGetPolicyError.IsInsufficientPermissions
+  name: IsInsufficientPermissions
+  nameWithType: LegalHoldsGetPolicyError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsInsufficientPermissions
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsInsufficientPermissions*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsGetPolicyError.AsInsufficientPermissions
+  name: AsInsufficientPermissions
+  nameWithType: LegalHoldsGetPolicyError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsInsufficientPermissions
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.InsufficientPermissions
+  commentId: T:Dropbox.Api.Team.LegalHoldsGetPolicyError.InsufficientPermissions
+  parent: Dropbox.Api.Team
+  name: LegalHoldsGetPolicyError.InsufficientPermissions
+  nameWithType: LegalHoldsGetPolicyError.InsufficientPermissions
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.InsufficientPermissions
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsGetPolicyError.IsOther
+  name: IsOther
+  nameWithType: LegalHoldsGetPolicyError.IsOther
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.IsOther
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsGetPolicyError.AsOther
+  name: AsOther
+  nameWithType: LegalHoldsGetPolicyError.AsOther
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.AsOther
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyError.Other
+  commentId: T:Dropbox.Api.Team.LegalHoldsGetPolicyError.Other
+  parent: Dropbox.Api.Team
+  name: LegalHoldsGetPolicyError.Other
+  nameWithType: LegalHoldsGetPolicyError.Other
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyError.Other

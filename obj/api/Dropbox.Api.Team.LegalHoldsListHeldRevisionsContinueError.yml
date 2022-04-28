@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  commentId: T:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  id: LegalHoldsListHeldRevisionsContinueError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.#ctor
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsOther
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsReset
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsTransientError
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsOther
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsReset
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsTransientError
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsListHeldRevisionsContinueError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LegalHoldsListHeldRevisionsContinueError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The legal holds list held revisions continue error object</p>\n"
+  example: []
+  syntax:
+    content: public class LegalHoldsListHeldRevisionsContinueError
+    content.vb: Public Class LegalHoldsListHeldRevisionsContinueError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.Other
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.Reset
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.TransientError
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.#ctor
+  commentId: M:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsListHeldRevisionsContinueError()
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.LegalHoldsListHeldRevisionsContinueError()
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.LegalHoldsListHeldRevisionsContinueError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsListHeldRevisionsContinueError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError
+  id: IsUnknownLegalHoldError
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsUnknownLegalHoldError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUnknownLegalHoldError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UnknownLegalHoldError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnknownLegalHoldError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnknownLegalHoldError As Boolean
+  overload: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError
+  id: AsUnknownLegalHoldError
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsUnknownLegalHoldError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUnknownLegalHoldError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UnknownLegalHoldError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError AsUnknownLegalHoldError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+    content.vb: Public ReadOnly Property AsUnknownLegalHoldError As LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  overload: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsTransientError
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsTransientError
+  id: IsTransientError
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsTransientError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.IsTransientError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsTransientError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTransientError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is TransientError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTransientError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTransientError As Boolean
+  overload: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsTransientError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsTransientError
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsTransientError
+  id: AsTransientError
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsTransientError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.AsTransientError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsTransientError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTransientError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TransientError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsListHeldRevisionsContinueError.TransientError AsTransientError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.TransientError
+    content.vb: Public ReadOnly Property AsTransientError As LegalHoldsListHeldRevisionsContinueError.TransientError
+  overload: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsTransientError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsReset
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsReset
+  id: IsReset
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsReset
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.IsReset
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsReset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsReset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Reset</p>\n"
+  example: []
+  syntax:
+    content: public bool IsReset { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReset As Boolean
+  overload: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsReset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsReset
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsReset
+  id: AsReset
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsReset
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.AsReset
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsReset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsReset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Reset, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsListHeldRevisionsContinueError.Reset AsReset { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.Reset
+    content.vb: Public ReadOnly Property AsReset As LegalHoldsListHeldRevisionsContinueError.Reset
+  overload: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsReset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsOther
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.IsOther
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsOther
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.AsOther
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsListHeldRevisionsContinueError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.Other
+    content.vb: Public ReadOnly Property AsOther As LegalHoldsListHeldRevisionsContinueError.Other
+  overload: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  commentId: T:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListHeldRevisionsContinueError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.#ctor
+  name: LegalHoldsListHeldRevisionsContinueError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.LegalHoldsListHeldRevisionsContinueError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.LegalHoldsListHeldRevisionsContinueError
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError
+  name: IsUnknownLegalHoldError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError
+  name: AsUnknownLegalHoldError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  commentId: T:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsTransientError*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsTransientError
+  name: IsTransientError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.IsTransientError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsTransientError
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsTransientError*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsTransientError
+  name: AsTransientError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.AsTransientError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsTransientError
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.TransientError
+  commentId: T:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.TransientError
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListHeldRevisionsContinueError.TransientError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.TransientError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.TransientError
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsReset*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsReset
+  name: IsReset
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.IsReset
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsReset
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsReset*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsReset
+  name: AsReset
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.AsReset
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsReset
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.Reset
+  commentId: T:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.Reset
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListHeldRevisionsContinueError.Reset
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.Reset
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.Reset
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsOther
+  name: IsOther
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.IsOther
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsOther
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsOther
+  name: AsOther
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.AsOther
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsOther
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.Other
+  commentId: T:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.Other
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListHeldRevisionsContinueError.Other
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.Other
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.Other

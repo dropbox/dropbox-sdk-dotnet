@@ -1,0 +1,623 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RelocationBatchError.InsufficientQuota
+  commentId: T:Dropbox.Api.Files.RelocationBatchError.InsufficientQuota
+  id: RelocationBatchError.InsufficientQuota
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RelocationBatchError.InsufficientQuota.Instance
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchError.InsufficientQuota
+  nameWithType: RelocationBatchError.InsufficientQuota
+  fullName: Dropbox.Api.Files.RelocationBatchError.InsufficientQuota
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: InsufficientQuota
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchError.cs
+    startLine: 1367
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The current user does not have enough space to move or copy the files.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class InsufficientQuota : RelocationBatchError'
+    content.vb: >-
+      Public NotInheritable Class InsufficientQuota
+          Inherits RelocationBatchError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.RelocationBatchError
+  inheritedMembers:
+  - Dropbox.Api.Files.RelocationBatchError.IsTooManyWriteOperations
+  - Dropbox.Api.Files.RelocationBatchError.AsTooManyWriteOperations
+  - Dropbox.Api.Files.RelocationBatchError.IsFromLookup
+  - Dropbox.Api.Files.RelocationBatchError.AsFromLookup
+  - Dropbox.Api.Files.RelocationBatchError.IsFromWrite
+  - Dropbox.Api.Files.RelocationBatchError.AsFromWrite
+  - Dropbox.Api.Files.RelocationBatchError.IsTo
+  - Dropbox.Api.Files.RelocationBatchError.AsTo
+  - Dropbox.Api.Files.RelocationBatchError.IsCantCopySharedFolder
+  - Dropbox.Api.Files.RelocationBatchError.AsCantCopySharedFolder
+  - Dropbox.Api.Files.RelocationBatchError.IsCantNestSharedFolder
+  - Dropbox.Api.Files.RelocationBatchError.AsCantNestSharedFolder
+  - Dropbox.Api.Files.RelocationBatchError.IsCantMoveFolderIntoItself
+  - Dropbox.Api.Files.RelocationBatchError.AsCantMoveFolderIntoItself
+  - Dropbox.Api.Files.RelocationBatchError.IsTooManyFiles
+  - Dropbox.Api.Files.RelocationBatchError.AsTooManyFiles
+  - Dropbox.Api.Files.RelocationBatchError.IsDuplicatedOrNestedPaths
+  - Dropbox.Api.Files.RelocationBatchError.AsDuplicatedOrNestedPaths
+  - Dropbox.Api.Files.RelocationBatchError.IsCantTransferOwnership
+  - Dropbox.Api.Files.RelocationBatchError.AsCantTransferOwnership
+  - Dropbox.Api.Files.RelocationBatchError.IsInsufficientQuota
+  - Dropbox.Api.Files.RelocationBatchError.AsInsufficientQuota
+  - Dropbox.Api.Files.RelocationBatchError.IsInternalError
+  - Dropbox.Api.Files.RelocationBatchError.AsInternalError
+  - Dropbox.Api.Files.RelocationBatchError.IsCantMoveSharedFolder
+  - Dropbox.Api.Files.RelocationBatchError.AsCantMoveSharedFolder
+  - Dropbox.Api.Files.RelocationBatchError.IsCantMoveIntoVault
+  - Dropbox.Api.Files.RelocationBatchError.AsCantMoveIntoVault
+  - Dropbox.Api.Files.RelocationBatchError.IsCantMoveIntoFamily
+  - Dropbox.Api.Files.RelocationBatchError.AsCantMoveIntoFamily
+  - Dropbox.Api.Files.RelocationBatchError.IsOther
+  - Dropbox.Api.Files.RelocationBatchError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.RelocationBatchError.InsufficientQuota.Instance
+  commentId: F:Dropbox.Api.Files.RelocationBatchError.InsufficientQuota.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.RelocationBatchError.InsufficientQuota
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: RelocationBatchError.InsufficientQuota.Instance
+  fullName: Dropbox.Api.Files.RelocationBatchError.InsufficientQuota.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchError.cs
+    startLine: 1392
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of InsufficientQuota</p>\n"
+  example: []
+  syntax:
+    content: public static readonly RelocationBatchError.InsufficientQuota Instance
+    return:
+      type: Dropbox.Api.Files.RelocationBatchError.InsufficientQuota
+    content.vb: Public Shared ReadOnly Instance As RelocationBatchError.InsufficientQuota
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RelocationBatchError
+  commentId: T:Dropbox.Api.Files.RelocationBatchError
+  parent: Dropbox.Api.Files
+  name: RelocationBatchError
+  nameWithType: RelocationBatchError
+  fullName: Dropbox.Api.Files.RelocationBatchError
+- uid: Dropbox.Api.Files.RelocationBatchError.IsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsTooManyWriteOperations
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsTooManyWriteOperations
+  nameWithType: RelocationBatchError.IsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsTooManyWriteOperations
+- uid: Dropbox.Api.Files.RelocationBatchError.AsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsTooManyWriteOperations
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsTooManyWriteOperations
+  nameWithType: RelocationBatchError.AsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsTooManyWriteOperations
+- uid: Dropbox.Api.Files.RelocationBatchError.IsFromLookup
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsFromLookup
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsFromLookup
+  nameWithType: RelocationBatchError.IsFromLookup
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsFromLookup
+- uid: Dropbox.Api.Files.RelocationBatchError.AsFromLookup
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsFromLookup
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsFromLookup
+  nameWithType: RelocationBatchError.AsFromLookup
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsFromLookup
+- uid: Dropbox.Api.Files.RelocationBatchError.IsFromWrite
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsFromWrite
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsFromWrite
+  nameWithType: RelocationBatchError.IsFromWrite
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsFromWrite
+- uid: Dropbox.Api.Files.RelocationBatchError.AsFromWrite
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsFromWrite
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsFromWrite
+  nameWithType: RelocationBatchError.AsFromWrite
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsFromWrite
+- uid: Dropbox.Api.Files.RelocationBatchError.IsTo
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsTo
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsTo
+  nameWithType: RelocationBatchError.IsTo
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsTo
+- uid: Dropbox.Api.Files.RelocationBatchError.AsTo
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsTo
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsTo
+  nameWithType: RelocationBatchError.AsTo
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsTo
+- uid: Dropbox.Api.Files.RelocationBatchError.IsCantCopySharedFolder
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsCantCopySharedFolder
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsCantCopySharedFolder
+  nameWithType: RelocationBatchError.IsCantCopySharedFolder
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsCantCopySharedFolder
+- uid: Dropbox.Api.Files.RelocationBatchError.AsCantCopySharedFolder
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsCantCopySharedFolder
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsCantCopySharedFolder
+  nameWithType: RelocationBatchError.AsCantCopySharedFolder
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsCantCopySharedFolder
+- uid: Dropbox.Api.Files.RelocationBatchError.IsCantNestSharedFolder
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsCantNestSharedFolder
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsCantNestSharedFolder
+  nameWithType: RelocationBatchError.IsCantNestSharedFolder
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsCantNestSharedFolder
+- uid: Dropbox.Api.Files.RelocationBatchError.AsCantNestSharedFolder
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsCantNestSharedFolder
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsCantNestSharedFolder
+  nameWithType: RelocationBatchError.AsCantNestSharedFolder
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsCantNestSharedFolder
+- uid: Dropbox.Api.Files.RelocationBatchError.IsCantMoveFolderIntoItself
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsCantMoveFolderIntoItself
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsCantMoveFolderIntoItself
+  nameWithType: RelocationBatchError.IsCantMoveFolderIntoItself
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsCantMoveFolderIntoItself
+- uid: Dropbox.Api.Files.RelocationBatchError.AsCantMoveFolderIntoItself
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsCantMoveFolderIntoItself
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsCantMoveFolderIntoItself
+  nameWithType: RelocationBatchError.AsCantMoveFolderIntoItself
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsCantMoveFolderIntoItself
+- uid: Dropbox.Api.Files.RelocationBatchError.IsTooManyFiles
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsTooManyFiles
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsTooManyFiles
+  nameWithType: RelocationBatchError.IsTooManyFiles
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsTooManyFiles
+- uid: Dropbox.Api.Files.RelocationBatchError.AsTooManyFiles
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsTooManyFiles
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsTooManyFiles
+  nameWithType: RelocationBatchError.AsTooManyFiles
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsTooManyFiles
+- uid: Dropbox.Api.Files.RelocationBatchError.IsDuplicatedOrNestedPaths
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsDuplicatedOrNestedPaths
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsDuplicatedOrNestedPaths
+  nameWithType: RelocationBatchError.IsDuplicatedOrNestedPaths
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsDuplicatedOrNestedPaths
+- uid: Dropbox.Api.Files.RelocationBatchError.AsDuplicatedOrNestedPaths
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsDuplicatedOrNestedPaths
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsDuplicatedOrNestedPaths
+  nameWithType: RelocationBatchError.AsDuplicatedOrNestedPaths
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsDuplicatedOrNestedPaths
+- uid: Dropbox.Api.Files.RelocationBatchError.IsCantTransferOwnership
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsCantTransferOwnership
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsCantTransferOwnership
+  nameWithType: RelocationBatchError.IsCantTransferOwnership
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsCantTransferOwnership
+- uid: Dropbox.Api.Files.RelocationBatchError.AsCantTransferOwnership
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsCantTransferOwnership
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsCantTransferOwnership
+  nameWithType: RelocationBatchError.AsCantTransferOwnership
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsCantTransferOwnership
+- uid: Dropbox.Api.Files.RelocationBatchError.IsInsufficientQuota
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsInsufficientQuota
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsInsufficientQuota
+  nameWithType: RelocationBatchError.IsInsufficientQuota
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsInsufficientQuota
+- uid: Dropbox.Api.Files.RelocationBatchError.AsInsufficientQuota
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsInsufficientQuota
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsInsufficientQuota
+  nameWithType: RelocationBatchError.AsInsufficientQuota
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsInsufficientQuota
+- uid: Dropbox.Api.Files.RelocationBatchError.IsInternalError
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsInternalError
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsInternalError
+  nameWithType: RelocationBatchError.IsInternalError
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsInternalError
+- uid: Dropbox.Api.Files.RelocationBatchError.AsInternalError
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsInternalError
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsInternalError
+  nameWithType: RelocationBatchError.AsInternalError
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsInternalError
+- uid: Dropbox.Api.Files.RelocationBatchError.IsCantMoveSharedFolder
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsCantMoveSharedFolder
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsCantMoveSharedFolder
+  nameWithType: RelocationBatchError.IsCantMoveSharedFolder
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsCantMoveSharedFolder
+- uid: Dropbox.Api.Files.RelocationBatchError.AsCantMoveSharedFolder
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsCantMoveSharedFolder
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsCantMoveSharedFolder
+  nameWithType: RelocationBatchError.AsCantMoveSharedFolder
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsCantMoveSharedFolder
+- uid: Dropbox.Api.Files.RelocationBatchError.IsCantMoveIntoVault
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsCantMoveIntoVault
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsCantMoveIntoVault
+  nameWithType: RelocationBatchError.IsCantMoveIntoVault
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsCantMoveIntoVault
+- uid: Dropbox.Api.Files.RelocationBatchError.AsCantMoveIntoVault
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsCantMoveIntoVault
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsCantMoveIntoVault
+  nameWithType: RelocationBatchError.AsCantMoveIntoVault
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsCantMoveIntoVault
+- uid: Dropbox.Api.Files.RelocationBatchError.IsCantMoveIntoFamily
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsCantMoveIntoFamily
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsCantMoveIntoFamily
+  nameWithType: RelocationBatchError.IsCantMoveIntoFamily
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsCantMoveIntoFamily
+- uid: Dropbox.Api.Files.RelocationBatchError.AsCantMoveIntoFamily
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsCantMoveIntoFamily
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsCantMoveIntoFamily
+  nameWithType: RelocationBatchError.AsCantMoveIntoFamily
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsCantMoveIntoFamily
+- uid: Dropbox.Api.Files.RelocationBatchError.IsOther
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.IsOther
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: IsOther
+  nameWithType: RelocationBatchError.IsOther
+  fullName: Dropbox.Api.Files.RelocationBatchError.IsOther
+- uid: Dropbox.Api.Files.RelocationBatchError.AsOther
+  commentId: P:Dropbox.Api.Files.RelocationBatchError.AsOther
+  parent: Dropbox.Api.Files.RelocationBatchError
+  name: AsOther
+  nameWithType: RelocationBatchError.AsOther
+  fullName: Dropbox.Api.Files.RelocationBatchError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.RelocationBatchError.InsufficientQuota
+  commentId: T:Dropbox.Api.Files.RelocationBatchError.InsufficientQuota
+  parent: Dropbox.Api.Files
+  name: RelocationBatchError.InsufficientQuota
+  nameWithType: RelocationBatchError.InsufficientQuota
+  fullName: Dropbox.Api.Files.RelocationBatchError.InsufficientQuota

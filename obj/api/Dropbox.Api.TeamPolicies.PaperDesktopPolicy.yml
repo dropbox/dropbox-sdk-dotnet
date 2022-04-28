@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.PaperDesktopPolicy
+  id: PaperDesktopPolicy
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.PaperDesktopPolicy.#ctor
+  - Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsDisabled
+  - Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsEnabled
+  - Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsOther
+  - Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsDisabled
+  - Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsEnabled
+  - Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: PaperDesktopPolicy
+  nameWithType: PaperDesktopPolicy
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PaperDesktopPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>The paper desktop policy object</p>\n"
+  example: []
+  syntax:
+    content: public class PaperDesktopPolicy
+    content.vb: Public Class PaperDesktopPolicy
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Disabled
+  - Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Enabled
+  - Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamPolicies.PaperDesktopPolicy
+  langs:
+  - csharp
+  - vb
+  name: PaperDesktopPolicy()
+  nameWithType: PaperDesktopPolicy.PaperDesktopPolicy()
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.PaperDesktopPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamPolicies.PaperDesktopPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDesktopPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.TeamPolicies.PaperDesktopPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: PaperDesktopPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.TeamPolicies.PaperDesktopPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: PaperDesktopPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDesktopPolicy.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As PaperDesktopPolicy.Disabled
+  overload: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsEnabled
+  id: IsEnabled
+  parent: Dropbox.Api.TeamPolicies.PaperDesktopPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: PaperDesktopPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Enabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnabled As Boolean
+  overload: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsEnabled
+  id: AsEnabled
+  parent: Dropbox.Api.TeamPolicies.PaperDesktopPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsEnabled
+  nameWithType: PaperDesktopPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Enabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDesktopPolicy.Enabled AsEnabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Enabled
+    content.vb: Public ReadOnly Property AsEnabled As PaperDesktopPolicy.Enabled
+  overload: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamPolicies.PaperDesktopPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: PaperDesktopPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamPolicies.PaperDesktopPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: PaperDesktopPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/PaperDesktopPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDesktopPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As PaperDesktopPolicy.Other
+  overload: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.PaperDesktopPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: PaperDesktopPolicy
+  nameWithType: PaperDesktopPolicy
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.#ctor
+  name: PaperDesktopPolicy
+  nameWithType: PaperDesktopPolicy.PaperDesktopPolicy
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.PaperDesktopPolicy
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsDisabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsDisabled
+  name: IsDisabled
+  nameWithType: PaperDesktopPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsDisabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsDisabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsDisabled
+  name: AsDisabled
+  nameWithType: PaperDesktopPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsDisabled
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Disabled
+  commentId: T:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Disabled
+  parent: Dropbox.Api.TeamPolicies
+  name: PaperDesktopPolicy.Disabled
+  nameWithType: PaperDesktopPolicy.Disabled
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Disabled
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsEnabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsEnabled
+  name: IsEnabled
+  nameWithType: PaperDesktopPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsEnabled
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsEnabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsEnabled
+  name: AsEnabled
+  nameWithType: PaperDesktopPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsEnabled
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Enabled
+  commentId: T:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Enabled
+  parent: Dropbox.Api.TeamPolicies
+  name: PaperDesktopPolicy.Enabled
+  nameWithType: PaperDesktopPolicy.Enabled
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Enabled
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsOther
+  name: IsOther
+  nameWithType: PaperDesktopPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.IsOther
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsOther
+  name: AsOther
+  nameWithType: PaperDesktopPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.AsOther
+- uid: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Other
+  commentId: T:Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Other
+  parent: Dropbox.Api.TeamPolicies
+  name: PaperDesktopPolicy.Other
+  nameWithType: PaperDesktopPolicy.Other
+  fullName: Dropbox.Api.TeamPolicies.PaperDesktopPolicy.Other

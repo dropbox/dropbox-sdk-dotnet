@@ -1,0 +1,483 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.PaperDocCreateError.ImageSizeExceeded
+  commentId: T:Dropbox.Api.Paper.PaperDocCreateError.ImageSizeExceeded
+  id: PaperDocCreateError.ImageSizeExceeded
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.PaperDocCreateError.ImageSizeExceeded.Instance
+  langs:
+  - csharp
+  - vb
+  name: PaperDocCreateError.ImageSizeExceeded
+  nameWithType: PaperDocCreateError.ImageSizeExceeded
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.ImageSizeExceeded
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ImageSizeExceeded
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateError.cs
+    startLine: 488
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The imported document contains an image that is too large. The current limit\nis 1MB. This only applies to HTML with data URI.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class ImageSizeExceeded : PaperDocCreateError'
+    content.vb: >-
+      Public NotInheritable Class ImageSizeExceeded
+          Inherits PaperDocCreateError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Paper.PaperDocCreateError
+  inheritedMembers:
+  - Dropbox.Api.Paper.PaperDocCreateError.IsContentMalformed
+  - Dropbox.Api.Paper.PaperDocCreateError.AsContentMalformed
+  - Dropbox.Api.Paper.PaperDocCreateError.IsFolderNotFound
+  - Dropbox.Api.Paper.PaperDocCreateError.AsFolderNotFound
+  - Dropbox.Api.Paper.PaperDocCreateError.IsDocLengthExceeded
+  - Dropbox.Api.Paper.PaperDocCreateError.AsDocLengthExceeded
+  - Dropbox.Api.Paper.PaperDocCreateError.IsImageSizeExceeded
+  - Dropbox.Api.Paper.PaperDocCreateError.AsImageSizeExceeded
+  - Dropbox.Api.Paper.PaperDocCreateError.IsInsufficientPermissions
+  - Dropbox.Api.Paper.PaperDocCreateError.AsInsufficientPermissions
+  - Dropbox.Api.Paper.PaperDocCreateError.IsOther
+  - Dropbox.Api.Paper.PaperDocCreateError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Paper.PaperDocCreateError.ImageSizeExceeded.Instance
+  commentId: F:Dropbox.Api.Paper.PaperDocCreateError.ImageSizeExceeded.Instance
+  id: Instance
+  parent: Dropbox.Api.Paper.PaperDocCreateError.ImageSizeExceeded
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PaperDocCreateError.ImageSizeExceeded.Instance
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.ImageSizeExceeded.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateError.cs
+    startLine: 513
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>A singleton instance of ImageSizeExceeded</p>\n"
+  example: []
+  syntax:
+    content: public static readonly PaperDocCreateError.ImageSizeExceeded Instance
+    return:
+      type: Dropbox.Api.Paper.PaperDocCreateError.ImageSizeExceeded
+    content.vb: Public Shared ReadOnly Instance As PaperDocCreateError.ImageSizeExceeded
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.PaperDocCreateError
+  commentId: T:Dropbox.Api.Paper.PaperDocCreateError
+  parent: Dropbox.Api.Paper
+  name: PaperDocCreateError
+  nameWithType: PaperDocCreateError
+  fullName: Dropbox.Api.Paper.PaperDocCreateError
+- uid: Dropbox.Api.Paper.PaperDocCreateError.IsContentMalformed
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateError.IsContentMalformed
+  parent: Dropbox.Api.Paper.PaperDocCreateError
+  name: IsContentMalformed
+  nameWithType: PaperDocCreateError.IsContentMalformed
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.IsContentMalformed
+- uid: Dropbox.Api.Paper.PaperDocCreateError.AsContentMalformed
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateError.AsContentMalformed
+  parent: Dropbox.Api.Paper.PaperDocCreateError
+  name: AsContentMalformed
+  nameWithType: PaperDocCreateError.AsContentMalformed
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.AsContentMalformed
+- uid: Dropbox.Api.Paper.PaperDocCreateError.IsFolderNotFound
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateError.IsFolderNotFound
+  parent: Dropbox.Api.Paper.PaperDocCreateError
+  name: IsFolderNotFound
+  nameWithType: PaperDocCreateError.IsFolderNotFound
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.IsFolderNotFound
+- uid: Dropbox.Api.Paper.PaperDocCreateError.AsFolderNotFound
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateError.AsFolderNotFound
+  parent: Dropbox.Api.Paper.PaperDocCreateError
+  name: AsFolderNotFound
+  nameWithType: PaperDocCreateError.AsFolderNotFound
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.AsFolderNotFound
+- uid: Dropbox.Api.Paper.PaperDocCreateError.IsDocLengthExceeded
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateError.IsDocLengthExceeded
+  parent: Dropbox.Api.Paper.PaperDocCreateError
+  name: IsDocLengthExceeded
+  nameWithType: PaperDocCreateError.IsDocLengthExceeded
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.IsDocLengthExceeded
+- uid: Dropbox.Api.Paper.PaperDocCreateError.AsDocLengthExceeded
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateError.AsDocLengthExceeded
+  parent: Dropbox.Api.Paper.PaperDocCreateError
+  name: AsDocLengthExceeded
+  nameWithType: PaperDocCreateError.AsDocLengthExceeded
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.AsDocLengthExceeded
+- uid: Dropbox.Api.Paper.PaperDocCreateError.IsImageSizeExceeded
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateError.IsImageSizeExceeded
+  parent: Dropbox.Api.Paper.PaperDocCreateError
+  name: IsImageSizeExceeded
+  nameWithType: PaperDocCreateError.IsImageSizeExceeded
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.IsImageSizeExceeded
+- uid: Dropbox.Api.Paper.PaperDocCreateError.AsImageSizeExceeded
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateError.AsImageSizeExceeded
+  parent: Dropbox.Api.Paper.PaperDocCreateError
+  name: AsImageSizeExceeded
+  nameWithType: PaperDocCreateError.AsImageSizeExceeded
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.AsImageSizeExceeded
+- uid: Dropbox.Api.Paper.PaperDocCreateError.IsInsufficientPermissions
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateError.IsInsufficientPermissions
+  parent: Dropbox.Api.Paper.PaperDocCreateError
+  name: IsInsufficientPermissions
+  nameWithType: PaperDocCreateError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.IsInsufficientPermissions
+- uid: Dropbox.Api.Paper.PaperDocCreateError.AsInsufficientPermissions
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateError.AsInsufficientPermissions
+  parent: Dropbox.Api.Paper.PaperDocCreateError
+  name: AsInsufficientPermissions
+  nameWithType: PaperDocCreateError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.AsInsufficientPermissions
+- uid: Dropbox.Api.Paper.PaperDocCreateError.IsOther
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateError.IsOther
+  parent: Dropbox.Api.Paper.PaperDocCreateError
+  name: IsOther
+  nameWithType: PaperDocCreateError.IsOther
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.IsOther
+- uid: Dropbox.Api.Paper.PaperDocCreateError.AsOther
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateError.AsOther
+  parent: Dropbox.Api.Paper.PaperDocCreateError
+  name: AsOther
+  nameWithType: PaperDocCreateError.AsOther
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Paper.PaperDocCreateError.ImageSizeExceeded
+  commentId: T:Dropbox.Api.Paper.PaperDocCreateError.ImageSizeExceeded
+  parent: Dropbox.Api.Paper
+  name: PaperDocCreateError.ImageSizeExceeded
+  nameWithType: PaperDocCreateError.ImageSizeExceeded
+  fullName: Dropbox.Api.Paper.PaperDocCreateError.ImageSizeExceeded

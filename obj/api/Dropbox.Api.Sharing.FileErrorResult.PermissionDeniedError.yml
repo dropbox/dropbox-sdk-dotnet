@@ -1,0 +1,509 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError
+  commentId: T:Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError
+  id: FileErrorResult.PermissionDeniedError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.#ctor(System.String)
+  - Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.Value
+  langs:
+  - csharp
+  - vb
+  name: FileErrorResult.PermissionDeniedError
+  nameWithType: FileErrorResult.PermissionDeniedError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PermissionDeniedError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+    startLine: 412
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>User does not have permission to access file specified by file.Id.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class PermissionDeniedError : FileErrorResult'
+    content.vb: >-
+      Public NotInheritable Class PermissionDeniedError
+          Inherits FileErrorResult
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.FileErrorResult
+  inheritedMembers:
+  - Dropbox.Api.Sharing.FileErrorResult.IsFileNotFoundError
+  - Dropbox.Api.Sharing.FileErrorResult.AsFileNotFoundError
+  - Dropbox.Api.Sharing.FileErrorResult.IsInvalidFileActionError
+  - Dropbox.Api.Sharing.FileErrorResult.AsInvalidFileActionError
+  - Dropbox.Api.Sharing.FileErrorResult.IsPermissionDeniedError
+  - Dropbox.Api.Sharing.FileErrorResult.AsPermissionDeniedError
+  - Dropbox.Api.Sharing.FileErrorResult.IsOther
+  - Dropbox.Api.Sharing.FileErrorResult.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.#ctor(System.String)
+  commentId: M:Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError
+  langs:
+  - csharp
+  - vb
+  name: PermissionDeniedError(String)
+  nameWithType: FileErrorResult.PermissionDeniedError.PermissionDeniedError(String)
+  fullName: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.PermissionDeniedError(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+    startLine: 431
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedError(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.Value
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: FileErrorResult.PermissionDeniedError.Value
+  fullName: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+    startLine: 446
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.FileErrorResult
+  commentId: T:Dropbox.Api.Sharing.FileErrorResult
+  parent: Dropbox.Api.Sharing
+  name: FileErrorResult
+  nameWithType: FileErrorResult
+  fullName: Dropbox.Api.Sharing.FileErrorResult
+- uid: Dropbox.Api.Sharing.FileErrorResult.IsFileNotFoundError
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.IsFileNotFoundError
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  name: IsFileNotFoundError
+  nameWithType: FileErrorResult.IsFileNotFoundError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.IsFileNotFoundError
+- uid: Dropbox.Api.Sharing.FileErrorResult.AsFileNotFoundError
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.AsFileNotFoundError
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  name: AsFileNotFoundError
+  nameWithType: FileErrorResult.AsFileNotFoundError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.AsFileNotFoundError
+- uid: Dropbox.Api.Sharing.FileErrorResult.IsInvalidFileActionError
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.IsInvalidFileActionError
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  name: IsInvalidFileActionError
+  nameWithType: FileErrorResult.IsInvalidFileActionError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.IsInvalidFileActionError
+- uid: Dropbox.Api.Sharing.FileErrorResult.AsInvalidFileActionError
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.AsInvalidFileActionError
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  name: AsInvalidFileActionError
+  nameWithType: FileErrorResult.AsInvalidFileActionError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.AsInvalidFileActionError
+- uid: Dropbox.Api.Sharing.FileErrorResult.IsPermissionDeniedError
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.IsPermissionDeniedError
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  name: IsPermissionDeniedError
+  nameWithType: FileErrorResult.IsPermissionDeniedError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.IsPermissionDeniedError
+- uid: Dropbox.Api.Sharing.FileErrorResult.AsPermissionDeniedError
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.AsPermissionDeniedError
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  name: AsPermissionDeniedError
+  nameWithType: FileErrorResult.AsPermissionDeniedError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.AsPermissionDeniedError
+- uid: Dropbox.Api.Sharing.FileErrorResult.IsOther
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.IsOther
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  name: IsOther
+  nameWithType: FileErrorResult.IsOther
+  fullName: Dropbox.Api.Sharing.FileErrorResult.IsOther
+- uid: Dropbox.Api.Sharing.FileErrorResult.AsOther
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.AsOther
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  name: AsOther
+  nameWithType: FileErrorResult.AsOther
+  fullName: Dropbox.Api.Sharing.FileErrorResult.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError
+  commentId: T:Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError
+  parent: Dropbox.Api.Sharing
+  name: FileErrorResult.PermissionDeniedError
+  nameWithType: FileErrorResult.PermissionDeniedError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError
+- uid: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.#ctor
+  name: PermissionDeniedError
+  nameWithType: FileErrorResult.PermissionDeniedError.PermissionDeniedError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.PermissionDeniedError
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.Value*
+  commentId: Overload:Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.Value
+  name: Value
+  nameWithType: FileErrorResult.PermissionDeniedError.Value
+  fullName: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError.Value

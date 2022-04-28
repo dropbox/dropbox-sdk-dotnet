@@ -1,0 +1,721 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.EventCategory.Logins
+  commentId: T:Dropbox.Api.TeamLog.EventCategory.Logins
+  id: EventCategory.Logins
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.EventCategory.Logins.Instance
+  langs:
+  - csharp
+  - vb
+  name: EventCategory.Logins
+  nameWithType: EventCategory.Logins
+  fullName: Dropbox.Api.TeamLog.EventCategory.Logins
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Logins
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs
+    startLine: 1409
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Events that involve users signing in to or out of Dropbox.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Logins : EventCategory'
+    content.vb: >-
+      Public NotInheritable Class Logins
+          Inherits EventCategory
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.EventCategory
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.EventCategory.IsAdminAlerting
+  - Dropbox.Api.TeamLog.EventCategory.AsAdminAlerting
+  - Dropbox.Api.TeamLog.EventCategory.IsApps
+  - Dropbox.Api.TeamLog.EventCategory.AsApps
+  - Dropbox.Api.TeamLog.EventCategory.IsComments
+  - Dropbox.Api.TeamLog.EventCategory.AsComments
+  - Dropbox.Api.TeamLog.EventCategory.IsDataGovernance
+  - Dropbox.Api.TeamLog.EventCategory.AsDataGovernance
+  - Dropbox.Api.TeamLog.EventCategory.IsDevices
+  - Dropbox.Api.TeamLog.EventCategory.AsDevices
+  - Dropbox.Api.TeamLog.EventCategory.IsDomains
+  - Dropbox.Api.TeamLog.EventCategory.AsDomains
+  - Dropbox.Api.TeamLog.EventCategory.IsFileOperations
+  - Dropbox.Api.TeamLog.EventCategory.AsFileOperations
+  - Dropbox.Api.TeamLog.EventCategory.IsFileRequests
+  - Dropbox.Api.TeamLog.EventCategory.AsFileRequests
+  - Dropbox.Api.TeamLog.EventCategory.IsGroups
+  - Dropbox.Api.TeamLog.EventCategory.AsGroups
+  - Dropbox.Api.TeamLog.EventCategory.IsLogins
+  - Dropbox.Api.TeamLog.EventCategory.AsLogins
+  - Dropbox.Api.TeamLog.EventCategory.IsMembers
+  - Dropbox.Api.TeamLog.EventCategory.AsMembers
+  - Dropbox.Api.TeamLog.EventCategory.IsPaper
+  - Dropbox.Api.TeamLog.EventCategory.AsPaper
+  - Dropbox.Api.TeamLog.EventCategory.IsPasswords
+  - Dropbox.Api.TeamLog.EventCategory.AsPasswords
+  - Dropbox.Api.TeamLog.EventCategory.IsReports
+  - Dropbox.Api.TeamLog.EventCategory.AsReports
+  - Dropbox.Api.TeamLog.EventCategory.IsSharing
+  - Dropbox.Api.TeamLog.EventCategory.AsSharing
+  - Dropbox.Api.TeamLog.EventCategory.IsShowcase
+  - Dropbox.Api.TeamLog.EventCategory.AsShowcase
+  - Dropbox.Api.TeamLog.EventCategory.IsSso
+  - Dropbox.Api.TeamLog.EventCategory.AsSso
+  - Dropbox.Api.TeamLog.EventCategory.IsTeamFolders
+  - Dropbox.Api.TeamLog.EventCategory.AsTeamFolders
+  - Dropbox.Api.TeamLog.EventCategory.IsTeamPolicies
+  - Dropbox.Api.TeamLog.EventCategory.AsTeamPolicies
+  - Dropbox.Api.TeamLog.EventCategory.IsTeamProfile
+  - Dropbox.Api.TeamLog.EventCategory.AsTeamProfile
+  - Dropbox.Api.TeamLog.EventCategory.IsTfa
+  - Dropbox.Api.TeamLog.EventCategory.AsTfa
+  - Dropbox.Api.TeamLog.EventCategory.IsTrustedTeams
+  - Dropbox.Api.TeamLog.EventCategory.AsTrustedTeams
+  - Dropbox.Api.TeamLog.EventCategory.IsOther
+  - Dropbox.Api.TeamLog.EventCategory.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.EventCategory.Logins.Instance
+  commentId: F:Dropbox.Api.TeamLog.EventCategory.Logins.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.EventCategory.Logins
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: EventCategory.Logins.Instance
+  fullName: Dropbox.Api.TeamLog.EventCategory.Logins.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs
+    startLine: 1433
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Logins</p>\n"
+  example: []
+  syntax:
+    content: public static readonly EventCategory.Logins Instance
+    return:
+      type: Dropbox.Api.TeamLog.EventCategory.Logins
+    content.vb: Public Shared ReadOnly Instance As EventCategory.Logins
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.EventCategory
+  commentId: T:Dropbox.Api.TeamLog.EventCategory
+  parent: Dropbox.Api.TeamLog
+  name: EventCategory
+  nameWithType: EventCategory
+  fullName: Dropbox.Api.TeamLog.EventCategory
+- uid: Dropbox.Api.TeamLog.EventCategory.IsAdminAlerting
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsAdminAlerting
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsAdminAlerting
+  nameWithType: EventCategory.IsAdminAlerting
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsAdminAlerting
+- uid: Dropbox.Api.TeamLog.EventCategory.AsAdminAlerting
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsAdminAlerting
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsAdminAlerting
+  nameWithType: EventCategory.AsAdminAlerting
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsAdminAlerting
+- uid: Dropbox.Api.TeamLog.EventCategory.IsApps
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsApps
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsApps
+  nameWithType: EventCategory.IsApps
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsApps
+- uid: Dropbox.Api.TeamLog.EventCategory.AsApps
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsApps
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsApps
+  nameWithType: EventCategory.AsApps
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsApps
+- uid: Dropbox.Api.TeamLog.EventCategory.IsComments
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsComments
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsComments
+  nameWithType: EventCategory.IsComments
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsComments
+- uid: Dropbox.Api.TeamLog.EventCategory.AsComments
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsComments
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsComments
+  nameWithType: EventCategory.AsComments
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsComments
+- uid: Dropbox.Api.TeamLog.EventCategory.IsDataGovernance
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsDataGovernance
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsDataGovernance
+  nameWithType: EventCategory.IsDataGovernance
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsDataGovernance
+- uid: Dropbox.Api.TeamLog.EventCategory.AsDataGovernance
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsDataGovernance
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsDataGovernance
+  nameWithType: EventCategory.AsDataGovernance
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsDataGovernance
+- uid: Dropbox.Api.TeamLog.EventCategory.IsDevices
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsDevices
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsDevices
+  nameWithType: EventCategory.IsDevices
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsDevices
+- uid: Dropbox.Api.TeamLog.EventCategory.AsDevices
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsDevices
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsDevices
+  nameWithType: EventCategory.AsDevices
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsDevices
+- uid: Dropbox.Api.TeamLog.EventCategory.IsDomains
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsDomains
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsDomains
+  nameWithType: EventCategory.IsDomains
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsDomains
+- uid: Dropbox.Api.TeamLog.EventCategory.AsDomains
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsDomains
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsDomains
+  nameWithType: EventCategory.AsDomains
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsDomains
+- uid: Dropbox.Api.TeamLog.EventCategory.IsFileOperations
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsFileOperations
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsFileOperations
+  nameWithType: EventCategory.IsFileOperations
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsFileOperations
+- uid: Dropbox.Api.TeamLog.EventCategory.AsFileOperations
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsFileOperations
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsFileOperations
+  nameWithType: EventCategory.AsFileOperations
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsFileOperations
+- uid: Dropbox.Api.TeamLog.EventCategory.IsFileRequests
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsFileRequests
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsFileRequests
+  nameWithType: EventCategory.IsFileRequests
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsFileRequests
+- uid: Dropbox.Api.TeamLog.EventCategory.AsFileRequests
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsFileRequests
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsFileRequests
+  nameWithType: EventCategory.AsFileRequests
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsFileRequests
+- uid: Dropbox.Api.TeamLog.EventCategory.IsGroups
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsGroups
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsGroups
+  nameWithType: EventCategory.IsGroups
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsGroups
+- uid: Dropbox.Api.TeamLog.EventCategory.AsGroups
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsGroups
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsGroups
+  nameWithType: EventCategory.AsGroups
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsGroups
+- uid: Dropbox.Api.TeamLog.EventCategory.IsLogins
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsLogins
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsLogins
+  nameWithType: EventCategory.IsLogins
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsLogins
+- uid: Dropbox.Api.TeamLog.EventCategory.AsLogins
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsLogins
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsLogins
+  nameWithType: EventCategory.AsLogins
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsLogins
+- uid: Dropbox.Api.TeamLog.EventCategory.IsMembers
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsMembers
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsMembers
+  nameWithType: EventCategory.IsMembers
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsMembers
+- uid: Dropbox.Api.TeamLog.EventCategory.AsMembers
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsMembers
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsMembers
+  nameWithType: EventCategory.AsMembers
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsMembers
+- uid: Dropbox.Api.TeamLog.EventCategory.IsPaper
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsPaper
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsPaper
+  nameWithType: EventCategory.IsPaper
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsPaper
+- uid: Dropbox.Api.TeamLog.EventCategory.AsPaper
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsPaper
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsPaper
+  nameWithType: EventCategory.AsPaper
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsPaper
+- uid: Dropbox.Api.TeamLog.EventCategory.IsPasswords
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsPasswords
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsPasswords
+  nameWithType: EventCategory.IsPasswords
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsPasswords
+- uid: Dropbox.Api.TeamLog.EventCategory.AsPasswords
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsPasswords
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsPasswords
+  nameWithType: EventCategory.AsPasswords
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsPasswords
+- uid: Dropbox.Api.TeamLog.EventCategory.IsReports
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsReports
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsReports
+  nameWithType: EventCategory.IsReports
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsReports
+- uid: Dropbox.Api.TeamLog.EventCategory.AsReports
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsReports
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsReports
+  nameWithType: EventCategory.AsReports
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsReports
+- uid: Dropbox.Api.TeamLog.EventCategory.IsSharing
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsSharing
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsSharing
+  nameWithType: EventCategory.IsSharing
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsSharing
+- uid: Dropbox.Api.TeamLog.EventCategory.AsSharing
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsSharing
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsSharing
+  nameWithType: EventCategory.AsSharing
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsSharing
+- uid: Dropbox.Api.TeamLog.EventCategory.IsShowcase
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsShowcase
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsShowcase
+  nameWithType: EventCategory.IsShowcase
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsShowcase
+- uid: Dropbox.Api.TeamLog.EventCategory.AsShowcase
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsShowcase
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsShowcase
+  nameWithType: EventCategory.AsShowcase
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsShowcase
+- uid: Dropbox.Api.TeamLog.EventCategory.IsSso
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsSso
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsSso
+  nameWithType: EventCategory.IsSso
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsSso
+- uid: Dropbox.Api.TeamLog.EventCategory.AsSso
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsSso
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsSso
+  nameWithType: EventCategory.AsSso
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsSso
+- uid: Dropbox.Api.TeamLog.EventCategory.IsTeamFolders
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsTeamFolders
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsTeamFolders
+  nameWithType: EventCategory.IsTeamFolders
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsTeamFolders
+- uid: Dropbox.Api.TeamLog.EventCategory.AsTeamFolders
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsTeamFolders
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsTeamFolders
+  nameWithType: EventCategory.AsTeamFolders
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsTeamFolders
+- uid: Dropbox.Api.TeamLog.EventCategory.IsTeamPolicies
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsTeamPolicies
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsTeamPolicies
+  nameWithType: EventCategory.IsTeamPolicies
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsTeamPolicies
+- uid: Dropbox.Api.TeamLog.EventCategory.AsTeamPolicies
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsTeamPolicies
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsTeamPolicies
+  nameWithType: EventCategory.AsTeamPolicies
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsTeamPolicies
+- uid: Dropbox.Api.TeamLog.EventCategory.IsTeamProfile
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsTeamProfile
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsTeamProfile
+  nameWithType: EventCategory.IsTeamProfile
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsTeamProfile
+- uid: Dropbox.Api.TeamLog.EventCategory.AsTeamProfile
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsTeamProfile
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsTeamProfile
+  nameWithType: EventCategory.AsTeamProfile
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsTeamProfile
+- uid: Dropbox.Api.TeamLog.EventCategory.IsTfa
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsTfa
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsTfa
+  nameWithType: EventCategory.IsTfa
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsTfa
+- uid: Dropbox.Api.TeamLog.EventCategory.AsTfa
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsTfa
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsTfa
+  nameWithType: EventCategory.AsTfa
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsTfa
+- uid: Dropbox.Api.TeamLog.EventCategory.IsTrustedTeams
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsTrustedTeams
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsTrustedTeams
+  nameWithType: EventCategory.IsTrustedTeams
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsTrustedTeams
+- uid: Dropbox.Api.TeamLog.EventCategory.AsTrustedTeams
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsTrustedTeams
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsTrustedTeams
+  nameWithType: EventCategory.AsTrustedTeams
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsTrustedTeams
+- uid: Dropbox.Api.TeamLog.EventCategory.IsOther
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.IsOther
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: IsOther
+  nameWithType: EventCategory.IsOther
+  fullName: Dropbox.Api.TeamLog.EventCategory.IsOther
+- uid: Dropbox.Api.TeamLog.EventCategory.AsOther
+  commentId: P:Dropbox.Api.TeamLog.EventCategory.AsOther
+  parent: Dropbox.Api.TeamLog.EventCategory
+  name: AsOther
+  nameWithType: EventCategory.AsOther
+  fullName: Dropbox.Api.TeamLog.EventCategory.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.EventCategory.Logins
+  commentId: T:Dropbox.Api.TeamLog.EventCategory.Logins
+  parent: Dropbox.Api.TeamLog
+  name: EventCategory.Logins
+  nameWithType: EventCategory.Logins
+  fullName: Dropbox.Api.TeamLog.EventCategory.Logins

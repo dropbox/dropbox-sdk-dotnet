@@ -1,0 +1,511 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.LookupError.RestrictedContent
+  commentId: T:Dropbox.Api.Files.LookupError.RestrictedContent
+  id: LookupError.RestrictedContent
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.LookupError.RestrictedContent.Instance
+  langs:
+  - csharp
+  - vb
+  name: LookupError.RestrictedContent
+  nameWithType: LookupError.RestrictedContent
+  fullName: Dropbox.Api.Files.LookupError.RestrictedContent
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: RestrictedContent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LookupError.cs
+    startLine: 646
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The file cannot be transferred because the content is restricted. For\nexample, we might restrict a file due to legal requirements.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class RestrictedContent : LookupError'
+    content.vb: >-
+      Public NotInheritable Class RestrictedContent
+          Inherits LookupError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.LookupError
+  inheritedMembers:
+  - Dropbox.Api.Files.LookupError.IsMalformedPath
+  - Dropbox.Api.Files.LookupError.AsMalformedPath
+  - Dropbox.Api.Files.LookupError.IsNotFound
+  - Dropbox.Api.Files.LookupError.AsNotFound
+  - Dropbox.Api.Files.LookupError.IsNotFile
+  - Dropbox.Api.Files.LookupError.AsNotFile
+  - Dropbox.Api.Files.LookupError.IsNotFolder
+  - Dropbox.Api.Files.LookupError.AsNotFolder
+  - Dropbox.Api.Files.LookupError.IsRestrictedContent
+  - Dropbox.Api.Files.LookupError.AsRestrictedContent
+  - Dropbox.Api.Files.LookupError.IsUnsupportedContentType
+  - Dropbox.Api.Files.LookupError.AsUnsupportedContentType
+  - Dropbox.Api.Files.LookupError.IsLocked
+  - Dropbox.Api.Files.LookupError.AsLocked
+  - Dropbox.Api.Files.LookupError.IsOther
+  - Dropbox.Api.Files.LookupError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.LookupError.RestrictedContent.Instance
+  commentId: F:Dropbox.Api.Files.LookupError.RestrictedContent.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.LookupError.RestrictedContent
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: LookupError.RestrictedContent.Instance
+  fullName: Dropbox.Api.Files.LookupError.RestrictedContent.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LookupError.cs
+    startLine: 671
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of RestrictedContent</p>\n"
+  example: []
+  syntax:
+    content: public static readonly LookupError.RestrictedContent Instance
+    return:
+      type: Dropbox.Api.Files.LookupError.RestrictedContent
+    content.vb: Public Shared ReadOnly Instance As LookupError.RestrictedContent
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.LookupError
+  commentId: T:Dropbox.Api.Files.LookupError
+  parent: Dropbox.Api.Files
+  name: LookupError
+  nameWithType: LookupError
+  fullName: Dropbox.Api.Files.LookupError
+- uid: Dropbox.Api.Files.LookupError.IsMalformedPath
+  commentId: P:Dropbox.Api.Files.LookupError.IsMalformedPath
+  parent: Dropbox.Api.Files.LookupError
+  name: IsMalformedPath
+  nameWithType: LookupError.IsMalformedPath
+  fullName: Dropbox.Api.Files.LookupError.IsMalformedPath
+- uid: Dropbox.Api.Files.LookupError.AsMalformedPath
+  commentId: P:Dropbox.Api.Files.LookupError.AsMalformedPath
+  parent: Dropbox.Api.Files.LookupError
+  name: AsMalformedPath
+  nameWithType: LookupError.AsMalformedPath
+  fullName: Dropbox.Api.Files.LookupError.AsMalformedPath
+- uid: Dropbox.Api.Files.LookupError.IsNotFound
+  commentId: P:Dropbox.Api.Files.LookupError.IsNotFound
+  parent: Dropbox.Api.Files.LookupError
+  name: IsNotFound
+  nameWithType: LookupError.IsNotFound
+  fullName: Dropbox.Api.Files.LookupError.IsNotFound
+- uid: Dropbox.Api.Files.LookupError.AsNotFound
+  commentId: P:Dropbox.Api.Files.LookupError.AsNotFound
+  parent: Dropbox.Api.Files.LookupError
+  name: AsNotFound
+  nameWithType: LookupError.AsNotFound
+  fullName: Dropbox.Api.Files.LookupError.AsNotFound
+- uid: Dropbox.Api.Files.LookupError.IsNotFile
+  commentId: P:Dropbox.Api.Files.LookupError.IsNotFile
+  parent: Dropbox.Api.Files.LookupError
+  name: IsNotFile
+  nameWithType: LookupError.IsNotFile
+  fullName: Dropbox.Api.Files.LookupError.IsNotFile
+- uid: Dropbox.Api.Files.LookupError.AsNotFile
+  commentId: P:Dropbox.Api.Files.LookupError.AsNotFile
+  parent: Dropbox.Api.Files.LookupError
+  name: AsNotFile
+  nameWithType: LookupError.AsNotFile
+  fullName: Dropbox.Api.Files.LookupError.AsNotFile
+- uid: Dropbox.Api.Files.LookupError.IsNotFolder
+  commentId: P:Dropbox.Api.Files.LookupError.IsNotFolder
+  parent: Dropbox.Api.Files.LookupError
+  name: IsNotFolder
+  nameWithType: LookupError.IsNotFolder
+  fullName: Dropbox.Api.Files.LookupError.IsNotFolder
+- uid: Dropbox.Api.Files.LookupError.AsNotFolder
+  commentId: P:Dropbox.Api.Files.LookupError.AsNotFolder
+  parent: Dropbox.Api.Files.LookupError
+  name: AsNotFolder
+  nameWithType: LookupError.AsNotFolder
+  fullName: Dropbox.Api.Files.LookupError.AsNotFolder
+- uid: Dropbox.Api.Files.LookupError.IsRestrictedContent
+  commentId: P:Dropbox.Api.Files.LookupError.IsRestrictedContent
+  parent: Dropbox.Api.Files.LookupError
+  name: IsRestrictedContent
+  nameWithType: LookupError.IsRestrictedContent
+  fullName: Dropbox.Api.Files.LookupError.IsRestrictedContent
+- uid: Dropbox.Api.Files.LookupError.AsRestrictedContent
+  commentId: P:Dropbox.Api.Files.LookupError.AsRestrictedContent
+  parent: Dropbox.Api.Files.LookupError
+  name: AsRestrictedContent
+  nameWithType: LookupError.AsRestrictedContent
+  fullName: Dropbox.Api.Files.LookupError.AsRestrictedContent
+- uid: Dropbox.Api.Files.LookupError.IsUnsupportedContentType
+  commentId: P:Dropbox.Api.Files.LookupError.IsUnsupportedContentType
+  parent: Dropbox.Api.Files.LookupError
+  name: IsUnsupportedContentType
+  nameWithType: LookupError.IsUnsupportedContentType
+  fullName: Dropbox.Api.Files.LookupError.IsUnsupportedContentType
+- uid: Dropbox.Api.Files.LookupError.AsUnsupportedContentType
+  commentId: P:Dropbox.Api.Files.LookupError.AsUnsupportedContentType
+  parent: Dropbox.Api.Files.LookupError
+  name: AsUnsupportedContentType
+  nameWithType: LookupError.AsUnsupportedContentType
+  fullName: Dropbox.Api.Files.LookupError.AsUnsupportedContentType
+- uid: Dropbox.Api.Files.LookupError.IsLocked
+  commentId: P:Dropbox.Api.Files.LookupError.IsLocked
+  parent: Dropbox.Api.Files.LookupError
+  name: IsLocked
+  nameWithType: LookupError.IsLocked
+  fullName: Dropbox.Api.Files.LookupError.IsLocked
+- uid: Dropbox.Api.Files.LookupError.AsLocked
+  commentId: P:Dropbox.Api.Files.LookupError.AsLocked
+  parent: Dropbox.Api.Files.LookupError
+  name: AsLocked
+  nameWithType: LookupError.AsLocked
+  fullName: Dropbox.Api.Files.LookupError.AsLocked
+- uid: Dropbox.Api.Files.LookupError.IsOther
+  commentId: P:Dropbox.Api.Files.LookupError.IsOther
+  parent: Dropbox.Api.Files.LookupError
+  name: IsOther
+  nameWithType: LookupError.IsOther
+  fullName: Dropbox.Api.Files.LookupError.IsOther
+- uid: Dropbox.Api.Files.LookupError.AsOther
+  commentId: P:Dropbox.Api.Files.LookupError.AsOther
+  parent: Dropbox.Api.Files.LookupError
+  name: AsOther
+  nameWithType: LookupError.AsOther
+  fullName: Dropbox.Api.Files.LookupError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.LookupError.RestrictedContent
+  commentId: T:Dropbox.Api.Files.LookupError.RestrictedContent
+  parent: Dropbox.Api.Files
+  name: LookupError.RestrictedContent
+  nameWithType: LookupError.RestrictedContent
+  fullName: Dropbox.Api.Files.LookupError.RestrictedContent

@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Common.PathRootError
+  commentId: T:Dropbox.Api.Common.PathRootError
+  id: PathRootError
+  parent: Dropbox.Api.Common
+  children:
+  - Dropbox.Api.Common.PathRootError.#ctor
+  - Dropbox.Api.Common.PathRootError.AsInvalidRoot
+  - Dropbox.Api.Common.PathRootError.AsNoPermission
+  - Dropbox.Api.Common.PathRootError.AsOther
+  - Dropbox.Api.Common.PathRootError.IsInvalidRoot
+  - Dropbox.Api.Common.PathRootError.IsNoPermission
+  - Dropbox.Api.Common.PathRootError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: PathRootError
+  nameWithType: PathRootError
+  fullName: Dropbox.Api.Common.PathRootError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PathRootError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>The path root error object</p>\n"
+  example: []
+  syntax:
+    content: public class PathRootError
+    content.vb: Public Class PathRootError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Common.PathRootError.InvalidRoot
+  - Dropbox.Api.Common.PathRootError.NoPermission
+  - Dropbox.Api.Common.PathRootError.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Common.PathRootError.#ctor
+  commentId: M:Dropbox.Api.Common.PathRootError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Common.PathRootError
+  langs:
+  - csharp
+  - vb
+  name: PathRootError()
+  nameWithType: PathRootError.PathRootError()
+  fullName: Dropbox.Api.Common.PathRootError.PathRootError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Common.PathRootError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PathRootError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Common.PathRootError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Common.PathRootError.IsInvalidRoot
+  commentId: P:Dropbox.Api.Common.PathRootError.IsInvalidRoot
+  id: IsInvalidRoot
+  parent: Dropbox.Api.Common.PathRootError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidRoot
+  nameWithType: PathRootError.IsInvalidRoot
+  fullName: Dropbox.Api.Common.PathRootError.IsInvalidRoot
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInvalidRoot
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidRoot</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidRoot { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidRoot As Boolean
+  overload: Dropbox.Api.Common.PathRootError.IsInvalidRoot*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Common.PathRootError.AsInvalidRoot
+  commentId: P:Dropbox.Api.Common.PathRootError.AsInvalidRoot
+  id: AsInvalidRoot
+  parent: Dropbox.Api.Common.PathRootError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidRoot
+  nameWithType: PathRootError.AsInvalidRoot
+  fullName: Dropbox.Api.Common.PathRootError.AsInvalidRoot
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInvalidRoot
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Gets this instance as a InvalidRoot, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PathRootError.InvalidRoot AsInvalidRoot { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Common.PathRootError.InvalidRoot
+    content.vb: Public ReadOnly Property AsInvalidRoot As PathRootError.InvalidRoot
+  overload: Dropbox.Api.Common.PathRootError.AsInvalidRoot*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Common.PathRootError.IsNoPermission
+  commentId: P:Dropbox.Api.Common.PathRootError.IsNoPermission
+  id: IsNoPermission
+  parent: Dropbox.Api.Common.PathRootError
+  langs:
+  - csharp
+  - vb
+  name: IsNoPermission
+  nameWithType: PathRootError.IsNoPermission
+  fullName: Dropbox.Api.Common.PathRootError.IsNoPermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNoPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Gets a value indicating whether this instance is NoPermission</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNoPermission { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNoPermission As Boolean
+  overload: Dropbox.Api.Common.PathRootError.IsNoPermission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Common.PathRootError.AsNoPermission
+  commentId: P:Dropbox.Api.Common.PathRootError.AsNoPermission
+  id: AsNoPermission
+  parent: Dropbox.Api.Common.PathRootError
+  langs:
+  - csharp
+  - vb
+  name: AsNoPermission
+  nameWithType: PathRootError.AsNoPermission
+  fullName: Dropbox.Api.Common.PathRootError.AsNoPermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNoPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Gets this instance as a NoPermission, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PathRootError.NoPermission AsNoPermission { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Common.PathRootError.NoPermission
+    content.vb: Public ReadOnly Property AsNoPermission As PathRootError.NoPermission
+  overload: Dropbox.Api.Common.PathRootError.AsNoPermission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Common.PathRootError.IsOther
+  commentId: P:Dropbox.Api.Common.PathRootError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Common.PathRootError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: PathRootError.IsOther
+  fullName: Dropbox.Api.Common.PathRootError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Common.PathRootError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Common.PathRootError.AsOther
+  commentId: P:Dropbox.Api.Common.PathRootError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Common.PathRootError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: PathRootError.AsOther
+  fullName: Dropbox.Api.Common.PathRootError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PathRootError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Common.PathRootError.Other
+    content.vb: Public ReadOnly Property AsOther As PathRootError.Other
+  overload: Dropbox.Api.Common.PathRootError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Common
+  commentId: N:Dropbox.Api.Common
+  name: Dropbox.Api.Common
+  nameWithType: Dropbox.Api.Common
+  fullName: Dropbox.Api.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Common.PathRootError
+  commentId: T:Dropbox.Api.Common.PathRootError
+  parent: Dropbox.Api.Common
+  name: PathRootError
+  nameWithType: PathRootError
+  fullName: Dropbox.Api.Common.PathRootError
+- uid: Dropbox.Api.Common.PathRootError.#ctor*
+  commentId: Overload:Dropbox.Api.Common.PathRootError.#ctor
+  name: PathRootError
+  nameWithType: PathRootError.PathRootError
+  fullName: Dropbox.Api.Common.PathRootError.PathRootError
+- uid: Dropbox.Api.Common.PathRootError.IsInvalidRoot*
+  commentId: Overload:Dropbox.Api.Common.PathRootError.IsInvalidRoot
+  name: IsInvalidRoot
+  nameWithType: PathRootError.IsInvalidRoot
+  fullName: Dropbox.Api.Common.PathRootError.IsInvalidRoot
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Common.PathRootError.AsInvalidRoot*
+  commentId: Overload:Dropbox.Api.Common.PathRootError.AsInvalidRoot
+  name: AsInvalidRoot
+  nameWithType: PathRootError.AsInvalidRoot
+  fullName: Dropbox.Api.Common.PathRootError.AsInvalidRoot
+- uid: Dropbox.Api.Common.PathRootError.InvalidRoot
+  commentId: T:Dropbox.Api.Common.PathRootError.InvalidRoot
+  parent: Dropbox.Api.Common
+  name: PathRootError.InvalidRoot
+  nameWithType: PathRootError.InvalidRoot
+  fullName: Dropbox.Api.Common.PathRootError.InvalidRoot
+- uid: Dropbox.Api.Common.PathRootError.IsNoPermission*
+  commentId: Overload:Dropbox.Api.Common.PathRootError.IsNoPermission
+  name: IsNoPermission
+  nameWithType: PathRootError.IsNoPermission
+  fullName: Dropbox.Api.Common.PathRootError.IsNoPermission
+- uid: Dropbox.Api.Common.PathRootError.AsNoPermission*
+  commentId: Overload:Dropbox.Api.Common.PathRootError.AsNoPermission
+  name: AsNoPermission
+  nameWithType: PathRootError.AsNoPermission
+  fullName: Dropbox.Api.Common.PathRootError.AsNoPermission
+- uid: Dropbox.Api.Common.PathRootError.NoPermission
+  commentId: T:Dropbox.Api.Common.PathRootError.NoPermission
+  parent: Dropbox.Api.Common
+  name: PathRootError.NoPermission
+  nameWithType: PathRootError.NoPermission
+  fullName: Dropbox.Api.Common.PathRootError.NoPermission
+- uid: Dropbox.Api.Common.PathRootError.IsOther*
+  commentId: Overload:Dropbox.Api.Common.PathRootError.IsOther
+  name: IsOther
+  nameWithType: PathRootError.IsOther
+  fullName: Dropbox.Api.Common.PathRootError.IsOther
+- uid: Dropbox.Api.Common.PathRootError.AsOther*
+  commentId: Overload:Dropbox.Api.Common.PathRootError.AsOther
+  name: AsOther
+  nameWithType: PathRootError.AsOther
+  fullName: Dropbox.Api.Common.PathRootError.AsOther
+- uid: Dropbox.Api.Common.PathRootError.Other
+  commentId: T:Dropbox.Api.Common.PathRootError.Other
+  parent: Dropbox.Api.Common
+  name: PathRootError.Other
+  nameWithType: PathRootError.Other
+  fullName: Dropbox.Api.Common.PathRootError.Other

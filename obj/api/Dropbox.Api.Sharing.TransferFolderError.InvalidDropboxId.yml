@@ -1,0 +1,514 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId
+  commentId: T:Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId
+  id: TransferFolderError.InvalidDropboxId
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId.Instance
+  langs:
+  - csharp
+  - vb
+  name: TransferFolderError.InvalidDropboxId
+  nameWithType: TransferFolderError.InvalidDropboxId
+  fullName: Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: InvalidDropboxId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 432
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p><xref href=\"Dropbox.Api.Sharing.TransferFolderArg.ToDropboxId\" data-throw-if-not-resolved=\"false\"></xref> is\ninvalid.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class InvalidDropboxId : TransferFolderError'
+    content.vb: >-
+      Public NotInheritable Class InvalidDropboxId
+          Inherits TransferFolderError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.TransferFolderError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.TransferFolderError.IsAccessError
+  - Dropbox.Api.Sharing.TransferFolderError.AsAccessError
+  - Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId
+  - Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId
+  - Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember
+  - Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember
+  - Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted
+  - Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted
+  - Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified
+  - Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified
+  - Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder
+  - Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder
+  - Dropbox.Api.Sharing.TransferFolderError.IsNoPermission
+  - Dropbox.Api.Sharing.TransferFolderError.AsNoPermission
+  - Dropbox.Api.Sharing.TransferFolderError.IsOther
+  - Dropbox.Api.Sharing.TransferFolderError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId.Instance
+  commentId: F:Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: TransferFolderError.InvalidDropboxId.Instance
+  fullName: Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 457
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of InvalidDropboxId</p>\n"
+  example: []
+  syntax:
+    content: public static readonly TransferFolderError.InvalidDropboxId Instance
+    return:
+      type: Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId
+    content.vb: Public Shared ReadOnly Instance As TransferFolderError.InvalidDropboxId
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing.TransferFolderArg.ToDropboxId
+  commentId: P:Dropbox.Api.Sharing.TransferFolderArg.ToDropboxId
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.TransferFolderError
+  commentId: T:Dropbox.Api.Sharing.TransferFolderError
+  parent: Dropbox.Api.Sharing
+  name: TransferFolderError
+  nameWithType: TransferFolderError
+  fullName: Dropbox.Api.Sharing.TransferFolderError
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsAccessError
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: IsAccessError
+  nameWithType: TransferFolderError.IsAccessError
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsAccessError
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsAccessError
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: AsAccessError
+  nameWithType: TransferFolderError.AsAccessError
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsAccessError
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: IsInvalidDropboxId
+  nameWithType: TransferFolderError.IsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: AsInvalidDropboxId
+  nameWithType: TransferFolderError.AsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: IsNewOwnerNotAMember
+  nameWithType: TransferFolderError.IsNewOwnerNotAMember
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: AsNewOwnerNotAMember
+  nameWithType: TransferFolderError.AsNewOwnerNotAMember
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: IsNewOwnerUnmounted
+  nameWithType: TransferFolderError.IsNewOwnerUnmounted
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: AsNewOwnerUnmounted
+  nameWithType: TransferFolderError.AsNewOwnerUnmounted
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: IsNewOwnerEmailUnverified
+  nameWithType: TransferFolderError.IsNewOwnerEmailUnverified
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: AsNewOwnerEmailUnverified
+  nameWithType: TransferFolderError.AsNewOwnerEmailUnverified
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: IsTeamFolder
+  nameWithType: TransferFolderError.IsTeamFolder
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: AsTeamFolder
+  nameWithType: TransferFolderError.AsTeamFolder
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsNoPermission
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsNoPermission
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: IsNoPermission
+  nameWithType: TransferFolderError.IsNoPermission
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsNoPermission
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsNoPermission
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsNoPermission
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: AsNoPermission
+  nameWithType: TransferFolderError.AsNoPermission
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsNoPermission
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsOther
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsOther
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: IsOther
+  nameWithType: TransferFolderError.IsOther
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsOther
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsOther
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsOther
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  name: AsOther
+  nameWithType: TransferFolderError.AsOther
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId
+  commentId: T:Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId
+  parent: Dropbox.Api.Sharing
+  name: TransferFolderError.InvalidDropboxId
+  nameWithType: TransferFolderError.InvalidDropboxId
+  fullName: Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId

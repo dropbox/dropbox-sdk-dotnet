@@ -1,0 +1,486 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersDeactivateArg
+  commentId: T:Dropbox.Api.Team.MembersDeactivateArg
+  id: MembersDeactivateArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersDeactivateArg.#ctor(Dropbox.Api.Team.UserSelectorArg,System.Boolean)
+  - Dropbox.Api.Team.MembersDeactivateArg.WipeData
+  langs:
+  - csharp
+  - vb
+  name: MembersDeactivateArg
+  nameWithType: MembersDeactivateArg
+  fullName: Dropbox.Api.Team.MembersDeactivateArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MembersDeactivateArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateArg.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The members deactivate arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersDeactivateArg : MembersDeactivateBaseArg'
+    content.vb: >-
+      Public Class MembersDeactivateArg
+          Inherits MembersDeactivateBaseArg
+  seealso:
+  - linkId: Dropbox.Api.Team.MembersRemoveArg
+    commentId: T:Dropbox.Api.Team.MembersRemoveArg
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MembersDeactivateBaseArg
+  derivedClasses:
+  - Dropbox.Api.Team.MembersRemoveArg
+  inheritedMembers:
+  - Dropbox.Api.Team.MembersDeactivateBaseArg.User
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersDeactivateArg.#ctor(Dropbox.Api.Team.UserSelectorArg,System.Boolean)
+  commentId: M:Dropbox.Api.Team.MembersDeactivateArg.#ctor(Dropbox.Api.Team.UserSelectorArg,System.Boolean)
+  id: '#ctor(Dropbox.Api.Team.UserSelectorArg,System.Boolean)'
+  parent: Dropbox.Api.Team.MembersDeactivateArg
+  langs:
+  - csharp
+  - vb
+  name: MembersDeactivateArg(UserSelectorArg, Boolean)
+  nameWithType: MembersDeactivateArg.MembersDeactivateArg(UserSelectorArg, Boolean)
+  fullName: Dropbox.Api.Team.MembersDeactivateArg.MembersDeactivateArg(Dropbox.Api.Team.UserSelectorArg, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateArg.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersDeactivateArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersDeactivateArg(UserSelectorArg user, bool wipeData = true)
+    parameters:
+    - id: user
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: >-
+        Identity of user to remove/suspend/have their files
+
+        moved.
+    - id: wipeData
+      type: System.Boolean
+      description: >-
+        If provided, controls if the user&apos;s data will be deleted on
+
+        their linked devices.
+    content.vb: Public Sub New(user As UserSelectorArg, wipeData As Boolean = True)
+  overload: Dropbox.Api.Team.MembersDeactivateArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersDeactivateArg.WipeData
+  commentId: P:Dropbox.Api.Team.MembersDeactivateArg.WipeData
+  id: WipeData
+  parent: Dropbox.Api.Team.MembersDeactivateArg
+  langs:
+  - csharp
+  - vb
+  name: WipeData
+  nameWithType: MembersDeactivateArg.WipeData
+  fullName: Dropbox.Api.Team.MembersDeactivateArg.WipeData
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: WipeData
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateArg.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>If provided, controls if the user&apos;s data will be deleted on their linked\ndevices.</p>\n"
+  example: []
+  syntax:
+    content: public bool WipeData { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property WipeData As Boolean
+  overload: Dropbox.Api.Team.MembersDeactivateArg.WipeData*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team.MembersRemoveArg
+  commentId: T:Dropbox.Api.Team.MembersRemoveArg
+  parent: Dropbox.Api.Team
+  name: MembersRemoveArg
+  nameWithType: MembersRemoveArg
+  fullName: Dropbox.Api.Team.MembersRemoveArg
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersDeactivateBaseArg
+  commentId: T:Dropbox.Api.Team.MembersDeactivateBaseArg
+  parent: Dropbox.Api.Team
+  name: MembersDeactivateBaseArg
+  nameWithType: MembersDeactivateBaseArg
+  fullName: Dropbox.Api.Team.MembersDeactivateBaseArg
+- uid: Dropbox.Api.Team.MembersDeactivateBaseArg.User
+  commentId: P:Dropbox.Api.Team.MembersDeactivateBaseArg.User
+  parent: Dropbox.Api.Team.MembersDeactivateBaseArg
+  name: User
+  nameWithType: MembersDeactivateBaseArg.User
+  fullName: Dropbox.Api.Team.MembersDeactivateBaseArg.User
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.MembersDeactivateArg
+  commentId: T:Dropbox.Api.Team.MembersDeactivateArg
+  parent: Dropbox.Api.Team
+  name: MembersDeactivateArg
+  nameWithType: MembersDeactivateArg
+  fullName: Dropbox.Api.Team.MembersDeactivateArg
+- uid: Dropbox.Api.Team.MembersDeactivateArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersDeactivateArg.#ctor
+  name: MembersDeactivateArg
+  nameWithType: MembersDeactivateArg.MembersDeactivateArg
+  fullName: Dropbox.Api.Team.MembersDeactivateArg.MembersDeactivateArg
+- uid: Dropbox.Api.Team.UserSelectorArg
+  commentId: T:Dropbox.Api.Team.UserSelectorArg
+  parent: Dropbox.Api.Team
+  name: UserSelectorArg
+  nameWithType: UserSelectorArg
+  fullName: Dropbox.Api.Team.UserSelectorArg
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.MembersDeactivateArg.WipeData*
+  commentId: Overload:Dropbox.Api.Team.MembersDeactivateArg.WipeData
+  name: WipeData
+  nameWithType: MembersDeactivateArg.WipeData
+  fullName: Dropbox.Api.Team.MembersDeactivateArg.WipeData

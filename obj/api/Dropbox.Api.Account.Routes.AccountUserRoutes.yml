@@ -1,0 +1,779 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Account.Routes.AccountUserRoutes
+  commentId: T:Dropbox.Api.Account.Routes.AccountUserRoutes
+  id: AccountUserRoutes
+  parent: Dropbox.Api.Account.Routes
+  children:
+  - Dropbox.Api.Account.Routes.AccountUserRoutes.BeginSetProfilePhoto(Dropbox.Api.Account.PhotoSourceArg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.Account.Routes.AccountUserRoutes.BeginSetProfilePhoto(Dropbox.Api.Account.SetProfilePhotoArg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.Account.Routes.AccountUserRoutes.EndSetProfilePhoto(System.IAsyncResult)
+  - Dropbox.Api.Account.Routes.AccountUserRoutes.SetProfilePhotoAsync(Dropbox.Api.Account.PhotoSourceArg)
+  - Dropbox.Api.Account.Routes.AccountUserRoutes.SetProfilePhotoAsync(Dropbox.Api.Account.SetProfilePhotoArg)
+  langs:
+  - csharp
+  - vb
+  name: AccountUserRoutes
+  nameWithType: AccountUserRoutes
+  fullName: Dropbox.Api.Account.Routes.AccountUserRoutes
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/AccountUserRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AccountUserRoutes
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/AccountUserRoutes.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account.Routes
+  summary: "\n<p>The routes for the <xref href=\"Dropbox.Api.Account\" data-throw-if-not-resolved=\"false\"></xref> namespace</p>\n"
+  example: []
+  syntax:
+    content: public class AccountUserRoutes
+    content.vb: Public Class AccountUserRoutes
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Account.Routes.AccountUserRoutes.SetProfilePhotoAsync(Dropbox.Api.Account.SetProfilePhotoArg)
+  commentId: M:Dropbox.Api.Account.Routes.AccountUserRoutes.SetProfilePhotoAsync(Dropbox.Api.Account.SetProfilePhotoArg)
+  id: SetProfilePhotoAsync(Dropbox.Api.Account.SetProfilePhotoArg)
+  parent: Dropbox.Api.Account.Routes.AccountUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: SetProfilePhotoAsync(SetProfilePhotoArg)
+  nameWithType: AccountUserRoutes.SetProfilePhotoAsync(SetProfilePhotoArg)
+  fullName: Dropbox.Api.Account.Routes.AccountUserRoutes.SetProfilePhotoAsync(Dropbox.Api.Account.SetProfilePhotoArg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/AccountUserRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SetProfilePhotoAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/AccountUserRoutes.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account.Routes
+  summary: "\n<p>Sets a user&apos;s profile photo.</p>\n"
+  example: []
+  syntax:
+    content: public Task<SetProfilePhotoResult> SetProfilePhotoAsync(SetProfilePhotoArg setProfilePhotoArg)
+    parameters:
+    - id: setProfilePhotoArg
+      type: Dropbox.Api.Account.SetProfilePhotoArg
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Account.SetProfilePhotoResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function SetProfilePhotoAsync(setProfilePhotoArg As SetProfilePhotoArg) As Task(Of SetProfilePhotoResult)
+  overload: Dropbox.Api.Account.Routes.AccountUserRoutes.SetProfilePhotoAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Account.SetProfilePhotoError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Account.Routes.AccountUserRoutes.BeginSetProfilePhoto(Dropbox.Api.Account.SetProfilePhotoArg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Account.Routes.AccountUserRoutes.BeginSetProfilePhoto(Dropbox.Api.Account.SetProfilePhotoArg,System.AsyncCallback,System.Object)
+  id: BeginSetProfilePhoto(Dropbox.Api.Account.SetProfilePhotoArg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Account.Routes.AccountUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginSetProfilePhoto(SetProfilePhotoArg, AsyncCallback, Object)
+  nameWithType: AccountUserRoutes.BeginSetProfilePhoto(SetProfilePhotoArg, AsyncCallback, Object)
+  fullName: Dropbox.Api.Account.Routes.AccountUserRoutes.BeginSetProfilePhoto(Dropbox.Api.Account.SetProfilePhotoArg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/AccountUserRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: BeginSetProfilePhoto
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/AccountUserRoutes.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account.Routes
+  summary: "\n<p>Begins an asynchronous send to the set profile photo route.</p>\n"
+  example: []
+  syntax:
+    content: public IAsyncResult BeginSetProfilePhoto(SetProfilePhotoArg setProfilePhotoArg, AsyncCallback callback, object state = null)
+    parameters:
+    - id: setProfilePhotoArg
+      type: Dropbox.Api.Account.SetProfilePhotoArg
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginSetProfilePhoto(setProfilePhotoArg As SetProfilePhotoArg, callback As AsyncCallback, state As Object = Nothing) As IAsyncResult
+  overload: Dropbox.Api.Account.Routes.AccountUserRoutes.BeginSetProfilePhoto*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Account.Routes.AccountUserRoutes.SetProfilePhotoAsync(Dropbox.Api.Account.PhotoSourceArg)
+  commentId: M:Dropbox.Api.Account.Routes.AccountUserRoutes.SetProfilePhotoAsync(Dropbox.Api.Account.PhotoSourceArg)
+  id: SetProfilePhotoAsync(Dropbox.Api.Account.PhotoSourceArg)
+  parent: Dropbox.Api.Account.Routes.AccountUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: SetProfilePhotoAsync(PhotoSourceArg)
+  nameWithType: AccountUserRoutes.SetProfilePhotoAsync(PhotoSourceArg)
+  fullName: Dropbox.Api.Account.Routes.AccountUserRoutes.SetProfilePhotoAsync(Dropbox.Api.Account.PhotoSourceArg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/AccountUserRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SetProfilePhotoAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/AccountUserRoutes.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account.Routes
+  summary: "\n<p>Sets a user&apos;s profile photo.</p>\n"
+  example: []
+  syntax:
+    content: public Task<SetProfilePhotoResult> SetProfilePhotoAsync(PhotoSourceArg photo)
+    parameters:
+    - id: photo
+      type: Dropbox.Api.Account.PhotoSourceArg
+      description: Image to set as the user&apos;s new profile photo.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Account.SetProfilePhotoResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function SetProfilePhotoAsync(photo As PhotoSourceArg) As Task(Of SetProfilePhotoResult)
+  overload: Dropbox.Api.Account.Routes.AccountUserRoutes.SetProfilePhotoAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Account.SetProfilePhotoError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Account.Routes.AccountUserRoutes.BeginSetProfilePhoto(Dropbox.Api.Account.PhotoSourceArg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Account.Routes.AccountUserRoutes.BeginSetProfilePhoto(Dropbox.Api.Account.PhotoSourceArg,System.AsyncCallback,System.Object)
+  id: BeginSetProfilePhoto(Dropbox.Api.Account.PhotoSourceArg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Account.Routes.AccountUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginSetProfilePhoto(PhotoSourceArg, AsyncCallback, Object)
+  nameWithType: AccountUserRoutes.BeginSetProfilePhoto(PhotoSourceArg, AsyncCallback, Object)
+  fullName: Dropbox.Api.Account.Routes.AccountUserRoutes.BeginSetProfilePhoto(Dropbox.Api.Account.PhotoSourceArg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/AccountUserRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: BeginSetProfilePhoto
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/AccountUserRoutes.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account.Routes
+  summary: "\n<p>Begins an asynchronous send to the set profile photo route.</p>\n"
+  example: []
+  syntax:
+    content: public IAsyncResult BeginSetProfilePhoto(PhotoSourceArg photo, AsyncCallback callback, object callbackState = null)
+    parameters:
+    - id: photo
+      type: Dropbox.Api.Account.PhotoSourceArg
+      description: Image to set as the user&apos;s new profile photo.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginSetProfilePhoto(photo As PhotoSourceArg, callback As AsyncCallback, callbackState As Object = Nothing) As IAsyncResult
+  overload: Dropbox.Api.Account.Routes.AccountUserRoutes.BeginSetProfilePhoto*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Account.Routes.AccountUserRoutes.EndSetProfilePhoto(System.IAsyncResult)
+  commentId: M:Dropbox.Api.Account.Routes.AccountUserRoutes.EndSetProfilePhoto(System.IAsyncResult)
+  id: EndSetProfilePhoto(System.IAsyncResult)
+  parent: Dropbox.Api.Account.Routes.AccountUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndSetProfilePhoto(IAsyncResult)
+  nameWithType: AccountUserRoutes.EndSetProfilePhoto(IAsyncResult)
+  fullName: Dropbox.Api.Account.Routes.AccountUserRoutes.EndSetProfilePhoto(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/AccountUserRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: EndSetProfilePhoto
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/AccountUserRoutes.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the set profile photo route to\ncomplete</p>\n"
+  example: []
+  syntax:
+    content: public SetProfilePhotoResult EndSetProfilePhoto(IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.Account.SetProfilePhotoResult
+      description: The response to the send request
+    content.vb: Public Function EndSetProfilePhoto(asyncResult As IAsyncResult) As SetProfilePhotoResult
+  overload: Dropbox.Api.Account.Routes.AccountUserRoutes.EndSetProfilePhoto*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Account.SetProfilePhotoError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.Account
+  commentId: N:Dropbox.Api.Account
+  name: Dropbox.Api.Account
+  nameWithType: Dropbox.Api.Account
+  fullName: Dropbox.Api.Account
+- uid: Dropbox.Api.Account.Routes
+  commentId: N:Dropbox.Api.Account.Routes
+  name: Dropbox.Api.Account.Routes
+  nameWithType: Dropbox.Api.Account.Routes
+  fullName: Dropbox.Api.Account.Routes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Account.SetProfilePhotoError
+  commentId: T:Dropbox.Api.Account.SetProfilePhotoError
+  parent: Dropbox.Api.Account
+  name: SetProfilePhotoError
+  nameWithType: SetProfilePhotoError
+  fullName: Dropbox.Api.Account.SetProfilePhotoError
+- uid: Dropbox.Api.ApiException`1
+  commentId: T:Dropbox.Api.ApiException`1
+  name: ApiException<TError>
+  nameWithType: ApiException<TError>
+  fullName: Dropbox.Api.ApiException<TError>
+  nameWithType.vb: ApiException(Of TError)
+  fullName.vb: Dropbox.Api.ApiException(Of TError)
+  name.vb: ApiException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.ApiException`1
+    name: ApiException
+    nameWithType: ApiException
+    fullName: Dropbox.Api.ApiException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.ApiException`1
+    name: ApiException
+    nameWithType: ApiException
+    fullName: Dropbox.Api.ApiException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Account.Routes.AccountUserRoutes.SetProfilePhotoAsync*
+  commentId: Overload:Dropbox.Api.Account.Routes.AccountUserRoutes.SetProfilePhotoAsync
+  name: SetProfilePhotoAsync
+  nameWithType: AccountUserRoutes.SetProfilePhotoAsync
+  fullName: Dropbox.Api.Account.Routes.AccountUserRoutes.SetProfilePhotoAsync
+- uid: Dropbox.Api.Account.SetProfilePhotoArg
+  commentId: T:Dropbox.Api.Account.SetProfilePhotoArg
+  parent: Dropbox.Api.Account
+  name: SetProfilePhotoArg
+  nameWithType: SetProfilePhotoArg
+  fullName: Dropbox.Api.Account.SetProfilePhotoArg
+- uid: System.Threading.Tasks.Task{Dropbox.Api.Account.SetProfilePhotoResult}
+  commentId: T:System.Threading.Tasks.Task{Dropbox.Api.Account.SetProfilePhotoResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<SetProfilePhotoResult>
+  nameWithType: Task<SetProfilePhotoResult>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.Account.SetProfilePhotoResult>
+  nameWithType.vb: Task(Of SetProfilePhotoResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.Account.SetProfilePhotoResult)
+  name.vb: Task(Of SetProfilePhotoResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Account.SetProfilePhotoResult
+    name: SetProfilePhotoResult
+    nameWithType: SetProfilePhotoResult
+    fullName: Dropbox.Api.Account.SetProfilePhotoResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Account.SetProfilePhotoResult
+    name: SetProfilePhotoResult
+    nameWithType: SetProfilePhotoResult
+    fullName: Dropbox.Api.Account.SetProfilePhotoResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: Dropbox.Api.Account.Routes.AccountUserRoutes.BeginSetProfilePhoto*
+  commentId: Overload:Dropbox.Api.Account.Routes.AccountUserRoutes.BeginSetProfilePhoto
+  name: BeginSetProfilePhoto
+  nameWithType: AccountUserRoutes.BeginSetProfilePhoto
+  fullName: Dropbox.Api.Account.Routes.AccountUserRoutes.BeginSetProfilePhoto
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: Dropbox.Api.Account.PhotoSourceArg
+  commentId: T:Dropbox.Api.Account.PhotoSourceArg
+  parent: Dropbox.Api.Account
+  name: PhotoSourceArg
+  nameWithType: PhotoSourceArg
+  fullName: Dropbox.Api.Account.PhotoSourceArg
+- uid: Dropbox.Api.Account.Routes.AccountUserRoutes.EndSetProfilePhoto*
+  commentId: Overload:Dropbox.Api.Account.Routes.AccountUserRoutes.EndSetProfilePhoto
+  name: EndSetProfilePhoto
+  nameWithType: AccountUserRoutes.EndSetProfilePhoto
+  fullName: Dropbox.Api.Account.Routes.AccountUserRoutes.EndSetProfilePhoto
+- uid: Dropbox.Api.Account.SetProfilePhotoResult
+  commentId: T:Dropbox.Api.Account.SetProfilePhotoResult
+  parent: Dropbox.Api.Account
+  name: SetProfilePhotoResult
+  nameWithType: SetProfilePhotoResult
+  fullName: Dropbox.Api.Account.SetProfilePhotoResult

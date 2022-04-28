@@ -1,0 +1,582 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.FeaturesGetValuesBatchError
+  commentId: T:Dropbox.Api.Team.FeaturesGetValuesBatchError
+  id: FeaturesGetValuesBatchError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.FeaturesGetValuesBatchError.#ctor
+  - Dropbox.Api.Team.FeaturesGetValuesBatchError.AsEmptyFeaturesList
+  - Dropbox.Api.Team.FeaturesGetValuesBatchError.AsOther
+  - Dropbox.Api.Team.FeaturesGetValuesBatchError.IsEmptyFeaturesList
+  - Dropbox.Api.Team.FeaturesGetValuesBatchError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: FeaturesGetValuesBatchError
+  nameWithType: FeaturesGetValuesBatchError
+  fullName: Dropbox.Api.Team.FeaturesGetValuesBatchError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeaturesGetValuesBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FeaturesGetValuesBatchError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeaturesGetValuesBatchError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The features get values batch error object</p>\n"
+  example: []
+  syntax:
+    content: public class FeaturesGetValuesBatchError
+    content.vb: Public Class FeaturesGetValuesBatchError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.FeaturesGetValuesBatchError.EmptyFeaturesList
+  - Dropbox.Api.Team.FeaturesGetValuesBatchError.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.FeaturesGetValuesBatchError.#ctor
+  commentId: M:Dropbox.Api.Team.FeaturesGetValuesBatchError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.FeaturesGetValuesBatchError
+  langs:
+  - csharp
+  - vb
+  name: FeaturesGetValuesBatchError()
+  nameWithType: FeaturesGetValuesBatchError.FeaturesGetValuesBatchError()
+  fullName: Dropbox.Api.Team.FeaturesGetValuesBatchError.FeaturesGetValuesBatchError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeaturesGetValuesBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeaturesGetValuesBatchError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.FeaturesGetValuesBatchError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FeaturesGetValuesBatchError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.FeaturesGetValuesBatchError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.FeaturesGetValuesBatchError.IsEmptyFeaturesList
+  commentId: P:Dropbox.Api.Team.FeaturesGetValuesBatchError.IsEmptyFeaturesList
+  id: IsEmptyFeaturesList
+  parent: Dropbox.Api.Team.FeaturesGetValuesBatchError
+  langs:
+  - csharp
+  - vb
+  name: IsEmptyFeaturesList
+  nameWithType: FeaturesGetValuesBatchError.IsEmptyFeaturesList
+  fullName: Dropbox.Api.Team.FeaturesGetValuesBatchError.IsEmptyFeaturesList
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeaturesGetValuesBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsEmptyFeaturesList
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeaturesGetValuesBatchError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is EmptyFeaturesList</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEmptyFeaturesList { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmptyFeaturesList As Boolean
+  overload: Dropbox.Api.Team.FeaturesGetValuesBatchError.IsEmptyFeaturesList*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.FeaturesGetValuesBatchError.AsEmptyFeaturesList
+  commentId: P:Dropbox.Api.Team.FeaturesGetValuesBatchError.AsEmptyFeaturesList
+  id: AsEmptyFeaturesList
+  parent: Dropbox.Api.Team.FeaturesGetValuesBatchError
+  langs:
+  - csharp
+  - vb
+  name: AsEmptyFeaturesList
+  nameWithType: FeaturesGetValuesBatchError.AsEmptyFeaturesList
+  fullName: Dropbox.Api.Team.FeaturesGetValuesBatchError.AsEmptyFeaturesList
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeaturesGetValuesBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsEmptyFeaturesList
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeaturesGetValuesBatchError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a EmptyFeaturesList, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FeaturesGetValuesBatchError.EmptyFeaturesList AsEmptyFeaturesList { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.FeaturesGetValuesBatchError.EmptyFeaturesList
+    content.vb: Public ReadOnly Property AsEmptyFeaturesList As FeaturesGetValuesBatchError.EmptyFeaturesList
+  overload: Dropbox.Api.Team.FeaturesGetValuesBatchError.AsEmptyFeaturesList*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.FeaturesGetValuesBatchError.IsOther
+  commentId: P:Dropbox.Api.Team.FeaturesGetValuesBatchError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.FeaturesGetValuesBatchError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: FeaturesGetValuesBatchError.IsOther
+  fullName: Dropbox.Api.Team.FeaturesGetValuesBatchError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeaturesGetValuesBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeaturesGetValuesBatchError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.FeaturesGetValuesBatchError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.FeaturesGetValuesBatchError.AsOther
+  commentId: P:Dropbox.Api.Team.FeaturesGetValuesBatchError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.FeaturesGetValuesBatchError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: FeaturesGetValuesBatchError.AsOther
+  fullName: Dropbox.Api.Team.FeaturesGetValuesBatchError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeaturesGetValuesBatchError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeaturesGetValuesBatchError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FeaturesGetValuesBatchError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.FeaturesGetValuesBatchError.Other
+    content.vb: Public ReadOnly Property AsOther As FeaturesGetValuesBatchError.Other
+  overload: Dropbox.Api.Team.FeaturesGetValuesBatchError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.FeaturesGetValuesBatchError
+  commentId: T:Dropbox.Api.Team.FeaturesGetValuesBatchError
+  parent: Dropbox.Api.Team
+  name: FeaturesGetValuesBatchError
+  nameWithType: FeaturesGetValuesBatchError
+  fullName: Dropbox.Api.Team.FeaturesGetValuesBatchError
+- uid: Dropbox.Api.Team.FeaturesGetValuesBatchError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.FeaturesGetValuesBatchError.#ctor
+  name: FeaturesGetValuesBatchError
+  nameWithType: FeaturesGetValuesBatchError.FeaturesGetValuesBatchError
+  fullName: Dropbox.Api.Team.FeaturesGetValuesBatchError.FeaturesGetValuesBatchError
+- uid: Dropbox.Api.Team.FeaturesGetValuesBatchError.IsEmptyFeaturesList*
+  commentId: Overload:Dropbox.Api.Team.FeaturesGetValuesBatchError.IsEmptyFeaturesList
+  name: IsEmptyFeaturesList
+  nameWithType: FeaturesGetValuesBatchError.IsEmptyFeaturesList
+  fullName: Dropbox.Api.Team.FeaturesGetValuesBatchError.IsEmptyFeaturesList
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.FeaturesGetValuesBatchError.AsEmptyFeaturesList*
+  commentId: Overload:Dropbox.Api.Team.FeaturesGetValuesBatchError.AsEmptyFeaturesList
+  name: AsEmptyFeaturesList
+  nameWithType: FeaturesGetValuesBatchError.AsEmptyFeaturesList
+  fullName: Dropbox.Api.Team.FeaturesGetValuesBatchError.AsEmptyFeaturesList
+- uid: Dropbox.Api.Team.FeaturesGetValuesBatchError.EmptyFeaturesList
+  commentId: T:Dropbox.Api.Team.FeaturesGetValuesBatchError.EmptyFeaturesList
+  parent: Dropbox.Api.Team
+  name: FeaturesGetValuesBatchError.EmptyFeaturesList
+  nameWithType: FeaturesGetValuesBatchError.EmptyFeaturesList
+  fullName: Dropbox.Api.Team.FeaturesGetValuesBatchError.EmptyFeaturesList
+- uid: Dropbox.Api.Team.FeaturesGetValuesBatchError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.FeaturesGetValuesBatchError.IsOther
+  name: IsOther
+  nameWithType: FeaturesGetValuesBatchError.IsOther
+  fullName: Dropbox.Api.Team.FeaturesGetValuesBatchError.IsOther
+- uid: Dropbox.Api.Team.FeaturesGetValuesBatchError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.FeaturesGetValuesBatchError.AsOther
+  name: AsOther
+  nameWithType: FeaturesGetValuesBatchError.AsOther
+  fullName: Dropbox.Api.Team.FeaturesGetValuesBatchError.AsOther
+- uid: Dropbox.Api.Team.FeaturesGetValuesBatchError.Other
+  commentId: T:Dropbox.Api.Team.FeaturesGetValuesBatchError.Other
+  parent: Dropbox.Api.Team
+  name: FeaturesGetValuesBatchError.Other
+  nameWithType: FeaturesGetValuesBatchError.Other
+  fullName: Dropbox.Api.Team.FeaturesGetValuesBatchError.Other

@@ -1,0 +1,483 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound
+  commentId: T:Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound
+  id: MembersSetPermissions2Error.RoleNotFound
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound.Instance
+  langs:
+  - csharp
+  - vb
+  name: MembersSetPermissions2Error.RoleNotFound
+  nameWithType: MembersSetPermissions2Error.RoleNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: RoleNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 485
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>No matching role found. At least one of the provided new_roles does not exist\non this team.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class RoleNotFound : MembersSetPermissions2Error'
+    content.vb: >-
+      Public NotInheritable Class RoleNotFound
+          Inherits MembersSetPermissions2Error
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MembersSetPermissions2Error
+  inheritedMembers:
+  - Dropbox.Api.Team.MembersSetPermissions2Error.IsLastAdmin
+  - Dropbox.Api.Team.MembersSetPermissions2Error.AsLastAdmin
+  - Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotInTeam
+  - Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotInTeam
+  - Dropbox.Api.Team.MembersSetPermissions2Error.IsCannotSetPermissions
+  - Dropbox.Api.Team.MembersSetPermissions2Error.AsCannotSetPermissions
+  - Dropbox.Api.Team.MembersSetPermissions2Error.IsRoleNotFound
+  - Dropbox.Api.Team.MembersSetPermissions2Error.AsRoleNotFound
+  - Dropbox.Api.Team.MembersSetPermissions2Error.IsOther
+  - Dropbox.Api.Team.MembersSetPermissions2Error.AsOther
+  - Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotFound
+  - Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotFound
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound.Instance
+  commentId: F:Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: MembersSetPermissions2Error.RoleNotFound.Instance
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 510
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of RoleNotFound</p>\n"
+  example: []
+  syntax:
+    content: public static readonly MembersSetPermissions2Error.RoleNotFound Instance
+    return:
+      type: Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound
+    content.vb: Public Shared ReadOnly Instance As MembersSetPermissions2Error.RoleNotFound
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error
+  commentId: T:Dropbox.Api.Team.MembersSetPermissions2Error
+  parent: Dropbox.Api.Team
+  name: MembersSetPermissions2Error
+  nameWithType: MembersSetPermissions2Error
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsLastAdmin
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.IsLastAdmin
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  name: IsLastAdmin
+  nameWithType: MembersSetPermissions2Error.IsLastAdmin
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsLastAdmin
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsLastAdmin
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.AsLastAdmin
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  name: AsLastAdmin
+  nameWithType: MembersSetPermissions2Error.AsLastAdmin
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsLastAdmin
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  name: IsUserNotInTeam
+  nameWithType: MembersSetPermissions2Error.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  name: AsUserNotInTeam
+  nameWithType: MembersSetPermissions2Error.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsCannotSetPermissions
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.IsCannotSetPermissions
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  name: IsCannotSetPermissions
+  nameWithType: MembersSetPermissions2Error.IsCannotSetPermissions
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsCannotSetPermissions
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsCannotSetPermissions
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.AsCannotSetPermissions
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  name: AsCannotSetPermissions
+  nameWithType: MembersSetPermissions2Error.AsCannotSetPermissions
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsCannotSetPermissions
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsRoleNotFound
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.IsRoleNotFound
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  name: IsRoleNotFound
+  nameWithType: MembersSetPermissions2Error.IsRoleNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsRoleNotFound
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsRoleNotFound
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.AsRoleNotFound
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  name: AsRoleNotFound
+  nameWithType: MembersSetPermissions2Error.AsRoleNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsRoleNotFound
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsOther
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.IsOther
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  name: IsOther
+  nameWithType: MembersSetPermissions2Error.IsOther
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsOther
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsOther
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.AsOther
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  name: AsOther
+  nameWithType: MembersSetPermissions2Error.AsOther
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsOther
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotFound
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  name: IsUserNotFound
+  nameWithType: MembersSetPermissions2Error.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotFound
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotFound
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  name: AsUserNotFound
+  nameWithType: MembersSetPermissions2Error.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotFound
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound
+  commentId: T:Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound
+  parent: Dropbox.Api.Team
+  name: MembersSetPermissions2Error.RoleNotFound
+  nameWithType: MembersSetPermissions2Error.RoleNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound

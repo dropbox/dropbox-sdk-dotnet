@@ -1,0 +1,623 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder
+  id: PermissionDeniedReason.FolderIsInsideSharedFolder
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder.Instance
+  langs:
+  - csharp
+  - vb
+  name: PermissionDeniedReason.FolderIsInsideSharedFolder
+  nameWithType: PermissionDeniedReason.FolderIsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FolderIsInsideSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 1424
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Folder is inside of another shared folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class FolderIsInsideSharedFolder : PermissionDeniedReason'
+    content.vb: >-
+      Public NotInheritable Class FolderIsInsideSharedFolder
+          Inherits PermissionDeniedReason
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.PermissionDeniedReason
+  inheritedMembers:
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotSameTeamAsOwner
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotSameTeamAsOwner
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotAllowedByOwner
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotAllowedByOwner
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsIndirectMember
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsIndirectMember
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsOwner
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsOwner
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsSelf
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsSelf
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetNotActive
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetNotActive
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsLimitedTeamFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsLimitedTeamFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsOwnerNotOnTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsOwnerNotOnTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsPermissionDenied
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsPermissionDenied
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsUserAccountType
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsUserAccountType
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotOnTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotOnTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsInsideSharedFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsInsideSharedFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByParentFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByParentFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsInsufficientPlan
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsInsufficientPlan
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsOther
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder.Instance
+  commentId: F:Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PermissionDeniedReason.FolderIsInsideSharedFolder.Instance
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 1449
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of FolderIsInsideSharedFolder</p>\n"
+  example: []
+  syntax:
+    content: public static readonly PermissionDeniedReason.FolderIsInsideSharedFolder Instance
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder
+    content.vb: Public Shared ReadOnly Instance As PermissionDeniedReason.FolderIsInsideSharedFolder
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason
+  nameWithType: PermissionDeniedReason
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotSameTeamAsOwner
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotSameTeamAsOwner
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsUserNotSameTeamAsOwner
+  nameWithType: PermissionDeniedReason.IsUserNotSameTeamAsOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotSameTeamAsOwner
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotSameTeamAsOwner
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotSameTeamAsOwner
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsUserNotSameTeamAsOwner
+  nameWithType: PermissionDeniedReason.AsUserNotSameTeamAsOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotSameTeamAsOwner
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotAllowedByOwner
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotAllowedByOwner
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsUserNotAllowedByOwner
+  nameWithType: PermissionDeniedReason.IsUserNotAllowedByOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotAllowedByOwner
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotAllowedByOwner
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotAllowedByOwner
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsUserNotAllowedByOwner
+  nameWithType: PermissionDeniedReason.AsUserNotAllowedByOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotAllowedByOwner
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsIndirectMember
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsIndirectMember
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsTargetIsIndirectMember
+  nameWithType: PermissionDeniedReason.IsTargetIsIndirectMember
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsIndirectMember
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsIndirectMember
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsIndirectMember
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsTargetIsIndirectMember
+  nameWithType: PermissionDeniedReason.AsTargetIsIndirectMember
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsIndirectMember
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsOwner
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsOwner
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsTargetIsOwner
+  nameWithType: PermissionDeniedReason.IsTargetIsOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsOwner
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsOwner
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsOwner
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsTargetIsOwner
+  nameWithType: PermissionDeniedReason.AsTargetIsOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsOwner
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsSelf
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsSelf
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsTargetIsSelf
+  nameWithType: PermissionDeniedReason.IsTargetIsSelf
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsSelf
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsSelf
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsSelf
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsTargetIsSelf
+  nameWithType: PermissionDeniedReason.AsTargetIsSelf
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsSelf
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetNotActive
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetNotActive
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsTargetNotActive
+  nameWithType: PermissionDeniedReason.IsTargetNotActive
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetNotActive
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetNotActive
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetNotActive
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsTargetNotActive
+  nameWithType: PermissionDeniedReason.AsTargetNotActive
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetNotActive
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsLimitedTeamFolder
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsLimitedTeamFolder
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsFolderIsLimitedTeamFolder
+  nameWithType: PermissionDeniedReason.IsFolderIsLimitedTeamFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsLimitedTeamFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsLimitedTeamFolder
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsLimitedTeamFolder
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsFolderIsLimitedTeamFolder
+  nameWithType: PermissionDeniedReason.AsFolderIsLimitedTeamFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsLimitedTeamFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsOwnerNotOnTeam
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsOwnerNotOnTeam
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsOwnerNotOnTeam
+  nameWithType: PermissionDeniedReason.IsOwnerNotOnTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsOwnerNotOnTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsOwnerNotOnTeam
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsOwnerNotOnTeam
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsOwnerNotOnTeam
+  nameWithType: PermissionDeniedReason.AsOwnerNotOnTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsOwnerNotOnTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsPermissionDenied
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsPermissionDenied
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsPermissionDenied
+  nameWithType: PermissionDeniedReason.IsPermissionDenied
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsPermissionDenied
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsPermissionDenied
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsPermissionDenied
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsPermissionDenied
+  nameWithType: PermissionDeniedReason.AsPermissionDenied
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsPermissionDenied
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByTeam
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByTeam
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsRestrictedByTeam
+  nameWithType: PermissionDeniedReason.IsRestrictedByTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByTeam
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByTeam
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsRestrictedByTeam
+  nameWithType: PermissionDeniedReason.AsRestrictedByTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserAccountType
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsUserAccountType
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsUserAccountType
+  nameWithType: PermissionDeniedReason.IsUserAccountType
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserAccountType
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserAccountType
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsUserAccountType
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsUserAccountType
+  nameWithType: PermissionDeniedReason.AsUserAccountType
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserAccountType
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotOnTeam
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotOnTeam
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsUserNotOnTeam
+  nameWithType: PermissionDeniedReason.IsUserNotOnTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotOnTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotOnTeam
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotOnTeam
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsUserNotOnTeam
+  nameWithType: PermissionDeniedReason.AsUserNotOnTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotOnTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsInsideSharedFolder
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsInsideSharedFolder
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsFolderIsInsideSharedFolder
+  nameWithType: PermissionDeniedReason.IsFolderIsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsInsideSharedFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsInsideSharedFolder
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsInsideSharedFolder
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsFolderIsInsideSharedFolder
+  nameWithType: PermissionDeniedReason.AsFolderIsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsInsideSharedFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByParentFolder
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByParentFolder
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsRestrictedByParentFolder
+  nameWithType: PermissionDeniedReason.IsRestrictedByParentFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByParentFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByParentFolder
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByParentFolder
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsRestrictedByParentFolder
+  nameWithType: PermissionDeniedReason.AsRestrictedByParentFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByParentFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsInsufficientPlan
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsInsufficientPlan
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsInsufficientPlan
+  nameWithType: PermissionDeniedReason.IsInsufficientPlan
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsInsufficientPlan
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsInsufficientPlan
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsInsufficientPlan
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsInsufficientPlan
+  nameWithType: PermissionDeniedReason.AsInsufficientPlan
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsInsufficientPlan
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsOther
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsOther
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: IsOther
+  nameWithType: PermissionDeniedReason.IsOther
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsOther
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsOther
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsOther
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  name: AsOther
+  nameWithType: PermissionDeniedReason.AsOther
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.FolderIsInsideSharedFolder
+  nameWithType: PermissionDeniedReason.FolderIsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder

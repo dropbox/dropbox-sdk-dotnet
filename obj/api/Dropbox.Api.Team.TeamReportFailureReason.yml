@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamReportFailureReason
+  commentId: T:Dropbox.Api.Team.TeamReportFailureReason
+  id: TeamReportFailureReason
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamReportFailureReason.#ctor
+  - Dropbox.Api.Team.TeamReportFailureReason.AsManyReportsAtOnce
+  - Dropbox.Api.Team.TeamReportFailureReason.AsOther
+  - Dropbox.Api.Team.TeamReportFailureReason.AsTemporaryError
+  - Dropbox.Api.Team.TeamReportFailureReason.AsTooMuchData
+  - Dropbox.Api.Team.TeamReportFailureReason.IsManyReportsAtOnce
+  - Dropbox.Api.Team.TeamReportFailureReason.IsOther
+  - Dropbox.Api.Team.TeamReportFailureReason.IsTemporaryError
+  - Dropbox.Api.Team.TeamReportFailureReason.IsTooMuchData
+  langs:
+  - csharp
+  - vb
+  name: TeamReportFailureReason
+  nameWithType: TeamReportFailureReason
+  fullName: Dropbox.Api.Team.TeamReportFailureReason
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TeamReportFailureReason
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team report failure reason object</p>\n"
+  example: []
+  syntax:
+    content: public class TeamReportFailureReason
+    content.vb: Public Class TeamReportFailureReason
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.TeamReportFailureReason.ManyReportsAtOnce
+  - Dropbox.Api.Team.TeamReportFailureReason.Other
+  - Dropbox.Api.Team.TeamReportFailureReason.TemporaryError
+  - Dropbox.Api.Team.TeamReportFailureReason.TooMuchData
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamReportFailureReason.#ctor
+  commentId: M:Dropbox.Api.Team.TeamReportFailureReason.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  langs:
+  - csharp
+  - vb
+  name: TeamReportFailureReason()
+  nameWithType: TeamReportFailureReason.TeamReportFailureReason()
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.TeamReportFailureReason()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamReportFailureReason\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamReportFailureReason()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamReportFailureReason.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamReportFailureReason.IsTemporaryError
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.IsTemporaryError
+  id: IsTemporaryError
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  langs:
+  - csharp
+  - vb
+  name: IsTemporaryError
+  nameWithType: TeamReportFailureReason.IsTemporaryError
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.IsTemporaryError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTemporaryError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is TemporaryError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTemporaryError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTemporaryError As Boolean
+  overload: Dropbox.Api.Team.TeamReportFailureReason.IsTemporaryError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamReportFailureReason.AsTemporaryError
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.AsTemporaryError
+  id: AsTemporaryError
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  langs:
+  - csharp
+  - vb
+  name: AsTemporaryError
+  nameWithType: TeamReportFailureReason.AsTemporaryError
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.AsTemporaryError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTemporaryError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TemporaryError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamReportFailureReason.TemporaryError AsTemporaryError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamReportFailureReason.TemporaryError
+    content.vb: Public ReadOnly Property AsTemporaryError As TeamReportFailureReason.TemporaryError
+  overload: Dropbox.Api.Team.TeamReportFailureReason.AsTemporaryError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamReportFailureReason.IsManyReportsAtOnce
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.IsManyReportsAtOnce
+  id: IsManyReportsAtOnce
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  langs:
+  - csharp
+  - vb
+  name: IsManyReportsAtOnce
+  nameWithType: TeamReportFailureReason.IsManyReportsAtOnce
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.IsManyReportsAtOnce
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsManyReportsAtOnce
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is ManyReportsAtOnce</p>\n"
+  example: []
+  syntax:
+    content: public bool IsManyReportsAtOnce { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsManyReportsAtOnce As Boolean
+  overload: Dropbox.Api.Team.TeamReportFailureReason.IsManyReportsAtOnce*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamReportFailureReason.AsManyReportsAtOnce
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.AsManyReportsAtOnce
+  id: AsManyReportsAtOnce
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  langs:
+  - csharp
+  - vb
+  name: AsManyReportsAtOnce
+  nameWithType: TeamReportFailureReason.AsManyReportsAtOnce
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.AsManyReportsAtOnce
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsManyReportsAtOnce
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a ManyReportsAtOnce, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamReportFailureReason.ManyReportsAtOnce AsManyReportsAtOnce { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamReportFailureReason.ManyReportsAtOnce
+    content.vb: Public ReadOnly Property AsManyReportsAtOnce As TeamReportFailureReason.ManyReportsAtOnce
+  overload: Dropbox.Api.Team.TeamReportFailureReason.AsManyReportsAtOnce*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamReportFailureReason.IsTooMuchData
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.IsTooMuchData
+  id: IsTooMuchData
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  langs:
+  - csharp
+  - vb
+  name: IsTooMuchData
+  nameWithType: TeamReportFailureReason.IsTooMuchData
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.IsTooMuchData
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTooMuchData
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is TooMuchData</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooMuchData { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooMuchData As Boolean
+  overload: Dropbox.Api.Team.TeamReportFailureReason.IsTooMuchData*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamReportFailureReason.AsTooMuchData
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.AsTooMuchData
+  id: AsTooMuchData
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  langs:
+  - csharp
+  - vb
+  name: AsTooMuchData
+  nameWithType: TeamReportFailureReason.AsTooMuchData
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.AsTooMuchData
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTooMuchData
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TooMuchData, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamReportFailureReason.TooMuchData AsTooMuchData { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamReportFailureReason.TooMuchData
+    content.vb: Public ReadOnly Property AsTooMuchData As TeamReportFailureReason.TooMuchData
+  overload: Dropbox.Api.Team.TeamReportFailureReason.AsTooMuchData*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamReportFailureReason.IsOther
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TeamReportFailureReason.IsOther
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.TeamReportFailureReason.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamReportFailureReason.AsOther
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TeamReportFailureReason.AsOther
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamReportFailureReason.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamReportFailureReason.Other
+    content.vb: Public ReadOnly Property AsOther As TeamReportFailureReason.Other
+  overload: Dropbox.Api.Team.TeamReportFailureReason.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.TeamReportFailureReason
+  commentId: T:Dropbox.Api.Team.TeamReportFailureReason
+  parent: Dropbox.Api.Team
+  name: TeamReportFailureReason
+  nameWithType: TeamReportFailureReason
+  fullName: Dropbox.Api.Team.TeamReportFailureReason
+- uid: Dropbox.Api.Team.TeamReportFailureReason.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamReportFailureReason.#ctor
+  name: TeamReportFailureReason
+  nameWithType: TeamReportFailureReason.TeamReportFailureReason
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.TeamReportFailureReason
+- uid: Dropbox.Api.Team.TeamReportFailureReason.IsTemporaryError*
+  commentId: Overload:Dropbox.Api.Team.TeamReportFailureReason.IsTemporaryError
+  name: IsTemporaryError
+  nameWithType: TeamReportFailureReason.IsTemporaryError
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.IsTemporaryError
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.TeamReportFailureReason.AsTemporaryError*
+  commentId: Overload:Dropbox.Api.Team.TeamReportFailureReason.AsTemporaryError
+  name: AsTemporaryError
+  nameWithType: TeamReportFailureReason.AsTemporaryError
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.AsTemporaryError
+- uid: Dropbox.Api.Team.TeamReportFailureReason.TemporaryError
+  commentId: T:Dropbox.Api.Team.TeamReportFailureReason.TemporaryError
+  parent: Dropbox.Api.Team
+  name: TeamReportFailureReason.TemporaryError
+  nameWithType: TeamReportFailureReason.TemporaryError
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.TemporaryError
+- uid: Dropbox.Api.Team.TeamReportFailureReason.IsManyReportsAtOnce*
+  commentId: Overload:Dropbox.Api.Team.TeamReportFailureReason.IsManyReportsAtOnce
+  name: IsManyReportsAtOnce
+  nameWithType: TeamReportFailureReason.IsManyReportsAtOnce
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.IsManyReportsAtOnce
+- uid: Dropbox.Api.Team.TeamReportFailureReason.AsManyReportsAtOnce*
+  commentId: Overload:Dropbox.Api.Team.TeamReportFailureReason.AsManyReportsAtOnce
+  name: AsManyReportsAtOnce
+  nameWithType: TeamReportFailureReason.AsManyReportsAtOnce
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.AsManyReportsAtOnce
+- uid: Dropbox.Api.Team.TeamReportFailureReason.ManyReportsAtOnce
+  commentId: T:Dropbox.Api.Team.TeamReportFailureReason.ManyReportsAtOnce
+  parent: Dropbox.Api.Team
+  name: TeamReportFailureReason.ManyReportsAtOnce
+  nameWithType: TeamReportFailureReason.ManyReportsAtOnce
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.ManyReportsAtOnce
+- uid: Dropbox.Api.Team.TeamReportFailureReason.IsTooMuchData*
+  commentId: Overload:Dropbox.Api.Team.TeamReportFailureReason.IsTooMuchData
+  name: IsTooMuchData
+  nameWithType: TeamReportFailureReason.IsTooMuchData
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.IsTooMuchData
+- uid: Dropbox.Api.Team.TeamReportFailureReason.AsTooMuchData*
+  commentId: Overload:Dropbox.Api.Team.TeamReportFailureReason.AsTooMuchData
+  name: AsTooMuchData
+  nameWithType: TeamReportFailureReason.AsTooMuchData
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.AsTooMuchData
+- uid: Dropbox.Api.Team.TeamReportFailureReason.TooMuchData
+  commentId: T:Dropbox.Api.Team.TeamReportFailureReason.TooMuchData
+  parent: Dropbox.Api.Team
+  name: TeamReportFailureReason.TooMuchData
+  nameWithType: TeamReportFailureReason.TooMuchData
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.TooMuchData
+- uid: Dropbox.Api.Team.TeamReportFailureReason.IsOther*
+  commentId: Overload:Dropbox.Api.Team.TeamReportFailureReason.IsOther
+  name: IsOther
+  nameWithType: TeamReportFailureReason.IsOther
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.IsOther
+- uid: Dropbox.Api.Team.TeamReportFailureReason.AsOther*
+  commentId: Overload:Dropbox.Api.Team.TeamReportFailureReason.AsOther
+  name: AsOther
+  nameWithType: TeamReportFailureReason.AsOther
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.AsOther
+- uid: Dropbox.Api.Team.TeamReportFailureReason.Other
+  commentId: T:Dropbox.Api.Team.TeamReportFailureReason.Other
+  parent: Dropbox.Api.Team
+  name: TeamReportFailureReason.Other
+  nameWithType: TeamReportFailureReason.Other
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.Other

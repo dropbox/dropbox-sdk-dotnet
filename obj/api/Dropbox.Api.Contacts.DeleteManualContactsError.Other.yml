@@ -1,0 +1,427 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.Other
+  commentId: T:Dropbox.Api.Contacts.DeleteManualContactsError.Other
+  id: DeleteManualContactsError.Other
+  parent: Dropbox.Api.Contacts
+  children:
+  - Dropbox.Api.Contacts.DeleteManualContactsError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: DeleteManualContactsError.Other
+  nameWithType: DeleteManualContactsError.Other
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+    startLine: 252
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Contacts
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : DeleteManualContactsError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits DeleteManualContactsError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Contacts.DeleteManualContactsError
+  inheritedMembers:
+  - Dropbox.Api.Contacts.DeleteManualContactsError.IsContactsNotFound
+  - Dropbox.Api.Contacts.DeleteManualContactsError.AsContactsNotFound
+  - Dropbox.Api.Contacts.DeleteManualContactsError.IsOther
+  - Dropbox.Api.Contacts.DeleteManualContactsError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.Other.Instance
+  commentId: F:Dropbox.Api.Contacts.DeleteManualContactsError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Contacts.DeleteManualContactsError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: DeleteManualContactsError.Other.Instance
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+    startLine: 276
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Contacts
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly DeleteManualContactsError.Other Instance
+    return:
+      type: Dropbox.Api.Contacts.DeleteManualContactsError.Other
+    content.vb: Public Shared ReadOnly Instance As DeleteManualContactsError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Contacts
+  commentId: N:Dropbox.Api.Contacts
+  name: Dropbox.Api.Contacts
+  nameWithType: Dropbox.Api.Contacts
+  fullName: Dropbox.Api.Contacts
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError
+  commentId: T:Dropbox.Api.Contacts.DeleteManualContactsError
+  parent: Dropbox.Api.Contacts
+  name: DeleteManualContactsError
+  nameWithType: DeleteManualContactsError
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.IsContactsNotFound
+  commentId: P:Dropbox.Api.Contacts.DeleteManualContactsError.IsContactsNotFound
+  parent: Dropbox.Api.Contacts.DeleteManualContactsError
+  name: IsContactsNotFound
+  nameWithType: DeleteManualContactsError.IsContactsNotFound
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.IsContactsNotFound
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.AsContactsNotFound
+  commentId: P:Dropbox.Api.Contacts.DeleteManualContactsError.AsContactsNotFound
+  parent: Dropbox.Api.Contacts.DeleteManualContactsError
+  name: AsContactsNotFound
+  nameWithType: DeleteManualContactsError.AsContactsNotFound
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.AsContactsNotFound
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.IsOther
+  commentId: P:Dropbox.Api.Contacts.DeleteManualContactsError.IsOther
+  parent: Dropbox.Api.Contacts.DeleteManualContactsError
+  name: IsOther
+  nameWithType: DeleteManualContactsError.IsOther
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.IsOther
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.AsOther
+  commentId: P:Dropbox.Api.Contacts.DeleteManualContactsError.AsOther
+  parent: Dropbox.Api.Contacts.DeleteManualContactsError
+  name: AsOther
+  nameWithType: DeleteManualContactsError.AsOther
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.Other
+  commentId: T:Dropbox.Api.Contacts.DeleteManualContactsError.Other
+  parent: Dropbox.Api.Contacts
+  name: DeleteManualContactsError.Other
+  nameWithType: DeleteManualContactsError.Other
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.Other

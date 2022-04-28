@@ -76,28 +76,39 @@
 <h2 id="submitting-pull-requests">Submitting Pull Requests</h2>
 <p>We are more than happy to recieve pull requests helping us improve the state of our SDK. You can open a new pull request on the <a href="https://github.com/dropbox/dropbox-sdk-dotnet/pulls">GitHub Pull Requests</a> page.</p>
 <ol>
-<li><p>Please ensure that you have read the <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/LICENSE">License</a>, <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a> and have signed the <a href="https://opensource.dropbox.com/cla/">Contributing License Agreement (CLA)</a>.</p>
+<li><p>Please ensure that you have read the <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/LICENSE">License</a>, <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a> and have signed the <a href="https://opensource.dropbox.com/cla/">Contributing License Agreement (CLA)</a>.</p>
 </li>
 <li><p>Please add tests confirming the new functionality works. Pull requests will not be merged without passing continuous integration tests unless the pull requests aims to fix existing issues with these tests.</p>
 </li>
 </ol>
-<h2 id="updating-generated-code">Updating Generated Code</h2>
-<p>Generated code can be updated by running the following code:</p>
-<pre><code>$ git submodule init
-$ git submodule update --remote --recursive
-$ cd stone
-$ python setup.py install
-$ cd ..
-$ python generate.py
-</code></pre><p>Note: the <code>buildall.ps1</code> file also will update generated code so unless you are looking to explicitely test something new, this step is generally unnecessary</p>
-<h2 id="testing-the-code">Testing the Code</h2>
-<p>Tests live under the Dropbox.Api.Tests Project.  Please fill in the dropbox.runsettings file with test tokens in order to successfully make calls to the Dropbox servers.</p>
-<p>The tests are run as a part of the build script we use, this can be run the following way: </p>
-<pre><code>powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings &lt;PATH_TO_TEST_SETTINGS&gt; 
-</code></pre><p>Where test settings is the <code>dropbox.runsettings</code> file mentioned above.</p>
-<p>If you need to test the documentation, you can add the <code>-doc</code> flag to the build command to also generate that.</p>
-<pre><code>powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings &lt;PATH_TO_TEST_SETTINGS&gt; -doc
-</code></pre></article>
+<h2 id="working-with-the-sdk">Working with the SDK</h2>
+<p>This guide is geared towards developing on a Linux machine. Visual Studio may or may not behave as expected.</p>
+<p>You&#39;ll need to install the following tools.</p>
+<ul>
+<li>.NET 5.0</li>
+<li>PowerShell</li>
+</ul>
+<h3 id="building">Building</h3>
+<p>Building using the <code>dotnet</code> CLI is straightforward.</p>
+<pre><code class="lang-sh">dotnet build dropbox-sdk-dotnet/Dropbox.Api/
+</code></pre><h3 id="running-tests">Running tests</h3>
+<p>Testing is also straightforward. Make sure to create <code>dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests/settings.json</code> (see <code>settings.json.example</code> for a template) before running integration tests.</p>
+<pre><code class="lang-sh">dotnet test dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests/
+dotnet test dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests/
+</code></pre><h3 id="linting">Linting</h3>
+<p>You can use <a href="https://github.com/dotnet/format">dotnet-format</a> to lint from the command line.</p>
+<pre><code class="lang-sh"># Install a recent dotnet-format build
+dotnet tool install -g dotnet-format --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
+# Optionally omit `--check` to auto-fix lint issues
+dotnet format --check --fix-whitespace --fix-style info --fix-analyzers info dropbox-sdk-dotnet/
+</code></pre><h3 id="updating-generated-code">Updating Generated Code</h3>
+<p>Install PowerShell and execute <code>./scripts/generate_stone.ps1</code> to regenerate Stone types.</p>
+<pre><code class="lang-sh">git submodule init
+git submodule update --remote --recursive
+./scripts/generate_stone.ps1
+</code></pre><h3 id="cutting-new-versions-for-dropboxers">Cutting New Versions (for Dropboxers)</h3>
+<p>To cut a new version, create a new GitHub release using <code>vX.Y.Z</code> as the tag name. GitHub Actions will automatically build the SDK and publish it to NuGet as version <code>X.Y.Z</code>.</p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

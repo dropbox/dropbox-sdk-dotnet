@@ -1,0 +1,1233 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadSessionLookupError
+  commentId: T:Dropbox.Api.Files.UploadSessionLookupError
+  id: UploadSessionLookupError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadSessionLookupError.#ctor
+  - Dropbox.Api.Files.UploadSessionLookupError.AsClosed
+  - Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidDataSize
+  - Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidOffset
+  - Dropbox.Api.Files.UploadSessionLookupError.AsIncorrectOffset
+  - Dropbox.Api.Files.UploadSessionLookupError.AsNotClosed
+  - Dropbox.Api.Files.UploadSessionLookupError.AsNotFound
+  - Dropbox.Api.Files.UploadSessionLookupError.AsOther
+  - Dropbox.Api.Files.UploadSessionLookupError.AsPayloadTooLarge
+  - Dropbox.Api.Files.UploadSessionLookupError.AsTooLarge
+  - Dropbox.Api.Files.UploadSessionLookupError.IsClosed
+  - Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidDataSize
+  - Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidOffset
+  - Dropbox.Api.Files.UploadSessionLookupError.IsIncorrectOffset
+  - Dropbox.Api.Files.UploadSessionLookupError.IsNotClosed
+  - Dropbox.Api.Files.UploadSessionLookupError.IsNotFound
+  - Dropbox.Api.Files.UploadSessionLookupError.IsOther
+  - Dropbox.Api.Files.UploadSessionLookupError.IsPayloadTooLarge
+  - Dropbox.Api.Files.UploadSessionLookupError.IsTooLarge
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionLookupError
+  nameWithType: UploadSessionLookupError
+  fullName: Dropbox.Api.Files.UploadSessionLookupError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: UploadSessionLookupError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The upload session lookup error object</p>\n"
+  example: []
+  syntax:
+    content: public class UploadSessionLookupError
+    content.vb: Public Class UploadSessionLookupError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.UploadSessionLookupError.Closed
+  - Dropbox.Api.Files.UploadSessionLookupError.ConcurrentSessionInvalidDataSize
+  - Dropbox.Api.Files.UploadSessionLookupError.ConcurrentSessionInvalidOffset
+  - Dropbox.Api.Files.UploadSessionLookupError.IncorrectOffset
+  - Dropbox.Api.Files.UploadSessionLookupError.NotClosed
+  - Dropbox.Api.Files.UploadSessionLookupError.NotFound
+  - Dropbox.Api.Files.UploadSessionLookupError.Other
+  - Dropbox.Api.Files.UploadSessionLookupError.PayloadTooLarge
+  - Dropbox.Api.Files.UploadSessionLookupError.TooLarge
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.UploadSessionLookupError.#ctor
+  commentId: M:Dropbox.Api.Files.UploadSessionLookupError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionLookupError()
+  nameWithType: UploadSessionLookupError.UploadSessionLookupError()
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.UploadSessionLookupError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadSessionLookupError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionLookupError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.UploadSessionLookupError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsNotFound
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.IsNotFound
+  id: IsNotFound
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: IsNotFound
+  nameWithType: UploadSessionLookupError.IsNotFound
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is NotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotFound As Boolean
+  overload: Dropbox.Api.Files.UploadSessionLookupError.IsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsNotFound
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.AsNotFound
+  id: AsNotFound
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: AsNotFound
+  nameWithType: UploadSessionLookupError.AsNotFound
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a NotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionLookupError.NotFound AsNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadSessionLookupError.NotFound
+    content.vb: Public ReadOnly Property AsNotFound As UploadSessionLookupError.NotFound
+  overload: Dropbox.Api.Files.UploadSessionLookupError.AsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsIncorrectOffset
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.IsIncorrectOffset
+  id: IsIncorrectOffset
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: IsIncorrectOffset
+  nameWithType: UploadSessionLookupError.IsIncorrectOffset
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsIncorrectOffset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsIncorrectOffset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is IncorrectOffset</p>\n"
+  example: []
+  syntax:
+    content: public bool IsIncorrectOffset { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIncorrectOffset As Boolean
+  overload: Dropbox.Api.Files.UploadSessionLookupError.IsIncorrectOffset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsIncorrectOffset
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.AsIncorrectOffset
+  id: AsIncorrectOffset
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: AsIncorrectOffset
+  nameWithType: UploadSessionLookupError.AsIncorrectOffset
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsIncorrectOffset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsIncorrectOffset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a IncorrectOffset, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionLookupError.IncorrectOffset AsIncorrectOffset { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadSessionLookupError.IncorrectOffset
+    content.vb: Public ReadOnly Property AsIncorrectOffset As UploadSessionLookupError.IncorrectOffset
+  overload: Dropbox.Api.Files.UploadSessionLookupError.AsIncorrectOffset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsClosed
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.IsClosed
+  id: IsClosed
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: IsClosed
+  nameWithType: UploadSessionLookupError.IsClosed
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsClosed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsClosed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Closed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsClosed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsClosed As Boolean
+  overload: Dropbox.Api.Files.UploadSessionLookupError.IsClosed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsClosed
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.AsClosed
+  id: AsClosed
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: AsClosed
+  nameWithType: UploadSessionLookupError.AsClosed
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsClosed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsClosed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Closed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionLookupError.Closed AsClosed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadSessionLookupError.Closed
+    content.vb: Public ReadOnly Property AsClosed As UploadSessionLookupError.Closed
+  overload: Dropbox.Api.Files.UploadSessionLookupError.AsClosed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsNotClosed
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.IsNotClosed
+  id: IsNotClosed
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: IsNotClosed
+  nameWithType: UploadSessionLookupError.IsNotClosed
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsNotClosed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNotClosed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is NotClosed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotClosed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotClosed As Boolean
+  overload: Dropbox.Api.Files.UploadSessionLookupError.IsNotClosed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsNotClosed
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.AsNotClosed
+  id: AsNotClosed
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: AsNotClosed
+  nameWithType: UploadSessionLookupError.AsNotClosed
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsNotClosed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNotClosed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a NotClosed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionLookupError.NotClosed AsNotClosed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadSessionLookupError.NotClosed
+    content.vb: Public ReadOnly Property AsNotClosed As UploadSessionLookupError.NotClosed
+  overload: Dropbox.Api.Files.UploadSessionLookupError.AsNotClosed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsTooLarge
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.IsTooLarge
+  id: IsTooLarge
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: IsTooLarge
+  nameWithType: UploadSessionLookupError.IsTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsTooLarge
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTooLarge
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is TooLarge</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooLarge { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooLarge As Boolean
+  overload: Dropbox.Api.Files.UploadSessionLookupError.IsTooLarge*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsTooLarge
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.AsTooLarge
+  id: AsTooLarge
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: AsTooLarge
+  nameWithType: UploadSessionLookupError.AsTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsTooLarge
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTooLarge
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a TooLarge, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionLookupError.TooLarge AsTooLarge { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadSessionLookupError.TooLarge
+    content.vb: Public ReadOnly Property AsTooLarge As UploadSessionLookupError.TooLarge
+  overload: Dropbox.Api.Files.UploadSessionLookupError.AsTooLarge*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidOffset
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidOffset
+  id: IsConcurrentSessionInvalidOffset
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: IsConcurrentSessionInvalidOffset
+  nameWithType: UploadSessionLookupError.IsConcurrentSessionInvalidOffset
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidOffset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsConcurrentSessionInvalidOffset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 151
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is\nConcurrentSessionInvalidOffset</p>\n"
+  example: []
+  syntax:
+    content: public bool IsConcurrentSessionInvalidOffset { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsConcurrentSessionInvalidOffset As Boolean
+  overload: Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidOffset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidOffset
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidOffset
+  id: AsConcurrentSessionInvalidOffset
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: AsConcurrentSessionInvalidOffset
+  nameWithType: UploadSessionLookupError.AsConcurrentSessionInvalidOffset
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidOffset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsConcurrentSessionInvalidOffset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 163
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a ConcurrentSessionInvalidOffset, or\n<code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionLookupError.ConcurrentSessionInvalidOffset AsConcurrentSessionInvalidOffset { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadSessionLookupError.ConcurrentSessionInvalidOffset
+    content.vb: Public ReadOnly Property AsConcurrentSessionInvalidOffset As UploadSessionLookupError.ConcurrentSessionInvalidOffset
+  overload: Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidOffset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidDataSize
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidDataSize
+  id: IsConcurrentSessionInvalidDataSize
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: IsConcurrentSessionInvalidDataSize
+  nameWithType: UploadSessionLookupError.IsConcurrentSessionInvalidDataSize
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidDataSize
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsConcurrentSessionInvalidDataSize
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 175
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is\nConcurrentSessionInvalidDataSize</p>\n"
+  example: []
+  syntax:
+    content: public bool IsConcurrentSessionInvalidDataSize { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsConcurrentSessionInvalidDataSize As Boolean
+  overload: Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidDataSize*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidDataSize
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidDataSize
+  id: AsConcurrentSessionInvalidDataSize
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: AsConcurrentSessionInvalidDataSize
+  nameWithType: UploadSessionLookupError.AsConcurrentSessionInvalidDataSize
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidDataSize
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsConcurrentSessionInvalidDataSize
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 187
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a ConcurrentSessionInvalidDataSize, or\n<code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionLookupError.ConcurrentSessionInvalidDataSize AsConcurrentSessionInvalidDataSize { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadSessionLookupError.ConcurrentSessionInvalidDataSize
+    content.vb: Public ReadOnly Property AsConcurrentSessionInvalidDataSize As UploadSessionLookupError.ConcurrentSessionInvalidDataSize
+  overload: Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidDataSize*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsPayloadTooLarge
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.IsPayloadTooLarge
+  id: IsPayloadTooLarge
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: IsPayloadTooLarge
+  nameWithType: UploadSessionLookupError.IsPayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsPayloadTooLarge
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPayloadTooLarge
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 198
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is PayloadTooLarge</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPayloadTooLarge { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPayloadTooLarge As Boolean
+  overload: Dropbox.Api.Files.UploadSessionLookupError.IsPayloadTooLarge*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsPayloadTooLarge
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.AsPayloadTooLarge
+  id: AsPayloadTooLarge
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: AsPayloadTooLarge
+  nameWithType: UploadSessionLookupError.AsPayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsPayloadTooLarge
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPayloadTooLarge
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 209
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a PayloadTooLarge, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionLookupError.PayloadTooLarge AsPayloadTooLarge { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadSessionLookupError.PayloadTooLarge
+    content.vb: Public ReadOnly Property AsPayloadTooLarge As UploadSessionLookupError.PayloadTooLarge
+  overload: Dropbox.Api.Files.UploadSessionLookupError.AsPayloadTooLarge*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsOther
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: UploadSessionLookupError.IsOther
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 220
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.UploadSessionLookupError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsOther
+  commentId: P:Dropbox.Api.Files.UploadSessionLookupError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.UploadSessionLookupError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: UploadSessionLookupError.AsOther
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionLookupError.cs
+    startLine: 231
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionLookupError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadSessionLookupError.Other
+    content.vb: Public ReadOnly Property AsOther As UploadSessionLookupError.Other
+  overload: Dropbox.Api.Files.UploadSessionLookupError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.UploadSessionLookupError
+  commentId: T:Dropbox.Api.Files.UploadSessionLookupError
+  parent: Dropbox.Api.Files
+  name: UploadSessionLookupError
+  nameWithType: UploadSessionLookupError
+  fullName: Dropbox.Api.Files.UploadSessionLookupError
+- uid: Dropbox.Api.Files.UploadSessionLookupError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.#ctor
+  name: UploadSessionLookupError
+  nameWithType: UploadSessionLookupError.UploadSessionLookupError
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.UploadSessionLookupError
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsNotFound*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.IsNotFound
+  name: IsNotFound
+  nameWithType: UploadSessionLookupError.IsNotFound
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsNotFound
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsNotFound*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.AsNotFound
+  name: AsNotFound
+  nameWithType: UploadSessionLookupError.AsNotFound
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsNotFound
+- uid: Dropbox.Api.Files.UploadSessionLookupError.NotFound
+  commentId: T:Dropbox.Api.Files.UploadSessionLookupError.NotFound
+  parent: Dropbox.Api.Files
+  name: UploadSessionLookupError.NotFound
+  nameWithType: UploadSessionLookupError.NotFound
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.NotFound
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsIncorrectOffset*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.IsIncorrectOffset
+  name: IsIncorrectOffset
+  nameWithType: UploadSessionLookupError.IsIncorrectOffset
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsIncorrectOffset
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsIncorrectOffset*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.AsIncorrectOffset
+  name: AsIncorrectOffset
+  nameWithType: UploadSessionLookupError.AsIncorrectOffset
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsIncorrectOffset
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IncorrectOffset
+  commentId: T:Dropbox.Api.Files.UploadSessionLookupError.IncorrectOffset
+  parent: Dropbox.Api.Files
+  name: UploadSessionLookupError.IncorrectOffset
+  nameWithType: UploadSessionLookupError.IncorrectOffset
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IncorrectOffset
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsClosed*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.IsClosed
+  name: IsClosed
+  nameWithType: UploadSessionLookupError.IsClosed
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsClosed
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsClosed*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.AsClosed
+  name: AsClosed
+  nameWithType: UploadSessionLookupError.AsClosed
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsClosed
+- uid: Dropbox.Api.Files.UploadSessionLookupError.Closed
+  commentId: T:Dropbox.Api.Files.UploadSessionLookupError.Closed
+  parent: Dropbox.Api.Files
+  name: UploadSessionLookupError.Closed
+  nameWithType: UploadSessionLookupError.Closed
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.Closed
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsNotClosed*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.IsNotClosed
+  name: IsNotClosed
+  nameWithType: UploadSessionLookupError.IsNotClosed
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsNotClosed
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsNotClosed*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.AsNotClosed
+  name: AsNotClosed
+  nameWithType: UploadSessionLookupError.AsNotClosed
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsNotClosed
+- uid: Dropbox.Api.Files.UploadSessionLookupError.NotClosed
+  commentId: T:Dropbox.Api.Files.UploadSessionLookupError.NotClosed
+  parent: Dropbox.Api.Files
+  name: UploadSessionLookupError.NotClosed
+  nameWithType: UploadSessionLookupError.NotClosed
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.NotClosed
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsTooLarge*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.IsTooLarge
+  name: IsTooLarge
+  nameWithType: UploadSessionLookupError.IsTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsTooLarge
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsTooLarge*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.AsTooLarge
+  name: AsTooLarge
+  nameWithType: UploadSessionLookupError.AsTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsTooLarge
+- uid: Dropbox.Api.Files.UploadSessionLookupError.TooLarge
+  commentId: T:Dropbox.Api.Files.UploadSessionLookupError.TooLarge
+  parent: Dropbox.Api.Files
+  name: UploadSessionLookupError.TooLarge
+  nameWithType: UploadSessionLookupError.TooLarge
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.TooLarge
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidOffset*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidOffset
+  name: IsConcurrentSessionInvalidOffset
+  nameWithType: UploadSessionLookupError.IsConcurrentSessionInvalidOffset
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidOffset
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidOffset*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidOffset
+  name: AsConcurrentSessionInvalidOffset
+  nameWithType: UploadSessionLookupError.AsConcurrentSessionInvalidOffset
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidOffset
+- uid: Dropbox.Api.Files.UploadSessionLookupError.ConcurrentSessionInvalidOffset
+  commentId: T:Dropbox.Api.Files.UploadSessionLookupError.ConcurrentSessionInvalidOffset
+  parent: Dropbox.Api.Files
+  name: UploadSessionLookupError.ConcurrentSessionInvalidOffset
+  nameWithType: UploadSessionLookupError.ConcurrentSessionInvalidOffset
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.ConcurrentSessionInvalidOffset
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidDataSize*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidDataSize
+  name: IsConcurrentSessionInvalidDataSize
+  nameWithType: UploadSessionLookupError.IsConcurrentSessionInvalidDataSize
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsConcurrentSessionInvalidDataSize
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidDataSize*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidDataSize
+  name: AsConcurrentSessionInvalidDataSize
+  nameWithType: UploadSessionLookupError.AsConcurrentSessionInvalidDataSize
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsConcurrentSessionInvalidDataSize
+- uid: Dropbox.Api.Files.UploadSessionLookupError.ConcurrentSessionInvalidDataSize
+  commentId: T:Dropbox.Api.Files.UploadSessionLookupError.ConcurrentSessionInvalidDataSize
+  parent: Dropbox.Api.Files
+  name: UploadSessionLookupError.ConcurrentSessionInvalidDataSize
+  nameWithType: UploadSessionLookupError.ConcurrentSessionInvalidDataSize
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.ConcurrentSessionInvalidDataSize
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsPayloadTooLarge*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.IsPayloadTooLarge
+  name: IsPayloadTooLarge
+  nameWithType: UploadSessionLookupError.IsPayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsPayloadTooLarge
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsPayloadTooLarge*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.AsPayloadTooLarge
+  name: AsPayloadTooLarge
+  nameWithType: UploadSessionLookupError.AsPayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsPayloadTooLarge
+- uid: Dropbox.Api.Files.UploadSessionLookupError.PayloadTooLarge
+  commentId: T:Dropbox.Api.Files.UploadSessionLookupError.PayloadTooLarge
+  parent: Dropbox.Api.Files
+  name: UploadSessionLookupError.PayloadTooLarge
+  nameWithType: UploadSessionLookupError.PayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.PayloadTooLarge
+- uid: Dropbox.Api.Files.UploadSessionLookupError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.IsOther
+  name: IsOther
+  nameWithType: UploadSessionLookupError.IsOther
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.IsOther
+- uid: Dropbox.Api.Files.UploadSessionLookupError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionLookupError.AsOther
+  name: AsOther
+  nameWithType: UploadSessionLookupError.AsOther
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.AsOther
+- uid: Dropbox.Api.Files.UploadSessionLookupError.Other
+  commentId: T:Dropbox.Api.Files.UploadSessionLookupError.Other
+  parent: Dropbox.Api.Files
+  name: UploadSessionLookupError.Other
+  nameWithType: UploadSessionLookupError.Other
+  fullName: Dropbox.Api.Files.UploadSessionLookupError.Other

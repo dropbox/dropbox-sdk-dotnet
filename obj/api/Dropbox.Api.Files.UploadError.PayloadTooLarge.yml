@@ -1,0 +1,469 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadError.PayloadTooLarge
+  commentId: T:Dropbox.Api.Files.UploadError.PayloadTooLarge
+  id: UploadError.PayloadTooLarge
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadError.PayloadTooLarge.Instance
+  langs:
+  - csharp
+  - vb
+  name: UploadError.PayloadTooLarge
+  nameWithType: UploadError.PayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadError.PayloadTooLarge
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PayloadTooLarge
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 427
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The request payload must be at most 150 MB.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class PayloadTooLarge : UploadError'
+    content.vb: >-
+      Public NotInheritable Class PayloadTooLarge
+          Inherits UploadError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.UploadError
+  inheritedMembers:
+  - Dropbox.Api.Files.UploadError.IsPath
+  - Dropbox.Api.Files.UploadError.AsPath
+  - Dropbox.Api.Files.UploadError.IsPropertiesError
+  - Dropbox.Api.Files.UploadError.AsPropertiesError
+  - Dropbox.Api.Files.UploadError.IsPayloadTooLarge
+  - Dropbox.Api.Files.UploadError.AsPayloadTooLarge
+  - Dropbox.Api.Files.UploadError.IsContentHashMismatch
+  - Dropbox.Api.Files.UploadError.AsContentHashMismatch
+  - Dropbox.Api.Files.UploadError.IsOther
+  - Dropbox.Api.Files.UploadError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.UploadError.PayloadTooLarge.Instance
+  commentId: F:Dropbox.Api.Files.UploadError.PayloadTooLarge.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.UploadError.PayloadTooLarge
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: UploadError.PayloadTooLarge.Instance
+  fullName: Dropbox.Api.Files.UploadError.PayloadTooLarge.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 452
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of PayloadTooLarge</p>\n"
+  example: []
+  syntax:
+    content: public static readonly UploadError.PayloadTooLarge Instance
+    return:
+      type: Dropbox.Api.Files.UploadError.PayloadTooLarge
+    content.vb: Public Shared ReadOnly Instance As UploadError.PayloadTooLarge
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.UploadError
+  commentId: T:Dropbox.Api.Files.UploadError
+  parent: Dropbox.Api.Files
+  name: UploadError
+  nameWithType: UploadError
+  fullName: Dropbox.Api.Files.UploadError
+- uid: Dropbox.Api.Files.UploadError.IsPath
+  commentId: P:Dropbox.Api.Files.UploadError.IsPath
+  parent: Dropbox.Api.Files.UploadError
+  name: IsPath
+  nameWithType: UploadError.IsPath
+  fullName: Dropbox.Api.Files.UploadError.IsPath
+- uid: Dropbox.Api.Files.UploadError.AsPath
+  commentId: P:Dropbox.Api.Files.UploadError.AsPath
+  parent: Dropbox.Api.Files.UploadError
+  name: AsPath
+  nameWithType: UploadError.AsPath
+  fullName: Dropbox.Api.Files.UploadError.AsPath
+- uid: Dropbox.Api.Files.UploadError.IsPropertiesError
+  commentId: P:Dropbox.Api.Files.UploadError.IsPropertiesError
+  parent: Dropbox.Api.Files.UploadError
+  name: IsPropertiesError
+  nameWithType: UploadError.IsPropertiesError
+  fullName: Dropbox.Api.Files.UploadError.IsPropertiesError
+- uid: Dropbox.Api.Files.UploadError.AsPropertiesError
+  commentId: P:Dropbox.Api.Files.UploadError.AsPropertiesError
+  parent: Dropbox.Api.Files.UploadError
+  name: AsPropertiesError
+  nameWithType: UploadError.AsPropertiesError
+  fullName: Dropbox.Api.Files.UploadError.AsPropertiesError
+- uid: Dropbox.Api.Files.UploadError.IsPayloadTooLarge
+  commentId: P:Dropbox.Api.Files.UploadError.IsPayloadTooLarge
+  parent: Dropbox.Api.Files.UploadError
+  name: IsPayloadTooLarge
+  nameWithType: UploadError.IsPayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadError.IsPayloadTooLarge
+- uid: Dropbox.Api.Files.UploadError.AsPayloadTooLarge
+  commentId: P:Dropbox.Api.Files.UploadError.AsPayloadTooLarge
+  parent: Dropbox.Api.Files.UploadError
+  name: AsPayloadTooLarge
+  nameWithType: UploadError.AsPayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadError.AsPayloadTooLarge
+- uid: Dropbox.Api.Files.UploadError.IsContentHashMismatch
+  commentId: P:Dropbox.Api.Files.UploadError.IsContentHashMismatch
+  parent: Dropbox.Api.Files.UploadError
+  name: IsContentHashMismatch
+  nameWithType: UploadError.IsContentHashMismatch
+  fullName: Dropbox.Api.Files.UploadError.IsContentHashMismatch
+- uid: Dropbox.Api.Files.UploadError.AsContentHashMismatch
+  commentId: P:Dropbox.Api.Files.UploadError.AsContentHashMismatch
+  parent: Dropbox.Api.Files.UploadError
+  name: AsContentHashMismatch
+  nameWithType: UploadError.AsContentHashMismatch
+  fullName: Dropbox.Api.Files.UploadError.AsContentHashMismatch
+- uid: Dropbox.Api.Files.UploadError.IsOther
+  commentId: P:Dropbox.Api.Files.UploadError.IsOther
+  parent: Dropbox.Api.Files.UploadError
+  name: IsOther
+  nameWithType: UploadError.IsOther
+  fullName: Dropbox.Api.Files.UploadError.IsOther
+- uid: Dropbox.Api.Files.UploadError.AsOther
+  commentId: P:Dropbox.Api.Files.UploadError.AsOther
+  parent: Dropbox.Api.Files.UploadError
+  name: AsOther
+  nameWithType: UploadError.AsOther
+  fullName: Dropbox.Api.Files.UploadError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.UploadError.PayloadTooLarge
+  commentId: T:Dropbox.Api.Files.UploadError.PayloadTooLarge
+  parent: Dropbox.Api.Files
+  name: UploadError.PayloadTooLarge
+  nameWithType: UploadError.PayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadError.PayloadTooLarge

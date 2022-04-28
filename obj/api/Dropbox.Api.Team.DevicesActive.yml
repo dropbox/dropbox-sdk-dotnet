@@ -1,0 +1,968 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.DevicesActive
+  commentId: T:Dropbox.Api.Team.DevicesActive
+  id: DevicesActive
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.DevicesActive.#ctor(System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}})
+  - Dropbox.Api.Team.DevicesActive.Android
+  - Dropbox.Api.Team.DevicesActive.Ios
+  - Dropbox.Api.Team.DevicesActive.Linux
+  - Dropbox.Api.Team.DevicesActive.Macos
+  - Dropbox.Api.Team.DevicesActive.Other
+  - Dropbox.Api.Team.DevicesActive.Total
+  - Dropbox.Api.Team.DevicesActive.Windows
+  langs:
+  - csharp
+  - vb
+  name: DevicesActive
+  nameWithType: DevicesActive
+  fullName: Dropbox.Api.Team.DevicesActive
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: DevicesActive
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Each of the items is an array of values, one value per day. The value is the\nnumber of devices active within a time window, ending with that day.</p>\n<p>If there is no data for a day, then the value will be None.</p>\n"
+  example: []
+  syntax:
+    content: public class DevicesActive
+    content.vb: Public Class DevicesActive
+  seealso:
+  - linkId: Dropbox.Api.Team.GetDevicesReport
+    commentId: T:Dropbox.Api.Team.GetDevicesReport
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.DevicesActive.#ctor(System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}})
+  commentId: M:Dropbox.Api.Team.DevicesActive.#ctor(System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}})'
+  parent: Dropbox.Api.Team.DevicesActive
+  langs:
+  - csharp
+  - vb
+  name: DevicesActive(IEnumerable<Nullable<UInt64>>, IEnumerable<Nullable<UInt64>>, IEnumerable<Nullable<UInt64>>, IEnumerable<Nullable<UInt64>>, IEnumerable<Nullable<UInt64>>, IEnumerable<Nullable<UInt64>>, IEnumerable<Nullable<UInt64>>)
+  nameWithType: DevicesActive.DevicesActive(IEnumerable<Nullable<UInt64>>, IEnumerable<Nullable<UInt64>>, IEnumerable<Nullable<UInt64>>, IEnumerable<Nullable<UInt64>>, IEnumerable<Nullable<UInt64>>, IEnumerable<Nullable<UInt64>>, IEnumerable<Nullable<UInt64>>)
+  fullName: Dropbox.Api.Team.DevicesActive.DevicesActive(System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+    startLine: 47
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.DevicesActive\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DevicesActive(IEnumerable<ulong?> windows, IEnumerable<ulong?> macos, IEnumerable<ulong?> linux, IEnumerable<ulong?> ios, IEnumerable<ulong?> android, IEnumerable<ulong?> other, IEnumerable<ulong?> total)
+    parameters:
+    - id: windows
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: >-
+        Array of number of linked windows (desktop) clients with
+
+        activity.
+    - id: macos
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: >-
+        Array of number of linked mac (desktop) clients with
+
+        activity.
+    - id: linux
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: >-
+        Array of number of linked linus (desktop) clients with
+
+        activity.
+    - id: ios
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: Array of number of linked ios devices with activity.
+    - id: android
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: >-
+        Array of number of linked android devices with
+
+        activity.
+    - id: other
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: >-
+        Array of number of other linked devices (blackberry, windows
+
+        phone, etc)  with activity.
+    - id: total
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: Array of total number of linked clients with activity.
+    content.vb: Public Sub New(windows As IEnumerable(Of ULong?), macos As IEnumerable(Of ULong?), linux As IEnumerable(Of ULong?), ios As IEnumerable(Of ULong?), android As IEnumerable(Of ULong?), other As IEnumerable(Of ULong?), total As IEnumerable(Of ULong?))
+  overload: Dropbox.Api.Team.DevicesActive.#ctor*
+  nameWithType.vb: DevicesActive.DevicesActive(IEnumerable(Of Nullable(Of UInt64)), IEnumerable(Of Nullable(Of UInt64)), IEnumerable(Of Nullable(Of UInt64)), IEnumerable(Of Nullable(Of UInt64)), IEnumerable(Of Nullable(Of UInt64)), IEnumerable(Of Nullable(Of UInt64)), IEnumerable(Of Nullable(Of UInt64)))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.DevicesActive.DevicesActive(System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)), System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)), System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)), System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)), System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)), System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)), System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)))
+  name.vb: DevicesActive(IEnumerable(Of Nullable(Of UInt64)), IEnumerable(Of Nullable(Of UInt64)), IEnumerable(Of Nullable(Of UInt64)), IEnumerable(Of Nullable(Of UInt64)), IEnumerable(Of Nullable(Of UInt64)), IEnumerable(Of Nullable(Of UInt64)), IEnumerable(Of Nullable(Of UInt64)))
+- uid: Dropbox.Api.Team.DevicesActive.Windows
+  commentId: P:Dropbox.Api.Team.DevicesActive.Windows
+  id: Windows
+  parent: Dropbox.Api.Team.DevicesActive
+  langs:
+  - csharp
+  - vb
+  name: Windows
+  nameWithType: DevicesActive.Windows
+  fullName: Dropbox.Api.Team.DevicesActive.Windows
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Windows
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+    startLine: 126
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Array of number of linked windows (desktop) clients with activity.</p>\n"
+  example: []
+  syntax:
+    content: public IList<ulong?> Windows { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property Windows As IList(Of ULong?)
+  overload: Dropbox.Api.Team.DevicesActive.Windows*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.DevicesActive.Macos
+  commentId: P:Dropbox.Api.Team.DevicesActive.Macos
+  id: Macos
+  parent: Dropbox.Api.Team.DevicesActive
+  langs:
+  - csharp
+  - vb
+  name: Macos
+  nameWithType: DevicesActive.Macos
+  fullName: Dropbox.Api.Team.DevicesActive.Macos
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Macos
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+    startLine: 131
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Array of number of linked mac (desktop) clients with activity.</p>\n"
+  example: []
+  syntax:
+    content: public IList<ulong?> Macos { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property Macos As IList(Of ULong?)
+  overload: Dropbox.Api.Team.DevicesActive.Macos*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.DevicesActive.Linux
+  commentId: P:Dropbox.Api.Team.DevicesActive.Linux
+  id: Linux
+  parent: Dropbox.Api.Team.DevicesActive
+  langs:
+  - csharp
+  - vb
+  name: Linux
+  nameWithType: DevicesActive.Linux
+  fullName: Dropbox.Api.Team.DevicesActive.Linux
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Linux
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+    startLine: 136
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Array of number of linked linus (desktop) clients with activity.</p>\n"
+  example: []
+  syntax:
+    content: public IList<ulong?> Linux { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property Linux As IList(Of ULong?)
+  overload: Dropbox.Api.Team.DevicesActive.Linux*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.DevicesActive.Ios
+  commentId: P:Dropbox.Api.Team.DevicesActive.Ios
+  id: Ios
+  parent: Dropbox.Api.Team.DevicesActive
+  langs:
+  - csharp
+  - vb
+  name: Ios
+  nameWithType: DevicesActive.Ios
+  fullName: Dropbox.Api.Team.DevicesActive.Ios
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Ios
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+    startLine: 141
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Array of number of linked ios devices with activity.</p>\n"
+  example: []
+  syntax:
+    content: public IList<ulong?> Ios { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property Ios As IList(Of ULong?)
+  overload: Dropbox.Api.Team.DevicesActive.Ios*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.DevicesActive.Android
+  commentId: P:Dropbox.Api.Team.DevicesActive.Android
+  id: Android
+  parent: Dropbox.Api.Team.DevicesActive
+  langs:
+  - csharp
+  - vb
+  name: Android
+  nameWithType: DevicesActive.Android
+  fullName: Dropbox.Api.Team.DevicesActive.Android
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Android
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+    startLine: 146
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Array of number of linked android devices with activity.</p>\n"
+  example: []
+  syntax:
+    content: public IList<ulong?> Android { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property Android As IList(Of ULong?)
+  overload: Dropbox.Api.Team.DevicesActive.Android*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.DevicesActive.Other
+  commentId: P:Dropbox.Api.Team.DevicesActive.Other
+  id: Other
+  parent: Dropbox.Api.Team.DevicesActive
+  langs:
+  - csharp
+  - vb
+  name: Other
+  nameWithType: DevicesActive.Other
+  fullName: Dropbox.Api.Team.DevicesActive.Other
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+    startLine: 152
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Array of number of other linked devices (blackberry, windows phone, etc)\nwith activity.</p>\n"
+  example: []
+  syntax:
+    content: public IList<ulong?> Other { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property Other As IList(Of ULong?)
+  overload: Dropbox.Api.Team.DevicesActive.Other*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.DevicesActive.Total
+  commentId: P:Dropbox.Api.Team.DevicesActive.Total
+  id: Total
+  parent: Dropbox.Api.Team.DevicesActive
+  langs:
+  - csharp
+  - vb
+  name: Total
+  nameWithType: DevicesActive.Total
+  fullName: Dropbox.Api.Team.DevicesActive.Total
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Total
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DevicesActive.cs
+    startLine: 157
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Array of total number of linked clients with activity.</p>\n"
+  example: []
+  syntax:
+    content: public IList<ulong?> Total { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property Total As IList(Of ULong?)
+  overload: Dropbox.Api.Team.DevicesActive.Total*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team.GetDevicesReport
+  commentId: T:Dropbox.Api.Team.GetDevicesReport
+  parent: Dropbox.Api.Team
+  name: GetDevicesReport
+  nameWithType: GetDevicesReport
+  fullName: Dropbox.Api.Team.GetDevicesReport
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.DevicesActive
+  commentId: T:Dropbox.Api.Team.DevicesActive
+  parent: Dropbox.Api.Team
+  name: DevicesActive
+  nameWithType: DevicesActive
+  fullName: Dropbox.Api.Team.DevicesActive
+- uid: Dropbox.Api.Team.DevicesActive.#ctor*
+  commentId: Overload:Dropbox.Api.Team.DevicesActive.#ctor
+  name: DevicesActive
+  nameWithType: DevicesActive.DevicesActive
+  fullName: Dropbox.Api.Team.DevicesActive.DevicesActive
+- uid: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Nullable<UInt64>>
+  nameWithType: IEnumerable<Nullable<UInt64>>
+  fullName: System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>
+  nameWithType.vb: IEnumerable(Of Nullable(Of UInt64))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64))
+  name.vb: IEnumerable(Of Nullable(Of UInt64))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Dropbox.Api.Team.DevicesActive.Windows*
+  commentId: Overload:Dropbox.Api.Team.DevicesActive.Windows
+  name: Windows
+  nameWithType: DevicesActive.Windows
+  fullName: Dropbox.Api.Team.DevicesActive.Windows
+- uid: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+  commentId: T:System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<Nullable<UInt64>>
+  nameWithType: IList<Nullable<UInt64>>
+  fullName: System.Collections.Generic.IList<System.Nullable<System.UInt64>>
+  nameWithType.vb: IList(Of Nullable(Of UInt64))
+  fullName.vb: System.Collections.Generic.IList(Of System.Nullable(Of System.UInt64))
+  name.vb: IList(Of Nullable(Of UInt64))
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.DevicesActive.Macos*
+  commentId: Overload:Dropbox.Api.Team.DevicesActive.Macos
+  name: Macos
+  nameWithType: DevicesActive.Macos
+  fullName: Dropbox.Api.Team.DevicesActive.Macos
+- uid: Dropbox.Api.Team.DevicesActive.Linux*
+  commentId: Overload:Dropbox.Api.Team.DevicesActive.Linux
+  name: Linux
+  nameWithType: DevicesActive.Linux
+  fullName: Dropbox.Api.Team.DevicesActive.Linux
+- uid: Dropbox.Api.Team.DevicesActive.Ios*
+  commentId: Overload:Dropbox.Api.Team.DevicesActive.Ios
+  name: Ios
+  nameWithType: DevicesActive.Ios
+  fullName: Dropbox.Api.Team.DevicesActive.Ios
+- uid: Dropbox.Api.Team.DevicesActive.Android*
+  commentId: Overload:Dropbox.Api.Team.DevicesActive.Android
+  name: Android
+  nameWithType: DevicesActive.Android
+  fullName: Dropbox.Api.Team.DevicesActive.Android
+- uid: Dropbox.Api.Team.DevicesActive.Other*
+  commentId: Overload:Dropbox.Api.Team.DevicesActive.Other
+  name: Other
+  nameWithType: DevicesActive.Other
+  fullName: Dropbox.Api.Team.DevicesActive.Other
+- uid: Dropbox.Api.Team.DevicesActive.Total*
+  commentId: Overload:Dropbox.Api.Team.DevicesActive.Total
+  name: Total
+  nameWithType: DevicesActive.Total
+  fullName: Dropbox.Api.Team.DevicesActive.Total

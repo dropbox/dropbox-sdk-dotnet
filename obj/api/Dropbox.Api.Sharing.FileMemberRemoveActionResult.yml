@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult
+  commentId: T:Dropbox.Api.Sharing.FileMemberRemoveActionResult
+  id: FileMemberRemoveActionResult
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.FileMemberRemoveActionResult.#ctor
+  - Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsMemberError
+  - Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsOther
+  - Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsSuccess
+  - Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsMemberError
+  - Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsOther
+  - Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsSuccess
+  langs:
+  - csharp
+  - vb
+  name: FileMemberRemoveActionResult
+  nameWithType: FileMemberRemoveActionResult
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FileMemberRemoveActionResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The file member remove action result object</p>\n"
+  example: []
+  syntax:
+    content: public class FileMemberRemoveActionResult
+    content.vb: Public Class FileMemberRemoveActionResult
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.FileMemberRemoveActionResult.MemberError
+  - Dropbox.Api.Sharing.FileMemberRemoveActionResult.Other
+  - Dropbox.Api.Sharing.FileMemberRemoveActionResult.Success
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.#ctor
+  commentId: M:Dropbox.Api.Sharing.FileMemberRemoveActionResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.FileMemberRemoveActionResult
+  langs:
+  - csharp
+  - vb
+  name: FileMemberRemoveActionResult()
+  nameWithType: FileMemberRemoveActionResult.FileMemberRemoveActionResult()
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.FileMemberRemoveActionResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.FileMemberRemoveActionResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileMemberRemoveActionResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.FileMemberRemoveActionResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsSuccess
+  commentId: P:Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsSuccess
+  id: IsSuccess
+  parent: Dropbox.Api.Sharing.FileMemberRemoveActionResult
+  langs:
+  - csharp
+  - vb
+  name: IsSuccess
+  nameWithType: FileMemberRemoveActionResult.IsSuccess
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Success</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSuccess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSuccess As Boolean
+  overload: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsSuccess
+  commentId: P:Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsSuccess
+  id: AsSuccess
+  parent: Dropbox.Api.Sharing.FileMemberRemoveActionResult
+  langs:
+  - csharp
+  - vb
+  name: AsSuccess
+  nameWithType: FileMemberRemoveActionResult.AsSuccess
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Success, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileMemberRemoveActionResult.Success AsSuccess { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FileMemberRemoveActionResult.Success
+    content.vb: Public ReadOnly Property AsSuccess As FileMemberRemoveActionResult.Success
+  overload: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsMemberError
+  commentId: P:Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsMemberError
+  id: IsMemberError
+  parent: Dropbox.Api.Sharing.FileMemberRemoveActionResult
+  langs:
+  - csharp
+  - vb
+  name: IsMemberError
+  nameWithType: FileMemberRemoveActionResult.IsMemberError
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsMemberError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsMemberError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is MemberError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMemberError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMemberError As Boolean
+  overload: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsMemberError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsMemberError
+  commentId: P:Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsMemberError
+  id: AsMemberError
+  parent: Dropbox.Api.Sharing.FileMemberRemoveActionResult
+  langs:
+  - csharp
+  - vb
+  name: AsMemberError
+  nameWithType: FileMemberRemoveActionResult.AsMemberError
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsMemberError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsMemberError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a MemberError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileMemberRemoveActionResult.MemberError AsMemberError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FileMemberRemoveActionResult.MemberError
+    content.vb: Public ReadOnly Property AsMemberError As FileMemberRemoveActionResult.MemberError
+  overload: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsMemberError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsOther
+  commentId: P:Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.FileMemberRemoveActionResult
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: FileMemberRemoveActionResult.IsOther
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsOther
+  commentId: P:Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.FileMemberRemoveActionResult
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: FileMemberRemoveActionResult.AsOther
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberRemoveActionResult.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileMemberRemoveActionResult.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FileMemberRemoveActionResult.Other
+    content.vb: Public ReadOnly Property AsOther As FileMemberRemoveActionResult.Other
+  overload: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult
+  commentId: T:Dropbox.Api.Sharing.FileMemberRemoveActionResult
+  parent: Dropbox.Api.Sharing
+  name: FileMemberRemoveActionResult
+  nameWithType: FileMemberRemoveActionResult
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.FileMemberRemoveActionResult.#ctor
+  name: FileMemberRemoveActionResult
+  nameWithType: FileMemberRemoveActionResult.FileMemberRemoveActionResult
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.FileMemberRemoveActionResult
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsSuccess*
+  commentId: Overload:Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsSuccess
+  name: IsSuccess
+  nameWithType: FileMemberRemoveActionResult.IsSuccess
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsSuccess
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsSuccess*
+  commentId: Overload:Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsSuccess
+  name: AsSuccess
+  nameWithType: FileMemberRemoveActionResult.AsSuccess
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsSuccess
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.Success
+  commentId: T:Dropbox.Api.Sharing.FileMemberRemoveActionResult.Success
+  parent: Dropbox.Api.Sharing
+  name: FileMemberRemoveActionResult.Success
+  nameWithType: FileMemberRemoveActionResult.Success
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.Success
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsMemberError*
+  commentId: Overload:Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsMemberError
+  name: IsMemberError
+  nameWithType: FileMemberRemoveActionResult.IsMemberError
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsMemberError
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsMemberError*
+  commentId: Overload:Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsMemberError
+  name: AsMemberError
+  nameWithType: FileMemberRemoveActionResult.AsMemberError
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsMemberError
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.MemberError
+  commentId: T:Dropbox.Api.Sharing.FileMemberRemoveActionResult.MemberError
+  parent: Dropbox.Api.Sharing
+  name: FileMemberRemoveActionResult.MemberError
+  nameWithType: FileMemberRemoveActionResult.MemberError
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.MemberError
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsOther
+  name: IsOther
+  nameWithType: FileMemberRemoveActionResult.IsOther
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.IsOther
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsOther
+  name: AsOther
+  nameWithType: FileMemberRemoveActionResult.AsOther
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.AsOther
+- uid: Dropbox.Api.Sharing.FileMemberRemoveActionResult.Other
+  commentId: T:Dropbox.Api.Sharing.FileMemberRemoveActionResult.Other
+  parent: Dropbox.Api.Sharing
+  name: FileMemberRemoveActionResult.Other
+  nameWithType: FileMemberRemoveActionResult.Other
+  fullName: Dropbox.Api.Sharing.FileMemberRemoveActionResult.Other

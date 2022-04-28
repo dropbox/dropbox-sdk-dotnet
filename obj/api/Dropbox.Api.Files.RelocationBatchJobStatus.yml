@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus
+  commentId: T:Dropbox.Api.Files.RelocationBatchJobStatus
+  id: RelocationBatchJobStatus
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RelocationBatchJobStatus.#ctor
+  - Dropbox.Api.Files.RelocationBatchJobStatus.AsComplete
+  - Dropbox.Api.Files.RelocationBatchJobStatus.AsFailed
+  - Dropbox.Api.Files.RelocationBatchJobStatus.AsInProgress
+  - Dropbox.Api.Files.RelocationBatchJobStatus.IsComplete
+  - Dropbox.Api.Files.RelocationBatchJobStatus.IsFailed
+  - Dropbox.Api.Files.RelocationBatchJobStatus.IsInProgress
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchJobStatus
+  nameWithType: RelocationBatchJobStatus
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: RelocationBatchJobStatus
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The relocation batch job status object</p>\n"
+  example: []
+  syntax:
+    content: public class RelocationBatchJobStatus
+    content.vb: Public Class RelocationBatchJobStatus
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.RelocationBatchJobStatus.Complete
+  - Dropbox.Api.Files.RelocationBatchJobStatus.Failed
+  - Dropbox.Api.Files.RelocationBatchJobStatus.InProgress
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.#ctor
+  commentId: M:Dropbox.Api.Files.RelocationBatchJobStatus.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchJobStatus()
+  nameWithType: RelocationBatchJobStatus.RelocationBatchJobStatus()
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.RelocationBatchJobStatus()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RelocationBatchJobStatus\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationBatchJobStatus()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.RelocationBatchJobStatus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.IsComplete
+  commentId: P:Dropbox.Api.Files.RelocationBatchJobStatus.IsComplete
+  id: IsComplete
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus
+  langs:
+  - csharp
+  - vb
+  name: IsComplete
+  nameWithType: RelocationBatchJobStatus.IsComplete
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.IsComplete
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsComplete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Complete</p>\n"
+  example: []
+  syntax:
+    content: public bool IsComplete { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsComplete As Boolean
+  overload: Dropbox.Api.Files.RelocationBatchJobStatus.IsComplete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.AsComplete
+  commentId: P:Dropbox.Api.Files.RelocationBatchJobStatus.AsComplete
+  id: AsComplete
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus
+  langs:
+  - csharp
+  - vb
+  name: AsComplete
+  nameWithType: RelocationBatchJobStatus.AsComplete
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.AsComplete
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsComplete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Complete, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationBatchJobStatus.Complete AsComplete { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationBatchJobStatus.Complete
+    content.vb: Public ReadOnly Property AsComplete As RelocationBatchJobStatus.Complete
+  overload: Dropbox.Api.Files.RelocationBatchJobStatus.AsComplete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.IsFailed
+  commentId: P:Dropbox.Api.Files.RelocationBatchJobStatus.IsFailed
+  id: IsFailed
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus
+  langs:
+  - csharp
+  - vb
+  name: IsFailed
+  nameWithType: RelocationBatchJobStatus.IsFailed
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.IsFailed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsFailed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Failed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFailed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFailed As Boolean
+  overload: Dropbox.Api.Files.RelocationBatchJobStatus.IsFailed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.AsFailed
+  commentId: P:Dropbox.Api.Files.RelocationBatchJobStatus.AsFailed
+  id: AsFailed
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus
+  langs:
+  - csharp
+  - vb
+  name: AsFailed
+  nameWithType: RelocationBatchJobStatus.AsFailed
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.AsFailed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsFailed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Failed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationBatchJobStatus.Failed AsFailed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationBatchJobStatus.Failed
+    content.vb: Public ReadOnly Property AsFailed As RelocationBatchJobStatus.Failed
+  overload: Dropbox.Api.Files.RelocationBatchJobStatus.AsFailed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.IsInProgress
+  commentId: P:Dropbox.Api.Files.RelocationBatchJobStatus.IsInProgress
+  id: IsInProgress
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus
+  langs:
+  - csharp
+  - vb
+  name: IsInProgress
+  nameWithType: RelocationBatchJobStatus.IsInProgress
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.IsInProgress
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInProgress
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is InProgress</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInProgress { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInProgress As Boolean
+  overload: Dropbox.Api.Files.RelocationBatchJobStatus.IsInProgress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.AsInProgress
+  commentId: P:Dropbox.Api.Files.RelocationBatchJobStatus.AsInProgress
+  id: AsInProgress
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus
+  langs:
+  - csharp
+  - vb
+  name: AsInProgress
+  nameWithType: RelocationBatchJobStatus.AsInProgress
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.AsInProgress
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInProgress
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a InProgress, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationBatchJobStatus.InProgress AsInProgress { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationBatchJobStatus.InProgress
+    content.vb: Public ReadOnly Property AsInProgress As RelocationBatchJobStatus.InProgress
+  overload: Dropbox.Api.Files.RelocationBatchJobStatus.AsInProgress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus
+  commentId: T:Dropbox.Api.Files.RelocationBatchJobStatus
+  parent: Dropbox.Api.Files
+  name: RelocationBatchJobStatus
+  nameWithType: RelocationBatchJobStatus
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.#ctor*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchJobStatus.#ctor
+  name: RelocationBatchJobStatus
+  nameWithType: RelocationBatchJobStatus.RelocationBatchJobStatus
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.RelocationBatchJobStatus
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.IsComplete*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchJobStatus.IsComplete
+  name: IsComplete
+  nameWithType: RelocationBatchJobStatus.IsComplete
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.IsComplete
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.AsComplete*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchJobStatus.AsComplete
+  name: AsComplete
+  nameWithType: RelocationBatchJobStatus.AsComplete
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.AsComplete
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.Complete
+  commentId: T:Dropbox.Api.Files.RelocationBatchJobStatus.Complete
+  parent: Dropbox.Api.Files
+  name: RelocationBatchJobStatus.Complete
+  nameWithType: RelocationBatchJobStatus.Complete
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.Complete
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.IsFailed*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchJobStatus.IsFailed
+  name: IsFailed
+  nameWithType: RelocationBatchJobStatus.IsFailed
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.IsFailed
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.AsFailed*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchJobStatus.AsFailed
+  name: AsFailed
+  nameWithType: RelocationBatchJobStatus.AsFailed
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.AsFailed
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.Failed
+  commentId: T:Dropbox.Api.Files.RelocationBatchJobStatus.Failed
+  parent: Dropbox.Api.Files
+  name: RelocationBatchJobStatus.Failed
+  nameWithType: RelocationBatchJobStatus.Failed
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.Failed
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.IsInProgress*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchJobStatus.IsInProgress
+  name: IsInProgress
+  nameWithType: RelocationBatchJobStatus.IsInProgress
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.IsInProgress
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.AsInProgress*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchJobStatus.AsInProgress
+  name: AsInProgress
+  nameWithType: RelocationBatchJobStatus.AsInProgress
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.AsInProgress
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.InProgress
+  commentId: T:Dropbox.Api.Files.RelocationBatchJobStatus.InProgress
+  parent: Dropbox.Api.Files
+  name: RelocationBatchJobStatus.InProgress
+  nameWithType: RelocationBatchJobStatus.InProgress
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.InProgress

@@ -1,0 +1,455 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupDeleteError.GroupNotFound
+  commentId: T:Dropbox.Api.Team.GroupDeleteError.GroupNotFound
+  id: GroupDeleteError.GroupNotFound
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupDeleteError.GroupNotFound.Instance
+  langs:
+  - csharp
+  - vb
+  name: GroupDeleteError.GroupNotFound
+  nameWithType: GroupDeleteError.GroupNotFound
+  fullName: Dropbox.Api.Team.GroupDeleteError.GroupNotFound
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupDeleteError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: GroupNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupDeleteError.cs
+    startLine: 357
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>No matching group found. No groups match the specified group ID.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class GroupNotFound : GroupDeleteError'
+    content.vb: >-
+      Public NotInheritable Class GroupNotFound
+          Inherits GroupDeleteError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.GroupDeleteError
+  inheritedMembers:
+  - Dropbox.Api.Team.GroupDeleteError.IsGroupAlreadyDeleted
+  - Dropbox.Api.Team.GroupDeleteError.AsGroupAlreadyDeleted
+  - Dropbox.Api.Team.GroupDeleteError.IsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupDeleteError.AsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupDeleteError.IsGroupNotFound
+  - Dropbox.Api.Team.GroupDeleteError.AsGroupNotFound
+  - Dropbox.Api.Team.GroupDeleteError.IsOther
+  - Dropbox.Api.Team.GroupDeleteError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.GroupDeleteError.GroupNotFound.Instance
+  commentId: F:Dropbox.Api.Team.GroupDeleteError.GroupNotFound.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.GroupDeleteError.GroupNotFound
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: GroupDeleteError.GroupNotFound.Instance
+  fullName: Dropbox.Api.Team.GroupDeleteError.GroupNotFound.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupDeleteError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupDeleteError.cs
+    startLine: 382
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of GroupNotFound</p>\n"
+  example: []
+  syntax:
+    content: public static readonly GroupDeleteError.GroupNotFound Instance
+    return:
+      type: Dropbox.Api.Team.GroupDeleteError.GroupNotFound
+    content.vb: Public Shared ReadOnly Instance As GroupDeleteError.GroupNotFound
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupDeleteError
+  commentId: T:Dropbox.Api.Team.GroupDeleteError
+  parent: Dropbox.Api.Team
+  name: GroupDeleteError
+  nameWithType: GroupDeleteError
+  fullName: Dropbox.Api.Team.GroupDeleteError
+- uid: Dropbox.Api.Team.GroupDeleteError.IsGroupAlreadyDeleted
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.IsGroupAlreadyDeleted
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: IsGroupAlreadyDeleted
+  nameWithType: GroupDeleteError.IsGroupAlreadyDeleted
+  fullName: Dropbox.Api.Team.GroupDeleteError.IsGroupAlreadyDeleted
+- uid: Dropbox.Api.Team.GroupDeleteError.AsGroupAlreadyDeleted
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.AsGroupAlreadyDeleted
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: AsGroupAlreadyDeleted
+  nameWithType: GroupDeleteError.AsGroupAlreadyDeleted
+  fullName: Dropbox.Api.Team.GroupDeleteError.AsGroupAlreadyDeleted
+- uid: Dropbox.Api.Team.GroupDeleteError.IsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.IsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: IsSystemManagedGroupDisallowed
+  nameWithType: GroupDeleteError.IsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupDeleteError.IsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupDeleteError.AsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.AsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: AsSystemManagedGroupDisallowed
+  nameWithType: GroupDeleteError.AsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupDeleteError.AsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupDeleteError.IsGroupNotFound
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.IsGroupNotFound
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: IsGroupNotFound
+  nameWithType: GroupDeleteError.IsGroupNotFound
+  fullName: Dropbox.Api.Team.GroupDeleteError.IsGroupNotFound
+- uid: Dropbox.Api.Team.GroupDeleteError.AsGroupNotFound
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.AsGroupNotFound
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: AsGroupNotFound
+  nameWithType: GroupDeleteError.AsGroupNotFound
+  fullName: Dropbox.Api.Team.GroupDeleteError.AsGroupNotFound
+- uid: Dropbox.Api.Team.GroupDeleteError.IsOther
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.IsOther
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: IsOther
+  nameWithType: GroupDeleteError.IsOther
+  fullName: Dropbox.Api.Team.GroupDeleteError.IsOther
+- uid: Dropbox.Api.Team.GroupDeleteError.AsOther
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.AsOther
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: AsOther
+  nameWithType: GroupDeleteError.AsOther
+  fullName: Dropbox.Api.Team.GroupDeleteError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.GroupDeleteError.GroupNotFound
+  commentId: T:Dropbox.Api.Team.GroupDeleteError.GroupNotFound
+  parent: Dropbox.Api.Team
+  name: GroupDeleteError.GroupNotFound
+  nameWithType: GroupDeleteError.GroupNotFound
+  fullName: Dropbox.Api.Team.GroupDeleteError.GroupNotFound

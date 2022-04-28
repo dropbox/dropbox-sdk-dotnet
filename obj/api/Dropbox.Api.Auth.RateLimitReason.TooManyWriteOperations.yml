@@ -1,0 +1,441 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations
+  commentId: T:Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations
+  id: RateLimitReason.TooManyWriteOperations
+  parent: Dropbox.Api.Auth
+  children:
+  - Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations.Instance
+  langs:
+  - csharp
+  - vb
+  name: RateLimitReason.TooManyWriteOperations
+  nameWithType: RateLimitReason.TooManyWriteOperations
+  fullName: Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TooManyWriteOperations
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+    startLine: 254
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>There are currently too many write operations happening in the user&apos;s\nDropbox.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class TooManyWriteOperations : RateLimitReason'
+    content.vb: >-
+      Public NotInheritable Class TooManyWriteOperations
+          Inherits RateLimitReason
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Auth.RateLimitReason
+  inheritedMembers:
+  - Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests
+  - Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests
+  - Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations
+  - Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations
+  - Dropbox.Api.Auth.RateLimitReason.IsOther
+  - Dropbox.Api.Auth.RateLimitReason.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations.Instance
+  commentId: F:Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations.Instance
+  id: Instance
+  parent: Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: RateLimitReason.TooManyWriteOperations.Instance
+  fullName: Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+    startLine: 279
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>A singleton instance of TooManyWriteOperations</p>\n"
+  example: []
+  syntax:
+    content: public static readonly RateLimitReason.TooManyWriteOperations Instance
+    return:
+      type: Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations
+    content.vb: Public Shared ReadOnly Instance As RateLimitReason.TooManyWriteOperations
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Auth.RateLimitReason
+  commentId: T:Dropbox.Api.Auth.RateLimitReason
+  parent: Dropbox.Api.Auth
+  name: RateLimitReason
+  nameWithType: RateLimitReason
+  fullName: Dropbox.Api.Auth.RateLimitReason
+- uid: Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests
+  parent: Dropbox.Api.Auth.RateLimitReason
+  name: IsTooManyRequests
+  nameWithType: RateLimitReason.IsTooManyRequests
+  fullName: Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests
+- uid: Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests
+  parent: Dropbox.Api.Auth.RateLimitReason
+  name: AsTooManyRequests
+  nameWithType: RateLimitReason.AsTooManyRequests
+  fullName: Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests
+- uid: Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations
+  parent: Dropbox.Api.Auth.RateLimitReason
+  name: IsTooManyWriteOperations
+  nameWithType: RateLimitReason.IsTooManyWriteOperations
+  fullName: Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations
+- uid: Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations
+  parent: Dropbox.Api.Auth.RateLimitReason
+  name: AsTooManyWriteOperations
+  nameWithType: RateLimitReason.AsTooManyWriteOperations
+  fullName: Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations
+- uid: Dropbox.Api.Auth.RateLimitReason.IsOther
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.IsOther
+  parent: Dropbox.Api.Auth.RateLimitReason
+  name: IsOther
+  nameWithType: RateLimitReason.IsOther
+  fullName: Dropbox.Api.Auth.RateLimitReason.IsOther
+- uid: Dropbox.Api.Auth.RateLimitReason.AsOther
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.AsOther
+  parent: Dropbox.Api.Auth.RateLimitReason
+  name: AsOther
+  nameWithType: RateLimitReason.AsOther
+  fullName: Dropbox.Api.Auth.RateLimitReason.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations
+  commentId: T:Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations
+  parent: Dropbox.Api.Auth
+  name: RateLimitReason.TooManyWriteOperations
+  nameWithType: RateLimitReason.TooManyWriteOperations
+  fullName: Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations

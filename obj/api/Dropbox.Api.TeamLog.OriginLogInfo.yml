@@ -1,0 +1,497 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.OriginLogInfo
+  commentId: T:Dropbox.Api.TeamLog.OriginLogInfo
+  id: OriginLogInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.OriginLogInfo.#ctor(Dropbox.Api.TeamLog.AccessMethodLogInfo,Dropbox.Api.TeamLog.GeoLocationLogInfo)
+  - Dropbox.Api.TeamLog.OriginLogInfo.AccessMethod
+  - Dropbox.Api.TeamLog.OriginLogInfo.GeoLocation
+  langs:
+  - csharp
+  - vb
+  name: OriginLogInfo
+  nameWithType: OriginLogInfo
+  fullName: Dropbox.Api.TeamLog.OriginLogInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OriginLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: OriginLogInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OriginLogInfo.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The origin from which the actor performed the action.</p>\n"
+  example: []
+  syntax:
+    content: public class OriginLogInfo
+    content.vb: Public Class OriginLogInfo
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.OriginLogInfo.#ctor(Dropbox.Api.TeamLog.AccessMethodLogInfo,Dropbox.Api.TeamLog.GeoLocationLogInfo)
+  commentId: M:Dropbox.Api.TeamLog.OriginLogInfo.#ctor(Dropbox.Api.TeamLog.AccessMethodLogInfo,Dropbox.Api.TeamLog.GeoLocationLogInfo)
+  id: '#ctor(Dropbox.Api.TeamLog.AccessMethodLogInfo,Dropbox.Api.TeamLog.GeoLocationLogInfo)'
+  parent: Dropbox.Api.TeamLog.OriginLogInfo
+  langs:
+  - csharp
+  - vb
+  name: OriginLogInfo(AccessMethodLogInfo, GeoLocationLogInfo)
+  nameWithType: OriginLogInfo.OriginLogInfo(AccessMethodLogInfo, GeoLocationLogInfo)
+  fullName: Dropbox.Api.TeamLog.OriginLogInfo.OriginLogInfo(Dropbox.Api.TeamLog.AccessMethodLogInfo, Dropbox.Api.TeamLog.GeoLocationLogInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OriginLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OriginLogInfo.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.OriginLogInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public OriginLogInfo(AccessMethodLogInfo accessMethod, GeoLocationLogInfo geoLocation = null)
+    parameters:
+    - id: accessMethod
+      type: Dropbox.Api.TeamLog.AccessMethodLogInfo
+      description: The method that was used to perform the action.
+    - id: geoLocation
+      type: Dropbox.Api.TeamLog.GeoLocationLogInfo
+      description: Geographic location details.
+    content.vb: Public Sub New(accessMethod As AccessMethodLogInfo, geoLocation As GeoLocationLogInfo = Nothing)
+  overload: Dropbox.Api.TeamLog.OriginLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.OriginLogInfo.AccessMethod
+  commentId: P:Dropbox.Api.TeamLog.OriginLogInfo.AccessMethod
+  id: AccessMethod
+  parent: Dropbox.Api.TeamLog.OriginLogInfo
+  langs:
+  - csharp
+  - vb
+  name: AccessMethod
+  nameWithType: OriginLogInfo.AccessMethod
+  fullName: Dropbox.Api.TeamLog.OriginLogInfo.AccessMethod
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OriginLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AccessMethod
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OriginLogInfo.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The method that was used to perform the action.</p>\n"
+  example: []
+  syntax:
+    content: public AccessMethodLogInfo AccessMethod { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AccessMethodLogInfo
+    content.vb: Public Property AccessMethod As AccessMethodLogInfo
+  overload: Dropbox.Api.TeamLog.OriginLogInfo.AccessMethod*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.OriginLogInfo.GeoLocation
+  commentId: P:Dropbox.Api.TeamLog.OriginLogInfo.GeoLocation
+  id: GeoLocation
+  parent: Dropbox.Api.TeamLog.OriginLogInfo
+  langs:
+  - csharp
+  - vb
+  name: GeoLocation
+  nameWithType: OriginLogInfo.GeoLocation
+  fullName: Dropbox.Api.TeamLog.OriginLogInfo.GeoLocation
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OriginLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: GeoLocation
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OriginLogInfo.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Geographic location details.</p>\n"
+  example: []
+  syntax:
+    content: public GeoLocationLogInfo GeoLocation { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.GeoLocationLogInfo
+    content.vb: Public Property GeoLocation As GeoLocationLogInfo
+  overload: Dropbox.Api.TeamLog.OriginLogInfo.GeoLocation*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.OriginLogInfo
+  commentId: T:Dropbox.Api.TeamLog.OriginLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: OriginLogInfo
+  nameWithType: OriginLogInfo
+  fullName: Dropbox.Api.TeamLog.OriginLogInfo
+- uid: Dropbox.Api.TeamLog.OriginLogInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.OriginLogInfo.#ctor
+  name: OriginLogInfo
+  nameWithType: OriginLogInfo.OriginLogInfo
+  fullName: Dropbox.Api.TeamLog.OriginLogInfo.OriginLogInfo
+- uid: Dropbox.Api.TeamLog.AccessMethodLogInfo
+  commentId: T:Dropbox.Api.TeamLog.AccessMethodLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: AccessMethodLogInfo
+  nameWithType: AccessMethodLogInfo
+  fullName: Dropbox.Api.TeamLog.AccessMethodLogInfo
+- uid: Dropbox.Api.TeamLog.GeoLocationLogInfo
+  commentId: T:Dropbox.Api.TeamLog.GeoLocationLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: GeoLocationLogInfo
+  nameWithType: GeoLocationLogInfo
+  fullName: Dropbox.Api.TeamLog.GeoLocationLogInfo
+- uid: Dropbox.Api.TeamLog.OriginLogInfo.AccessMethod*
+  commentId: Overload:Dropbox.Api.TeamLog.OriginLogInfo.AccessMethod
+  name: AccessMethod
+  nameWithType: OriginLogInfo.AccessMethod
+  fullName: Dropbox.Api.TeamLog.OriginLogInfo.AccessMethod
+- uid: Dropbox.Api.TeamLog.OriginLogInfo.GeoLocation*
+  commentId: Overload:Dropbox.Api.TeamLog.OriginLogInfo.GeoLocation
+  name: GeoLocation
+  nameWithType: OriginLogInfo.GeoLocation
+  fullName: Dropbox.Api.TeamLog.OriginLogInfo.GeoLocation

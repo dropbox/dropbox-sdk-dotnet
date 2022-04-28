@@ -1,0 +1,582 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.GeneralFileRequestsError
+  commentId: T:Dropbox.Api.FileRequests.GeneralFileRequestsError
+  id: GeneralFileRequestsError
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.GeneralFileRequestsError.#ctor
+  - Dropbox.Api.FileRequests.GeneralFileRequestsError.AsDisabledForTeam
+  - Dropbox.Api.FileRequests.GeneralFileRequestsError.AsOther
+  - Dropbox.Api.FileRequests.GeneralFileRequestsError.IsDisabledForTeam
+  - Dropbox.Api.FileRequests.GeneralFileRequestsError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: GeneralFileRequestsError
+  nameWithType: GeneralFileRequestsError
+  fullName: Dropbox.Api.FileRequests.GeneralFileRequestsError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GeneralFileRequestsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: GeneralFileRequestsError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GeneralFileRequestsError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>There is an error accessing the file requests functionality.</p>\n"
+  example: []
+  syntax:
+    content: public class GeneralFileRequestsError
+    content.vb: Public Class GeneralFileRequestsError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.FileRequests.GeneralFileRequestsError.DisabledForTeam
+  - Dropbox.Api.FileRequests.GeneralFileRequestsError.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.GeneralFileRequestsError.#ctor
+  commentId: M:Dropbox.Api.FileRequests.GeneralFileRequestsError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileRequests.GeneralFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: GeneralFileRequestsError()
+  nameWithType: GeneralFileRequestsError.GeneralFileRequestsError()
+  fullName: Dropbox.Api.FileRequests.GeneralFileRequestsError.GeneralFileRequestsError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GeneralFileRequestsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GeneralFileRequestsError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.GeneralFileRequestsError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GeneralFileRequestsError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileRequests.GeneralFileRequestsError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.GeneralFileRequestsError.IsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.GeneralFileRequestsError.IsDisabledForTeam
+  id: IsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.GeneralFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: IsDisabledForTeam
+  nameWithType: GeneralFileRequestsError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.GeneralFileRequestsError.IsDisabledForTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GeneralFileRequestsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDisabledForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GeneralFileRequestsError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is DisabledForTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabledForTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabledForTeam As Boolean
+  overload: Dropbox.Api.FileRequests.GeneralFileRequestsError.IsDisabledForTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GeneralFileRequestsError.AsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.GeneralFileRequestsError.AsDisabledForTeam
+  id: AsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.GeneralFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: AsDisabledForTeam
+  nameWithType: GeneralFileRequestsError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.GeneralFileRequestsError.AsDisabledForTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GeneralFileRequestsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDisabledForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GeneralFileRequestsError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a DisabledForTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GeneralFileRequestsError.DisabledForTeam AsDisabledForTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.GeneralFileRequestsError.DisabledForTeam
+    content.vb: Public ReadOnly Property AsDisabledForTeam As GeneralFileRequestsError.DisabledForTeam
+  overload: Dropbox.Api.FileRequests.GeneralFileRequestsError.AsDisabledForTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GeneralFileRequestsError.IsOther
+  commentId: P:Dropbox.Api.FileRequests.GeneralFileRequestsError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.FileRequests.GeneralFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: GeneralFileRequestsError.IsOther
+  fullName: Dropbox.Api.FileRequests.GeneralFileRequestsError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GeneralFileRequestsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GeneralFileRequestsError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.FileRequests.GeneralFileRequestsError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GeneralFileRequestsError.AsOther
+  commentId: P:Dropbox.Api.FileRequests.GeneralFileRequestsError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.FileRequests.GeneralFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: GeneralFileRequestsError.AsOther
+  fullName: Dropbox.Api.FileRequests.GeneralFileRequestsError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GeneralFileRequestsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GeneralFileRequestsError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GeneralFileRequestsError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.GeneralFileRequestsError.Other
+    content.vb: Public ReadOnly Property AsOther As GeneralFileRequestsError.Other
+  overload: Dropbox.Api.FileRequests.GeneralFileRequestsError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.FileRequests.GeneralFileRequestsError
+  commentId: T:Dropbox.Api.FileRequests.GeneralFileRequestsError
+  parent: Dropbox.Api.FileRequests
+  name: GeneralFileRequestsError
+  nameWithType: GeneralFileRequestsError
+  fullName: Dropbox.Api.FileRequests.GeneralFileRequestsError
+- uid: Dropbox.Api.FileRequests.GeneralFileRequestsError.#ctor*
+  commentId: Overload:Dropbox.Api.FileRequests.GeneralFileRequestsError.#ctor
+  name: GeneralFileRequestsError
+  nameWithType: GeneralFileRequestsError.GeneralFileRequestsError
+  fullName: Dropbox.Api.FileRequests.GeneralFileRequestsError.GeneralFileRequestsError
+- uid: Dropbox.Api.FileRequests.GeneralFileRequestsError.IsDisabledForTeam*
+  commentId: Overload:Dropbox.Api.FileRequests.GeneralFileRequestsError.IsDisabledForTeam
+  name: IsDisabledForTeam
+  nameWithType: GeneralFileRequestsError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.GeneralFileRequestsError.IsDisabledForTeam
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.FileRequests.GeneralFileRequestsError.AsDisabledForTeam*
+  commentId: Overload:Dropbox.Api.FileRequests.GeneralFileRequestsError.AsDisabledForTeam
+  name: AsDisabledForTeam
+  nameWithType: GeneralFileRequestsError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.GeneralFileRequestsError.AsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.GeneralFileRequestsError.DisabledForTeam
+  commentId: T:Dropbox.Api.FileRequests.GeneralFileRequestsError.DisabledForTeam
+  parent: Dropbox.Api.FileRequests
+  name: GeneralFileRequestsError.DisabledForTeam
+  nameWithType: GeneralFileRequestsError.DisabledForTeam
+  fullName: Dropbox.Api.FileRequests.GeneralFileRequestsError.DisabledForTeam
+- uid: Dropbox.Api.FileRequests.GeneralFileRequestsError.IsOther*
+  commentId: Overload:Dropbox.Api.FileRequests.GeneralFileRequestsError.IsOther
+  name: IsOther
+  nameWithType: GeneralFileRequestsError.IsOther
+  fullName: Dropbox.Api.FileRequests.GeneralFileRequestsError.IsOther
+- uid: Dropbox.Api.FileRequests.GeneralFileRequestsError.AsOther*
+  commentId: Overload:Dropbox.Api.FileRequests.GeneralFileRequestsError.AsOther
+  name: AsOther
+  nameWithType: GeneralFileRequestsError.AsOther
+  fullName: Dropbox.Api.FileRequests.GeneralFileRequestsError.AsOther
+- uid: Dropbox.Api.FileRequests.GeneralFileRequestsError.Other
+  commentId: T:Dropbox.Api.FileRequests.GeneralFileRequestsError.Other
+  parent: Dropbox.Api.FileRequests
+  name: GeneralFileRequestsError.Other
+  nameWithType: GeneralFileRequestsError.Other
+  fullName: Dropbox.Api.FileRequests.GeneralFileRequestsError.Other

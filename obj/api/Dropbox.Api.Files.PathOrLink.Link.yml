@@ -1,0 +1,494 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.PathOrLink.Link
+  commentId: T:Dropbox.Api.Files.PathOrLink.Link
+  id: PathOrLink.Link
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.PathOrLink.Link.#ctor(Dropbox.Api.Files.SharedLinkFileInfo)
+  - Dropbox.Api.Files.PathOrLink.Link.Value
+  langs:
+  - csharp
+  - vb
+  name: PathOrLink.Link
+  nameWithType: PathOrLink.Link
+  fullName: Dropbox.Api.Files.PathOrLink.Link
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Link
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+    startLine: 277
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The link object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Link : PathOrLink'
+    content.vb: >-
+      Public NotInheritable Class Link
+          Inherits PathOrLink
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.PathOrLink
+  inheritedMembers:
+  - Dropbox.Api.Files.PathOrLink.IsPath
+  - Dropbox.Api.Files.PathOrLink.AsPath
+  - Dropbox.Api.Files.PathOrLink.IsLink
+  - Dropbox.Api.Files.PathOrLink.AsLink
+  - Dropbox.Api.Files.PathOrLink.IsOther
+  - Dropbox.Api.Files.PathOrLink.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.PathOrLink.Link.#ctor(Dropbox.Api.Files.SharedLinkFileInfo)
+  commentId: M:Dropbox.Api.Files.PathOrLink.Link.#ctor(Dropbox.Api.Files.SharedLinkFileInfo)
+  id: '#ctor(Dropbox.Api.Files.SharedLinkFileInfo)'
+  parent: Dropbox.Api.Files.PathOrLink.Link
+  langs:
+  - csharp
+  - vb
+  name: Link(SharedLinkFileInfo)
+  nameWithType: PathOrLink.Link.Link(SharedLinkFileInfo)
+  fullName: Dropbox.Api.Files.PathOrLink.Link.Link(Dropbox.Api.Files.SharedLinkFileInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+    startLine: 295
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.PathOrLink.Link\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Link(SharedLinkFileInfo value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.SharedLinkFileInfo
+      description: The value
+    content.vb: Public Sub New(value As SharedLinkFileInfo)
+  overload: Dropbox.Api.Files.PathOrLink.Link.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.PathOrLink.Link.Value
+  commentId: P:Dropbox.Api.Files.PathOrLink.Link.Value
+  id: Value
+  parent: Dropbox.Api.Files.PathOrLink.Link
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: PathOrLink.Link.Value
+  fullName: Dropbox.Api.Files.PathOrLink.Link.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+    startLine: 309
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkFileInfo Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SharedLinkFileInfo
+    content.vb: Public ReadOnly Property Value As SharedLinkFileInfo
+  overload: Dropbox.Api.Files.PathOrLink.Link.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.PathOrLink
+  commentId: T:Dropbox.Api.Files.PathOrLink
+  parent: Dropbox.Api.Files
+  name: PathOrLink
+  nameWithType: PathOrLink
+  fullName: Dropbox.Api.Files.PathOrLink
+- uid: Dropbox.Api.Files.PathOrLink.IsPath
+  commentId: P:Dropbox.Api.Files.PathOrLink.IsPath
+  parent: Dropbox.Api.Files.PathOrLink
+  name: IsPath
+  nameWithType: PathOrLink.IsPath
+  fullName: Dropbox.Api.Files.PathOrLink.IsPath
+- uid: Dropbox.Api.Files.PathOrLink.AsPath
+  commentId: P:Dropbox.Api.Files.PathOrLink.AsPath
+  parent: Dropbox.Api.Files.PathOrLink
+  name: AsPath
+  nameWithType: PathOrLink.AsPath
+  fullName: Dropbox.Api.Files.PathOrLink.AsPath
+- uid: Dropbox.Api.Files.PathOrLink.IsLink
+  commentId: P:Dropbox.Api.Files.PathOrLink.IsLink
+  parent: Dropbox.Api.Files.PathOrLink
+  name: IsLink
+  nameWithType: PathOrLink.IsLink
+  fullName: Dropbox.Api.Files.PathOrLink.IsLink
+- uid: Dropbox.Api.Files.PathOrLink.AsLink
+  commentId: P:Dropbox.Api.Files.PathOrLink.AsLink
+  parent: Dropbox.Api.Files.PathOrLink
+  name: AsLink
+  nameWithType: PathOrLink.AsLink
+  fullName: Dropbox.Api.Files.PathOrLink.AsLink
+- uid: Dropbox.Api.Files.PathOrLink.IsOther
+  commentId: P:Dropbox.Api.Files.PathOrLink.IsOther
+  parent: Dropbox.Api.Files.PathOrLink
+  name: IsOther
+  nameWithType: PathOrLink.IsOther
+  fullName: Dropbox.Api.Files.PathOrLink.IsOther
+- uid: Dropbox.Api.Files.PathOrLink.AsOther
+  commentId: P:Dropbox.Api.Files.PathOrLink.AsOther
+  parent: Dropbox.Api.Files.PathOrLink
+  name: AsOther
+  nameWithType: PathOrLink.AsOther
+  fullName: Dropbox.Api.Files.PathOrLink.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.PathOrLink.Link
+  commentId: T:Dropbox.Api.Files.PathOrLink.Link
+  parent: Dropbox.Api.Files
+  name: PathOrLink.Link
+  nameWithType: PathOrLink.Link
+  fullName: Dropbox.Api.Files.PathOrLink.Link
+- uid: Dropbox.Api.Files.PathOrLink.Link.#ctor*
+  commentId: Overload:Dropbox.Api.Files.PathOrLink.Link.#ctor
+  name: Link
+  nameWithType: PathOrLink.Link.Link
+  fullName: Dropbox.Api.Files.PathOrLink.Link.Link
+- uid: Dropbox.Api.Files.SharedLinkFileInfo
+  commentId: T:Dropbox.Api.Files.SharedLinkFileInfo
+  parent: Dropbox.Api.Files
+  name: SharedLinkFileInfo
+  nameWithType: SharedLinkFileInfo
+  fullName: Dropbox.Api.Files.SharedLinkFileInfo
+- uid: Dropbox.Api.Files.PathOrLink.Link.Value*
+  commentId: Overload:Dropbox.Api.Files.PathOrLink.Link.Value
+  name: Value
+  nameWithType: PathOrLink.Link.Value
+  fullName: Dropbox.Api.Files.PathOrLink.Link.Value

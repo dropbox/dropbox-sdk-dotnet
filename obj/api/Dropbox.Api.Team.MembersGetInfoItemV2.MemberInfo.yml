@@ -1,0 +1,494 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo
+  commentId: T:Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo
+  id: MembersGetInfoItemV2.MemberInfo
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.#ctor(Dropbox.Api.Team.TeamMemberInfoV2)
+  - Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.Value
+  langs:
+  - csharp
+  - vb
+  name: MembersGetInfoItemV2.MemberInfo
+  nameWithType: MembersGetInfoItemV2.MemberInfo
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemV2.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MemberInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemV2.cs
+    startLine: 184
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Info about a team member.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class MemberInfo : MembersGetInfoItemV2'
+    content.vb: >-
+      Public NotInheritable Class MemberInfo
+          Inherits MembersGetInfoItemV2
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MembersGetInfoItemV2
+  inheritedMembers:
+  - Dropbox.Api.Team.MembersGetInfoItemV2.IsMemberInfo
+  - Dropbox.Api.Team.MembersGetInfoItemV2.AsMemberInfo
+  - Dropbox.Api.Team.MembersGetInfoItemV2.IsOther
+  - Dropbox.Api.Team.MembersGetInfoItemV2.AsOther
+  - Dropbox.Api.Team.MembersGetInfoItemV2.IsIdNotFound
+  - Dropbox.Api.Team.MembersGetInfoItemV2.AsIdNotFound
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.#ctor(Dropbox.Api.Team.TeamMemberInfoV2)
+  commentId: M:Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.#ctor(Dropbox.Api.Team.TeamMemberInfoV2)
+  id: '#ctor(Dropbox.Api.Team.TeamMemberInfoV2)'
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo
+  langs:
+  - csharp
+  - vb
+  name: MemberInfo(TeamMemberInfoV2)
+  nameWithType: MembersGetInfoItemV2.MemberInfo.MemberInfo(TeamMemberInfoV2)
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.MemberInfo(Dropbox.Api.Team.TeamMemberInfoV2)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemV2.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemV2.cs
+    startLine: 202
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberInfo(TeamMemberInfoV2 value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Team.TeamMemberInfoV2
+      description: The value
+    content.vb: Public Sub New(value As TeamMemberInfoV2)
+  overload: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.Value
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.Value
+  id: Value
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: MembersGetInfoItemV2.MemberInfo.Value
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemV2.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemV2.cs
+    startLine: 216
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMemberInfoV2 Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamMemberInfoV2
+    content.vb: Public ReadOnly Property Value As TeamMemberInfoV2
+  overload: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2
+  commentId: T:Dropbox.Api.Team.MembersGetInfoItemV2
+  parent: Dropbox.Api.Team
+  name: MembersGetInfoItemV2
+  nameWithType: MembersGetInfoItemV2
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.IsMemberInfo
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemV2.IsMemberInfo
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2
+  name: IsMemberInfo
+  nameWithType: MembersGetInfoItemV2.IsMemberInfo
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.IsMemberInfo
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.AsMemberInfo
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemV2.AsMemberInfo
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2
+  name: AsMemberInfo
+  nameWithType: MembersGetInfoItemV2.AsMemberInfo
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.AsMemberInfo
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.IsOther
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemV2.IsOther
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2
+  name: IsOther
+  nameWithType: MembersGetInfoItemV2.IsOther
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.IsOther
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.AsOther
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemV2.AsOther
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2
+  name: AsOther
+  nameWithType: MembersGetInfoItemV2.AsOther
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.AsOther
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.IsIdNotFound
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemV2.IsIdNotFound
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2
+  name: IsIdNotFound
+  nameWithType: MembersGetInfoItemV2.IsIdNotFound
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.IsIdNotFound
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.AsIdNotFound
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemV2.AsIdNotFound
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2
+  name: AsIdNotFound
+  nameWithType: MembersGetInfoItemV2.AsIdNotFound
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.AsIdNotFound
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo
+  commentId: T:Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo
+  parent: Dropbox.Api.Team
+  name: MembersGetInfoItemV2.MemberInfo
+  nameWithType: MembersGetInfoItemV2.MemberInfo
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.#ctor
+  name: MemberInfo
+  nameWithType: MembersGetInfoItemV2.MemberInfo.MemberInfo
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.MemberInfo
+- uid: Dropbox.Api.Team.TeamMemberInfoV2
+  commentId: T:Dropbox.Api.Team.TeamMemberInfoV2
+  parent: Dropbox.Api.Team
+  name: TeamMemberInfoV2
+  nameWithType: TeamMemberInfoV2
+  fullName: Dropbox.Api.Team.TeamMemberInfoV2
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.Value*
+  commentId: Overload:Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.Value
+  name: Value
+  nameWithType: MembersGetInfoItemV2.MemberInfo.Value
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.MemberInfo.Value

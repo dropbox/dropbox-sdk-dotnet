@@ -1,0 +1,499 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperChangePolicyDetails
+  id: PaperChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.PaperEnabledPolicy,Dropbox.Api.TeamPolicies.PaperEnabledPolicy)
+  - Dropbox.Api.TeamLog.PaperChangePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.PaperChangePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: PaperChangePolicyDetails
+  nameWithType: PaperChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.PaperChangePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangePolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PaperChangePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangePolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled/disabled Dropbox Paper for team.</p>\n"
+  example: []
+  syntax:
+    content: public class PaperChangePolicyDetails
+    content.vb: Public Class PaperChangePolicyDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.PaperEnabledPolicy,Dropbox.Api.TeamPolicies.PaperEnabledPolicy)
+  commentId: M:Dropbox.Api.TeamLog.PaperChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.PaperEnabledPolicy,Dropbox.Api.TeamPolicies.PaperEnabledPolicy)
+  id: '#ctor(Dropbox.Api.TeamPolicies.PaperEnabledPolicy,Dropbox.Api.TeamPolicies.PaperEnabledPolicy)'
+  parent: Dropbox.Api.TeamLog.PaperChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperChangePolicyDetails(PaperEnabledPolicy, PaperEnabledPolicy)
+  nameWithType: PaperChangePolicyDetails.PaperChangePolicyDetails(PaperEnabledPolicy, PaperEnabledPolicy)
+  fullName: Dropbox.Api.TeamLog.PaperChangePolicyDetails.PaperChangePolicyDetails(Dropbox.Api.TeamPolicies.PaperEnabledPolicy, Dropbox.Api.TeamPolicies.PaperEnabledPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangePolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangePolicyDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperChangePolicyDetails(PaperEnabledPolicy newValue, PaperEnabledPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamPolicies.PaperEnabledPolicy
+      description: New Dropbox Paper policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamPolicies.PaperEnabledPolicy
+      description: >-
+        Previous Dropbox Paper policy. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(newValue As PaperEnabledPolicy, previousValue As PaperEnabledPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.PaperChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperChangePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.PaperChangePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.PaperChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: PaperChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.PaperChangePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangePolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangePolicyDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New Dropbox Paper policy.</p>\n"
+  example: []
+  syntax:
+    content: public PaperEnabledPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.PaperEnabledPolicy
+    content.vb: Public Property NewValue As PaperEnabledPolicy
+  overload: Dropbox.Api.TeamLog.PaperChangePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.PaperChangePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.PaperChangePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.PaperChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: PaperChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.PaperChangePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangePolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangePolicyDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous Dropbox Paper policy. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public PaperEnabledPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.PaperEnabledPolicy
+    content.vb: Public Property PreviousValue As PaperEnabledPolicy
+  overload: Dropbox.Api.TeamLog.PaperChangePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.PaperChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperChangePolicyDetails
+  nameWithType: PaperChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.PaperChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.PaperChangePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperChangePolicyDetails.#ctor
+  name: PaperChangePolicyDetails
+  nameWithType: PaperChangePolicyDetails.PaperChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.PaperChangePolicyDetails.PaperChangePolicyDetails
+- uid: Dropbox.Api.TeamPolicies.PaperEnabledPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.PaperEnabledPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: PaperEnabledPolicy
+  nameWithType: PaperEnabledPolicy
+  fullName: Dropbox.Api.TeamPolicies.PaperEnabledPolicy
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: Dropbox.Api.TeamLog.PaperChangePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperChangePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: PaperChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.PaperChangePolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.PaperChangePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperChangePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: PaperChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.PaperChangePolicyDetails.PreviousValue

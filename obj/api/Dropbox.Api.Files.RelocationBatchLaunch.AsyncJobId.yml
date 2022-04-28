@@ -1,0 +1,495 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId
+  commentId: T:Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId
+  id: RelocationBatchLaunch.AsyncJobId
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.#ctor(System.String)
+  - Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.Value
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchLaunch.AsyncJobId
+  nameWithType: RelocationBatchLaunch.AsyncJobId
+  fullName: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchLaunch.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsyncJobId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchLaunch.cs
+    startLine: 343
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>This response indicates that the processing is asynchronous. The string is an\nid that can be used to obtain the status of the asynchronous job.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class AsyncJobId : RelocationBatchLaunch'
+    content.vb: >-
+      Public NotInheritable Class AsyncJobId
+          Inherits RelocationBatchLaunch
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.RelocationBatchLaunch
+  inheritedMembers:
+  - Dropbox.Api.Files.RelocationBatchLaunch.IsComplete
+  - Dropbox.Api.Files.RelocationBatchLaunch.AsComplete
+  - Dropbox.Api.Files.RelocationBatchLaunch.IsOther
+  - Dropbox.Api.Files.RelocationBatchLaunch.AsOther
+  - Dropbox.Api.Files.RelocationBatchLaunch.IsAsyncJobId
+  - Dropbox.Api.Files.RelocationBatchLaunch.AsAsyncJobId
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.#ctor(System.String)
+  commentId: M:Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId
+  langs:
+  - csharp
+  - vb
+  name: AsyncJobId(String)
+  nameWithType: RelocationBatchLaunch.AsyncJobId.AsyncJobId(String)
+  fullName: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.AsyncJobId(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchLaunch.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchLaunch.cs
+    startLine: 361
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AsyncJobId(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.Value
+  commentId: P:Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.Value
+  id: Value
+  parent: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: RelocationBatchLaunch.AsyncJobId.Value
+  fullName: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchLaunch.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchLaunch.cs
+    startLine: 375
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RelocationBatchLaunch
+  commentId: T:Dropbox.Api.Files.RelocationBatchLaunch
+  parent: Dropbox.Api.Files
+  name: RelocationBatchLaunch
+  nameWithType: RelocationBatchLaunch
+  fullName: Dropbox.Api.Files.RelocationBatchLaunch
+- uid: Dropbox.Api.Files.RelocationBatchLaunch.IsComplete
+  commentId: P:Dropbox.Api.Files.RelocationBatchLaunch.IsComplete
+  parent: Dropbox.Api.Files.RelocationBatchLaunch
+  name: IsComplete
+  nameWithType: RelocationBatchLaunch.IsComplete
+  fullName: Dropbox.Api.Files.RelocationBatchLaunch.IsComplete
+- uid: Dropbox.Api.Files.RelocationBatchLaunch.AsComplete
+  commentId: P:Dropbox.Api.Files.RelocationBatchLaunch.AsComplete
+  parent: Dropbox.Api.Files.RelocationBatchLaunch
+  name: AsComplete
+  nameWithType: RelocationBatchLaunch.AsComplete
+  fullName: Dropbox.Api.Files.RelocationBatchLaunch.AsComplete
+- uid: Dropbox.Api.Files.RelocationBatchLaunch.IsOther
+  commentId: P:Dropbox.Api.Files.RelocationBatchLaunch.IsOther
+  parent: Dropbox.Api.Files.RelocationBatchLaunch
+  name: IsOther
+  nameWithType: RelocationBatchLaunch.IsOther
+  fullName: Dropbox.Api.Files.RelocationBatchLaunch.IsOther
+- uid: Dropbox.Api.Files.RelocationBatchLaunch.AsOther
+  commentId: P:Dropbox.Api.Files.RelocationBatchLaunch.AsOther
+  parent: Dropbox.Api.Files.RelocationBatchLaunch
+  name: AsOther
+  nameWithType: RelocationBatchLaunch.AsOther
+  fullName: Dropbox.Api.Files.RelocationBatchLaunch.AsOther
+- uid: Dropbox.Api.Files.RelocationBatchLaunch.IsAsyncJobId
+  commentId: P:Dropbox.Api.Files.RelocationBatchLaunch.IsAsyncJobId
+  parent: Dropbox.Api.Files.RelocationBatchLaunch
+  name: IsAsyncJobId
+  nameWithType: RelocationBatchLaunch.IsAsyncJobId
+  fullName: Dropbox.Api.Files.RelocationBatchLaunch.IsAsyncJobId
+- uid: Dropbox.Api.Files.RelocationBatchLaunch.AsAsyncJobId
+  commentId: P:Dropbox.Api.Files.RelocationBatchLaunch.AsAsyncJobId
+  parent: Dropbox.Api.Files.RelocationBatchLaunch
+  name: AsAsyncJobId
+  nameWithType: RelocationBatchLaunch.AsAsyncJobId
+  fullName: Dropbox.Api.Files.RelocationBatchLaunch.AsAsyncJobId
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId
+  commentId: T:Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId
+  parent: Dropbox.Api.Files
+  name: RelocationBatchLaunch.AsyncJobId
+  nameWithType: RelocationBatchLaunch.AsyncJobId
+  fullName: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId
+- uid: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.#ctor*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.#ctor
+  name: AsyncJobId
+  nameWithType: RelocationBatchLaunch.AsyncJobId.AsyncJobId
+  fullName: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.AsyncJobId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.Value*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.Value
+  name: Value
+  nameWithType: RelocationBatchLaunch.AsyncJobId.Value
+  fullName: Dropbox.Api.Files.RelocationBatchLaunch.AsyncJobId.Value

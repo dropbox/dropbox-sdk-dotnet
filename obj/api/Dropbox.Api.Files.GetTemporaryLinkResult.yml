@@ -1,0 +1,501 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.GetTemporaryLinkResult
+  commentId: T:Dropbox.Api.Files.GetTemporaryLinkResult
+  id: GetTemporaryLinkResult
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.GetTemporaryLinkResult.#ctor(Dropbox.Api.Files.FileMetadata,System.String)
+  - Dropbox.Api.Files.GetTemporaryLinkResult.Link
+  - Dropbox.Api.Files.GetTemporaryLinkResult.Metadata
+  langs:
+  - csharp
+  - vb
+  name: GetTemporaryLinkResult
+  nameWithType: GetTemporaryLinkResult
+  fullName: Dropbox.Api.Files.GetTemporaryLinkResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: GetTemporaryLinkResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The get temporary link result object</p>\n"
+  example: []
+  syntax:
+    content: public class GetTemporaryLinkResult
+    content.vb: Public Class GetTemporaryLinkResult
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.GetTemporaryLinkResult.#ctor(Dropbox.Api.Files.FileMetadata,System.String)
+  commentId: M:Dropbox.Api.Files.GetTemporaryLinkResult.#ctor(Dropbox.Api.Files.FileMetadata,System.String)
+  id: '#ctor(Dropbox.Api.Files.FileMetadata,System.String)'
+  parent: Dropbox.Api.Files.GetTemporaryLinkResult
+  langs:
+  - csharp
+  - vb
+  name: GetTemporaryLinkResult(FileMetadata, String)
+  nameWithType: GetTemporaryLinkResult.GetTemporaryLinkResult(FileMetadata, String)
+  fullName: Dropbox.Api.Files.GetTemporaryLinkResult.GetTemporaryLinkResult(Dropbox.Api.Files.FileMetadata, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkResult.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetTemporaryLinkResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetTemporaryLinkResult(FileMetadata metadata, string link)
+    parameters:
+    - id: metadata
+      type: Dropbox.Api.Files.FileMetadata
+      description: Metadata of the file.
+    - id: link
+      type: System.String
+      description: >-
+        The temporary link which can be used to stream content the
+
+        file.
+    content.vb: Public Sub New(metadata As FileMetadata, link As String)
+  overload: Dropbox.Api.Files.GetTemporaryLinkResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetTemporaryLinkResult.Metadata
+  commentId: P:Dropbox.Api.Files.GetTemporaryLinkResult.Metadata
+  id: Metadata
+  parent: Dropbox.Api.Files.GetTemporaryLinkResult
+  langs:
+  - csharp
+  - vb
+  name: Metadata
+  nameWithType: GetTemporaryLinkResult.Metadata
+  fullName: Dropbox.Api.Files.GetTemporaryLinkResult.Metadata
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Metadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkResult.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Metadata of the file.</p>\n"
+  example: []
+  syntax:
+    content: public FileMetadata Metadata { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileMetadata
+    content.vb: Public Property Metadata As FileMetadata
+  overload: Dropbox.Api.Files.GetTemporaryLinkResult.Metadata*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.GetTemporaryLinkResult.Link
+  commentId: P:Dropbox.Api.Files.GetTemporaryLinkResult.Link
+  id: Link
+  parent: Dropbox.Api.Files.GetTemporaryLinkResult
+  langs:
+  - csharp
+  - vb
+  name: Link
+  nameWithType: GetTemporaryLinkResult.Link
+  fullName: Dropbox.Api.Files.GetTemporaryLinkResult.Link
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Link
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkResult.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The temporary link which can be used to stream content the file.</p>\n"
+  example: []
+  syntax:
+    content: public string Link { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Link As String
+  overload: Dropbox.Api.Files.GetTemporaryLinkResult.Link*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.GetTemporaryLinkResult
+  commentId: T:Dropbox.Api.Files.GetTemporaryLinkResult
+  parent: Dropbox.Api.Files
+  name: GetTemporaryLinkResult
+  nameWithType: GetTemporaryLinkResult
+  fullName: Dropbox.Api.Files.GetTemporaryLinkResult
+- uid: Dropbox.Api.Files.GetTemporaryLinkResult.#ctor*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkResult.#ctor
+  name: GetTemporaryLinkResult
+  nameWithType: GetTemporaryLinkResult.GetTemporaryLinkResult
+  fullName: Dropbox.Api.Files.GetTemporaryLinkResult.GetTemporaryLinkResult
+- uid: Dropbox.Api.Files.FileMetadata
+  commentId: T:Dropbox.Api.Files.FileMetadata
+  parent: Dropbox.Api.Files
+  name: FileMetadata
+  nameWithType: FileMetadata
+  fullName: Dropbox.Api.Files.FileMetadata
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.GetTemporaryLinkResult.Metadata*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkResult.Metadata
+  name: Metadata
+  nameWithType: GetTemporaryLinkResult.Metadata
+  fullName: Dropbox.Api.Files.GetTemporaryLinkResult.Metadata
+- uid: Dropbox.Api.Files.GetTemporaryLinkResult.Link*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkResult.Link
+  name: Link
+  nameWithType: GetTemporaryLinkResult.Link
+  fullName: Dropbox.Api.Files.GetTemporaryLinkResult.Link

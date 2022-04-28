@@ -1,0 +1,774 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.OAuth2Response
+  commentId: T:Dropbox.Api.OAuth2Response
+  id: OAuth2Response
+  parent: Dropbox.Api
+  children:
+  - Dropbox.Api.OAuth2Response.AccessToken
+  - Dropbox.Api.OAuth2Response.ExpiresAt
+  - Dropbox.Api.OAuth2Response.RefreshToken
+  - Dropbox.Api.OAuth2Response.ScopeList
+  - Dropbox.Api.OAuth2Response.State
+  - Dropbox.Api.OAuth2Response.TokenType
+  - Dropbox.Api.OAuth2Response.Uid
+  langs:
+  - csharp
+  - vb
+  name: OAuth2Response
+  nameWithType: OAuth2Response
+  fullName: Dropbox.Api.OAuth2Response
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: OAuth2Response
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 766
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nContains the parameters passed in a successful authorization response.\n"
+  example: []
+  syntax:
+    content: public sealed class OAuth2Response
+    content.vb: Public NotInheritable Class OAuth2Response
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.OAuth2Response.AccessToken
+  commentId: P:Dropbox.Api.OAuth2Response.AccessToken
+  id: AccessToken
+  parent: Dropbox.Api.OAuth2Response
+  langs:
+  - csharp
+  - vb
+  name: AccessToken
+  nameWithType: OAuth2Response.AccessToken
+  fullName: Dropbox.Api.OAuth2Response.AccessToken
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AccessToken
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 826
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets the access token, a token which can be used to make calls to the Dropbox API.\n"
+  remarks: "\nPass this as the <code>oauth2AccessToken</code> argument when creating an instance\nof <xref href=\"Dropbox.Api.DropboxClient\" data-throw-if-not-resolved=\"false\"></xref>."
+  example: []
+  syntax:
+    content: public string AccessToken { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: "\nA token which can be used to make calls to the Dropbox API.\n"
+    content.vb: Public ReadOnly Property AccessToken As String
+  overload: Dropbox.Api.OAuth2Response.AccessToken*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.OAuth2Response.Uid
+  commentId: P:Dropbox.Api.OAuth2Response.Uid
+  id: Uid
+  parent: Dropbox.Api.OAuth2Response
+  langs:
+  - csharp
+  - vb
+  name: Uid
+  nameWithType: OAuth2Response.Uid
+  fullName: Dropbox.Api.OAuth2Response.Uid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Uid
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 834
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets the Dropbox user ID of the authorized user.\n"
+  example: []
+  syntax:
+    content: public string Uid { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: "\nThe Dropbox user ID of the authorized user.\n"
+    content.vb: Public ReadOnly Property Uid As String
+  overload: Dropbox.Api.OAuth2Response.Uid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.OAuth2Response.State
+  commentId: P:Dropbox.Api.OAuth2Response.State
+  id: State
+  parent: Dropbox.Api.OAuth2Response
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: OAuth2Response.State
+  fullName: Dropbox.Api.OAuth2Response.State
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: State
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 842
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets the state content, if any, originally passed to the authorize URI.\n"
+  example: []
+  syntax:
+    content: public string State { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: "\nThe state content, if any, originally passed to the authorize URI.\n"
+    content.vb: Public ReadOnly Property State As String
+  overload: Dropbox.Api.OAuth2Response.State*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.OAuth2Response.TokenType
+  commentId: P:Dropbox.Api.OAuth2Response.TokenType
+  id: TokenType
+  parent: Dropbox.Api.OAuth2Response
+  langs:
+  - csharp
+  - vb
+  name: TokenType
+  nameWithType: OAuth2Response.TokenType
+  fullName: Dropbox.Api.OAuth2Response.TokenType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TokenType
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 850
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets the type of the token, which will always be <code>bearer</code> if set.\n"
+  example: []
+  syntax:
+    content: public string TokenType { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: "\nThis will always be <code>bearer</code> if set.\n"
+    content.vb: Public ReadOnly Property TokenType As String
+  overload: Dropbox.Api.OAuth2Response.TokenType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.OAuth2Response.RefreshToken
+  commentId: P:Dropbox.Api.OAuth2Response.RefreshToken
+  id: RefreshToken
+  parent: Dropbox.Api.OAuth2Response
+  langs:
+  - csharp
+  - vb
+  name: RefreshToken
+  nameWithType: OAuth2Response.RefreshToken
+  fullName: Dropbox.Api.OAuth2Response.RefreshToken
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: RefreshToken
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 855
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets the refresh token, if offline or online access type was selected.\n"
+  example: []
+  syntax:
+    content: public string RefreshToken { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property RefreshToken As String
+  overload: Dropbox.Api.OAuth2Response.RefreshToken*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.OAuth2Response.ExpiresAt
+  commentId: P:Dropbox.Api.OAuth2Response.ExpiresAt
+  id: ExpiresAt
+  parent: Dropbox.Api.OAuth2Response
+  langs:
+  - csharp
+  - vb
+  name: ExpiresAt
+  nameWithType: OAuth2Response.ExpiresAt
+  fullName: Dropbox.Api.OAuth2Response.ExpiresAt
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ExpiresAt
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 861
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets the time of expiration of the access token, if the token will expire.\nThis is only filled if offline or online access type was selected.\n"
+  example: []
+  syntax:
+    content: public DateTime? ExpiresAt { get; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public ReadOnly Property ExpiresAt As Date?
+  overload: Dropbox.Api.OAuth2Response.ExpiresAt*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.OAuth2Response.ScopeList
+  commentId: P:Dropbox.Api.OAuth2Response.ScopeList
+  id: ScopeList
+  parent: Dropbox.Api.OAuth2Response
+  langs:
+  - csharp
+  - vb
+  name: ScopeList
+  nameWithType: OAuth2Response.ScopeList
+  fullName: Dropbox.Api.OAuth2Response.ScopeList
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ScopeList
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 866
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets list of scopes this oauth2 request granted the user.\n"
+  example: []
+  syntax:
+    content: public string[] ScopeList { get; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Public ReadOnly Property ScopeList As String()
+  overload: Dropbox.Api.OAuth2Response.ScopeList*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.DropboxClient
+  commentId: T:Dropbox.Api.DropboxClient
+  parent: Dropbox.Api
+  name: DropboxClient
+  nameWithType: DropboxClient
+  fullName: Dropbox.Api.DropboxClient
+- uid: Dropbox.Api.OAuth2Response.AccessToken*
+  commentId: Overload:Dropbox.Api.OAuth2Response.AccessToken
+  name: AccessToken
+  nameWithType: OAuth2Response.AccessToken
+  fullName: Dropbox.Api.OAuth2Response.AccessToken
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.OAuth2Response.Uid*
+  commentId: Overload:Dropbox.Api.OAuth2Response.Uid
+  name: Uid
+  nameWithType: OAuth2Response.Uid
+  fullName: Dropbox.Api.OAuth2Response.Uid
+- uid: Dropbox.Api.OAuth2Response.State*
+  commentId: Overload:Dropbox.Api.OAuth2Response.State
+  name: State
+  nameWithType: OAuth2Response.State
+  fullName: Dropbox.Api.OAuth2Response.State
+- uid: Dropbox.Api.OAuth2Response.TokenType*
+  commentId: Overload:Dropbox.Api.OAuth2Response.TokenType
+  name: TokenType
+  nameWithType: OAuth2Response.TokenType
+  fullName: Dropbox.Api.OAuth2Response.TokenType
+- uid: Dropbox.Api.OAuth2Response.RefreshToken*
+  commentId: Overload:Dropbox.Api.OAuth2Response.RefreshToken
+  name: RefreshToken
+  nameWithType: OAuth2Response.RefreshToken
+  fullName: Dropbox.Api.OAuth2Response.RefreshToken
+- uid: Dropbox.Api.OAuth2Response.ExpiresAt*
+  commentId: Overload:Dropbox.Api.OAuth2Response.ExpiresAt
+  name: ExpiresAt
+  nameWithType: OAuth2Response.ExpiresAt
+  fullName: Dropbox.Api.OAuth2Response.ExpiresAt
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.OAuth2Response.ScopeList*
+  commentId: Overload:Dropbox.Api.OAuth2Response.ScopeList
+  name: ScopeList
+  nameWithType: OAuth2Response.ScopeList
+  fullName: Dropbox.Api.OAuth2Response.ScopeList
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()

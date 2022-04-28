@@ -1,0 +1,508 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails
+  commentId: T:Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails
+  id: ActionDetails.TeamJoinDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.#ctor(Dropbox.Api.TeamLog.JoinTeamDetails)
+  - Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.Value
+  langs:
+  - csharp
+  - vb
+  name: ActionDetails.TeamJoinDetails
+  nameWithType: ActionDetails.TeamJoinDetails
+  fullName: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActionDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TeamJoinDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActionDetails.cs
+    startLine: 400
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Additional information relevant when a new member joins the team.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class TeamJoinDetails : ActionDetails'
+    content.vb: >-
+      Public NotInheritable Class TeamJoinDetails
+          Inherits ActionDetails
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.ActionDetails
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.ActionDetails.IsRemoveAction
+  - Dropbox.Api.TeamLog.ActionDetails.AsRemoveAction
+  - Dropbox.Api.TeamLog.ActionDetails.IsTeamInviteDetails
+  - Dropbox.Api.TeamLog.ActionDetails.AsTeamInviteDetails
+  - Dropbox.Api.TeamLog.ActionDetails.IsTeamJoinDetails
+  - Dropbox.Api.TeamLog.ActionDetails.AsTeamJoinDetails
+  - Dropbox.Api.TeamLog.ActionDetails.IsOther
+  - Dropbox.Api.TeamLog.ActionDetails.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.#ctor(Dropbox.Api.TeamLog.JoinTeamDetails)
+  commentId: M:Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.#ctor(Dropbox.Api.TeamLog.JoinTeamDetails)
+  id: '#ctor(Dropbox.Api.TeamLog.JoinTeamDetails)'
+  parent: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamJoinDetails(JoinTeamDetails)
+  nameWithType: ActionDetails.TeamJoinDetails.TeamJoinDetails(JoinTeamDetails)
+  fullName: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.TeamJoinDetails(Dropbox.Api.TeamLog.JoinTeamDetails)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActionDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActionDetails.cs
+    startLine: 419
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamJoinDetails(JoinTeamDetails value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.TeamLog.JoinTeamDetails
+      description: The value
+    content.vb: Public Sub New(value As JoinTeamDetails)
+  overload: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.Value
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.Value
+  id: Value
+  parent: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ActionDetails.TeamJoinDetails.Value
+  fullName: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActionDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActionDetails.cs
+    startLine: 434
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public JoinTeamDetails Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.JoinTeamDetails
+    content.vb: Public ReadOnly Property Value As JoinTeamDetails
+  overload: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ActionDetails
+  commentId: T:Dropbox.Api.TeamLog.ActionDetails
+  parent: Dropbox.Api.TeamLog
+  name: ActionDetails
+  nameWithType: ActionDetails
+  fullName: Dropbox.Api.TeamLog.ActionDetails
+- uid: Dropbox.Api.TeamLog.ActionDetails.IsRemoveAction
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.IsRemoveAction
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: IsRemoveAction
+  nameWithType: ActionDetails.IsRemoveAction
+  fullName: Dropbox.Api.TeamLog.ActionDetails.IsRemoveAction
+- uid: Dropbox.Api.TeamLog.ActionDetails.AsRemoveAction
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.AsRemoveAction
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: AsRemoveAction
+  nameWithType: ActionDetails.AsRemoveAction
+  fullName: Dropbox.Api.TeamLog.ActionDetails.AsRemoveAction
+- uid: Dropbox.Api.TeamLog.ActionDetails.IsTeamInviteDetails
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.IsTeamInviteDetails
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: IsTeamInviteDetails
+  nameWithType: ActionDetails.IsTeamInviteDetails
+  fullName: Dropbox.Api.TeamLog.ActionDetails.IsTeamInviteDetails
+- uid: Dropbox.Api.TeamLog.ActionDetails.AsTeamInviteDetails
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.AsTeamInviteDetails
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: AsTeamInviteDetails
+  nameWithType: ActionDetails.AsTeamInviteDetails
+  fullName: Dropbox.Api.TeamLog.ActionDetails.AsTeamInviteDetails
+- uid: Dropbox.Api.TeamLog.ActionDetails.IsTeamJoinDetails
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.IsTeamJoinDetails
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: IsTeamJoinDetails
+  nameWithType: ActionDetails.IsTeamJoinDetails
+  fullName: Dropbox.Api.TeamLog.ActionDetails.IsTeamJoinDetails
+- uid: Dropbox.Api.TeamLog.ActionDetails.AsTeamJoinDetails
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.AsTeamJoinDetails
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: AsTeamJoinDetails
+  nameWithType: ActionDetails.AsTeamJoinDetails
+  fullName: Dropbox.Api.TeamLog.ActionDetails.AsTeamJoinDetails
+- uid: Dropbox.Api.TeamLog.ActionDetails.IsOther
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.IsOther
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: IsOther
+  nameWithType: ActionDetails.IsOther
+  fullName: Dropbox.Api.TeamLog.ActionDetails.IsOther
+- uid: Dropbox.Api.TeamLog.ActionDetails.AsOther
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.AsOther
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: AsOther
+  nameWithType: ActionDetails.AsOther
+  fullName: Dropbox.Api.TeamLog.ActionDetails.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails
+  commentId: T:Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails
+  parent: Dropbox.Api.TeamLog
+  name: ActionDetails.TeamJoinDetails
+  nameWithType: ActionDetails.TeamJoinDetails
+  fullName: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails
+- uid: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.#ctor
+  name: TeamJoinDetails
+  nameWithType: ActionDetails.TeamJoinDetails.TeamJoinDetails
+  fullName: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.TeamJoinDetails
+- uid: Dropbox.Api.TeamLog.JoinTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.JoinTeamDetails
+  parent: Dropbox.Api.TeamLog
+  name: JoinTeamDetails
+  nameWithType: JoinTeamDetails
+  fullName: Dropbox.Api.TeamLog.JoinTeamDetails
+- uid: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.Value*
+  commentId: Overload:Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.Value
+  name: Value
+  nameWithType: ActionDetails.TeamJoinDetails.Value
+  fullName: Dropbox.Api.TeamLog.ActionDetails.TeamJoinDetails.Value

@@ -1,0 +1,861 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.NamespaceType
+  commentId: T:Dropbox.Api.Team.NamespaceType
+  id: NamespaceType
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.NamespaceType.#ctor
+  - Dropbox.Api.Team.NamespaceType.AsAppFolder
+  - Dropbox.Api.Team.NamespaceType.AsOther
+  - Dropbox.Api.Team.NamespaceType.AsSharedFolder
+  - Dropbox.Api.Team.NamespaceType.AsTeamFolder
+  - Dropbox.Api.Team.NamespaceType.AsTeamMemberFolder
+  - Dropbox.Api.Team.NamespaceType.IsAppFolder
+  - Dropbox.Api.Team.NamespaceType.IsOther
+  - Dropbox.Api.Team.NamespaceType.IsSharedFolder
+  - Dropbox.Api.Team.NamespaceType.IsTeamFolder
+  - Dropbox.Api.Team.NamespaceType.IsTeamMemberFolder
+  langs:
+  - csharp
+  - vb
+  name: NamespaceType
+  nameWithType: NamespaceType
+  fullName: Dropbox.Api.Team.NamespaceType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NamespaceType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The namespace type object</p>\n"
+  example: []
+  syntax:
+    content: public class NamespaceType
+    content.vb: Public Class NamespaceType
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.NamespaceType.AppFolder
+  - Dropbox.Api.Team.NamespaceType.Other
+  - Dropbox.Api.Team.NamespaceType.SharedFolder
+  - Dropbox.Api.Team.NamespaceType.TeamFolder
+  - Dropbox.Api.Team.NamespaceType.TeamMemberFolder
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.NamespaceType.#ctor
+  commentId: M:Dropbox.Api.Team.NamespaceType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.NamespaceType
+  langs:
+  - csharp
+  - vb
+  name: NamespaceType()
+  nameWithType: NamespaceType.NamespaceType()
+  fullName: Dropbox.Api.Team.NamespaceType.NamespaceType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.NamespaceType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public NamespaceType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.NamespaceType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.NamespaceType.IsAppFolder
+  commentId: P:Dropbox.Api.Team.NamespaceType.IsAppFolder
+  id: IsAppFolder
+  parent: Dropbox.Api.Team.NamespaceType
+  langs:
+  - csharp
+  - vb
+  name: IsAppFolder
+  nameWithType: NamespaceType.IsAppFolder
+  fullName: Dropbox.Api.Team.NamespaceType.IsAppFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAppFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is AppFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAppFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAppFolder As Boolean
+  overload: Dropbox.Api.Team.NamespaceType.IsAppFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.NamespaceType.AsAppFolder
+  commentId: P:Dropbox.Api.Team.NamespaceType.AsAppFolder
+  id: AsAppFolder
+  parent: Dropbox.Api.Team.NamespaceType
+  langs:
+  - csharp
+  - vb
+  name: AsAppFolder
+  nameWithType: NamespaceType.AsAppFolder
+  fullName: Dropbox.Api.Team.NamespaceType.AsAppFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAppFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a AppFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public NamespaceType.AppFolder AsAppFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.NamespaceType.AppFolder
+    content.vb: Public ReadOnly Property AsAppFolder As NamespaceType.AppFolder
+  overload: Dropbox.Api.Team.NamespaceType.AsAppFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.NamespaceType.IsSharedFolder
+  commentId: P:Dropbox.Api.Team.NamespaceType.IsSharedFolder
+  id: IsSharedFolder
+  parent: Dropbox.Api.Team.NamespaceType
+  langs:
+  - csharp
+  - vb
+  name: IsSharedFolder
+  nameWithType: NamespaceType.IsSharedFolder
+  fullName: Dropbox.Api.Team.NamespaceType.IsSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is SharedFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSharedFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSharedFolder As Boolean
+  overload: Dropbox.Api.Team.NamespaceType.IsSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.NamespaceType.AsSharedFolder
+  commentId: P:Dropbox.Api.Team.NamespaceType.AsSharedFolder
+  id: AsSharedFolder
+  parent: Dropbox.Api.Team.NamespaceType
+  langs:
+  - csharp
+  - vb
+  name: AsSharedFolder
+  nameWithType: NamespaceType.AsSharedFolder
+  fullName: Dropbox.Api.Team.NamespaceType.AsSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a SharedFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public NamespaceType.SharedFolder AsSharedFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.NamespaceType.SharedFolder
+    content.vb: Public ReadOnly Property AsSharedFolder As NamespaceType.SharedFolder
+  overload: Dropbox.Api.Team.NamespaceType.AsSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.NamespaceType.IsTeamFolder
+  commentId: P:Dropbox.Api.Team.NamespaceType.IsTeamFolder
+  id: IsTeamFolder
+  parent: Dropbox.Api.Team.NamespaceType
+  langs:
+  - csharp
+  - vb
+  name: IsTeamFolder
+  nameWithType: NamespaceType.IsTeamFolder
+  fullName: Dropbox.Api.Team.NamespaceType.IsTeamFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTeamFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is TeamFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeamFolder As Boolean
+  overload: Dropbox.Api.Team.NamespaceType.IsTeamFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.NamespaceType.AsTeamFolder
+  commentId: P:Dropbox.Api.Team.NamespaceType.AsTeamFolder
+  id: AsTeamFolder
+  parent: Dropbox.Api.Team.NamespaceType
+  langs:
+  - csharp
+  - vb
+  name: AsTeamFolder
+  nameWithType: NamespaceType.AsTeamFolder
+  fullName: Dropbox.Api.Team.NamespaceType.AsTeamFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTeamFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TeamFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public NamespaceType.TeamFolder AsTeamFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.NamespaceType.TeamFolder
+    content.vb: Public ReadOnly Property AsTeamFolder As NamespaceType.TeamFolder
+  overload: Dropbox.Api.Team.NamespaceType.AsTeamFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.NamespaceType.IsTeamMemberFolder
+  commentId: P:Dropbox.Api.Team.NamespaceType.IsTeamMemberFolder
+  id: IsTeamMemberFolder
+  parent: Dropbox.Api.Team.NamespaceType
+  langs:
+  - csharp
+  - vb
+  name: IsTeamMemberFolder
+  nameWithType: NamespaceType.IsTeamMemberFolder
+  fullName: Dropbox.Api.Team.NamespaceType.IsTeamMemberFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTeamMemberFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is TeamMemberFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamMemberFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeamMemberFolder As Boolean
+  overload: Dropbox.Api.Team.NamespaceType.IsTeamMemberFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.NamespaceType.AsTeamMemberFolder
+  commentId: P:Dropbox.Api.Team.NamespaceType.AsTeamMemberFolder
+  id: AsTeamMemberFolder
+  parent: Dropbox.Api.Team.NamespaceType
+  langs:
+  - csharp
+  - vb
+  name: AsTeamMemberFolder
+  nameWithType: NamespaceType.AsTeamMemberFolder
+  fullName: Dropbox.Api.Team.NamespaceType.AsTeamMemberFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTeamMemberFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TeamMemberFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public NamespaceType.TeamMemberFolder AsTeamMemberFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.NamespaceType.TeamMemberFolder
+    content.vb: Public ReadOnly Property AsTeamMemberFolder As NamespaceType.TeamMemberFolder
+  overload: Dropbox.Api.Team.NamespaceType.AsTeamMemberFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.NamespaceType.IsOther
+  commentId: P:Dropbox.Api.Team.NamespaceType.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.NamespaceType
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: NamespaceType.IsOther
+  fullName: Dropbox.Api.Team.NamespaceType.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.NamespaceType.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.NamespaceType.AsOther
+  commentId: P:Dropbox.Api.Team.NamespaceType.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.NamespaceType
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: NamespaceType.AsOther
+  fullName: Dropbox.Api.Team.NamespaceType.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceType.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public NamespaceType.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.NamespaceType.Other
+    content.vb: Public ReadOnly Property AsOther As NamespaceType.Other
+  overload: Dropbox.Api.Team.NamespaceType.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.NamespaceType
+  commentId: T:Dropbox.Api.Team.NamespaceType
+  parent: Dropbox.Api.Team
+  name: NamespaceType
+  nameWithType: NamespaceType
+  fullName: Dropbox.Api.Team.NamespaceType
+- uid: Dropbox.Api.Team.NamespaceType.#ctor*
+  commentId: Overload:Dropbox.Api.Team.NamespaceType.#ctor
+  name: NamespaceType
+  nameWithType: NamespaceType.NamespaceType
+  fullName: Dropbox.Api.Team.NamespaceType.NamespaceType
+- uid: Dropbox.Api.Team.NamespaceType.IsAppFolder*
+  commentId: Overload:Dropbox.Api.Team.NamespaceType.IsAppFolder
+  name: IsAppFolder
+  nameWithType: NamespaceType.IsAppFolder
+  fullName: Dropbox.Api.Team.NamespaceType.IsAppFolder
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.NamespaceType.AsAppFolder*
+  commentId: Overload:Dropbox.Api.Team.NamespaceType.AsAppFolder
+  name: AsAppFolder
+  nameWithType: NamespaceType.AsAppFolder
+  fullName: Dropbox.Api.Team.NamespaceType.AsAppFolder
+- uid: Dropbox.Api.Team.NamespaceType.AppFolder
+  commentId: T:Dropbox.Api.Team.NamespaceType.AppFolder
+  parent: Dropbox.Api.Team
+  name: NamespaceType.AppFolder
+  nameWithType: NamespaceType.AppFolder
+  fullName: Dropbox.Api.Team.NamespaceType.AppFolder
+- uid: Dropbox.Api.Team.NamespaceType.IsSharedFolder*
+  commentId: Overload:Dropbox.Api.Team.NamespaceType.IsSharedFolder
+  name: IsSharedFolder
+  nameWithType: NamespaceType.IsSharedFolder
+  fullName: Dropbox.Api.Team.NamespaceType.IsSharedFolder
+- uid: Dropbox.Api.Team.NamespaceType.AsSharedFolder*
+  commentId: Overload:Dropbox.Api.Team.NamespaceType.AsSharedFolder
+  name: AsSharedFolder
+  nameWithType: NamespaceType.AsSharedFolder
+  fullName: Dropbox.Api.Team.NamespaceType.AsSharedFolder
+- uid: Dropbox.Api.Team.NamespaceType.SharedFolder
+  commentId: T:Dropbox.Api.Team.NamespaceType.SharedFolder
+  parent: Dropbox.Api.Team
+  name: NamespaceType.SharedFolder
+  nameWithType: NamespaceType.SharedFolder
+  fullName: Dropbox.Api.Team.NamespaceType.SharedFolder
+- uid: Dropbox.Api.Team.NamespaceType.IsTeamFolder*
+  commentId: Overload:Dropbox.Api.Team.NamespaceType.IsTeamFolder
+  name: IsTeamFolder
+  nameWithType: NamespaceType.IsTeamFolder
+  fullName: Dropbox.Api.Team.NamespaceType.IsTeamFolder
+- uid: Dropbox.Api.Team.NamespaceType.AsTeamFolder*
+  commentId: Overload:Dropbox.Api.Team.NamespaceType.AsTeamFolder
+  name: AsTeamFolder
+  nameWithType: NamespaceType.AsTeamFolder
+  fullName: Dropbox.Api.Team.NamespaceType.AsTeamFolder
+- uid: Dropbox.Api.Team.NamespaceType.TeamFolder
+  commentId: T:Dropbox.Api.Team.NamespaceType.TeamFolder
+  parent: Dropbox.Api.Team
+  name: NamespaceType.TeamFolder
+  nameWithType: NamespaceType.TeamFolder
+  fullName: Dropbox.Api.Team.NamespaceType.TeamFolder
+- uid: Dropbox.Api.Team.NamespaceType.IsTeamMemberFolder*
+  commentId: Overload:Dropbox.Api.Team.NamespaceType.IsTeamMemberFolder
+  name: IsTeamMemberFolder
+  nameWithType: NamespaceType.IsTeamMemberFolder
+  fullName: Dropbox.Api.Team.NamespaceType.IsTeamMemberFolder
+- uid: Dropbox.Api.Team.NamespaceType.AsTeamMemberFolder*
+  commentId: Overload:Dropbox.Api.Team.NamespaceType.AsTeamMemberFolder
+  name: AsTeamMemberFolder
+  nameWithType: NamespaceType.AsTeamMemberFolder
+  fullName: Dropbox.Api.Team.NamespaceType.AsTeamMemberFolder
+- uid: Dropbox.Api.Team.NamespaceType.TeamMemberFolder
+  commentId: T:Dropbox.Api.Team.NamespaceType.TeamMemberFolder
+  parent: Dropbox.Api.Team
+  name: NamespaceType.TeamMemberFolder
+  nameWithType: NamespaceType.TeamMemberFolder
+  fullName: Dropbox.Api.Team.NamespaceType.TeamMemberFolder
+- uid: Dropbox.Api.Team.NamespaceType.IsOther*
+  commentId: Overload:Dropbox.Api.Team.NamespaceType.IsOther
+  name: IsOther
+  nameWithType: NamespaceType.IsOther
+  fullName: Dropbox.Api.Team.NamespaceType.IsOther
+- uid: Dropbox.Api.Team.NamespaceType.AsOther*
+  commentId: Overload:Dropbox.Api.Team.NamespaceType.AsOther
+  name: AsOther
+  nameWithType: NamespaceType.AsOther
+  fullName: Dropbox.Api.Team.NamespaceType.AsOther
+- uid: Dropbox.Api.Team.NamespaceType.Other
+  commentId: T:Dropbox.Api.Team.NamespaceType.Other
+  parent: Dropbox.Api.Team
+  name: NamespaceType.Other
+  nameWithType: NamespaceType.Other
+  fullName: Dropbox.Api.Team.NamespaceType.Other

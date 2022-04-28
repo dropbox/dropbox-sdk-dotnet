@@ -1,0 +1,469 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadSessionStartError.ContentHashMismatch
+  commentId: T:Dropbox.Api.Files.UploadSessionStartError.ContentHashMismatch
+  id: UploadSessionStartError.ContentHashMismatch
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadSessionStartError.ContentHashMismatch.Instance
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionStartError.ContentHashMismatch
+  nameWithType: UploadSessionStartError.ContentHashMismatch
+  fullName: Dropbox.Api.Files.UploadSessionStartError.ContentHashMismatch
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionStartError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ContentHashMismatch
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionStartError.cs
+    startLine: 460
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The content received by the Dropbox server in this call does not match the\nprovided content hash.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class ContentHashMismatch : UploadSessionStartError'
+    content.vb: >-
+      Public NotInheritable Class ContentHashMismatch
+          Inherits UploadSessionStartError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.UploadSessionStartError
+  inheritedMembers:
+  - Dropbox.Api.Files.UploadSessionStartError.IsConcurrentSessionDataNotAllowed
+  - Dropbox.Api.Files.UploadSessionStartError.AsConcurrentSessionDataNotAllowed
+  - Dropbox.Api.Files.UploadSessionStartError.IsConcurrentSessionCloseNotAllowed
+  - Dropbox.Api.Files.UploadSessionStartError.AsConcurrentSessionCloseNotAllowed
+  - Dropbox.Api.Files.UploadSessionStartError.IsPayloadTooLarge
+  - Dropbox.Api.Files.UploadSessionStartError.AsPayloadTooLarge
+  - Dropbox.Api.Files.UploadSessionStartError.IsContentHashMismatch
+  - Dropbox.Api.Files.UploadSessionStartError.AsContentHashMismatch
+  - Dropbox.Api.Files.UploadSessionStartError.IsOther
+  - Dropbox.Api.Files.UploadSessionStartError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.UploadSessionStartError.ContentHashMismatch.Instance
+  commentId: F:Dropbox.Api.Files.UploadSessionStartError.ContentHashMismatch.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.UploadSessionStartError.ContentHashMismatch
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: UploadSessionStartError.ContentHashMismatch.Instance
+  fullName: Dropbox.Api.Files.UploadSessionStartError.ContentHashMismatch.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionStartError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionStartError.cs
+    startLine: 485
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of ContentHashMismatch</p>\n"
+  example: []
+  syntax:
+    content: public static readonly UploadSessionStartError.ContentHashMismatch Instance
+    return:
+      type: Dropbox.Api.Files.UploadSessionStartError.ContentHashMismatch
+    content.vb: Public Shared ReadOnly Instance As UploadSessionStartError.ContentHashMismatch
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.UploadSessionStartError
+  commentId: T:Dropbox.Api.Files.UploadSessionStartError
+  parent: Dropbox.Api.Files
+  name: UploadSessionStartError
+  nameWithType: UploadSessionStartError
+  fullName: Dropbox.Api.Files.UploadSessionStartError
+- uid: Dropbox.Api.Files.UploadSessionStartError.IsConcurrentSessionDataNotAllowed
+  commentId: P:Dropbox.Api.Files.UploadSessionStartError.IsConcurrentSessionDataNotAllowed
+  parent: Dropbox.Api.Files.UploadSessionStartError
+  name: IsConcurrentSessionDataNotAllowed
+  nameWithType: UploadSessionStartError.IsConcurrentSessionDataNotAllowed
+  fullName: Dropbox.Api.Files.UploadSessionStartError.IsConcurrentSessionDataNotAllowed
+- uid: Dropbox.Api.Files.UploadSessionStartError.AsConcurrentSessionDataNotAllowed
+  commentId: P:Dropbox.Api.Files.UploadSessionStartError.AsConcurrentSessionDataNotAllowed
+  parent: Dropbox.Api.Files.UploadSessionStartError
+  name: AsConcurrentSessionDataNotAllowed
+  nameWithType: UploadSessionStartError.AsConcurrentSessionDataNotAllowed
+  fullName: Dropbox.Api.Files.UploadSessionStartError.AsConcurrentSessionDataNotAllowed
+- uid: Dropbox.Api.Files.UploadSessionStartError.IsConcurrentSessionCloseNotAllowed
+  commentId: P:Dropbox.Api.Files.UploadSessionStartError.IsConcurrentSessionCloseNotAllowed
+  parent: Dropbox.Api.Files.UploadSessionStartError
+  name: IsConcurrentSessionCloseNotAllowed
+  nameWithType: UploadSessionStartError.IsConcurrentSessionCloseNotAllowed
+  fullName: Dropbox.Api.Files.UploadSessionStartError.IsConcurrentSessionCloseNotAllowed
+- uid: Dropbox.Api.Files.UploadSessionStartError.AsConcurrentSessionCloseNotAllowed
+  commentId: P:Dropbox.Api.Files.UploadSessionStartError.AsConcurrentSessionCloseNotAllowed
+  parent: Dropbox.Api.Files.UploadSessionStartError
+  name: AsConcurrentSessionCloseNotAllowed
+  nameWithType: UploadSessionStartError.AsConcurrentSessionCloseNotAllowed
+  fullName: Dropbox.Api.Files.UploadSessionStartError.AsConcurrentSessionCloseNotAllowed
+- uid: Dropbox.Api.Files.UploadSessionStartError.IsPayloadTooLarge
+  commentId: P:Dropbox.Api.Files.UploadSessionStartError.IsPayloadTooLarge
+  parent: Dropbox.Api.Files.UploadSessionStartError
+  name: IsPayloadTooLarge
+  nameWithType: UploadSessionStartError.IsPayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionStartError.IsPayloadTooLarge
+- uid: Dropbox.Api.Files.UploadSessionStartError.AsPayloadTooLarge
+  commentId: P:Dropbox.Api.Files.UploadSessionStartError.AsPayloadTooLarge
+  parent: Dropbox.Api.Files.UploadSessionStartError
+  name: AsPayloadTooLarge
+  nameWithType: UploadSessionStartError.AsPayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionStartError.AsPayloadTooLarge
+- uid: Dropbox.Api.Files.UploadSessionStartError.IsContentHashMismatch
+  commentId: P:Dropbox.Api.Files.UploadSessionStartError.IsContentHashMismatch
+  parent: Dropbox.Api.Files.UploadSessionStartError
+  name: IsContentHashMismatch
+  nameWithType: UploadSessionStartError.IsContentHashMismatch
+  fullName: Dropbox.Api.Files.UploadSessionStartError.IsContentHashMismatch
+- uid: Dropbox.Api.Files.UploadSessionStartError.AsContentHashMismatch
+  commentId: P:Dropbox.Api.Files.UploadSessionStartError.AsContentHashMismatch
+  parent: Dropbox.Api.Files.UploadSessionStartError
+  name: AsContentHashMismatch
+  nameWithType: UploadSessionStartError.AsContentHashMismatch
+  fullName: Dropbox.Api.Files.UploadSessionStartError.AsContentHashMismatch
+- uid: Dropbox.Api.Files.UploadSessionStartError.IsOther
+  commentId: P:Dropbox.Api.Files.UploadSessionStartError.IsOther
+  parent: Dropbox.Api.Files.UploadSessionStartError
+  name: IsOther
+  nameWithType: UploadSessionStartError.IsOther
+  fullName: Dropbox.Api.Files.UploadSessionStartError.IsOther
+- uid: Dropbox.Api.Files.UploadSessionStartError.AsOther
+  commentId: P:Dropbox.Api.Files.UploadSessionStartError.AsOther
+  parent: Dropbox.Api.Files.UploadSessionStartError
+  name: AsOther
+  nameWithType: UploadSessionStartError.AsOther
+  fullName: Dropbox.Api.Files.UploadSessionStartError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.UploadSessionStartError.ContentHashMismatch
+  commentId: T:Dropbox.Api.Files.UploadSessionStartError.ContentHashMismatch
+  parent: Dropbox.Api.Files
+  name: UploadSessionStartError.ContentHashMismatch
+  nameWithType: UploadSessionStartError.ContentHashMismatch
+  fullName: Dropbox.Api.Files.UploadSessionStartError.ContentHashMismatch

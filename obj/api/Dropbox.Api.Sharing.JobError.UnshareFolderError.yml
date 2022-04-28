@@ -1,0 +1,511 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.JobError.UnshareFolderError
+  commentId: T:Dropbox.Api.Sharing.JobError.UnshareFolderError
+  id: JobError.UnshareFolderError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.JobError.UnshareFolderError.#ctor(Dropbox.Api.Sharing.UnshareFolderError)
+  - Dropbox.Api.Sharing.JobError.UnshareFolderError.Value
+  langs:
+  - csharp
+  - vb
+  name: JobError.UnshareFolderError
+  nameWithType: JobError.UnshareFolderError
+  fullName: Dropbox.Api.Sharing.JobError.UnshareFolderError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/JobError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: UnshareFolderError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/JobError.cs
+    startLine: 218
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Error occurred while performing <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.UnshareFolderAsync(Dropbox.Api.Sharing.UnshareFolderArg)\" data-throw-if-not-resolved=\"false\"></xref>\naction.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class UnshareFolderError : JobError'
+    content.vb: >-
+      Public NotInheritable Class UnshareFolderError
+          Inherits JobError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.JobError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.JobError.IsUnshareFolderError
+  - Dropbox.Api.Sharing.JobError.AsUnshareFolderError
+  - Dropbox.Api.Sharing.JobError.IsRemoveFolderMemberError
+  - Dropbox.Api.Sharing.JobError.AsRemoveFolderMemberError
+  - Dropbox.Api.Sharing.JobError.IsRelinquishFolderMembershipError
+  - Dropbox.Api.Sharing.JobError.AsRelinquishFolderMembershipError
+  - Dropbox.Api.Sharing.JobError.IsOther
+  - Dropbox.Api.Sharing.JobError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.JobError.UnshareFolderError.#ctor(Dropbox.Api.Sharing.UnshareFolderError)
+  commentId: M:Dropbox.Api.Sharing.JobError.UnshareFolderError.#ctor(Dropbox.Api.Sharing.UnshareFolderError)
+  id: '#ctor(Dropbox.Api.Sharing.UnshareFolderError)'
+  parent: Dropbox.Api.Sharing.JobError.UnshareFolderError
+  langs:
+  - csharp
+  - vb
+  name: UnshareFolderError(UnshareFolderError)
+  nameWithType: JobError.UnshareFolderError.UnshareFolderError(UnshareFolderError)
+  fullName: Dropbox.Api.Sharing.JobError.UnshareFolderError.UnshareFolderError(Dropbox.Api.Sharing.UnshareFolderError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/JobError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/JobError.cs
+    startLine: 237
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.JobError.UnshareFolderError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UnshareFolderError(UnshareFolderError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Sharing.UnshareFolderError
+      description: The value
+    content.vb: Public Sub New(value As UnshareFolderError)
+  overload: Dropbox.Api.Sharing.JobError.UnshareFolderError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.JobError.UnshareFolderError.Value
+  commentId: P:Dropbox.Api.Sharing.JobError.UnshareFolderError.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.JobError.UnshareFolderError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: JobError.UnshareFolderError.Value
+  fullName: Dropbox.Api.Sharing.JobError.UnshareFolderError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/JobError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/JobError.cs
+    startLine: 252
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public UnshareFolderError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.UnshareFolderError
+    content.vb: Public ReadOnly Property Value As UnshareFolderError
+  overload: Dropbox.Api.Sharing.JobError.UnshareFolderError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.UnshareFolderAsync(Dropbox.Api.Sharing.UnshareFolderArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.UnshareFolderAsync(Dropbox.Api.Sharing.UnshareFolderArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.JobError
+  commentId: T:Dropbox.Api.Sharing.JobError
+  parent: Dropbox.Api.Sharing
+  name: JobError
+  nameWithType: JobError
+  fullName: Dropbox.Api.Sharing.JobError
+- uid: Dropbox.Api.Sharing.JobError.IsUnshareFolderError
+  commentId: P:Dropbox.Api.Sharing.JobError.IsUnshareFolderError
+  parent: Dropbox.Api.Sharing.JobError
+  name: IsUnshareFolderError
+  nameWithType: JobError.IsUnshareFolderError
+  fullName: Dropbox.Api.Sharing.JobError.IsUnshareFolderError
+- uid: Dropbox.Api.Sharing.JobError.AsUnshareFolderError
+  commentId: P:Dropbox.Api.Sharing.JobError.AsUnshareFolderError
+  parent: Dropbox.Api.Sharing.JobError
+  name: AsUnshareFolderError
+  nameWithType: JobError.AsUnshareFolderError
+  fullName: Dropbox.Api.Sharing.JobError.AsUnshareFolderError
+- uid: Dropbox.Api.Sharing.JobError.IsRemoveFolderMemberError
+  commentId: P:Dropbox.Api.Sharing.JobError.IsRemoveFolderMemberError
+  parent: Dropbox.Api.Sharing.JobError
+  name: IsRemoveFolderMemberError
+  nameWithType: JobError.IsRemoveFolderMemberError
+  fullName: Dropbox.Api.Sharing.JobError.IsRemoveFolderMemberError
+- uid: Dropbox.Api.Sharing.JobError.AsRemoveFolderMemberError
+  commentId: P:Dropbox.Api.Sharing.JobError.AsRemoveFolderMemberError
+  parent: Dropbox.Api.Sharing.JobError
+  name: AsRemoveFolderMemberError
+  nameWithType: JobError.AsRemoveFolderMemberError
+  fullName: Dropbox.Api.Sharing.JobError.AsRemoveFolderMemberError
+- uid: Dropbox.Api.Sharing.JobError.IsRelinquishFolderMembershipError
+  commentId: P:Dropbox.Api.Sharing.JobError.IsRelinquishFolderMembershipError
+  parent: Dropbox.Api.Sharing.JobError
+  name: IsRelinquishFolderMembershipError
+  nameWithType: JobError.IsRelinquishFolderMembershipError
+  fullName: Dropbox.Api.Sharing.JobError.IsRelinquishFolderMembershipError
+- uid: Dropbox.Api.Sharing.JobError.AsRelinquishFolderMembershipError
+  commentId: P:Dropbox.Api.Sharing.JobError.AsRelinquishFolderMembershipError
+  parent: Dropbox.Api.Sharing.JobError
+  name: AsRelinquishFolderMembershipError
+  nameWithType: JobError.AsRelinquishFolderMembershipError
+  fullName: Dropbox.Api.Sharing.JobError.AsRelinquishFolderMembershipError
+- uid: Dropbox.Api.Sharing.JobError.IsOther
+  commentId: P:Dropbox.Api.Sharing.JobError.IsOther
+  parent: Dropbox.Api.Sharing.JobError
+  name: IsOther
+  nameWithType: JobError.IsOther
+  fullName: Dropbox.Api.Sharing.JobError.IsOther
+- uid: Dropbox.Api.Sharing.JobError.AsOther
+  commentId: P:Dropbox.Api.Sharing.JobError.AsOther
+  parent: Dropbox.Api.Sharing.JobError
+  name: AsOther
+  nameWithType: JobError.AsOther
+  fullName: Dropbox.Api.Sharing.JobError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.JobError.UnshareFolderError
+  commentId: T:Dropbox.Api.Sharing.JobError.UnshareFolderError
+  parent: Dropbox.Api.Sharing
+  name: JobError.UnshareFolderError
+  nameWithType: JobError.UnshareFolderError
+  fullName: Dropbox.Api.Sharing.JobError.UnshareFolderError
+- uid: Dropbox.Api.Sharing.JobError.UnshareFolderError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.JobError.UnshareFolderError.#ctor
+  name: UnshareFolderError
+  nameWithType: JobError.UnshareFolderError.UnshareFolderError
+  fullName: Dropbox.Api.Sharing.JobError.UnshareFolderError.UnshareFolderError
+- uid: Dropbox.Api.Sharing.UnshareFolderError
+  commentId: T:Dropbox.Api.Sharing.UnshareFolderError
+  parent: Dropbox.Api.Sharing
+  name: UnshareFolderError
+  nameWithType: UnshareFolderError
+  fullName: Dropbox.Api.Sharing.UnshareFolderError
+- uid: Dropbox.Api.Sharing.JobError.UnshareFolderError.Value*
+  commentId: Overload:Dropbox.Api.Sharing.JobError.UnshareFolderError.Value
+  name: Value
+  nameWithType: JobError.UnshareFolderError.Value
+  fullName: Dropbox.Api.Sharing.JobError.UnshareFolderError.Value

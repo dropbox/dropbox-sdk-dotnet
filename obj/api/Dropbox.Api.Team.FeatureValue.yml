@@ -1,0 +1,867 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.FeatureValue
+  commentId: T:Dropbox.Api.Team.FeatureValue
+  id: FeatureValue
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.FeatureValue.#ctor
+  - Dropbox.Api.Team.FeatureValue.AsHasTeamFileEvents
+  - Dropbox.Api.Team.FeatureValue.AsHasTeamSelectiveSync
+  - Dropbox.Api.Team.FeatureValue.AsHasTeamSharedDropbox
+  - Dropbox.Api.Team.FeatureValue.AsOther
+  - Dropbox.Api.Team.FeatureValue.AsUploadApiRateLimit
+  - Dropbox.Api.Team.FeatureValue.IsHasTeamFileEvents
+  - Dropbox.Api.Team.FeatureValue.IsHasTeamSelectiveSync
+  - Dropbox.Api.Team.FeatureValue.IsHasTeamSharedDropbox
+  - Dropbox.Api.Team.FeatureValue.IsOther
+  - Dropbox.Api.Team.FeatureValue.IsUploadApiRateLimit
+  langs:
+  - csharp
+  - vb
+  name: FeatureValue
+  nameWithType: FeatureValue
+  fullName: Dropbox.Api.Team.FeatureValue
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FeatureValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The values correspond to entries in <xref href=\"Dropbox.Api.Team.Feature\" data-throw-if-not-resolved=\"false\"></xref>. You may get different\nvalue according to your Dropbox Business plan.</p>\n"
+  example: []
+  syntax:
+    content: public class FeatureValue
+    content.vb: Public Class FeatureValue
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.FeatureValue.HasTeamFileEvents
+  - Dropbox.Api.Team.FeatureValue.HasTeamSelectiveSync
+  - Dropbox.Api.Team.FeatureValue.HasTeamSharedDropbox
+  - Dropbox.Api.Team.FeatureValue.Other
+  - Dropbox.Api.Team.FeatureValue.UploadApiRateLimit
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.FeatureValue.#ctor
+  commentId: M:Dropbox.Api.Team.FeatureValue.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.FeatureValue
+  langs:
+  - csharp
+  - vb
+  name: FeatureValue()
+  nameWithType: FeatureValue.FeatureValue()
+  fullName: Dropbox.Api.Team.FeatureValue.FeatureValue()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.FeatureValue\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FeatureValue()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.FeatureValue.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.FeatureValue.IsUploadApiRateLimit
+  commentId: P:Dropbox.Api.Team.FeatureValue.IsUploadApiRateLimit
+  id: IsUploadApiRateLimit
+  parent: Dropbox.Api.Team.FeatureValue
+  langs:
+  - csharp
+  - vb
+  name: IsUploadApiRateLimit
+  nameWithType: FeatureValue.IsUploadApiRateLimit
+  fullName: Dropbox.Api.Team.FeatureValue.IsUploadApiRateLimit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUploadApiRateLimit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UploadApiRateLimit</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUploadApiRateLimit { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUploadApiRateLimit As Boolean
+  overload: Dropbox.Api.Team.FeatureValue.IsUploadApiRateLimit*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.FeatureValue.AsUploadApiRateLimit
+  commentId: P:Dropbox.Api.Team.FeatureValue.AsUploadApiRateLimit
+  id: AsUploadApiRateLimit
+  parent: Dropbox.Api.Team.FeatureValue
+  langs:
+  - csharp
+  - vb
+  name: AsUploadApiRateLimit
+  nameWithType: FeatureValue.AsUploadApiRateLimit
+  fullName: Dropbox.Api.Team.FeatureValue.AsUploadApiRateLimit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUploadApiRateLimit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UploadApiRateLimit, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FeatureValue.UploadApiRateLimit AsUploadApiRateLimit { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.FeatureValue.UploadApiRateLimit
+    content.vb: Public ReadOnly Property AsUploadApiRateLimit As FeatureValue.UploadApiRateLimit
+  overload: Dropbox.Api.Team.FeatureValue.AsUploadApiRateLimit*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.FeatureValue.IsHasTeamSharedDropbox
+  commentId: P:Dropbox.Api.Team.FeatureValue.IsHasTeamSharedDropbox
+  id: IsHasTeamSharedDropbox
+  parent: Dropbox.Api.Team.FeatureValue
+  langs:
+  - csharp
+  - vb
+  name: IsHasTeamSharedDropbox
+  nameWithType: FeatureValue.IsHasTeamSharedDropbox
+  fullName: Dropbox.Api.Team.FeatureValue.IsHasTeamSharedDropbox
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsHasTeamSharedDropbox
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is HasTeamSharedDropbox</p>\n"
+  example: []
+  syntax:
+    content: public bool IsHasTeamSharedDropbox { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsHasTeamSharedDropbox As Boolean
+  overload: Dropbox.Api.Team.FeatureValue.IsHasTeamSharedDropbox*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.FeatureValue.AsHasTeamSharedDropbox
+  commentId: P:Dropbox.Api.Team.FeatureValue.AsHasTeamSharedDropbox
+  id: AsHasTeamSharedDropbox
+  parent: Dropbox.Api.Team.FeatureValue
+  langs:
+  - csharp
+  - vb
+  name: AsHasTeamSharedDropbox
+  nameWithType: FeatureValue.AsHasTeamSharedDropbox
+  fullName: Dropbox.Api.Team.FeatureValue.AsHasTeamSharedDropbox
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsHasTeamSharedDropbox
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a HasTeamSharedDropbox, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FeatureValue.HasTeamSharedDropbox AsHasTeamSharedDropbox { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.FeatureValue.HasTeamSharedDropbox
+    content.vb: Public ReadOnly Property AsHasTeamSharedDropbox As FeatureValue.HasTeamSharedDropbox
+  overload: Dropbox.Api.Team.FeatureValue.AsHasTeamSharedDropbox*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.FeatureValue.IsHasTeamFileEvents
+  commentId: P:Dropbox.Api.Team.FeatureValue.IsHasTeamFileEvents
+  id: IsHasTeamFileEvents
+  parent: Dropbox.Api.Team.FeatureValue
+  langs:
+  - csharp
+  - vb
+  name: IsHasTeamFileEvents
+  nameWithType: FeatureValue.IsHasTeamFileEvents
+  fullName: Dropbox.Api.Team.FeatureValue.IsHasTeamFileEvents
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsHasTeamFileEvents
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is HasTeamFileEvents</p>\n"
+  example: []
+  syntax:
+    content: public bool IsHasTeamFileEvents { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsHasTeamFileEvents As Boolean
+  overload: Dropbox.Api.Team.FeatureValue.IsHasTeamFileEvents*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.FeatureValue.AsHasTeamFileEvents
+  commentId: P:Dropbox.Api.Team.FeatureValue.AsHasTeamFileEvents
+  id: AsHasTeamFileEvents
+  parent: Dropbox.Api.Team.FeatureValue
+  langs:
+  - csharp
+  - vb
+  name: AsHasTeamFileEvents
+  nameWithType: FeatureValue.AsHasTeamFileEvents
+  fullName: Dropbox.Api.Team.FeatureValue.AsHasTeamFileEvents
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsHasTeamFileEvents
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a HasTeamFileEvents, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FeatureValue.HasTeamFileEvents AsHasTeamFileEvents { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.FeatureValue.HasTeamFileEvents
+    content.vb: Public ReadOnly Property AsHasTeamFileEvents As FeatureValue.HasTeamFileEvents
+  overload: Dropbox.Api.Team.FeatureValue.AsHasTeamFileEvents*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.FeatureValue.IsHasTeamSelectiveSync
+  commentId: P:Dropbox.Api.Team.FeatureValue.IsHasTeamSelectiveSync
+  id: IsHasTeamSelectiveSync
+  parent: Dropbox.Api.Team.FeatureValue
+  langs:
+  - csharp
+  - vb
+  name: IsHasTeamSelectiveSync
+  nameWithType: FeatureValue.IsHasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.FeatureValue.IsHasTeamSelectiveSync
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsHasTeamSelectiveSync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is HasTeamSelectiveSync</p>\n"
+  example: []
+  syntax:
+    content: public bool IsHasTeamSelectiveSync { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsHasTeamSelectiveSync As Boolean
+  overload: Dropbox.Api.Team.FeatureValue.IsHasTeamSelectiveSync*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.FeatureValue.AsHasTeamSelectiveSync
+  commentId: P:Dropbox.Api.Team.FeatureValue.AsHasTeamSelectiveSync
+  id: AsHasTeamSelectiveSync
+  parent: Dropbox.Api.Team.FeatureValue
+  langs:
+  - csharp
+  - vb
+  name: AsHasTeamSelectiveSync
+  nameWithType: FeatureValue.AsHasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.FeatureValue.AsHasTeamSelectiveSync
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsHasTeamSelectiveSync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a HasTeamSelectiveSync, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FeatureValue.HasTeamSelectiveSync AsHasTeamSelectiveSync { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.FeatureValue.HasTeamSelectiveSync
+    content.vb: Public ReadOnly Property AsHasTeamSelectiveSync As FeatureValue.HasTeamSelectiveSync
+  overload: Dropbox.Api.Team.FeatureValue.AsHasTeamSelectiveSync*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.FeatureValue.IsOther
+  commentId: P:Dropbox.Api.Team.FeatureValue.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.FeatureValue
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: FeatureValue.IsOther
+  fullName: Dropbox.Api.Team.FeatureValue.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.FeatureValue.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.FeatureValue.AsOther
+  commentId: P:Dropbox.Api.Team.FeatureValue.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.FeatureValue
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: FeatureValue.AsOther
+  fullName: Dropbox.Api.Team.FeatureValue.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FeatureValue.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.FeatureValue.Other
+    content.vb: Public ReadOnly Property AsOther As FeatureValue.Other
+  overload: Dropbox.Api.Team.FeatureValue.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team.Feature
+  commentId: T:Dropbox.Api.Team.Feature
+  parent: Dropbox.Api.Team
+  name: Feature
+  nameWithType: Feature
+  fullName: Dropbox.Api.Team.Feature
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.FeatureValue
+  commentId: T:Dropbox.Api.Team.FeatureValue
+  parent: Dropbox.Api.Team
+  name: FeatureValue
+  nameWithType: FeatureValue
+  fullName: Dropbox.Api.Team.FeatureValue
+- uid: Dropbox.Api.Team.FeatureValue.#ctor*
+  commentId: Overload:Dropbox.Api.Team.FeatureValue.#ctor
+  name: FeatureValue
+  nameWithType: FeatureValue.FeatureValue
+  fullName: Dropbox.Api.Team.FeatureValue.FeatureValue
+- uid: Dropbox.Api.Team.FeatureValue.IsUploadApiRateLimit*
+  commentId: Overload:Dropbox.Api.Team.FeatureValue.IsUploadApiRateLimit
+  name: IsUploadApiRateLimit
+  nameWithType: FeatureValue.IsUploadApiRateLimit
+  fullName: Dropbox.Api.Team.FeatureValue.IsUploadApiRateLimit
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.FeatureValue.AsUploadApiRateLimit*
+  commentId: Overload:Dropbox.Api.Team.FeatureValue.AsUploadApiRateLimit
+  name: AsUploadApiRateLimit
+  nameWithType: FeatureValue.AsUploadApiRateLimit
+  fullName: Dropbox.Api.Team.FeatureValue.AsUploadApiRateLimit
+- uid: Dropbox.Api.Team.FeatureValue.UploadApiRateLimit
+  commentId: T:Dropbox.Api.Team.FeatureValue.UploadApiRateLimit
+  parent: Dropbox.Api.Team
+  name: FeatureValue.UploadApiRateLimit
+  nameWithType: FeatureValue.UploadApiRateLimit
+  fullName: Dropbox.Api.Team.FeatureValue.UploadApiRateLimit
+- uid: Dropbox.Api.Team.FeatureValue.IsHasTeamSharedDropbox*
+  commentId: Overload:Dropbox.Api.Team.FeatureValue.IsHasTeamSharedDropbox
+  name: IsHasTeamSharedDropbox
+  nameWithType: FeatureValue.IsHasTeamSharedDropbox
+  fullName: Dropbox.Api.Team.FeatureValue.IsHasTeamSharedDropbox
+- uid: Dropbox.Api.Team.FeatureValue.AsHasTeamSharedDropbox*
+  commentId: Overload:Dropbox.Api.Team.FeatureValue.AsHasTeamSharedDropbox
+  name: AsHasTeamSharedDropbox
+  nameWithType: FeatureValue.AsHasTeamSharedDropbox
+  fullName: Dropbox.Api.Team.FeatureValue.AsHasTeamSharedDropbox
+- uid: Dropbox.Api.Team.FeatureValue.HasTeamSharedDropbox
+  commentId: T:Dropbox.Api.Team.FeatureValue.HasTeamSharedDropbox
+  parent: Dropbox.Api.Team
+  name: FeatureValue.HasTeamSharedDropbox
+  nameWithType: FeatureValue.HasTeamSharedDropbox
+  fullName: Dropbox.Api.Team.FeatureValue.HasTeamSharedDropbox
+- uid: Dropbox.Api.Team.FeatureValue.IsHasTeamFileEvents*
+  commentId: Overload:Dropbox.Api.Team.FeatureValue.IsHasTeamFileEvents
+  name: IsHasTeamFileEvents
+  nameWithType: FeatureValue.IsHasTeamFileEvents
+  fullName: Dropbox.Api.Team.FeatureValue.IsHasTeamFileEvents
+- uid: Dropbox.Api.Team.FeatureValue.AsHasTeamFileEvents*
+  commentId: Overload:Dropbox.Api.Team.FeatureValue.AsHasTeamFileEvents
+  name: AsHasTeamFileEvents
+  nameWithType: FeatureValue.AsHasTeamFileEvents
+  fullName: Dropbox.Api.Team.FeatureValue.AsHasTeamFileEvents
+- uid: Dropbox.Api.Team.FeatureValue.HasTeamFileEvents
+  commentId: T:Dropbox.Api.Team.FeatureValue.HasTeamFileEvents
+  parent: Dropbox.Api.Team
+  name: FeatureValue.HasTeamFileEvents
+  nameWithType: FeatureValue.HasTeamFileEvents
+  fullName: Dropbox.Api.Team.FeatureValue.HasTeamFileEvents
+- uid: Dropbox.Api.Team.FeatureValue.IsHasTeamSelectiveSync*
+  commentId: Overload:Dropbox.Api.Team.FeatureValue.IsHasTeamSelectiveSync
+  name: IsHasTeamSelectiveSync
+  nameWithType: FeatureValue.IsHasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.FeatureValue.IsHasTeamSelectiveSync
+- uid: Dropbox.Api.Team.FeatureValue.AsHasTeamSelectiveSync*
+  commentId: Overload:Dropbox.Api.Team.FeatureValue.AsHasTeamSelectiveSync
+  name: AsHasTeamSelectiveSync
+  nameWithType: FeatureValue.AsHasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.FeatureValue.AsHasTeamSelectiveSync
+- uid: Dropbox.Api.Team.FeatureValue.HasTeamSelectiveSync
+  commentId: T:Dropbox.Api.Team.FeatureValue.HasTeamSelectiveSync
+  parent: Dropbox.Api.Team
+  name: FeatureValue.HasTeamSelectiveSync
+  nameWithType: FeatureValue.HasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.FeatureValue.HasTeamSelectiveSync
+- uid: Dropbox.Api.Team.FeatureValue.IsOther*
+  commentId: Overload:Dropbox.Api.Team.FeatureValue.IsOther
+  name: IsOther
+  nameWithType: FeatureValue.IsOther
+  fullName: Dropbox.Api.Team.FeatureValue.IsOther
+- uid: Dropbox.Api.Team.FeatureValue.AsOther*
+  commentId: Overload:Dropbox.Api.Team.FeatureValue.AsOther
+  name: AsOther
+  nameWithType: FeatureValue.AsOther
+  fullName: Dropbox.Api.Team.FeatureValue.AsOther
+- uid: Dropbox.Api.Team.FeatureValue.Other
+  commentId: T:Dropbox.Api.Team.FeatureValue.Other
+  parent: Dropbox.Api.Team
+  name: FeatureValue.Other
+  nameWithType: FeatureValue.Other
+  fullName: Dropbox.Api.Team.FeatureValue.Other

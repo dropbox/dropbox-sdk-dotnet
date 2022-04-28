@@ -1,0 +1,455 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.ListUsersCursorError.DocNotFound
+  commentId: T:Dropbox.Api.Paper.ListUsersCursorError.DocNotFound
+  id: ListUsersCursorError.DocNotFound
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.ListUsersCursorError.DocNotFound.Instance
+  langs:
+  - csharp
+  - vb
+  name: ListUsersCursorError.DocNotFound
+  nameWithType: ListUsersCursorError.DocNotFound
+  fullName: Dropbox.Api.Paper.ListUsersCursorError.DocNotFound
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersCursorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: DocNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersCursorError.cs
+    startLine: 215
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The required doc was not found.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class DocNotFound : ListUsersCursorError'
+    content.vb: >-
+      Public NotInheritable Class DocNotFound
+          Inherits ListUsersCursorError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Paper.ListUsersCursorError
+  inheritedMembers:
+  - Dropbox.Api.Paper.ListUsersCursorError.IsDocNotFound
+  - Dropbox.Api.Paper.ListUsersCursorError.AsDocNotFound
+  - Dropbox.Api.Paper.ListUsersCursorError.IsCursorError
+  - Dropbox.Api.Paper.ListUsersCursorError.AsCursorError
+  - Dropbox.Api.Paper.ListUsersCursorError.IsInsufficientPermissions
+  - Dropbox.Api.Paper.ListUsersCursorError.AsInsufficientPermissions
+  - Dropbox.Api.Paper.ListUsersCursorError.IsOther
+  - Dropbox.Api.Paper.ListUsersCursorError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Paper.ListUsersCursorError.DocNotFound.Instance
+  commentId: F:Dropbox.Api.Paper.ListUsersCursorError.DocNotFound.Instance
+  id: Instance
+  parent: Dropbox.Api.Paper.ListUsersCursorError.DocNotFound
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ListUsersCursorError.DocNotFound.Instance
+  fullName: Dropbox.Api.Paper.ListUsersCursorError.DocNotFound.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersCursorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersCursorError.cs
+    startLine: 240
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>A singleton instance of DocNotFound</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ListUsersCursorError.DocNotFound Instance
+    return:
+      type: Dropbox.Api.Paper.ListUsersCursorError.DocNotFound
+    content.vb: Public Shared ReadOnly Instance As ListUsersCursorError.DocNotFound
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.ListUsersCursorError
+  commentId: T:Dropbox.Api.Paper.ListUsersCursorError
+  parent: Dropbox.Api.Paper
+  name: ListUsersCursorError
+  nameWithType: ListUsersCursorError
+  fullName: Dropbox.Api.Paper.ListUsersCursorError
+- uid: Dropbox.Api.Paper.ListUsersCursorError.IsDocNotFound
+  commentId: P:Dropbox.Api.Paper.ListUsersCursorError.IsDocNotFound
+  parent: Dropbox.Api.Paper.ListUsersCursorError
+  name: IsDocNotFound
+  nameWithType: ListUsersCursorError.IsDocNotFound
+  fullName: Dropbox.Api.Paper.ListUsersCursorError.IsDocNotFound
+- uid: Dropbox.Api.Paper.ListUsersCursorError.AsDocNotFound
+  commentId: P:Dropbox.Api.Paper.ListUsersCursorError.AsDocNotFound
+  parent: Dropbox.Api.Paper.ListUsersCursorError
+  name: AsDocNotFound
+  nameWithType: ListUsersCursorError.AsDocNotFound
+  fullName: Dropbox.Api.Paper.ListUsersCursorError.AsDocNotFound
+- uid: Dropbox.Api.Paper.ListUsersCursorError.IsCursorError
+  commentId: P:Dropbox.Api.Paper.ListUsersCursorError.IsCursorError
+  parent: Dropbox.Api.Paper.ListUsersCursorError
+  name: IsCursorError
+  nameWithType: ListUsersCursorError.IsCursorError
+  fullName: Dropbox.Api.Paper.ListUsersCursorError.IsCursorError
+- uid: Dropbox.Api.Paper.ListUsersCursorError.AsCursorError
+  commentId: P:Dropbox.Api.Paper.ListUsersCursorError.AsCursorError
+  parent: Dropbox.Api.Paper.ListUsersCursorError
+  name: AsCursorError
+  nameWithType: ListUsersCursorError.AsCursorError
+  fullName: Dropbox.Api.Paper.ListUsersCursorError.AsCursorError
+- uid: Dropbox.Api.Paper.ListUsersCursorError.IsInsufficientPermissions
+  commentId: P:Dropbox.Api.Paper.ListUsersCursorError.IsInsufficientPermissions
+  parent: Dropbox.Api.Paper.ListUsersCursorError
+  name: IsInsufficientPermissions
+  nameWithType: ListUsersCursorError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.ListUsersCursorError.IsInsufficientPermissions
+- uid: Dropbox.Api.Paper.ListUsersCursorError.AsInsufficientPermissions
+  commentId: P:Dropbox.Api.Paper.ListUsersCursorError.AsInsufficientPermissions
+  parent: Dropbox.Api.Paper.ListUsersCursorError
+  name: AsInsufficientPermissions
+  nameWithType: ListUsersCursorError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.ListUsersCursorError.AsInsufficientPermissions
+- uid: Dropbox.Api.Paper.ListUsersCursorError.IsOther
+  commentId: P:Dropbox.Api.Paper.ListUsersCursorError.IsOther
+  parent: Dropbox.Api.Paper.ListUsersCursorError
+  name: IsOther
+  nameWithType: ListUsersCursorError.IsOther
+  fullName: Dropbox.Api.Paper.ListUsersCursorError.IsOther
+- uid: Dropbox.Api.Paper.ListUsersCursorError.AsOther
+  commentId: P:Dropbox.Api.Paper.ListUsersCursorError.AsOther
+  parent: Dropbox.Api.Paper.ListUsersCursorError
+  name: AsOther
+  nameWithType: ListUsersCursorError.AsOther
+  fullName: Dropbox.Api.Paper.ListUsersCursorError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Paper.ListUsersCursorError.DocNotFound
+  commentId: T:Dropbox.Api.Paper.ListUsersCursorError.DocNotFound
+  parent: Dropbox.Api.Paper
+  name: ListUsersCursorError.DocNotFound
+  nameWithType: ListUsersCursorError.DocNotFound
+  fullName: Dropbox.Api.Paper.ListUsersCursorError.DocNotFound

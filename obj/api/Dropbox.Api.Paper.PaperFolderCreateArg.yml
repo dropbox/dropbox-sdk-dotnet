@@ -1,0 +1,642 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.PaperFolderCreateArg
+  commentId: T:Dropbox.Api.Paper.PaperFolderCreateArg
+  id: PaperFolderCreateArg
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.PaperFolderCreateArg.#ctor(System.String,System.String,System.Nullable{System.Boolean})
+  - Dropbox.Api.Paper.PaperFolderCreateArg.IsTeamFolder
+  - Dropbox.Api.Paper.PaperFolderCreateArg.Name
+  - Dropbox.Api.Paper.PaperFolderCreateArg.ParentFolderId
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderCreateArg
+  nameWithType: PaperFolderCreateArg
+  fullName: Dropbox.Api.Paper.PaperFolderCreateArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PaperFolderCreateArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The paper folder create arg object</p>\n"
+  example: []
+  syntax:
+    content: public class PaperFolderCreateArg
+    content.vb: Public Class PaperFolderCreateArg
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.PaperFolderCreateArg.#ctor(System.String,System.String,System.Nullable{System.Boolean})
+  commentId: M:Dropbox.Api.Paper.PaperFolderCreateArg.#ctor(System.String,System.String,System.Nullable{System.Boolean})
+  id: '#ctor(System.String,System.String,System.Nullable{System.Boolean})'
+  parent: Dropbox.Api.Paper.PaperFolderCreateArg
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderCreateArg(String, String, Nullable<Boolean>)
+  nameWithType: PaperFolderCreateArg.PaperFolderCreateArg(String, String, Nullable<Boolean>)
+  fullName: Dropbox.Api.Paper.PaperFolderCreateArg.PaperFolderCreateArg(System.String, System.String, System.Nullable<System.Boolean>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateArg.cs
+    startLine: 43
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperFolderCreateArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperFolderCreateArg(string name, string parentFolderId = null, bool? isTeamFolder = null)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the new Paper folder.
+    - id: parentFolderId
+      type: System.String
+      description: >-
+        The encrypted Paper folder Id where the new Paper
+
+        folder should be created. The API user has to have write access to this folder or
+
+        error is thrown. If not supplied, the new folder will be created at top
+
+        level.
+    - id: isTeamFolder
+      type: System.Nullable{System.Boolean}
+      description: >-
+        Whether the folder to be created should be a team
+
+        folder. This value will be ignored if parent_folder_id is supplied, as the new
+
+        folder will inherit the type (private or team folder) from its parent. We will by
+
+        default create a top-level private folder if both parent_folder_id and
+
+        is_team_folder are not supplied.
+    content.vb: Public Sub New(name As String, parentFolderId As String = Nothing, isTeamFolder As Boolean? = Nothing)
+  overload: Dropbox.Api.Paper.PaperFolderCreateArg.#ctor*
+  nameWithType.vb: PaperFolderCreateArg.PaperFolderCreateArg(String, String, Nullable(Of Boolean))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Paper.PaperFolderCreateArg.PaperFolderCreateArg(System.String, System.String, System.Nullable(Of System.Boolean))
+  name.vb: PaperFolderCreateArg(String, String, Nullable(Of Boolean))
+- uid: Dropbox.Api.Paper.PaperFolderCreateArg.Name
+  commentId: P:Dropbox.Api.Paper.PaperFolderCreateArg.Name
+  id: Name
+  parent: Dropbox.Api.Paper.PaperFolderCreateArg
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: PaperFolderCreateArg.Name
+  fullName: Dropbox.Api.Paper.PaperFolderCreateArg.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateArg.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The name of the new Paper folder.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.Paper.PaperFolderCreateArg.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.PaperFolderCreateArg.ParentFolderId
+  commentId: P:Dropbox.Api.Paper.PaperFolderCreateArg.ParentFolderId
+  id: ParentFolderId
+  parent: Dropbox.Api.Paper.PaperFolderCreateArg
+  langs:
+  - csharp
+  - vb
+  name: ParentFolderId
+  nameWithType: PaperFolderCreateArg.ParentFolderId
+  fullName: Dropbox.Api.Paper.PaperFolderCreateArg.ParentFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ParentFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateArg.cs
+    startLine: 78
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The encrypted Paper folder Id where the new Paper folder should be created.\nThe API user has to have write access to this folder or error is thrown. If not\nsupplied, the new folder will be created at top level.</p>\n"
+  example: []
+  syntax:
+    content: public string ParentFolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ParentFolderId As String
+  overload: Dropbox.Api.Paper.PaperFolderCreateArg.ParentFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.PaperFolderCreateArg.IsTeamFolder
+  commentId: P:Dropbox.Api.Paper.PaperFolderCreateArg.IsTeamFolder
+  id: IsTeamFolder
+  parent: Dropbox.Api.Paper.PaperFolderCreateArg
+  langs:
+  - csharp
+  - vb
+  name: IsTeamFolder
+  nameWithType: PaperFolderCreateArg.IsTeamFolder
+  fullName: Dropbox.Api.Paper.PaperFolderCreateArg.IsTeamFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTeamFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateArg.cs
+    startLine: 86
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Whether the folder to be created should be a team folder. This value will be\nignored if parent_folder_id is supplied, as the new folder will inherit the type\n(private or team folder) from its parent. We will by default create a top-level\nprivate folder if both parent_folder_id and is_team_folder are not supplied.</p>\n"
+  example: []
+  syntax:
+    content: public bool? IsTeamFolder { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property IsTeamFolder As Boolean?
+  overload: Dropbox.Api.Paper.PaperFolderCreateArg.IsTeamFolder*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Paper.PaperFolderCreateArg
+  commentId: T:Dropbox.Api.Paper.PaperFolderCreateArg
+  parent: Dropbox.Api.Paper
+  name: PaperFolderCreateArg
+  nameWithType: PaperFolderCreateArg
+  fullName: Dropbox.Api.Paper.PaperFolderCreateArg
+- uid: Dropbox.Api.Paper.PaperFolderCreateArg.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateArg.#ctor
+  name: PaperFolderCreateArg
+  nameWithType: PaperFolderCreateArg.PaperFolderCreateArg
+  fullName: Dropbox.Api.Paper.PaperFolderCreateArg.PaperFolderCreateArg
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Paper.PaperFolderCreateArg.Name*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateArg.Name
+  name: Name
+  nameWithType: PaperFolderCreateArg.Name
+  fullName: Dropbox.Api.Paper.PaperFolderCreateArg.Name
+- uid: Dropbox.Api.Paper.PaperFolderCreateArg.ParentFolderId*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateArg.ParentFolderId
+  name: ParentFolderId
+  nameWithType: PaperFolderCreateArg.ParentFolderId
+  fullName: Dropbox.Api.Paper.PaperFolderCreateArg.ParentFolderId
+- uid: Dropbox.Api.Paper.PaperFolderCreateArg.IsTeamFolder*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateArg.IsTeamFolder
+  name: IsTeamFolder
+  nameWithType: PaperFolderCreateArg.IsTeamFolder
+  fullName: Dropbox.Api.Paper.PaperFolderCreateArg.IsTeamFolder

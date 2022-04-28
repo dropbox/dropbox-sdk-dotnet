@@ -1,0 +1,455 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.AdminTier.UserManagementAdmin
+  commentId: T:Dropbox.Api.Team.AdminTier.UserManagementAdmin
+  id: AdminTier.UserManagementAdmin
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.AdminTier.UserManagementAdmin.Instance
+  langs:
+  - csharp
+  - vb
+  name: AdminTier.UserManagementAdmin
+  nameWithType: AdminTier.UserManagementAdmin
+  fullName: Dropbox.Api.Team.AdminTier.UserManagementAdmin
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AdminTier.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: UserManagementAdmin
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AdminTier.cs
+    startLine: 282
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>User can do most user provisioning, de-provisioning and management.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class UserManagementAdmin : AdminTier'
+    content.vb: >-
+      Public NotInheritable Class UserManagementAdmin
+          Inherits AdminTier
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.AdminTier
+  inheritedMembers:
+  - Dropbox.Api.Team.AdminTier.IsTeamAdmin
+  - Dropbox.Api.Team.AdminTier.AsTeamAdmin
+  - Dropbox.Api.Team.AdminTier.IsUserManagementAdmin
+  - Dropbox.Api.Team.AdminTier.AsUserManagementAdmin
+  - Dropbox.Api.Team.AdminTier.IsSupportAdmin
+  - Dropbox.Api.Team.AdminTier.AsSupportAdmin
+  - Dropbox.Api.Team.AdminTier.IsMemberOnly
+  - Dropbox.Api.Team.AdminTier.AsMemberOnly
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.AdminTier.UserManagementAdmin.Instance
+  commentId: F:Dropbox.Api.Team.AdminTier.UserManagementAdmin.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.AdminTier.UserManagementAdmin
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: AdminTier.UserManagementAdmin.Instance
+  fullName: Dropbox.Api.Team.AdminTier.UserManagementAdmin.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AdminTier.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AdminTier.cs
+    startLine: 307
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of UserManagementAdmin</p>\n"
+  example: []
+  syntax:
+    content: public static readonly AdminTier.UserManagementAdmin Instance
+    return:
+      type: Dropbox.Api.Team.AdminTier.UserManagementAdmin
+    content.vb: Public Shared ReadOnly Instance As AdminTier.UserManagementAdmin
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.AdminTier
+  commentId: T:Dropbox.Api.Team.AdminTier
+  parent: Dropbox.Api.Team
+  name: AdminTier
+  nameWithType: AdminTier
+  fullName: Dropbox.Api.Team.AdminTier
+- uid: Dropbox.Api.Team.AdminTier.IsTeamAdmin
+  commentId: P:Dropbox.Api.Team.AdminTier.IsTeamAdmin
+  parent: Dropbox.Api.Team.AdminTier
+  name: IsTeamAdmin
+  nameWithType: AdminTier.IsTeamAdmin
+  fullName: Dropbox.Api.Team.AdminTier.IsTeamAdmin
+- uid: Dropbox.Api.Team.AdminTier.AsTeamAdmin
+  commentId: P:Dropbox.Api.Team.AdminTier.AsTeamAdmin
+  parent: Dropbox.Api.Team.AdminTier
+  name: AsTeamAdmin
+  nameWithType: AdminTier.AsTeamAdmin
+  fullName: Dropbox.Api.Team.AdminTier.AsTeamAdmin
+- uid: Dropbox.Api.Team.AdminTier.IsUserManagementAdmin
+  commentId: P:Dropbox.Api.Team.AdminTier.IsUserManagementAdmin
+  parent: Dropbox.Api.Team.AdminTier
+  name: IsUserManagementAdmin
+  nameWithType: AdminTier.IsUserManagementAdmin
+  fullName: Dropbox.Api.Team.AdminTier.IsUserManagementAdmin
+- uid: Dropbox.Api.Team.AdminTier.AsUserManagementAdmin
+  commentId: P:Dropbox.Api.Team.AdminTier.AsUserManagementAdmin
+  parent: Dropbox.Api.Team.AdminTier
+  name: AsUserManagementAdmin
+  nameWithType: AdminTier.AsUserManagementAdmin
+  fullName: Dropbox.Api.Team.AdminTier.AsUserManagementAdmin
+- uid: Dropbox.Api.Team.AdminTier.IsSupportAdmin
+  commentId: P:Dropbox.Api.Team.AdminTier.IsSupportAdmin
+  parent: Dropbox.Api.Team.AdminTier
+  name: IsSupportAdmin
+  nameWithType: AdminTier.IsSupportAdmin
+  fullName: Dropbox.Api.Team.AdminTier.IsSupportAdmin
+- uid: Dropbox.Api.Team.AdminTier.AsSupportAdmin
+  commentId: P:Dropbox.Api.Team.AdminTier.AsSupportAdmin
+  parent: Dropbox.Api.Team.AdminTier
+  name: AsSupportAdmin
+  nameWithType: AdminTier.AsSupportAdmin
+  fullName: Dropbox.Api.Team.AdminTier.AsSupportAdmin
+- uid: Dropbox.Api.Team.AdminTier.IsMemberOnly
+  commentId: P:Dropbox.Api.Team.AdminTier.IsMemberOnly
+  parent: Dropbox.Api.Team.AdminTier
+  name: IsMemberOnly
+  nameWithType: AdminTier.IsMemberOnly
+  fullName: Dropbox.Api.Team.AdminTier.IsMemberOnly
+- uid: Dropbox.Api.Team.AdminTier.AsMemberOnly
+  commentId: P:Dropbox.Api.Team.AdminTier.AsMemberOnly
+  parent: Dropbox.Api.Team.AdminTier
+  name: AsMemberOnly
+  nameWithType: AdminTier.AsMemberOnly
+  fullName: Dropbox.Api.Team.AdminTier.AsMemberOnly
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.AdminTier.UserManagementAdmin
+  commentId: T:Dropbox.Api.Team.AdminTier.UserManagementAdmin
+  parent: Dropbox.Api.Team
+  name: AdminTier.UserManagementAdmin
+  nameWithType: AdminTier.UserManagementAdmin
+  fullName: Dropbox.Api.Team.AdminTier.UserManagementAdmin

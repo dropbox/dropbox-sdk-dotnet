@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy
+  commentId: T:Dropbox.Api.TeamLog.SecondaryMailsPolicy
+  id: SecondaryMailsPolicy
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SecondaryMailsPolicy.#ctor
+  - Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsDisabled
+  - Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsEnabled
+  - Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsOther
+  - Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsDisabled
+  - Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsEnabled
+  - Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: SecondaryMailsPolicy
+  nameWithType: SecondaryMailsPolicy
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SecondaryMailsPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The secondary mails policy object</p>\n"
+  example: []
+  syntax:
+    content: public class SecondaryMailsPolicy
+    content.vb: Public Class SecondaryMailsPolicy
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.SecondaryMailsPolicy.Disabled
+  - Dropbox.Api.TeamLog.SecondaryMailsPolicy.Enabled
+  - Dropbox.Api.TeamLog.SecondaryMailsPolicy.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SecondaryMailsPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SecondaryMailsPolicy
+  langs:
+  - csharp
+  - vb
+  name: SecondaryMailsPolicy()
+  nameWithType: SecondaryMailsPolicy.SecondaryMailsPolicy()
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.SecondaryMailsPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SecondaryMailsPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SecondaryMailsPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SecondaryMailsPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.TeamLog.SecondaryMailsPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: SecondaryMailsPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.TeamLog.SecondaryMailsPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: SecondaryMailsPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SecondaryMailsPolicy.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SecondaryMailsPolicy.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As SecondaryMailsPolicy.Disabled
+  overload: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsEnabled
+  commentId: P:Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsEnabled
+  id: IsEnabled
+  parent: Dropbox.Api.TeamLog.SecondaryMailsPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: SecondaryMailsPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Enabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnabled As Boolean
+  overload: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsEnabled
+  commentId: P:Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsEnabled
+  id: AsEnabled
+  parent: Dropbox.Api.TeamLog.SecondaryMailsPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsEnabled
+  nameWithType: SecondaryMailsPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Enabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SecondaryMailsPolicy.Enabled AsEnabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SecondaryMailsPolicy.Enabled
+    content.vb: Public ReadOnly Property AsEnabled As SecondaryMailsPolicy.Enabled
+  overload: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.SecondaryMailsPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SecondaryMailsPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.SecondaryMailsPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SecondaryMailsPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SecondaryMailsPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SecondaryMailsPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As SecondaryMailsPolicy.Other
+  overload: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy
+  commentId: T:Dropbox.Api.TeamLog.SecondaryMailsPolicy
+  parent: Dropbox.Api.TeamLog
+  name: SecondaryMailsPolicy
+  nameWithType: SecondaryMailsPolicy
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryMailsPolicy.#ctor
+  name: SecondaryMailsPolicy
+  nameWithType: SecondaryMailsPolicy.SecondaryMailsPolicy
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.SecondaryMailsPolicy
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsDisabled
+  name: IsDisabled
+  nameWithType: SecondaryMailsPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsDisabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsDisabled
+  name: AsDisabled
+  nameWithType: SecondaryMailsPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsDisabled
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.Disabled
+  commentId: T:Dropbox.Api.TeamLog.SecondaryMailsPolicy.Disabled
+  parent: Dropbox.Api.TeamLog
+  name: SecondaryMailsPolicy.Disabled
+  nameWithType: SecondaryMailsPolicy.Disabled
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.Disabled
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsEnabled
+  name: IsEnabled
+  nameWithType: SecondaryMailsPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsEnabled
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsEnabled
+  name: AsEnabled
+  nameWithType: SecondaryMailsPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsEnabled
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.Enabled
+  commentId: T:Dropbox.Api.TeamLog.SecondaryMailsPolicy.Enabled
+  parent: Dropbox.Api.TeamLog
+  name: SecondaryMailsPolicy.Enabled
+  nameWithType: SecondaryMailsPolicy.Enabled
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.Enabled
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsOther
+  name: IsOther
+  nameWithType: SecondaryMailsPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsOther
+  name: AsOther
+  nameWithType: SecondaryMailsPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.SecondaryMailsPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  name: SecondaryMailsPolicy.Other
+  nameWithType: SecondaryMailsPolicy.Other
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicy.Other

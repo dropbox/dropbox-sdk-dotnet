@@ -1,0 +1,954 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.LookupError
+  commentId: T:Dropbox.Api.FileProperties.LookupError
+  id: LookupError
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.LookupError.#ctor
+  - Dropbox.Api.FileProperties.LookupError.AsMalformedPath
+  - Dropbox.Api.FileProperties.LookupError.AsNotFile
+  - Dropbox.Api.FileProperties.LookupError.AsNotFolder
+  - Dropbox.Api.FileProperties.LookupError.AsNotFound
+  - Dropbox.Api.FileProperties.LookupError.AsOther
+  - Dropbox.Api.FileProperties.LookupError.AsRestrictedContent
+  - Dropbox.Api.FileProperties.LookupError.IsMalformedPath
+  - Dropbox.Api.FileProperties.LookupError.IsNotFile
+  - Dropbox.Api.FileProperties.LookupError.IsNotFolder
+  - Dropbox.Api.FileProperties.LookupError.IsNotFound
+  - Dropbox.Api.FileProperties.LookupError.IsOther
+  - Dropbox.Api.FileProperties.LookupError.IsRestrictedContent
+  langs:
+  - csharp
+  - vb
+  name: LookupError
+  nameWithType: LookupError
+  fullName: Dropbox.Api.FileProperties.LookupError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LookupError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The lookup error object</p>\n"
+  example: []
+  syntax:
+    content: public class LookupError
+    content.vb: Public Class LookupError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.FileProperties.LookupError.MalformedPath
+  - Dropbox.Api.FileProperties.LookupError.NotFile
+  - Dropbox.Api.FileProperties.LookupError.NotFolder
+  - Dropbox.Api.FileProperties.LookupError.NotFound
+  - Dropbox.Api.FileProperties.LookupError.Other
+  - Dropbox.Api.FileProperties.LookupError.RestrictedContent
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.LookupError.#ctor
+  commentId: M:Dropbox.Api.FileProperties.LookupError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileProperties.LookupError
+  langs:
+  - csharp
+  - vb
+  name: LookupError()
+  nameWithType: LookupError.LookupError()
+  fullName: Dropbox.Api.FileProperties.LookupError.LookupError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.LookupError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public LookupError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileProperties.LookupError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.LookupError.IsMalformedPath
+  commentId: P:Dropbox.Api.FileProperties.LookupError.IsMalformedPath
+  id: IsMalformedPath
+  parent: Dropbox.Api.FileProperties.LookupError
+  langs:
+  - csharp
+  - vb
+  name: IsMalformedPath
+  nameWithType: LookupError.IsMalformedPath
+  fullName: Dropbox.Api.FileProperties.LookupError.IsMalformedPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsMalformedPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is MalformedPath</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMalformedPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMalformedPath As Boolean
+  overload: Dropbox.Api.FileProperties.LookupError.IsMalformedPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.LookupError.AsMalformedPath
+  commentId: P:Dropbox.Api.FileProperties.LookupError.AsMalformedPath
+  id: AsMalformedPath
+  parent: Dropbox.Api.FileProperties.LookupError
+  langs:
+  - csharp
+  - vb
+  name: AsMalformedPath
+  nameWithType: LookupError.AsMalformedPath
+  fullName: Dropbox.Api.FileProperties.LookupError.AsMalformedPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsMalformedPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a MalformedPath, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LookupError.MalformedPath AsMalformedPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.LookupError.MalformedPath
+    content.vb: Public ReadOnly Property AsMalformedPath As LookupError.MalformedPath
+  overload: Dropbox.Api.FileProperties.LookupError.AsMalformedPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.LookupError.IsNotFound
+  commentId: P:Dropbox.Api.FileProperties.LookupError.IsNotFound
+  id: IsNotFound
+  parent: Dropbox.Api.FileProperties.LookupError
+  langs:
+  - csharp
+  - vb
+  name: IsNotFound
+  nameWithType: LookupError.IsNotFound
+  fullName: Dropbox.Api.FileProperties.LookupError.IsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is NotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotFound As Boolean
+  overload: Dropbox.Api.FileProperties.LookupError.IsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.LookupError.AsNotFound
+  commentId: P:Dropbox.Api.FileProperties.LookupError.AsNotFound
+  id: AsNotFound
+  parent: Dropbox.Api.FileProperties.LookupError
+  langs:
+  - csharp
+  - vb
+  name: AsNotFound
+  nameWithType: LookupError.AsNotFound
+  fullName: Dropbox.Api.FileProperties.LookupError.AsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a NotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LookupError.NotFound AsNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.LookupError.NotFound
+    content.vb: Public ReadOnly Property AsNotFound As LookupError.NotFound
+  overload: Dropbox.Api.FileProperties.LookupError.AsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.LookupError.IsNotFile
+  commentId: P:Dropbox.Api.FileProperties.LookupError.IsNotFile
+  id: IsNotFile
+  parent: Dropbox.Api.FileProperties.LookupError
+  langs:
+  - csharp
+  - vb
+  name: IsNotFile
+  nameWithType: LookupError.IsNotFile
+  fullName: Dropbox.Api.FileProperties.LookupError.IsNotFile
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNotFile
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is NotFile</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotFile { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotFile As Boolean
+  overload: Dropbox.Api.FileProperties.LookupError.IsNotFile*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.LookupError.AsNotFile
+  commentId: P:Dropbox.Api.FileProperties.LookupError.AsNotFile
+  id: AsNotFile
+  parent: Dropbox.Api.FileProperties.LookupError
+  langs:
+  - csharp
+  - vb
+  name: AsNotFile
+  nameWithType: LookupError.AsNotFile
+  fullName: Dropbox.Api.FileProperties.LookupError.AsNotFile
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNotFile
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a NotFile, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LookupError.NotFile AsNotFile { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.LookupError.NotFile
+    content.vb: Public ReadOnly Property AsNotFile As LookupError.NotFile
+  overload: Dropbox.Api.FileProperties.LookupError.AsNotFile*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.LookupError.IsNotFolder
+  commentId: P:Dropbox.Api.FileProperties.LookupError.IsNotFolder
+  id: IsNotFolder
+  parent: Dropbox.Api.FileProperties.LookupError
+  langs:
+  - csharp
+  - vb
+  name: IsNotFolder
+  nameWithType: LookupError.IsNotFolder
+  fullName: Dropbox.Api.FileProperties.LookupError.IsNotFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNotFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is NotFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotFolder As Boolean
+  overload: Dropbox.Api.FileProperties.LookupError.IsNotFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.LookupError.AsNotFolder
+  commentId: P:Dropbox.Api.FileProperties.LookupError.AsNotFolder
+  id: AsNotFolder
+  parent: Dropbox.Api.FileProperties.LookupError
+  langs:
+  - csharp
+  - vb
+  name: AsNotFolder
+  nameWithType: LookupError.AsNotFolder
+  fullName: Dropbox.Api.FileProperties.LookupError.AsNotFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNotFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a NotFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LookupError.NotFolder AsNotFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.LookupError.NotFolder
+    content.vb: Public ReadOnly Property AsNotFolder As LookupError.NotFolder
+  overload: Dropbox.Api.FileProperties.LookupError.AsNotFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.LookupError.IsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.LookupError.IsRestrictedContent
+  id: IsRestrictedContent
+  parent: Dropbox.Api.FileProperties.LookupError
+  langs:
+  - csharp
+  - vb
+  name: IsRestrictedContent
+  nameWithType: LookupError.IsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.LookupError.IsRestrictedContent
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsRestrictedContent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is RestrictedContent</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRestrictedContent { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRestrictedContent As Boolean
+  overload: Dropbox.Api.FileProperties.LookupError.IsRestrictedContent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.LookupError.AsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.LookupError.AsRestrictedContent
+  id: AsRestrictedContent
+  parent: Dropbox.Api.FileProperties.LookupError
+  langs:
+  - csharp
+  - vb
+  name: AsRestrictedContent
+  nameWithType: LookupError.AsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.LookupError.AsRestrictedContent
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsRestrictedContent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a RestrictedContent, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LookupError.RestrictedContent AsRestrictedContent { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.LookupError.RestrictedContent
+    content.vb: Public ReadOnly Property AsRestrictedContent As LookupError.RestrictedContent
+  overload: Dropbox.Api.FileProperties.LookupError.AsRestrictedContent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.LookupError.IsOther
+  commentId: P:Dropbox.Api.FileProperties.LookupError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.FileProperties.LookupError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: LookupError.IsOther
+  fullName: Dropbox.Api.FileProperties.LookupError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 149
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.FileProperties.LookupError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.LookupError.AsOther
+  commentId: P:Dropbox.Api.FileProperties.LookupError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.FileProperties.LookupError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: LookupError.AsOther
+  fullName: Dropbox.Api.FileProperties.LookupError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 160
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LookupError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.LookupError.Other
+    content.vb: Public ReadOnly Property AsOther As LookupError.Other
+  overload: Dropbox.Api.FileProperties.LookupError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.FileProperties.LookupError
+  commentId: T:Dropbox.Api.FileProperties.LookupError
+  parent: Dropbox.Api.FileProperties
+  name: LookupError
+  nameWithType: LookupError
+  fullName: Dropbox.Api.FileProperties.LookupError
+- uid: Dropbox.Api.FileProperties.LookupError.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.LookupError.#ctor
+  name: LookupError
+  nameWithType: LookupError.LookupError
+  fullName: Dropbox.Api.FileProperties.LookupError.LookupError
+- uid: Dropbox.Api.FileProperties.LookupError.IsMalformedPath*
+  commentId: Overload:Dropbox.Api.FileProperties.LookupError.IsMalformedPath
+  name: IsMalformedPath
+  nameWithType: LookupError.IsMalformedPath
+  fullName: Dropbox.Api.FileProperties.LookupError.IsMalformedPath
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.FileProperties.LookupError.AsMalformedPath*
+  commentId: Overload:Dropbox.Api.FileProperties.LookupError.AsMalformedPath
+  name: AsMalformedPath
+  nameWithType: LookupError.AsMalformedPath
+  fullName: Dropbox.Api.FileProperties.LookupError.AsMalformedPath
+- uid: Dropbox.Api.FileProperties.LookupError.MalformedPath
+  commentId: T:Dropbox.Api.FileProperties.LookupError.MalformedPath
+  parent: Dropbox.Api.FileProperties
+  name: LookupError.MalformedPath
+  nameWithType: LookupError.MalformedPath
+  fullName: Dropbox.Api.FileProperties.LookupError.MalformedPath
+- uid: Dropbox.Api.FileProperties.LookupError.IsNotFound*
+  commentId: Overload:Dropbox.Api.FileProperties.LookupError.IsNotFound
+  name: IsNotFound
+  nameWithType: LookupError.IsNotFound
+  fullName: Dropbox.Api.FileProperties.LookupError.IsNotFound
+- uid: Dropbox.Api.FileProperties.LookupError.AsNotFound*
+  commentId: Overload:Dropbox.Api.FileProperties.LookupError.AsNotFound
+  name: AsNotFound
+  nameWithType: LookupError.AsNotFound
+  fullName: Dropbox.Api.FileProperties.LookupError.AsNotFound
+- uid: Dropbox.Api.FileProperties.LookupError.NotFound
+  commentId: T:Dropbox.Api.FileProperties.LookupError.NotFound
+  parent: Dropbox.Api.FileProperties
+  name: LookupError.NotFound
+  nameWithType: LookupError.NotFound
+  fullName: Dropbox.Api.FileProperties.LookupError.NotFound
+- uid: Dropbox.Api.FileProperties.LookupError.IsNotFile*
+  commentId: Overload:Dropbox.Api.FileProperties.LookupError.IsNotFile
+  name: IsNotFile
+  nameWithType: LookupError.IsNotFile
+  fullName: Dropbox.Api.FileProperties.LookupError.IsNotFile
+- uid: Dropbox.Api.FileProperties.LookupError.AsNotFile*
+  commentId: Overload:Dropbox.Api.FileProperties.LookupError.AsNotFile
+  name: AsNotFile
+  nameWithType: LookupError.AsNotFile
+  fullName: Dropbox.Api.FileProperties.LookupError.AsNotFile
+- uid: Dropbox.Api.FileProperties.LookupError.NotFile
+  commentId: T:Dropbox.Api.FileProperties.LookupError.NotFile
+  parent: Dropbox.Api.FileProperties
+  name: LookupError.NotFile
+  nameWithType: LookupError.NotFile
+  fullName: Dropbox.Api.FileProperties.LookupError.NotFile
+- uid: Dropbox.Api.FileProperties.LookupError.IsNotFolder*
+  commentId: Overload:Dropbox.Api.FileProperties.LookupError.IsNotFolder
+  name: IsNotFolder
+  nameWithType: LookupError.IsNotFolder
+  fullName: Dropbox.Api.FileProperties.LookupError.IsNotFolder
+- uid: Dropbox.Api.FileProperties.LookupError.AsNotFolder*
+  commentId: Overload:Dropbox.Api.FileProperties.LookupError.AsNotFolder
+  name: AsNotFolder
+  nameWithType: LookupError.AsNotFolder
+  fullName: Dropbox.Api.FileProperties.LookupError.AsNotFolder
+- uid: Dropbox.Api.FileProperties.LookupError.NotFolder
+  commentId: T:Dropbox.Api.FileProperties.LookupError.NotFolder
+  parent: Dropbox.Api.FileProperties
+  name: LookupError.NotFolder
+  nameWithType: LookupError.NotFolder
+  fullName: Dropbox.Api.FileProperties.LookupError.NotFolder
+- uid: Dropbox.Api.FileProperties.LookupError.IsRestrictedContent*
+  commentId: Overload:Dropbox.Api.FileProperties.LookupError.IsRestrictedContent
+  name: IsRestrictedContent
+  nameWithType: LookupError.IsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.LookupError.IsRestrictedContent
+- uid: Dropbox.Api.FileProperties.LookupError.AsRestrictedContent*
+  commentId: Overload:Dropbox.Api.FileProperties.LookupError.AsRestrictedContent
+  name: AsRestrictedContent
+  nameWithType: LookupError.AsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.LookupError.AsRestrictedContent
+- uid: Dropbox.Api.FileProperties.LookupError.RestrictedContent
+  commentId: T:Dropbox.Api.FileProperties.LookupError.RestrictedContent
+  parent: Dropbox.Api.FileProperties
+  name: LookupError.RestrictedContent
+  nameWithType: LookupError.RestrictedContent
+  fullName: Dropbox.Api.FileProperties.LookupError.RestrictedContent
+- uid: Dropbox.Api.FileProperties.LookupError.IsOther*
+  commentId: Overload:Dropbox.Api.FileProperties.LookupError.IsOther
+  name: IsOther
+  nameWithType: LookupError.IsOther
+  fullName: Dropbox.Api.FileProperties.LookupError.IsOther
+- uid: Dropbox.Api.FileProperties.LookupError.AsOther*
+  commentId: Overload:Dropbox.Api.FileProperties.LookupError.AsOther
+  name: AsOther
+  nameWithType: LookupError.AsOther
+  fullName: Dropbox.Api.FileProperties.LookupError.AsOther
+- uid: Dropbox.Api.FileProperties.LookupError.Other
+  commentId: T:Dropbox.Api.FileProperties.LookupError.Other
+  parent: Dropbox.Api.FileProperties
+  name: LookupError.Other
+  nameWithType: LookupError.Other
+  fullName: Dropbox.Api.FileProperties.LookupError.Other

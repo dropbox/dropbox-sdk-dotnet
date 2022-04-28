@@ -1,0 +1,577 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.MoveBatchArg
+  commentId: T:Dropbox.Api.Files.MoveBatchArg
+  id: MoveBatchArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.MoveBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath},System.Boolean,System.Boolean)
+  - Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer
+  langs:
+  - csharp
+  - vb
+  name: MoveBatchArg
+  nameWithType: MoveBatchArg
+  fullName: Dropbox.Api.Files.MoveBatchArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveBatchArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MoveBatchArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveBatchArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The move batch arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MoveBatchArg : RelocationBatchArgBase'
+    content.vb: >-
+      Public Class MoveBatchArg
+          Inherits RelocationBatchArgBase
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.RelocationBatchArgBase
+  inheritedMembers:
+  - Dropbox.Api.Files.RelocationBatchArgBase.Entries
+  - Dropbox.Api.Files.RelocationBatchArgBase.Autorename
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.MoveBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath},System.Boolean,System.Boolean)
+  commentId: M:Dropbox.Api.Files.MoveBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath},System.Boolean,System.Boolean)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath},System.Boolean,System.Boolean)'
+  parent: Dropbox.Api.Files.MoveBatchArg
+  langs:
+  - csharp
+  - vb
+  name: MoveBatchArg(IEnumerable<RelocationPath>, Boolean, Boolean)
+  nameWithType: MoveBatchArg.MoveBatchArg(IEnumerable<RelocationPath>, Boolean, Boolean)
+  fullName: Dropbox.Api.Files.MoveBatchArg.MoveBatchArg(System.Collections.Generic.IEnumerable<Dropbox.Api.Files.RelocationPath>, System.Boolean, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveBatchArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveBatchArg.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.MoveBatchArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MoveBatchArg(IEnumerable<RelocationPath> entries, bool autorename = false, bool allowOwnershipTransfer = false)
+    parameters:
+    - id: entries
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath}
+      description: List of entries to be moved or copied. Each entry is <xref href="Dropbox.Api.Files.RelocationPath" data-throw-if-not-resolved="false"></xref>.
+    - id: autorename
+      type: System.Boolean
+      description: >-
+        If there&apos;s a conflict with any file, have the Dropbox
+
+        server try to autorename that file to avoid the conflict.
+    - id: allowOwnershipTransfer
+      type: System.Boolean
+      description: >-
+        Allow moves by owner even if it would result
+
+        in an ownership transfer for the content being moved. This does not apply to
+
+        copies.
+    content.vb: Public Sub New(entries As IEnumerable(Of RelocationPath), autorename As Boolean = False, allowOwnershipTransfer As Boolean = False)
+  overload: Dropbox.Api.Files.MoveBatchArg.#ctor*
+  nameWithType.vb: MoveBatchArg.MoveBatchArg(IEnumerable(Of RelocationPath), Boolean, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.MoveBatchArg.MoveBatchArg(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.RelocationPath), System.Boolean, System.Boolean)
+  name.vb: MoveBatchArg(IEnumerable(Of RelocationPath), Boolean, Boolean)
+- uid: Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer
+  commentId: P:Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer
+  id: AllowOwnershipTransfer
+  parent: Dropbox.Api.Files.MoveBatchArg
+  langs:
+  - csharp
+  - vb
+  name: AllowOwnershipTransfer
+  nameWithType: MoveBatchArg.AllowOwnershipTransfer
+  fullName: Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveBatchArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AllowOwnershipTransfer
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveBatchArg.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Allow moves by owner even if it would result in an ownership transfer for the\ncontent being moved. This does not apply to copies.</p>\n"
+  example: []
+  syntax:
+    content: public bool AllowOwnershipTransfer { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AllowOwnershipTransfer As Boolean
+  overload: Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RelocationBatchArgBase
+  commentId: T:Dropbox.Api.Files.RelocationBatchArgBase
+  parent: Dropbox.Api.Files
+  name: RelocationBatchArgBase
+  nameWithType: RelocationBatchArgBase
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase
+- uid: Dropbox.Api.Files.RelocationBatchArgBase.Entries
+  commentId: P:Dropbox.Api.Files.RelocationBatchArgBase.Entries
+  parent: Dropbox.Api.Files.RelocationBatchArgBase
+  name: Entries
+  nameWithType: RelocationBatchArgBase.Entries
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase.Entries
+- uid: Dropbox.Api.Files.RelocationBatchArgBase.Autorename
+  commentId: P:Dropbox.Api.Files.RelocationBatchArgBase.Autorename
+  parent: Dropbox.Api.Files.RelocationBatchArgBase
+  name: Autorename
+  nameWithType: RelocationBatchArgBase.Autorename
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase.Autorename
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.MoveBatchArg
+  commentId: T:Dropbox.Api.Files.MoveBatchArg
+  parent: Dropbox.Api.Files
+  name: MoveBatchArg
+  nameWithType: MoveBatchArg
+  fullName: Dropbox.Api.Files.MoveBatchArg
+- uid: Dropbox.Api.Files.RelocationPath
+  commentId: T:Dropbox.Api.Files.RelocationPath
+  parent: Dropbox.Api.Files
+  name: RelocationPath
+  nameWithType: RelocationPath
+  fullName: Dropbox.Api.Files.RelocationPath
+- uid: Dropbox.Api.Files.MoveBatchArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.MoveBatchArg.#ctor
+  name: MoveBatchArg
+  nameWithType: MoveBatchArg.MoveBatchArg
+  fullName: Dropbox.Api.Files.MoveBatchArg.MoveBatchArg
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath}
+  commentId: T:System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<RelocationPath>
+  nameWithType: IEnumerable<RelocationPath>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Files.RelocationPath>
+  nameWithType.vb: IEnumerable(Of RelocationPath)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.RelocationPath)
+  name.vb: IEnumerable(Of RelocationPath)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.RelocationPath
+    name: RelocationPath
+    nameWithType: RelocationPath
+    fullName: Dropbox.Api.Files.RelocationPath
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.RelocationPath
+    name: RelocationPath
+    nameWithType: RelocationPath
+    fullName: Dropbox.Api.Files.RelocationPath
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer*
+  commentId: Overload:Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer
+  name: AllowOwnershipTransfer
+  nameWithType: MoveBatchArg.AllowOwnershipTransfer
+  fullName: Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer

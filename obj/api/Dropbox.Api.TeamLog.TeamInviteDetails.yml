@@ -1,0 +1,580 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamInviteDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamInviteDetails
+  id: TeamInviteDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamInviteDetails.#ctor(Dropbox.Api.TeamLog.InviteMethod,System.Nullable{System.Boolean})
+  - Dropbox.Api.TeamLog.TeamInviteDetails.AdditionalLicensePurchase
+  - Dropbox.Api.TeamLog.TeamInviteDetails.InviteMethod
+  langs:
+  - csharp
+  - vb
+  name: TeamInviteDetails
+  nameWithType: TeamInviteDetails
+  fullName: Dropbox.Api.TeamLog.TeamInviteDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamInviteDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TeamInviteDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamInviteDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Details about team invites</p>\n"
+  example: []
+  syntax:
+    content: public class TeamInviteDetails
+    content.vb: Public Class TeamInviteDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamInviteDetails.#ctor(Dropbox.Api.TeamLog.InviteMethod,System.Nullable{System.Boolean})
+  commentId: M:Dropbox.Api.TeamLog.TeamInviteDetails.#ctor(Dropbox.Api.TeamLog.InviteMethod,System.Nullable{System.Boolean})
+  id: '#ctor(Dropbox.Api.TeamLog.InviteMethod,System.Nullable{System.Boolean})'
+  parent: Dropbox.Api.TeamLog.TeamInviteDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamInviteDetails(InviteMethod, Nullable<Boolean>)
+  nameWithType: TeamInviteDetails.TeamInviteDetails(InviteMethod, Nullable<Boolean>)
+  fullName: Dropbox.Api.TeamLog.TeamInviteDetails.TeamInviteDetails(Dropbox.Api.TeamLog.InviteMethod, System.Nullable<System.Boolean>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamInviteDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamInviteDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamInviteDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamInviteDetails(InviteMethod inviteMethod, bool? additionalLicensePurchase = null)
+    parameters:
+    - id: inviteMethod
+      type: Dropbox.Api.TeamLog.InviteMethod
+      description: How the user was invited to the team.
+    - id: additionalLicensePurchase
+      type: System.Nullable{System.Boolean}
+      description: >-
+        True if the invitation incurred an
+
+        additional license purchase.
+    content.vb: Public Sub New(inviteMethod As InviteMethod, additionalLicensePurchase As Boolean? = Nothing)
+  overload: Dropbox.Api.TeamLog.TeamInviteDetails.#ctor*
+  nameWithType.vb: TeamInviteDetails.TeamInviteDetails(InviteMethod, Nullable(Of Boolean))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.TeamInviteDetails.TeamInviteDetails(Dropbox.Api.TeamLog.InviteMethod, System.Nullable(Of System.Boolean))
+  name.vb: TeamInviteDetails(InviteMethod, Nullable(Of Boolean))
+- uid: Dropbox.Api.TeamLog.TeamInviteDetails.InviteMethod
+  commentId: P:Dropbox.Api.TeamLog.TeamInviteDetails.InviteMethod
+  id: InviteMethod
+  parent: Dropbox.Api.TeamLog.TeamInviteDetails
+  langs:
+  - csharp
+  - vb
+  name: InviteMethod
+  nameWithType: TeamInviteDetails.InviteMethod
+  fullName: Dropbox.Api.TeamLog.TeamInviteDetails.InviteMethod
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamInviteDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: InviteMethod
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamInviteDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>How the user was invited to the team.</p>\n"
+  example: []
+  syntax:
+    content: public InviteMethod InviteMethod { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.InviteMethod
+    content.vb: Public Property InviteMethod As InviteMethod
+  overload: Dropbox.Api.TeamLog.TeamInviteDetails.InviteMethod*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamInviteDetails.AdditionalLicensePurchase
+  commentId: P:Dropbox.Api.TeamLog.TeamInviteDetails.AdditionalLicensePurchase
+  id: AdditionalLicensePurchase
+  parent: Dropbox.Api.TeamLog.TeamInviteDetails
+  langs:
+  - csharp
+  - vb
+  name: AdditionalLicensePurchase
+  nameWithType: TeamInviteDetails.AdditionalLicensePurchase
+  fullName: Dropbox.Api.TeamLog.TeamInviteDetails.AdditionalLicensePurchase
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamInviteDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AdditionalLicensePurchase
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamInviteDetails.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>True if the invitation incurred an additional license purchase.</p>\n"
+  example: []
+  syntax:
+    content: public bool? AdditionalLicensePurchase { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property AdditionalLicensePurchase As Boolean?
+  overload: Dropbox.Api.TeamLog.TeamInviteDetails.AdditionalLicensePurchase*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.TeamInviteDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamInviteDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamInviteDetails
+  nameWithType: TeamInviteDetails
+  fullName: Dropbox.Api.TeamLog.TeamInviteDetails
+- uid: Dropbox.Api.TeamLog.TeamInviteDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamInviteDetails.#ctor
+  name: TeamInviteDetails
+  nameWithType: TeamInviteDetails.TeamInviteDetails
+  fullName: Dropbox.Api.TeamLog.TeamInviteDetails.TeamInviteDetails
+- uid: Dropbox.Api.TeamLog.InviteMethod
+  commentId: T:Dropbox.Api.TeamLog.InviteMethod
+  parent: Dropbox.Api.TeamLog
+  name: InviteMethod
+  nameWithType: InviteMethod
+  fullName: Dropbox.Api.TeamLog.InviteMethod
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.TeamInviteDetails.InviteMethod*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamInviteDetails.InviteMethod
+  name: InviteMethod
+  nameWithType: TeamInviteDetails.InviteMethod
+  fullName: Dropbox.Api.TeamLog.TeamInviteDetails.InviteMethod
+- uid: Dropbox.Api.TeamLog.TeamInviteDetails.AdditionalLicensePurchase*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamInviteDetails.AdditionalLicensePurchase
+  name: AdditionalLicensePurchase
+  nameWithType: TeamInviteDetails.AdditionalLicensePurchase
+  fullName: Dropbox.Api.TeamLog.TeamInviteDetails.AdditionalLicensePurchase

@@ -1,0 +1,678 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.UnshareFileError
+  commentId: T:Dropbox.Api.Sharing.UnshareFileError
+  id: UnshareFileError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.UnshareFileError.#ctor
+  - Dropbox.Api.Sharing.UnshareFileError.AsAccessError
+  - Dropbox.Api.Sharing.UnshareFileError.AsOther
+  - Dropbox.Api.Sharing.UnshareFileError.AsUserError
+  - Dropbox.Api.Sharing.UnshareFileError.IsAccessError
+  - Dropbox.Api.Sharing.UnshareFileError.IsOther
+  - Dropbox.Api.Sharing.UnshareFileError.IsUserError
+  langs:
+  - csharp
+  - vb
+  name: UnshareFileError
+  nameWithType: UnshareFileError
+  fullName: Dropbox.Api.Sharing.UnshareFileError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: UnshareFileError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Error result for <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.UnshareFileAsync(Dropbox.Api.Sharing.UnshareFileArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public class UnshareFileError
+    content.vb: Public Class UnshareFileError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.UnshareFileError.AccessError
+  - Dropbox.Api.Sharing.UnshareFileError.Other
+  - Dropbox.Api.Sharing.UnshareFileError.UserError
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.UnshareFileError.#ctor
+  commentId: M:Dropbox.Api.Sharing.UnshareFileError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.UnshareFileError
+  langs:
+  - csharp
+  - vb
+  name: UnshareFileError()
+  nameWithType: UnshareFileError.UnshareFileError()
+  fullName: Dropbox.Api.Sharing.UnshareFileError.UnshareFileError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.UnshareFileError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UnshareFileError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.UnshareFileError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.UnshareFileError.IsUserError
+  commentId: P:Dropbox.Api.Sharing.UnshareFileError.IsUserError
+  id: IsUserError
+  parent: Dropbox.Api.Sharing.UnshareFileError
+  langs:
+  - csharp
+  - vb
+  name: IsUserError
+  nameWithType: UnshareFileError.IsUserError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.IsUserError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUserError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is UserError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserError As Boolean
+  overload: Dropbox.Api.Sharing.UnshareFileError.IsUserError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.UnshareFileError.AsUserError
+  commentId: P:Dropbox.Api.Sharing.UnshareFileError.AsUserError
+  id: AsUserError
+  parent: Dropbox.Api.Sharing.UnshareFileError
+  langs:
+  - csharp
+  - vb
+  name: AsUserError
+  nameWithType: UnshareFileError.AsUserError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.AsUserError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUserError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a UserError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UnshareFileError.UserError AsUserError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.UnshareFileError.UserError
+    content.vb: Public ReadOnly Property AsUserError As UnshareFileError.UserError
+  overload: Dropbox.Api.Sharing.UnshareFileError.AsUserError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.UnshareFileError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.UnshareFileError.IsAccessError
+  id: IsAccessError
+  parent: Dropbox.Api.Sharing.UnshareFileError
+  langs:
+  - csharp
+  - vb
+  name: IsAccessError
+  nameWithType: UnshareFileError.IsAccessError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.IsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is AccessError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAccessError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAccessError As Boolean
+  overload: Dropbox.Api.Sharing.UnshareFileError.IsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.UnshareFileError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.UnshareFileError.AsAccessError
+  id: AsAccessError
+  parent: Dropbox.Api.Sharing.UnshareFileError
+  langs:
+  - csharp
+  - vb
+  name: AsAccessError
+  nameWithType: UnshareFileError.AsAccessError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.AsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a AccessError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UnshareFileError.AccessError AsAccessError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.UnshareFileError.AccessError
+    content.vb: Public ReadOnly Property AsAccessError As UnshareFileError.AccessError
+  overload: Dropbox.Api.Sharing.UnshareFileError.AsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.UnshareFileError.IsOther
+  commentId: P:Dropbox.Api.Sharing.UnshareFileError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.UnshareFileError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: UnshareFileError.IsOther
+  fullName: Dropbox.Api.Sharing.UnshareFileError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.UnshareFileError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.UnshareFileError.AsOther
+  commentId: P:Dropbox.Api.Sharing.UnshareFileError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.UnshareFileError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: UnshareFileError.AsOther
+  fullName: Dropbox.Api.Sharing.UnshareFileError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UnshareFileError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.UnshareFileError.Other
+    content.vb: Public ReadOnly Property AsOther As UnshareFileError.Other
+  overload: Dropbox.Api.Sharing.UnshareFileError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.UnshareFileAsync(Dropbox.Api.Sharing.UnshareFileArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.UnshareFileAsync(Dropbox.Api.Sharing.UnshareFileArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.UnshareFileError
+  commentId: T:Dropbox.Api.Sharing.UnshareFileError
+  parent: Dropbox.Api.Sharing
+  name: UnshareFileError
+  nameWithType: UnshareFileError
+  fullName: Dropbox.Api.Sharing.UnshareFileError
+- uid: Dropbox.Api.Sharing.UnshareFileError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.UnshareFileError.#ctor
+  name: UnshareFileError
+  nameWithType: UnshareFileError.UnshareFileError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.UnshareFileError
+- uid: Dropbox.Api.Sharing.UnshareFileError.IsUserError*
+  commentId: Overload:Dropbox.Api.Sharing.UnshareFileError.IsUserError
+  name: IsUserError
+  nameWithType: UnshareFileError.IsUserError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.IsUserError
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.UnshareFileError.AsUserError*
+  commentId: Overload:Dropbox.Api.Sharing.UnshareFileError.AsUserError
+  name: AsUserError
+  nameWithType: UnshareFileError.AsUserError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.AsUserError
+- uid: Dropbox.Api.Sharing.UnshareFileError.UserError
+  commentId: T:Dropbox.Api.Sharing.UnshareFileError.UserError
+  parent: Dropbox.Api.Sharing
+  name: UnshareFileError.UserError
+  nameWithType: UnshareFileError.UserError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.UserError
+- uid: Dropbox.Api.Sharing.UnshareFileError.IsAccessError*
+  commentId: Overload:Dropbox.Api.Sharing.UnshareFileError.IsAccessError
+  name: IsAccessError
+  nameWithType: UnshareFileError.IsAccessError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.IsAccessError
+- uid: Dropbox.Api.Sharing.UnshareFileError.AsAccessError*
+  commentId: Overload:Dropbox.Api.Sharing.UnshareFileError.AsAccessError
+  name: AsAccessError
+  nameWithType: UnshareFileError.AsAccessError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.AsAccessError
+- uid: Dropbox.Api.Sharing.UnshareFileError.AccessError
+  commentId: T:Dropbox.Api.Sharing.UnshareFileError.AccessError
+  parent: Dropbox.Api.Sharing
+  name: UnshareFileError.AccessError
+  nameWithType: UnshareFileError.AccessError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.AccessError
+- uid: Dropbox.Api.Sharing.UnshareFileError.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.UnshareFileError.IsOther
+  name: IsOther
+  nameWithType: UnshareFileError.IsOther
+  fullName: Dropbox.Api.Sharing.UnshareFileError.IsOther
+- uid: Dropbox.Api.Sharing.UnshareFileError.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.UnshareFileError.AsOther
+  name: AsOther
+  nameWithType: UnshareFileError.AsOther
+  fullName: Dropbox.Api.Sharing.UnshareFileError.AsOther
+- uid: Dropbox.Api.Sharing.UnshareFileError.Other
+  commentId: T:Dropbox.Api.Sharing.UnshareFileError.Other
+  parent: Dropbox.Api.Sharing
+  name: UnshareFileError.Other
+  nameWithType: UnshareFileError.Other
+  fullName: Dropbox.Api.Sharing.UnshareFileError.Other

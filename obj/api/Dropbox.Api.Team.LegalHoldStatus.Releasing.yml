@@ -1,0 +1,497 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.LegalHoldStatus.Releasing
+  commentId: T:Dropbox.Api.Team.LegalHoldStatus.Releasing
+  id: LegalHoldStatus.Releasing
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.LegalHoldStatus.Releasing.Instance
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldStatus.Releasing
+  nameWithType: LegalHoldStatus.Releasing
+  fullName: Dropbox.Api.Team.LegalHoldStatus.Releasing
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Releasing
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldStatus.cs
+    startLine: 647
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The legal hold policy is releasing.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Releasing : LegalHoldStatus'
+    content.vb: >-
+      Public NotInheritable Class Releasing
+          Inherits LegalHoldStatus
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.LegalHoldStatus
+  inheritedMembers:
+  - Dropbox.Api.Team.LegalHoldStatus.IsActive
+  - Dropbox.Api.Team.LegalHoldStatus.AsActive
+  - Dropbox.Api.Team.LegalHoldStatus.IsReleased
+  - Dropbox.Api.Team.LegalHoldStatus.AsReleased
+  - Dropbox.Api.Team.LegalHoldStatus.IsActivating
+  - Dropbox.Api.Team.LegalHoldStatus.AsActivating
+  - Dropbox.Api.Team.LegalHoldStatus.IsUpdating
+  - Dropbox.Api.Team.LegalHoldStatus.AsUpdating
+  - Dropbox.Api.Team.LegalHoldStatus.IsExporting
+  - Dropbox.Api.Team.LegalHoldStatus.AsExporting
+  - Dropbox.Api.Team.LegalHoldStatus.IsReleasing
+  - Dropbox.Api.Team.LegalHoldStatus.AsReleasing
+  - Dropbox.Api.Team.LegalHoldStatus.IsOther
+  - Dropbox.Api.Team.LegalHoldStatus.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.LegalHoldStatus.Releasing.Instance
+  commentId: F:Dropbox.Api.Team.LegalHoldStatus.Releasing.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.LegalHoldStatus.Releasing
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: LegalHoldStatus.Releasing.Instance
+  fullName: Dropbox.Api.Team.LegalHoldStatus.Releasing.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldStatus.cs
+    startLine: 671
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of Releasing</p>\n"
+  example: []
+  syntax:
+    content: public static readonly LegalHoldStatus.Releasing Instance
+    return:
+      type: Dropbox.Api.Team.LegalHoldStatus.Releasing
+    content.vb: Public Shared ReadOnly Instance As LegalHoldStatus.Releasing
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.LegalHoldStatus
+  commentId: T:Dropbox.Api.Team.LegalHoldStatus
+  parent: Dropbox.Api.Team
+  name: LegalHoldStatus
+  nameWithType: LegalHoldStatus
+  fullName: Dropbox.Api.Team.LegalHoldStatus
+- uid: Dropbox.Api.Team.LegalHoldStatus.IsActive
+  commentId: P:Dropbox.Api.Team.LegalHoldStatus.IsActive
+  parent: Dropbox.Api.Team.LegalHoldStatus
+  name: IsActive
+  nameWithType: LegalHoldStatus.IsActive
+  fullName: Dropbox.Api.Team.LegalHoldStatus.IsActive
+- uid: Dropbox.Api.Team.LegalHoldStatus.AsActive
+  commentId: P:Dropbox.Api.Team.LegalHoldStatus.AsActive
+  parent: Dropbox.Api.Team.LegalHoldStatus
+  name: AsActive
+  nameWithType: LegalHoldStatus.AsActive
+  fullName: Dropbox.Api.Team.LegalHoldStatus.AsActive
+- uid: Dropbox.Api.Team.LegalHoldStatus.IsReleased
+  commentId: P:Dropbox.Api.Team.LegalHoldStatus.IsReleased
+  parent: Dropbox.Api.Team.LegalHoldStatus
+  name: IsReleased
+  nameWithType: LegalHoldStatus.IsReleased
+  fullName: Dropbox.Api.Team.LegalHoldStatus.IsReleased
+- uid: Dropbox.Api.Team.LegalHoldStatus.AsReleased
+  commentId: P:Dropbox.Api.Team.LegalHoldStatus.AsReleased
+  parent: Dropbox.Api.Team.LegalHoldStatus
+  name: AsReleased
+  nameWithType: LegalHoldStatus.AsReleased
+  fullName: Dropbox.Api.Team.LegalHoldStatus.AsReleased
+- uid: Dropbox.Api.Team.LegalHoldStatus.IsActivating
+  commentId: P:Dropbox.Api.Team.LegalHoldStatus.IsActivating
+  parent: Dropbox.Api.Team.LegalHoldStatus
+  name: IsActivating
+  nameWithType: LegalHoldStatus.IsActivating
+  fullName: Dropbox.Api.Team.LegalHoldStatus.IsActivating
+- uid: Dropbox.Api.Team.LegalHoldStatus.AsActivating
+  commentId: P:Dropbox.Api.Team.LegalHoldStatus.AsActivating
+  parent: Dropbox.Api.Team.LegalHoldStatus
+  name: AsActivating
+  nameWithType: LegalHoldStatus.AsActivating
+  fullName: Dropbox.Api.Team.LegalHoldStatus.AsActivating
+- uid: Dropbox.Api.Team.LegalHoldStatus.IsUpdating
+  commentId: P:Dropbox.Api.Team.LegalHoldStatus.IsUpdating
+  parent: Dropbox.Api.Team.LegalHoldStatus
+  name: IsUpdating
+  nameWithType: LegalHoldStatus.IsUpdating
+  fullName: Dropbox.Api.Team.LegalHoldStatus.IsUpdating
+- uid: Dropbox.Api.Team.LegalHoldStatus.AsUpdating
+  commentId: P:Dropbox.Api.Team.LegalHoldStatus.AsUpdating
+  parent: Dropbox.Api.Team.LegalHoldStatus
+  name: AsUpdating
+  nameWithType: LegalHoldStatus.AsUpdating
+  fullName: Dropbox.Api.Team.LegalHoldStatus.AsUpdating
+- uid: Dropbox.Api.Team.LegalHoldStatus.IsExporting
+  commentId: P:Dropbox.Api.Team.LegalHoldStatus.IsExporting
+  parent: Dropbox.Api.Team.LegalHoldStatus
+  name: IsExporting
+  nameWithType: LegalHoldStatus.IsExporting
+  fullName: Dropbox.Api.Team.LegalHoldStatus.IsExporting
+- uid: Dropbox.Api.Team.LegalHoldStatus.AsExporting
+  commentId: P:Dropbox.Api.Team.LegalHoldStatus.AsExporting
+  parent: Dropbox.Api.Team.LegalHoldStatus
+  name: AsExporting
+  nameWithType: LegalHoldStatus.AsExporting
+  fullName: Dropbox.Api.Team.LegalHoldStatus.AsExporting
+- uid: Dropbox.Api.Team.LegalHoldStatus.IsReleasing
+  commentId: P:Dropbox.Api.Team.LegalHoldStatus.IsReleasing
+  parent: Dropbox.Api.Team.LegalHoldStatus
+  name: IsReleasing
+  nameWithType: LegalHoldStatus.IsReleasing
+  fullName: Dropbox.Api.Team.LegalHoldStatus.IsReleasing
+- uid: Dropbox.Api.Team.LegalHoldStatus.AsReleasing
+  commentId: P:Dropbox.Api.Team.LegalHoldStatus.AsReleasing
+  parent: Dropbox.Api.Team.LegalHoldStatus
+  name: AsReleasing
+  nameWithType: LegalHoldStatus.AsReleasing
+  fullName: Dropbox.Api.Team.LegalHoldStatus.AsReleasing
+- uid: Dropbox.Api.Team.LegalHoldStatus.IsOther
+  commentId: P:Dropbox.Api.Team.LegalHoldStatus.IsOther
+  parent: Dropbox.Api.Team.LegalHoldStatus
+  name: IsOther
+  nameWithType: LegalHoldStatus.IsOther
+  fullName: Dropbox.Api.Team.LegalHoldStatus.IsOther
+- uid: Dropbox.Api.Team.LegalHoldStatus.AsOther
+  commentId: P:Dropbox.Api.Team.LegalHoldStatus.AsOther
+  parent: Dropbox.Api.Team.LegalHoldStatus
+  name: AsOther
+  nameWithType: LegalHoldStatus.AsOther
+  fullName: Dropbox.Api.Team.LegalHoldStatus.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.LegalHoldStatus.Releasing
+  commentId: T:Dropbox.Api.Team.LegalHoldStatus.Releasing
+  parent: Dropbox.Api.Team
+  name: LegalHoldStatus.Releasing
+  nameWithType: LegalHoldStatus.Releasing
+  fullName: Dropbox.Api.Team.LegalHoldStatus.Releasing

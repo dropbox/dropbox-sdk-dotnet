@@ -1,0 +1,509 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited
+  commentId: T:Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited
+  id: ResendSecondaryEmailResult.RateLimited
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.#ctor(System.String)
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.Value
+  langs:
+  - csharp
+  - vb
+  name: ResendSecondaryEmailResult.RateLimited
+  nameWithType: ResendSecondaryEmailResult.RateLimited
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendSecondaryEmailResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: RateLimited
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendSecondaryEmailResult.cs
+    startLine: 410
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Too many emails are being sent to this email address. Please try again\nlater.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class RateLimited : ResendSecondaryEmailResult'
+    content.vb: >-
+      Public NotInheritable Class RateLimited
+          Inherits ResendSecondaryEmailResult
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.ResendSecondaryEmailResult
+  inheritedMembers:
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.IsSuccess
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.AsSuccess
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.IsNotPending
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.AsNotPending
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.IsRateLimited
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.AsRateLimited
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.IsOther
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.#ctor(System.String)
+  commentId: M:Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited
+  langs:
+  - csharp
+  - vb
+  name: RateLimited(String)
+  nameWithType: ResendSecondaryEmailResult.RateLimited.RateLimited(String)
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.RateLimited(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendSecondaryEmailResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendSecondaryEmailResult.cs
+    startLine: 429
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RateLimited(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.Value
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.Value
+  id: Value
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ResendSecondaryEmailResult.RateLimited.Value
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendSecondaryEmailResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendSecondaryEmailResult.cs
+    startLine: 444
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult
+  commentId: T:Dropbox.Api.Team.ResendSecondaryEmailResult
+  parent: Dropbox.Api.Team
+  name: ResendSecondaryEmailResult
+  nameWithType: ResendSecondaryEmailResult
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.IsSuccess
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.IsSuccess
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: IsSuccess
+  nameWithType: ResendSecondaryEmailResult.IsSuccess
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.IsSuccess
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.AsSuccess
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.AsSuccess
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: AsSuccess
+  nameWithType: ResendSecondaryEmailResult.AsSuccess
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.AsSuccess
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.IsNotPending
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.IsNotPending
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: IsNotPending
+  nameWithType: ResendSecondaryEmailResult.IsNotPending
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.IsNotPending
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.AsNotPending
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.AsNotPending
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: AsNotPending
+  nameWithType: ResendSecondaryEmailResult.AsNotPending
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.AsNotPending
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.IsRateLimited
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.IsRateLimited
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: IsRateLimited
+  nameWithType: ResendSecondaryEmailResult.IsRateLimited
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.IsRateLimited
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.AsRateLimited
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.AsRateLimited
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: AsRateLimited
+  nameWithType: ResendSecondaryEmailResult.AsRateLimited
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.AsRateLimited
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.IsOther
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.IsOther
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: IsOther
+  nameWithType: ResendSecondaryEmailResult.IsOther
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.IsOther
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.AsOther
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.AsOther
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: AsOther
+  nameWithType: ResendSecondaryEmailResult.AsOther
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited
+  commentId: T:Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited
+  parent: Dropbox.Api.Team
+  name: ResendSecondaryEmailResult.RateLimited
+  nameWithType: ResendSecondaryEmailResult.RateLimited
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.#ctor
+  name: RateLimited
+  nameWithType: ResendSecondaryEmailResult.RateLimited.RateLimited
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.RateLimited
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.Value*
+  commentId: Overload:Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.Value
+  name: Value
+  nameWithType: ResendSecondaryEmailResult.RateLimited.Value
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.RateLimited.Value

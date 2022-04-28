@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkAccessLevel
+  id: SharedLinkAccessLevel
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedLinkAccessLevel.#ctor
+  - Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsNone
+  - Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsOther
+  - Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsReader
+  - Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsWriter
+  - Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsNone
+  - Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsOther
+  - Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsReader
+  - Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsWriter
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkAccessLevel
+  nameWithType: SharedLinkAccessLevel
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SharedLinkAccessLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Shared link access level.</p>\n"
+  example: []
+  syntax:
+    content: public class SharedLinkAccessLevel
+    content.vb: Public Class SharedLinkAccessLevel
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.SharedLinkAccessLevel.None
+  - Dropbox.Api.TeamLog.SharedLinkAccessLevel.Other
+  - Dropbox.Api.TeamLog.SharedLinkAccessLevel.Reader
+  - Dropbox.Api.TeamLog.SharedLinkAccessLevel.Writer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedLinkAccessLevel.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedLinkAccessLevel
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkAccessLevel()
+  nameWithType: SharedLinkAccessLevel.SharedLinkAccessLevel()
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.SharedLinkAccessLevel()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedLinkAccessLevel\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkAccessLevel()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedLinkAccessLevel.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsNone
+  commentId: P:Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsNone
+  id: IsNone
+  parent: Dropbox.Api.TeamLog.SharedLinkAccessLevel
+  langs:
+  - csharp
+  - vb
+  name: IsNone
+  nameWithType: SharedLinkAccessLevel.IsNone
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsNone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is None</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNone { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNone As Boolean
+  overload: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsNone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsNone
+  commentId: P:Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsNone
+  id: AsNone
+  parent: Dropbox.Api.TeamLog.SharedLinkAccessLevel
+  langs:
+  - csharp
+  - vb
+  name: AsNone
+  nameWithType: SharedLinkAccessLevel.AsNone
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsNone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a None, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkAccessLevel.None AsNone { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharedLinkAccessLevel.None
+    content.vb: Public ReadOnly Property AsNone As SharedLinkAccessLevel.None
+  overload: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsNone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsReader
+  commentId: P:Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsReader
+  id: IsReader
+  parent: Dropbox.Api.TeamLog.SharedLinkAccessLevel
+  langs:
+  - csharp
+  - vb
+  name: IsReader
+  nameWithType: SharedLinkAccessLevel.IsReader
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsReader
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsReader
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Reader</p>\n"
+  example: []
+  syntax:
+    content: public bool IsReader { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReader As Boolean
+  overload: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsReader*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsReader
+  commentId: P:Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsReader
+  id: AsReader
+  parent: Dropbox.Api.TeamLog.SharedLinkAccessLevel
+  langs:
+  - csharp
+  - vb
+  name: AsReader
+  nameWithType: SharedLinkAccessLevel.AsReader
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsReader
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsReader
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Reader, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkAccessLevel.Reader AsReader { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharedLinkAccessLevel.Reader
+    content.vb: Public ReadOnly Property AsReader As SharedLinkAccessLevel.Reader
+  overload: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsReader*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsWriter
+  commentId: P:Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsWriter
+  id: IsWriter
+  parent: Dropbox.Api.TeamLog.SharedLinkAccessLevel
+  langs:
+  - csharp
+  - vb
+  name: IsWriter
+  nameWithType: SharedLinkAccessLevel.IsWriter
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsWriter
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsWriter
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Writer</p>\n"
+  example: []
+  syntax:
+    content: public bool IsWriter { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsWriter As Boolean
+  overload: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsWriter*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsWriter
+  commentId: P:Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsWriter
+  id: AsWriter
+  parent: Dropbox.Api.TeamLog.SharedLinkAccessLevel
+  langs:
+  - csharp
+  - vb
+  name: AsWriter
+  nameWithType: SharedLinkAccessLevel.AsWriter
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsWriter
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsWriter
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Writer, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkAccessLevel.Writer AsWriter { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharedLinkAccessLevel.Writer
+    content.vb: Public ReadOnly Property AsWriter As SharedLinkAccessLevel.Writer
+  overload: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsWriter*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsOther
+  commentId: P:Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.SharedLinkAccessLevel
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SharedLinkAccessLevel.IsOther
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsOther
+  commentId: P:Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.SharedLinkAccessLevel
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SharedLinkAccessLevel.AsOther
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkAccessLevel.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkAccessLevel.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharedLinkAccessLevel.Other
+    content.vb: Public ReadOnly Property AsOther As SharedLinkAccessLevel.Other
+  overload: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkAccessLevel
+  parent: Dropbox.Api.TeamLog
+  name: SharedLinkAccessLevel
+  nameWithType: SharedLinkAccessLevel
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkAccessLevel.#ctor
+  name: SharedLinkAccessLevel
+  nameWithType: SharedLinkAccessLevel.SharedLinkAccessLevel
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.SharedLinkAccessLevel
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsNone*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsNone
+  name: IsNone
+  nameWithType: SharedLinkAccessLevel.IsNone
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsNone
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsNone*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsNone
+  name: AsNone
+  nameWithType: SharedLinkAccessLevel.AsNone
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsNone
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.None
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkAccessLevel.None
+  parent: Dropbox.Api.TeamLog
+  name: SharedLinkAccessLevel.None
+  nameWithType: SharedLinkAccessLevel.None
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.None
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsReader*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsReader
+  name: IsReader
+  nameWithType: SharedLinkAccessLevel.IsReader
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsReader
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsReader*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsReader
+  name: AsReader
+  nameWithType: SharedLinkAccessLevel.AsReader
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsReader
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.Reader
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkAccessLevel.Reader
+  parent: Dropbox.Api.TeamLog
+  name: SharedLinkAccessLevel.Reader
+  nameWithType: SharedLinkAccessLevel.Reader
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.Reader
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsWriter*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsWriter
+  name: IsWriter
+  nameWithType: SharedLinkAccessLevel.IsWriter
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsWriter
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsWriter*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsWriter
+  name: AsWriter
+  nameWithType: SharedLinkAccessLevel.AsWriter
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsWriter
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.Writer
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkAccessLevel.Writer
+  parent: Dropbox.Api.TeamLog
+  name: SharedLinkAccessLevel.Writer
+  nameWithType: SharedLinkAccessLevel.Writer
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.Writer
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsOther
+  name: IsOther
+  nameWithType: SharedLinkAccessLevel.IsOther
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.IsOther
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsOther
+  name: AsOther
+  nameWithType: SharedLinkAccessLevel.AsOther
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.AsOther
+- uid: Dropbox.Api.TeamLog.SharedLinkAccessLevel.Other
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkAccessLevel.Other
+  parent: Dropbox.Api.TeamLog
+  name: SharedLinkAccessLevel.Other
+  nameWithType: SharedLinkAccessLevel.Other
+  fullName: Dropbox.Api.TeamLog.SharedLinkAccessLevel.Other

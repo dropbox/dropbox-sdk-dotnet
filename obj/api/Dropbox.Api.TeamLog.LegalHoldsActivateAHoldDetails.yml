@@ -1,0 +1,681 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails
+  commentId: T:Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails
+  id: LegalHoldsActivateAHoldDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.#ctor(System.String,System.String,System.DateTime,System.Nullable{System.DateTime})
+  - Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.EndDate
+  - Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.LegalHoldId
+  - Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.Name
+  - Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.StartDate
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsActivateAHoldDetails
+  nameWithType: LegalHoldsActivateAHoldDetails
+  fullName: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsActivateAHoldDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LegalHoldsActivateAHoldDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsActivateAHoldDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Activated a hold.</p>\n"
+  example: []
+  syntax:
+    content: public class LegalHoldsActivateAHoldDetails
+    content.vb: Public Class LegalHoldsActivateAHoldDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.#ctor(System.String,System.String,System.DateTime,System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.#ctor(System.String,System.String,System.DateTime,System.Nullable{System.DateTime})
+  id: '#ctor(System.String,System.String,System.DateTime,System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsActivateAHoldDetails(String, String, DateTime, Nullable<DateTime>)
+  nameWithType: LegalHoldsActivateAHoldDetails.LegalHoldsActivateAHoldDetails(String, String, DateTime, Nullable<DateTime>)
+  fullName: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.LegalHoldsActivateAHoldDetails(System.String, System.String, System.DateTime, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsActivateAHoldDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsActivateAHoldDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsActivateAHoldDetails(string legalHoldId, string name, DateTime startDate, DateTime? endDate = null)
+    parameters:
+    - id: legalHoldId
+      type: System.String
+      description: Hold ID.
+    - id: name
+      type: System.String
+      description: Hold name.
+    - id: startDate
+      type: System.DateTime
+      description: Hold start date.
+    - id: endDate
+      type: System.Nullable{System.DateTime}
+      description: Hold end date.
+    content.vb: Public Sub New(legalHoldId As String, name As String, startDate As Date, endDate As Date? = Nothing)
+  overload: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.#ctor*
+  nameWithType.vb: LegalHoldsActivateAHoldDetails.LegalHoldsActivateAHoldDetails(String, String, DateTime, Nullable(Of DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.LegalHoldsActivateAHoldDetails(System.String, System.String, System.DateTime, System.Nullable(Of System.DateTime))
+  name.vb: LegalHoldsActivateAHoldDetails(String, String, DateTime, Nullable(Of DateTime))
+- uid: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.LegalHoldId
+  commentId: P:Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.LegalHoldId
+  id: LegalHoldId
+  parent: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldId
+  nameWithType: LegalHoldsActivateAHoldDetails.LegalHoldId
+  fullName: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.LegalHoldId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsActivateAHoldDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LegalHoldId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsActivateAHoldDetails.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Hold ID.</p>\n"
+  example: []
+  syntax:
+    content: public string LegalHoldId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LegalHoldId As String
+  overload: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.LegalHoldId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.Name
+  commentId: P:Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.Name
+  id: Name
+  parent: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: LegalHoldsActivateAHoldDetails.Name
+  fullName: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsActivateAHoldDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsActivateAHoldDetails.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Hold name.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.StartDate
+  commentId: P:Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.StartDate
+  id: StartDate
+  parent: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails
+  langs:
+  - csharp
+  - vb
+  name: StartDate
+  nameWithType: LegalHoldsActivateAHoldDetails.StartDate
+  fullName: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.StartDate
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsActivateAHoldDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: StartDate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsActivateAHoldDetails.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Hold start date.</p>\n"
+  example: []
+  syntax:
+    content: public DateTime StartDate { get; protected set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property StartDate As Date
+  overload: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.StartDate*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.EndDate
+  commentId: P:Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.EndDate
+  id: EndDate
+  parent: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails
+  langs:
+  - csharp
+  - vb
+  name: EndDate
+  nameWithType: LegalHoldsActivateAHoldDetails.EndDate
+  fullName: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.EndDate
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsActivateAHoldDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: EndDate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsActivateAHoldDetails.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Hold end date.</p>\n"
+  example: []
+  syntax:
+    content: public DateTime? EndDate { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property EndDate As Date?
+  overload: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.EndDate*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails
+  commentId: T:Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails
+  parent: Dropbox.Api.TeamLog
+  name: LegalHoldsActivateAHoldDetails
+  nameWithType: LegalHoldsActivateAHoldDetails
+  fullName: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails
+- uid: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.#ctor
+  name: LegalHoldsActivateAHoldDetails
+  nameWithType: LegalHoldsActivateAHoldDetails.LegalHoldsActivateAHoldDetails
+  fullName: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.LegalHoldsActivateAHoldDetails
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.LegalHoldId*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.LegalHoldId
+  name: LegalHoldId
+  nameWithType: LegalHoldsActivateAHoldDetails.LegalHoldId
+  fullName: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.LegalHoldId
+- uid: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.Name*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.Name
+  name: Name
+  nameWithType: LegalHoldsActivateAHoldDetails.Name
+  fullName: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.Name
+- uid: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.StartDate*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.StartDate
+  name: StartDate
+  nameWithType: LegalHoldsActivateAHoldDetails.StartDate
+  fullName: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.StartDate
+- uid: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.EndDate*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.EndDate
+  name: EndDate
+  nameWithType: LegalHoldsActivateAHoldDetails.EndDate
+  fullName: Dropbox.Api.TeamLog.LegalHoldsActivateAHoldDetails.EndDate

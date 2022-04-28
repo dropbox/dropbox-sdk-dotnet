@@ -1,0 +1,1977 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.SharePathError
+  commentId: T:Dropbox.Api.Sharing.SharePathError
+  id: SharePathError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.SharePathError.#ctor
+  - Dropbox.Api.Sharing.SharePathError.AsAlreadyShared
+  - Dropbox.Api.Sharing.SharePathError.AsContainsAppFolder
+  - Dropbox.Api.Sharing.SharePathError.AsContainsSharedFolder
+  - Dropbox.Api.Sharing.SharePathError.AsContainsTeamFolder
+  - Dropbox.Api.Sharing.SharePathError.AsInsideAppFolder
+  - Dropbox.Api.Sharing.SharePathError.AsInsideOsxPackage
+  - Dropbox.Api.Sharing.SharePathError.AsInsidePublicFolder
+  - Dropbox.Api.Sharing.SharePathError.AsInsideSharedFolder
+  - Dropbox.Api.Sharing.SharePathError.AsInvalidPath
+  - Dropbox.Api.Sharing.SharePathError.AsIsAppFolder
+  - Dropbox.Api.Sharing.SharePathError.AsIsFamily
+  - Dropbox.Api.Sharing.SharePathError.AsIsFile
+  - Dropbox.Api.Sharing.SharePathError.AsIsOsxPackage
+  - Dropbox.Api.Sharing.SharePathError.AsIsPublicFolder
+  - Dropbox.Api.Sharing.SharePathError.AsIsVault
+  - Dropbox.Api.Sharing.SharePathError.AsIsVaultLocked
+  - Dropbox.Api.Sharing.SharePathError.AsOther
+  - Dropbox.Api.Sharing.SharePathError.IsAlreadyShared
+  - Dropbox.Api.Sharing.SharePathError.IsContainsAppFolder
+  - Dropbox.Api.Sharing.SharePathError.IsContainsSharedFolder
+  - Dropbox.Api.Sharing.SharePathError.IsContainsTeamFolder
+  - Dropbox.Api.Sharing.SharePathError.IsInsideAppFolder
+  - Dropbox.Api.Sharing.SharePathError.IsInsideOsxPackage
+  - Dropbox.Api.Sharing.SharePathError.IsInsidePublicFolder
+  - Dropbox.Api.Sharing.SharePathError.IsInsideSharedFolder
+  - Dropbox.Api.Sharing.SharePathError.IsInvalidPath
+  - Dropbox.Api.Sharing.SharePathError.IsIsAppFolder
+  - Dropbox.Api.Sharing.SharePathError.IsIsFamily
+  - Dropbox.Api.Sharing.SharePathError.IsIsFile
+  - Dropbox.Api.Sharing.SharePathError.IsIsOsxPackage
+  - Dropbox.Api.Sharing.SharePathError.IsIsPublicFolder
+  - Dropbox.Api.Sharing.SharePathError.IsIsVault
+  - Dropbox.Api.Sharing.SharePathError.IsIsVaultLocked
+  - Dropbox.Api.Sharing.SharePathError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: SharePathError
+  nameWithType: SharePathError
+  fullName: Dropbox.Api.Sharing.SharePathError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SharePathError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The share path error object</p>\n"
+  example: []
+  syntax:
+    content: public class SharePathError
+    content.vb: Public Class SharePathError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.SharePathError.AlreadyShared
+  - Dropbox.Api.Sharing.SharePathError.ContainsAppFolder
+  - Dropbox.Api.Sharing.SharePathError.ContainsSharedFolder
+  - Dropbox.Api.Sharing.SharePathError.ContainsTeamFolder
+  - Dropbox.Api.Sharing.SharePathError.InsideAppFolder
+  - Dropbox.Api.Sharing.SharePathError.InsideOsxPackage
+  - Dropbox.Api.Sharing.SharePathError.InsidePublicFolder
+  - Dropbox.Api.Sharing.SharePathError.InsideSharedFolder
+  - Dropbox.Api.Sharing.SharePathError.InvalidPath
+  - Dropbox.Api.Sharing.SharePathError.IsAppFolder
+  - Dropbox.Api.Sharing.SharePathError.IsFamily
+  - Dropbox.Api.Sharing.SharePathError.IsFile
+  - Dropbox.Api.Sharing.SharePathError.IsOsxPackage
+  - Dropbox.Api.Sharing.SharePathError.IsPublicFolder
+  - Dropbox.Api.Sharing.SharePathError.IsVault
+  - Dropbox.Api.Sharing.SharePathError.IsVaultLocked
+  - Dropbox.Api.Sharing.SharePathError.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.SharePathError.#ctor
+  commentId: M:Dropbox.Api.Sharing.SharePathError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: SharePathError()
+  nameWithType: SharePathError.SharePathError()
+  fullName: Dropbox.Api.Sharing.SharePathError.SharePathError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.SharePathError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.SharePathError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.SharePathError.IsIsFile
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsIsFile
+  id: IsIsFile
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsIsFile
+  nameWithType: SharePathError.IsIsFile
+  fullName: Dropbox.Api.Sharing.SharePathError.IsIsFile
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsIsFile
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is IsFile</p>\n"
+  example: []
+  syntax:
+    content: public bool IsIsFile { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIsFile As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsIsFile*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsIsFile
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsIsFile
+  id: AsIsFile
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsIsFile
+  nameWithType: SharePathError.AsIsFile
+  fullName: Dropbox.Api.Sharing.SharePathError.AsIsFile
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsIsFile
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a IsFile, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.IsFile AsIsFile { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.IsFile
+    content.vb: Public ReadOnly Property AsIsFile As SharePathError.IsFile
+  overload: Dropbox.Api.Sharing.SharePathError.AsIsFile*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsInsideSharedFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsInsideSharedFolder
+  id: IsInsideSharedFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsInsideSharedFolder
+  nameWithType: SharePathError.IsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsInsideSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInsideSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InsideSharedFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInsideSharedFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInsideSharedFolder As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsInsideSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsInsideSharedFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsInsideSharedFolder
+  id: AsInsideSharedFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsInsideSharedFolder
+  nameWithType: SharePathError.AsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsInsideSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInsideSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InsideSharedFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.InsideSharedFolder AsInsideSharedFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.InsideSharedFolder
+    content.vb: Public ReadOnly Property AsInsideSharedFolder As SharePathError.InsideSharedFolder
+  overload: Dropbox.Api.Sharing.SharePathError.AsInsideSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsContainsSharedFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsContainsSharedFolder
+  id: IsContainsSharedFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsContainsSharedFolder
+  nameWithType: SharePathError.IsContainsSharedFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsContainsSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsContainsSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is ContainsSharedFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsContainsSharedFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsContainsSharedFolder As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsContainsSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsContainsSharedFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsContainsSharedFolder
+  id: AsContainsSharedFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsContainsSharedFolder
+  nameWithType: SharePathError.AsContainsSharedFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsContainsSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsContainsSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a ContainsSharedFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.ContainsSharedFolder AsContainsSharedFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.ContainsSharedFolder
+    content.vb: Public ReadOnly Property AsContainsSharedFolder As SharePathError.ContainsSharedFolder
+  overload: Dropbox.Api.Sharing.SharePathError.AsContainsSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsContainsAppFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsContainsAppFolder
+  id: IsContainsAppFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsContainsAppFolder
+  nameWithType: SharePathError.IsContainsAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsContainsAppFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsContainsAppFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is ContainsAppFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsContainsAppFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsContainsAppFolder As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsContainsAppFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsContainsAppFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsContainsAppFolder
+  id: AsContainsAppFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsContainsAppFolder
+  nameWithType: SharePathError.AsContainsAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsContainsAppFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsContainsAppFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a ContainsAppFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.ContainsAppFolder AsContainsAppFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.ContainsAppFolder
+    content.vb: Public ReadOnly Property AsContainsAppFolder As SharePathError.ContainsAppFolder
+  overload: Dropbox.Api.Sharing.SharePathError.AsContainsAppFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsContainsTeamFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsContainsTeamFolder
+  id: IsContainsTeamFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsContainsTeamFolder
+  nameWithType: SharePathError.IsContainsTeamFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsContainsTeamFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsContainsTeamFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is ContainsTeamFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsContainsTeamFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsContainsTeamFolder As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsContainsTeamFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsContainsTeamFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsContainsTeamFolder
+  id: AsContainsTeamFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsContainsTeamFolder
+  nameWithType: SharePathError.AsContainsTeamFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsContainsTeamFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsContainsTeamFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a ContainsTeamFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.ContainsTeamFolder AsContainsTeamFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.ContainsTeamFolder
+    content.vb: Public ReadOnly Property AsContainsTeamFolder As SharePathError.ContainsTeamFolder
+  overload: Dropbox.Api.Sharing.SharePathError.AsContainsTeamFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsIsAppFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsIsAppFolder
+  id: IsIsAppFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsIsAppFolder
+  nameWithType: SharePathError.IsIsAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsIsAppFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsIsAppFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 149
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is IsAppFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsIsAppFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIsAppFolder As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsIsAppFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsIsAppFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsIsAppFolder
+  id: AsIsAppFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsIsAppFolder
+  nameWithType: SharePathError.AsIsAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsIsAppFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsIsAppFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 160
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a IsAppFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.IsAppFolder AsIsAppFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.IsAppFolder
+    content.vb: Public ReadOnly Property AsIsAppFolder As SharePathError.IsAppFolder
+  overload: Dropbox.Api.Sharing.SharePathError.AsIsAppFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsInsideAppFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsInsideAppFolder
+  id: IsInsideAppFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsInsideAppFolder
+  nameWithType: SharePathError.IsInsideAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsInsideAppFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInsideAppFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 171
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InsideAppFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInsideAppFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInsideAppFolder As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsInsideAppFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsInsideAppFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsInsideAppFolder
+  id: AsInsideAppFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsInsideAppFolder
+  nameWithType: SharePathError.AsInsideAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsInsideAppFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInsideAppFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 182
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InsideAppFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.InsideAppFolder AsInsideAppFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.InsideAppFolder
+    content.vb: Public ReadOnly Property AsInsideAppFolder As SharePathError.InsideAppFolder
+  overload: Dropbox.Api.Sharing.SharePathError.AsInsideAppFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsIsPublicFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsIsPublicFolder
+  id: IsIsPublicFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsIsPublicFolder
+  nameWithType: SharePathError.IsIsPublicFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsIsPublicFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsIsPublicFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 193
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is IsPublicFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsIsPublicFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIsPublicFolder As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsIsPublicFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsIsPublicFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsIsPublicFolder
+  id: AsIsPublicFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsIsPublicFolder
+  nameWithType: SharePathError.AsIsPublicFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsIsPublicFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsIsPublicFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 204
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a IsPublicFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.IsPublicFolder AsIsPublicFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.IsPublicFolder
+    content.vb: Public ReadOnly Property AsIsPublicFolder As SharePathError.IsPublicFolder
+  overload: Dropbox.Api.Sharing.SharePathError.AsIsPublicFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsInsidePublicFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsInsidePublicFolder
+  id: IsInsidePublicFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsInsidePublicFolder
+  nameWithType: SharePathError.IsInsidePublicFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsInsidePublicFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInsidePublicFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 215
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InsidePublicFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInsidePublicFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInsidePublicFolder As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsInsidePublicFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsInsidePublicFolder
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsInsidePublicFolder
+  id: AsInsidePublicFolder
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsInsidePublicFolder
+  nameWithType: SharePathError.AsInsidePublicFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsInsidePublicFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInsidePublicFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 226
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InsidePublicFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.InsidePublicFolder AsInsidePublicFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.InsidePublicFolder
+    content.vb: Public ReadOnly Property AsInsidePublicFolder As SharePathError.InsidePublicFolder
+  overload: Dropbox.Api.Sharing.SharePathError.AsInsidePublicFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsAlreadyShared
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsAlreadyShared
+  id: IsAlreadyShared
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsAlreadyShared
+  nameWithType: SharePathError.IsAlreadyShared
+  fullName: Dropbox.Api.Sharing.SharePathError.IsAlreadyShared
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAlreadyShared
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 237
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is AlreadyShared</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAlreadyShared { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAlreadyShared As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsAlreadyShared*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsAlreadyShared
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsAlreadyShared
+  id: AsAlreadyShared
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsAlreadyShared
+  nameWithType: SharePathError.AsAlreadyShared
+  fullName: Dropbox.Api.Sharing.SharePathError.AsAlreadyShared
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAlreadyShared
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 248
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a AlreadyShared, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.AlreadyShared AsAlreadyShared { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.AlreadyShared
+    content.vb: Public ReadOnly Property AsAlreadyShared As SharePathError.AlreadyShared
+  overload: Dropbox.Api.Sharing.SharePathError.AsAlreadyShared*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsInvalidPath
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsInvalidPath
+  id: IsInvalidPath
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidPath
+  nameWithType: SharePathError.IsInvalidPath
+  fullName: Dropbox.Api.Sharing.SharePathError.IsInvalidPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInvalidPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 259
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidPath</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidPath As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsInvalidPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsInvalidPath
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsInvalidPath
+  id: AsInvalidPath
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidPath
+  nameWithType: SharePathError.AsInvalidPath
+  fullName: Dropbox.Api.Sharing.SharePathError.AsInvalidPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInvalidPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 270
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InvalidPath, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.InvalidPath AsInvalidPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.InvalidPath
+    content.vb: Public ReadOnly Property AsInvalidPath As SharePathError.InvalidPath
+  overload: Dropbox.Api.Sharing.SharePathError.AsInvalidPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsIsOsxPackage
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsIsOsxPackage
+  id: IsIsOsxPackage
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsIsOsxPackage
+  nameWithType: SharePathError.IsIsOsxPackage
+  fullName: Dropbox.Api.Sharing.SharePathError.IsIsOsxPackage
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsIsOsxPackage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 281
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is IsOsxPackage</p>\n"
+  example: []
+  syntax:
+    content: public bool IsIsOsxPackage { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIsOsxPackage As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsIsOsxPackage*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsIsOsxPackage
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsIsOsxPackage
+  id: AsIsOsxPackage
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsIsOsxPackage
+  nameWithType: SharePathError.AsIsOsxPackage
+  fullName: Dropbox.Api.Sharing.SharePathError.AsIsOsxPackage
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsIsOsxPackage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 292
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a IsOsxPackage, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.IsOsxPackage AsIsOsxPackage { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.IsOsxPackage
+    content.vb: Public ReadOnly Property AsIsOsxPackage As SharePathError.IsOsxPackage
+  overload: Dropbox.Api.Sharing.SharePathError.AsIsOsxPackage*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsInsideOsxPackage
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsInsideOsxPackage
+  id: IsInsideOsxPackage
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsInsideOsxPackage
+  nameWithType: SharePathError.IsInsideOsxPackage
+  fullName: Dropbox.Api.Sharing.SharePathError.IsInsideOsxPackage
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInsideOsxPackage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 303
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InsideOsxPackage</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInsideOsxPackage { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInsideOsxPackage As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsInsideOsxPackage*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsInsideOsxPackage
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsInsideOsxPackage
+  id: AsInsideOsxPackage
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsInsideOsxPackage
+  nameWithType: SharePathError.AsInsideOsxPackage
+  fullName: Dropbox.Api.Sharing.SharePathError.AsInsideOsxPackage
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInsideOsxPackage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 314
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InsideOsxPackage, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.InsideOsxPackage AsInsideOsxPackage { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.InsideOsxPackage
+    content.vb: Public ReadOnly Property AsInsideOsxPackage As SharePathError.InsideOsxPackage
+  overload: Dropbox.Api.Sharing.SharePathError.AsInsideOsxPackage*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsIsVault
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsIsVault
+  id: IsIsVault
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsIsVault
+  nameWithType: SharePathError.IsIsVault
+  fullName: Dropbox.Api.Sharing.SharePathError.IsIsVault
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsIsVault
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 325
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is IsVault</p>\n"
+  example: []
+  syntax:
+    content: public bool IsIsVault { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIsVault As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsIsVault*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsIsVault
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsIsVault
+  id: AsIsVault
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsIsVault
+  nameWithType: SharePathError.AsIsVault
+  fullName: Dropbox.Api.Sharing.SharePathError.AsIsVault
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsIsVault
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 336
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a IsVault, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.IsVault AsIsVault { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.IsVault
+    content.vb: Public ReadOnly Property AsIsVault As SharePathError.IsVault
+  overload: Dropbox.Api.Sharing.SharePathError.AsIsVault*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsIsVaultLocked
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsIsVaultLocked
+  id: IsIsVaultLocked
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsIsVaultLocked
+  nameWithType: SharePathError.IsIsVaultLocked
+  fullName: Dropbox.Api.Sharing.SharePathError.IsIsVaultLocked
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsIsVaultLocked
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 347
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is IsVaultLocked</p>\n"
+  example: []
+  syntax:
+    content: public bool IsIsVaultLocked { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIsVaultLocked As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsIsVaultLocked*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsIsVaultLocked
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsIsVaultLocked
+  id: AsIsVaultLocked
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsIsVaultLocked
+  nameWithType: SharePathError.AsIsVaultLocked
+  fullName: Dropbox.Api.Sharing.SharePathError.AsIsVaultLocked
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsIsVaultLocked
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 358
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a IsVaultLocked, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.IsVaultLocked AsIsVaultLocked { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.IsVaultLocked
+    content.vb: Public ReadOnly Property AsIsVaultLocked As SharePathError.IsVaultLocked
+  overload: Dropbox.Api.Sharing.SharePathError.AsIsVaultLocked*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsIsFamily
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsIsFamily
+  id: IsIsFamily
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsIsFamily
+  nameWithType: SharePathError.IsIsFamily
+  fullName: Dropbox.Api.Sharing.SharePathError.IsIsFamily
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsIsFamily
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 369
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is IsFamily</p>\n"
+  example: []
+  syntax:
+    content: public bool IsIsFamily { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIsFamily As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsIsFamily*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsIsFamily
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsIsFamily
+  id: AsIsFamily
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsIsFamily
+  nameWithType: SharePathError.AsIsFamily
+  fullName: Dropbox.Api.Sharing.SharePathError.AsIsFamily
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsIsFamily
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 380
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a IsFamily, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.IsFamily AsIsFamily { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.IsFamily
+    content.vb: Public ReadOnly Property AsIsFamily As SharePathError.IsFamily
+  overload: Dropbox.Api.Sharing.SharePathError.AsIsFamily*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.IsOther
+  commentId: P:Dropbox.Api.Sharing.SharePathError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SharePathError.IsOther
+  fullName: Dropbox.Api.Sharing.SharePathError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 391
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.SharePathError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharePathError.AsOther
+  commentId: P:Dropbox.Api.Sharing.SharePathError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.SharePathError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SharePathError.AsOther
+  fullName: Dropbox.Api.Sharing.SharePathError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharePathError.cs
+    startLine: 402
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError.Other
+    content.vb: Public ReadOnly Property AsOther As SharePathError.Other
+  overload: Dropbox.Api.Sharing.SharePathError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.SharePathError
+  commentId: T:Dropbox.Api.Sharing.SharePathError
+  parent: Dropbox.Api.Sharing
+  name: SharePathError
+  nameWithType: SharePathError
+  fullName: Dropbox.Api.Sharing.SharePathError
+- uid: Dropbox.Api.Sharing.SharePathError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.#ctor
+  name: SharePathError
+  nameWithType: SharePathError.SharePathError
+  fullName: Dropbox.Api.Sharing.SharePathError.SharePathError
+- uid: Dropbox.Api.Sharing.SharePathError.IsIsFile*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsIsFile
+  name: IsIsFile
+  nameWithType: SharePathError.IsIsFile
+  fullName: Dropbox.Api.Sharing.SharePathError.IsIsFile
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.SharePathError.AsIsFile*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsIsFile
+  name: AsIsFile
+  nameWithType: SharePathError.AsIsFile
+  fullName: Dropbox.Api.Sharing.SharePathError.AsIsFile
+- uid: Dropbox.Api.Sharing.SharePathError.IsFile
+  commentId: T:Dropbox.Api.Sharing.SharePathError.IsFile
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.IsFile
+  nameWithType: SharePathError.IsFile
+  fullName: Dropbox.Api.Sharing.SharePathError.IsFile
+- uid: Dropbox.Api.Sharing.SharePathError.IsInsideSharedFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsInsideSharedFolder
+  name: IsInsideSharedFolder
+  nameWithType: SharePathError.IsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsInsideSharedFolder
+- uid: Dropbox.Api.Sharing.SharePathError.AsInsideSharedFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsInsideSharedFolder
+  name: AsInsideSharedFolder
+  nameWithType: SharePathError.AsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsInsideSharedFolder
+- uid: Dropbox.Api.Sharing.SharePathError.InsideSharedFolder
+  commentId: T:Dropbox.Api.Sharing.SharePathError.InsideSharedFolder
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.InsideSharedFolder
+  nameWithType: SharePathError.InsideSharedFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.InsideSharedFolder
+- uid: Dropbox.Api.Sharing.SharePathError.IsContainsSharedFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsContainsSharedFolder
+  name: IsContainsSharedFolder
+  nameWithType: SharePathError.IsContainsSharedFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsContainsSharedFolder
+- uid: Dropbox.Api.Sharing.SharePathError.AsContainsSharedFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsContainsSharedFolder
+  name: AsContainsSharedFolder
+  nameWithType: SharePathError.AsContainsSharedFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsContainsSharedFolder
+- uid: Dropbox.Api.Sharing.SharePathError.ContainsSharedFolder
+  commentId: T:Dropbox.Api.Sharing.SharePathError.ContainsSharedFolder
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.ContainsSharedFolder
+  nameWithType: SharePathError.ContainsSharedFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.ContainsSharedFolder
+- uid: Dropbox.Api.Sharing.SharePathError.IsContainsAppFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsContainsAppFolder
+  name: IsContainsAppFolder
+  nameWithType: SharePathError.IsContainsAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsContainsAppFolder
+- uid: Dropbox.Api.Sharing.SharePathError.AsContainsAppFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsContainsAppFolder
+  name: AsContainsAppFolder
+  nameWithType: SharePathError.AsContainsAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsContainsAppFolder
+- uid: Dropbox.Api.Sharing.SharePathError.ContainsAppFolder
+  commentId: T:Dropbox.Api.Sharing.SharePathError.ContainsAppFolder
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.ContainsAppFolder
+  nameWithType: SharePathError.ContainsAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.ContainsAppFolder
+- uid: Dropbox.Api.Sharing.SharePathError.IsContainsTeamFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsContainsTeamFolder
+  name: IsContainsTeamFolder
+  nameWithType: SharePathError.IsContainsTeamFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsContainsTeamFolder
+- uid: Dropbox.Api.Sharing.SharePathError.AsContainsTeamFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsContainsTeamFolder
+  name: AsContainsTeamFolder
+  nameWithType: SharePathError.AsContainsTeamFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsContainsTeamFolder
+- uid: Dropbox.Api.Sharing.SharePathError.ContainsTeamFolder
+  commentId: T:Dropbox.Api.Sharing.SharePathError.ContainsTeamFolder
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.ContainsTeamFolder
+  nameWithType: SharePathError.ContainsTeamFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.ContainsTeamFolder
+- uid: Dropbox.Api.Sharing.SharePathError.IsIsAppFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsIsAppFolder
+  name: IsIsAppFolder
+  nameWithType: SharePathError.IsIsAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsIsAppFolder
+- uid: Dropbox.Api.Sharing.SharePathError.AsIsAppFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsIsAppFolder
+  name: AsIsAppFolder
+  nameWithType: SharePathError.AsIsAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsIsAppFolder
+- uid: Dropbox.Api.Sharing.SharePathError.IsAppFolder
+  commentId: T:Dropbox.Api.Sharing.SharePathError.IsAppFolder
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.IsAppFolder
+  nameWithType: SharePathError.IsAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsAppFolder
+- uid: Dropbox.Api.Sharing.SharePathError.IsInsideAppFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsInsideAppFolder
+  name: IsInsideAppFolder
+  nameWithType: SharePathError.IsInsideAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsInsideAppFolder
+- uid: Dropbox.Api.Sharing.SharePathError.AsInsideAppFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsInsideAppFolder
+  name: AsInsideAppFolder
+  nameWithType: SharePathError.AsInsideAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsInsideAppFolder
+- uid: Dropbox.Api.Sharing.SharePathError.InsideAppFolder
+  commentId: T:Dropbox.Api.Sharing.SharePathError.InsideAppFolder
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.InsideAppFolder
+  nameWithType: SharePathError.InsideAppFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.InsideAppFolder
+- uid: Dropbox.Api.Sharing.SharePathError.IsIsPublicFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsIsPublicFolder
+  name: IsIsPublicFolder
+  nameWithType: SharePathError.IsIsPublicFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsIsPublicFolder
+- uid: Dropbox.Api.Sharing.SharePathError.AsIsPublicFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsIsPublicFolder
+  name: AsIsPublicFolder
+  nameWithType: SharePathError.AsIsPublicFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsIsPublicFolder
+- uid: Dropbox.Api.Sharing.SharePathError.IsPublicFolder
+  commentId: T:Dropbox.Api.Sharing.SharePathError.IsPublicFolder
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.IsPublicFolder
+  nameWithType: SharePathError.IsPublicFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsPublicFolder
+- uid: Dropbox.Api.Sharing.SharePathError.IsInsidePublicFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsInsidePublicFolder
+  name: IsInsidePublicFolder
+  nameWithType: SharePathError.IsInsidePublicFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.IsInsidePublicFolder
+- uid: Dropbox.Api.Sharing.SharePathError.AsInsidePublicFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsInsidePublicFolder
+  name: AsInsidePublicFolder
+  nameWithType: SharePathError.AsInsidePublicFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.AsInsidePublicFolder
+- uid: Dropbox.Api.Sharing.SharePathError.InsidePublicFolder
+  commentId: T:Dropbox.Api.Sharing.SharePathError.InsidePublicFolder
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.InsidePublicFolder
+  nameWithType: SharePathError.InsidePublicFolder
+  fullName: Dropbox.Api.Sharing.SharePathError.InsidePublicFolder
+- uid: Dropbox.Api.Sharing.SharePathError.IsAlreadyShared*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsAlreadyShared
+  name: IsAlreadyShared
+  nameWithType: SharePathError.IsAlreadyShared
+  fullName: Dropbox.Api.Sharing.SharePathError.IsAlreadyShared
+- uid: Dropbox.Api.Sharing.SharePathError.AsAlreadyShared*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsAlreadyShared
+  name: AsAlreadyShared
+  nameWithType: SharePathError.AsAlreadyShared
+  fullName: Dropbox.Api.Sharing.SharePathError.AsAlreadyShared
+- uid: Dropbox.Api.Sharing.SharePathError.AlreadyShared
+  commentId: T:Dropbox.Api.Sharing.SharePathError.AlreadyShared
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.AlreadyShared
+  nameWithType: SharePathError.AlreadyShared
+  fullName: Dropbox.Api.Sharing.SharePathError.AlreadyShared
+- uid: Dropbox.Api.Sharing.SharePathError.IsInvalidPath*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsInvalidPath
+  name: IsInvalidPath
+  nameWithType: SharePathError.IsInvalidPath
+  fullName: Dropbox.Api.Sharing.SharePathError.IsInvalidPath
+- uid: Dropbox.Api.Sharing.SharePathError.AsInvalidPath*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsInvalidPath
+  name: AsInvalidPath
+  nameWithType: SharePathError.AsInvalidPath
+  fullName: Dropbox.Api.Sharing.SharePathError.AsInvalidPath
+- uid: Dropbox.Api.Sharing.SharePathError.InvalidPath
+  commentId: T:Dropbox.Api.Sharing.SharePathError.InvalidPath
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.InvalidPath
+  nameWithType: SharePathError.InvalidPath
+  fullName: Dropbox.Api.Sharing.SharePathError.InvalidPath
+- uid: Dropbox.Api.Sharing.SharePathError.IsIsOsxPackage*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsIsOsxPackage
+  name: IsIsOsxPackage
+  nameWithType: SharePathError.IsIsOsxPackage
+  fullName: Dropbox.Api.Sharing.SharePathError.IsIsOsxPackage
+- uid: Dropbox.Api.Sharing.SharePathError.AsIsOsxPackage*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsIsOsxPackage
+  name: AsIsOsxPackage
+  nameWithType: SharePathError.AsIsOsxPackage
+  fullName: Dropbox.Api.Sharing.SharePathError.AsIsOsxPackage
+- uid: Dropbox.Api.Sharing.SharePathError.IsOsxPackage
+  commentId: T:Dropbox.Api.Sharing.SharePathError.IsOsxPackage
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.IsOsxPackage
+  nameWithType: SharePathError.IsOsxPackage
+  fullName: Dropbox.Api.Sharing.SharePathError.IsOsxPackage
+- uid: Dropbox.Api.Sharing.SharePathError.IsInsideOsxPackage*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsInsideOsxPackage
+  name: IsInsideOsxPackage
+  nameWithType: SharePathError.IsInsideOsxPackage
+  fullName: Dropbox.Api.Sharing.SharePathError.IsInsideOsxPackage
+- uid: Dropbox.Api.Sharing.SharePathError.AsInsideOsxPackage*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsInsideOsxPackage
+  name: AsInsideOsxPackage
+  nameWithType: SharePathError.AsInsideOsxPackage
+  fullName: Dropbox.Api.Sharing.SharePathError.AsInsideOsxPackage
+- uid: Dropbox.Api.Sharing.SharePathError.InsideOsxPackage
+  commentId: T:Dropbox.Api.Sharing.SharePathError.InsideOsxPackage
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.InsideOsxPackage
+  nameWithType: SharePathError.InsideOsxPackage
+  fullName: Dropbox.Api.Sharing.SharePathError.InsideOsxPackage
+- uid: Dropbox.Api.Sharing.SharePathError.IsIsVault*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsIsVault
+  name: IsIsVault
+  nameWithType: SharePathError.IsIsVault
+  fullName: Dropbox.Api.Sharing.SharePathError.IsIsVault
+- uid: Dropbox.Api.Sharing.SharePathError.AsIsVault*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsIsVault
+  name: AsIsVault
+  nameWithType: SharePathError.AsIsVault
+  fullName: Dropbox.Api.Sharing.SharePathError.AsIsVault
+- uid: Dropbox.Api.Sharing.SharePathError.IsVault
+  commentId: T:Dropbox.Api.Sharing.SharePathError.IsVault
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.IsVault
+  nameWithType: SharePathError.IsVault
+  fullName: Dropbox.Api.Sharing.SharePathError.IsVault
+- uid: Dropbox.Api.Sharing.SharePathError.IsIsVaultLocked*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsIsVaultLocked
+  name: IsIsVaultLocked
+  nameWithType: SharePathError.IsIsVaultLocked
+  fullName: Dropbox.Api.Sharing.SharePathError.IsIsVaultLocked
+- uid: Dropbox.Api.Sharing.SharePathError.AsIsVaultLocked*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsIsVaultLocked
+  name: AsIsVaultLocked
+  nameWithType: SharePathError.AsIsVaultLocked
+  fullName: Dropbox.Api.Sharing.SharePathError.AsIsVaultLocked
+- uid: Dropbox.Api.Sharing.SharePathError.IsVaultLocked
+  commentId: T:Dropbox.Api.Sharing.SharePathError.IsVaultLocked
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.IsVaultLocked
+  nameWithType: SharePathError.IsVaultLocked
+  fullName: Dropbox.Api.Sharing.SharePathError.IsVaultLocked
+- uid: Dropbox.Api.Sharing.SharePathError.IsIsFamily*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsIsFamily
+  name: IsIsFamily
+  nameWithType: SharePathError.IsIsFamily
+  fullName: Dropbox.Api.Sharing.SharePathError.IsIsFamily
+- uid: Dropbox.Api.Sharing.SharePathError.AsIsFamily*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsIsFamily
+  name: AsIsFamily
+  nameWithType: SharePathError.AsIsFamily
+  fullName: Dropbox.Api.Sharing.SharePathError.AsIsFamily
+- uid: Dropbox.Api.Sharing.SharePathError.IsFamily
+  commentId: T:Dropbox.Api.Sharing.SharePathError.IsFamily
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.IsFamily
+  nameWithType: SharePathError.IsFamily
+  fullName: Dropbox.Api.Sharing.SharePathError.IsFamily
+- uid: Dropbox.Api.Sharing.SharePathError.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.IsOther
+  name: IsOther
+  nameWithType: SharePathError.IsOther
+  fullName: Dropbox.Api.Sharing.SharePathError.IsOther
+- uid: Dropbox.Api.Sharing.SharePathError.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.SharePathError.AsOther
+  name: AsOther
+  nameWithType: SharePathError.AsOther
+  fullName: Dropbox.Api.Sharing.SharePathError.AsOther
+- uid: Dropbox.Api.Sharing.SharePathError.Other
+  commentId: T:Dropbox.Api.Sharing.SharePathError.Other
+  parent: Dropbox.Api.Sharing
+  name: SharePathError.Other
+  nameWithType: SharePathError.Other
+  fullName: Dropbox.Api.Sharing.SharePathError.Other

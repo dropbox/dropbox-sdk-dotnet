@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy
+  id: ShowcaseDownloadPolicy
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.#ctor
+  - Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsDisabled
+  - Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsEnabled
+  - Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsOther
+  - Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsDisabled
+  - Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsEnabled
+  - Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseDownloadPolicy
+  nameWithType: ShowcaseDownloadPolicy
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ShowcaseDownloadPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>The showcase download policy object</p>\n"
+  example: []
+  syntax:
+    content: public class ShowcaseDownloadPolicy
+    content.vb: Public Class ShowcaseDownloadPolicy
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Disabled
+  - Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Enabled
+  - Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseDownloadPolicy()
+  nameWithType: ShowcaseDownloadPolicy.ShowcaseDownloadPolicy()
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.ShowcaseDownloadPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseDownloadPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: ShowcaseDownloadPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: ShowcaseDownloadPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseDownloadPolicy.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As ShowcaseDownloadPolicy.Disabled
+  overload: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsEnabled
+  id: IsEnabled
+  parent: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: ShowcaseDownloadPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Enabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnabled As Boolean
+  overload: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsEnabled
+  id: AsEnabled
+  parent: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsEnabled
+  nameWithType: ShowcaseDownloadPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Enabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseDownloadPolicy.Enabled AsEnabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Enabled
+    content.vb: Public ReadOnly Property AsEnabled As ShowcaseDownloadPolicy.Enabled
+  overload: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ShowcaseDownloadPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ShowcaseDownloadPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseDownloadPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseDownloadPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As ShowcaseDownloadPolicy.Other
+  overload: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: ShowcaseDownloadPolicy
+  nameWithType: ShowcaseDownloadPolicy
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.#ctor
+  name: ShowcaseDownloadPolicy
+  nameWithType: ShowcaseDownloadPolicy.ShowcaseDownloadPolicy
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.ShowcaseDownloadPolicy
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsDisabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsDisabled
+  name: IsDisabled
+  nameWithType: ShowcaseDownloadPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsDisabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsDisabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsDisabled
+  name: AsDisabled
+  nameWithType: ShowcaseDownloadPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsDisabled
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Disabled
+  commentId: T:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Disabled
+  parent: Dropbox.Api.TeamPolicies
+  name: ShowcaseDownloadPolicy.Disabled
+  nameWithType: ShowcaseDownloadPolicy.Disabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Disabled
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsEnabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsEnabled
+  name: IsEnabled
+  nameWithType: ShowcaseDownloadPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsEnabled
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsEnabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsEnabled
+  name: AsEnabled
+  nameWithType: ShowcaseDownloadPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsEnabled
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Enabled
+  commentId: T:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Enabled
+  parent: Dropbox.Api.TeamPolicies
+  name: ShowcaseDownloadPolicy.Enabled
+  nameWithType: ShowcaseDownloadPolicy.Enabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Enabled
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsOther
+  name: IsOther
+  nameWithType: ShowcaseDownloadPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.IsOther
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsOther
+  name: AsOther
+  nameWithType: ShowcaseDownloadPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.AsOther
+- uid: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Other
+  commentId: T:Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Other
+  parent: Dropbox.Api.TeamPolicies
+  name: ShowcaseDownloadPolicy.Other
+  nameWithType: ShowcaseDownloadPolicy.Other
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseDownloadPolicy.Other

@@ -1,0 +1,511 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.NoPermission
+  commentId: T:Dropbox.Api.FileRequests.UpdateFileRequestError.NoPermission
+  id: UpdateFileRequestError.NoPermission
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.NoPermission.Instance
+  langs:
+  - csharp
+  - vb
+  name: UpdateFileRequestError.NoPermission
+  nameWithType: UpdateFileRequestError.NoPermission
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.NoPermission
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/UpdateFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NoPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/UpdateFileRequestError.cs
+    startLine: 545
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>This user doesn&apos;t have permission to access or modify this file\nrequest.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class NoPermission : UpdateFileRequestError'
+    content.vb: >-
+      Public NotInheritable Class NoPermission
+          Inherits UpdateFileRequestError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileRequests.UpdateFileRequestError
+  inheritedMembers:
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.IsNotFound
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.AsNotFound
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.IsNotAFolder
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.AsNotAFolder
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.IsAppLacksAccess
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.AsAppLacksAccess
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.IsNoPermission
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.AsNoPermission
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.IsEmailUnverified
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.AsEmailUnverified
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.IsValidationError
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.AsValidationError
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.IsDisabledForTeam
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.AsDisabledForTeam
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.IsOther
+  - Dropbox.Api.FileRequests.UpdateFileRequestError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.NoPermission.Instance
+  commentId: F:Dropbox.Api.FileRequests.UpdateFileRequestError.NoPermission.Instance
+  id: Instance
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError.NoPermission
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: UpdateFileRequestError.NoPermission.Instance
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.NoPermission.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/UpdateFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/UpdateFileRequestError.cs
+    startLine: 570
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>A singleton instance of NoPermission</p>\n"
+  example: []
+  syntax:
+    content: public static readonly UpdateFileRequestError.NoPermission Instance
+    return:
+      type: Dropbox.Api.FileRequests.UpdateFileRequestError.NoPermission
+    content.vb: Public Shared ReadOnly Instance As UpdateFileRequestError.NoPermission
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError
+  commentId: T:Dropbox.Api.FileRequests.UpdateFileRequestError
+  parent: Dropbox.Api.FileRequests
+  name: UpdateFileRequestError
+  nameWithType: UpdateFileRequestError
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.IsNotFound
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.IsNotFound
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: IsNotFound
+  nameWithType: UpdateFileRequestError.IsNotFound
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.IsNotFound
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.AsNotFound
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.AsNotFound
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: AsNotFound
+  nameWithType: UpdateFileRequestError.AsNotFound
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.AsNotFound
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.IsNotAFolder
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.IsNotAFolder
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: IsNotAFolder
+  nameWithType: UpdateFileRequestError.IsNotAFolder
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.IsNotAFolder
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.AsNotAFolder
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.AsNotAFolder
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: AsNotAFolder
+  nameWithType: UpdateFileRequestError.AsNotAFolder
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.AsNotAFolder
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.IsAppLacksAccess
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.IsAppLacksAccess
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: IsAppLacksAccess
+  nameWithType: UpdateFileRequestError.IsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.IsAppLacksAccess
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.AsAppLacksAccess
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.AsAppLacksAccess
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: AsAppLacksAccess
+  nameWithType: UpdateFileRequestError.AsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.AsAppLacksAccess
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.IsNoPermission
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.IsNoPermission
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: IsNoPermission
+  nameWithType: UpdateFileRequestError.IsNoPermission
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.IsNoPermission
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.AsNoPermission
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.AsNoPermission
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: AsNoPermission
+  nameWithType: UpdateFileRequestError.AsNoPermission
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.AsNoPermission
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.IsEmailUnverified
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.IsEmailUnverified
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: IsEmailUnverified
+  nameWithType: UpdateFileRequestError.IsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.IsEmailUnverified
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.AsEmailUnverified
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.AsEmailUnverified
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: AsEmailUnverified
+  nameWithType: UpdateFileRequestError.AsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.AsEmailUnverified
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.IsValidationError
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.IsValidationError
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: IsValidationError
+  nameWithType: UpdateFileRequestError.IsValidationError
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.IsValidationError
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.AsValidationError
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.AsValidationError
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: AsValidationError
+  nameWithType: UpdateFileRequestError.AsValidationError
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.AsValidationError
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.IsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.IsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: IsDisabledForTeam
+  nameWithType: UpdateFileRequestError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.IsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.AsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.AsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: AsDisabledForTeam
+  nameWithType: UpdateFileRequestError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.AsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.IsOther
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.IsOther
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: IsOther
+  nameWithType: UpdateFileRequestError.IsOther
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.IsOther
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.AsOther
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestError.AsOther
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestError
+  name: AsOther
+  nameWithType: UpdateFileRequestError.AsOther
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError.NoPermission
+  commentId: T:Dropbox.Api.FileRequests.UpdateFileRequestError.NoPermission
+  parent: Dropbox.Api.FileRequests
+  name: UpdateFileRequestError.NoPermission
+  nameWithType: UpdateFileRequestError.NoPermission
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError.NoPermission

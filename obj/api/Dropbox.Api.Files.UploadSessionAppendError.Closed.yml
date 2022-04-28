@@ -1,0 +1,539 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadSessionAppendError.Closed
+  commentId: T:Dropbox.Api.Files.UploadSessionAppendError.Closed
+  id: UploadSessionAppendError.Closed
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadSessionAppendError.Closed.Instance
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionAppendError.Closed
+  nameWithType: UploadSessionAppendError.Closed
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.Closed
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Closed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendError.cs
+    startLine: 634
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>You are attempting to append data to an upload session that has already been\nclosed (i.e. committed).</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Closed : UploadSessionAppendError'
+    content.vb: >-
+      Public NotInheritable Class Closed
+          Inherits UploadSessionAppendError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.UploadSessionAppendError
+  inheritedMembers:
+  - Dropbox.Api.Files.UploadSessionAppendError.IsContentHashMismatch
+  - Dropbox.Api.Files.UploadSessionAppendError.AsContentHashMismatch
+  - Dropbox.Api.Files.UploadSessionAppendError.IsNotFound
+  - Dropbox.Api.Files.UploadSessionAppendError.AsNotFound
+  - Dropbox.Api.Files.UploadSessionAppendError.IsIncorrectOffset
+  - Dropbox.Api.Files.UploadSessionAppendError.AsIncorrectOffset
+  - Dropbox.Api.Files.UploadSessionAppendError.IsClosed
+  - Dropbox.Api.Files.UploadSessionAppendError.AsClosed
+  - Dropbox.Api.Files.UploadSessionAppendError.IsNotClosed
+  - Dropbox.Api.Files.UploadSessionAppendError.AsNotClosed
+  - Dropbox.Api.Files.UploadSessionAppendError.IsTooLarge
+  - Dropbox.Api.Files.UploadSessionAppendError.AsTooLarge
+  - Dropbox.Api.Files.UploadSessionAppendError.IsConcurrentSessionInvalidOffset
+  - Dropbox.Api.Files.UploadSessionAppendError.AsConcurrentSessionInvalidOffset
+  - Dropbox.Api.Files.UploadSessionAppendError.IsConcurrentSessionInvalidDataSize
+  - Dropbox.Api.Files.UploadSessionAppendError.AsConcurrentSessionInvalidDataSize
+  - Dropbox.Api.Files.UploadSessionAppendError.IsPayloadTooLarge
+  - Dropbox.Api.Files.UploadSessionAppendError.AsPayloadTooLarge
+  - Dropbox.Api.Files.UploadSessionAppendError.IsOther
+  - Dropbox.Api.Files.UploadSessionAppendError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.UploadSessionAppendError.Closed.Instance
+  commentId: F:Dropbox.Api.Files.UploadSessionAppendError.Closed.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.UploadSessionAppendError.Closed
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: UploadSessionAppendError.Closed.Instance
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.Closed.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendError.cs
+    startLine: 658
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of Closed</p>\n"
+  example: []
+  syntax:
+    content: public static readonly UploadSessionAppendError.Closed Instance
+    return:
+      type: Dropbox.Api.Files.UploadSessionAppendError.Closed
+    content.vb: Public Shared ReadOnly Instance As UploadSessionAppendError.Closed
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.UploadSessionAppendError
+  commentId: T:Dropbox.Api.Files.UploadSessionAppendError
+  parent: Dropbox.Api.Files
+  name: UploadSessionAppendError
+  nameWithType: UploadSessionAppendError
+  fullName: Dropbox.Api.Files.UploadSessionAppendError
+- uid: Dropbox.Api.Files.UploadSessionAppendError.IsContentHashMismatch
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.IsContentHashMismatch
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: IsContentHashMismatch
+  nameWithType: UploadSessionAppendError.IsContentHashMismatch
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.IsContentHashMismatch
+- uid: Dropbox.Api.Files.UploadSessionAppendError.AsContentHashMismatch
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.AsContentHashMismatch
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: AsContentHashMismatch
+  nameWithType: UploadSessionAppendError.AsContentHashMismatch
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.AsContentHashMismatch
+- uid: Dropbox.Api.Files.UploadSessionAppendError.IsNotFound
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.IsNotFound
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: IsNotFound
+  nameWithType: UploadSessionAppendError.IsNotFound
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.IsNotFound
+- uid: Dropbox.Api.Files.UploadSessionAppendError.AsNotFound
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.AsNotFound
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: AsNotFound
+  nameWithType: UploadSessionAppendError.AsNotFound
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.AsNotFound
+- uid: Dropbox.Api.Files.UploadSessionAppendError.IsIncorrectOffset
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.IsIncorrectOffset
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: IsIncorrectOffset
+  nameWithType: UploadSessionAppendError.IsIncorrectOffset
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.IsIncorrectOffset
+- uid: Dropbox.Api.Files.UploadSessionAppendError.AsIncorrectOffset
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.AsIncorrectOffset
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: AsIncorrectOffset
+  nameWithType: UploadSessionAppendError.AsIncorrectOffset
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.AsIncorrectOffset
+- uid: Dropbox.Api.Files.UploadSessionAppendError.IsClosed
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.IsClosed
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: IsClosed
+  nameWithType: UploadSessionAppendError.IsClosed
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.IsClosed
+- uid: Dropbox.Api.Files.UploadSessionAppendError.AsClosed
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.AsClosed
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: AsClosed
+  nameWithType: UploadSessionAppendError.AsClosed
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.AsClosed
+- uid: Dropbox.Api.Files.UploadSessionAppendError.IsNotClosed
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.IsNotClosed
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: IsNotClosed
+  nameWithType: UploadSessionAppendError.IsNotClosed
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.IsNotClosed
+- uid: Dropbox.Api.Files.UploadSessionAppendError.AsNotClosed
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.AsNotClosed
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: AsNotClosed
+  nameWithType: UploadSessionAppendError.AsNotClosed
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.AsNotClosed
+- uid: Dropbox.Api.Files.UploadSessionAppendError.IsTooLarge
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.IsTooLarge
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: IsTooLarge
+  nameWithType: UploadSessionAppendError.IsTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.IsTooLarge
+- uid: Dropbox.Api.Files.UploadSessionAppendError.AsTooLarge
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.AsTooLarge
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: AsTooLarge
+  nameWithType: UploadSessionAppendError.AsTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.AsTooLarge
+- uid: Dropbox.Api.Files.UploadSessionAppendError.IsConcurrentSessionInvalidOffset
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.IsConcurrentSessionInvalidOffset
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: IsConcurrentSessionInvalidOffset
+  nameWithType: UploadSessionAppendError.IsConcurrentSessionInvalidOffset
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.IsConcurrentSessionInvalidOffset
+- uid: Dropbox.Api.Files.UploadSessionAppendError.AsConcurrentSessionInvalidOffset
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.AsConcurrentSessionInvalidOffset
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: AsConcurrentSessionInvalidOffset
+  nameWithType: UploadSessionAppendError.AsConcurrentSessionInvalidOffset
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.AsConcurrentSessionInvalidOffset
+- uid: Dropbox.Api.Files.UploadSessionAppendError.IsConcurrentSessionInvalidDataSize
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.IsConcurrentSessionInvalidDataSize
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: IsConcurrentSessionInvalidDataSize
+  nameWithType: UploadSessionAppendError.IsConcurrentSessionInvalidDataSize
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.IsConcurrentSessionInvalidDataSize
+- uid: Dropbox.Api.Files.UploadSessionAppendError.AsConcurrentSessionInvalidDataSize
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.AsConcurrentSessionInvalidDataSize
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: AsConcurrentSessionInvalidDataSize
+  nameWithType: UploadSessionAppendError.AsConcurrentSessionInvalidDataSize
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.AsConcurrentSessionInvalidDataSize
+- uid: Dropbox.Api.Files.UploadSessionAppendError.IsPayloadTooLarge
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.IsPayloadTooLarge
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: IsPayloadTooLarge
+  nameWithType: UploadSessionAppendError.IsPayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.IsPayloadTooLarge
+- uid: Dropbox.Api.Files.UploadSessionAppendError.AsPayloadTooLarge
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.AsPayloadTooLarge
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: AsPayloadTooLarge
+  nameWithType: UploadSessionAppendError.AsPayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.AsPayloadTooLarge
+- uid: Dropbox.Api.Files.UploadSessionAppendError.IsOther
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.IsOther
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: IsOther
+  nameWithType: UploadSessionAppendError.IsOther
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.IsOther
+- uid: Dropbox.Api.Files.UploadSessionAppendError.AsOther
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendError.AsOther
+  parent: Dropbox.Api.Files.UploadSessionAppendError
+  name: AsOther
+  nameWithType: UploadSessionAppendError.AsOther
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.UploadSessionAppendError.Closed
+  commentId: T:Dropbox.Api.Files.UploadSessionAppendError.Closed
+  parent: Dropbox.Api.Files
+  name: UploadSessionAppendError.Closed
+  nameWithType: UploadSessionAppendError.Closed
+  fullName: Dropbox.Api.Files.UploadSessionAppendError.Closed

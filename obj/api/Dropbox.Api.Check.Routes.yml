@@ -1,0 +1,35 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Check.Routes
+  commentId: N:Dropbox.Api.Check.Routes
+  id: Dropbox.Api.Check.Routes
+  children:
+  - Dropbox.Api.Check.Routes.CheckAppRoutes
+  - Dropbox.Api.Check.Routes.CheckUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: Dropbox.Api.Check.Routes
+  nameWithType: Dropbox.Api.Check.Routes
+  fullName: Dropbox.Api.Check.Routes
+  type: Namespace
+  assemblies:
+  - Dropbox.Api
+references:
+- uid: Dropbox.Api.Check.Routes.CheckAppRoutes
+  commentId: T:Dropbox.Api.Check.Routes.CheckAppRoutes
+  parent: Dropbox.Api.Check.Routes
+  name: CheckAppRoutes
+  nameWithType: CheckAppRoutes
+  fullName: Dropbox.Api.Check.Routes.CheckAppRoutes
+- uid: Dropbox.Api.Check.Routes.CheckUserRoutes
+  commentId: T:Dropbox.Api.Check.Routes.CheckUserRoutes
+  parent: Dropbox.Api.Check.Routes
+  name: CheckUserRoutes
+  nameWithType: CheckUserRoutes
+  fullName: Dropbox.Api.Check.Routes.CheckUserRoutes
+- uid: Dropbox.Api.Check.Routes
+  commentId: N:Dropbox.Api.Check.Routes
+  name: Dropbox.Api.Check.Routes
+  nameWithType: Dropbox.Api.Check.Routes
+  fullName: Dropbox.Api.Check.Routes

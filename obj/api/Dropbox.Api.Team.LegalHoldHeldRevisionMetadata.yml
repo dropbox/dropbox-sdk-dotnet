@@ -1,0 +1,906 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  commentId: T:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  id: LegalHoldHeldRevisionMetadata
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.#ctor(System.String,System.String,System.String,System.DateTime,System.String,Dropbox.Api.Team.TeamMemberStatus,System.String,System.String,System.UInt64,System.String)
+  - Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorEmail
+  - Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberId
+  - Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberStatus
+  - Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ContentHash
+  - Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.FileType
+  - Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.NewFilename
+  - Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalFilePath
+  - Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalRevisionId
+  - Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ServerModified
+  - Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.Size
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldHeldRevisionMetadata
+  nameWithType: LegalHoldHeldRevisionMetadata
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LegalHoldHeldRevisionMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The legal hold held revision metadata object</p>\n"
+  example: []
+  syntax:
+    content: public class LegalHoldHeldRevisionMetadata
+    content.vb: Public Class LegalHoldHeldRevisionMetadata
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.#ctor(System.String,System.String,System.String,System.DateTime,System.String,Dropbox.Api.Team.TeamMemberStatus,System.String,System.String,System.UInt64,System.String)
+  commentId: M:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.#ctor(System.String,System.String,System.String,System.DateTime,System.String,Dropbox.Api.Team.TeamMemberStatus,System.String,System.String,System.UInt64,System.String)
+  id: '#ctor(System.String,System.String,System.String,System.DateTime,System.String,Dropbox.Api.Team.TeamMemberStatus,System.String,System.String,System.UInt64,System.String)'
+  parent: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldHeldRevisionMetadata(String, String, String, DateTime, String, TeamMemberStatus, String, String, UInt64, String)
+  nameWithType: LegalHoldHeldRevisionMetadata.LegalHoldHeldRevisionMetadata(String, String, String, DateTime, String, TeamMemberStatus, String, String, UInt64, String)
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.LegalHoldHeldRevisionMetadata(System.String, System.String, System.String, System.DateTime, System.String, Dropbox.Api.Team.TeamMemberStatus, System.String, System.String, System.UInt64, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.LegalHoldHeldRevisionMetadata\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldHeldRevisionMetadata(string newFilename, string originalRevisionId, string originalFilePath, DateTime serverModified, string authorMemberId, TeamMemberStatus authorMemberStatus, string authorEmail, string fileType, ulong size, string contentHash)
+    parameters:
+    - id: newFilename
+      type: System.String
+      description: The held revision filename.
+    - id: originalRevisionId
+      type: System.String
+      description: The id of the held revision.
+    - id: originalFilePath
+      type: System.String
+      description: The original path of the held revision.
+    - id: serverModified
+      type: System.DateTime
+      description: >-
+        The last time the file was modified on
+
+        Dropbox.
+    - id: authorMemberId
+      type: System.String
+      description: The member id of the revision&apos;s author.
+    - id: authorMemberStatus
+      type: Dropbox.Api.Team.TeamMemberStatus
+      description: >-
+        The member status of the revision&apos;s
+
+        author.
+    - id: authorEmail
+      type: System.String
+      description: The email address of the held revision author.
+    - id: fileType
+      type: System.String
+      description: The type of the held revision&apos;s file.
+    - id: size
+      type: System.UInt64
+      description: The file size in bytes.
+    - id: contentHash
+      type: System.String
+      description: >-
+        A hash of the file content. This field can be used to
+
+        verify data integrity. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+
+        page.
+    content.vb: Public Sub New(newFilename As String, originalRevisionId As String, originalFilePath As String, serverModified As Date, authorMemberId As String, authorMemberStatus As TeamMemberStatus, authorEmail As String, fileType As String, size As ULong, contentHash As String)
+  overload: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.NewFilename
+  commentId: P:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.NewFilename
+  id: NewFilename
+  parent: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  langs:
+  - csharp
+  - vb
+  name: NewFilename
+  nameWithType: LegalHoldHeldRevisionMetadata.NewFilename
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.NewFilename
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NewFilename
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+    startLine: 153
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The held revision filename.</p>\n"
+  example: []
+  syntax:
+    content: public string NewFilename { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NewFilename As String
+  overload: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.NewFilename*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalRevisionId
+  commentId: P:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalRevisionId
+  id: OriginalRevisionId
+  parent: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  langs:
+  - csharp
+  - vb
+  name: OriginalRevisionId
+  nameWithType: LegalHoldHeldRevisionMetadata.OriginalRevisionId
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalRevisionId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: OriginalRevisionId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+    startLine: 158
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The id of the held revision.</p>\n"
+  example: []
+  syntax:
+    content: public string OriginalRevisionId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OriginalRevisionId As String
+  overload: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalRevisionId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalFilePath
+  commentId: P:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalFilePath
+  id: OriginalFilePath
+  parent: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  langs:
+  - csharp
+  - vb
+  name: OriginalFilePath
+  nameWithType: LegalHoldHeldRevisionMetadata.OriginalFilePath
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalFilePath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: OriginalFilePath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+    startLine: 163
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The original path of the held revision.</p>\n"
+  example: []
+  syntax:
+    content: public string OriginalFilePath { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OriginalFilePath As String
+  overload: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalFilePath*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ServerModified
+  commentId: P:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ServerModified
+  id: ServerModified
+  parent: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  langs:
+  - csharp
+  - vb
+  name: ServerModified
+  nameWithType: LegalHoldHeldRevisionMetadata.ServerModified
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ServerModified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ServerModified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+    startLine: 168
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The last time the file was modified on Dropbox.</p>\n"
+  example: []
+  syntax:
+    content: public DateTime ServerModified { get; protected set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property ServerModified As Date
+  overload: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ServerModified*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberId
+  commentId: P:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberId
+  id: AuthorMemberId
+  parent: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  langs:
+  - csharp
+  - vb
+  name: AuthorMemberId
+  nameWithType: LegalHoldHeldRevisionMetadata.AuthorMemberId
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AuthorMemberId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+    startLine: 173
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The member id of the revision&apos;s author.</p>\n"
+  example: []
+  syntax:
+    content: public string AuthorMemberId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AuthorMemberId As String
+  overload: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberStatus
+  commentId: P:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberStatus
+  id: AuthorMemberStatus
+  parent: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  langs:
+  - csharp
+  - vb
+  name: AuthorMemberStatus
+  nameWithType: LegalHoldHeldRevisionMetadata.AuthorMemberStatus
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberStatus
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AuthorMemberStatus
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+    startLine: 178
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The member status of the revision&apos;s author.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMemberStatus AuthorMemberStatus { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamMemberStatus
+    content.vb: Public Property AuthorMemberStatus As TeamMemberStatus
+  overload: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberStatus*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorEmail
+  commentId: P:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorEmail
+  id: AuthorEmail
+  parent: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  langs:
+  - csharp
+  - vb
+  name: AuthorEmail
+  nameWithType: LegalHoldHeldRevisionMetadata.AuthorEmail
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorEmail
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AuthorEmail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The email address of the held revision author.</p>\n"
+  example: []
+  syntax:
+    content: public string AuthorEmail { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AuthorEmail As String
+  overload: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorEmail*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.FileType
+  commentId: P:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.FileType
+  id: FileType
+  parent: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  langs:
+  - csharp
+  - vb
+  name: FileType
+  nameWithType: LegalHoldHeldRevisionMetadata.FileType
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.FileType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FileType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+    startLine: 188
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The type of the held revision&apos;s file.</p>\n"
+  example: []
+  syntax:
+    content: public string FileType { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FileType As String
+  overload: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.FileType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.Size
+  commentId: P:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.Size
+  id: Size
+  parent: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: LegalHoldHeldRevisionMetadata.Size
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.Size
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Size
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+    startLine: 193
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The file size in bytes.</p>\n"
+  example: []
+  syntax:
+    content: public ulong Size { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property Size As ULong
+  overload: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.Size*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ContentHash
+  commentId: P:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ContentHash
+  id: ContentHash
+  parent: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  langs:
+  - csharp
+  - vb
+  name: ContentHash
+  nameWithType: LegalHoldHeldRevisionMetadata.ContentHash
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ContentHash
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ContentHash
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldHeldRevisionMetadata.cs
+    startLine: 201
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A hash of the file content. This field can be used to verify data integrity.\nFor more information see our <a href=\"https://www.dropbox.com/developers/reference/content-hash\">Content hash</a>\npage.</p>\n"
+  example: []
+  syntax:
+    content: public string ContentHash { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ContentHash As String
+  overload: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ContentHash*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  commentId: T:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+  name: LegalHoldHeldRevisionMetadata
+  nameWithType: LegalHoldHeldRevisionMetadata
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.#ctor*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.#ctor
+  name: LegalHoldHeldRevisionMetadata
+  nameWithType: LegalHoldHeldRevisionMetadata.LegalHoldHeldRevisionMetadata
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.LegalHoldHeldRevisionMetadata
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: Dropbox.Api.Team.TeamMemberStatus
+  commentId: T:Dropbox.Api.Team.TeamMemberStatus
+  parent: Dropbox.Api.Team
+  name: TeamMemberStatus
+  nameWithType: TeamMemberStatus
+  fullName: Dropbox.Api.Team.TeamMemberStatus
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.NewFilename*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.NewFilename
+  name: NewFilename
+  nameWithType: LegalHoldHeldRevisionMetadata.NewFilename
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.NewFilename
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalRevisionId*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalRevisionId
+  name: OriginalRevisionId
+  nameWithType: LegalHoldHeldRevisionMetadata.OriginalRevisionId
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalRevisionId
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalFilePath*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalFilePath
+  name: OriginalFilePath
+  nameWithType: LegalHoldHeldRevisionMetadata.OriginalFilePath
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.OriginalFilePath
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ServerModified*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ServerModified
+  name: ServerModified
+  nameWithType: LegalHoldHeldRevisionMetadata.ServerModified
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ServerModified
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberId*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberId
+  name: AuthorMemberId
+  nameWithType: LegalHoldHeldRevisionMetadata.AuthorMemberId
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberId
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberStatus*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberStatus
+  name: AuthorMemberStatus
+  nameWithType: LegalHoldHeldRevisionMetadata.AuthorMemberStatus
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorMemberStatus
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorEmail*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorEmail
+  name: AuthorEmail
+  nameWithType: LegalHoldHeldRevisionMetadata.AuthorEmail
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.AuthorEmail
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.FileType*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.FileType
+  name: FileType
+  nameWithType: LegalHoldHeldRevisionMetadata.FileType
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.FileType
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.Size*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.Size
+  name: Size
+  nameWithType: LegalHoldHeldRevisionMetadata.Size
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.Size
+- uid: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ContentHash*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ContentHash
+  name: ContentHash
+  nameWithType: LegalHoldHeldRevisionMetadata.ContentHash
+  fullName: Dropbox.Api.Team.LegalHoldHeldRevisionMetadata.ContentHash

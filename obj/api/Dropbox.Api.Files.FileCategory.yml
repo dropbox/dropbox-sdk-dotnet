@@ -1,0 +1,1419 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.FileCategory
+  commentId: T:Dropbox.Api.Files.FileCategory
+  id: FileCategory
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.FileCategory.#ctor
+  - Dropbox.Api.Files.FileCategory.AsAudio
+  - Dropbox.Api.Files.FileCategory.AsDocument
+  - Dropbox.Api.Files.FileCategory.AsFolder
+  - Dropbox.Api.Files.FileCategory.AsImage
+  - Dropbox.Api.Files.FileCategory.AsOther
+  - Dropbox.Api.Files.FileCategory.AsOthers
+  - Dropbox.Api.Files.FileCategory.AsPaper
+  - Dropbox.Api.Files.FileCategory.AsPdf
+  - Dropbox.Api.Files.FileCategory.AsPresentation
+  - Dropbox.Api.Files.FileCategory.AsSpreadsheet
+  - Dropbox.Api.Files.FileCategory.AsVideo
+  - Dropbox.Api.Files.FileCategory.IsAudio
+  - Dropbox.Api.Files.FileCategory.IsDocument
+  - Dropbox.Api.Files.FileCategory.IsFolder
+  - Dropbox.Api.Files.FileCategory.IsImage
+  - Dropbox.Api.Files.FileCategory.IsOther
+  - Dropbox.Api.Files.FileCategory.IsOthers
+  - Dropbox.Api.Files.FileCategory.IsPaper
+  - Dropbox.Api.Files.FileCategory.IsPdf
+  - Dropbox.Api.Files.FileCategory.IsPresentation
+  - Dropbox.Api.Files.FileCategory.IsSpreadsheet
+  - Dropbox.Api.Files.FileCategory.IsVideo
+  langs:
+  - csharp
+  - vb
+  name: FileCategory
+  nameWithType: FileCategory
+  fullName: Dropbox.Api.Files.FileCategory
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FileCategory
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The file category object</p>\n"
+  example: []
+  syntax:
+    content: public class FileCategory
+    content.vb: Public Class FileCategory
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.FileCategory.Audio
+  - Dropbox.Api.Files.FileCategory.Document
+  - Dropbox.Api.Files.FileCategory.Folder
+  - Dropbox.Api.Files.FileCategory.Image
+  - Dropbox.Api.Files.FileCategory.Other
+  - Dropbox.Api.Files.FileCategory.Others
+  - Dropbox.Api.Files.FileCategory.Paper
+  - Dropbox.Api.Files.FileCategory.Pdf
+  - Dropbox.Api.Files.FileCategory.Presentation
+  - Dropbox.Api.Files.FileCategory.Spreadsheet
+  - Dropbox.Api.Files.FileCategory.Video
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.FileCategory.#ctor
+  commentId: M:Dropbox.Api.Files.FileCategory.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: FileCategory()
+  nameWithType: FileCategory.FileCategory()
+  fullName: Dropbox.Api.Files.FileCategory.FileCategory()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.FileCategory\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FileCategory()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.FileCategory.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.FileCategory.IsImage
+  commentId: P:Dropbox.Api.Files.FileCategory.IsImage
+  id: IsImage
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: IsImage
+  nameWithType: FileCategory.IsImage
+  fullName: Dropbox.Api.Files.FileCategory.IsImage
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsImage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Image</p>\n"
+  example: []
+  syntax:
+    content: public bool IsImage { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsImage As Boolean
+  overload: Dropbox.Api.Files.FileCategory.IsImage*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.AsImage
+  commentId: P:Dropbox.Api.Files.FileCategory.AsImage
+  id: AsImage
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: AsImage
+  nameWithType: FileCategory.AsImage
+  fullName: Dropbox.Api.Files.FileCategory.AsImage
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsImage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Image, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileCategory.Image AsImage { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileCategory.Image
+    content.vb: Public ReadOnly Property AsImage As FileCategory.Image
+  overload: Dropbox.Api.Files.FileCategory.AsImage*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.IsDocument
+  commentId: P:Dropbox.Api.Files.FileCategory.IsDocument
+  id: IsDocument
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: IsDocument
+  nameWithType: FileCategory.IsDocument
+  fullName: Dropbox.Api.Files.FileCategory.IsDocument
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDocument
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Document</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDocument { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDocument As Boolean
+  overload: Dropbox.Api.Files.FileCategory.IsDocument*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.AsDocument
+  commentId: P:Dropbox.Api.Files.FileCategory.AsDocument
+  id: AsDocument
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: AsDocument
+  nameWithType: FileCategory.AsDocument
+  fullName: Dropbox.Api.Files.FileCategory.AsDocument
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDocument
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Document, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileCategory.Document AsDocument { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileCategory.Document
+    content.vb: Public ReadOnly Property AsDocument As FileCategory.Document
+  overload: Dropbox.Api.Files.FileCategory.AsDocument*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.IsPdf
+  commentId: P:Dropbox.Api.Files.FileCategory.IsPdf
+  id: IsPdf
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: IsPdf
+  nameWithType: FileCategory.IsPdf
+  fullName: Dropbox.Api.Files.FileCategory.IsPdf
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPdf
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Pdf</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPdf { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPdf As Boolean
+  overload: Dropbox.Api.Files.FileCategory.IsPdf*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.AsPdf
+  commentId: P:Dropbox.Api.Files.FileCategory.AsPdf
+  id: AsPdf
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: AsPdf
+  nameWithType: FileCategory.AsPdf
+  fullName: Dropbox.Api.Files.FileCategory.AsPdf
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPdf
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Pdf, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileCategory.Pdf AsPdf { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileCategory.Pdf
+    content.vb: Public ReadOnly Property AsPdf As FileCategory.Pdf
+  overload: Dropbox.Api.Files.FileCategory.AsPdf*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.IsSpreadsheet
+  commentId: P:Dropbox.Api.Files.FileCategory.IsSpreadsheet
+  id: IsSpreadsheet
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: IsSpreadsheet
+  nameWithType: FileCategory.IsSpreadsheet
+  fullName: Dropbox.Api.Files.FileCategory.IsSpreadsheet
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSpreadsheet
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Spreadsheet</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSpreadsheet { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSpreadsheet As Boolean
+  overload: Dropbox.Api.Files.FileCategory.IsSpreadsheet*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.AsSpreadsheet
+  commentId: P:Dropbox.Api.Files.FileCategory.AsSpreadsheet
+  id: AsSpreadsheet
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: AsSpreadsheet
+  nameWithType: FileCategory.AsSpreadsheet
+  fullName: Dropbox.Api.Files.FileCategory.AsSpreadsheet
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSpreadsheet
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Spreadsheet, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileCategory.Spreadsheet AsSpreadsheet { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileCategory.Spreadsheet
+    content.vb: Public ReadOnly Property AsSpreadsheet As FileCategory.Spreadsheet
+  overload: Dropbox.Api.Files.FileCategory.AsSpreadsheet*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.IsPresentation
+  commentId: P:Dropbox.Api.Files.FileCategory.IsPresentation
+  id: IsPresentation
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: IsPresentation
+  nameWithType: FileCategory.IsPresentation
+  fullName: Dropbox.Api.Files.FileCategory.IsPresentation
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPresentation
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Presentation</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPresentation { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPresentation As Boolean
+  overload: Dropbox.Api.Files.FileCategory.IsPresentation*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.AsPresentation
+  commentId: P:Dropbox.Api.Files.FileCategory.AsPresentation
+  id: AsPresentation
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: AsPresentation
+  nameWithType: FileCategory.AsPresentation
+  fullName: Dropbox.Api.Files.FileCategory.AsPresentation
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPresentation
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Presentation, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileCategory.Presentation AsPresentation { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileCategory.Presentation
+    content.vb: Public ReadOnly Property AsPresentation As FileCategory.Presentation
+  overload: Dropbox.Api.Files.FileCategory.AsPresentation*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.IsAudio
+  commentId: P:Dropbox.Api.Files.FileCategory.IsAudio
+  id: IsAudio
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: IsAudio
+  nameWithType: FileCategory.IsAudio
+  fullName: Dropbox.Api.Files.FileCategory.IsAudio
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAudio
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 149
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Audio</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAudio { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAudio As Boolean
+  overload: Dropbox.Api.Files.FileCategory.IsAudio*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.AsAudio
+  commentId: P:Dropbox.Api.Files.FileCategory.AsAudio
+  id: AsAudio
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: AsAudio
+  nameWithType: FileCategory.AsAudio
+  fullName: Dropbox.Api.Files.FileCategory.AsAudio
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAudio
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 160
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Audio, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileCategory.Audio AsAudio { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileCategory.Audio
+    content.vb: Public ReadOnly Property AsAudio As FileCategory.Audio
+  overload: Dropbox.Api.Files.FileCategory.AsAudio*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.IsVideo
+  commentId: P:Dropbox.Api.Files.FileCategory.IsVideo
+  id: IsVideo
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: IsVideo
+  nameWithType: FileCategory.IsVideo
+  fullName: Dropbox.Api.Files.FileCategory.IsVideo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsVideo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 171
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Video</p>\n"
+  example: []
+  syntax:
+    content: public bool IsVideo { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsVideo As Boolean
+  overload: Dropbox.Api.Files.FileCategory.IsVideo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.AsVideo
+  commentId: P:Dropbox.Api.Files.FileCategory.AsVideo
+  id: AsVideo
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: AsVideo
+  nameWithType: FileCategory.AsVideo
+  fullName: Dropbox.Api.Files.FileCategory.AsVideo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsVideo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 182
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Video, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileCategory.Video AsVideo { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileCategory.Video
+    content.vb: Public ReadOnly Property AsVideo As FileCategory.Video
+  overload: Dropbox.Api.Files.FileCategory.AsVideo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.IsFolder
+  commentId: P:Dropbox.Api.Files.FileCategory.IsFolder
+  id: IsFolder
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: IsFolder
+  nameWithType: FileCategory.IsFolder
+  fullName: Dropbox.Api.Files.FileCategory.IsFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 193
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Folder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFolder As Boolean
+  overload: Dropbox.Api.Files.FileCategory.IsFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.AsFolder
+  commentId: P:Dropbox.Api.Files.FileCategory.AsFolder
+  id: AsFolder
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: AsFolder
+  nameWithType: FileCategory.AsFolder
+  fullName: Dropbox.Api.Files.FileCategory.AsFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 204
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Folder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileCategory.Folder AsFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileCategory.Folder
+    content.vb: Public ReadOnly Property AsFolder As FileCategory.Folder
+  overload: Dropbox.Api.Files.FileCategory.AsFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.IsPaper
+  commentId: P:Dropbox.Api.Files.FileCategory.IsPaper
+  id: IsPaper
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: IsPaper
+  nameWithType: FileCategory.IsPaper
+  fullName: Dropbox.Api.Files.FileCategory.IsPaper
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPaper
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 215
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Paper</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPaper { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPaper As Boolean
+  overload: Dropbox.Api.Files.FileCategory.IsPaper*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.AsPaper
+  commentId: P:Dropbox.Api.Files.FileCategory.AsPaper
+  id: AsPaper
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: AsPaper
+  nameWithType: FileCategory.AsPaper
+  fullName: Dropbox.Api.Files.FileCategory.AsPaper
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPaper
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 226
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Paper, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileCategory.Paper AsPaper { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileCategory.Paper
+    content.vb: Public ReadOnly Property AsPaper As FileCategory.Paper
+  overload: Dropbox.Api.Files.FileCategory.AsPaper*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.IsOthers
+  commentId: P:Dropbox.Api.Files.FileCategory.IsOthers
+  id: IsOthers
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: IsOthers
+  nameWithType: FileCategory.IsOthers
+  fullName: Dropbox.Api.Files.FileCategory.IsOthers
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOthers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 237
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Others</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOthers { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOthers As Boolean
+  overload: Dropbox.Api.Files.FileCategory.IsOthers*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.AsOthers
+  commentId: P:Dropbox.Api.Files.FileCategory.AsOthers
+  id: AsOthers
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: AsOthers
+  nameWithType: FileCategory.AsOthers
+  fullName: Dropbox.Api.Files.FileCategory.AsOthers
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOthers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 248
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Others, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileCategory.Others AsOthers { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileCategory.Others
+    content.vb: Public ReadOnly Property AsOthers As FileCategory.Others
+  overload: Dropbox.Api.Files.FileCategory.AsOthers*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.IsOther
+  commentId: P:Dropbox.Api.Files.FileCategory.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: FileCategory.IsOther
+  fullName: Dropbox.Api.Files.FileCategory.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 259
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.FileCategory.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.FileCategory.AsOther
+  commentId: P:Dropbox.Api.Files.FileCategory.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.FileCategory
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: FileCategory.AsOther
+  fullName: Dropbox.Api.Files.FileCategory.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileCategory.cs
+    startLine: 270
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileCategory.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileCategory.Other
+    content.vb: Public ReadOnly Property AsOther As FileCategory.Other
+  overload: Dropbox.Api.Files.FileCategory.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.FileCategory
+  commentId: T:Dropbox.Api.Files.FileCategory
+  parent: Dropbox.Api.Files
+  name: FileCategory
+  nameWithType: FileCategory
+  fullName: Dropbox.Api.Files.FileCategory
+- uid: Dropbox.Api.Files.FileCategory.#ctor*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.#ctor
+  name: FileCategory
+  nameWithType: FileCategory.FileCategory
+  fullName: Dropbox.Api.Files.FileCategory.FileCategory
+- uid: Dropbox.Api.Files.FileCategory.IsImage*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.IsImage
+  name: IsImage
+  nameWithType: FileCategory.IsImage
+  fullName: Dropbox.Api.Files.FileCategory.IsImage
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.FileCategory.AsImage*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.AsImage
+  name: AsImage
+  nameWithType: FileCategory.AsImage
+  fullName: Dropbox.Api.Files.FileCategory.AsImage
+- uid: Dropbox.Api.Files.FileCategory.Image
+  commentId: T:Dropbox.Api.Files.FileCategory.Image
+  parent: Dropbox.Api.Files
+  name: FileCategory.Image
+  nameWithType: FileCategory.Image
+  fullName: Dropbox.Api.Files.FileCategory.Image
+- uid: Dropbox.Api.Files.FileCategory.IsDocument*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.IsDocument
+  name: IsDocument
+  nameWithType: FileCategory.IsDocument
+  fullName: Dropbox.Api.Files.FileCategory.IsDocument
+- uid: Dropbox.Api.Files.FileCategory.AsDocument*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.AsDocument
+  name: AsDocument
+  nameWithType: FileCategory.AsDocument
+  fullName: Dropbox.Api.Files.FileCategory.AsDocument
+- uid: Dropbox.Api.Files.FileCategory.Document
+  commentId: T:Dropbox.Api.Files.FileCategory.Document
+  parent: Dropbox.Api.Files
+  name: FileCategory.Document
+  nameWithType: FileCategory.Document
+  fullName: Dropbox.Api.Files.FileCategory.Document
+- uid: Dropbox.Api.Files.FileCategory.IsPdf*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.IsPdf
+  name: IsPdf
+  nameWithType: FileCategory.IsPdf
+  fullName: Dropbox.Api.Files.FileCategory.IsPdf
+- uid: Dropbox.Api.Files.FileCategory.AsPdf*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.AsPdf
+  name: AsPdf
+  nameWithType: FileCategory.AsPdf
+  fullName: Dropbox.Api.Files.FileCategory.AsPdf
+- uid: Dropbox.Api.Files.FileCategory.Pdf
+  commentId: T:Dropbox.Api.Files.FileCategory.Pdf
+  parent: Dropbox.Api.Files
+  name: FileCategory.Pdf
+  nameWithType: FileCategory.Pdf
+  fullName: Dropbox.Api.Files.FileCategory.Pdf
+- uid: Dropbox.Api.Files.FileCategory.IsSpreadsheet*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.IsSpreadsheet
+  name: IsSpreadsheet
+  nameWithType: FileCategory.IsSpreadsheet
+  fullName: Dropbox.Api.Files.FileCategory.IsSpreadsheet
+- uid: Dropbox.Api.Files.FileCategory.AsSpreadsheet*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.AsSpreadsheet
+  name: AsSpreadsheet
+  nameWithType: FileCategory.AsSpreadsheet
+  fullName: Dropbox.Api.Files.FileCategory.AsSpreadsheet
+- uid: Dropbox.Api.Files.FileCategory.Spreadsheet
+  commentId: T:Dropbox.Api.Files.FileCategory.Spreadsheet
+  parent: Dropbox.Api.Files
+  name: FileCategory.Spreadsheet
+  nameWithType: FileCategory.Spreadsheet
+  fullName: Dropbox.Api.Files.FileCategory.Spreadsheet
+- uid: Dropbox.Api.Files.FileCategory.IsPresentation*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.IsPresentation
+  name: IsPresentation
+  nameWithType: FileCategory.IsPresentation
+  fullName: Dropbox.Api.Files.FileCategory.IsPresentation
+- uid: Dropbox.Api.Files.FileCategory.AsPresentation*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.AsPresentation
+  name: AsPresentation
+  nameWithType: FileCategory.AsPresentation
+  fullName: Dropbox.Api.Files.FileCategory.AsPresentation
+- uid: Dropbox.Api.Files.FileCategory.Presentation
+  commentId: T:Dropbox.Api.Files.FileCategory.Presentation
+  parent: Dropbox.Api.Files
+  name: FileCategory.Presentation
+  nameWithType: FileCategory.Presentation
+  fullName: Dropbox.Api.Files.FileCategory.Presentation
+- uid: Dropbox.Api.Files.FileCategory.IsAudio*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.IsAudio
+  name: IsAudio
+  nameWithType: FileCategory.IsAudio
+  fullName: Dropbox.Api.Files.FileCategory.IsAudio
+- uid: Dropbox.Api.Files.FileCategory.AsAudio*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.AsAudio
+  name: AsAudio
+  nameWithType: FileCategory.AsAudio
+  fullName: Dropbox.Api.Files.FileCategory.AsAudio
+- uid: Dropbox.Api.Files.FileCategory.Audio
+  commentId: T:Dropbox.Api.Files.FileCategory.Audio
+  parent: Dropbox.Api.Files
+  name: FileCategory.Audio
+  nameWithType: FileCategory.Audio
+  fullName: Dropbox.Api.Files.FileCategory.Audio
+- uid: Dropbox.Api.Files.FileCategory.IsVideo*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.IsVideo
+  name: IsVideo
+  nameWithType: FileCategory.IsVideo
+  fullName: Dropbox.Api.Files.FileCategory.IsVideo
+- uid: Dropbox.Api.Files.FileCategory.AsVideo*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.AsVideo
+  name: AsVideo
+  nameWithType: FileCategory.AsVideo
+  fullName: Dropbox.Api.Files.FileCategory.AsVideo
+- uid: Dropbox.Api.Files.FileCategory.Video
+  commentId: T:Dropbox.Api.Files.FileCategory.Video
+  parent: Dropbox.Api.Files
+  name: FileCategory.Video
+  nameWithType: FileCategory.Video
+  fullName: Dropbox.Api.Files.FileCategory.Video
+- uid: Dropbox.Api.Files.FileCategory.IsFolder*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.IsFolder
+  name: IsFolder
+  nameWithType: FileCategory.IsFolder
+  fullName: Dropbox.Api.Files.FileCategory.IsFolder
+- uid: Dropbox.Api.Files.FileCategory.AsFolder*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.AsFolder
+  name: AsFolder
+  nameWithType: FileCategory.AsFolder
+  fullName: Dropbox.Api.Files.FileCategory.AsFolder
+- uid: Dropbox.Api.Files.FileCategory.Folder
+  commentId: T:Dropbox.Api.Files.FileCategory.Folder
+  parent: Dropbox.Api.Files
+  name: FileCategory.Folder
+  nameWithType: FileCategory.Folder
+  fullName: Dropbox.Api.Files.FileCategory.Folder
+- uid: Dropbox.Api.Files.FileCategory.IsPaper*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.IsPaper
+  name: IsPaper
+  nameWithType: FileCategory.IsPaper
+  fullName: Dropbox.Api.Files.FileCategory.IsPaper
+- uid: Dropbox.Api.Files.FileCategory.AsPaper*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.AsPaper
+  name: AsPaper
+  nameWithType: FileCategory.AsPaper
+  fullName: Dropbox.Api.Files.FileCategory.AsPaper
+- uid: Dropbox.Api.Files.FileCategory.Paper
+  commentId: T:Dropbox.Api.Files.FileCategory.Paper
+  parent: Dropbox.Api.Files
+  name: FileCategory.Paper
+  nameWithType: FileCategory.Paper
+  fullName: Dropbox.Api.Files.FileCategory.Paper
+- uid: Dropbox.Api.Files.FileCategory.IsOthers*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.IsOthers
+  name: IsOthers
+  nameWithType: FileCategory.IsOthers
+  fullName: Dropbox.Api.Files.FileCategory.IsOthers
+- uid: Dropbox.Api.Files.FileCategory.AsOthers*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.AsOthers
+  name: AsOthers
+  nameWithType: FileCategory.AsOthers
+  fullName: Dropbox.Api.Files.FileCategory.AsOthers
+- uid: Dropbox.Api.Files.FileCategory.Others
+  commentId: T:Dropbox.Api.Files.FileCategory.Others
+  parent: Dropbox.Api.Files
+  name: FileCategory.Others
+  nameWithType: FileCategory.Others
+  fullName: Dropbox.Api.Files.FileCategory.Others
+- uid: Dropbox.Api.Files.FileCategory.IsOther*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.IsOther
+  name: IsOther
+  nameWithType: FileCategory.IsOther
+  fullName: Dropbox.Api.Files.FileCategory.IsOther
+- uid: Dropbox.Api.Files.FileCategory.AsOther*
+  commentId: Overload:Dropbox.Api.Files.FileCategory.AsOther
+  name: AsOther
+  nameWithType: FileCategory.AsOther
+  fullName: Dropbox.Api.Files.FileCategory.AsOther
+- uid: Dropbox.Api.Files.FileCategory.Other
+  commentId: T:Dropbox.Api.Files.FileCategory.Other
+  parent: Dropbox.Api.Files
+  name: FileCategory.Other
+  nameWithType: FileCategory.Other
+  fullName: Dropbox.Api.Files.FileCategory.Other

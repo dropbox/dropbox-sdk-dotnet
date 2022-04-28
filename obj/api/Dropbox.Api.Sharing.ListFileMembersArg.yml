@@ -1,0 +1,785 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListFileMembersArg
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersArg
+  id: ListFileMembersArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListFileMembersArg.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberAction},System.Boolean,System.UInt32)
+  - Dropbox.Api.Sharing.ListFileMembersArg.Actions
+  - Dropbox.Api.Sharing.ListFileMembersArg.File
+  - Dropbox.Api.Sharing.ListFileMembersArg.IncludeInherited
+  - Dropbox.Api.Sharing.ListFileMembersArg.Limit
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersArg
+  nameWithType: ListFileMembersArg
+  fullName: Dropbox.Api.Sharing.ListFileMembersArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ListFileMembersArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Arguments for <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync(Dropbox.Api.Sharing.ListFileMembersArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public class ListFileMembersArg
+    content.vb: Public Class ListFileMembersArg
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ListFileMembersArg.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberAction},System.Boolean,System.UInt32)
+  commentId: M:Dropbox.Api.Sharing.ListFileMembersArg.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberAction},System.Boolean,System.UInt32)
+  id: '#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberAction},System.Boolean,System.UInt32)'
+  parent: Dropbox.Api.Sharing.ListFileMembersArg
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersArg(String, IEnumerable<MemberAction>, Boolean, UInt32)
+  nameWithType: ListFileMembersArg.ListFileMembersArg(String, IEnumerable<MemberAction>, Boolean, UInt32)
+  fullName: Dropbox.Api.Sharing.ListFileMembersArg.ListFileMembersArg(System.String, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.MemberAction>, System.Boolean, System.UInt32)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersArg.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFileMembersArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileMembersArg(string file, IEnumerable<MemberAction> actions = null, bool includeInherited = true, uint limit = 100U)
+    parameters:
+    - id: file
+      type: System.String
+      description: The file for which you want to see members.
+    - id: actions
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberAction}
+      description: >-
+        The actions for which to return permissions on a
+
+        member.
+    - id: includeInherited
+      type: System.Boolean
+      description: >-
+        Whether to include members who only have access from
+
+        a parent shared folder.
+    - id: limit
+      type: System.UInt32
+      description: >-
+        Number of members to return max per query. Defaults to 100 if
+
+        no limit is specified.
+    content.vb: Public Sub New(file As String, actions As IEnumerable(Of MemberAction) = Nothing, includeInherited As Boolean = True, limit As UInteger = 100UI)
+  overload: Dropbox.Api.Sharing.ListFileMembersArg.#ctor*
+  nameWithType.vb: ListFileMembersArg.ListFileMembersArg(String, IEnumerable(Of MemberAction), Boolean, UInt32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.ListFileMembersArg.ListFileMembersArg(System.String, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.MemberAction), System.Boolean, System.UInt32)
+  name.vb: ListFileMembersArg(String, IEnumerable(Of MemberAction), Boolean, UInt32)
+- uid: Dropbox.Api.Sharing.ListFileMembersArg.File
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersArg.File
+  id: File
+  parent: Dropbox.Api.Sharing.ListFileMembersArg
+  langs:
+  - csharp
+  - vb
+  name: File
+  nameWithType: ListFileMembersArg.File
+  fullName: Dropbox.Api.Sharing.ListFileMembersArg.File
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: File
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersArg.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The file for which you want to see members.</p>\n"
+  example: []
+  syntax:
+    content: public string File { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property File As String
+  overload: Dropbox.Api.Sharing.ListFileMembersArg.File*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.ListFileMembersArg.Actions
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersArg.Actions
+  id: Actions
+  parent: Dropbox.Api.Sharing.ListFileMembersArg
+  langs:
+  - csharp
+  - vb
+  name: Actions
+  nameWithType: ListFileMembersArg.Actions
+  fullName: Dropbox.Api.Sharing.ListFileMembersArg.Actions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Actions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersArg.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The actions for which to return permissions on a member.</p>\n"
+  example: []
+  syntax:
+    content: public IList<MemberAction> Actions { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.MemberAction}
+    content.vb: Public Property Actions As IList(Of MemberAction)
+  overload: Dropbox.Api.Sharing.ListFileMembersArg.Actions*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.ListFileMembersArg.IncludeInherited
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersArg.IncludeInherited
+  id: IncludeInherited
+  parent: Dropbox.Api.Sharing.ListFileMembersArg
+  langs:
+  - csharp
+  - vb
+  name: IncludeInherited
+  nameWithType: ListFileMembersArg.IncludeInherited
+  fullName: Dropbox.Api.Sharing.ListFileMembersArg.IncludeInherited
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IncludeInherited
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersArg.cs
+    startLine: 103
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether to include members who only have access from a parent shared\nfolder.</p>\n"
+  example: []
+  syntax:
+    content: public bool IncludeInherited { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IncludeInherited As Boolean
+  overload: Dropbox.Api.Sharing.ListFileMembersArg.IncludeInherited*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.ListFileMembersArg.Limit
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersArg.Limit
+  id: Limit
+  parent: Dropbox.Api.Sharing.ListFileMembersArg
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: ListFileMembersArg.Limit
+  fullName: Dropbox.Api.Sharing.ListFileMembersArg.Limit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Limit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersArg.cs
+    startLine: 109
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Number of members to return max per query. Defaults to 100 if no limit is\nspecified.</p>\n"
+  example: []
+  syntax:
+    content: public uint Limit { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property Limit As UInteger
+  overload: Dropbox.Api.Sharing.ListFileMembersArg.Limit*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync(Dropbox.Api.Sharing.ListFileMembersArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync(Dropbox.Api.Sharing.ListFileMembersArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.ListFileMembersArg
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersArg
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersArg
+  nameWithType: ListFileMembersArg
+  fullName: Dropbox.Api.Sharing.ListFileMembersArg
+- uid: Dropbox.Api.Sharing.ListFileMembersArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersArg.#ctor
+  name: ListFileMembersArg
+  nameWithType: ListFileMembersArg.ListFileMembersArg
+  fullName: Dropbox.Api.Sharing.ListFileMembersArg.ListFileMembersArg
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberAction}
+  commentId: T:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberAction}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<MemberAction>
+  nameWithType: IEnumerable<MemberAction>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.MemberAction>
+  nameWithType.vb: IEnumerable(Of MemberAction)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.MemberAction)
+  name.vb: IEnumerable(Of MemberAction)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.MemberAction
+    name: MemberAction
+    nameWithType: MemberAction
+    fullName: Dropbox.Api.Sharing.MemberAction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.MemberAction
+    name: MemberAction
+    nameWithType: MemberAction
+    fullName: Dropbox.Api.Sharing.MemberAction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Dropbox.Api.Sharing.ListFileMembersArg.File*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersArg.File
+  name: File
+  nameWithType: ListFileMembersArg.File
+  fullName: Dropbox.Api.Sharing.ListFileMembersArg.File
+- uid: Dropbox.Api.Sharing.ListFileMembersArg.Actions*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersArg.Actions
+  name: Actions
+  nameWithType: ListFileMembersArg.Actions
+  fullName: Dropbox.Api.Sharing.ListFileMembersArg.Actions
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.MemberAction}
+  commentId: T:System.Collections.Generic.IList{Dropbox.Api.Sharing.MemberAction}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<MemberAction>
+  nameWithType: IList<MemberAction>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.MemberAction>
+  nameWithType.vb: IList(Of MemberAction)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.MemberAction)
+  name.vb: IList(Of MemberAction)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.MemberAction
+    name: MemberAction
+    nameWithType: MemberAction
+    fullName: Dropbox.Api.Sharing.MemberAction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.MemberAction
+    name: MemberAction
+    nameWithType: MemberAction
+    fullName: Dropbox.Api.Sharing.MemberAction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.ListFileMembersArg.IncludeInherited*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersArg.IncludeInherited
+  name: IncludeInherited
+  nameWithType: ListFileMembersArg.IncludeInherited
+  fullName: Dropbox.Api.Sharing.ListFileMembersArg.IncludeInherited
+- uid: Dropbox.Api.Sharing.ListFileMembersArg.Limit*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersArg.Limit
+  name: Limit
+  nameWithType: ListFileMembersArg.Limit
+  fullName: Dropbox.Api.Sharing.ListFileMembersArg.Limit

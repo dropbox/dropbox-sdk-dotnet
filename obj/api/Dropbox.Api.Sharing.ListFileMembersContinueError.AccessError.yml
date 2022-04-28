@@ -1,0 +1,508 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError
+  id: ListFileMembersContinueError.AccessError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.#ctor(Dropbox.Api.Sharing.SharingFileAccessError)
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.Value
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersContinueError.AccessError
+  nameWithType: ListFileMembersContinueError.AccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+    startLine: 311
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The access error object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class AccessError : ListFileMembersContinueError'
+    content.vb: >-
+      Public NotInheritable Class AccessError
+          Inherits ListFileMembersContinueError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.ListFileMembersContinueError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.IsUserError
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.AsUserError
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.IsAccessError
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.AsAccessError
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.IsInvalidCursor
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.AsInvalidCursor
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.IsOther
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.#ctor(Dropbox.Api.Sharing.SharingFileAccessError)
+  commentId: M:Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.#ctor(Dropbox.Api.Sharing.SharingFileAccessError)
+  id: '#ctor(Dropbox.Api.Sharing.SharingFileAccessError)'
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError
+  langs:
+  - csharp
+  - vb
+  name: AccessError(SharingFileAccessError)
+  nameWithType: ListFileMembersContinueError.AccessError.AccessError(SharingFileAccessError)
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.AccessError(Dropbox.Api.Sharing.SharingFileAccessError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+    startLine: 330
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AccessError(SharingFileAccessError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Sharing.SharingFileAccessError
+      description: The value
+    content.vb: Public Sub New(value As SharingFileAccessError)
+  overload: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.Value
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ListFileMembersContinueError.AccessError.Value
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+    startLine: 345
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public SharingFileAccessError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharingFileAccessError
+    content.vb: Public ReadOnly Property Value As SharingFileAccessError
+  overload: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersContinueError
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersContinueError
+  nameWithType: ListFileMembersContinueError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.IsUserError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.IsUserError
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  name: IsUserError
+  nameWithType: ListFileMembersContinueError.IsUserError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.IsUserError
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AsUserError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.AsUserError
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  name: AsUserError
+  nameWithType: ListFileMembersContinueError.AsUserError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AsUserError
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.IsAccessError
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  name: IsAccessError
+  nameWithType: ListFileMembersContinueError.IsAccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.IsAccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.AsAccessError
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  name: AsAccessError
+  nameWithType: ListFileMembersContinueError.AsAccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AsAccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.IsInvalidCursor
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.IsInvalidCursor
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  name: IsInvalidCursor
+  nameWithType: ListFileMembersContinueError.IsInvalidCursor
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.IsInvalidCursor
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AsInvalidCursor
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.AsInvalidCursor
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  name: AsInvalidCursor
+  nameWithType: ListFileMembersContinueError.AsInvalidCursor
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AsInvalidCursor
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.IsOther
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.IsOther
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  name: IsOther
+  nameWithType: ListFileMembersContinueError.IsOther
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.IsOther
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AsOther
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.AsOther
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  name: AsOther
+  nameWithType: ListFileMembersContinueError.AsOther
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersContinueError.AccessError
+  nameWithType: ListFileMembersContinueError.AccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.#ctor
+  name: AccessError
+  nameWithType: ListFileMembersContinueError.AccessError.AccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.AccessError
+- uid: Dropbox.Api.Sharing.SharingFileAccessError
+  commentId: T:Dropbox.Api.Sharing.SharingFileAccessError
+  parent: Dropbox.Api.Sharing
+  name: SharingFileAccessError
+  nameWithType: SharingFileAccessError
+  fullName: Dropbox.Api.Sharing.SharingFileAccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.Value*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.Value
+  name: Value
+  nameWithType: ListFileMembersContinueError.AccessError.Value
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError.Value

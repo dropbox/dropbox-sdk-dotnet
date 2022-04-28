@@ -1,0 +1,1233 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestError
+  id: DeleteFileRequestError
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.#ctor
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.AsAppLacksAccess
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.AsDisabledForTeam
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.AsEmailUnverified
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.AsFileRequestOpen
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.AsNoPermission
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotAFolder
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotFound
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.AsOther
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.AsValidationError
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.IsAppLacksAccess
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.IsDisabledForTeam
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.IsEmailUnverified
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.IsFileRequestOpen
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.IsNoPermission
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotAFolder
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotFound
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.IsOther
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.IsValidationError
+  langs:
+  - csharp
+  - vb
+  name: DeleteFileRequestError
+  nameWithType: DeleteFileRequestError
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: DeleteFileRequestError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>There was an error deleting these file requests.</p>\n"
+  example: []
+  syntax:
+    content: public class DeleteFileRequestError
+    content.vb: Public Class DeleteFileRequestError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.AppLacksAccess
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.DisabledForTeam
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.EmailUnverified
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.FileRequestOpen
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.NoPermission
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.NotAFolder
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.NotFound
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.Other
+  - Dropbox.Api.FileRequests.DeleteFileRequestError.ValidationError
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.#ctor
+  commentId: M:Dropbox.Api.FileRequests.DeleteFileRequestError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: DeleteFileRequestError()
+  nameWithType: DeleteFileRequestError.DeleteFileRequestError()
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.DeleteFileRequestError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.DeleteFileRequestError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteFileRequestError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsFileRequestOpen
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.IsFileRequestOpen
+  id: IsFileRequestOpen
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsFileRequestOpen
+  nameWithType: DeleteFileRequestError.IsFileRequestOpen
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsFileRequestOpen
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsFileRequestOpen
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is FileRequestOpen</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFileRequestOpen { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFileRequestOpen As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.IsFileRequestOpen*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsFileRequestOpen
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.AsFileRequestOpen
+  id: AsFileRequestOpen
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsFileRequestOpen
+  nameWithType: DeleteFileRequestError.AsFileRequestOpen
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsFileRequestOpen
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsFileRequestOpen
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a FileRequestOpen, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteFileRequestError.FileRequestOpen AsFileRequestOpen { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteFileRequestError.FileRequestOpen
+    content.vb: Public ReadOnly Property AsFileRequestOpen As DeleteFileRequestError.FileRequestOpen
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.AsFileRequestOpen*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotFound
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotFound
+  id: IsNotFound
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsNotFound
+  nameWithType: DeleteFileRequestError.IsNotFound
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is NotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotFound As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotFound
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotFound
+  id: AsNotFound
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsNotFound
+  nameWithType: DeleteFileRequestError.AsNotFound
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a NotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteFileRequestError.NotFound AsNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteFileRequestError.NotFound
+    content.vb: Public ReadOnly Property AsNotFound As DeleteFileRequestError.NotFound
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotAFolder
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotAFolder
+  id: IsNotAFolder
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsNotAFolder
+  nameWithType: DeleteFileRequestError.IsNotAFolder
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotAFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNotAFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is NotAFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotAFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotAFolder As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotAFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotAFolder
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotAFolder
+  id: AsNotAFolder
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsNotAFolder
+  nameWithType: DeleteFileRequestError.AsNotAFolder
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotAFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNotAFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a NotAFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteFileRequestError.NotAFolder AsNotAFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteFileRequestError.NotAFolder
+    content.vb: Public ReadOnly Property AsNotAFolder As DeleteFileRequestError.NotAFolder
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotAFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsAppLacksAccess
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.IsAppLacksAccess
+  id: IsAppLacksAccess
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsAppLacksAccess
+  nameWithType: DeleteFileRequestError.IsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsAppLacksAccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAppLacksAccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is AppLacksAccess</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAppLacksAccess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAppLacksAccess As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.IsAppLacksAccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsAppLacksAccess
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.AsAppLacksAccess
+  id: AsAppLacksAccess
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsAppLacksAccess
+  nameWithType: DeleteFileRequestError.AsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsAppLacksAccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAppLacksAccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a AppLacksAccess, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteFileRequestError.AppLacksAccess AsAppLacksAccess { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteFileRequestError.AppLacksAccess
+    content.vb: Public ReadOnly Property AsAppLacksAccess As DeleteFileRequestError.AppLacksAccess
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.AsAppLacksAccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNoPermission
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.IsNoPermission
+  id: IsNoPermission
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsNoPermission
+  nameWithType: DeleteFileRequestError.IsNoPermission
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNoPermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNoPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is NoPermission</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNoPermission { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNoPermission As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNoPermission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNoPermission
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.AsNoPermission
+  id: AsNoPermission
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsNoPermission
+  nameWithType: DeleteFileRequestError.AsNoPermission
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNoPermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNoPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a NoPermission, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteFileRequestError.NoPermission AsNoPermission { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteFileRequestError.NoPermission
+    content.vb: Public ReadOnly Property AsNoPermission As DeleteFileRequestError.NoPermission
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNoPermission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsEmailUnverified
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.IsEmailUnverified
+  id: IsEmailUnverified
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsEmailUnverified
+  nameWithType: DeleteFileRequestError.IsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsEmailUnverified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsEmailUnverified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 150
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is EmailUnverified</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEmailUnverified { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmailUnverified As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.IsEmailUnverified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsEmailUnverified
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.AsEmailUnverified
+  id: AsEmailUnverified
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsEmailUnverified
+  nameWithType: DeleteFileRequestError.AsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsEmailUnverified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsEmailUnverified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a EmailUnverified, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteFileRequestError.EmailUnverified AsEmailUnverified { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteFileRequestError.EmailUnverified
+    content.vb: Public ReadOnly Property AsEmailUnverified As DeleteFileRequestError.EmailUnverified
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.AsEmailUnverified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsValidationError
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.IsValidationError
+  id: IsValidationError
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsValidationError
+  nameWithType: DeleteFileRequestError.IsValidationError
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsValidationError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsValidationError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 172
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is ValidationError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsValidationError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsValidationError As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.IsValidationError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsValidationError
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.AsValidationError
+  id: AsValidationError
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsValidationError
+  nameWithType: DeleteFileRequestError.AsValidationError
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsValidationError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsValidationError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a ValidationError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteFileRequestError.ValidationError AsValidationError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteFileRequestError.ValidationError
+    content.vb: Public ReadOnly Property AsValidationError As DeleteFileRequestError.ValidationError
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.AsValidationError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.IsDisabledForTeam
+  id: IsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsDisabledForTeam
+  nameWithType: DeleteFileRequestError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsDisabledForTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDisabledForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 194
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is DisabledForTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabledForTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabledForTeam As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.IsDisabledForTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.AsDisabledForTeam
+  id: AsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsDisabledForTeam
+  nameWithType: DeleteFileRequestError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsDisabledForTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDisabledForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 205
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a DisabledForTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteFileRequestError.DisabledForTeam AsDisabledForTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteFileRequestError.DisabledForTeam
+    content.vb: Public ReadOnly Property AsDisabledForTeam As DeleteFileRequestError.DisabledForTeam
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.AsDisabledForTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsOther
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: DeleteFileRequestError.IsOther
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 216
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsOther
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: DeleteFileRequestError.AsOther
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestError.cs
+    startLine: 227
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteFileRequestError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteFileRequestError.Other
+    content.vb: Public ReadOnly Property AsOther As DeleteFileRequestError.Other
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestError
+  parent: Dropbox.Api.FileRequests
+  name: DeleteFileRequestError
+  nameWithType: DeleteFileRequestError
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.#ctor*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.#ctor
+  name: DeleteFileRequestError
+  nameWithType: DeleteFileRequestError.DeleteFileRequestError
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.DeleteFileRequestError
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsFileRequestOpen*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.IsFileRequestOpen
+  name: IsFileRequestOpen
+  nameWithType: DeleteFileRequestError.IsFileRequestOpen
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsFileRequestOpen
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsFileRequestOpen*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.AsFileRequestOpen
+  name: AsFileRequestOpen
+  nameWithType: DeleteFileRequestError.AsFileRequestOpen
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsFileRequestOpen
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.FileRequestOpen
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestError.FileRequestOpen
+  parent: Dropbox.Api.FileRequests
+  name: DeleteFileRequestError.FileRequestOpen
+  nameWithType: DeleteFileRequestError.FileRequestOpen
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.FileRequestOpen
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotFound*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotFound
+  name: IsNotFound
+  nameWithType: DeleteFileRequestError.IsNotFound
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotFound
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotFound*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotFound
+  name: AsNotFound
+  nameWithType: DeleteFileRequestError.AsNotFound
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotFound
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.NotFound
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestError.NotFound
+  parent: Dropbox.Api.FileRequests
+  name: DeleteFileRequestError.NotFound
+  nameWithType: DeleteFileRequestError.NotFound
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.NotFound
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotAFolder*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotAFolder
+  name: IsNotAFolder
+  nameWithType: DeleteFileRequestError.IsNotAFolder
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNotAFolder
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotAFolder*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotAFolder
+  name: AsNotAFolder
+  nameWithType: DeleteFileRequestError.AsNotAFolder
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNotAFolder
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.NotAFolder
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestError.NotAFolder
+  parent: Dropbox.Api.FileRequests
+  name: DeleteFileRequestError.NotAFolder
+  nameWithType: DeleteFileRequestError.NotAFolder
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.NotAFolder
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsAppLacksAccess*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.IsAppLacksAccess
+  name: IsAppLacksAccess
+  nameWithType: DeleteFileRequestError.IsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsAppLacksAccess
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsAppLacksAccess*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.AsAppLacksAccess
+  name: AsAppLacksAccess
+  nameWithType: DeleteFileRequestError.AsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsAppLacksAccess
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AppLacksAccess
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestError.AppLacksAccess
+  parent: Dropbox.Api.FileRequests
+  name: DeleteFileRequestError.AppLacksAccess
+  nameWithType: DeleteFileRequestError.AppLacksAccess
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AppLacksAccess
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNoPermission*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.IsNoPermission
+  name: IsNoPermission
+  nameWithType: DeleteFileRequestError.IsNoPermission
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsNoPermission
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNoPermission*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.AsNoPermission
+  name: AsNoPermission
+  nameWithType: DeleteFileRequestError.AsNoPermission
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsNoPermission
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.NoPermission
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestError.NoPermission
+  parent: Dropbox.Api.FileRequests
+  name: DeleteFileRequestError.NoPermission
+  nameWithType: DeleteFileRequestError.NoPermission
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.NoPermission
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsEmailUnverified*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.IsEmailUnverified
+  name: IsEmailUnverified
+  nameWithType: DeleteFileRequestError.IsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsEmailUnverified
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsEmailUnverified*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.AsEmailUnverified
+  name: AsEmailUnverified
+  nameWithType: DeleteFileRequestError.AsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsEmailUnverified
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.EmailUnverified
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestError.EmailUnverified
+  parent: Dropbox.Api.FileRequests
+  name: DeleteFileRequestError.EmailUnverified
+  nameWithType: DeleteFileRequestError.EmailUnverified
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.EmailUnverified
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsValidationError*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.IsValidationError
+  name: IsValidationError
+  nameWithType: DeleteFileRequestError.IsValidationError
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsValidationError
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsValidationError*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.AsValidationError
+  name: AsValidationError
+  nameWithType: DeleteFileRequestError.AsValidationError
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsValidationError
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.ValidationError
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestError.ValidationError
+  parent: Dropbox.Api.FileRequests
+  name: DeleteFileRequestError.ValidationError
+  nameWithType: DeleteFileRequestError.ValidationError
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.ValidationError
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsDisabledForTeam*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.IsDisabledForTeam
+  name: IsDisabledForTeam
+  nameWithType: DeleteFileRequestError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsDisabledForTeam*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.AsDisabledForTeam
+  name: AsDisabledForTeam
+  nameWithType: DeleteFileRequestError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.DisabledForTeam
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestError.DisabledForTeam
+  parent: Dropbox.Api.FileRequests
+  name: DeleteFileRequestError.DisabledForTeam
+  nameWithType: DeleteFileRequestError.DisabledForTeam
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.DisabledForTeam
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.IsOther*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.IsOther
+  name: IsOther
+  nameWithType: DeleteFileRequestError.IsOther
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.IsOther
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.AsOther*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestError.AsOther
+  name: AsOther
+  nameWithType: DeleteFileRequestError.AsOther
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.AsOther
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError.Other
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestError.Other
+  parent: Dropbox.Api.FileRequests
+  name: DeleteFileRequestError.Other
+  nameWithType: DeleteFileRequestError.Other
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError.Other

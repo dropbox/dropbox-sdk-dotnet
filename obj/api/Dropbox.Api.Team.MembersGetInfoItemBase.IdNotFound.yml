@@ -1,0 +1,473 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound
+  commentId: T:Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound
+  id: MembersGetInfoItemBase.IdNotFound
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.#ctor(System.String)
+  - Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.Value
+  langs:
+  - csharp
+  - vb
+  name: MembersGetInfoItemBase.IdNotFound
+  nameWithType: MembersGetInfoItemBase.IdNotFound
+  fullName: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IdNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemBase.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>An ID that was provided as a parameter to <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoAsync(Dropbox.Api.Team.MembersGetInfoArgs)\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoV2Async(Dropbox.Api.Team.MembersGetInfoV2Arg)\" data-throw-if-not-resolved=\"false\"></xref>, and did not\nmatch a corresponding user. This might be a team_member_id, an email, or an\nexternal ID, depending on how the method was called.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class IdNotFound : MembersGetInfoItemBase'
+    content.vb: >-
+      Public NotInheritable Class IdNotFound
+          Inherits MembersGetInfoItemBase
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MembersGetInfoItemBase
+  inheritedMembers:
+  - Dropbox.Api.Team.MembersGetInfoItemBase.IsIdNotFound
+  - Dropbox.Api.Team.MembersGetInfoItemBase.AsIdNotFound
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.#ctor(System.String)
+  commentId: M:Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound
+  langs:
+  - csharp
+  - vb
+  name: IdNotFound(String)
+  nameWithType: MembersGetInfoItemBase.IdNotFound.IdNotFound(String)
+  fullName: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.IdNotFound(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemBase.cs
+    startLine: 147
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public IdNotFound(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.Value
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.Value
+  id: Value
+  parent: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: MembersGetInfoItemBase.IdNotFound.Value
+  fullName: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemBase.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoAsync(Dropbox.Api.Team.MembersGetInfoArgs)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoAsync(Dropbox.Api.Team.MembersGetInfoArgs)
+  isExternal: true
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoV2Async(Dropbox.Api.Team.MembersGetInfoV2Arg)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoV2Async(Dropbox.Api.Team.MembersGetInfoV2Arg)
+  isExternal: true
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersGetInfoItemBase
+  commentId: T:Dropbox.Api.Team.MembersGetInfoItemBase
+  parent: Dropbox.Api.Team
+  name: MembersGetInfoItemBase
+  nameWithType: MembersGetInfoItemBase
+  fullName: Dropbox.Api.Team.MembersGetInfoItemBase
+- uid: Dropbox.Api.Team.MembersGetInfoItemBase.IsIdNotFound
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemBase.IsIdNotFound
+  parent: Dropbox.Api.Team.MembersGetInfoItemBase
+  name: IsIdNotFound
+  nameWithType: MembersGetInfoItemBase.IsIdNotFound
+  fullName: Dropbox.Api.Team.MembersGetInfoItemBase.IsIdNotFound
+- uid: Dropbox.Api.Team.MembersGetInfoItemBase.AsIdNotFound
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemBase.AsIdNotFound
+  parent: Dropbox.Api.Team.MembersGetInfoItemBase
+  name: AsIdNotFound
+  nameWithType: MembersGetInfoItemBase.AsIdNotFound
+  fullName: Dropbox.Api.Team.MembersGetInfoItemBase.AsIdNotFound
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound
+  commentId: T:Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound
+  parent: Dropbox.Api.Team
+  name: MembersGetInfoItemBase.IdNotFound
+  nameWithType: MembersGetInfoItemBase.IdNotFound
+  fullName: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound
+- uid: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.#ctor
+  name: IdNotFound
+  nameWithType: MembersGetInfoItemBase.IdNotFound.IdNotFound
+  fullName: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.IdNotFound
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.Value*
+  commentId: Overload:Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.Value
+  name: Value
+  nameWithType: MembersGetInfoItemBase.IdNotFound.Value
+  fullName: Dropbox.Api.Team.MembersGetInfoItemBase.IdNotFound.Value

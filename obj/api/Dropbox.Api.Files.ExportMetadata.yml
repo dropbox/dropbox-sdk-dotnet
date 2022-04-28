@@ -1,0 +1,705 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ExportMetadata
+  commentId: T:Dropbox.Api.Files.ExportMetadata
+  id: ExportMetadata
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ExportMetadata.#ctor(System.String,System.UInt64,System.String,System.Nullable{System.Int64})
+  - Dropbox.Api.Files.ExportMetadata.ExportHash
+  - Dropbox.Api.Files.ExportMetadata.Name
+  - Dropbox.Api.Files.ExportMetadata.PaperRevision
+  - Dropbox.Api.Files.ExportMetadata.Size
+  langs:
+  - csharp
+  - vb
+  name: ExportMetadata
+  nameWithType: ExportMetadata
+  fullName: Dropbox.Api.Files.ExportMetadata
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ExportMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportMetadata.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The export metadata object</p>\n"
+  example: []
+  syntax:
+    content: public class ExportMetadata
+    content.vb: Public Class ExportMetadata
+  seealso:
+  - linkId: Dropbox.Api.Files.ExportResult
+    commentId: T:Dropbox.Api.Files.ExportResult
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ExportMetadata.#ctor(System.String,System.UInt64,System.String,System.Nullable{System.Int64})
+  commentId: M:Dropbox.Api.Files.ExportMetadata.#ctor(System.String,System.UInt64,System.String,System.Nullable{System.Int64})
+  id: '#ctor(System.String,System.UInt64,System.String,System.Nullable{System.Int64})'
+  parent: Dropbox.Api.Files.ExportMetadata
+  langs:
+  - csharp
+  - vb
+  name: ExportMetadata(String, UInt64, String, Nullable<Int64>)
+  nameWithType: ExportMetadata.ExportMetadata(String, UInt64, String, Nullable<Int64>)
+  fullName: Dropbox.Api.Files.ExportMetadata.ExportMetadata(System.String, System.UInt64, System.String, System.Nullable<System.Int64>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportMetadata.cs
+    startLine: 43
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ExportMetadata\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ExportMetadata(string name, ulong size, string exportHash = null, long? paperRevision = null)
+    parameters:
+    - id: name
+      type: System.String
+      description: >-
+        The last component of the path (including extension). This never
+
+        contains a slash.
+    - id: size
+      type: System.UInt64
+      description: The file size in bytes.
+    - id: exportHash
+      type: System.String
+      description: >-
+        A hash based on the exported file content. This field can
+
+        be used to verify data integrity. Similar to content hash. For more information see
+
+        our <a href="https://www.dropbox.com/developers/reference/content-hash">Content
+
+        hash</a> page.
+    - id: paperRevision
+      type: System.Nullable{System.Int64}
+      description: >-
+        If the file is a Paper doc, this gives the latest doc
+
+        revision which can be used in <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.PaperUpdateAsync(Dropbox.Api.Files.PaperUpdateArg%2cSystem.IO.Stream)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(name As String, size As ULong, exportHash As String = Nothing, paperRevision As Long? = Nothing)
+  overload: Dropbox.Api.Files.ExportMetadata.#ctor*
+  nameWithType.vb: ExportMetadata.ExportMetadata(String, UInt64, String, Nullable(Of Int64))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.ExportMetadata.ExportMetadata(System.String, System.UInt64, System.String, System.Nullable(Of System.Int64))
+  name.vb: ExportMetadata(String, UInt64, String, Nullable(Of Int64))
+- uid: Dropbox.Api.Files.ExportMetadata.Name
+  commentId: P:Dropbox.Api.Files.ExportMetadata.Name
+  id: Name
+  parent: Dropbox.Api.Files.ExportMetadata
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ExportMetadata.Name
+  fullName: Dropbox.Api.Files.ExportMetadata.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportMetadata.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The last component of the path (including extension). This never contains a\nslash.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.Files.ExportMetadata.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ExportMetadata.Size
+  commentId: P:Dropbox.Api.Files.ExportMetadata.Size
+  id: Size
+  parent: Dropbox.Api.Files.ExportMetadata
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: ExportMetadata.Size
+  fullName: Dropbox.Api.Files.ExportMetadata.Size
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Size
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportMetadata.cs
+    startLine: 90
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The file size in bytes.</p>\n"
+  example: []
+  syntax:
+    content: public ulong Size { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property Size As ULong
+  overload: Dropbox.Api.Files.ExportMetadata.Size*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ExportMetadata.ExportHash
+  commentId: P:Dropbox.Api.Files.ExportMetadata.ExportHash
+  id: ExportHash
+  parent: Dropbox.Api.Files.ExportMetadata
+  langs:
+  - csharp
+  - vb
+  name: ExportHash
+  nameWithType: ExportMetadata.ExportHash
+  fullName: Dropbox.Api.Files.ExportMetadata.ExportHash
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ExportHash
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportMetadata.cs
+    startLine: 98
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A hash based on the exported file content. This field can be used to verify\ndata integrity. Similar to content hash. For more information see our <a href=\"https://www.dropbox.com/developers/reference/content-hash\">Content hash</a>\npage.</p>\n"
+  example: []
+  syntax:
+    content: public string ExportHash { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ExportHash As String
+  overload: Dropbox.Api.Files.ExportMetadata.ExportHash*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ExportMetadata.PaperRevision
+  commentId: P:Dropbox.Api.Files.ExportMetadata.PaperRevision
+  id: PaperRevision
+  parent: Dropbox.Api.Files.ExportMetadata
+  langs:
+  - csharp
+  - vb
+  name: PaperRevision
+  nameWithType: ExportMetadata.PaperRevision
+  fullName: Dropbox.Api.Files.ExportMetadata.PaperRevision
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportMetadata.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PaperRevision
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportMetadata.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If the file is a Paper doc, this gives the latest doc revision which can be\nused in <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.PaperUpdateAsync(Dropbox.Api.Files.PaperUpdateArg%2cSystem.IO.Stream)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public long? PaperRevision { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: Public Property PaperRevision As Long?
+  overload: Dropbox.Api.Files.ExportMetadata.PaperRevision*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files.ExportResult
+  commentId: T:Dropbox.Api.Files.ExportResult
+  name: ExportResult
+  nameWithType: ExportResult
+  fullName: Dropbox.Api.Files.ExportResult
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.ExportMetadata
+  commentId: T:Dropbox.Api.Files.ExportMetadata
+  parent: Dropbox.Api.Files
+  name: ExportMetadata
+  nameWithType: ExportMetadata
+  fullName: Dropbox.Api.Files.ExportMetadata
+- uid: Dropbox.Api.Files.Routes.FilesUserRoutes.PaperUpdateAsync(Dropbox.Api.Files.PaperUpdateArg,System.IO.Stream)
+  commentId: M:Dropbox.Api.Files.Routes.FilesUserRoutes.PaperUpdateAsync(Dropbox.Api.Files.PaperUpdateArg,System.IO.Stream)
+  isExternal: true
+- uid: Dropbox.Api.Files.ExportMetadata.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ExportMetadata.#ctor
+  name: ExportMetadata
+  nameWithType: ExportMetadata.ExportMetadata
+  fullName: Dropbox.Api.Files.ExportMetadata.ExportMetadata
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int64>
+  nameWithType: Nullable<Int64>
+  fullName: System.Nullable<System.Int64>
+  nameWithType.vb: Nullable(Of Int64)
+  fullName.vb: System.Nullable(Of System.Int64)
+  name.vb: Nullable(Of Int64)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.ExportMetadata.Name*
+  commentId: Overload:Dropbox.Api.Files.ExportMetadata.Name
+  name: Name
+  nameWithType: ExportMetadata.Name
+  fullName: Dropbox.Api.Files.ExportMetadata.Name
+- uid: Dropbox.Api.Files.ExportMetadata.Size*
+  commentId: Overload:Dropbox.Api.Files.ExportMetadata.Size
+  name: Size
+  nameWithType: ExportMetadata.Size
+  fullName: Dropbox.Api.Files.ExportMetadata.Size
+- uid: Dropbox.Api.Files.ExportMetadata.ExportHash*
+  commentId: Overload:Dropbox.Api.Files.ExportMetadata.ExportHash
+  name: ExportHash
+  nameWithType: ExportMetadata.ExportHash
+  fullName: Dropbox.Api.Files.ExportMetadata.ExportHash
+- uid: Dropbox.Api.Files.ExportMetadata.PaperRevision*
+  commentId: Overload:Dropbox.Api.Files.ExportMetadata.PaperRevision
+  name: PaperRevision
+  nameWithType: ExportMetadata.PaperRevision
+  fullName: Dropbox.Api.Files.ExportMetadata.PaperRevision

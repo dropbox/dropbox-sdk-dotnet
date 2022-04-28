@@ -1,0 +1,754 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.DeviceSession
+  commentId: T:Dropbox.Api.Team.DeviceSession
+  id: DeviceSession
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.DeviceSession.#ctor(System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  - Dropbox.Api.Team.DeviceSession.Country
+  - Dropbox.Api.Team.DeviceSession.Created
+  - Dropbox.Api.Team.DeviceSession.IpAddress
+  - Dropbox.Api.Team.DeviceSession.SessionId
+  - Dropbox.Api.Team.DeviceSession.Updated
+  langs:
+  - csharp
+  - vb
+  name: DeviceSession
+  nameWithType: DeviceSession
+  fullName: Dropbox.Api.Team.DeviceSession
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSession.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: DeviceSession
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSession.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The device session object</p>\n"
+  example: []
+  syntax:
+    content: public class DeviceSession
+    content.vb: Public Class DeviceSession
+  seealso:
+  - linkId: Dropbox.Api.Team.ActiveWebSession
+    commentId: T:Dropbox.Api.Team.ActiveWebSession
+  - linkId: Dropbox.Api.Team.DesktopClientSession
+    commentId: T:Dropbox.Api.Team.DesktopClientSession
+  - linkId: Dropbox.Api.Team.MobileClientSession
+    commentId: T:Dropbox.Api.Team.MobileClientSession
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.ActiveWebSession
+  - Dropbox.Api.Team.DesktopClientSession
+  - Dropbox.Api.Team.MobileClientSession
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.DeviceSession.#ctor(System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.Team.DeviceSession.#ctor(System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  id: '#ctor(System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.Team.DeviceSession
+  langs:
+  - csharp
+  - vb
+  name: DeviceSession(String, String, String, Nullable<DateTime>, Nullable<DateTime>)
+  nameWithType: DeviceSession.DeviceSession(String, String, String, Nullable<DateTime>, Nullable<DateTime>)
+  fullName: Dropbox.Api.Team.DeviceSession.DeviceSession(System.String, System.String, System.String, System.Nullable<System.DateTime>, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSession.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSession.cs
+    startLine: 42
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.DeviceSession\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceSession(string sessionId, string ipAddress = null, string country = null, DateTime? created = null, DateTime? updated = null)
+    parameters:
+    - id: sessionId
+      type: System.String
+      description: The session id.
+    - id: ipAddress
+      type: System.String
+      description: >-
+        The IP address of the last activity from this
+
+        session.
+    - id: country
+      type: System.String
+      description: >-
+        The country from which the last activity from this session
+
+        was made.
+    - id: created
+      type: System.Nullable{System.DateTime}
+      description: The time this session was created.
+    - id: updated
+      type: System.Nullable{System.DateTime}
+      description: The time of the last activity from this session.
+    content.vb: Public Sub New(sessionId As String, ipAddress As String = Nothing, country As String = Nothing, created As Date? = Nothing, updated As Date? = Nothing)
+  overload: Dropbox.Api.Team.DeviceSession.#ctor*
+  nameWithType.vb: DeviceSession.DeviceSession(String, String, String, Nullable(Of DateTime), Nullable(Of DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.DeviceSession.DeviceSession(System.String, System.String, System.String, System.Nullable(Of System.DateTime), System.Nullable(Of System.DateTime))
+  name.vb: DeviceSession(String, String, String, Nullable(Of DateTime), Nullable(Of DateTime))
+- uid: Dropbox.Api.Team.DeviceSession.SessionId
+  commentId: P:Dropbox.Api.Team.DeviceSession.SessionId
+  id: SessionId
+  parent: Dropbox.Api.Team.DeviceSession
+  langs:
+  - csharp
+  - vb
+  name: SessionId
+  nameWithType: DeviceSession.SessionId
+  fullName: Dropbox.Api.Team.DeviceSession.SessionId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSession.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SessionId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSession.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The session id.</p>\n"
+  example: []
+  syntax:
+    content: public string SessionId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SessionId As String
+  overload: Dropbox.Api.Team.DeviceSession.SessionId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.DeviceSession.IpAddress
+  commentId: P:Dropbox.Api.Team.DeviceSession.IpAddress
+  id: IpAddress
+  parent: Dropbox.Api.Team.DeviceSession
+  langs:
+  - csharp
+  - vb
+  name: IpAddress
+  nameWithType: DeviceSession.IpAddress
+  fullName: Dropbox.Api.Team.DeviceSession.IpAddress
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSession.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IpAddress
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSession.cs
+    startLine: 78
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The IP address of the last activity from this session.</p>\n"
+  example: []
+  syntax:
+    content: public string IpAddress { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property IpAddress As String
+  overload: Dropbox.Api.Team.DeviceSession.IpAddress*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.DeviceSession.Country
+  commentId: P:Dropbox.Api.Team.DeviceSession.Country
+  id: Country
+  parent: Dropbox.Api.Team.DeviceSession
+  langs:
+  - csharp
+  - vb
+  name: Country
+  nameWithType: DeviceSession.Country
+  fullName: Dropbox.Api.Team.DeviceSession.Country
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSession.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Country
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSession.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The country from which the last activity from this session was made.</p>\n"
+  example: []
+  syntax:
+    content: public string Country { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Country As String
+  overload: Dropbox.Api.Team.DeviceSession.Country*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.DeviceSession.Created
+  commentId: P:Dropbox.Api.Team.DeviceSession.Created
+  id: Created
+  parent: Dropbox.Api.Team.DeviceSession
+  langs:
+  - csharp
+  - vb
+  name: Created
+  nameWithType: DeviceSession.Created
+  fullName: Dropbox.Api.Team.DeviceSession.Created
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSession.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Created
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSession.cs
+    startLine: 88
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The time this session was created.</p>\n"
+  example: []
+  syntax:
+    content: public DateTime? Created { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property Created As Date?
+  overload: Dropbox.Api.Team.DeviceSession.Created*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.DeviceSession.Updated
+  commentId: P:Dropbox.Api.Team.DeviceSession.Updated
+  id: Updated
+  parent: Dropbox.Api.Team.DeviceSession
+  langs:
+  - csharp
+  - vb
+  name: Updated
+  nameWithType: DeviceSession.Updated
+  fullName: Dropbox.Api.Team.DeviceSession.Updated
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSession.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Updated
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSession.cs
+    startLine: 93
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The time of the last activity from this session.</p>\n"
+  example: []
+  syntax:
+    content: public DateTime? Updated { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property Updated As Date?
+  overload: Dropbox.Api.Team.DeviceSession.Updated*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team.ActiveWebSession
+  commentId: T:Dropbox.Api.Team.ActiveWebSession
+  name: ActiveWebSession
+  nameWithType: ActiveWebSession
+  fullName: Dropbox.Api.Team.ActiveWebSession
+- uid: Dropbox.Api.Team.DesktopClientSession
+  commentId: T:Dropbox.Api.Team.DesktopClientSession
+  name: DesktopClientSession
+  nameWithType: DesktopClientSession
+  fullName: Dropbox.Api.Team.DesktopClientSession
+- uid: Dropbox.Api.Team.MobileClientSession
+  commentId: T:Dropbox.Api.Team.MobileClientSession
+  name: MobileClientSession
+  nameWithType: MobileClientSession
+  fullName: Dropbox.Api.Team.MobileClientSession
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.DeviceSession
+  commentId: T:Dropbox.Api.Team.DeviceSession
+  parent: Dropbox.Api.Team
+  name: DeviceSession
+  nameWithType: DeviceSession
+  fullName: Dropbox.Api.Team.DeviceSession
+- uid: Dropbox.Api.Team.DeviceSession.#ctor*
+  commentId: Overload:Dropbox.Api.Team.DeviceSession.#ctor
+  name: DeviceSession
+  nameWithType: DeviceSession.DeviceSession
+  fullName: Dropbox.Api.Team.DeviceSession.DeviceSession
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.DeviceSession.SessionId*
+  commentId: Overload:Dropbox.Api.Team.DeviceSession.SessionId
+  name: SessionId
+  nameWithType: DeviceSession.SessionId
+  fullName: Dropbox.Api.Team.DeviceSession.SessionId
+- uid: Dropbox.Api.Team.DeviceSession.IpAddress*
+  commentId: Overload:Dropbox.Api.Team.DeviceSession.IpAddress
+  name: IpAddress
+  nameWithType: DeviceSession.IpAddress
+  fullName: Dropbox.Api.Team.DeviceSession.IpAddress
+- uid: Dropbox.Api.Team.DeviceSession.Country*
+  commentId: Overload:Dropbox.Api.Team.DeviceSession.Country
+  name: Country
+  nameWithType: DeviceSession.Country
+  fullName: Dropbox.Api.Team.DeviceSession.Country
+- uid: Dropbox.Api.Team.DeviceSession.Created*
+  commentId: Overload:Dropbox.Api.Team.DeviceSession.Created
+  name: Created
+  nameWithType: DeviceSession.Created
+  fullName: Dropbox.Api.Team.DeviceSession.Created
+- uid: Dropbox.Api.Team.DeviceSession.Updated*
+  commentId: Overload:Dropbox.Api.Team.DeviceSession.Updated
+  name: Updated
+  nameWithType: DeviceSession.Updated
+  fullName: Dropbox.Api.Team.DeviceSession.Updated

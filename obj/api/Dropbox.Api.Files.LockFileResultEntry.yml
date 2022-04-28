@@ -1,0 +1,582 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.LockFileResultEntry
+  commentId: T:Dropbox.Api.Files.LockFileResultEntry
+  id: LockFileResultEntry
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.LockFileResultEntry.#ctor
+  - Dropbox.Api.Files.LockFileResultEntry.AsFailure
+  - Dropbox.Api.Files.LockFileResultEntry.AsSuccess
+  - Dropbox.Api.Files.LockFileResultEntry.IsFailure
+  - Dropbox.Api.Files.LockFileResultEntry.IsSuccess
+  langs:
+  - csharp
+  - vb
+  name: LockFileResultEntry
+  nameWithType: LockFileResultEntry
+  fullName: Dropbox.Api.Files.LockFileResultEntry
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResultEntry.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LockFileResultEntry
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResultEntry.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The lock file result entry object</p>\n"
+  example: []
+  syntax:
+    content: public class LockFileResultEntry
+    content.vb: Public Class LockFileResultEntry
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.LockFileResultEntry.Failure
+  - Dropbox.Api.Files.LockFileResultEntry.Success
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.LockFileResultEntry.#ctor
+  commentId: M:Dropbox.Api.Files.LockFileResultEntry.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.LockFileResultEntry
+  langs:
+  - csharp
+  - vb
+  name: LockFileResultEntry()
+  nameWithType: LockFileResultEntry.LockFileResultEntry()
+  fullName: Dropbox.Api.Files.LockFileResultEntry.LockFileResultEntry()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResultEntry.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResultEntry.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.LockFileResultEntry\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileResultEntry()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.LockFileResultEntry.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.LockFileResultEntry.IsSuccess
+  commentId: P:Dropbox.Api.Files.LockFileResultEntry.IsSuccess
+  id: IsSuccess
+  parent: Dropbox.Api.Files.LockFileResultEntry
+  langs:
+  - csharp
+  - vb
+  name: IsSuccess
+  nameWithType: LockFileResultEntry.IsSuccess
+  fullName: Dropbox.Api.Files.LockFileResultEntry.IsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResultEntry.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResultEntry.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Success</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSuccess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSuccess As Boolean
+  overload: Dropbox.Api.Files.LockFileResultEntry.IsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileResultEntry.AsSuccess
+  commentId: P:Dropbox.Api.Files.LockFileResultEntry.AsSuccess
+  id: AsSuccess
+  parent: Dropbox.Api.Files.LockFileResultEntry
+  langs:
+  - csharp
+  - vb
+  name: AsSuccess
+  nameWithType: LockFileResultEntry.AsSuccess
+  fullName: Dropbox.Api.Files.LockFileResultEntry.AsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResultEntry.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResultEntry.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Success, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileResultEntry.Success AsSuccess { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.LockFileResultEntry.Success
+    content.vb: Public ReadOnly Property AsSuccess As LockFileResultEntry.Success
+  overload: Dropbox.Api.Files.LockFileResultEntry.AsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileResultEntry.IsFailure
+  commentId: P:Dropbox.Api.Files.LockFileResultEntry.IsFailure
+  id: IsFailure
+  parent: Dropbox.Api.Files.LockFileResultEntry
+  langs:
+  - csharp
+  - vb
+  name: IsFailure
+  nameWithType: LockFileResultEntry.IsFailure
+  fullName: Dropbox.Api.Files.LockFileResultEntry.IsFailure
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResultEntry.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsFailure
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResultEntry.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Failure</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFailure { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFailure As Boolean
+  overload: Dropbox.Api.Files.LockFileResultEntry.IsFailure*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileResultEntry.AsFailure
+  commentId: P:Dropbox.Api.Files.LockFileResultEntry.AsFailure
+  id: AsFailure
+  parent: Dropbox.Api.Files.LockFileResultEntry
+  langs:
+  - csharp
+  - vb
+  name: AsFailure
+  nameWithType: LockFileResultEntry.AsFailure
+  fullName: Dropbox.Api.Files.LockFileResultEntry.AsFailure
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResultEntry.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsFailure
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResultEntry.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Failure, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileResultEntry.Failure AsFailure { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.LockFileResultEntry.Failure
+    content.vb: Public ReadOnly Property AsFailure As LockFileResultEntry.Failure
+  overload: Dropbox.Api.Files.LockFileResultEntry.AsFailure*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.LockFileResultEntry
+  commentId: T:Dropbox.Api.Files.LockFileResultEntry
+  parent: Dropbox.Api.Files
+  name: LockFileResultEntry
+  nameWithType: LockFileResultEntry
+  fullName: Dropbox.Api.Files.LockFileResultEntry
+- uid: Dropbox.Api.Files.LockFileResultEntry.#ctor*
+  commentId: Overload:Dropbox.Api.Files.LockFileResultEntry.#ctor
+  name: LockFileResultEntry
+  nameWithType: LockFileResultEntry.LockFileResultEntry
+  fullName: Dropbox.Api.Files.LockFileResultEntry.LockFileResultEntry
+- uid: Dropbox.Api.Files.LockFileResultEntry.IsSuccess*
+  commentId: Overload:Dropbox.Api.Files.LockFileResultEntry.IsSuccess
+  name: IsSuccess
+  nameWithType: LockFileResultEntry.IsSuccess
+  fullName: Dropbox.Api.Files.LockFileResultEntry.IsSuccess
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.LockFileResultEntry.AsSuccess*
+  commentId: Overload:Dropbox.Api.Files.LockFileResultEntry.AsSuccess
+  name: AsSuccess
+  nameWithType: LockFileResultEntry.AsSuccess
+  fullName: Dropbox.Api.Files.LockFileResultEntry.AsSuccess
+- uid: Dropbox.Api.Files.LockFileResultEntry.Success
+  commentId: T:Dropbox.Api.Files.LockFileResultEntry.Success
+  parent: Dropbox.Api.Files
+  name: LockFileResultEntry.Success
+  nameWithType: LockFileResultEntry.Success
+  fullName: Dropbox.Api.Files.LockFileResultEntry.Success
+- uid: Dropbox.Api.Files.LockFileResultEntry.IsFailure*
+  commentId: Overload:Dropbox.Api.Files.LockFileResultEntry.IsFailure
+  name: IsFailure
+  nameWithType: LockFileResultEntry.IsFailure
+  fullName: Dropbox.Api.Files.LockFileResultEntry.IsFailure
+- uid: Dropbox.Api.Files.LockFileResultEntry.AsFailure*
+  commentId: Overload:Dropbox.Api.Files.LockFileResultEntry.AsFailure
+  name: AsFailure
+  nameWithType: LockFileResultEntry.AsFailure
+  fullName: Dropbox.Api.Files.LockFileResultEntry.AsFailure
+- uid: Dropbox.Api.Files.LockFileResultEntry.Failure
+  commentId: T:Dropbox.Api.Files.LockFileResultEntry.Failure
+  parent: Dropbox.Api.Files
+  name: LockFileResultEntry.Failure
+  nameWithType: LockFileResultEntry.Failure
+  fullName: Dropbox.Api.Files.LockFileResultEntry.Failure

@@ -1,0 +1,647 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupUpdateArgs
+  commentId: T:Dropbox.Api.Team.GroupUpdateArgs
+  id: GroupUpdateArgs
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupUpdateArgs.#ctor(Dropbox.Api.Team.GroupSelector,System.Boolean,System.String,System.String,Dropbox.Api.TeamCommon.GroupManagementType)
+  - Dropbox.Api.Team.GroupUpdateArgs.Group
+  - Dropbox.Api.Team.GroupUpdateArgs.NewGroupExternalId
+  - Dropbox.Api.Team.GroupUpdateArgs.NewGroupManagementType
+  - Dropbox.Api.Team.GroupUpdateArgs.NewGroupName
+  langs:
+  - csharp
+  - vb
+  name: GroupUpdateArgs
+  nameWithType: GroupUpdateArgs
+  fullName: Dropbox.Api.Team.GroupUpdateArgs
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateArgs.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: GroupUpdateArgs
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateArgs.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The group update args object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupUpdateArgs : IncludeMembersArg'
+    content.vb: >-
+      Public Class GroupUpdateArgs
+          Inherits IncludeMembersArg
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.IncludeMembersArg
+  inheritedMembers:
+  - Dropbox.Api.Team.IncludeMembersArg.ReturnMembers
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GroupUpdateArgs.#ctor(Dropbox.Api.Team.GroupSelector,System.Boolean,System.String,System.String,Dropbox.Api.TeamCommon.GroupManagementType)
+  commentId: M:Dropbox.Api.Team.GroupUpdateArgs.#ctor(Dropbox.Api.Team.GroupSelector,System.Boolean,System.String,System.String,Dropbox.Api.TeamCommon.GroupManagementType)
+  id: '#ctor(Dropbox.Api.Team.GroupSelector,System.Boolean,System.String,System.String,Dropbox.Api.TeamCommon.GroupManagementType)'
+  parent: Dropbox.Api.Team.GroupUpdateArgs
+  langs:
+  - csharp
+  - vb
+  name: GroupUpdateArgs(GroupSelector, Boolean, String, String, GroupManagementType)
+  nameWithType: GroupUpdateArgs.GroupUpdateArgs(GroupSelector, Boolean, String, String, GroupManagementType)
+  fullName: Dropbox.Api.Team.GroupUpdateArgs.GroupUpdateArgs(Dropbox.Api.Team.GroupSelector, System.Boolean, System.String, System.String, Dropbox.Api.TeamCommon.GroupManagementType)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateArgs.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateArgs.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupUpdateArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupUpdateArgs(GroupSelector group, bool returnMembers = true, string newGroupName = null, string newGroupExternalId = null, GroupManagementType newGroupManagementType = null)
+    parameters:
+    - id: group
+      type: Dropbox.Api.Team.GroupSelector
+      description: Specify a group.
+    - id: returnMembers
+      type: System.Boolean
+      description: >-
+        Whether to return the list of members in the group.
+
+        Note that the default value will cause all the group members  to be returned in the
+
+        response. This may take a long time for large groups.
+    - id: newGroupName
+      type: System.String
+      description: >-
+        Optional argument. Set group name to this if
+
+        provided.
+    - id: newGroupExternalId
+      type: System.String
+      description: >-
+        Optional argument. New group external ID. If the
+
+        argument is None, the group&apos;s external_id won&apos;t be updated. If the argument is
+
+        empty string, the group&apos;s external id will be cleared.
+    - id: newGroupManagementType
+      type: Dropbox.Api.TeamCommon.GroupManagementType
+      description: >-
+        Set new group management type, if
+
+        provided.
+    content.vb: Public Sub New(group As GroupSelector, returnMembers As Boolean = True, newGroupName As String = Nothing, newGroupExternalId As String = Nothing, newGroupManagementType As GroupManagementType = Nothing)
+  overload: Dropbox.Api.Team.GroupUpdateArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupUpdateArgs.Group
+  commentId: P:Dropbox.Api.Team.GroupUpdateArgs.Group
+  id: Group
+  parent: Dropbox.Api.Team.GroupUpdateArgs
+  langs:
+  - csharp
+  - vb
+  name: Group
+  nameWithType: GroupUpdateArgs.Group
+  fullName: Dropbox.Api.Team.GroupUpdateArgs.Group
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateArgs.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Group
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateArgs.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Specify a group.</p>\n"
+  example: []
+  syntax:
+    content: public GroupSelector Group { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupSelector
+    content.vb: Public Property Group As GroupSelector
+  overload: Dropbox.Api.Team.GroupUpdateArgs.Group*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GroupUpdateArgs.NewGroupName
+  commentId: P:Dropbox.Api.Team.GroupUpdateArgs.NewGroupName
+  id: NewGroupName
+  parent: Dropbox.Api.Team.GroupUpdateArgs
+  langs:
+  - csharp
+  - vb
+  name: NewGroupName
+  nameWithType: GroupUpdateArgs.NewGroupName
+  fullName: Dropbox.Api.Team.GroupUpdateArgs.NewGroupName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateArgs.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NewGroupName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateArgs.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Optional argument. Set group name to this if provided.</p>\n"
+  example: []
+  syntax:
+    content: public string NewGroupName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NewGroupName As String
+  overload: Dropbox.Api.Team.GroupUpdateArgs.NewGroupName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GroupUpdateArgs.NewGroupExternalId
+  commentId: P:Dropbox.Api.Team.GroupUpdateArgs.NewGroupExternalId
+  id: NewGroupExternalId
+  parent: Dropbox.Api.Team.GroupUpdateArgs
+  langs:
+  - csharp
+  - vb
+  name: NewGroupExternalId
+  nameWithType: GroupUpdateArgs.NewGroupExternalId
+  fullName: Dropbox.Api.Team.GroupUpdateArgs.NewGroupExternalId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateArgs.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NewGroupExternalId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateArgs.cs
+    startLine: 89
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Optional argument. New group external ID. If the argument is None, the\ngroup&apos;s external_id won&apos;t be updated. If the argument is empty string, the group&apos;s\nexternal id will be cleared.</p>\n"
+  example: []
+  syntax:
+    content: public string NewGroupExternalId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NewGroupExternalId As String
+  overload: Dropbox.Api.Team.GroupUpdateArgs.NewGroupExternalId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GroupUpdateArgs.NewGroupManagementType
+  commentId: P:Dropbox.Api.Team.GroupUpdateArgs.NewGroupManagementType
+  id: NewGroupManagementType
+  parent: Dropbox.Api.Team.GroupUpdateArgs
+  langs:
+  - csharp
+  - vb
+  name: NewGroupManagementType
+  nameWithType: GroupUpdateArgs.NewGroupManagementType
+  fullName: Dropbox.Api.Team.GroupUpdateArgs.NewGroupManagementType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateArgs.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NewGroupManagementType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateArgs.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Set new group management type, if provided.</p>\n"
+  example: []
+  syntax:
+    content: public GroupManagementType NewGroupManagementType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamCommon.GroupManagementType
+    content.vb: Public Property NewGroupManagementType As GroupManagementType
+  overload: Dropbox.Api.Team.GroupUpdateArgs.NewGroupManagementType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.IncludeMembersArg
+  commentId: T:Dropbox.Api.Team.IncludeMembersArg
+  parent: Dropbox.Api.Team
+  name: IncludeMembersArg
+  nameWithType: IncludeMembersArg
+  fullName: Dropbox.Api.Team.IncludeMembersArg
+- uid: Dropbox.Api.Team.IncludeMembersArg.ReturnMembers
+  commentId: P:Dropbox.Api.Team.IncludeMembersArg.ReturnMembers
+  parent: Dropbox.Api.Team.IncludeMembersArg
+  name: ReturnMembers
+  nameWithType: IncludeMembersArg.ReturnMembers
+  fullName: Dropbox.Api.Team.IncludeMembersArg.ReturnMembers
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.GroupUpdateArgs
+  commentId: T:Dropbox.Api.Team.GroupUpdateArgs
+  parent: Dropbox.Api.Team
+  name: GroupUpdateArgs
+  nameWithType: GroupUpdateArgs
+  fullName: Dropbox.Api.Team.GroupUpdateArgs
+- uid: Dropbox.Api.Team.GroupUpdateArgs.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupUpdateArgs.#ctor
+  name: GroupUpdateArgs
+  nameWithType: GroupUpdateArgs.GroupUpdateArgs
+  fullName: Dropbox.Api.Team.GroupUpdateArgs.GroupUpdateArgs
+- uid: Dropbox.Api.Team.GroupSelector
+  commentId: T:Dropbox.Api.Team.GroupSelector
+  parent: Dropbox.Api.Team
+  name: GroupSelector
+  nameWithType: GroupSelector
+  fullName: Dropbox.Api.Team.GroupSelector
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamCommon.GroupManagementType
+  commentId: T:Dropbox.Api.TeamCommon.GroupManagementType
+  parent: Dropbox.Api.TeamCommon
+  name: GroupManagementType
+  nameWithType: GroupManagementType
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType
+- uid: Dropbox.Api.TeamCommon
+  commentId: N:Dropbox.Api.TeamCommon
+  name: Dropbox.Api.TeamCommon
+  nameWithType: Dropbox.Api.TeamCommon
+  fullName: Dropbox.Api.TeamCommon
+- uid: Dropbox.Api.Team.GroupUpdateArgs.Group*
+  commentId: Overload:Dropbox.Api.Team.GroupUpdateArgs.Group
+  name: Group
+  nameWithType: GroupUpdateArgs.Group
+  fullName: Dropbox.Api.Team.GroupUpdateArgs.Group
+- uid: Dropbox.Api.Team.GroupUpdateArgs.NewGroupName*
+  commentId: Overload:Dropbox.Api.Team.GroupUpdateArgs.NewGroupName
+  name: NewGroupName
+  nameWithType: GroupUpdateArgs.NewGroupName
+  fullName: Dropbox.Api.Team.GroupUpdateArgs.NewGroupName
+- uid: Dropbox.Api.Team.GroupUpdateArgs.NewGroupExternalId*
+  commentId: Overload:Dropbox.Api.Team.GroupUpdateArgs.NewGroupExternalId
+  name: NewGroupExternalId
+  nameWithType: GroupUpdateArgs.NewGroupExternalId
+  fullName: Dropbox.Api.Team.GroupUpdateArgs.NewGroupExternalId
+- uid: Dropbox.Api.Team.GroupUpdateArgs.NewGroupManagementType*
+  commentId: Overload:Dropbox.Api.Team.GroupUpdateArgs.NewGroupManagementType
+  name: NewGroupManagementType
+  nameWithType: GroupUpdateArgs.NewGroupManagementType
+  fullName: Dropbox.Api.Team.GroupUpdateArgs.NewGroupManagementType

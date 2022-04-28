@@ -1,0 +1,494 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails
+  id: MemberRequestsChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.MemberRequestsPolicy,Dropbox.Api.TeamLog.MemberRequestsPolicy)
+  - Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: MemberRequestsChangePolicyDetails
+  nameWithType: MemberRequestsChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsChangePolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MemberRequestsChangePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsChangePolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed whether users can find team when not invited.</p>\n"
+  example: []
+  syntax:
+    content: public class MemberRequestsChangePolicyDetails
+    content.vb: Public Class MemberRequestsChangePolicyDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.MemberRequestsPolicy,Dropbox.Api.TeamLog.MemberRequestsPolicy)
+  commentId: M:Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.MemberRequestsPolicy,Dropbox.Api.TeamLog.MemberRequestsPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.MemberRequestsPolicy,Dropbox.Api.TeamLog.MemberRequestsPolicy)'
+  parent: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberRequestsChangePolicyDetails(MemberRequestsPolicy, MemberRequestsPolicy)
+  nameWithType: MemberRequestsChangePolicyDetails.MemberRequestsChangePolicyDetails(MemberRequestsPolicy, MemberRequestsPolicy)
+  fullName: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.MemberRequestsChangePolicyDetails(Dropbox.Api.TeamLog.MemberRequestsPolicy, Dropbox.Api.TeamLog.MemberRequestsPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsChangePolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsChangePolicyDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRequestsChangePolicyDetails(MemberRequestsPolicy newValue, MemberRequestsPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.MemberRequestsPolicy
+      description: New member change requests policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.MemberRequestsPolicy
+      description: >-
+        Previous member change requests policy. Might be
+
+        missing due to historical data gap.
+    content.vb: Public Sub New(newValue As MemberRequestsPolicy, previousValue As MemberRequestsPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: MemberRequestsChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsChangePolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsChangePolicyDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New member change requests policy.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRequestsPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberRequestsPolicy
+    content.vb: Public Property NewValue As MemberRequestsPolicy
+  overload: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: MemberRequestsChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsChangePolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsChangePolicyDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous member change requests policy. Might be missing due to historical\ndata gap.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRequestsPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberRequestsPolicy
+    content.vb: Public Property PreviousValue As MemberRequestsPolicy
+  overload: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberRequestsChangePolicyDetails
+  nameWithType: MemberRequestsChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.#ctor
+  name: MemberRequestsChangePolicyDetails
+  nameWithType: MemberRequestsChangePolicyDetails.MemberRequestsChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.MemberRequestsChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy
+  commentId: T:Dropbox.Api.TeamLog.MemberRequestsPolicy
+  parent: Dropbox.Api.TeamLog
+  name: MemberRequestsPolicy
+  nameWithType: MemberRequestsPolicy
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy
+- uid: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: MemberRequestsChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: MemberRequestsChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberRequestsChangePolicyDetails.PreviousValue

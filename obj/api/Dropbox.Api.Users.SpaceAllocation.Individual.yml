@@ -1,0 +1,494 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Users.SpaceAllocation.Individual
+  commentId: T:Dropbox.Api.Users.SpaceAllocation.Individual
+  id: SpaceAllocation.Individual
+  parent: Dropbox.Api.Users
+  children:
+  - Dropbox.Api.Users.SpaceAllocation.Individual.#ctor(Dropbox.Api.Users.IndividualSpaceAllocation)
+  - Dropbox.Api.Users.SpaceAllocation.Individual.Value
+  langs:
+  - csharp
+  - vb
+  name: SpaceAllocation.Individual
+  nameWithType: SpaceAllocation.Individual
+  fullName: Dropbox.Api.Users.SpaceAllocation.Individual
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceAllocation.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Individual
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceAllocation.cs
+    startLine: 182
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The user&apos;s space allocation applies only to their individual account.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Individual : SpaceAllocation'
+    content.vb: >-
+      Public NotInheritable Class Individual
+          Inherits SpaceAllocation
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Users.SpaceAllocation
+  inheritedMembers:
+  - Dropbox.Api.Users.SpaceAllocation.IsIndividual
+  - Dropbox.Api.Users.SpaceAllocation.AsIndividual
+  - Dropbox.Api.Users.SpaceAllocation.IsTeam
+  - Dropbox.Api.Users.SpaceAllocation.AsTeam
+  - Dropbox.Api.Users.SpaceAllocation.IsOther
+  - Dropbox.Api.Users.SpaceAllocation.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Users.SpaceAllocation.Individual.#ctor(Dropbox.Api.Users.IndividualSpaceAllocation)
+  commentId: M:Dropbox.Api.Users.SpaceAllocation.Individual.#ctor(Dropbox.Api.Users.IndividualSpaceAllocation)
+  id: '#ctor(Dropbox.Api.Users.IndividualSpaceAllocation)'
+  parent: Dropbox.Api.Users.SpaceAllocation.Individual
+  langs:
+  - csharp
+  - vb
+  name: Individual(IndividualSpaceAllocation)
+  nameWithType: SpaceAllocation.Individual.Individual(IndividualSpaceAllocation)
+  fullName: Dropbox.Api.Users.SpaceAllocation.Individual.Individual(Dropbox.Api.Users.IndividualSpaceAllocation)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceAllocation.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceAllocation.cs
+    startLine: 200
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.SpaceAllocation.Individual\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Individual(IndividualSpaceAllocation value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Users.IndividualSpaceAllocation
+      description: The value
+    content.vb: Public Sub New(value As IndividualSpaceAllocation)
+  overload: Dropbox.Api.Users.SpaceAllocation.Individual.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.SpaceAllocation.Individual.Value
+  commentId: P:Dropbox.Api.Users.SpaceAllocation.Individual.Value
+  id: Value
+  parent: Dropbox.Api.Users.SpaceAllocation.Individual
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: SpaceAllocation.Individual.Value
+  fullName: Dropbox.Api.Users.SpaceAllocation.Individual.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceAllocation.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceAllocation.cs
+    startLine: 214
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public IndividualSpaceAllocation Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Users.IndividualSpaceAllocation
+    content.vb: Public ReadOnly Property Value As IndividualSpaceAllocation
+  overload: Dropbox.Api.Users.SpaceAllocation.Individual.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Users.SpaceAllocation
+  commentId: T:Dropbox.Api.Users.SpaceAllocation
+  parent: Dropbox.Api.Users
+  name: SpaceAllocation
+  nameWithType: SpaceAllocation
+  fullName: Dropbox.Api.Users.SpaceAllocation
+- uid: Dropbox.Api.Users.SpaceAllocation.IsIndividual
+  commentId: P:Dropbox.Api.Users.SpaceAllocation.IsIndividual
+  parent: Dropbox.Api.Users.SpaceAllocation
+  name: IsIndividual
+  nameWithType: SpaceAllocation.IsIndividual
+  fullName: Dropbox.Api.Users.SpaceAllocation.IsIndividual
+- uid: Dropbox.Api.Users.SpaceAllocation.AsIndividual
+  commentId: P:Dropbox.Api.Users.SpaceAllocation.AsIndividual
+  parent: Dropbox.Api.Users.SpaceAllocation
+  name: AsIndividual
+  nameWithType: SpaceAllocation.AsIndividual
+  fullName: Dropbox.Api.Users.SpaceAllocation.AsIndividual
+- uid: Dropbox.Api.Users.SpaceAllocation.IsTeam
+  commentId: P:Dropbox.Api.Users.SpaceAllocation.IsTeam
+  parent: Dropbox.Api.Users.SpaceAllocation
+  name: IsTeam
+  nameWithType: SpaceAllocation.IsTeam
+  fullName: Dropbox.Api.Users.SpaceAllocation.IsTeam
+- uid: Dropbox.Api.Users.SpaceAllocation.AsTeam
+  commentId: P:Dropbox.Api.Users.SpaceAllocation.AsTeam
+  parent: Dropbox.Api.Users.SpaceAllocation
+  name: AsTeam
+  nameWithType: SpaceAllocation.AsTeam
+  fullName: Dropbox.Api.Users.SpaceAllocation.AsTeam
+- uid: Dropbox.Api.Users.SpaceAllocation.IsOther
+  commentId: P:Dropbox.Api.Users.SpaceAllocation.IsOther
+  parent: Dropbox.Api.Users.SpaceAllocation
+  name: IsOther
+  nameWithType: SpaceAllocation.IsOther
+  fullName: Dropbox.Api.Users.SpaceAllocation.IsOther
+- uid: Dropbox.Api.Users.SpaceAllocation.AsOther
+  commentId: P:Dropbox.Api.Users.SpaceAllocation.AsOther
+  parent: Dropbox.Api.Users.SpaceAllocation
+  name: AsOther
+  nameWithType: SpaceAllocation.AsOther
+  fullName: Dropbox.Api.Users.SpaceAllocation.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Users.SpaceAllocation.Individual
+  commentId: T:Dropbox.Api.Users.SpaceAllocation.Individual
+  parent: Dropbox.Api.Users
+  name: SpaceAllocation.Individual
+  nameWithType: SpaceAllocation.Individual
+  fullName: Dropbox.Api.Users.SpaceAllocation.Individual
+- uid: Dropbox.Api.Users.SpaceAllocation.Individual.#ctor*
+  commentId: Overload:Dropbox.Api.Users.SpaceAllocation.Individual.#ctor
+  name: Individual
+  nameWithType: SpaceAllocation.Individual.Individual
+  fullName: Dropbox.Api.Users.SpaceAllocation.Individual.Individual
+- uid: Dropbox.Api.Users.IndividualSpaceAllocation
+  commentId: T:Dropbox.Api.Users.IndividualSpaceAllocation
+  parent: Dropbox.Api.Users
+  name: IndividualSpaceAllocation
+  nameWithType: IndividualSpaceAllocation
+  fullName: Dropbox.Api.Users.IndividualSpaceAllocation
+- uid: Dropbox.Api.Users.SpaceAllocation.Individual.Value*
+  commentId: Overload:Dropbox.Api.Users.SpaceAllocation.Individual.Value
+  name: Value
+  nameWithType: SpaceAllocation.Individual.Value
+  fullName: Dropbox.Api.Users.SpaceAllocation.Individual.Value

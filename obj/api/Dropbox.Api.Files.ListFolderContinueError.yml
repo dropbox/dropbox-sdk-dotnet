@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ListFolderContinueError
+  commentId: T:Dropbox.Api.Files.ListFolderContinueError
+  id: ListFolderContinueError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ListFolderContinueError.#ctor
+  - Dropbox.Api.Files.ListFolderContinueError.AsOther
+  - Dropbox.Api.Files.ListFolderContinueError.AsPath
+  - Dropbox.Api.Files.ListFolderContinueError.AsReset
+  - Dropbox.Api.Files.ListFolderContinueError.IsOther
+  - Dropbox.Api.Files.ListFolderContinueError.IsPath
+  - Dropbox.Api.Files.ListFolderContinueError.IsReset
+  langs:
+  - csharp
+  - vb
+  name: ListFolderContinueError
+  nameWithType: ListFolderContinueError
+  fullName: Dropbox.Api.Files.ListFolderContinueError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ListFolderContinueError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The list folder continue error object</p>\n"
+  example: []
+  syntax:
+    content: public class ListFolderContinueError
+    content.vb: Public Class ListFolderContinueError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.ListFolderContinueError.Other
+  - Dropbox.Api.Files.ListFolderContinueError.Path
+  - Dropbox.Api.Files.ListFolderContinueError.Reset
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ListFolderContinueError.#ctor
+  commentId: M:Dropbox.Api.Files.ListFolderContinueError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.ListFolderContinueError
+  langs:
+  - csharp
+  - vb
+  name: ListFolderContinueError()
+  nameWithType: ListFolderContinueError.ListFolderContinueError()
+  fullName: Dropbox.Api.Files.ListFolderContinueError.ListFolderContinueError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListFolderContinueError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFolderContinueError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.ListFolderContinueError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ListFolderContinueError.IsPath
+  commentId: P:Dropbox.Api.Files.ListFolderContinueError.IsPath
+  id: IsPath
+  parent: Dropbox.Api.Files.ListFolderContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsPath
+  nameWithType: ListFolderContinueError.IsPath
+  fullName: Dropbox.Api.Files.ListFolderContinueError.IsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Path</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPath As Boolean
+  overload: Dropbox.Api.Files.ListFolderContinueError.IsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ListFolderContinueError.AsPath
+  commentId: P:Dropbox.Api.Files.ListFolderContinueError.AsPath
+  id: AsPath
+  parent: Dropbox.Api.Files.ListFolderContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsPath
+  nameWithType: ListFolderContinueError.AsPath
+  fullName: Dropbox.Api.Files.ListFolderContinueError.AsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Path, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListFolderContinueError.Path AsPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ListFolderContinueError.Path
+    content.vb: Public ReadOnly Property AsPath As ListFolderContinueError.Path
+  overload: Dropbox.Api.Files.ListFolderContinueError.AsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ListFolderContinueError.IsReset
+  commentId: P:Dropbox.Api.Files.ListFolderContinueError.IsReset
+  id: IsReset
+  parent: Dropbox.Api.Files.ListFolderContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsReset
+  nameWithType: ListFolderContinueError.IsReset
+  fullName: Dropbox.Api.Files.ListFolderContinueError.IsReset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsReset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Reset</p>\n"
+  example: []
+  syntax:
+    content: public bool IsReset { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReset As Boolean
+  overload: Dropbox.Api.Files.ListFolderContinueError.IsReset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ListFolderContinueError.AsReset
+  commentId: P:Dropbox.Api.Files.ListFolderContinueError.AsReset
+  id: AsReset
+  parent: Dropbox.Api.Files.ListFolderContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsReset
+  nameWithType: ListFolderContinueError.AsReset
+  fullName: Dropbox.Api.Files.ListFolderContinueError.AsReset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsReset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Reset, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListFolderContinueError.Reset AsReset { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ListFolderContinueError.Reset
+    content.vb: Public ReadOnly Property AsReset As ListFolderContinueError.Reset
+  overload: Dropbox.Api.Files.ListFolderContinueError.AsReset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ListFolderContinueError.IsOther
+  commentId: P:Dropbox.Api.Files.ListFolderContinueError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.ListFolderContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ListFolderContinueError.IsOther
+  fullName: Dropbox.Api.Files.ListFolderContinueError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.ListFolderContinueError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ListFolderContinueError.AsOther
+  commentId: P:Dropbox.Api.Files.ListFolderContinueError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.ListFolderContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ListFolderContinueError.AsOther
+  fullName: Dropbox.Api.Files.ListFolderContinueError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListFolderContinueError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ListFolderContinueError.Other
+    content.vb: Public ReadOnly Property AsOther As ListFolderContinueError.Other
+  overload: Dropbox.Api.Files.ListFolderContinueError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.ListFolderContinueError
+  commentId: T:Dropbox.Api.Files.ListFolderContinueError
+  parent: Dropbox.Api.Files
+  name: ListFolderContinueError
+  nameWithType: ListFolderContinueError
+  fullName: Dropbox.Api.Files.ListFolderContinueError
+- uid: Dropbox.Api.Files.ListFolderContinueError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ListFolderContinueError.#ctor
+  name: ListFolderContinueError
+  nameWithType: ListFolderContinueError.ListFolderContinueError
+  fullName: Dropbox.Api.Files.ListFolderContinueError.ListFolderContinueError
+- uid: Dropbox.Api.Files.ListFolderContinueError.IsPath*
+  commentId: Overload:Dropbox.Api.Files.ListFolderContinueError.IsPath
+  name: IsPath
+  nameWithType: ListFolderContinueError.IsPath
+  fullName: Dropbox.Api.Files.ListFolderContinueError.IsPath
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.ListFolderContinueError.AsPath*
+  commentId: Overload:Dropbox.Api.Files.ListFolderContinueError.AsPath
+  name: AsPath
+  nameWithType: ListFolderContinueError.AsPath
+  fullName: Dropbox.Api.Files.ListFolderContinueError.AsPath
+- uid: Dropbox.Api.Files.ListFolderContinueError.Path
+  commentId: T:Dropbox.Api.Files.ListFolderContinueError.Path
+  parent: Dropbox.Api.Files
+  name: ListFolderContinueError.Path
+  nameWithType: ListFolderContinueError.Path
+  fullName: Dropbox.Api.Files.ListFolderContinueError.Path
+- uid: Dropbox.Api.Files.ListFolderContinueError.IsReset*
+  commentId: Overload:Dropbox.Api.Files.ListFolderContinueError.IsReset
+  name: IsReset
+  nameWithType: ListFolderContinueError.IsReset
+  fullName: Dropbox.Api.Files.ListFolderContinueError.IsReset
+- uid: Dropbox.Api.Files.ListFolderContinueError.AsReset*
+  commentId: Overload:Dropbox.Api.Files.ListFolderContinueError.AsReset
+  name: AsReset
+  nameWithType: ListFolderContinueError.AsReset
+  fullName: Dropbox.Api.Files.ListFolderContinueError.AsReset
+- uid: Dropbox.Api.Files.ListFolderContinueError.Reset
+  commentId: T:Dropbox.Api.Files.ListFolderContinueError.Reset
+  parent: Dropbox.Api.Files
+  name: ListFolderContinueError.Reset
+  nameWithType: ListFolderContinueError.Reset
+  fullName: Dropbox.Api.Files.ListFolderContinueError.Reset
+- uid: Dropbox.Api.Files.ListFolderContinueError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.ListFolderContinueError.IsOther
+  name: IsOther
+  nameWithType: ListFolderContinueError.IsOther
+  fullName: Dropbox.Api.Files.ListFolderContinueError.IsOther
+- uid: Dropbox.Api.Files.ListFolderContinueError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.ListFolderContinueError.AsOther
+  name: AsOther
+  nameWithType: ListFolderContinueError.AsOther
+  fullName: Dropbox.Api.Files.ListFolderContinueError.AsOther
+- uid: Dropbox.Api.Files.ListFolderContinueError.Other
+  commentId: T:Dropbox.Api.Files.ListFolderContinueError.Other
+  parent: Dropbox.Api.Files
+  name: ListFolderContinueError.Other
+  nameWithType: ListFolderContinueError.Other
+  fullName: Dropbox.Api.Files.ListFolderContinueError.Other

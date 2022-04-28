@@ -1,0 +1,504 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileRequestCreateDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestCreateDetails
+  id: FileRequestCreateDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileRequestCreateDetails.#ctor(System.String,Dropbox.Api.TeamLog.FileRequestDetails)
+  - Dropbox.Api.TeamLog.FileRequestCreateDetails.FileRequestId
+  - Dropbox.Api.TeamLog.FileRequestCreateDetails.RequestDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestCreateDetails
+  nameWithType: FileRequestCreateDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestCreateDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestCreateDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FileRequestCreateDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestCreateDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Created file request.</p>\n"
+  example: []
+  syntax:
+    content: public class FileRequestCreateDetails
+    content.vb: Public Class FileRequestCreateDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileRequestCreateDetails.#ctor(System.String,Dropbox.Api.TeamLog.FileRequestDetails)
+  commentId: M:Dropbox.Api.TeamLog.FileRequestCreateDetails.#ctor(System.String,Dropbox.Api.TeamLog.FileRequestDetails)
+  id: '#ctor(System.String,Dropbox.Api.TeamLog.FileRequestDetails)'
+  parent: Dropbox.Api.TeamLog.FileRequestCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestCreateDetails(String, FileRequestDetails)
+  nameWithType: FileRequestCreateDetails.FileRequestCreateDetails(String, FileRequestDetails)
+  fullName: Dropbox.Api.TeamLog.FileRequestCreateDetails.FileRequestCreateDetails(System.String, Dropbox.Api.TeamLog.FileRequestDetails)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestCreateDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestCreateDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestCreateDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestCreateDetails(string fileRequestId = null, FileRequestDetails requestDetails = null)
+    parameters:
+    - id: fileRequestId
+      type: System.String
+      description: >-
+        File request id. Might be missing due to historical
+
+        data gap.
+    - id: requestDetails
+      type: Dropbox.Api.TeamLog.FileRequestDetails
+      description: >-
+        File request details. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(fileRequestId As String = Nothing, requestDetails As FileRequestDetails = Nothing)
+  overload: Dropbox.Api.TeamLog.FileRequestCreateDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRequestCreateDetails.FileRequestId
+  commentId: P:Dropbox.Api.TeamLog.FileRequestCreateDetails.FileRequestId
+  id: FileRequestId
+  parent: Dropbox.Api.TeamLog.FileRequestCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestId
+  nameWithType: FileRequestCreateDetails.FileRequestId
+  fullName: Dropbox.Api.TeamLog.FileRequestCreateDetails.FileRequestId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestCreateDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FileRequestId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestCreateDetails.cs
+    startLine: 70
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>File request id. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public string FileRequestId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FileRequestId As String
+  overload: Dropbox.Api.TeamLog.FileRequestCreateDetails.FileRequestId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.FileRequestCreateDetails.RequestDetails
+  commentId: P:Dropbox.Api.TeamLog.FileRequestCreateDetails.RequestDetails
+  id: RequestDetails
+  parent: Dropbox.Api.TeamLog.FileRequestCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: RequestDetails
+  nameWithType: FileRequestCreateDetails.RequestDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestCreateDetails.RequestDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestCreateDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: RequestDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestCreateDetails.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>File request details. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestDetails RequestDetails { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FileRequestDetails
+    content.vb: Public Property RequestDetails As FileRequestDetails
+  overload: Dropbox.Api.TeamLog.FileRequestCreateDetails.RequestDetails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.FileRequestCreateDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestCreateDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestCreateDetails
+  nameWithType: FileRequestCreateDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestCreateDetails
+- uid: Dropbox.Api.TeamLog.FileRequestCreateDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestCreateDetails.#ctor
+  name: FileRequestCreateDetails
+  nameWithType: FileRequestCreateDetails.FileRequestCreateDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestCreateDetails.FileRequestCreateDetails
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.FileRequestDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestDetails
+  nameWithType: FileRequestDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestDetails
+- uid: Dropbox.Api.TeamLog.FileRequestCreateDetails.FileRequestId*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestCreateDetails.FileRequestId
+  name: FileRequestId
+  nameWithType: FileRequestCreateDetails.FileRequestId
+  fullName: Dropbox.Api.TeamLog.FileRequestCreateDetails.FileRequestId
+- uid: Dropbox.Api.TeamLog.FileRequestCreateDetails.RequestDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestCreateDetails.RequestDetails
+  name: RequestDetails
+  nameWithType: FileRequestCreateDetails.RequestDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestCreateDetails.RequestDetails

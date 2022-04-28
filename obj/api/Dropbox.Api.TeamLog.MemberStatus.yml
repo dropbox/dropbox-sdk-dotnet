@@ -1,0 +1,1047 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberStatus
+  commentId: T:Dropbox.Api.TeamLog.MemberStatus
+  id: MemberStatus
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberStatus.#ctor
+  - Dropbox.Api.TeamLog.MemberStatus.AsActive
+  - Dropbox.Api.TeamLog.MemberStatus.AsInvited
+  - Dropbox.Api.TeamLog.MemberStatus.AsMovedToAnotherTeam
+  - Dropbox.Api.TeamLog.MemberStatus.AsNotJoined
+  - Dropbox.Api.TeamLog.MemberStatus.AsOther
+  - Dropbox.Api.TeamLog.MemberStatus.AsRemoved
+  - Dropbox.Api.TeamLog.MemberStatus.AsSuspended
+  - Dropbox.Api.TeamLog.MemberStatus.IsActive
+  - Dropbox.Api.TeamLog.MemberStatus.IsInvited
+  - Dropbox.Api.TeamLog.MemberStatus.IsMovedToAnotherTeam
+  - Dropbox.Api.TeamLog.MemberStatus.IsNotJoined
+  - Dropbox.Api.TeamLog.MemberStatus.IsOther
+  - Dropbox.Api.TeamLog.MemberStatus.IsRemoved
+  - Dropbox.Api.TeamLog.MemberStatus.IsSuspended
+  langs:
+  - csharp
+  - vb
+  name: MemberStatus
+  nameWithType: MemberStatus
+  fullName: Dropbox.Api.TeamLog.MemberStatus
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MemberStatus
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The member status object</p>\n"
+  example: []
+  syntax:
+    content: public class MemberStatus
+    content.vb: Public Class MemberStatus
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.MemberStatus.Active
+  - Dropbox.Api.TeamLog.MemberStatus.Invited
+  - Dropbox.Api.TeamLog.MemberStatus.MovedToAnotherTeam
+  - Dropbox.Api.TeamLog.MemberStatus.NotJoined
+  - Dropbox.Api.TeamLog.MemberStatus.Other
+  - Dropbox.Api.TeamLog.MemberStatus.Removed
+  - Dropbox.Api.TeamLog.MemberStatus.Suspended
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberStatus.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberStatus.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: MemberStatus()
+  nameWithType: MemberStatus.MemberStatus()
+  fullName: Dropbox.Api.TeamLog.MemberStatus.MemberStatus()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberStatus\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberStatus()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberStatus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberStatus.IsActive
+  commentId: P:Dropbox.Api.TeamLog.MemberStatus.IsActive
+  id: IsActive
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: IsActive
+  nameWithType: MemberStatus.IsActive
+  fullName: Dropbox.Api.TeamLog.MemberStatus.IsActive
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsActive
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Active</p>\n"
+  example: []
+  syntax:
+    content: public bool IsActive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsActive As Boolean
+  overload: Dropbox.Api.TeamLog.MemberStatus.IsActive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberStatus.AsActive
+  commentId: P:Dropbox.Api.TeamLog.MemberStatus.AsActive
+  id: AsActive
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: AsActive
+  nameWithType: MemberStatus.AsActive
+  fullName: Dropbox.Api.TeamLog.MemberStatus.AsActive
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsActive
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Active, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberStatus.Active AsActive { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberStatus.Active
+    content.vb: Public ReadOnly Property AsActive As MemberStatus.Active
+  overload: Dropbox.Api.TeamLog.MemberStatus.AsActive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberStatus.IsInvited
+  commentId: P:Dropbox.Api.TeamLog.MemberStatus.IsInvited
+  id: IsInvited
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: IsInvited
+  nameWithType: MemberStatus.IsInvited
+  fullName: Dropbox.Api.TeamLog.MemberStatus.IsInvited
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInvited
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Invited</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvited { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvited As Boolean
+  overload: Dropbox.Api.TeamLog.MemberStatus.IsInvited*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberStatus.AsInvited
+  commentId: P:Dropbox.Api.TeamLog.MemberStatus.AsInvited
+  id: AsInvited
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: AsInvited
+  nameWithType: MemberStatus.AsInvited
+  fullName: Dropbox.Api.TeamLog.MemberStatus.AsInvited
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInvited
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Invited, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberStatus.Invited AsInvited { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberStatus.Invited
+    content.vb: Public ReadOnly Property AsInvited As MemberStatus.Invited
+  overload: Dropbox.Api.TeamLog.MemberStatus.AsInvited*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberStatus.IsMovedToAnotherTeam
+  commentId: P:Dropbox.Api.TeamLog.MemberStatus.IsMovedToAnotherTeam
+  id: IsMovedToAnotherTeam
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: IsMovedToAnotherTeam
+  nameWithType: MemberStatus.IsMovedToAnotherTeam
+  fullName: Dropbox.Api.TeamLog.MemberStatus.IsMovedToAnotherTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsMovedToAnotherTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is MovedToAnotherTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMovedToAnotherTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMovedToAnotherTeam As Boolean
+  overload: Dropbox.Api.TeamLog.MemberStatus.IsMovedToAnotherTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberStatus.AsMovedToAnotherTeam
+  commentId: P:Dropbox.Api.TeamLog.MemberStatus.AsMovedToAnotherTeam
+  id: AsMovedToAnotherTeam
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: AsMovedToAnotherTeam
+  nameWithType: MemberStatus.AsMovedToAnotherTeam
+  fullName: Dropbox.Api.TeamLog.MemberStatus.AsMovedToAnotherTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsMovedToAnotherTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a MovedToAnotherTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberStatus.MovedToAnotherTeam AsMovedToAnotherTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberStatus.MovedToAnotherTeam
+    content.vb: Public ReadOnly Property AsMovedToAnotherTeam As MemberStatus.MovedToAnotherTeam
+  overload: Dropbox.Api.TeamLog.MemberStatus.AsMovedToAnotherTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberStatus.IsNotJoined
+  commentId: P:Dropbox.Api.TeamLog.MemberStatus.IsNotJoined
+  id: IsNotJoined
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: IsNotJoined
+  nameWithType: MemberStatus.IsNotJoined
+  fullName: Dropbox.Api.TeamLog.MemberStatus.IsNotJoined
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNotJoined
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is NotJoined</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotJoined { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotJoined As Boolean
+  overload: Dropbox.Api.TeamLog.MemberStatus.IsNotJoined*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberStatus.AsNotJoined
+  commentId: P:Dropbox.Api.TeamLog.MemberStatus.AsNotJoined
+  id: AsNotJoined
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: AsNotJoined
+  nameWithType: MemberStatus.AsNotJoined
+  fullName: Dropbox.Api.TeamLog.MemberStatus.AsNotJoined
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNotJoined
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a NotJoined, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberStatus.NotJoined AsNotJoined { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberStatus.NotJoined
+    content.vb: Public ReadOnly Property AsNotJoined As MemberStatus.NotJoined
+  overload: Dropbox.Api.TeamLog.MemberStatus.AsNotJoined*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberStatus.IsRemoved
+  commentId: P:Dropbox.Api.TeamLog.MemberStatus.IsRemoved
+  id: IsRemoved
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: IsRemoved
+  nameWithType: MemberStatus.IsRemoved
+  fullName: Dropbox.Api.TeamLog.MemberStatus.IsRemoved
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsRemoved
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Removed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRemoved { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRemoved As Boolean
+  overload: Dropbox.Api.TeamLog.MemberStatus.IsRemoved*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberStatus.AsRemoved
+  commentId: P:Dropbox.Api.TeamLog.MemberStatus.AsRemoved
+  id: AsRemoved
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: AsRemoved
+  nameWithType: MemberStatus.AsRemoved
+  fullName: Dropbox.Api.TeamLog.MemberStatus.AsRemoved
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsRemoved
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Removed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberStatus.Removed AsRemoved { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberStatus.Removed
+    content.vb: Public ReadOnly Property AsRemoved As MemberStatus.Removed
+  overload: Dropbox.Api.TeamLog.MemberStatus.AsRemoved*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberStatus.IsSuspended
+  commentId: P:Dropbox.Api.TeamLog.MemberStatus.IsSuspended
+  id: IsSuspended
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: IsSuspended
+  nameWithType: MemberStatus.IsSuspended
+  fullName: Dropbox.Api.TeamLog.MemberStatus.IsSuspended
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSuspended
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 149
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Suspended</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSuspended { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSuspended As Boolean
+  overload: Dropbox.Api.TeamLog.MemberStatus.IsSuspended*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberStatus.AsSuspended
+  commentId: P:Dropbox.Api.TeamLog.MemberStatus.AsSuspended
+  id: AsSuspended
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: AsSuspended
+  nameWithType: MemberStatus.AsSuspended
+  fullName: Dropbox.Api.TeamLog.MemberStatus.AsSuspended
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSuspended
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 160
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Suspended, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberStatus.Suspended AsSuspended { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberStatus.Suspended
+    content.vb: Public ReadOnly Property AsSuspended As MemberStatus.Suspended
+  overload: Dropbox.Api.TeamLog.MemberStatus.AsSuspended*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberStatus.IsOther
+  commentId: P:Dropbox.Api.TeamLog.MemberStatus.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MemberStatus.IsOther
+  fullName: Dropbox.Api.TeamLog.MemberStatus.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 171
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.MemberStatus.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberStatus.AsOther
+  commentId: P:Dropbox.Api.TeamLog.MemberStatus.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.MemberStatus
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MemberStatus.AsOther
+  fullName: Dropbox.Api.TeamLog.MemberStatus.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberStatus.cs
+    startLine: 182
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberStatus.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberStatus.Other
+    content.vb: Public ReadOnly Property AsOther As MemberStatus.Other
+  overload: Dropbox.Api.TeamLog.MemberStatus.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.MemberStatus
+  commentId: T:Dropbox.Api.TeamLog.MemberStatus
+  parent: Dropbox.Api.TeamLog
+  name: MemberStatus
+  nameWithType: MemberStatus
+  fullName: Dropbox.Api.TeamLog.MemberStatus
+- uid: Dropbox.Api.TeamLog.MemberStatus.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.#ctor
+  name: MemberStatus
+  nameWithType: MemberStatus.MemberStatus
+  fullName: Dropbox.Api.TeamLog.MemberStatus.MemberStatus
+- uid: Dropbox.Api.TeamLog.MemberStatus.IsActive*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.IsActive
+  name: IsActive
+  nameWithType: MemberStatus.IsActive
+  fullName: Dropbox.Api.TeamLog.MemberStatus.IsActive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.MemberStatus.AsActive*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.AsActive
+  name: AsActive
+  nameWithType: MemberStatus.AsActive
+  fullName: Dropbox.Api.TeamLog.MemberStatus.AsActive
+- uid: Dropbox.Api.TeamLog.MemberStatus.Active
+  commentId: T:Dropbox.Api.TeamLog.MemberStatus.Active
+  parent: Dropbox.Api.TeamLog
+  name: MemberStatus.Active
+  nameWithType: MemberStatus.Active
+  fullName: Dropbox.Api.TeamLog.MemberStatus.Active
+- uid: Dropbox.Api.TeamLog.MemberStatus.IsInvited*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.IsInvited
+  name: IsInvited
+  nameWithType: MemberStatus.IsInvited
+  fullName: Dropbox.Api.TeamLog.MemberStatus.IsInvited
+- uid: Dropbox.Api.TeamLog.MemberStatus.AsInvited*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.AsInvited
+  name: AsInvited
+  nameWithType: MemberStatus.AsInvited
+  fullName: Dropbox.Api.TeamLog.MemberStatus.AsInvited
+- uid: Dropbox.Api.TeamLog.MemberStatus.Invited
+  commentId: T:Dropbox.Api.TeamLog.MemberStatus.Invited
+  parent: Dropbox.Api.TeamLog
+  name: MemberStatus.Invited
+  nameWithType: MemberStatus.Invited
+  fullName: Dropbox.Api.TeamLog.MemberStatus.Invited
+- uid: Dropbox.Api.TeamLog.MemberStatus.IsMovedToAnotherTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.IsMovedToAnotherTeam
+  name: IsMovedToAnotherTeam
+  nameWithType: MemberStatus.IsMovedToAnotherTeam
+  fullName: Dropbox.Api.TeamLog.MemberStatus.IsMovedToAnotherTeam
+- uid: Dropbox.Api.TeamLog.MemberStatus.AsMovedToAnotherTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.AsMovedToAnotherTeam
+  name: AsMovedToAnotherTeam
+  nameWithType: MemberStatus.AsMovedToAnotherTeam
+  fullName: Dropbox.Api.TeamLog.MemberStatus.AsMovedToAnotherTeam
+- uid: Dropbox.Api.TeamLog.MemberStatus.MovedToAnotherTeam
+  commentId: T:Dropbox.Api.TeamLog.MemberStatus.MovedToAnotherTeam
+  parent: Dropbox.Api.TeamLog
+  name: MemberStatus.MovedToAnotherTeam
+  nameWithType: MemberStatus.MovedToAnotherTeam
+  fullName: Dropbox.Api.TeamLog.MemberStatus.MovedToAnotherTeam
+- uid: Dropbox.Api.TeamLog.MemberStatus.IsNotJoined*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.IsNotJoined
+  name: IsNotJoined
+  nameWithType: MemberStatus.IsNotJoined
+  fullName: Dropbox.Api.TeamLog.MemberStatus.IsNotJoined
+- uid: Dropbox.Api.TeamLog.MemberStatus.AsNotJoined*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.AsNotJoined
+  name: AsNotJoined
+  nameWithType: MemberStatus.AsNotJoined
+  fullName: Dropbox.Api.TeamLog.MemberStatus.AsNotJoined
+- uid: Dropbox.Api.TeamLog.MemberStatus.NotJoined
+  commentId: T:Dropbox.Api.TeamLog.MemberStatus.NotJoined
+  parent: Dropbox.Api.TeamLog
+  name: MemberStatus.NotJoined
+  nameWithType: MemberStatus.NotJoined
+  fullName: Dropbox.Api.TeamLog.MemberStatus.NotJoined
+- uid: Dropbox.Api.TeamLog.MemberStatus.IsRemoved*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.IsRemoved
+  name: IsRemoved
+  nameWithType: MemberStatus.IsRemoved
+  fullName: Dropbox.Api.TeamLog.MemberStatus.IsRemoved
+- uid: Dropbox.Api.TeamLog.MemberStatus.AsRemoved*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.AsRemoved
+  name: AsRemoved
+  nameWithType: MemberStatus.AsRemoved
+  fullName: Dropbox.Api.TeamLog.MemberStatus.AsRemoved
+- uid: Dropbox.Api.TeamLog.MemberStatus.Removed
+  commentId: T:Dropbox.Api.TeamLog.MemberStatus.Removed
+  parent: Dropbox.Api.TeamLog
+  name: MemberStatus.Removed
+  nameWithType: MemberStatus.Removed
+  fullName: Dropbox.Api.TeamLog.MemberStatus.Removed
+- uid: Dropbox.Api.TeamLog.MemberStatus.IsSuspended*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.IsSuspended
+  name: IsSuspended
+  nameWithType: MemberStatus.IsSuspended
+  fullName: Dropbox.Api.TeamLog.MemberStatus.IsSuspended
+- uid: Dropbox.Api.TeamLog.MemberStatus.AsSuspended*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.AsSuspended
+  name: AsSuspended
+  nameWithType: MemberStatus.AsSuspended
+  fullName: Dropbox.Api.TeamLog.MemberStatus.AsSuspended
+- uid: Dropbox.Api.TeamLog.MemberStatus.Suspended
+  commentId: T:Dropbox.Api.TeamLog.MemberStatus.Suspended
+  parent: Dropbox.Api.TeamLog
+  name: MemberStatus.Suspended
+  nameWithType: MemberStatus.Suspended
+  fullName: Dropbox.Api.TeamLog.MemberStatus.Suspended
+- uid: Dropbox.Api.TeamLog.MemberStatus.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.IsOther
+  name: IsOther
+  nameWithType: MemberStatus.IsOther
+  fullName: Dropbox.Api.TeamLog.MemberStatus.IsOther
+- uid: Dropbox.Api.TeamLog.MemberStatus.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberStatus.AsOther
+  name: AsOther
+  nameWithType: MemberStatus.AsOther
+  fullName: Dropbox.Api.TeamLog.MemberStatus.AsOther
+- uid: Dropbox.Api.TeamLog.MemberStatus.Other
+  commentId: T:Dropbox.Api.TeamLog.MemberStatus.Other
+  parent: Dropbox.Api.TeamLog
+  name: MemberStatus.Other
+  nameWithType: MemberStatus.Other
+  fullName: Dropbox.Api.TeamLog.MemberStatus.Other

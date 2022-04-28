@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.RateLimitReason
+  commentId: T:Dropbox.Api.Auth.RateLimitReason
+  id: RateLimitReason
+  parent: Dropbox.Api.Auth
+  children:
+  - Dropbox.Api.Auth.RateLimitReason.#ctor
+  - Dropbox.Api.Auth.RateLimitReason.AsOther
+  - Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests
+  - Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations
+  - Dropbox.Api.Auth.RateLimitReason.IsOther
+  - Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests
+  - Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations
+  langs:
+  - csharp
+  - vb
+  name: RateLimitReason
+  nameWithType: RateLimitReason
+  fullName: Dropbox.Api.Auth.RateLimitReason
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: RateLimitReason
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>The rate limit reason object</p>\n"
+  example: []
+  syntax:
+    content: public class RateLimitReason
+    content.vb: Public Class RateLimitReason
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Auth.RateLimitReason.Other
+  - Dropbox.Api.Auth.RateLimitReason.TooManyRequests
+  - Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Auth.RateLimitReason.#ctor
+  commentId: M:Dropbox.Api.Auth.RateLimitReason.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Auth.RateLimitReason
+  langs:
+  - csharp
+  - vb
+  name: RateLimitReason()
+  nameWithType: RateLimitReason.RateLimitReason()
+  fullName: Dropbox.Api.Auth.RateLimitReason.RateLimitReason()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Auth.RateLimitReason\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RateLimitReason()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Auth.RateLimitReason.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests
+  id: IsTooManyRequests
+  parent: Dropbox.Api.Auth.RateLimitReason
+  langs:
+  - csharp
+  - vb
+  name: IsTooManyRequests
+  nameWithType: RateLimitReason.IsTooManyRequests
+  fullName: Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTooManyRequests
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets a value indicating whether this instance is TooManyRequests</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooManyRequests { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooManyRequests As Boolean
+  overload: Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests
+  id: AsTooManyRequests
+  parent: Dropbox.Api.Auth.RateLimitReason
+  langs:
+  - csharp
+  - vb
+  name: AsTooManyRequests
+  nameWithType: RateLimitReason.AsTooManyRequests
+  fullName: Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTooManyRequests
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets this instance as a TooManyRequests, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RateLimitReason.TooManyRequests AsTooManyRequests { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.RateLimitReason.TooManyRequests
+    content.vb: Public ReadOnly Property AsTooManyRequests As RateLimitReason.TooManyRequests
+  overload: Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations
+  id: IsTooManyWriteOperations
+  parent: Dropbox.Api.Auth.RateLimitReason
+  langs:
+  - csharp
+  - vb
+  name: IsTooManyWriteOperations
+  nameWithType: RateLimitReason.IsTooManyWriteOperations
+  fullName: Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTooManyWriteOperations
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets a value indicating whether this instance is\nTooManyWriteOperations</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooManyWriteOperations { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooManyWriteOperations As Boolean
+  overload: Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations
+  id: AsTooManyWriteOperations
+  parent: Dropbox.Api.Auth.RateLimitReason
+  langs:
+  - csharp
+  - vb
+  name: AsTooManyWriteOperations
+  nameWithType: RateLimitReason.AsTooManyWriteOperations
+  fullName: Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTooManyWriteOperations
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets this instance as a TooManyWriteOperations, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RateLimitReason.TooManyWriteOperations AsTooManyWriteOperations { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations
+    content.vb: Public ReadOnly Property AsTooManyWriteOperations As RateLimitReason.TooManyWriteOperations
+  overload: Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.RateLimitReason.IsOther
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Auth.RateLimitReason
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: RateLimitReason.IsOther
+  fullName: Dropbox.Api.Auth.RateLimitReason.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Auth.RateLimitReason.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.RateLimitReason.AsOther
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Auth.RateLimitReason
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: RateLimitReason.AsOther
+  fullName: Dropbox.Api.Auth.RateLimitReason.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RateLimitReason.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.RateLimitReason.Other
+    content.vb: Public ReadOnly Property AsOther As RateLimitReason.Other
+  overload: Dropbox.Api.Auth.RateLimitReason.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Auth.RateLimitReason
+  commentId: T:Dropbox.Api.Auth.RateLimitReason
+  parent: Dropbox.Api.Auth
+  name: RateLimitReason
+  nameWithType: RateLimitReason
+  fullName: Dropbox.Api.Auth.RateLimitReason
+- uid: Dropbox.Api.Auth.RateLimitReason.#ctor*
+  commentId: Overload:Dropbox.Api.Auth.RateLimitReason.#ctor
+  name: RateLimitReason
+  nameWithType: RateLimitReason.RateLimitReason
+  fullName: Dropbox.Api.Auth.RateLimitReason.RateLimitReason
+- uid: Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests*
+  commentId: Overload:Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests
+  name: IsTooManyRequests
+  nameWithType: RateLimitReason.IsTooManyRequests
+  fullName: Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests*
+  commentId: Overload:Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests
+  name: AsTooManyRequests
+  nameWithType: RateLimitReason.AsTooManyRequests
+  fullName: Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests
+- uid: Dropbox.Api.Auth.RateLimitReason.TooManyRequests
+  commentId: T:Dropbox.Api.Auth.RateLimitReason.TooManyRequests
+  parent: Dropbox.Api.Auth
+  name: RateLimitReason.TooManyRequests
+  nameWithType: RateLimitReason.TooManyRequests
+  fullName: Dropbox.Api.Auth.RateLimitReason.TooManyRequests
+- uid: Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations*
+  commentId: Overload:Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations
+  name: IsTooManyWriteOperations
+  nameWithType: RateLimitReason.IsTooManyWriteOperations
+  fullName: Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations
+- uid: Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations*
+  commentId: Overload:Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations
+  name: AsTooManyWriteOperations
+  nameWithType: RateLimitReason.AsTooManyWriteOperations
+  fullName: Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations
+- uid: Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations
+  commentId: T:Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations
+  parent: Dropbox.Api.Auth
+  name: RateLimitReason.TooManyWriteOperations
+  nameWithType: RateLimitReason.TooManyWriteOperations
+  fullName: Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations
+- uid: Dropbox.Api.Auth.RateLimitReason.IsOther*
+  commentId: Overload:Dropbox.Api.Auth.RateLimitReason.IsOther
+  name: IsOther
+  nameWithType: RateLimitReason.IsOther
+  fullName: Dropbox.Api.Auth.RateLimitReason.IsOther
+- uid: Dropbox.Api.Auth.RateLimitReason.AsOther*
+  commentId: Overload:Dropbox.Api.Auth.RateLimitReason.AsOther
+  name: AsOther
+  nameWithType: RateLimitReason.AsOther
+  fullName: Dropbox.Api.Auth.RateLimitReason.AsOther
+- uid: Dropbox.Api.Auth.RateLimitReason.Other
+  commentId: T:Dropbox.Api.Auth.RateLimitReason.Other
+  parent: Dropbox.Api.Auth
+  name: RateLimitReason.Other
+  nameWithType: RateLimitReason.Other
+  fullName: Dropbox.Api.Auth.RateLimitReason.Other

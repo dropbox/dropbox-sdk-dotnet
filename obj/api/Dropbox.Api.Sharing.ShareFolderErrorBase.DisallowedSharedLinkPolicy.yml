@@ -1,0 +1,469 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.DisallowedSharedLinkPolicy
+  commentId: T:Dropbox.Api.Sharing.ShareFolderErrorBase.DisallowedSharedLinkPolicy
+  id: ShareFolderErrorBase.DisallowedSharedLinkPolicy
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.DisallowedSharedLinkPolicy.Instance
+  langs:
+  - csharp
+  - vb
+  name: ShareFolderErrorBase.DisallowedSharedLinkPolicy
+  nameWithType: ShareFolderErrorBase.DisallowedSharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.DisallowedSharedLinkPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderErrorBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: DisallowedSharedLinkPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderErrorBase.cs
+    startLine: 486
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The current user&apos;s account is not allowed to select the specified <see cref=\"!:Dropbox.Api.Sharing.ShareFolderArg.SharedLinkPolicy\"></see>.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class DisallowedSharedLinkPolicy : ShareFolderErrorBase'
+    content.vb: >-
+      Public NotInheritable Class DisallowedSharedLinkPolicy
+          Inherits ShareFolderErrorBase
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.ShareFolderErrorBase
+  inheritedMembers:
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.IsEmailUnverified
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.AsEmailUnverified
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.IsBadPath
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.AsBadPath
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.IsTeamPolicyDisallowsMemberPolicy
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.AsTeamPolicyDisallowsMemberPolicy
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.IsDisallowedSharedLinkPolicy
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.AsDisallowedSharedLinkPolicy
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.IsOther
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.DisallowedSharedLinkPolicy.Instance
+  commentId: F:Dropbox.Api.Sharing.ShareFolderErrorBase.DisallowedSharedLinkPolicy.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase.DisallowedSharedLinkPolicy
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ShareFolderErrorBase.DisallowedSharedLinkPolicy.Instance
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.DisallowedSharedLinkPolicy.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderErrorBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderErrorBase.cs
+    startLine: 511
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of DisallowedSharedLinkPolicy</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ShareFolderErrorBase.DisallowedSharedLinkPolicy Instance
+    return:
+      type: Dropbox.Api.Sharing.ShareFolderErrorBase.DisallowedSharedLinkPolicy
+    content.vb: Public Shared ReadOnly Instance As ShareFolderErrorBase.DisallowedSharedLinkPolicy
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase
+  commentId: T:Dropbox.Api.Sharing.ShareFolderErrorBase
+  parent: Dropbox.Api.Sharing
+  name: ShareFolderErrorBase
+  nameWithType: ShareFolderErrorBase
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.IsEmailUnverified
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.IsEmailUnverified
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: IsEmailUnverified
+  nameWithType: ShareFolderErrorBase.IsEmailUnverified
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.IsEmailUnverified
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.AsEmailUnverified
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.AsEmailUnverified
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: AsEmailUnverified
+  nameWithType: ShareFolderErrorBase.AsEmailUnverified
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.AsEmailUnverified
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.IsBadPath
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.IsBadPath
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: IsBadPath
+  nameWithType: ShareFolderErrorBase.IsBadPath
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.IsBadPath
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.AsBadPath
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.AsBadPath
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: AsBadPath
+  nameWithType: ShareFolderErrorBase.AsBadPath
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.AsBadPath
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.IsTeamPolicyDisallowsMemberPolicy
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.IsTeamPolicyDisallowsMemberPolicy
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: IsTeamPolicyDisallowsMemberPolicy
+  nameWithType: ShareFolderErrorBase.IsTeamPolicyDisallowsMemberPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.IsTeamPolicyDisallowsMemberPolicy
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.AsTeamPolicyDisallowsMemberPolicy
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.AsTeamPolicyDisallowsMemberPolicy
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: AsTeamPolicyDisallowsMemberPolicy
+  nameWithType: ShareFolderErrorBase.AsTeamPolicyDisallowsMemberPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.AsTeamPolicyDisallowsMemberPolicy
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.IsDisallowedSharedLinkPolicy
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.IsDisallowedSharedLinkPolicy
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: IsDisallowedSharedLinkPolicy
+  nameWithType: ShareFolderErrorBase.IsDisallowedSharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.IsDisallowedSharedLinkPolicy
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.AsDisallowedSharedLinkPolicy
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.AsDisallowedSharedLinkPolicy
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: AsDisallowedSharedLinkPolicy
+  nameWithType: ShareFolderErrorBase.AsDisallowedSharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.AsDisallowedSharedLinkPolicy
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.IsOther
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.IsOther
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: IsOther
+  nameWithType: ShareFolderErrorBase.IsOther
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.IsOther
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.AsOther
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.AsOther
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: AsOther
+  nameWithType: ShareFolderErrorBase.AsOther
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.DisallowedSharedLinkPolicy
+  commentId: T:Dropbox.Api.Sharing.ShareFolderErrorBase.DisallowedSharedLinkPolicy
+  parent: Dropbox.Api.Sharing
+  name: ShareFolderErrorBase.DisallowedSharedLinkPolicy
+  nameWithType: ShareFolderErrorBase.DisallowedSharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.DisallowedSharedLinkPolicy

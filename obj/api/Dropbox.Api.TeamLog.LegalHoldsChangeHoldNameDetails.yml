@@ -1,0 +1,540 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails
+  commentId: T:Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails
+  id: LegalHoldsChangeHoldNameDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.#ctor(System.String,System.String,System.String)
+  - Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.LegalHoldId
+  - Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.NewValue
+  - Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsChangeHoldNameDetails
+  nameWithType: LegalHoldsChangeHoldNameDetails
+  fullName: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsChangeHoldNameDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LegalHoldsChangeHoldNameDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsChangeHoldNameDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Renamed a hold.</p>\n"
+  example: []
+  syntax:
+    content: public class LegalHoldsChangeHoldNameDetails
+    content.vb: Public Class LegalHoldsChangeHoldNameDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.#ctor(System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsChangeHoldNameDetails(String, String, String)
+  nameWithType: LegalHoldsChangeHoldNameDetails.LegalHoldsChangeHoldNameDetails(String, String, String)
+  fullName: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.LegalHoldsChangeHoldNameDetails(System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsChangeHoldNameDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsChangeHoldNameDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsChangeHoldNameDetails(string legalHoldId, string previousValue, string newValue)
+    parameters:
+    - id: legalHoldId
+      type: System.String
+      description: Hold ID.
+    - id: previousValue
+      type: System.String
+      description: Previous Name.
+    - id: newValue
+      type: System.String
+      description: New Name.
+    content.vb: Public Sub New(legalHoldId As String, previousValue As String, newValue As String)
+  overload: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.LegalHoldId
+  commentId: P:Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.LegalHoldId
+  id: LegalHoldId
+  parent: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldId
+  nameWithType: LegalHoldsChangeHoldNameDetails.LegalHoldId
+  fullName: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.LegalHoldId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsChangeHoldNameDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LegalHoldId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsChangeHoldNameDetails.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Hold ID.</p>\n"
+  example: []
+  syntax:
+    content: public string LegalHoldId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LegalHoldId As String
+  overload: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.LegalHoldId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: LegalHoldsChangeHoldNameDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsChangeHoldNameDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsChangeHoldNameDetails.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous Name.</p>\n"
+  example: []
+  syntax:
+    content: public string PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PreviousValue As String
+  overload: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: LegalHoldsChangeHoldNameDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsChangeHoldNameDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsChangeHoldNameDetails.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New Name.</p>\n"
+  example: []
+  syntax:
+    content: public string NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NewValue As String
+  overload: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails
+  commentId: T:Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails
+  parent: Dropbox.Api.TeamLog
+  name: LegalHoldsChangeHoldNameDetails
+  nameWithType: LegalHoldsChangeHoldNameDetails
+  fullName: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails
+- uid: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.#ctor
+  name: LegalHoldsChangeHoldNameDetails
+  nameWithType: LegalHoldsChangeHoldNameDetails.LegalHoldsChangeHoldNameDetails
+  fullName: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.LegalHoldsChangeHoldNameDetails
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.LegalHoldId*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.LegalHoldId
+  name: LegalHoldId
+  nameWithType: LegalHoldsChangeHoldNameDetails.LegalHoldId
+  fullName: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.LegalHoldId
+- uid: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: LegalHoldsChangeHoldNameDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.PreviousValue
+- uid: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.NewValue
+  name: NewValue
+  nameWithType: LegalHoldsChangeHoldNameDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.LegalHoldsChangeHoldNameDetails.NewValue

@@ -1,0 +1,443 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateResult
+  commentId: T:Dropbox.Api.Team.ExcludedUsersUpdateResult
+  id: ExcludedUsersUpdateResult
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ExcludedUsersUpdateResult.#ctor(Dropbox.Api.Team.ExcludedUsersUpdateStatus)
+  - Dropbox.Api.Team.ExcludedUsersUpdateResult.Status
+  langs:
+  - csharp
+  - vb
+  name: ExcludedUsersUpdateResult
+  nameWithType: ExcludedUsersUpdateResult
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ExcludedUsersUpdateResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Excluded users update result.</p>\n"
+  example: []
+  syntax:
+    content: public class ExcludedUsersUpdateResult
+    content.vb: Public Class ExcludedUsersUpdateResult
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateResult.#ctor(Dropbox.Api.Team.ExcludedUsersUpdateStatus)
+  commentId: M:Dropbox.Api.Team.ExcludedUsersUpdateResult.#ctor(Dropbox.Api.Team.ExcludedUsersUpdateStatus)
+  id: '#ctor(Dropbox.Api.Team.ExcludedUsersUpdateStatus)'
+  parent: Dropbox.Api.Team.ExcludedUsersUpdateResult
+  langs:
+  - csharp
+  - vb
+  name: ExcludedUsersUpdateResult(ExcludedUsersUpdateStatus)
+  nameWithType: ExcludedUsersUpdateResult.ExcludedUsersUpdateResult(ExcludedUsersUpdateStatus)
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateResult.ExcludedUsersUpdateResult(Dropbox.Api.Team.ExcludedUsersUpdateStatus)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateResult.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ExcludedUsersUpdateResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ExcludedUsersUpdateResult(ExcludedUsersUpdateStatus status)
+    parameters:
+    - id: status
+      type: Dropbox.Api.Team.ExcludedUsersUpdateStatus
+      description: Update status.
+    content.vb: Public Sub New(status As ExcludedUsersUpdateStatus)
+  overload: Dropbox.Api.Team.ExcludedUsersUpdateResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateResult.Status
+  commentId: P:Dropbox.Api.Team.ExcludedUsersUpdateResult.Status
+  id: Status
+  parent: Dropbox.Api.Team.ExcludedUsersUpdateResult
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: ExcludedUsersUpdateResult.Status
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateResult.Status
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Status
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateResult.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Update status.</p>\n"
+  example: []
+  syntax:
+    content: public ExcludedUsersUpdateStatus Status { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.ExcludedUsersUpdateStatus
+    content.vb: Public Property Status As ExcludedUsersUpdateStatus
+  overload: Dropbox.Api.Team.ExcludedUsersUpdateResult.Status*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateResult
+  commentId: T:Dropbox.Api.Team.ExcludedUsersUpdateResult
+  parent: Dropbox.Api.Team
+  name: ExcludedUsersUpdateResult
+  nameWithType: ExcludedUsersUpdateResult
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateResult
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateResult.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersUpdateResult.#ctor
+  name: ExcludedUsersUpdateResult
+  nameWithType: ExcludedUsersUpdateResult.ExcludedUsersUpdateResult
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateResult.ExcludedUsersUpdateResult
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus
+  commentId: T:Dropbox.Api.Team.ExcludedUsersUpdateStatus
+  parent: Dropbox.Api.Team
+  name: ExcludedUsersUpdateStatus
+  nameWithType: ExcludedUsersUpdateStatus
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateResult.Status*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersUpdateResult.Status
+  name: Status
+  nameWithType: ExcludedUsersUpdateResult.Status
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateResult.Status

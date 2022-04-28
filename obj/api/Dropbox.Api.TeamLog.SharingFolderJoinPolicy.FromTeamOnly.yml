@@ -1,0 +1,441 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly
+  commentId: T:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly
+  id: SharingFolderJoinPolicy.FromTeamOnly
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly.Instance
+  langs:
+  - csharp
+  - vb
+  name: SharingFolderJoinPolicy.FromTeamOnly
+  nameWithType: SharingFolderJoinPolicy.FromTeamOnly
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FromTeamOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+    startLine: 253
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The from team only object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class FromTeamOnly : SharingFolderJoinPolicy'
+    content.vb: >-
+      Public NotInheritable Class FromTeamOnly
+          Inherits SharingFolderJoinPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromAnyone
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromAnyone
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromTeamOnly
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromTeamOnly
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsOther
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly.Instance
+  commentId: F:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SharingFolderJoinPolicy.FromTeamOnly.Instance
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+    startLine: 278
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of FromTeamOnly</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SharingFolderJoinPolicy.FromTeamOnly Instance
+    return:
+      type: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly
+    content.vb: Public Shared ReadOnly Instance As SharingFolderJoinPolicy.FromTeamOnly
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  commentId: T:Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  parent: Dropbox.Api.TeamLog
+  name: SharingFolderJoinPolicy
+  nameWithType: SharingFolderJoinPolicy
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromAnyone
+  commentId: P:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromAnyone
+  parent: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  name: IsFromAnyone
+  nameWithType: SharingFolderJoinPolicy.IsFromAnyone
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromAnyone
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromAnyone
+  commentId: P:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromAnyone
+  parent: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  name: AsFromAnyone
+  nameWithType: SharingFolderJoinPolicy.AsFromAnyone
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromAnyone
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromTeamOnly
+  commentId: P:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromTeamOnly
+  parent: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  name: IsFromTeamOnly
+  nameWithType: SharingFolderJoinPolicy.IsFromTeamOnly
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromTeamOnly
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromTeamOnly
+  commentId: P:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromTeamOnly
+  parent: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  name: AsFromTeamOnly
+  nameWithType: SharingFolderJoinPolicy.AsFromTeamOnly
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromTeamOnly
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsOther
+  parent: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  name: IsOther
+  nameWithType: SharingFolderJoinPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsOther
+  parent: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  name: AsOther
+  nameWithType: SharingFolderJoinPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly
+  commentId: T:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly
+  parent: Dropbox.Api.TeamLog
+  name: SharingFolderJoinPolicy.FromTeamOnly
+  nameWithType: SharingFolderJoinPolicy.FromTeamOnly
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly

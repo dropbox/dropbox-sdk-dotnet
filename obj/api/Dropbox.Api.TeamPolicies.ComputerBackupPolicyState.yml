@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+  commentId: T:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+  id: ComputerBackupPolicyState
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.#ctor
+  - Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDefault
+  - Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDisabled
+  - Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsEnabled
+  - Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsOther
+  - Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDefault
+  - Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDisabled
+  - Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsEnabled
+  - Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsOther
+  langs:
+  - csharp
+  - vb
+  name: ComputerBackupPolicyState
+  nameWithType: ComputerBackupPolicyState
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ComputerBackupPolicyState
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>The computer backup policy state object</p>\n"
+  example: []
+  syntax:
+    content: public class ComputerBackupPolicyState
+    content.vb: Public Class ComputerBackupPolicyState
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Default
+  - Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Disabled
+  - Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Enabled
+  - Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.#ctor
+  commentId: M:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+  langs:
+  - csharp
+  - vb
+  name: ComputerBackupPolicyState()
+  nameWithType: ComputerBackupPolicyState.ComputerBackupPolicyState()
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.ComputerBackupPolicyState()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamPolicies.ComputerBackupPolicyState\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ComputerBackupPolicyState()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: ComputerBackupPolicyState.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: ComputerBackupPolicyState.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ComputerBackupPolicyState.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As ComputerBackupPolicyState.Disabled
+  overload: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsEnabled
+  id: IsEnabled
+  parent: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: ComputerBackupPolicyState.IsEnabled
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Enabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnabled As Boolean
+  overload: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsEnabled
+  id: AsEnabled
+  parent: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+  langs:
+  - csharp
+  - vb
+  name: AsEnabled
+  nameWithType: ComputerBackupPolicyState.AsEnabled
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Enabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ComputerBackupPolicyState.Enabled AsEnabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Enabled
+    content.vb: Public ReadOnly Property AsEnabled As ComputerBackupPolicyState.Enabled
+  overload: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDefault
+  commentId: P:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDefault
+  id: IsDefault
+  parent: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+  langs:
+  - csharp
+  - vb
+  name: IsDefault
+  nameWithType: ComputerBackupPolicyState.IsDefault
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDefault
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDefault
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Default</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDefault { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDefault As Boolean
+  overload: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDefault*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDefault
+  commentId: P:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDefault
+  id: AsDefault
+  parent: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+  langs:
+  - csharp
+  - vb
+  name: AsDefault
+  nameWithType: ComputerBackupPolicyState.AsDefault
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDefault
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDefault
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Default, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ComputerBackupPolicyState.Default AsDefault { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Default
+    content.vb: Public ReadOnly Property AsDefault As ComputerBackupPolicyState.Default
+  overload: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDefault*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ComputerBackupPolicyState.IsOther
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ComputerBackupPolicyState.AsOther
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ComputerBackupPolicyState.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ComputerBackupPolicyState.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Other
+    content.vb: Public ReadOnly Property AsOther As ComputerBackupPolicyState.Other
+  overload: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+  commentId: T:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+  parent: Dropbox.Api.TeamPolicies
+  name: ComputerBackupPolicyState
+  nameWithType: ComputerBackupPolicyState
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.#ctor*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.#ctor
+  name: ComputerBackupPolicyState
+  nameWithType: ComputerBackupPolicyState.ComputerBackupPolicyState
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.ComputerBackupPolicyState
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDisabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDisabled
+  name: IsDisabled
+  nameWithType: ComputerBackupPolicyState.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDisabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDisabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDisabled
+  name: AsDisabled
+  nameWithType: ComputerBackupPolicyState.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDisabled
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Disabled
+  commentId: T:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Disabled
+  parent: Dropbox.Api.TeamPolicies
+  name: ComputerBackupPolicyState.Disabled
+  nameWithType: ComputerBackupPolicyState.Disabled
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Disabled
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsEnabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsEnabled
+  name: IsEnabled
+  nameWithType: ComputerBackupPolicyState.IsEnabled
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsEnabled
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsEnabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsEnabled
+  name: AsEnabled
+  nameWithType: ComputerBackupPolicyState.AsEnabled
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsEnabled
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Enabled
+  commentId: T:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Enabled
+  parent: Dropbox.Api.TeamPolicies
+  name: ComputerBackupPolicyState.Enabled
+  nameWithType: ComputerBackupPolicyState.Enabled
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Enabled
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDefault*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDefault
+  name: IsDefault
+  nameWithType: ComputerBackupPolicyState.IsDefault
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsDefault
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDefault*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDefault
+  name: AsDefault
+  nameWithType: ComputerBackupPolicyState.AsDefault
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsDefault
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Default
+  commentId: T:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Default
+  parent: Dropbox.Api.TeamPolicies
+  name: ComputerBackupPolicyState.Default
+  nameWithType: ComputerBackupPolicyState.Default
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Default
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsOther
+  name: IsOther
+  nameWithType: ComputerBackupPolicyState.IsOther
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.IsOther
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsOther
+  name: AsOther
+  nameWithType: ComputerBackupPolicyState.AsOther
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.AsOther
+- uid: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Other
+  commentId: T:Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Other
+  parent: Dropbox.Api.TeamPolicies
+  name: ComputerBackupPolicyState.Other
+  nameWithType: ComputerBackupPolicyState.Other
+  fullName: Dropbox.Api.TeamPolicies.ComputerBackupPolicyState.Other

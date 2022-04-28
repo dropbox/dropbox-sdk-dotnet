@@ -1,0 +1,2090 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  commentId: T:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  id: FilePropertiesTeamRoutes
+  parent: Dropbox.Api.FileProperties.Routes
+  children:
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesAddForTeam(Dropbox.Api.FileProperties.AddTemplateArg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesAddForTeam(System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate},System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesGetForTeam(Dropbox.Api.FileProperties.GetTemplateArg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesGetForTeam(System.String,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesListForTeam(System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam(Dropbox.Api.FileProperties.RemoveTemplateArg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam(System.String,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam(Dropbox.Api.FileProperties.UpdateTemplateArg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate},System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesAddForTeam(System.IAsyncResult)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesGetForTeam(System.IAsyncResult)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesListForTeam(System.IAsyncResult)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesRemoveForTeam(System.IAsyncResult)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesUpdateForTeam(System.IAsyncResult)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate})
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync(Dropbox.Api.FileProperties.GetTemplateArg)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync(System.String)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesListForTeamAsync
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync(Dropbox.Api.FileProperties.RemoveTemplateArg)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync(System.String)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync(Dropbox.Api.FileProperties.UpdateTemplateArg)
+  - Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate})
+  langs:
+  - csharp
+  - vb
+  name: FilePropertiesTeamRoutes
+  nameWithType: FilePropertiesTeamRoutes
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FilePropertiesTeamRoutes
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>The routes for the <xref href=\"Dropbox.Api.FileProperties\" data-throw-if-not-resolved=\"false\"></xref> namespace</p>\n"
+  example: []
+  syntax:
+    content: public class FilePropertiesTeamRoutes
+    content.vb: Public Class FilePropertiesTeamRoutes
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  id: TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: TemplatesAddForTeamAsync(AddTemplateArg)
+  nameWithType: FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(AddTemplateArg)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TemplatesAddForTeamAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 44
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Add a template associated with a team. See <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesAddAsync(Dropbox.Api.FileProperties.AddPropertiesArg)\" data-throw-if-not-resolved=\"false\"></xref> to add properties to a file or folder.</p>\n<p>Note: this endpoint will create team-owned templates.</p>\n"
+  example: []
+  syntax:
+    content: public Task<AddTemplateResult> TemplatesAddForTeamAsync(AddTemplateArg addTemplateArg)
+    parameters:
+    - id: addTemplateArg
+      type: Dropbox.Api.FileProperties.AddTemplateArg
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileProperties.AddTemplateResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function TemplatesAddForTeamAsync(addTemplateArg As AddTemplateArg) As Task(Of AddTemplateResult)
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileProperties.ModifyTemplateError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesAddForTeam(Dropbox.Api.FileProperties.AddTemplateArg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesAddForTeam(Dropbox.Api.FileProperties.AddTemplateArg,System.AsyncCallback,System.Object)
+  id: BeginTemplatesAddForTeam(Dropbox.Api.FileProperties.AddTemplateArg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginTemplatesAddForTeam(AddTemplateArg, AsyncCallback, Object)
+  nameWithType: FilePropertiesTeamRoutes.BeginTemplatesAddForTeam(AddTemplateArg, AsyncCallback, Object)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesAddForTeam(Dropbox.Api.FileProperties.AddTemplateArg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: BeginTemplatesAddForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Begins an asynchronous send to the templates add for team route.</p>\n"
+  example: []
+  syntax:
+    content: public IAsyncResult BeginTemplatesAddForTeam(AddTemplateArg addTemplateArg, AsyncCallback callback, object state = null)
+    parameters:
+    - id: addTemplateArg
+      type: Dropbox.Api.FileProperties.AddTemplateArg
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginTemplatesAddForTeam(addTemplateArg As AddTemplateArg, callback As AsyncCallback, state As Object = Nothing) As IAsyncResult
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesAddForTeam*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate})
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate})
+  id: TemplatesAddForTeamAsync(System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate})
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: TemplatesAddForTeamAsync(String, String, IEnumerable<PropertyFieldTemplate>)
+  nameWithType: FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(String, String, IEnumerable<PropertyFieldTemplate>)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(System.String, System.String, System.Collections.Generic.IEnumerable<Dropbox.Api.FileProperties.PropertyFieldTemplate>)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TemplatesAddForTeamAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Add a template associated with a team. See <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesAddAsync(Dropbox.Api.FileProperties.AddPropertiesArg)\" data-throw-if-not-resolved=\"false\"></xref> to add properties to a file or folder.</p>\n<p>Note: this endpoint will create team-owned templates.</p>\n"
+  example: []
+  syntax:
+    content: public Task<AddTemplateResult> TemplatesAddForTeamAsync(string name, string description, IEnumerable<PropertyFieldTemplate> fields)
+    parameters:
+    - id: name
+      type: System.String
+      description: >-
+        Display name for the template. Template names can be up to 256
+
+        bytes.
+    - id: description
+      type: System.String
+      description: >-
+        Description for the template. Template descriptions can
+
+        be up to 1024 bytes.
+    - id: fields
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate}
+      description: >-
+        Definitions of the property fields associated with this
+
+        template. There can be up to 32 properties in a single template.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileProperties.AddTemplateResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function TemplatesAddForTeamAsync(name As String, description As String, fields As IEnumerable(Of PropertyFieldTemplate)) As Task(Of AddTemplateResult)
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileProperties.ModifyTemplateError" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(String, String, IEnumerable(Of PropertyFieldTemplate))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(System.String, System.String, System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileProperties.PropertyFieldTemplate))
+  name.vb: TemplatesAddForTeamAsync(String, String, IEnumerable(Of PropertyFieldTemplate))
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesAddForTeam(System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate},System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesAddForTeam(System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate},System.AsyncCallback,System.Object)
+  id: BeginTemplatesAddForTeam(System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate},System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginTemplatesAddForTeam(String, String, IEnumerable<PropertyFieldTemplate>, AsyncCallback, Object)
+  nameWithType: FilePropertiesTeamRoutes.BeginTemplatesAddForTeam(String, String, IEnumerable<PropertyFieldTemplate>, AsyncCallback, Object)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesAddForTeam(System.String, System.String, System.Collections.Generic.IEnumerable<Dropbox.Api.FileProperties.PropertyFieldTemplate>, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: BeginTemplatesAddForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Begins an asynchronous send to the templates add for team route.</p>\n"
+  example: []
+  syntax:
+    content: public IAsyncResult BeginTemplatesAddForTeam(string name, string description, IEnumerable<PropertyFieldTemplate> fields, AsyncCallback callback, object callbackState = null)
+    parameters:
+    - id: name
+      type: System.String
+      description: >-
+        Display name for the template. Template names can be up to 256
+
+        bytes.
+    - id: description
+      type: System.String
+      description: >-
+        Description for the template. Template descriptions can
+
+        be up to 1024 bytes.
+    - id: fields
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate}
+      description: >-
+        Definitions of the property fields associated with this
+
+        template. There can be up to 32 properties in a single template.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginTemplatesAddForTeam(name As String, description As String, fields As IEnumerable(Of PropertyFieldTemplate), callback As AsyncCallback, callbackState As Object = Nothing) As IAsyncResult
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesAddForTeam*
+  nameWithType.vb: FilePropertiesTeamRoutes.BeginTemplatesAddForTeam(String, String, IEnumerable(Of PropertyFieldTemplate), AsyncCallback, Object)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesAddForTeam(System.String, System.String, System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileProperties.PropertyFieldTemplate), System.AsyncCallback, System.Object)
+  name.vb: BeginTemplatesAddForTeam(String, String, IEnumerable(Of PropertyFieldTemplate), AsyncCallback, Object)
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesAddForTeam(System.IAsyncResult)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesAddForTeam(System.IAsyncResult)
+  id: EndTemplatesAddForTeam(System.IAsyncResult)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndTemplatesAddForTeam(IAsyncResult)
+  nameWithType: FilePropertiesTeamRoutes.EndTemplatesAddForTeam(IAsyncResult)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesAddForTeam(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: EndTemplatesAddForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 130
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the templates add for team route\nto complete</p>\n"
+  example: []
+  syntax:
+    content: public AddTemplateResult EndTemplatesAddForTeam(IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.FileProperties.AddTemplateResult
+      description: The response to the send request
+    content.vb: Public Function EndTemplatesAddForTeam(asyncResult As IAsyncResult) As AddTemplateResult
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesAddForTeam*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileProperties.ModifyTemplateError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync(Dropbox.Api.FileProperties.GetTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync(Dropbox.Api.FileProperties.GetTemplateArg)
+  id: TemplatesGetForTeamAsync(Dropbox.Api.FileProperties.GetTemplateArg)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: TemplatesGetForTeamAsync(GetTemplateArg)
+  nameWithType: FilePropertiesTeamRoutes.TemplatesGetForTeamAsync(GetTemplateArg)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync(Dropbox.Api.FileProperties.GetTemplateArg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TemplatesGetForTeamAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 150
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Get the schema for a specified template.</p>\n"
+  example: []
+  syntax:
+    content: public Task<GetTemplateResult> TemplatesGetForTeamAsync(GetTemplateArg getTemplateArg)
+    parameters:
+    - id: getTemplateArg
+      type: Dropbox.Api.FileProperties.GetTemplateArg
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileProperties.GetTemplateResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function TemplatesGetForTeamAsync(getTemplateArg As GetTemplateArg) As Task(Of GetTemplateResult)
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileProperties.TemplateError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesGetForTeam(Dropbox.Api.FileProperties.GetTemplateArg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesGetForTeam(Dropbox.Api.FileProperties.GetTemplateArg,System.AsyncCallback,System.Object)
+  id: BeginTemplatesGetForTeam(Dropbox.Api.FileProperties.GetTemplateArg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginTemplatesGetForTeam(GetTemplateArg, AsyncCallback, Object)
+  nameWithType: FilePropertiesTeamRoutes.BeginTemplatesGetForTeam(GetTemplateArg, AsyncCallback, Object)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesGetForTeam(Dropbox.Api.FileProperties.GetTemplateArg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: BeginTemplatesGetForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 164
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Begins an asynchronous send to the templates get for team route.</p>\n"
+  example: []
+  syntax:
+    content: public IAsyncResult BeginTemplatesGetForTeam(GetTemplateArg getTemplateArg, AsyncCallback callback, object state = null)
+    parameters:
+    - id: getTemplateArg
+      type: Dropbox.Api.FileProperties.GetTemplateArg
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginTemplatesGetForTeam(getTemplateArg As GetTemplateArg, callback As AsyncCallback, state As Object = Nothing) As IAsyncResult
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesGetForTeam*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync(System.String)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync(System.String)
+  id: TemplatesGetForTeamAsync(System.String)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: TemplatesGetForTeamAsync(String)
+  nameWithType: FilePropertiesTeamRoutes.TemplatesGetForTeamAsync(String)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync(System.String)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TemplatesGetForTeamAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 184
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Get the schema for a specified template.</p>\n"
+  example: []
+  syntax:
+    content: public Task<GetTemplateResult> TemplatesGetForTeamAsync(string templateId)
+    parameters:
+    - id: templateId
+      type: System.String
+      description: An identifier for template added by route  See <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref> or <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileProperties.GetTemplateResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function TemplatesGetForTeamAsync(templateId As String) As Task(Of GetTemplateResult)
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileProperties.TemplateError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesGetForTeam(System.String,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesGetForTeam(System.String,System.AsyncCallback,System.Object)
+  id: BeginTemplatesGetForTeam(System.String,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginTemplatesGetForTeam(String, AsyncCallback, Object)
+  nameWithType: FilePropertiesTeamRoutes.BeginTemplatesGetForTeam(String, AsyncCallback, Object)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesGetForTeam(System.String, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: BeginTemplatesGetForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 204
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Begins an asynchronous send to the templates get for team route.</p>\n"
+  example: []
+  syntax:
+    content: public IAsyncResult BeginTemplatesGetForTeam(string templateId, AsyncCallback callback, object callbackState = null)
+    parameters:
+    - id: templateId
+      type: System.String
+      description: An identifier for template added by route  See <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref> or <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref>.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginTemplatesGetForTeam(templateId As String, callback As AsyncCallback, callbackState As Object = Nothing) As IAsyncResult
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesGetForTeam*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesGetForTeam(System.IAsyncResult)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesGetForTeam(System.IAsyncResult)
+  id: EndTemplatesGetForTeam(System.IAsyncResult)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndTemplatesGetForTeam(IAsyncResult)
+  nameWithType: FilePropertiesTeamRoutes.EndTemplatesGetForTeam(IAsyncResult)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesGetForTeam(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: EndTemplatesGetForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 223
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the templates get for team route\nto complete</p>\n"
+  example: []
+  syntax:
+    content: public GetTemplateResult EndTemplatesGetForTeam(IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.FileProperties.GetTemplateResult
+      description: The response to the send request
+    content.vb: Public Function EndTemplatesGetForTeam(asyncResult As IAsyncResult) As GetTemplateResult
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesGetForTeam*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileProperties.TemplateError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesListForTeamAsync
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesListForTeamAsync
+  id: TemplatesListForTeamAsync
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: TemplatesListForTeamAsync()
+  nameWithType: FilePropertiesTeamRoutes.TemplatesListForTeamAsync()
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesListForTeamAsync()
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TemplatesListForTeamAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 245
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Get the template identifiers for a team. To get the schema of each template\nuse <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync(Dropbox.Api.FileProperties.GetTemplateArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public Task<ListTemplateResult> TemplatesListForTeamAsync()
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileProperties.ListTemplateResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function TemplatesListForTeamAsync As Task(Of ListTemplateResult)
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesListForTeamAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileProperties.TemplateError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesListForTeam(System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesListForTeam(System.AsyncCallback,System.Object)
+  id: BeginTemplatesListForTeam(System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginTemplatesListForTeam(AsyncCallback, Object)
+  nameWithType: FilePropertiesTeamRoutes.BeginTemplatesListForTeam(AsyncCallback, Object)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesListForTeam(System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: BeginTemplatesListForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 258
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Begins an asynchronous send to the templates list for team route.</p>\n"
+  example: []
+  syntax:
+    content: public IAsyncResult BeginTemplatesListForTeam(AsyncCallback callback, object state = null)
+    parameters:
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginTemplatesListForTeam(callback As AsyncCallback, state As Object = Nothing) As IAsyncResult
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesListForTeam*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesListForTeam(System.IAsyncResult)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesListForTeam(System.IAsyncResult)
+  id: EndTemplatesListForTeam(System.IAsyncResult)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndTemplatesListForTeam(IAsyncResult)
+  nameWithType: FilePropertiesTeamRoutes.EndTemplatesListForTeam(IAsyncResult)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesListForTeam(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: EndTemplatesListForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 275
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the templates list for team route\nto complete</p>\n"
+  example: []
+  syntax:
+    content: public ListTemplateResult EndTemplatesListForTeam(IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.FileProperties.ListTemplateResult
+      description: The response to the send request
+    content.vb: Public Function EndTemplatesListForTeam(asyncResult As IAsyncResult) As ListTemplateResult
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesListForTeam*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileProperties.TemplateError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync(Dropbox.Api.FileProperties.RemoveTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync(Dropbox.Api.FileProperties.RemoveTemplateArg)
+  id: TemplatesRemoveForTeamAsync(Dropbox.Api.FileProperties.RemoveTemplateArg)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: TemplatesRemoveForTeamAsync(RemoveTemplateArg)
+  nameWithType: FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync(RemoveTemplateArg)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync(Dropbox.Api.FileProperties.RemoveTemplateArg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TemplatesRemoveForTeamAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 297
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Permanently removes the specified template created from <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)\" data-throw-if-not-resolved=\"false\"></xref>. All properties associated with the template will also be removed. This action\ncannot be undone.</p>\n"
+  example: []
+  syntax:
+    content: public Task TemplatesRemoveForTeamAsync(RemoveTemplateArg removeTemplateArg)
+    parameters:
+    - id: removeTemplateArg
+      type: Dropbox.Api.FileProperties.RemoveTemplateArg
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task
+      description: The task that represents the asynchronous send operation.
+    content.vb: Public Function TemplatesRemoveForTeamAsync(removeTemplateArg As RemoveTemplateArg) As Task
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileProperties.TemplateError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam(Dropbox.Api.FileProperties.RemoveTemplateArg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam(Dropbox.Api.FileProperties.RemoveTemplateArg,System.AsyncCallback,System.Object)
+  id: BeginTemplatesRemoveForTeam(Dropbox.Api.FileProperties.RemoveTemplateArg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginTemplatesRemoveForTeam(RemoveTemplateArg, AsyncCallback, Object)
+  nameWithType: FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam(RemoveTemplateArg, AsyncCallback, Object)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam(Dropbox.Api.FileProperties.RemoveTemplateArg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: BeginTemplatesRemoveForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 311
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Begins an asynchronous send to the templates remove for team route.</p>\n"
+  example: []
+  syntax:
+    content: public IAsyncResult BeginTemplatesRemoveForTeam(RemoveTemplateArg removeTemplateArg, AsyncCallback callback, object state = null)
+    parameters:
+    - id: removeTemplateArg
+      type: Dropbox.Api.FileProperties.RemoveTemplateArg
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginTemplatesRemoveForTeam(removeTemplateArg As RemoveTemplateArg, callback As AsyncCallback, state As Object = Nothing) As IAsyncResult
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync(System.String)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync(System.String)
+  id: TemplatesRemoveForTeamAsync(System.String)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: TemplatesRemoveForTeamAsync(String)
+  nameWithType: FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync(String)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync(System.String)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TemplatesRemoveForTeamAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 333
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Permanently removes the specified template created from <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)\" data-throw-if-not-resolved=\"false\"></xref>. All properties associated with the template will also be removed. This action\ncannot be undone.</p>\n"
+  example: []
+  syntax:
+    content: public Task TemplatesRemoveForTeamAsync(string templateId)
+    parameters:
+    - id: templateId
+      type: System.String
+      description: An identifier for a template created by <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref> or <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Threading.Tasks.Task
+      description: The task that represents the asynchronous send operation.
+    content.vb: Public Function TemplatesRemoveForTeamAsync(templateId As String) As Task
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileProperties.TemplateError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam(System.String,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam(System.String,System.AsyncCallback,System.Object)
+  id: BeginTemplatesRemoveForTeam(System.String,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginTemplatesRemoveForTeam(String, AsyncCallback, Object)
+  nameWithType: FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam(String, AsyncCallback, Object)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam(System.String, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: BeginTemplatesRemoveForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 353
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Begins an asynchronous send to the templates remove for team route.</p>\n"
+  example: []
+  syntax:
+    content: public IAsyncResult BeginTemplatesRemoveForTeam(string templateId, AsyncCallback callback, object callbackState = null)
+    parameters:
+    - id: templateId
+      type: System.String
+      description: An identifier for a template created by <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref> or <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref>.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginTemplatesRemoveForTeam(templateId As String, callback As AsyncCallback, callbackState As Object = Nothing) As IAsyncResult
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesRemoveForTeam(System.IAsyncResult)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesRemoveForTeam(System.IAsyncResult)
+  id: EndTemplatesRemoveForTeam(System.IAsyncResult)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndTemplatesRemoveForTeam(IAsyncResult)
+  nameWithType: FilePropertiesTeamRoutes.EndTemplatesRemoveForTeam(IAsyncResult)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesRemoveForTeam(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: EndTemplatesRemoveForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 371
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the templates remove for team\nroute to complete</p>\n"
+  example: []
+  syntax:
+    content: public void EndTemplatesRemoveForTeam(IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    content.vb: Public Sub EndTemplatesRemoveForTeam(asyncResult As IAsyncResult)
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesRemoveForTeam*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileProperties.TemplateError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync(Dropbox.Api.FileProperties.UpdateTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync(Dropbox.Api.FileProperties.UpdateTemplateArg)
+  id: TemplatesUpdateForTeamAsync(Dropbox.Api.FileProperties.UpdateTemplateArg)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: TemplatesUpdateForTeamAsync(UpdateTemplateArg)
+  nameWithType: FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync(UpdateTemplateArg)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync(Dropbox.Api.FileProperties.UpdateTemplateArg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TemplatesUpdateForTeamAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 390
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Update a template associated with a team. This route can update the template\nname, the template description and add optional properties to templates.</p>\n"
+  example: []
+  syntax:
+    content: public Task<UpdateTemplateResult> TemplatesUpdateForTeamAsync(UpdateTemplateArg updateTemplateArg)
+    parameters:
+    - id: updateTemplateArg
+      type: Dropbox.Api.FileProperties.UpdateTemplateArg
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileProperties.UpdateTemplateResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function TemplatesUpdateForTeamAsync(updateTemplateArg As UpdateTemplateArg) As Task(Of UpdateTemplateResult)
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileProperties.ModifyTemplateError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam(Dropbox.Api.FileProperties.UpdateTemplateArg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam(Dropbox.Api.FileProperties.UpdateTemplateArg,System.AsyncCallback,System.Object)
+  id: BeginTemplatesUpdateForTeam(Dropbox.Api.FileProperties.UpdateTemplateArg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginTemplatesUpdateForTeam(UpdateTemplateArg, AsyncCallback, Object)
+  nameWithType: FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam(UpdateTemplateArg, AsyncCallback, Object)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam(Dropbox.Api.FileProperties.UpdateTemplateArg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: BeginTemplatesUpdateForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 404
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Begins an asynchronous send to the templates update for team route.</p>\n"
+  example: []
+  syntax:
+    content: public IAsyncResult BeginTemplatesUpdateForTeam(UpdateTemplateArg updateTemplateArg, AsyncCallback callback, object state = null)
+    parameters:
+    - id: updateTemplateArg
+      type: Dropbox.Api.FileProperties.UpdateTemplateArg
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginTemplatesUpdateForTeam(updateTemplateArg As UpdateTemplateArg, callback As AsyncCallback, state As Object = Nothing) As IAsyncResult
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate})
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate})
+  id: TemplatesUpdateForTeamAsync(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate})
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: TemplatesUpdateForTeamAsync(String, String, String, IEnumerable<PropertyFieldTemplate>)
+  nameWithType: FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync(String, String, String, IEnumerable<PropertyFieldTemplate>)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync(System.String, System.String, System.String, System.Collections.Generic.IEnumerable<Dropbox.Api.FileProperties.PropertyFieldTemplate>)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TemplatesUpdateForTeamAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 431
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Update a template associated with a team. This route can update the template\nname, the template description and add optional properties to templates.</p>\n"
+  example: []
+  syntax:
+    content: public Task<UpdateTemplateResult> TemplatesUpdateForTeamAsync(string templateId, string name = null, string description = null, IEnumerable<PropertyFieldTemplate> addFields = null)
+    parameters:
+    - id: templateId
+      type: System.String
+      description: An identifier for template added by  See <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref> or <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref>.
+    - id: name
+      type: System.String
+      description: >-
+        A display name for the template. template names can be up to 256
+
+        bytes.
+    - id: description
+      type: System.String
+      description: >-
+        Description for the new template. Template descriptions
+
+        can be up to 1024 bytes.
+    - id: addFields
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate}
+      description: >-
+        Property field templates to be added to the group template.
+
+        There can be up to 32 properties in a single template.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileProperties.UpdateTemplateResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function TemplatesUpdateForTeamAsync(templateId As String, name As String = Nothing, description As String = Nothing, addFields As IEnumerable(Of PropertyFieldTemplate) = Nothing) As Task(Of UpdateTemplateResult)
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileProperties.ModifyTemplateError" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync(String, String, String, IEnumerable(Of PropertyFieldTemplate))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync(System.String, System.String, System.String, System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileProperties.PropertyFieldTemplate))
+  name.vb: TemplatesUpdateForTeamAsync(String, String, String, IEnumerable(Of PropertyFieldTemplate))
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate},System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate},System.AsyncCallback,System.Object)
+  id: BeginTemplatesUpdateForTeam(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate},System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginTemplatesUpdateForTeam(String, String, String, IEnumerable<PropertyFieldTemplate>, AsyncCallback, Object)
+  nameWithType: FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam(String, String, String, IEnumerable<PropertyFieldTemplate>, AsyncCallback, Object)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam(System.String, System.String, System.String, System.Collections.Generic.IEnumerable<Dropbox.Api.FileProperties.PropertyFieldTemplate>, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: BeginTemplatesUpdateForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 463
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Begins an asynchronous send to the templates update for team route.</p>\n"
+  example: []
+  syntax:
+    content: public IAsyncResult BeginTemplatesUpdateForTeam(string templateId, string name = null, string description = null, IEnumerable<PropertyFieldTemplate> addFields = null, AsyncCallback callback = null, object callbackState = null)
+    parameters:
+    - id: templateId
+      type: System.String
+      description: An identifier for template added by  See <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref> or <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref>.
+    - id: name
+      type: System.String
+      description: >-
+        A display name for the template. template names can be up to 256
+
+        bytes.
+    - id: description
+      type: System.String
+      description: >-
+        Description for the new template. Template descriptions
+
+        can be up to 1024 bytes.
+    - id: addFields
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate}
+      description: >-
+        Property field templates to be added to the group template.
+
+        There can be up to 32 properties in a single template.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginTemplatesUpdateForTeam(templateId As String, name As String = Nothing, description As String = Nothing, addFields As IEnumerable(Of PropertyFieldTemplate) = Nothing, callback As AsyncCallback = Nothing, callbackState As Object = Nothing) As IAsyncResult
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam*
+  nameWithType.vb: FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam(String, String, String, IEnumerable(Of PropertyFieldTemplate), AsyncCallback, Object)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam(System.String, System.String, System.String, System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileProperties.PropertyFieldTemplate), System.AsyncCallback, System.Object)
+  name.vb: BeginTemplatesUpdateForTeam(String, String, String, IEnumerable(Of PropertyFieldTemplate), AsyncCallback, Object)
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesUpdateForTeam(System.IAsyncResult)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesUpdateForTeam(System.IAsyncResult)
+  id: EndTemplatesUpdateForTeam(System.IAsyncResult)
+  parent: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndTemplatesUpdateForTeam(IAsyncResult)
+  nameWithType: FilePropertiesTeamRoutes.EndTemplatesUpdateForTeam(IAsyncResult)
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesUpdateForTeam(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: EndTemplatesUpdateForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/FilePropertiesTeamRoutes.cs
+    startLine: 488
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the templates update for team\nroute to complete</p>\n"
+  example: []
+  syntax:
+    content: public UpdateTemplateResult EndTemplatesUpdateForTeam(IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.FileProperties.UpdateTemplateResult
+      description: The response to the send request
+    content.vb: Public Function EndTemplatesUpdateForTeam(asyncResult As IAsyncResult) As UpdateTemplateResult
+  overload: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesUpdateForTeam*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileProperties.ModifyTemplateError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: Dropbox.Api.FileProperties.Routes
+  commentId: N:Dropbox.Api.FileProperties.Routes
+  name: Dropbox.Api.FileProperties.Routes
+  nameWithType: Dropbox.Api.FileProperties.Routes
+  fullName: Dropbox.Api.FileProperties.Routes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesAddAsync(Dropbox.Api.FileProperties.AddPropertiesArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesAddAsync(Dropbox.Api.FileProperties.AddPropertiesArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError
+  commentId: T:Dropbox.Api.FileProperties.ModifyTemplateError
+  parent: Dropbox.Api.FileProperties
+  name: ModifyTemplateError
+  nameWithType: ModifyTemplateError
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError
+- uid: Dropbox.Api.ApiException`1
+  commentId: T:Dropbox.Api.ApiException`1
+  name: ApiException<TError>
+  nameWithType: ApiException<TError>
+  fullName: Dropbox.Api.ApiException<TError>
+  nameWithType.vb: ApiException(Of TError)
+  fullName.vb: Dropbox.Api.ApiException(Of TError)
+  name.vb: ApiException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.ApiException`1
+    name: ApiException
+    nameWithType: ApiException
+    fullName: Dropbox.Api.ApiException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.ApiException`1
+    name: ApiException
+    nameWithType: ApiException
+    fullName: Dropbox.Api.ApiException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync
+  name: TemplatesAddForTeamAsync
+  nameWithType: FilePropertiesTeamRoutes.TemplatesAddForTeamAsync
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync
+- uid: Dropbox.Api.FileProperties.AddTemplateArg
+  commentId: T:Dropbox.Api.FileProperties.AddTemplateArg
+  parent: Dropbox.Api.FileProperties
+  name: AddTemplateArg
+  nameWithType: AddTemplateArg
+  fullName: Dropbox.Api.FileProperties.AddTemplateArg
+- uid: System.Threading.Tasks.Task{Dropbox.Api.FileProperties.AddTemplateResult}
+  commentId: T:System.Threading.Tasks.Task{Dropbox.Api.FileProperties.AddTemplateResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<AddTemplateResult>
+  nameWithType: Task<AddTemplateResult>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.FileProperties.AddTemplateResult>
+  nameWithType.vb: Task(Of AddTemplateResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.FileProperties.AddTemplateResult)
+  name.vb: Task(Of AddTemplateResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileProperties.AddTemplateResult
+    name: AddTemplateResult
+    nameWithType: AddTemplateResult
+    fullName: Dropbox.Api.FileProperties.AddTemplateResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileProperties.AddTemplateResult
+    name: AddTemplateResult
+    nameWithType: AddTemplateResult
+    fullName: Dropbox.Api.FileProperties.AddTemplateResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesAddForTeam*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesAddForTeam
+  name: BeginTemplatesAddForTeam
+  nameWithType: FilePropertiesTeamRoutes.BeginTemplatesAddForTeam
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesAddForTeam
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate}
+  commentId: T:System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<PropertyFieldTemplate>
+  nameWithType: IEnumerable<PropertyFieldTemplate>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.FileProperties.PropertyFieldTemplate>
+  nameWithType.vb: IEnumerable(Of PropertyFieldTemplate)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileProperties.PropertyFieldTemplate)
+  name.vb: IEnumerable(Of PropertyFieldTemplate)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileProperties.PropertyFieldTemplate
+    name: PropertyFieldTemplate
+    nameWithType: PropertyFieldTemplate
+    fullName: Dropbox.Api.FileProperties.PropertyFieldTemplate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileProperties.PropertyFieldTemplate
+    name: PropertyFieldTemplate
+    nameWithType: PropertyFieldTemplate
+    fullName: Dropbox.Api.FileProperties.PropertyFieldTemplate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesAddForTeam*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesAddForTeam
+  name: EndTemplatesAddForTeam
+  nameWithType: FilePropertiesTeamRoutes.EndTemplatesAddForTeam
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesAddForTeam
+- uid: Dropbox.Api.FileProperties.AddTemplateResult
+  commentId: T:Dropbox.Api.FileProperties.AddTemplateResult
+  parent: Dropbox.Api.FileProperties
+  name: AddTemplateResult
+  nameWithType: AddTemplateResult
+  fullName: Dropbox.Api.FileProperties.AddTemplateResult
+- uid: Dropbox.Api.FileProperties.TemplateError
+  commentId: T:Dropbox.Api.FileProperties.TemplateError
+  parent: Dropbox.Api.FileProperties
+  name: TemplateError
+  nameWithType: TemplateError
+  fullName: Dropbox.Api.FileProperties.TemplateError
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync
+  name: TemplatesGetForTeamAsync
+  nameWithType: FilePropertiesTeamRoutes.TemplatesGetForTeamAsync
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync
+- uid: Dropbox.Api.FileProperties.GetTemplateArg
+  commentId: T:Dropbox.Api.FileProperties.GetTemplateArg
+  parent: Dropbox.Api.FileProperties
+  name: GetTemplateArg
+  nameWithType: GetTemplateArg
+  fullName: Dropbox.Api.FileProperties.GetTemplateArg
+- uid: System.Threading.Tasks.Task{Dropbox.Api.FileProperties.GetTemplateResult}
+  commentId: T:System.Threading.Tasks.Task{Dropbox.Api.FileProperties.GetTemplateResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<GetTemplateResult>
+  nameWithType: Task<GetTemplateResult>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.FileProperties.GetTemplateResult>
+  nameWithType.vb: Task(Of GetTemplateResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.FileProperties.GetTemplateResult)
+  name.vb: Task(Of GetTemplateResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileProperties.GetTemplateResult
+    name: GetTemplateResult
+    nameWithType: GetTemplateResult
+    fullName: Dropbox.Api.FileProperties.GetTemplateResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileProperties.GetTemplateResult
+    name: GetTemplateResult
+    nameWithType: GetTemplateResult
+    fullName: Dropbox.Api.FileProperties.GetTemplateResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesGetForTeam*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesGetForTeam
+  name: BeginTemplatesGetForTeam
+  nameWithType: FilePropertiesTeamRoutes.BeginTemplatesGetForTeam
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesGetForTeam
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesGetForTeam*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesGetForTeam
+  name: EndTemplatesGetForTeam
+  nameWithType: FilePropertiesTeamRoutes.EndTemplatesGetForTeam
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesGetForTeam
+- uid: Dropbox.Api.FileProperties.GetTemplateResult
+  commentId: T:Dropbox.Api.FileProperties.GetTemplateResult
+  parent: Dropbox.Api.FileProperties
+  name: GetTemplateResult
+  nameWithType: GetTemplateResult
+  fullName: Dropbox.Api.FileProperties.GetTemplateResult
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync(Dropbox.Api.FileProperties.GetTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesGetForTeamAsync(Dropbox.Api.FileProperties.GetTemplateArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesListForTeamAsync*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesListForTeamAsync
+  name: TemplatesListForTeamAsync
+  nameWithType: FilePropertiesTeamRoutes.TemplatesListForTeamAsync
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesListForTeamAsync
+- uid: System.Threading.Tasks.Task{Dropbox.Api.FileProperties.ListTemplateResult}
+  commentId: T:System.Threading.Tasks.Task{Dropbox.Api.FileProperties.ListTemplateResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<ListTemplateResult>
+  nameWithType: Task<ListTemplateResult>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.FileProperties.ListTemplateResult>
+  nameWithType.vb: Task(Of ListTemplateResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.FileProperties.ListTemplateResult)
+  name.vb: Task(Of ListTemplateResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileProperties.ListTemplateResult
+    name: ListTemplateResult
+    nameWithType: ListTemplateResult
+    fullName: Dropbox.Api.FileProperties.ListTemplateResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileProperties.ListTemplateResult
+    name: ListTemplateResult
+    nameWithType: ListTemplateResult
+    fullName: Dropbox.Api.FileProperties.ListTemplateResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesListForTeam*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesListForTeam
+  name: BeginTemplatesListForTeam
+  nameWithType: FilePropertiesTeamRoutes.BeginTemplatesListForTeam
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesListForTeam
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesListForTeam*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesListForTeam
+  name: EndTemplatesListForTeam
+  nameWithType: FilePropertiesTeamRoutes.EndTemplatesListForTeam
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesListForTeam
+- uid: Dropbox.Api.FileProperties.ListTemplateResult
+  commentId: T:Dropbox.Api.FileProperties.ListTemplateResult
+  parent: Dropbox.Api.FileProperties
+  name: ListTemplateResult
+  nameWithType: ListTemplateResult
+  fullName: Dropbox.Api.FileProperties.ListTemplateResult
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync
+  name: TemplatesRemoveForTeamAsync
+  nameWithType: FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesRemoveForTeamAsync
+- uid: Dropbox.Api.FileProperties.RemoveTemplateArg
+  commentId: T:Dropbox.Api.FileProperties.RemoveTemplateArg
+  parent: Dropbox.Api.FileProperties
+  name: RemoveTemplateArg
+  nameWithType: RemoveTemplateArg
+  fullName: Dropbox.Api.FileProperties.RemoveTemplateArg
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam
+  name: BeginTemplatesRemoveForTeam
+  nameWithType: FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesRemoveForTeam
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesRemoveForTeam*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesRemoveForTeam
+  name: EndTemplatesRemoveForTeam
+  nameWithType: FilePropertiesTeamRoutes.EndTemplatesRemoveForTeam
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesRemoveForTeam
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync
+  name: TemplatesUpdateForTeamAsync
+  nameWithType: FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesUpdateForTeamAsync
+- uid: Dropbox.Api.FileProperties.UpdateTemplateArg
+  commentId: T:Dropbox.Api.FileProperties.UpdateTemplateArg
+  parent: Dropbox.Api.FileProperties
+  name: UpdateTemplateArg
+  nameWithType: UpdateTemplateArg
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateArg
+- uid: System.Threading.Tasks.Task{Dropbox.Api.FileProperties.UpdateTemplateResult}
+  commentId: T:System.Threading.Tasks.Task{Dropbox.Api.FileProperties.UpdateTemplateResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<UpdateTemplateResult>
+  nameWithType: Task<UpdateTemplateResult>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.FileProperties.UpdateTemplateResult>
+  nameWithType.vb: Task(Of UpdateTemplateResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.FileProperties.UpdateTemplateResult)
+  name.vb: Task(Of UpdateTemplateResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileProperties.UpdateTemplateResult
+    name: UpdateTemplateResult
+    nameWithType: UpdateTemplateResult
+    fullName: Dropbox.Api.FileProperties.UpdateTemplateResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileProperties.UpdateTemplateResult
+    name: UpdateTemplateResult
+    nameWithType: UpdateTemplateResult
+    fullName: Dropbox.Api.FileProperties.UpdateTemplateResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam
+  name: BeginTemplatesUpdateForTeam
+  nameWithType: FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.BeginTemplatesUpdateForTeam
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesUpdateForTeam*
+  commentId: Overload:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesUpdateForTeam
+  name: EndTemplatesUpdateForTeam
+  nameWithType: FilePropertiesTeamRoutes.EndTemplatesUpdateForTeam
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.EndTemplatesUpdateForTeam
+- uid: Dropbox.Api.FileProperties.UpdateTemplateResult
+  commentId: T:Dropbox.Api.FileProperties.UpdateTemplateResult
+  parent: Dropbox.Api.FileProperties
+  name: UpdateTemplateResult
+  nameWithType: UpdateTemplateResult
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateResult

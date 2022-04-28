@@ -1,0 +1,1512 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersTransferFilesError
+  commentId: T:Dropbox.Api.Team.MembersTransferFilesError
+  id: MembersTransferFilesError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersTransferFilesError.#ctor
+  - Dropbox.Api.Team.MembersTransferFilesError.AsOther
+  - Dropbox.Api.Team.MembersTransferFilesError.AsRecipientNotVerified
+  - Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferAdminShouldDiffer
+  - Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferDestShouldDiffer
+  - Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminIsNotAdmin
+  - Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotFound
+  - Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotInTeam
+  - Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotFound
+  - Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotInTeam
+  - Dropbox.Api.Team.MembersTransferFilesError.AsUnspecifiedTransferAdminId
+  - Dropbox.Api.Team.MembersTransferFilesError.AsUserNotFound
+  - Dropbox.Api.Team.MembersTransferFilesError.AsUserNotInTeam
+  - Dropbox.Api.Team.MembersTransferFilesError.IsOther
+  - Dropbox.Api.Team.MembersTransferFilesError.IsRecipientNotVerified
+  - Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferAdminShouldDiffer
+  - Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferDestShouldDiffer
+  - Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminIsNotAdmin
+  - Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotFound
+  - Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotInTeam
+  - Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotFound
+  - Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotInTeam
+  - Dropbox.Api.Team.MembersTransferFilesError.IsUnspecifiedTransferAdminId
+  - Dropbox.Api.Team.MembersTransferFilesError.IsUserNotFound
+  - Dropbox.Api.Team.MembersTransferFilesError.IsUserNotInTeam
+  langs:
+  - csharp
+  - vb
+  name: MembersTransferFilesError
+  nameWithType: MembersTransferFilesError
+  fullName: Dropbox.Api.Team.MembersTransferFilesError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MembersTransferFilesError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The members transfer files error object</p>\n"
+  example: []
+  syntax:
+    content: public class MembersTransferFilesError
+    content.vb: Public Class MembersTransferFilesError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.MembersTransferFilesError.Other
+  - Dropbox.Api.Team.MembersTransferFilesError.RecipientNotVerified
+  - Dropbox.Api.Team.MembersTransferFilesError.RemovedAndTransferAdminShouldDiffer
+  - Dropbox.Api.Team.MembersTransferFilesError.RemovedAndTransferDestShouldDiffer
+  - Dropbox.Api.Team.MembersTransferFilesError.TransferAdminIsNotAdmin
+  - Dropbox.Api.Team.MembersTransferFilesError.TransferAdminUserNotFound
+  - Dropbox.Api.Team.MembersTransferFilesError.TransferAdminUserNotInTeam
+  - Dropbox.Api.Team.MembersTransferFilesError.TransferDestUserNotFound
+  - Dropbox.Api.Team.MembersTransferFilesError.TransferDestUserNotInTeam
+  - Dropbox.Api.Team.MembersTransferFilesError.UnspecifiedTransferAdminId
+  - Dropbox.Api.Team.MembersTransferFilesError.UserNotFound
+  - Dropbox.Api.Team.MembersTransferFilesError.UserNotInTeam
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersTransferFilesError.#ctor
+  commentId: M:Dropbox.Api.Team.MembersTransferFilesError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: MembersTransferFilesError()
+  nameWithType: MembersTransferFilesError.MembersTransferFilesError()
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.MembersTransferFilesError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersTransferFilesError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersTransferFilesError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersTransferFilesError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferDestShouldDiffer
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferDestShouldDiffer
+  id: IsRemovedAndTransferDestShouldDiffer
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: IsRemovedAndTransferDestShouldDiffer
+  nameWithType: MembersTransferFilesError.IsRemovedAndTransferDestShouldDiffer
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferDestShouldDiffer
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsRemovedAndTransferDestShouldDiffer
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nRemovedAndTransferDestShouldDiffer</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRemovedAndTransferDestShouldDiffer { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRemovedAndTransferDestShouldDiffer As Boolean
+  overload: Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferDestShouldDiffer*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferDestShouldDiffer
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferDestShouldDiffer
+  id: AsRemovedAndTransferDestShouldDiffer
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: AsRemovedAndTransferDestShouldDiffer
+  nameWithType: MembersTransferFilesError.AsRemovedAndTransferDestShouldDiffer
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferDestShouldDiffer
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsRemovedAndTransferDestShouldDiffer
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a RemovedAndTransferDestShouldDiffer, or\n<code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersTransferFilesError.RemovedAndTransferDestShouldDiffer AsRemovedAndTransferDestShouldDiffer { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersTransferFilesError.RemovedAndTransferDestShouldDiffer
+    content.vb: Public ReadOnly Property AsRemovedAndTransferDestShouldDiffer As MembersTransferFilesError.RemovedAndTransferDestShouldDiffer
+  overload: Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferDestShouldDiffer*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferAdminShouldDiffer
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferAdminShouldDiffer
+  id: IsRemovedAndTransferAdminShouldDiffer
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: IsRemovedAndTransferAdminShouldDiffer
+  nameWithType: MembersTransferFilesError.IsRemovedAndTransferAdminShouldDiffer
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferAdminShouldDiffer
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsRemovedAndTransferAdminShouldDiffer
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nRemovedAndTransferAdminShouldDiffer</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRemovedAndTransferAdminShouldDiffer { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRemovedAndTransferAdminShouldDiffer As Boolean
+  overload: Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferAdminShouldDiffer*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferAdminShouldDiffer
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferAdminShouldDiffer
+  id: AsRemovedAndTransferAdminShouldDiffer
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: AsRemovedAndTransferAdminShouldDiffer
+  nameWithType: MembersTransferFilesError.AsRemovedAndTransferAdminShouldDiffer
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferAdminShouldDiffer
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsRemovedAndTransferAdminShouldDiffer
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a RemovedAndTransferAdminShouldDiffer, or\n<code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersTransferFilesError.RemovedAndTransferAdminShouldDiffer AsRemovedAndTransferAdminShouldDiffer { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersTransferFilesError.RemovedAndTransferAdminShouldDiffer
+    content.vb: Public ReadOnly Property AsRemovedAndTransferAdminShouldDiffer As MembersTransferFilesError.RemovedAndTransferAdminShouldDiffer
+  overload: Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferAdminShouldDiffer*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotFound
+  id: IsTransferDestUserNotFound
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: IsTransferDestUserNotFound
+  nameWithType: MembersTransferFilesError.IsTransferDestUserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTransferDestUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 89
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nTransferDestUserNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTransferDestUserNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTransferDestUserNotFound As Boolean
+  overload: Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotFound
+  id: AsTransferDestUserNotFound
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: AsTransferDestUserNotFound
+  nameWithType: MembersTransferFilesError.AsTransferDestUserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTransferDestUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 100
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TransferDestUserNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersTransferFilesError.TransferDestUserNotFound AsTransferDestUserNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersTransferFilesError.TransferDestUserNotFound
+    content.vb: Public ReadOnly Property AsTransferDestUserNotFound As MembersTransferFilesError.TransferDestUserNotFound
+  overload: Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotInTeam
+  id: IsTransferDestUserNotInTeam
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: IsTransferDestUserNotInTeam
+  nameWithType: MembersTransferFilesError.IsTransferDestUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTransferDestUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 112
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nTransferDestUserNotInTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTransferDestUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTransferDestUserNotInTeam As Boolean
+  overload: Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotInTeam
+  id: AsTransferDestUserNotInTeam
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: AsTransferDestUserNotInTeam
+  nameWithType: MembersTransferFilesError.AsTransferDestUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTransferDestUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 123
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TransferDestUserNotInTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersTransferFilesError.TransferDestUserNotInTeam AsTransferDestUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersTransferFilesError.TransferDestUserNotInTeam
+    content.vb: Public ReadOnly Property AsTransferDestUserNotInTeam As MembersTransferFilesError.TransferDestUserNotInTeam
+  overload: Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotInTeam
+  id: IsTransferAdminUserNotInTeam
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: IsTransferAdminUserNotInTeam
+  nameWithType: MembersTransferFilesError.IsTransferAdminUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTransferAdminUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 135
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nTransferAdminUserNotInTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTransferAdminUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTransferAdminUserNotInTeam As Boolean
+  overload: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotInTeam
+  id: AsTransferAdminUserNotInTeam
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: AsTransferAdminUserNotInTeam
+  nameWithType: MembersTransferFilesError.AsTransferAdminUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTransferAdminUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 146
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TransferAdminUserNotInTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersTransferFilesError.TransferAdminUserNotInTeam AsTransferAdminUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersTransferFilesError.TransferAdminUserNotInTeam
+    content.vb: Public ReadOnly Property AsTransferAdminUserNotInTeam As MembersTransferFilesError.TransferAdminUserNotInTeam
+  overload: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotFound
+  id: IsTransferAdminUserNotFound
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: IsTransferAdminUserNotFound
+  nameWithType: MembersTransferFilesError.IsTransferAdminUserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTransferAdminUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 158
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nTransferAdminUserNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTransferAdminUserNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTransferAdminUserNotFound As Boolean
+  overload: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotFound
+  id: AsTransferAdminUserNotFound
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: AsTransferAdminUserNotFound
+  nameWithType: MembersTransferFilesError.AsTransferAdminUserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTransferAdminUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 169
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TransferAdminUserNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersTransferFilesError.TransferAdminUserNotFound AsTransferAdminUserNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersTransferFilesError.TransferAdminUserNotFound
+    content.vb: Public ReadOnly Property AsTransferAdminUserNotFound As MembersTransferFilesError.TransferAdminUserNotFound
+  overload: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsUnspecifiedTransferAdminId
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.IsUnspecifiedTransferAdminId
+  id: IsUnspecifiedTransferAdminId
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: IsUnspecifiedTransferAdminId
+  nameWithType: MembersTransferFilesError.IsUnspecifiedTransferAdminId
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsUnspecifiedTransferAdminId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUnspecifiedTransferAdminId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 181
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nUnspecifiedTransferAdminId</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnspecifiedTransferAdminId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnspecifiedTransferAdminId As Boolean
+  overload: Dropbox.Api.Team.MembersTransferFilesError.IsUnspecifiedTransferAdminId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsUnspecifiedTransferAdminId
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.AsUnspecifiedTransferAdminId
+  id: AsUnspecifiedTransferAdminId
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: AsUnspecifiedTransferAdminId
+  nameWithType: MembersTransferFilesError.AsUnspecifiedTransferAdminId
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsUnspecifiedTransferAdminId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUnspecifiedTransferAdminId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 192
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UnspecifiedTransferAdminId, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersTransferFilesError.UnspecifiedTransferAdminId AsUnspecifiedTransferAdminId { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersTransferFilesError.UnspecifiedTransferAdminId
+    content.vb: Public ReadOnly Property AsUnspecifiedTransferAdminId As MembersTransferFilesError.UnspecifiedTransferAdminId
+  overload: Dropbox.Api.Team.MembersTransferFilesError.AsUnspecifiedTransferAdminId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminIsNotAdmin
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminIsNotAdmin
+  id: IsTransferAdminIsNotAdmin
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: IsTransferAdminIsNotAdmin
+  nameWithType: MembersTransferFilesError.IsTransferAdminIsNotAdmin
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminIsNotAdmin
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTransferAdminIsNotAdmin
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 204
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nTransferAdminIsNotAdmin</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTransferAdminIsNotAdmin { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTransferAdminIsNotAdmin As Boolean
+  overload: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminIsNotAdmin*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminIsNotAdmin
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminIsNotAdmin
+  id: AsTransferAdminIsNotAdmin
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: AsTransferAdminIsNotAdmin
+  nameWithType: MembersTransferFilesError.AsTransferAdminIsNotAdmin
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminIsNotAdmin
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTransferAdminIsNotAdmin
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 215
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TransferAdminIsNotAdmin, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersTransferFilesError.TransferAdminIsNotAdmin AsTransferAdminIsNotAdmin { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersTransferFilesError.TransferAdminIsNotAdmin
+    content.vb: Public ReadOnly Property AsTransferAdminIsNotAdmin As MembersTransferFilesError.TransferAdminIsNotAdmin
+  overload: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminIsNotAdmin*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsRecipientNotVerified
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.IsRecipientNotVerified
+  id: IsRecipientNotVerified
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: IsRecipientNotVerified
+  nameWithType: MembersTransferFilesError.IsRecipientNotVerified
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsRecipientNotVerified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsRecipientNotVerified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 226
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is RecipientNotVerified</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRecipientNotVerified { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRecipientNotVerified As Boolean
+  overload: Dropbox.Api.Team.MembersTransferFilesError.IsRecipientNotVerified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsRecipientNotVerified
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.AsRecipientNotVerified
+  id: AsRecipientNotVerified
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: AsRecipientNotVerified
+  nameWithType: MembersTransferFilesError.AsRecipientNotVerified
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsRecipientNotVerified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsRecipientNotVerified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 237
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a RecipientNotVerified, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersTransferFilesError.RecipientNotVerified AsRecipientNotVerified { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersTransferFilesError.RecipientNotVerified
+    content.vb: Public ReadOnly Property AsRecipientNotVerified As MembersTransferFilesError.RecipientNotVerified
+  overload: Dropbox.Api.Team.MembersTransferFilesError.AsRecipientNotVerified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.IsUserNotInTeam
+  id: IsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotInTeam
+  nameWithType: MembersTransferFilesError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 248
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotInTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotInTeam As Boolean
+  overload: Dropbox.Api.Team.MembersTransferFilesError.IsUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.AsUserNotInTeam
+  id: AsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotInTeam
+  nameWithType: MembersTransferFilesError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 259
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UserNotInTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersTransferFilesError.UserNotInTeam AsUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersTransferFilesError.UserNotInTeam
+    content.vb: Public ReadOnly Property AsUserNotInTeam As MembersTransferFilesError.UserNotInTeam
+  overload: Dropbox.Api.Team.MembersTransferFilesError.AsUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsOther
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MembersTransferFilesError.IsOther
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 270
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.MembersTransferFilesError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsOther
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MembersTransferFilesError.AsOther
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 281
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersTransferFilesError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersTransferFilesError.Other
+    content.vb: Public ReadOnly Property AsOther As MembersTransferFilesError.Other
+  overload: Dropbox.Api.Team.MembersTransferFilesError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.IsUserNotFound
+  id: IsUserNotFound
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotFound
+  nameWithType: MembersTransferFilesError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 292
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotFound As Boolean
+  overload: Dropbox.Api.Team.MembersTransferFilesError.IsUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersTransferFilesError.AsUserNotFound
+  id: AsUserNotFound
+  parent: Dropbox.Api.Team.MembersTransferFilesError
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotFound
+  nameWithType: MembersTransferFilesError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersTransferFilesError.cs
+    startLine: 303
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UserNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersTransferFilesError.UserNotFound AsUserNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersTransferFilesError.UserNotFound
+    content.vb: Public ReadOnly Property AsUserNotFound As MembersTransferFilesError.UserNotFound
+  overload: Dropbox.Api.Team.MembersTransferFilesError.AsUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.MembersTransferFilesError
+  commentId: T:Dropbox.Api.Team.MembersTransferFilesError
+  parent: Dropbox.Api.Team
+  name: MembersTransferFilesError
+  nameWithType: MembersTransferFilesError
+  fullName: Dropbox.Api.Team.MembersTransferFilesError
+- uid: Dropbox.Api.Team.MembersTransferFilesError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.#ctor
+  name: MembersTransferFilesError
+  nameWithType: MembersTransferFilesError.MembersTransferFilesError
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.MembersTransferFilesError
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferDestShouldDiffer*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferDestShouldDiffer
+  name: IsRemovedAndTransferDestShouldDiffer
+  nameWithType: MembersTransferFilesError.IsRemovedAndTransferDestShouldDiffer
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferDestShouldDiffer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferDestShouldDiffer*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferDestShouldDiffer
+  name: AsRemovedAndTransferDestShouldDiffer
+  nameWithType: MembersTransferFilesError.AsRemovedAndTransferDestShouldDiffer
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferDestShouldDiffer
+- uid: Dropbox.Api.Team.MembersTransferFilesError.RemovedAndTransferDestShouldDiffer
+  commentId: T:Dropbox.Api.Team.MembersTransferFilesError.RemovedAndTransferDestShouldDiffer
+  parent: Dropbox.Api.Team
+  name: MembersTransferFilesError.RemovedAndTransferDestShouldDiffer
+  nameWithType: MembersTransferFilesError.RemovedAndTransferDestShouldDiffer
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.RemovedAndTransferDestShouldDiffer
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferAdminShouldDiffer*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferAdminShouldDiffer
+  name: IsRemovedAndTransferAdminShouldDiffer
+  nameWithType: MembersTransferFilesError.IsRemovedAndTransferAdminShouldDiffer
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsRemovedAndTransferAdminShouldDiffer
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferAdminShouldDiffer*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferAdminShouldDiffer
+  name: AsRemovedAndTransferAdminShouldDiffer
+  nameWithType: MembersTransferFilesError.AsRemovedAndTransferAdminShouldDiffer
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsRemovedAndTransferAdminShouldDiffer
+- uid: Dropbox.Api.Team.MembersTransferFilesError.RemovedAndTransferAdminShouldDiffer
+  commentId: T:Dropbox.Api.Team.MembersTransferFilesError.RemovedAndTransferAdminShouldDiffer
+  parent: Dropbox.Api.Team
+  name: MembersTransferFilesError.RemovedAndTransferAdminShouldDiffer
+  nameWithType: MembersTransferFilesError.RemovedAndTransferAdminShouldDiffer
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.RemovedAndTransferAdminShouldDiffer
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotFound
+  name: IsTransferDestUserNotFound
+  nameWithType: MembersTransferFilesError.IsTransferDestUserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotFound
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotFound
+  name: AsTransferDestUserNotFound
+  nameWithType: MembersTransferFilesError.AsTransferDestUserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotFound
+- uid: Dropbox.Api.Team.MembersTransferFilesError.TransferDestUserNotFound
+  commentId: T:Dropbox.Api.Team.MembersTransferFilesError.TransferDestUserNotFound
+  parent: Dropbox.Api.Team
+  name: MembersTransferFilesError.TransferDestUserNotFound
+  nameWithType: MembersTransferFilesError.TransferDestUserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.TransferDestUserNotFound
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotInTeam
+  name: IsTransferDestUserNotInTeam
+  nameWithType: MembersTransferFilesError.IsTransferDestUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsTransferDestUserNotInTeam
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotInTeam
+  name: AsTransferDestUserNotInTeam
+  nameWithType: MembersTransferFilesError.AsTransferDestUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsTransferDestUserNotInTeam
+- uid: Dropbox.Api.Team.MembersTransferFilesError.TransferDestUserNotInTeam
+  commentId: T:Dropbox.Api.Team.MembersTransferFilesError.TransferDestUserNotInTeam
+  parent: Dropbox.Api.Team
+  name: MembersTransferFilesError.TransferDestUserNotInTeam
+  nameWithType: MembersTransferFilesError.TransferDestUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.TransferDestUserNotInTeam
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotInTeam
+  name: IsTransferAdminUserNotInTeam
+  nameWithType: MembersTransferFilesError.IsTransferAdminUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotInTeam
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotInTeam
+  name: AsTransferAdminUserNotInTeam
+  nameWithType: MembersTransferFilesError.AsTransferAdminUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotInTeam
+- uid: Dropbox.Api.Team.MembersTransferFilesError.TransferAdminUserNotInTeam
+  commentId: T:Dropbox.Api.Team.MembersTransferFilesError.TransferAdminUserNotInTeam
+  parent: Dropbox.Api.Team
+  name: MembersTransferFilesError.TransferAdminUserNotInTeam
+  nameWithType: MembersTransferFilesError.TransferAdminUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.TransferAdminUserNotInTeam
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotFound
+  name: IsTransferAdminUserNotFound
+  nameWithType: MembersTransferFilesError.IsTransferAdminUserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminUserNotFound
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotFound
+  name: AsTransferAdminUserNotFound
+  nameWithType: MembersTransferFilesError.AsTransferAdminUserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminUserNotFound
+- uid: Dropbox.Api.Team.MembersTransferFilesError.TransferAdminUserNotFound
+  commentId: T:Dropbox.Api.Team.MembersTransferFilesError.TransferAdminUserNotFound
+  parent: Dropbox.Api.Team
+  name: MembersTransferFilesError.TransferAdminUserNotFound
+  nameWithType: MembersTransferFilesError.TransferAdminUserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.TransferAdminUserNotFound
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsUnspecifiedTransferAdminId*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.IsUnspecifiedTransferAdminId
+  name: IsUnspecifiedTransferAdminId
+  nameWithType: MembersTransferFilesError.IsUnspecifiedTransferAdminId
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsUnspecifiedTransferAdminId
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsUnspecifiedTransferAdminId*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.AsUnspecifiedTransferAdminId
+  name: AsUnspecifiedTransferAdminId
+  nameWithType: MembersTransferFilesError.AsUnspecifiedTransferAdminId
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsUnspecifiedTransferAdminId
+- uid: Dropbox.Api.Team.MembersTransferFilesError.UnspecifiedTransferAdminId
+  commentId: T:Dropbox.Api.Team.MembersTransferFilesError.UnspecifiedTransferAdminId
+  parent: Dropbox.Api.Team
+  name: MembersTransferFilesError.UnspecifiedTransferAdminId
+  nameWithType: MembersTransferFilesError.UnspecifiedTransferAdminId
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.UnspecifiedTransferAdminId
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminIsNotAdmin*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminIsNotAdmin
+  name: IsTransferAdminIsNotAdmin
+  nameWithType: MembersTransferFilesError.IsTransferAdminIsNotAdmin
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsTransferAdminIsNotAdmin
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminIsNotAdmin*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminIsNotAdmin
+  name: AsTransferAdminIsNotAdmin
+  nameWithType: MembersTransferFilesError.AsTransferAdminIsNotAdmin
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsTransferAdminIsNotAdmin
+- uid: Dropbox.Api.Team.MembersTransferFilesError.TransferAdminIsNotAdmin
+  commentId: T:Dropbox.Api.Team.MembersTransferFilesError.TransferAdminIsNotAdmin
+  parent: Dropbox.Api.Team
+  name: MembersTransferFilesError.TransferAdminIsNotAdmin
+  nameWithType: MembersTransferFilesError.TransferAdminIsNotAdmin
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.TransferAdminIsNotAdmin
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsRecipientNotVerified*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.IsRecipientNotVerified
+  name: IsRecipientNotVerified
+  nameWithType: MembersTransferFilesError.IsRecipientNotVerified
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsRecipientNotVerified
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsRecipientNotVerified*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.AsRecipientNotVerified
+  name: AsRecipientNotVerified
+  nameWithType: MembersTransferFilesError.AsRecipientNotVerified
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsRecipientNotVerified
+- uid: Dropbox.Api.Team.MembersTransferFilesError.RecipientNotVerified
+  commentId: T:Dropbox.Api.Team.MembersTransferFilesError.RecipientNotVerified
+  parent: Dropbox.Api.Team
+  name: MembersTransferFilesError.RecipientNotVerified
+  nameWithType: MembersTransferFilesError.RecipientNotVerified
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.RecipientNotVerified
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.IsUserNotInTeam
+  name: IsUserNotInTeam
+  nameWithType: MembersTransferFilesError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.AsUserNotInTeam
+  name: AsUserNotInTeam
+  nameWithType: MembersTransferFilesError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersTransferFilesError.UserNotInTeam
+  commentId: T:Dropbox.Api.Team.MembersTransferFilesError.UserNotInTeam
+  parent: Dropbox.Api.Team
+  name: MembersTransferFilesError.UserNotInTeam
+  nameWithType: MembersTransferFilesError.UserNotInTeam
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.UserNotInTeam
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.IsOther
+  name: IsOther
+  nameWithType: MembersTransferFilesError.IsOther
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsOther
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.AsOther
+  name: AsOther
+  nameWithType: MembersTransferFilesError.AsOther
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsOther
+- uid: Dropbox.Api.Team.MembersTransferFilesError.Other
+  commentId: T:Dropbox.Api.Team.MembersTransferFilesError.Other
+  parent: Dropbox.Api.Team
+  name: MembersTransferFilesError.Other
+  nameWithType: MembersTransferFilesError.Other
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.Other
+- uid: Dropbox.Api.Team.MembersTransferFilesError.IsUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.IsUserNotFound
+  name: IsUserNotFound
+  nameWithType: MembersTransferFilesError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.IsUserNotFound
+- uid: Dropbox.Api.Team.MembersTransferFilesError.AsUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersTransferFilesError.AsUserNotFound
+  name: AsUserNotFound
+  nameWithType: MembersTransferFilesError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.AsUserNotFound
+- uid: Dropbox.Api.Team.MembersTransferFilesError.UserNotFound
+  commentId: T:Dropbox.Api.Team.MembersTransferFilesError.UserNotFound
+  parent: Dropbox.Api.Team
+  name: MembersTransferFilesError.UserNotFound
+  nameWithType: MembersTransferFilesError.UserNotFound
+  fullName: Dropbox.Api.Team.MembersTransferFilesError.UserNotFound

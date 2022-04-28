@@ -1,0 +1,1030 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ListFolderArg
+  commentId: T:Dropbox.Api.Files.ListFolderArg
+  id: ListFolderArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ListFolderArg.#ctor(System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Nullable{System.UInt32},Dropbox.Api.Files.SharedLink,Dropbox.Api.FileProperties.TemplateFilterBase,System.Boolean)
+  - Dropbox.Api.Files.ListFolderArg.IncludeDeleted
+  - Dropbox.Api.Files.ListFolderArg.IncludeHasExplicitSharedMembers
+  - Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo
+  - Dropbox.Api.Files.ListFolderArg.IncludeMountedFolders
+  - Dropbox.Api.Files.ListFolderArg.IncludeNonDownloadableFiles
+  - Dropbox.Api.Files.ListFolderArg.IncludePropertyGroups
+  - Dropbox.Api.Files.ListFolderArg.Limit
+  - Dropbox.Api.Files.ListFolderArg.Path
+  - Dropbox.Api.Files.ListFolderArg.Recursive
+  - Dropbox.Api.Files.ListFolderArg.SharedLink
+  langs:
+  - csharp
+  - vb
+  name: ListFolderArg
+  nameWithType: ListFolderArg
+  fullName: Dropbox.Api.Files.ListFolderArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ListFolderArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The list folder arg object</p>\n"
+  example: []
+  syntax:
+    content: public class ListFolderArg
+    content.vb: Public Class ListFolderArg
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ListFolderArg.#ctor(System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Nullable{System.UInt32},Dropbox.Api.Files.SharedLink,Dropbox.Api.FileProperties.TemplateFilterBase,System.Boolean)
+  commentId: M:Dropbox.Api.Files.ListFolderArg.#ctor(System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Nullable{System.UInt32},Dropbox.Api.Files.SharedLink,Dropbox.Api.FileProperties.TemplateFilterBase,System.Boolean)
+  id: '#ctor(System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Nullable{System.UInt32},Dropbox.Api.Files.SharedLink,Dropbox.Api.FileProperties.TemplateFilterBase,System.Boolean)'
+  parent: Dropbox.Api.Files.ListFolderArg
+  langs:
+  - csharp
+  - vb
+  name: ListFolderArg(String, Boolean, Boolean, Boolean, Boolean, Boolean, Nullable<UInt32>, SharedLink, TemplateFilterBase, Boolean)
+  nameWithType: ListFolderArg.ListFolderArg(String, Boolean, Boolean, Boolean, Boolean, Boolean, Nullable<UInt32>, SharedLink, TemplateFilterBase, Boolean)
+  fullName: Dropbox.Api.Files.ListFolderArg.ListFolderArg(System.String, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Nullable<System.UInt32>, Dropbox.Api.Files.SharedLink, Dropbox.Api.FileProperties.TemplateFilterBase, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListFolderArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ListFolderArg(string path, bool recursive = false, bool includeMediaInfo = false, bool includeDeleted = false, bool includeHasExplicitSharedMembers = false, bool includeMountedFolders = true, uint? limit = null, SharedLink sharedLink = null, TemplateFilterBase includePropertyGroups = null, bool includeNonDownloadableFiles = true)
+    parameters:
+    - id: path
+      type: System.String
+      description: A unique identifier for the file.
+    - id: recursive
+      type: System.Boolean
+      description: >-
+        If true, the list folder operation will be applied
+
+        recursively to all subfolders and the response will contain contents of all
+
+        subfolders.
+    - id: includeMediaInfo
+      type: System.Boolean
+      description: >-
+        If true, <xref href="Dropbox.Api.Files.FileMetadata.MediaInfo" data-throw-if-not-resolved="false"></xref> is set for photo and video. This
+
+        parameter will no longer have an effect starting December 2, 2019.
+    - id: includeDeleted
+      type: System.Boolean
+      description: >-
+        If true, the results will include entries for files
+
+        and folders that used to exist but were deleted.
+    - id: includeHasExplicitSharedMembers
+      type: System.Boolean
+      description: >-
+        If true, the results will include a
+
+        flag for each file indicating whether or not  that file has any explicit
+
+        members.
+    - id: includeMountedFolders
+      type: System.Boolean
+      description: >-
+        If true, the results will include entries under
+
+        mounted folders which includes app folder, shared folder and team folder.
+    - id: limit
+      type: System.Nullable{System.UInt32}
+      description: >-
+        The maximum number of results to return per request. Note: This
+
+        is an approximate number and there can be slightly more entries returned in some
+
+        cases.
+    - id: sharedLink
+      type: Dropbox.Api.Files.SharedLink
+      description: >-
+        A shared link to list the contents of. If the link is
+
+        password-protected, the password must be provided. If this field is present, <xref href="Dropbox.Api.Files.ListFolderArg.Path" data-throw-if-not-resolved="false"></xref> will be relative to root of the
+
+        shared link. Only non-recursive mode is supported for shared link.
+    - id: includePropertyGroups
+      type: Dropbox.Api.FileProperties.TemplateFilterBase
+      description: >-
+        If set to a valid list of template IDs, <xref href="Dropbox.Api.Files.FileMetadata.PropertyGroups" data-throw-if-not-resolved="false"></xref> is set if there exists
+
+        property data associated with the file and each of the listed templates.
+    - id: includeNonDownloadableFiles
+      type: System.Boolean
+      description: >-
+        If true, include files that are not
+
+        downloadable, i.e. Google Docs.
+    content.vb: Public Sub New(path As String, recursive As Boolean = False, includeMediaInfo As Boolean = False, includeDeleted As Boolean = False, includeHasExplicitSharedMembers As Boolean = False, includeMountedFolders As Boolean = True, limit As UInteger? = Nothing, sharedLink As SharedLink = Nothing, includePropertyGroups As TemplateFilterBase = Nothing, includeNonDownloadableFiles As Boolean = True)
+  overload: Dropbox.Api.Files.ListFolderArg.#ctor*
+  nameWithType.vb: ListFolderArg.ListFolderArg(String, Boolean, Boolean, Boolean, Boolean, Boolean, Nullable(Of UInt32), SharedLink, TemplateFilterBase, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.ListFolderArg.ListFolderArg(System.String, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Nullable(Of System.UInt32), Dropbox.Api.Files.SharedLink, Dropbox.Api.FileProperties.TemplateFilterBase, System.Boolean)
+  name.vb: ListFolderArg(String, Boolean, Boolean, Boolean, Boolean, Boolean, Nullable(Of UInt32), SharedLink, TemplateFilterBase, Boolean)
+- uid: Dropbox.Api.Files.ListFolderArg.Path
+  commentId: P:Dropbox.Api.Files.ListFolderArg.Path
+  id: Path
+  parent: Dropbox.Api.Files.ListFolderArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: ListFolderArg.Path
+  fullName: Dropbox.Api.Files.ListFolderArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+    startLine: 121
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A unique identifier for the file.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Files.ListFolderArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListFolderArg.Recursive
+  commentId: P:Dropbox.Api.Files.ListFolderArg.Recursive
+  id: Recursive
+  parent: Dropbox.Api.Files.ListFolderArg
+  langs:
+  - csharp
+  - vb
+  name: Recursive
+  nameWithType: ListFolderArg.Recursive
+  fullName: Dropbox.Api.Files.ListFolderArg.Recursive
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Recursive
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If true, the list folder operation will be applied recursively to all\nsubfolders and the response will contain contents of all subfolders.</p>\n"
+  example: []
+  syntax:
+    content: public bool Recursive { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Recursive As Boolean
+  overload: Dropbox.Api.Files.ListFolderArg.Recursive*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo
+  commentId: P:Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo
+  id: IncludeMediaInfo
+  parent: Dropbox.Api.Files.ListFolderArg
+  langs:
+  - csharp
+  - vb
+  name: IncludeMediaInfo
+  nameWithType: ListFolderArg.IncludeMediaInfo
+  fullName: Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IncludeMediaInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+    startLine: 134
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If true, <xref href=\"Dropbox.Api.Files.FileMetadata.MediaInfo\" data-throw-if-not-resolved=\"false\"></xref> is set for\nphoto and video. This parameter will no longer have an effect starting December 2,\n2019.</p>\n"
+  example: []
+  syntax:
+    content: public bool IncludeMediaInfo { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IncludeMediaInfo As Boolean
+  overload: Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListFolderArg.IncludeDeleted
+  commentId: P:Dropbox.Api.Files.ListFolderArg.IncludeDeleted
+  id: IncludeDeleted
+  parent: Dropbox.Api.Files.ListFolderArg
+  langs:
+  - csharp
+  - vb
+  name: IncludeDeleted
+  nameWithType: ListFolderArg.IncludeDeleted
+  fullName: Dropbox.Api.Files.ListFolderArg.IncludeDeleted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IncludeDeleted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+    startLine: 140
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If true, the results will include entries for files and folders that used to\nexist but were deleted.</p>\n"
+  example: []
+  syntax:
+    content: public bool IncludeDeleted { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IncludeDeleted As Boolean
+  overload: Dropbox.Api.Files.ListFolderArg.IncludeDeleted*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListFolderArg.IncludeHasExplicitSharedMembers
+  commentId: P:Dropbox.Api.Files.ListFolderArg.IncludeHasExplicitSharedMembers
+  id: IncludeHasExplicitSharedMembers
+  parent: Dropbox.Api.Files.ListFolderArg
+  langs:
+  - csharp
+  - vb
+  name: IncludeHasExplicitSharedMembers
+  nameWithType: ListFolderArg.IncludeHasExplicitSharedMembers
+  fullName: Dropbox.Api.Files.ListFolderArg.IncludeHasExplicitSharedMembers
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IncludeHasExplicitSharedMembers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+    startLine: 146
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If true, the results will include a flag for each file indicating whether or\nnot  that file has any explicit members.</p>\n"
+  example: []
+  syntax:
+    content: public bool IncludeHasExplicitSharedMembers { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IncludeHasExplicitSharedMembers As Boolean
+  overload: Dropbox.Api.Files.ListFolderArg.IncludeHasExplicitSharedMembers*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListFolderArg.IncludeMountedFolders
+  commentId: P:Dropbox.Api.Files.ListFolderArg.IncludeMountedFolders
+  id: IncludeMountedFolders
+  parent: Dropbox.Api.Files.ListFolderArg
+  langs:
+  - csharp
+  - vb
+  name: IncludeMountedFolders
+  nameWithType: ListFolderArg.IncludeMountedFolders
+  fullName: Dropbox.Api.Files.ListFolderArg.IncludeMountedFolders
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IncludeMountedFolders
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+    startLine: 152
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If true, the results will include entries under mounted folders which\nincludes app folder, shared folder and team folder.</p>\n"
+  example: []
+  syntax:
+    content: public bool IncludeMountedFolders { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IncludeMountedFolders As Boolean
+  overload: Dropbox.Api.Files.ListFolderArg.IncludeMountedFolders*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListFolderArg.Limit
+  commentId: P:Dropbox.Api.Files.ListFolderArg.Limit
+  id: Limit
+  parent: Dropbox.Api.Files.ListFolderArg
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: ListFolderArg.Limit
+  fullName: Dropbox.Api.Files.ListFolderArg.Limit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Limit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+    startLine: 159
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The maximum number of results to return per request. Note: This is an\napproximate number and there can be slightly more entries returned in some\ncases.</p>\n"
+  example: []
+  syntax:
+    content: public uint? Limit { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.UInt32}
+    content.vb: Public Property Limit As UInteger?
+  overload: Dropbox.Api.Files.ListFolderArg.Limit*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListFolderArg.SharedLink
+  commentId: P:Dropbox.Api.Files.ListFolderArg.SharedLink
+  id: SharedLink
+  parent: Dropbox.Api.Files.ListFolderArg
+  langs:
+  - csharp
+  - vb
+  name: SharedLink
+  nameWithType: ListFolderArg.SharedLink
+  fullName: Dropbox.Api.Files.ListFolderArg.SharedLink
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SharedLink
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+    startLine: 167
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A shared link to list the contents of. If the link is password-protected, the\npassword must be provided. If this field is present, <xref href=\"Dropbox.Api.Files.ListFolderArg.Path\" data-throw-if-not-resolved=\"false\"></xref> will be relative to root of the\nshared link. Only non-recursive mode is supported for shared link.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLink SharedLink { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SharedLink
+    content.vb: Public Property SharedLink As SharedLink
+  overload: Dropbox.Api.Files.ListFolderArg.SharedLink*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListFolderArg.IncludePropertyGroups
+  commentId: P:Dropbox.Api.Files.ListFolderArg.IncludePropertyGroups
+  id: IncludePropertyGroups
+  parent: Dropbox.Api.Files.ListFolderArg
+  langs:
+  - csharp
+  - vb
+  name: IncludePropertyGroups
+  nameWithType: ListFolderArg.IncludePropertyGroups
+  fullName: Dropbox.Api.Files.ListFolderArg.IncludePropertyGroups
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IncludePropertyGroups
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+    startLine: 174
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If set to a valid list of template IDs, <xref href=\"Dropbox.Api.Files.FileMetadata.PropertyGroups\" data-throw-if-not-resolved=\"false\"></xref> is set if there exists\nproperty data associated with the file and each of the listed templates.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateFilterBase IncludePropertyGroups { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.TemplateFilterBase
+    content.vb: Public Property IncludePropertyGroups As TemplateFilterBase
+  overload: Dropbox.Api.Files.ListFolderArg.IncludePropertyGroups*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListFolderArg.IncludeNonDownloadableFiles
+  commentId: P:Dropbox.Api.Files.ListFolderArg.IncludeNonDownloadableFiles
+  id: IncludeNonDownloadableFiles
+  parent: Dropbox.Api.Files.ListFolderArg
+  langs:
+  - csharp
+  - vb
+  name: IncludeNonDownloadableFiles
+  nameWithType: ListFolderArg.IncludeNonDownloadableFiles
+  fullName: Dropbox.Api.Files.ListFolderArg.IncludeNonDownloadableFiles
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IncludeNonDownloadableFiles
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderArg.cs
+    startLine: 179
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If true, include files that are not downloadable, i.e. Google Docs.</p>\n"
+  example: []
+  syntax:
+    content: public bool IncludeNonDownloadableFiles { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IncludeNonDownloadableFiles As Boolean
+  overload: Dropbox.Api.Files.ListFolderArg.IncludeNonDownloadableFiles*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.ListFolderArg
+  commentId: T:Dropbox.Api.Files.ListFolderArg
+  parent: Dropbox.Api.Files
+  name: ListFolderArg
+  nameWithType: ListFolderArg
+  fullName: Dropbox.Api.Files.ListFolderArg
+- uid: Dropbox.Api.Files.FileMetadata.MediaInfo
+  commentId: P:Dropbox.Api.Files.FileMetadata.MediaInfo
+  isExternal: true
+- uid: Dropbox.Api.Files.ListFolderArg.Path
+  commentId: P:Dropbox.Api.Files.ListFolderArg.Path
+  isExternal: true
+- uid: Dropbox.Api.Files.FileMetadata.PropertyGroups
+  commentId: P:Dropbox.Api.Files.FileMetadata.PropertyGroups
+  isExternal: true
+- uid: Dropbox.Api.Files.ListFolderArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ListFolderArg.#ctor
+  name: ListFolderArg
+  nameWithType: ListFolderArg.ListFolderArg
+  fullName: Dropbox.Api.Files.ListFolderArg.ListFolderArg
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Nullable{System.UInt32}
+  commentId: T:System.Nullable{System.UInt32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<UInt32>
+  nameWithType: Nullable<UInt32>
+  fullName: System.Nullable<System.UInt32>
+  nameWithType.vb: Nullable(Of UInt32)
+  fullName.vb: System.Nullable(Of System.UInt32)
+  name.vb: Nullable(Of UInt32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.SharedLink
+  commentId: T:Dropbox.Api.Files.SharedLink
+  parent: Dropbox.Api.Files
+  name: SharedLink
+  nameWithType: SharedLink
+  fullName: Dropbox.Api.Files.SharedLink
+- uid: Dropbox.Api.FileProperties.TemplateFilterBase
+  commentId: T:Dropbox.Api.FileProperties.TemplateFilterBase
+  parent: Dropbox.Api.FileProperties
+  name: TemplateFilterBase
+  nameWithType: TemplateFilterBase
+  fullName: Dropbox.Api.FileProperties.TemplateFilterBase
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: Dropbox.Api.Files.ListFolderArg.Path*
+  commentId: Overload:Dropbox.Api.Files.ListFolderArg.Path
+  name: Path
+  nameWithType: ListFolderArg.Path
+  fullName: Dropbox.Api.Files.ListFolderArg.Path
+- uid: Dropbox.Api.Files.ListFolderArg.Recursive*
+  commentId: Overload:Dropbox.Api.Files.ListFolderArg.Recursive
+  name: Recursive
+  nameWithType: ListFolderArg.Recursive
+  fullName: Dropbox.Api.Files.ListFolderArg.Recursive
+- uid: Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo*
+  commentId: Overload:Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo
+  name: IncludeMediaInfo
+  nameWithType: ListFolderArg.IncludeMediaInfo
+  fullName: Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo
+- uid: Dropbox.Api.Files.ListFolderArg.IncludeDeleted*
+  commentId: Overload:Dropbox.Api.Files.ListFolderArg.IncludeDeleted
+  name: IncludeDeleted
+  nameWithType: ListFolderArg.IncludeDeleted
+  fullName: Dropbox.Api.Files.ListFolderArg.IncludeDeleted
+- uid: Dropbox.Api.Files.ListFolderArg.IncludeHasExplicitSharedMembers*
+  commentId: Overload:Dropbox.Api.Files.ListFolderArg.IncludeHasExplicitSharedMembers
+  name: IncludeHasExplicitSharedMembers
+  nameWithType: ListFolderArg.IncludeHasExplicitSharedMembers
+  fullName: Dropbox.Api.Files.ListFolderArg.IncludeHasExplicitSharedMembers
+- uid: Dropbox.Api.Files.ListFolderArg.IncludeMountedFolders*
+  commentId: Overload:Dropbox.Api.Files.ListFolderArg.IncludeMountedFolders
+  name: IncludeMountedFolders
+  nameWithType: ListFolderArg.IncludeMountedFolders
+  fullName: Dropbox.Api.Files.ListFolderArg.IncludeMountedFolders
+- uid: Dropbox.Api.Files.ListFolderArg.Limit*
+  commentId: Overload:Dropbox.Api.Files.ListFolderArg.Limit
+  name: Limit
+  nameWithType: ListFolderArg.Limit
+  fullName: Dropbox.Api.Files.ListFolderArg.Limit
+- uid: Dropbox.Api.Files.ListFolderArg.SharedLink*
+  commentId: Overload:Dropbox.Api.Files.ListFolderArg.SharedLink
+  name: SharedLink
+  nameWithType: ListFolderArg.SharedLink
+  fullName: Dropbox.Api.Files.ListFolderArg.SharedLink
+- uid: Dropbox.Api.Files.ListFolderArg.IncludePropertyGroups*
+  commentId: Overload:Dropbox.Api.Files.ListFolderArg.IncludePropertyGroups
+  name: IncludePropertyGroups
+  nameWithType: ListFolderArg.IncludePropertyGroups
+  fullName: Dropbox.Api.Files.ListFolderArg.IncludePropertyGroups
+- uid: Dropbox.Api.Files.ListFolderArg.IncludeNonDownloadableFiles*
+  commentId: Overload:Dropbox.Api.Files.ListFolderArg.IncludeNonDownloadableFiles
+  name: IncludeNonDownloadableFiles
+  nameWithType: ListFolderArg.IncludeNonDownloadableFiles
+  fullName: Dropbox.Api.Files.ListFolderArg.IncludeNonDownloadableFiles

@@ -1,0 +1,508 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess
+  id: SharedFolderMemberError.NoExplicitAccess
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.#ctor(Dropbox.Api.Sharing.MemberAccessLevelResult)
+  - Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.Value
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMemberError.NoExplicitAccess
+  nameWithType: SharedFolderMemberError.NoExplicitAccess
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NoExplicitAccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+    startLine: 352
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The target member only has inherited access to the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class NoExplicitAccess : SharedFolderMemberError'
+    content.vb: >-
+      Public NotInheritable Class NoExplicitAccess
+          Inherits SharedFolderMemberError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.SharedFolderMemberError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.SharedFolderMemberError.IsInvalidDropboxId
+  - Dropbox.Api.Sharing.SharedFolderMemberError.AsInvalidDropboxId
+  - Dropbox.Api.Sharing.SharedFolderMemberError.IsNotAMember
+  - Dropbox.Api.Sharing.SharedFolderMemberError.AsNotAMember
+  - Dropbox.Api.Sharing.SharedFolderMemberError.IsNoExplicitAccess
+  - Dropbox.Api.Sharing.SharedFolderMemberError.AsNoExplicitAccess
+  - Dropbox.Api.Sharing.SharedFolderMemberError.IsOther
+  - Dropbox.Api.Sharing.SharedFolderMemberError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.#ctor(Dropbox.Api.Sharing.MemberAccessLevelResult)
+  commentId: M:Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.#ctor(Dropbox.Api.Sharing.MemberAccessLevelResult)
+  id: '#ctor(Dropbox.Api.Sharing.MemberAccessLevelResult)'
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess
+  langs:
+  - csharp
+  - vb
+  name: NoExplicitAccess(MemberAccessLevelResult)
+  nameWithType: SharedFolderMemberError.NoExplicitAccess.NoExplicitAccess(MemberAccessLevelResult)
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.NoExplicitAccess(Dropbox.Api.Sharing.MemberAccessLevelResult)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+    startLine: 371
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public NoExplicitAccess(MemberAccessLevelResult value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Sharing.MemberAccessLevelResult
+      description: The value
+    content.vb: Public Sub New(value As MemberAccessLevelResult)
+  overload: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.Value
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: SharedFolderMemberError.NoExplicitAccess.Value
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMemberError.cs
+    startLine: 386
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public MemberAccessLevelResult Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MemberAccessLevelResult
+    content.vb: Public ReadOnly Property Value As MemberAccessLevelResult
+  overload: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMemberError
+  parent: Dropbox.Api.Sharing
+  name: SharedFolderMemberError
+  nameWithType: SharedFolderMemberError
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.IsInvalidDropboxId
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.IsInvalidDropboxId
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  name: IsInvalidDropboxId
+  nameWithType: SharedFolderMemberError.IsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.IsInvalidDropboxId
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.AsInvalidDropboxId
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.AsInvalidDropboxId
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  name: AsInvalidDropboxId
+  nameWithType: SharedFolderMemberError.AsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.AsInvalidDropboxId
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.IsNotAMember
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.IsNotAMember
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  name: IsNotAMember
+  nameWithType: SharedFolderMemberError.IsNotAMember
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.IsNotAMember
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.AsNotAMember
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.AsNotAMember
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  name: AsNotAMember
+  nameWithType: SharedFolderMemberError.AsNotAMember
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.AsNotAMember
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.IsNoExplicitAccess
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.IsNoExplicitAccess
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  name: IsNoExplicitAccess
+  nameWithType: SharedFolderMemberError.IsNoExplicitAccess
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.IsNoExplicitAccess
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.AsNoExplicitAccess
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.AsNoExplicitAccess
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  name: AsNoExplicitAccess
+  nameWithType: SharedFolderMemberError.AsNoExplicitAccess
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.AsNoExplicitAccess
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.IsOther
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.IsOther
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  name: IsOther
+  nameWithType: SharedFolderMemberError.IsOther
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.IsOther
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.AsOther
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMemberError.AsOther
+  parent: Dropbox.Api.Sharing.SharedFolderMemberError
+  name: AsOther
+  nameWithType: SharedFolderMemberError.AsOther
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess
+  parent: Dropbox.Api.Sharing
+  name: SharedFolderMemberError.NoExplicitAccess
+  nameWithType: SharedFolderMemberError.NoExplicitAccess
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.#ctor
+  name: NoExplicitAccess
+  nameWithType: SharedFolderMemberError.NoExplicitAccess.NoExplicitAccess
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.NoExplicitAccess
+- uid: Dropbox.Api.Sharing.MemberAccessLevelResult
+  commentId: T:Dropbox.Api.Sharing.MemberAccessLevelResult
+  parent: Dropbox.Api.Sharing
+  name: MemberAccessLevelResult
+  nameWithType: MemberAccessLevelResult
+  fullName: Dropbox.Api.Sharing.MemberAccessLevelResult
+- uid: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.Value*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.Value
+  name: Value
+  nameWithType: SharedFolderMemberError.NoExplicitAccess.Value
+  fullName: Dropbox.Api.Sharing.SharedFolderMemberError.NoExplicitAccess.Value

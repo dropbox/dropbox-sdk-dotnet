@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.SecondaryEmails
+  commentId: N:Dropbox.Api.SecondaryEmails
+  id: Dropbox.Api.SecondaryEmails
+  children:
+  - Dropbox.Api.SecondaryEmails.SecondaryEmail
+  langs:
+  - csharp
+  - vb
+  name: Dropbox.Api.SecondaryEmails
+  nameWithType: Dropbox.Api.SecondaryEmails
+  fullName: Dropbox.Api.SecondaryEmails
+  type: Namespace
+  assemblies:
+  - Dropbox.Api
+references:
+- uid: Dropbox.Api.SecondaryEmails.SecondaryEmail
+  commentId: T:Dropbox.Api.SecondaryEmails.SecondaryEmail
+  parent: Dropbox.Api.SecondaryEmails
+  name: SecondaryEmail
+  nameWithType: SecondaryEmail
+  fullName: Dropbox.Api.SecondaryEmails.SecondaryEmail
+- uid: Dropbox.Api.SecondaryEmails
+  commentId: N:Dropbox.Api.SecondaryEmails
+  name: Dropbox.Api.SecondaryEmails
+  nameWithType: Dropbox.Api.SecondaryEmails
+  fullName: Dropbox.Api.SecondaryEmails

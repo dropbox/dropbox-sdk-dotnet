@@ -1,0 +1,441 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueError.InvalidCursor
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsContinueError.InvalidCursor
+  id: ListFileRequestsContinueError.InvalidCursor
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.ListFileRequestsContinueError.InvalidCursor.Instance
+  langs:
+  - csharp
+  - vb
+  name: ListFileRequestsContinueError.InvalidCursor
+  nameWithType: ListFileRequestsContinueError.InvalidCursor
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueError.InvalidCursor
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: InvalidCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsContinueError.cs
+    startLine: 185
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The cursor is invalid.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class InvalidCursor : ListFileRequestsContinueError'
+    content.vb: >-
+      Public NotInheritable Class InvalidCursor
+          Inherits ListFileRequestsContinueError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileRequests.ListFileRequestsContinueError
+  inheritedMembers:
+  - Dropbox.Api.FileRequests.ListFileRequestsContinueError.IsInvalidCursor
+  - Dropbox.Api.FileRequests.ListFileRequestsContinueError.AsInvalidCursor
+  - Dropbox.Api.FileRequests.ListFileRequestsContinueError.IsDisabledForTeam
+  - Dropbox.Api.FileRequests.ListFileRequestsContinueError.AsDisabledForTeam
+  - Dropbox.Api.FileRequests.ListFileRequestsContinueError.IsOther
+  - Dropbox.Api.FileRequests.ListFileRequestsContinueError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueError.InvalidCursor.Instance
+  commentId: F:Dropbox.Api.FileRequests.ListFileRequestsContinueError.InvalidCursor.Instance
+  id: Instance
+  parent: Dropbox.Api.FileRequests.ListFileRequestsContinueError.InvalidCursor
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ListFileRequestsContinueError.InvalidCursor.Instance
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueError.InvalidCursor.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsContinueError.cs
+    startLine: 210
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>A singleton instance of InvalidCursor</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ListFileRequestsContinueError.InvalidCursor Instance
+    return:
+      type: Dropbox.Api.FileRequests.ListFileRequestsContinueError.InvalidCursor
+    content.vb: Public Shared ReadOnly Instance As ListFileRequestsContinueError.InvalidCursor
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueError
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsContinueError
+  parent: Dropbox.Api.FileRequests
+  name: ListFileRequestsContinueError
+  nameWithType: ListFileRequestsContinueError
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueError
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueError.IsInvalidCursor
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsContinueError.IsInvalidCursor
+  parent: Dropbox.Api.FileRequests.ListFileRequestsContinueError
+  name: IsInvalidCursor
+  nameWithType: ListFileRequestsContinueError.IsInvalidCursor
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueError.IsInvalidCursor
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueError.AsInvalidCursor
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsContinueError.AsInvalidCursor
+  parent: Dropbox.Api.FileRequests.ListFileRequestsContinueError
+  name: AsInvalidCursor
+  nameWithType: ListFileRequestsContinueError.AsInvalidCursor
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueError.AsInvalidCursor
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueError.IsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsContinueError.IsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.ListFileRequestsContinueError
+  name: IsDisabledForTeam
+  nameWithType: ListFileRequestsContinueError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueError.IsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueError.AsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsContinueError.AsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.ListFileRequestsContinueError
+  name: AsDisabledForTeam
+  nameWithType: ListFileRequestsContinueError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueError.AsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueError.IsOther
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsContinueError.IsOther
+  parent: Dropbox.Api.FileRequests.ListFileRequestsContinueError
+  name: IsOther
+  nameWithType: ListFileRequestsContinueError.IsOther
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueError.IsOther
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueError.AsOther
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsContinueError.AsOther
+  parent: Dropbox.Api.FileRequests.ListFileRequestsContinueError
+  name: AsOther
+  nameWithType: ListFileRequestsContinueError.AsOther
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueError.InvalidCursor
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsContinueError.InvalidCursor
+  parent: Dropbox.Api.FileRequests
+  name: ListFileRequestsContinueError.InvalidCursor
+  nameWithType: ListFileRequestsContinueError.InvalidCursor
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueError.InvalidCursor

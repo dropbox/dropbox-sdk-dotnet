@@ -1,0 +1,582 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.PendingUploadMode
+  commentId: T:Dropbox.Api.Sharing.PendingUploadMode
+  id: PendingUploadMode
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.PendingUploadMode.#ctor
+  - Dropbox.Api.Sharing.PendingUploadMode.AsFile
+  - Dropbox.Api.Sharing.PendingUploadMode.AsFolder
+  - Dropbox.Api.Sharing.PendingUploadMode.IsFile
+  - Dropbox.Api.Sharing.PendingUploadMode.IsFolder
+  langs:
+  - csharp
+  - vb
+  name: PendingUploadMode
+  nameWithType: PendingUploadMode
+  fullName: Dropbox.Api.Sharing.PendingUploadMode
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PendingUploadMode
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Flag to indicate pending upload default (for linking to not-yet-existing\npaths).</p>\n"
+  example: []
+  syntax:
+    content: public class PendingUploadMode
+    content.vb: Public Class PendingUploadMode
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.PendingUploadMode.File
+  - Dropbox.Api.Sharing.PendingUploadMode.Folder
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.PendingUploadMode.#ctor
+  commentId: M:Dropbox.Api.Sharing.PendingUploadMode.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.PendingUploadMode
+  langs:
+  - csharp
+  - vb
+  name: PendingUploadMode()
+  nameWithType: PendingUploadMode.PendingUploadMode()
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.PendingUploadMode()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.PendingUploadMode\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PendingUploadMode()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.PendingUploadMode.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.PendingUploadMode.IsFile
+  commentId: P:Dropbox.Api.Sharing.PendingUploadMode.IsFile
+  id: IsFile
+  parent: Dropbox.Api.Sharing.PendingUploadMode
+  langs:
+  - csharp
+  - vb
+  name: IsFile
+  nameWithType: PendingUploadMode.IsFile
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.IsFile
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsFile
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is File</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFile { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFile As Boolean
+  overload: Dropbox.Api.Sharing.PendingUploadMode.IsFile*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PendingUploadMode.AsFile
+  commentId: P:Dropbox.Api.Sharing.PendingUploadMode.AsFile
+  id: AsFile
+  parent: Dropbox.Api.Sharing.PendingUploadMode
+  langs:
+  - csharp
+  - vb
+  name: AsFile
+  nameWithType: PendingUploadMode.AsFile
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.AsFile
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsFile
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a File, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PendingUploadMode.File AsFile { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PendingUploadMode.File
+    content.vb: Public ReadOnly Property AsFile As PendingUploadMode.File
+  overload: Dropbox.Api.Sharing.PendingUploadMode.AsFile*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PendingUploadMode.IsFolder
+  commentId: P:Dropbox.Api.Sharing.PendingUploadMode.IsFolder
+  id: IsFolder
+  parent: Dropbox.Api.Sharing.PendingUploadMode
+  langs:
+  - csharp
+  - vb
+  name: IsFolder
+  nameWithType: PendingUploadMode.IsFolder
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.IsFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Folder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFolder As Boolean
+  overload: Dropbox.Api.Sharing.PendingUploadMode.IsFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PendingUploadMode.AsFolder
+  commentId: P:Dropbox.Api.Sharing.PendingUploadMode.AsFolder
+  id: AsFolder
+  parent: Dropbox.Api.Sharing.PendingUploadMode
+  langs:
+  - csharp
+  - vb
+  name: AsFolder
+  nameWithType: PendingUploadMode.AsFolder
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.AsFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Folder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PendingUploadMode.Folder AsFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PendingUploadMode.Folder
+    content.vb: Public ReadOnly Property AsFolder As PendingUploadMode.Folder
+  overload: Dropbox.Api.Sharing.PendingUploadMode.AsFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.PendingUploadMode
+  commentId: T:Dropbox.Api.Sharing.PendingUploadMode
+  parent: Dropbox.Api.Sharing
+  name: PendingUploadMode
+  nameWithType: PendingUploadMode
+  fullName: Dropbox.Api.Sharing.PendingUploadMode
+- uid: Dropbox.Api.Sharing.PendingUploadMode.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.PendingUploadMode.#ctor
+  name: PendingUploadMode
+  nameWithType: PendingUploadMode.PendingUploadMode
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.PendingUploadMode
+- uid: Dropbox.Api.Sharing.PendingUploadMode.IsFile*
+  commentId: Overload:Dropbox.Api.Sharing.PendingUploadMode.IsFile
+  name: IsFile
+  nameWithType: PendingUploadMode.IsFile
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.IsFile
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.PendingUploadMode.AsFile*
+  commentId: Overload:Dropbox.Api.Sharing.PendingUploadMode.AsFile
+  name: AsFile
+  nameWithType: PendingUploadMode.AsFile
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.AsFile
+- uid: Dropbox.Api.Sharing.PendingUploadMode.File
+  commentId: T:Dropbox.Api.Sharing.PendingUploadMode.File
+  parent: Dropbox.Api.Sharing
+  name: PendingUploadMode.File
+  nameWithType: PendingUploadMode.File
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.File
+- uid: Dropbox.Api.Sharing.PendingUploadMode.IsFolder*
+  commentId: Overload:Dropbox.Api.Sharing.PendingUploadMode.IsFolder
+  name: IsFolder
+  nameWithType: PendingUploadMode.IsFolder
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.IsFolder
+- uid: Dropbox.Api.Sharing.PendingUploadMode.AsFolder*
+  commentId: Overload:Dropbox.Api.Sharing.PendingUploadMode.AsFolder
+  name: AsFolder
+  nameWithType: PendingUploadMode.AsFolder
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.AsFolder
+- uid: Dropbox.Api.Sharing.PendingUploadMode.Folder
+  commentId: T:Dropbox.Api.Sharing.PendingUploadMode.Folder
+  parent: Dropbox.Api.Sharing
+  name: PendingUploadMode.Folder
+  nameWithType: PendingUploadMode.Folder
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.Folder

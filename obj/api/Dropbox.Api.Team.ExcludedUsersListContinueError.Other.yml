@@ -1,0 +1,427 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ExcludedUsersListContinueError.Other
+  commentId: T:Dropbox.Api.Team.ExcludedUsersListContinueError.Other
+  id: ExcludedUsersListContinueError.Other
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ExcludedUsersListContinueError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: ExcludedUsersListContinueError.Other
+  nameWithType: ExcludedUsersListContinueError.Other
+  fullName: Dropbox.Api.Team.ExcludedUsersListContinueError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListContinueError.cs
+    startLine: 223
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : ExcludedUsersListContinueError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits ExcludedUsersListContinueError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.ExcludedUsersListContinueError
+  inheritedMembers:
+  - Dropbox.Api.Team.ExcludedUsersListContinueError.IsInvalidCursor
+  - Dropbox.Api.Team.ExcludedUsersListContinueError.AsInvalidCursor
+  - Dropbox.Api.Team.ExcludedUsersListContinueError.IsOther
+  - Dropbox.Api.Team.ExcludedUsersListContinueError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.ExcludedUsersListContinueError.Other.Instance
+  commentId: F:Dropbox.Api.Team.ExcludedUsersListContinueError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.ExcludedUsersListContinueError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ExcludedUsersListContinueError.Other.Instance
+  fullName: Dropbox.Api.Team.ExcludedUsersListContinueError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListContinueError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListContinueError.cs
+    startLine: 247
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ExcludedUsersListContinueError.Other Instance
+    return:
+      type: Dropbox.Api.Team.ExcludedUsersListContinueError.Other
+    content.vb: Public Shared ReadOnly Instance As ExcludedUsersListContinueError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ExcludedUsersListContinueError
+  commentId: T:Dropbox.Api.Team.ExcludedUsersListContinueError
+  parent: Dropbox.Api.Team
+  name: ExcludedUsersListContinueError
+  nameWithType: ExcludedUsersListContinueError
+  fullName: Dropbox.Api.Team.ExcludedUsersListContinueError
+- uid: Dropbox.Api.Team.ExcludedUsersListContinueError.IsInvalidCursor
+  commentId: P:Dropbox.Api.Team.ExcludedUsersListContinueError.IsInvalidCursor
+  parent: Dropbox.Api.Team.ExcludedUsersListContinueError
+  name: IsInvalidCursor
+  nameWithType: ExcludedUsersListContinueError.IsInvalidCursor
+  fullName: Dropbox.Api.Team.ExcludedUsersListContinueError.IsInvalidCursor
+- uid: Dropbox.Api.Team.ExcludedUsersListContinueError.AsInvalidCursor
+  commentId: P:Dropbox.Api.Team.ExcludedUsersListContinueError.AsInvalidCursor
+  parent: Dropbox.Api.Team.ExcludedUsersListContinueError
+  name: AsInvalidCursor
+  nameWithType: ExcludedUsersListContinueError.AsInvalidCursor
+  fullName: Dropbox.Api.Team.ExcludedUsersListContinueError.AsInvalidCursor
+- uid: Dropbox.Api.Team.ExcludedUsersListContinueError.IsOther
+  commentId: P:Dropbox.Api.Team.ExcludedUsersListContinueError.IsOther
+  parent: Dropbox.Api.Team.ExcludedUsersListContinueError
+  name: IsOther
+  nameWithType: ExcludedUsersListContinueError.IsOther
+  fullName: Dropbox.Api.Team.ExcludedUsersListContinueError.IsOther
+- uid: Dropbox.Api.Team.ExcludedUsersListContinueError.AsOther
+  commentId: P:Dropbox.Api.Team.ExcludedUsersListContinueError.AsOther
+  parent: Dropbox.Api.Team.ExcludedUsersListContinueError
+  name: AsOther
+  nameWithType: ExcludedUsersListContinueError.AsOther
+  fullName: Dropbox.Api.Team.ExcludedUsersListContinueError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.ExcludedUsersListContinueError.Other
+  commentId: T:Dropbox.Api.Team.ExcludedUsersListContinueError.Other
+  parent: Dropbox.Api.Team
+  name: ExcludedUsersListContinueError.Other
+  nameWithType: ExcludedUsersListContinueError.Other
+  fullName: Dropbox.Api.Team.ExcludedUsersListContinueError.Other

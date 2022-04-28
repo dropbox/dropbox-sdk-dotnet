@@ -1,0 +1,954 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MobileClientPlatform
+  commentId: T:Dropbox.Api.Team.MobileClientPlatform
+  id: MobileClientPlatform
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MobileClientPlatform.#ctor
+  - Dropbox.Api.Team.MobileClientPlatform.AsAndroid
+  - Dropbox.Api.Team.MobileClientPlatform.AsBlackberry
+  - Dropbox.Api.Team.MobileClientPlatform.AsIpad
+  - Dropbox.Api.Team.MobileClientPlatform.AsIphone
+  - Dropbox.Api.Team.MobileClientPlatform.AsOther
+  - Dropbox.Api.Team.MobileClientPlatform.AsWindowsPhone
+  - Dropbox.Api.Team.MobileClientPlatform.IsAndroid
+  - Dropbox.Api.Team.MobileClientPlatform.IsBlackberry
+  - Dropbox.Api.Team.MobileClientPlatform.IsIpad
+  - Dropbox.Api.Team.MobileClientPlatform.IsIphone
+  - Dropbox.Api.Team.MobileClientPlatform.IsOther
+  - Dropbox.Api.Team.MobileClientPlatform.IsWindowsPhone
+  langs:
+  - csharp
+  - vb
+  name: MobileClientPlatform
+  nameWithType: MobileClientPlatform
+  fullName: Dropbox.Api.Team.MobileClientPlatform
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MobileClientPlatform
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The mobile client platform object</p>\n"
+  example: []
+  syntax:
+    content: public class MobileClientPlatform
+    content.vb: Public Class MobileClientPlatform
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.MobileClientPlatform.Android
+  - Dropbox.Api.Team.MobileClientPlatform.Blackberry
+  - Dropbox.Api.Team.MobileClientPlatform.Ipad
+  - Dropbox.Api.Team.MobileClientPlatform.Iphone
+  - Dropbox.Api.Team.MobileClientPlatform.Other
+  - Dropbox.Api.Team.MobileClientPlatform.WindowsPhone
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MobileClientPlatform.#ctor
+  commentId: M:Dropbox.Api.Team.MobileClientPlatform.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  langs:
+  - csharp
+  - vb
+  name: MobileClientPlatform()
+  nameWithType: MobileClientPlatform.MobileClientPlatform()
+  fullName: Dropbox.Api.Team.MobileClientPlatform.MobileClientPlatform()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MobileClientPlatform\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MobileClientPlatform()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MobileClientPlatform.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsIphone
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.IsIphone
+  id: IsIphone
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  langs:
+  - csharp
+  - vb
+  name: IsIphone
+  nameWithType: MobileClientPlatform.IsIphone
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsIphone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsIphone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Iphone</p>\n"
+  example: []
+  syntax:
+    content: public bool IsIphone { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIphone As Boolean
+  overload: Dropbox.Api.Team.MobileClientPlatform.IsIphone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsIphone
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.AsIphone
+  id: AsIphone
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  langs:
+  - csharp
+  - vb
+  name: AsIphone
+  nameWithType: MobileClientPlatform.AsIphone
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsIphone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsIphone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Iphone, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MobileClientPlatform.Iphone AsIphone { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MobileClientPlatform.Iphone
+    content.vb: Public ReadOnly Property AsIphone As MobileClientPlatform.Iphone
+  overload: Dropbox.Api.Team.MobileClientPlatform.AsIphone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsIpad
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.IsIpad
+  id: IsIpad
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  langs:
+  - csharp
+  - vb
+  name: IsIpad
+  nameWithType: MobileClientPlatform.IsIpad
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsIpad
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsIpad
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Ipad</p>\n"
+  example: []
+  syntax:
+    content: public bool IsIpad { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIpad As Boolean
+  overload: Dropbox.Api.Team.MobileClientPlatform.IsIpad*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsIpad
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.AsIpad
+  id: AsIpad
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  langs:
+  - csharp
+  - vb
+  name: AsIpad
+  nameWithType: MobileClientPlatform.AsIpad
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsIpad
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsIpad
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Ipad, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MobileClientPlatform.Ipad AsIpad { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MobileClientPlatform.Ipad
+    content.vb: Public ReadOnly Property AsIpad As MobileClientPlatform.Ipad
+  overload: Dropbox.Api.Team.MobileClientPlatform.AsIpad*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsAndroid
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.IsAndroid
+  id: IsAndroid
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  langs:
+  - csharp
+  - vb
+  name: IsAndroid
+  nameWithType: MobileClientPlatform.IsAndroid
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsAndroid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAndroid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Android</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAndroid { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAndroid As Boolean
+  overload: Dropbox.Api.Team.MobileClientPlatform.IsAndroid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsAndroid
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.AsAndroid
+  id: AsAndroid
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  langs:
+  - csharp
+  - vb
+  name: AsAndroid
+  nameWithType: MobileClientPlatform.AsAndroid
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsAndroid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAndroid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Android, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MobileClientPlatform.Android AsAndroid { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MobileClientPlatform.Android
+    content.vb: Public ReadOnly Property AsAndroid As MobileClientPlatform.Android
+  overload: Dropbox.Api.Team.MobileClientPlatform.AsAndroid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsWindowsPhone
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.IsWindowsPhone
+  id: IsWindowsPhone
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  langs:
+  - csharp
+  - vb
+  name: IsWindowsPhone
+  nameWithType: MobileClientPlatform.IsWindowsPhone
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsWindowsPhone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsWindowsPhone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is WindowsPhone</p>\n"
+  example: []
+  syntax:
+    content: public bool IsWindowsPhone { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsWindowsPhone As Boolean
+  overload: Dropbox.Api.Team.MobileClientPlatform.IsWindowsPhone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsWindowsPhone
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.AsWindowsPhone
+  id: AsWindowsPhone
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  langs:
+  - csharp
+  - vb
+  name: AsWindowsPhone
+  nameWithType: MobileClientPlatform.AsWindowsPhone
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsWindowsPhone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsWindowsPhone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a WindowsPhone, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MobileClientPlatform.WindowsPhone AsWindowsPhone { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MobileClientPlatform.WindowsPhone
+    content.vb: Public ReadOnly Property AsWindowsPhone As MobileClientPlatform.WindowsPhone
+  overload: Dropbox.Api.Team.MobileClientPlatform.AsWindowsPhone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsBlackberry
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.IsBlackberry
+  id: IsBlackberry
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  langs:
+  - csharp
+  - vb
+  name: IsBlackberry
+  nameWithType: MobileClientPlatform.IsBlackberry
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsBlackberry
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsBlackberry
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Blackberry</p>\n"
+  example: []
+  syntax:
+    content: public bool IsBlackberry { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsBlackberry As Boolean
+  overload: Dropbox.Api.Team.MobileClientPlatform.IsBlackberry*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsBlackberry
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.AsBlackberry
+  id: AsBlackberry
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  langs:
+  - csharp
+  - vb
+  name: AsBlackberry
+  nameWithType: MobileClientPlatform.AsBlackberry
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsBlackberry
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsBlackberry
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Blackberry, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MobileClientPlatform.Blackberry AsBlackberry { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MobileClientPlatform.Blackberry
+    content.vb: Public ReadOnly Property AsBlackberry As MobileClientPlatform.Blackberry
+  overload: Dropbox.Api.Team.MobileClientPlatform.AsBlackberry*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsOther
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MobileClientPlatform.IsOther
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 150
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.MobileClientPlatform.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsOther
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MobileClientPlatform.AsOther
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MobileClientPlatform.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MobileClientPlatform.Other
+    content.vb: Public ReadOnly Property AsOther As MobileClientPlatform.Other
+  overload: Dropbox.Api.Team.MobileClientPlatform.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.MobileClientPlatform
+  commentId: T:Dropbox.Api.Team.MobileClientPlatform
+  parent: Dropbox.Api.Team
+  name: MobileClientPlatform
+  nameWithType: MobileClientPlatform
+  fullName: Dropbox.Api.Team.MobileClientPlatform
+- uid: Dropbox.Api.Team.MobileClientPlatform.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MobileClientPlatform.#ctor
+  name: MobileClientPlatform
+  nameWithType: MobileClientPlatform.MobileClientPlatform
+  fullName: Dropbox.Api.Team.MobileClientPlatform.MobileClientPlatform
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsIphone*
+  commentId: Overload:Dropbox.Api.Team.MobileClientPlatform.IsIphone
+  name: IsIphone
+  nameWithType: MobileClientPlatform.IsIphone
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsIphone
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsIphone*
+  commentId: Overload:Dropbox.Api.Team.MobileClientPlatform.AsIphone
+  name: AsIphone
+  nameWithType: MobileClientPlatform.AsIphone
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsIphone
+- uid: Dropbox.Api.Team.MobileClientPlatform.Iphone
+  commentId: T:Dropbox.Api.Team.MobileClientPlatform.Iphone
+  parent: Dropbox.Api.Team
+  name: MobileClientPlatform.Iphone
+  nameWithType: MobileClientPlatform.Iphone
+  fullName: Dropbox.Api.Team.MobileClientPlatform.Iphone
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsIpad*
+  commentId: Overload:Dropbox.Api.Team.MobileClientPlatform.IsIpad
+  name: IsIpad
+  nameWithType: MobileClientPlatform.IsIpad
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsIpad
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsIpad*
+  commentId: Overload:Dropbox.Api.Team.MobileClientPlatform.AsIpad
+  name: AsIpad
+  nameWithType: MobileClientPlatform.AsIpad
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsIpad
+- uid: Dropbox.Api.Team.MobileClientPlatform.Ipad
+  commentId: T:Dropbox.Api.Team.MobileClientPlatform.Ipad
+  parent: Dropbox.Api.Team
+  name: MobileClientPlatform.Ipad
+  nameWithType: MobileClientPlatform.Ipad
+  fullName: Dropbox.Api.Team.MobileClientPlatform.Ipad
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsAndroid*
+  commentId: Overload:Dropbox.Api.Team.MobileClientPlatform.IsAndroid
+  name: IsAndroid
+  nameWithType: MobileClientPlatform.IsAndroid
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsAndroid
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsAndroid*
+  commentId: Overload:Dropbox.Api.Team.MobileClientPlatform.AsAndroid
+  name: AsAndroid
+  nameWithType: MobileClientPlatform.AsAndroid
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsAndroid
+- uid: Dropbox.Api.Team.MobileClientPlatform.Android
+  commentId: T:Dropbox.Api.Team.MobileClientPlatform.Android
+  parent: Dropbox.Api.Team
+  name: MobileClientPlatform.Android
+  nameWithType: MobileClientPlatform.Android
+  fullName: Dropbox.Api.Team.MobileClientPlatform.Android
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsWindowsPhone*
+  commentId: Overload:Dropbox.Api.Team.MobileClientPlatform.IsWindowsPhone
+  name: IsWindowsPhone
+  nameWithType: MobileClientPlatform.IsWindowsPhone
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsWindowsPhone
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsWindowsPhone*
+  commentId: Overload:Dropbox.Api.Team.MobileClientPlatform.AsWindowsPhone
+  name: AsWindowsPhone
+  nameWithType: MobileClientPlatform.AsWindowsPhone
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsWindowsPhone
+- uid: Dropbox.Api.Team.MobileClientPlatform.WindowsPhone
+  commentId: T:Dropbox.Api.Team.MobileClientPlatform.WindowsPhone
+  parent: Dropbox.Api.Team
+  name: MobileClientPlatform.WindowsPhone
+  nameWithType: MobileClientPlatform.WindowsPhone
+  fullName: Dropbox.Api.Team.MobileClientPlatform.WindowsPhone
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsBlackberry*
+  commentId: Overload:Dropbox.Api.Team.MobileClientPlatform.IsBlackberry
+  name: IsBlackberry
+  nameWithType: MobileClientPlatform.IsBlackberry
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsBlackberry
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsBlackberry*
+  commentId: Overload:Dropbox.Api.Team.MobileClientPlatform.AsBlackberry
+  name: AsBlackberry
+  nameWithType: MobileClientPlatform.AsBlackberry
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsBlackberry
+- uid: Dropbox.Api.Team.MobileClientPlatform.Blackberry
+  commentId: T:Dropbox.Api.Team.MobileClientPlatform.Blackberry
+  parent: Dropbox.Api.Team
+  name: MobileClientPlatform.Blackberry
+  nameWithType: MobileClientPlatform.Blackberry
+  fullName: Dropbox.Api.Team.MobileClientPlatform.Blackberry
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsOther*
+  commentId: Overload:Dropbox.Api.Team.MobileClientPlatform.IsOther
+  name: IsOther
+  nameWithType: MobileClientPlatform.IsOther
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsOther
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsOther*
+  commentId: Overload:Dropbox.Api.Team.MobileClientPlatform.AsOther
+  name: AsOther
+  nameWithType: MobileClientPlatform.AsOther
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsOther
+- uid: Dropbox.Api.Team.MobileClientPlatform.Other
+  commentId: T:Dropbox.Api.Team.MobileClientPlatform.Other
+  parent: Dropbox.Api.Team
+  name: MobileClientPlatform.Other
+  nameWithType: MobileClientPlatform.Other
+  fullName: Dropbox.Api.Team.MobileClientPlatform.Other

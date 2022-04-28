@@ -1,0 +1,469 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.PaperDocExport
+  commentId: T:Dropbox.Api.Paper.PaperDocExport
+  id: PaperDocExport
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.PaperDocExport.#ctor(System.String,Dropbox.Api.Paper.ExportFormat)
+  - Dropbox.Api.Paper.PaperDocExport.ExportFormat
+  langs:
+  - csharp
+  - vb
+  name: PaperDocExport
+  nameWithType: PaperDocExport
+  fullName: Dropbox.Api.Paper.PaperDocExport
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExport.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PaperDocExport
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExport.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The paper doc export object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDocExport : RefPaperDoc'
+    content.vb: >-
+      Public Class PaperDocExport
+          Inherits RefPaperDoc
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Paper.RefPaperDoc
+  inheritedMembers:
+  - Dropbox.Api.Paper.RefPaperDoc.DocId
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.PaperDocExport.#ctor(System.String,Dropbox.Api.Paper.ExportFormat)
+  commentId: M:Dropbox.Api.Paper.PaperDocExport.#ctor(System.String,Dropbox.Api.Paper.ExportFormat)
+  id: '#ctor(System.String,Dropbox.Api.Paper.ExportFormat)'
+  parent: Dropbox.Api.Paper.PaperDocExport
+  langs:
+  - csharp
+  - vb
+  name: PaperDocExport(String, ExportFormat)
+  nameWithType: PaperDocExport.PaperDocExport(String, ExportFormat)
+  fullName: Dropbox.Api.Paper.PaperDocExport.PaperDocExport(System.String, Dropbox.Api.Paper.ExportFormat)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExport.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExport.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperDocExport\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDocExport(string docId, ExportFormat exportFormat)
+    parameters:
+    - id: docId
+      type: System.String
+      description: The Paper doc ID.
+    - id: exportFormat
+      type: Dropbox.Api.Paper.ExportFormat
+      description: The export format
+    content.vb: Public Sub New(docId As String, exportFormat As ExportFormat)
+  overload: Dropbox.Api.Paper.PaperDocExport.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.PaperDocExport.ExportFormat
+  commentId: P:Dropbox.Api.Paper.PaperDocExport.ExportFormat
+  id: ExportFormat
+  parent: Dropbox.Api.Paper.PaperDocExport
+  langs:
+  - csharp
+  - vb
+  name: ExportFormat
+  nameWithType: PaperDocExport.ExportFormat
+  fullName: Dropbox.Api.Paper.PaperDocExport.ExportFormat
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExport.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ExportFormat
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExport.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets the export format of the paper doc export</p>\n"
+  example: []
+  syntax:
+    content: public ExportFormat ExportFormat { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.ExportFormat
+    content.vb: Public Property ExportFormat As ExportFormat
+  overload: Dropbox.Api.Paper.PaperDocExport.ExportFormat*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.RefPaperDoc
+  commentId: T:Dropbox.Api.Paper.RefPaperDoc
+  parent: Dropbox.Api.Paper
+  name: RefPaperDoc
+  nameWithType: RefPaperDoc
+  fullName: Dropbox.Api.Paper.RefPaperDoc
+- uid: Dropbox.Api.Paper.RefPaperDoc.DocId
+  commentId: P:Dropbox.Api.Paper.RefPaperDoc.DocId
+  parent: Dropbox.Api.Paper.RefPaperDoc
+  name: DocId
+  nameWithType: RefPaperDoc.DocId
+  fullName: Dropbox.Api.Paper.RefPaperDoc.DocId
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Paper.PaperDocExport
+  commentId: T:Dropbox.Api.Paper.PaperDocExport
+  parent: Dropbox.Api.Paper
+  name: PaperDocExport
+  nameWithType: PaperDocExport
+  fullName: Dropbox.Api.Paper.PaperDocExport
+- uid: Dropbox.Api.Paper.PaperDocExport.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocExport.#ctor
+  name: PaperDocExport
+  nameWithType: PaperDocExport.PaperDocExport
+  fullName: Dropbox.Api.Paper.PaperDocExport.PaperDocExport
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Paper.ExportFormat
+  commentId: T:Dropbox.Api.Paper.ExportFormat
+  parent: Dropbox.Api.Paper
+  name: ExportFormat
+  nameWithType: ExportFormat
+  fullName: Dropbox.Api.Paper.ExportFormat
+- uid: Dropbox.Api.Paper.PaperDocExport.ExportFormat*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocExport.ExportFormat
+  name: ExportFormat
+  nameWithType: PaperDocExport.ExportFormat
+  fullName: Dropbox.Api.Paper.PaperDocExport.ExportFormat

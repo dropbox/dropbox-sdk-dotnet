@@ -1,0 +1,497 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails
+  id: DeviceApprovalsChangeDesktopPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.#ctor(Dropbox.Api.TeamLog.DeviceApprovalsPolicy,Dropbox.Api.TeamLog.DeviceApprovalsPolicy)
+  - Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: DeviceApprovalsChangeDesktopPolicyDetails
+  nameWithType: DeviceApprovalsChangeDesktopPolicyDetails
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeDesktopPolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: DeviceApprovalsChangeDesktopPolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeDesktopPolicyDetails.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Set/removed limit on number of computers member can link to team Dropbox\naccount.</p>\n"
+  example: []
+  syntax:
+    content: public class DeviceApprovalsChangeDesktopPolicyDetails
+    content.vb: Public Class DeviceApprovalsChangeDesktopPolicyDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.#ctor(Dropbox.Api.TeamLog.DeviceApprovalsPolicy,Dropbox.Api.TeamLog.DeviceApprovalsPolicy)
+  commentId: M:Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.#ctor(Dropbox.Api.TeamLog.DeviceApprovalsPolicy,Dropbox.Api.TeamLog.DeviceApprovalsPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.DeviceApprovalsPolicy,Dropbox.Api.TeamLog.DeviceApprovalsPolicy)'
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceApprovalsChangeDesktopPolicyDetails(DeviceApprovalsPolicy, DeviceApprovalsPolicy)
+  nameWithType: DeviceApprovalsChangeDesktopPolicyDetails.DeviceApprovalsChangeDesktopPolicyDetails(DeviceApprovalsPolicy, DeviceApprovalsPolicy)
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.DeviceApprovalsChangeDesktopPolicyDetails(Dropbox.Api.TeamLog.DeviceApprovalsPolicy, Dropbox.Api.TeamLog.DeviceApprovalsPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeDesktopPolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeDesktopPolicyDetails.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceApprovalsChangeDesktopPolicyDetails(DeviceApprovalsPolicy newValue = null, DeviceApprovalsPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.DeviceApprovalsPolicy
+      description: >-
+        New desktop device approvals policy. Might be missing due to
+
+        historical data gap.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.DeviceApprovalsPolicy
+      description: >-
+        Previous desktop device approvals policy. Might be
+
+        missing due to historical data gap.
+    content.vb: Public Sub New(newValue As DeviceApprovalsPolicy = Nothing, previousValue As DeviceApprovalsPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: DeviceApprovalsChangeDesktopPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeDesktopPolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeDesktopPolicyDetails.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New desktop device approvals policy. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceApprovalsPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.DeviceApprovalsPolicy
+    content.vb: Public Property NewValue As DeviceApprovalsPolicy
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: DeviceApprovalsChangeDesktopPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeDesktopPolicyDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeDesktopPolicyDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous desktop device approvals policy. Might be missing due to historical\ndata gap.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceApprovalsPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.DeviceApprovalsPolicy
+    content.vb: Public Property PreviousValue As DeviceApprovalsPolicy
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: DeviceApprovalsChangeDesktopPolicyDetails
+  nameWithType: DeviceApprovalsChangeDesktopPolicyDetails
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.#ctor
+  name: DeviceApprovalsChangeDesktopPolicyDetails
+  nameWithType: DeviceApprovalsChangeDesktopPolicyDetails.DeviceApprovalsChangeDesktopPolicyDetails
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.DeviceApprovalsChangeDesktopPolicyDetails
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsPolicy
+  commentId: T:Dropbox.Api.TeamLog.DeviceApprovalsPolicy
+  parent: Dropbox.Api.TeamLog
+  name: DeviceApprovalsPolicy
+  nameWithType: DeviceApprovalsPolicy
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsPolicy
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.NewValue
+  name: NewValue
+  nameWithType: DeviceApprovalsChangeDesktopPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: DeviceApprovalsChangeDesktopPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeDesktopPolicyDetails.PreviousValue

@@ -1,0 +1,861 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.PropertiesError
+  commentId: T:Dropbox.Api.FileProperties.PropertiesError
+  id: PropertiesError
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.PropertiesError.#ctor
+  - Dropbox.Api.FileProperties.PropertiesError.AsOther
+  - Dropbox.Api.FileProperties.PropertiesError.AsPath
+  - Dropbox.Api.FileProperties.PropertiesError.AsRestrictedContent
+  - Dropbox.Api.FileProperties.PropertiesError.AsTemplateNotFound
+  - Dropbox.Api.FileProperties.PropertiesError.AsUnsupportedFolder
+  - Dropbox.Api.FileProperties.PropertiesError.IsOther
+  - Dropbox.Api.FileProperties.PropertiesError.IsPath
+  - Dropbox.Api.FileProperties.PropertiesError.IsRestrictedContent
+  - Dropbox.Api.FileProperties.PropertiesError.IsTemplateNotFound
+  - Dropbox.Api.FileProperties.PropertiesError.IsUnsupportedFolder
+  langs:
+  - csharp
+  - vb
+  name: PropertiesError
+  nameWithType: PropertiesError
+  fullName: Dropbox.Api.FileProperties.PropertiesError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PropertiesError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The properties error object</p>\n"
+  example: []
+  syntax:
+    content: public class PropertiesError
+    content.vb: Public Class PropertiesError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.FileProperties.PropertiesError.Other
+  - Dropbox.Api.FileProperties.PropertiesError.Path
+  - Dropbox.Api.FileProperties.PropertiesError.RestrictedContent
+  - Dropbox.Api.FileProperties.PropertiesError.TemplateNotFound
+  - Dropbox.Api.FileProperties.PropertiesError.UnsupportedFolder
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.PropertiesError.#ctor
+  commentId: M:Dropbox.Api.FileProperties.PropertiesError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  langs:
+  - csharp
+  - vb
+  name: PropertiesError()
+  nameWithType: PropertiesError.PropertiesError()
+  fullName: Dropbox.Api.FileProperties.PropertiesError.PropertiesError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.PropertiesError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PropertiesError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileProperties.PropertiesError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsPath
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.IsPath
+  id: IsPath
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  langs:
+  - csharp
+  - vb
+  name: IsPath
+  nameWithType: PropertiesError.IsPath
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is Path</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPath As Boolean
+  overload: Dropbox.Api.FileProperties.PropertiesError.IsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsPath
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.AsPath
+  id: AsPath
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  langs:
+  - csharp
+  - vb
+  name: AsPath
+  nameWithType: PropertiesError.AsPath
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a Path, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PropertiesError.Path AsPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.PropertiesError.Path
+    content.vb: Public ReadOnly Property AsPath As PropertiesError.Path
+  overload: Dropbox.Api.FileProperties.PropertiesError.AsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsUnsupportedFolder
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.IsUnsupportedFolder
+  id: IsUnsupportedFolder
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  langs:
+  - csharp
+  - vb
+  name: IsUnsupportedFolder
+  nameWithType: PropertiesError.IsUnsupportedFolder
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsUnsupportedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUnsupportedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is UnsupportedFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnsupportedFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnsupportedFolder As Boolean
+  overload: Dropbox.Api.FileProperties.PropertiesError.IsUnsupportedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsUnsupportedFolder
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.AsUnsupportedFolder
+  id: AsUnsupportedFolder
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  langs:
+  - csharp
+  - vb
+  name: AsUnsupportedFolder
+  nameWithType: PropertiesError.AsUnsupportedFolder
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsUnsupportedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUnsupportedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a UnsupportedFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PropertiesError.UnsupportedFolder AsUnsupportedFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.PropertiesError.UnsupportedFolder
+    content.vb: Public ReadOnly Property AsUnsupportedFolder As PropertiesError.UnsupportedFolder
+  overload: Dropbox.Api.FileProperties.PropertiesError.AsUnsupportedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsTemplateNotFound
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.IsTemplateNotFound
+  id: IsTemplateNotFound
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  langs:
+  - csharp
+  - vb
+  name: IsTemplateNotFound
+  nameWithType: PropertiesError.IsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsTemplateNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTemplateNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is TemplateNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTemplateNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTemplateNotFound As Boolean
+  overload: Dropbox.Api.FileProperties.PropertiesError.IsTemplateNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsTemplateNotFound
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.AsTemplateNotFound
+  id: AsTemplateNotFound
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  langs:
+  - csharp
+  - vb
+  name: AsTemplateNotFound
+  nameWithType: PropertiesError.AsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsTemplateNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTemplateNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a TemplateNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PropertiesError.TemplateNotFound AsTemplateNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.PropertiesError.TemplateNotFound
+    content.vb: Public ReadOnly Property AsTemplateNotFound As PropertiesError.TemplateNotFound
+  overload: Dropbox.Api.FileProperties.PropertiesError.AsTemplateNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.IsRestrictedContent
+  id: IsRestrictedContent
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  langs:
+  - csharp
+  - vb
+  name: IsRestrictedContent
+  nameWithType: PropertiesError.IsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsRestrictedContent
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsRestrictedContent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is RestrictedContent</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRestrictedContent { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRestrictedContent As Boolean
+  overload: Dropbox.Api.FileProperties.PropertiesError.IsRestrictedContent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.AsRestrictedContent
+  id: AsRestrictedContent
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  langs:
+  - csharp
+  - vb
+  name: AsRestrictedContent
+  nameWithType: PropertiesError.AsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsRestrictedContent
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsRestrictedContent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a RestrictedContent, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PropertiesError.RestrictedContent AsRestrictedContent { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.PropertiesError.RestrictedContent
+    content.vb: Public ReadOnly Property AsRestrictedContent As PropertiesError.RestrictedContent
+  overload: Dropbox.Api.FileProperties.PropertiesError.AsRestrictedContent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsOther
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: PropertiesError.IsOther
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.FileProperties.PropertiesError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsOther
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: PropertiesError.AsOther
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PropertiesError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.PropertiesError.Other
+    content.vb: Public ReadOnly Property AsOther As PropertiesError.Other
+  overload: Dropbox.Api.FileProperties.PropertiesError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.FileProperties.PropertiesError
+  commentId: T:Dropbox.Api.FileProperties.PropertiesError
+  parent: Dropbox.Api.FileProperties
+  name: PropertiesError
+  nameWithType: PropertiesError
+  fullName: Dropbox.Api.FileProperties.PropertiesError
+- uid: Dropbox.Api.FileProperties.PropertiesError.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesError.#ctor
+  name: PropertiesError
+  nameWithType: PropertiesError.PropertiesError
+  fullName: Dropbox.Api.FileProperties.PropertiesError.PropertiesError
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsPath*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesError.IsPath
+  name: IsPath
+  nameWithType: PropertiesError.IsPath
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsPath
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsPath*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesError.AsPath
+  name: AsPath
+  nameWithType: PropertiesError.AsPath
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsPath
+- uid: Dropbox.Api.FileProperties.PropertiesError.Path
+  commentId: T:Dropbox.Api.FileProperties.PropertiesError.Path
+  parent: Dropbox.Api.FileProperties
+  name: PropertiesError.Path
+  nameWithType: PropertiesError.Path
+  fullName: Dropbox.Api.FileProperties.PropertiesError.Path
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsUnsupportedFolder*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesError.IsUnsupportedFolder
+  name: IsUnsupportedFolder
+  nameWithType: PropertiesError.IsUnsupportedFolder
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsUnsupportedFolder
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsUnsupportedFolder*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesError.AsUnsupportedFolder
+  name: AsUnsupportedFolder
+  nameWithType: PropertiesError.AsUnsupportedFolder
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsUnsupportedFolder
+- uid: Dropbox.Api.FileProperties.PropertiesError.UnsupportedFolder
+  commentId: T:Dropbox.Api.FileProperties.PropertiesError.UnsupportedFolder
+  parent: Dropbox.Api.FileProperties
+  name: PropertiesError.UnsupportedFolder
+  nameWithType: PropertiesError.UnsupportedFolder
+  fullName: Dropbox.Api.FileProperties.PropertiesError.UnsupportedFolder
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsTemplateNotFound*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesError.IsTemplateNotFound
+  name: IsTemplateNotFound
+  nameWithType: PropertiesError.IsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsTemplateNotFound
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsTemplateNotFound*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesError.AsTemplateNotFound
+  name: AsTemplateNotFound
+  nameWithType: PropertiesError.AsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsTemplateNotFound
+- uid: Dropbox.Api.FileProperties.PropertiesError.TemplateNotFound
+  commentId: T:Dropbox.Api.FileProperties.PropertiesError.TemplateNotFound
+  parent: Dropbox.Api.FileProperties
+  name: PropertiesError.TemplateNotFound
+  nameWithType: PropertiesError.TemplateNotFound
+  fullName: Dropbox.Api.FileProperties.PropertiesError.TemplateNotFound
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsRestrictedContent*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesError.IsRestrictedContent
+  name: IsRestrictedContent
+  nameWithType: PropertiesError.IsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsRestrictedContent
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsRestrictedContent*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesError.AsRestrictedContent
+  name: AsRestrictedContent
+  nameWithType: PropertiesError.AsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsRestrictedContent
+- uid: Dropbox.Api.FileProperties.PropertiesError.RestrictedContent
+  commentId: T:Dropbox.Api.FileProperties.PropertiesError.RestrictedContent
+  parent: Dropbox.Api.FileProperties
+  name: PropertiesError.RestrictedContent
+  nameWithType: PropertiesError.RestrictedContent
+  fullName: Dropbox.Api.FileProperties.PropertiesError.RestrictedContent
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsOther*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesError.IsOther
+  name: IsOther
+  nameWithType: PropertiesError.IsOther
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsOther
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsOther*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesError.AsOther
+  name: AsOther
+  nameWithType: PropertiesError.AsOther
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsOther
+- uid: Dropbox.Api.FileProperties.PropertiesError.Other
+  commentId: T:Dropbox.Api.FileProperties.PropertiesError.Other
+  parent: Dropbox.Api.FileProperties
+  name: PropertiesError.Other
+  nameWithType: PropertiesError.Other
+  fullName: Dropbox.Api.FileProperties.PropertiesError.Other

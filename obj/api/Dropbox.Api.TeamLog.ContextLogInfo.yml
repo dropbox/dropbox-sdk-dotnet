@@ -1,0 +1,1047 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ContextLogInfo
+  commentId: T:Dropbox.Api.TeamLog.ContextLogInfo
+  id: ContextLogInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ContextLogInfo.#ctor
+  - Dropbox.Api.TeamLog.ContextLogInfo.AsAnonymous
+  - Dropbox.Api.TeamLog.ContextLogInfo.AsNonTeamMember
+  - Dropbox.Api.TeamLog.ContextLogInfo.AsOrganizationTeam
+  - Dropbox.Api.TeamLog.ContextLogInfo.AsOther
+  - Dropbox.Api.TeamLog.ContextLogInfo.AsTeam
+  - Dropbox.Api.TeamLog.ContextLogInfo.AsTeamMember
+  - Dropbox.Api.TeamLog.ContextLogInfo.AsTrustedNonTeamMember
+  - Dropbox.Api.TeamLog.ContextLogInfo.IsAnonymous
+  - Dropbox.Api.TeamLog.ContextLogInfo.IsNonTeamMember
+  - Dropbox.Api.TeamLog.ContextLogInfo.IsOrganizationTeam
+  - Dropbox.Api.TeamLog.ContextLogInfo.IsOther
+  - Dropbox.Api.TeamLog.ContextLogInfo.IsTeam
+  - Dropbox.Api.TeamLog.ContextLogInfo.IsTeamMember
+  - Dropbox.Api.TeamLog.ContextLogInfo.IsTrustedNonTeamMember
+  langs:
+  - csharp
+  - vb
+  name: ContextLogInfo
+  nameWithType: ContextLogInfo
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ContextLogInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The primary entity on which the action was done.</p>\n"
+  example: []
+  syntax:
+    content: public class ContextLogInfo
+    content.vb: Public Class ContextLogInfo
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.ContextLogInfo.Anonymous
+  - Dropbox.Api.TeamLog.ContextLogInfo.NonTeamMember
+  - Dropbox.Api.TeamLog.ContextLogInfo.OrganizationTeam
+  - Dropbox.Api.TeamLog.ContextLogInfo.Other
+  - Dropbox.Api.TeamLog.ContextLogInfo.Team
+  - Dropbox.Api.TeamLog.ContextLogInfo.TeamMember
+  - Dropbox.Api.TeamLog.ContextLogInfo.TrustedNonTeamMember
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ContextLogInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: ContextLogInfo()
+  nameWithType: ContextLogInfo.ContextLogInfo()
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.ContextLogInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ContextLogInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ContextLogInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsAnonymous
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.IsAnonymous
+  id: IsAnonymous
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: IsAnonymous
+  nameWithType: ContextLogInfo.IsAnonymous
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsAnonymous
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAnonymous
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Anonymous</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAnonymous { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAnonymous As Boolean
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.IsAnonymous*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsAnonymous
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.AsAnonymous
+  id: AsAnonymous
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: AsAnonymous
+  nameWithType: ContextLogInfo.AsAnonymous
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsAnonymous
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAnonymous
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Anonymous, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ContextLogInfo.Anonymous AsAnonymous { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ContextLogInfo.Anonymous
+    content.vb: Public ReadOnly Property AsAnonymous As ContextLogInfo.Anonymous
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.AsAnonymous*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsNonTeamMember
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.IsNonTeamMember
+  id: IsNonTeamMember
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: IsNonTeamMember
+  nameWithType: ContextLogInfo.IsNonTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsNonTeamMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNonTeamMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is NonTeamMember</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNonTeamMember { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNonTeamMember As Boolean
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.IsNonTeamMember*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsNonTeamMember
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.AsNonTeamMember
+  id: AsNonTeamMember
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: AsNonTeamMember
+  nameWithType: ContextLogInfo.AsNonTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsNonTeamMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNonTeamMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a NonTeamMember, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ContextLogInfo.NonTeamMember AsNonTeamMember { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ContextLogInfo.NonTeamMember
+    content.vb: Public ReadOnly Property AsNonTeamMember As ContextLogInfo.NonTeamMember
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.AsNonTeamMember*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsOrganizationTeam
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.IsOrganizationTeam
+  id: IsOrganizationTeam
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: IsOrganizationTeam
+  nameWithType: ContextLogInfo.IsOrganizationTeam
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsOrganizationTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOrganizationTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is OrganizationTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOrganizationTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOrganizationTeam As Boolean
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.IsOrganizationTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsOrganizationTeam
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.AsOrganizationTeam
+  id: AsOrganizationTeam
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: AsOrganizationTeam
+  nameWithType: ContextLogInfo.AsOrganizationTeam
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsOrganizationTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOrganizationTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a OrganizationTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ContextLogInfo.OrganizationTeam AsOrganizationTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ContextLogInfo.OrganizationTeam
+    content.vb: Public ReadOnly Property AsOrganizationTeam As ContextLogInfo.OrganizationTeam
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.AsOrganizationTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsTeam
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.IsTeam
+  id: IsTeam
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: IsTeam
+  nameWithType: ContextLogInfo.IsTeam
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Team</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeam As Boolean
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.IsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsTeam
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.AsTeam
+  id: AsTeam
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: AsTeam
+  nameWithType: ContextLogInfo.AsTeam
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Team, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ContextLogInfo.Team AsTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ContextLogInfo.Team
+    content.vb: Public ReadOnly Property AsTeam As ContextLogInfo.Team
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.AsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsTeamMember
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.IsTeamMember
+  id: IsTeamMember
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: IsTeamMember
+  nameWithType: ContextLogInfo.IsTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsTeamMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTeamMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is TeamMember</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamMember { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeamMember As Boolean
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.IsTeamMember*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsTeamMember
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.AsTeamMember
+  id: AsTeamMember
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: AsTeamMember
+  nameWithType: ContextLogInfo.AsTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsTeamMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTeamMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a TeamMember, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ContextLogInfo.TeamMember AsTeamMember { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ContextLogInfo.TeamMember
+    content.vb: Public ReadOnly Property AsTeamMember As ContextLogInfo.TeamMember
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.AsTeamMember*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsTrustedNonTeamMember
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.IsTrustedNonTeamMember
+  id: IsTrustedNonTeamMember
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: IsTrustedNonTeamMember
+  nameWithType: ContextLogInfo.IsTrustedNonTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsTrustedNonTeamMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTrustedNonTeamMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 149
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is TrustedNonTeamMember</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTrustedNonTeamMember { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTrustedNonTeamMember As Boolean
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.IsTrustedNonTeamMember*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsTrustedNonTeamMember
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.AsTrustedNonTeamMember
+  id: AsTrustedNonTeamMember
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: AsTrustedNonTeamMember
+  nameWithType: ContextLogInfo.AsTrustedNonTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsTrustedNonTeamMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTrustedNonTeamMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 160
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a TrustedNonTeamMember, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ContextLogInfo.TrustedNonTeamMember AsTrustedNonTeamMember { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ContextLogInfo.TrustedNonTeamMember
+    content.vb: Public ReadOnly Property AsTrustedNonTeamMember As ContextLogInfo.TrustedNonTeamMember
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.AsTrustedNonTeamMember*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsOther
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ContextLogInfo.IsOther
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 171
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsOther
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ContextLogInfo.AsOther
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 182
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ContextLogInfo.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ContextLogInfo.Other
+    content.vb: Public ReadOnly Property AsOther As ContextLogInfo.Other
+  overload: Dropbox.Api.TeamLog.ContextLogInfo.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.ContextLogInfo
+  commentId: T:Dropbox.Api.TeamLog.ContextLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: ContextLogInfo
+  nameWithType: ContextLogInfo
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.#ctor
+  name: ContextLogInfo
+  nameWithType: ContextLogInfo.ContextLogInfo
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.ContextLogInfo
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsAnonymous*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.IsAnonymous
+  name: IsAnonymous
+  nameWithType: ContextLogInfo.IsAnonymous
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsAnonymous
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsAnonymous*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.AsAnonymous
+  name: AsAnonymous
+  nameWithType: ContextLogInfo.AsAnonymous
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsAnonymous
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.Anonymous
+  commentId: T:Dropbox.Api.TeamLog.ContextLogInfo.Anonymous
+  parent: Dropbox.Api.TeamLog
+  name: ContextLogInfo.Anonymous
+  nameWithType: ContextLogInfo.Anonymous
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.Anonymous
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsNonTeamMember*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.IsNonTeamMember
+  name: IsNonTeamMember
+  nameWithType: ContextLogInfo.IsNonTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsNonTeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsNonTeamMember*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.AsNonTeamMember
+  name: AsNonTeamMember
+  nameWithType: ContextLogInfo.AsNonTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsNonTeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.NonTeamMember
+  commentId: T:Dropbox.Api.TeamLog.ContextLogInfo.NonTeamMember
+  parent: Dropbox.Api.TeamLog
+  name: ContextLogInfo.NonTeamMember
+  nameWithType: ContextLogInfo.NonTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.NonTeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsOrganizationTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.IsOrganizationTeam
+  name: IsOrganizationTeam
+  nameWithType: ContextLogInfo.IsOrganizationTeam
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsOrganizationTeam
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsOrganizationTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.AsOrganizationTeam
+  name: AsOrganizationTeam
+  nameWithType: ContextLogInfo.AsOrganizationTeam
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsOrganizationTeam
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.OrganizationTeam
+  commentId: T:Dropbox.Api.TeamLog.ContextLogInfo.OrganizationTeam
+  parent: Dropbox.Api.TeamLog
+  name: ContextLogInfo.OrganizationTeam
+  nameWithType: ContextLogInfo.OrganizationTeam
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.OrganizationTeam
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.IsTeam
+  name: IsTeam
+  nameWithType: ContextLogInfo.IsTeam
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsTeam
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.AsTeam
+  name: AsTeam
+  nameWithType: ContextLogInfo.AsTeam
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsTeam
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.Team
+  commentId: T:Dropbox.Api.TeamLog.ContextLogInfo.Team
+  parent: Dropbox.Api.TeamLog
+  name: ContextLogInfo.Team
+  nameWithType: ContextLogInfo.Team
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.Team
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsTeamMember*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.IsTeamMember
+  name: IsTeamMember
+  nameWithType: ContextLogInfo.IsTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsTeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsTeamMember*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.AsTeamMember
+  name: AsTeamMember
+  nameWithType: ContextLogInfo.AsTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsTeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.TeamMember
+  commentId: T:Dropbox.Api.TeamLog.ContextLogInfo.TeamMember
+  parent: Dropbox.Api.TeamLog
+  name: ContextLogInfo.TeamMember
+  nameWithType: ContextLogInfo.TeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.TeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsTrustedNonTeamMember*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.IsTrustedNonTeamMember
+  name: IsTrustedNonTeamMember
+  nameWithType: ContextLogInfo.IsTrustedNonTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsTrustedNonTeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsTrustedNonTeamMember*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.AsTrustedNonTeamMember
+  name: AsTrustedNonTeamMember
+  nameWithType: ContextLogInfo.AsTrustedNonTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsTrustedNonTeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.TrustedNonTeamMember
+  commentId: T:Dropbox.Api.TeamLog.ContextLogInfo.TrustedNonTeamMember
+  parent: Dropbox.Api.TeamLog
+  name: ContextLogInfo.TrustedNonTeamMember
+  nameWithType: ContextLogInfo.TrustedNonTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.TrustedNonTeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.IsOther
+  name: IsOther
+  nameWithType: ContextLogInfo.IsOther
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsOther
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.ContextLogInfo.AsOther
+  name: AsOther
+  nameWithType: ContextLogInfo.AsOther
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsOther
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.Other
+  commentId: T:Dropbox.Api.TeamLog.ContextLogInfo.Other
+  parent: Dropbox.Api.TeamLog
+  name: ContextLogInfo.Other
+  nameWithType: ContextLogInfo.Other
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.Other

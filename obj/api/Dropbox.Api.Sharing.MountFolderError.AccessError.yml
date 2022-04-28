@@ -1,0 +1,550 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.MountFolderError.AccessError
+  commentId: T:Dropbox.Api.Sharing.MountFolderError.AccessError
+  id: MountFolderError.AccessError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.MountFolderError.AccessError.#ctor(Dropbox.Api.Sharing.SharedFolderAccessError)
+  - Dropbox.Api.Sharing.MountFolderError.AccessError.Value
+  langs:
+  - csharp
+  - vb
+  name: MountFolderError.AccessError
+  nameWithType: MountFolderError.AccessError
+  fullName: Dropbox.Api.Sharing.MountFolderError.AccessError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 302
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The access error object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class AccessError : MountFolderError'
+    content.vb: >-
+      Public NotInheritable Class AccessError
+          Inherits MountFolderError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.MountFolderError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.MountFolderError.IsAccessError
+  - Dropbox.Api.Sharing.MountFolderError.AsAccessError
+  - Dropbox.Api.Sharing.MountFolderError.IsInsideSharedFolder
+  - Dropbox.Api.Sharing.MountFolderError.AsInsideSharedFolder
+  - Dropbox.Api.Sharing.MountFolderError.IsInsufficientQuota
+  - Dropbox.Api.Sharing.MountFolderError.AsInsufficientQuota
+  - Dropbox.Api.Sharing.MountFolderError.IsAlreadyMounted
+  - Dropbox.Api.Sharing.MountFolderError.AsAlreadyMounted
+  - Dropbox.Api.Sharing.MountFolderError.IsNoPermission
+  - Dropbox.Api.Sharing.MountFolderError.AsNoPermission
+  - Dropbox.Api.Sharing.MountFolderError.IsNotMountable
+  - Dropbox.Api.Sharing.MountFolderError.AsNotMountable
+  - Dropbox.Api.Sharing.MountFolderError.IsOther
+  - Dropbox.Api.Sharing.MountFolderError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.MountFolderError.AccessError.#ctor(Dropbox.Api.Sharing.SharedFolderAccessError)
+  commentId: M:Dropbox.Api.Sharing.MountFolderError.AccessError.#ctor(Dropbox.Api.Sharing.SharedFolderAccessError)
+  id: '#ctor(Dropbox.Api.Sharing.SharedFolderAccessError)'
+  parent: Dropbox.Api.Sharing.MountFolderError.AccessError
+  langs:
+  - csharp
+  - vb
+  name: AccessError(SharedFolderAccessError)
+  nameWithType: MountFolderError.AccessError.AccessError(SharedFolderAccessError)
+  fullName: Dropbox.Api.Sharing.MountFolderError.AccessError.AccessError(Dropbox.Api.Sharing.SharedFolderAccessError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 321
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.MountFolderError.AccessError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AccessError(SharedFolderAccessError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Sharing.SharedFolderAccessError
+      description: The value
+    content.vb: Public Sub New(value As SharedFolderAccessError)
+  overload: Dropbox.Api.Sharing.MountFolderError.AccessError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.MountFolderError.AccessError.Value
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AccessError.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.MountFolderError.AccessError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: MountFolderError.AccessError.Value
+  fullName: Dropbox.Api.Sharing.MountFolderError.AccessError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 336
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderAccessError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedFolderAccessError
+    content.vb: Public ReadOnly Property Value As SharedFolderAccessError
+  overload: Dropbox.Api.Sharing.MountFolderError.AccessError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.MountFolderError
+  commentId: T:Dropbox.Api.Sharing.MountFolderError
+  parent: Dropbox.Api.Sharing
+  name: MountFolderError
+  nameWithType: MountFolderError
+  fullName: Dropbox.Api.Sharing.MountFolderError
+- uid: Dropbox.Api.Sharing.MountFolderError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.IsAccessError
+  parent: Dropbox.Api.Sharing.MountFolderError
+  name: IsAccessError
+  nameWithType: MountFolderError.IsAccessError
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsAccessError
+- uid: Dropbox.Api.Sharing.MountFolderError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AsAccessError
+  parent: Dropbox.Api.Sharing.MountFolderError
+  name: AsAccessError
+  nameWithType: MountFolderError.AsAccessError
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsAccessError
+- uid: Dropbox.Api.Sharing.MountFolderError.IsInsideSharedFolder
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.IsInsideSharedFolder
+  parent: Dropbox.Api.Sharing.MountFolderError
+  name: IsInsideSharedFolder
+  nameWithType: MountFolderError.IsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsInsideSharedFolder
+- uid: Dropbox.Api.Sharing.MountFolderError.AsInsideSharedFolder
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AsInsideSharedFolder
+  parent: Dropbox.Api.Sharing.MountFolderError
+  name: AsInsideSharedFolder
+  nameWithType: MountFolderError.AsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsInsideSharedFolder
+- uid: Dropbox.Api.Sharing.MountFolderError.IsInsufficientQuota
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.IsInsufficientQuota
+  parent: Dropbox.Api.Sharing.MountFolderError
+  name: IsInsufficientQuota
+  nameWithType: MountFolderError.IsInsufficientQuota
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsInsufficientQuota
+- uid: Dropbox.Api.Sharing.MountFolderError.AsInsufficientQuota
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AsInsufficientQuota
+  parent: Dropbox.Api.Sharing.MountFolderError
+  name: AsInsufficientQuota
+  nameWithType: MountFolderError.AsInsufficientQuota
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsInsufficientQuota
+- uid: Dropbox.Api.Sharing.MountFolderError.IsAlreadyMounted
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.IsAlreadyMounted
+  parent: Dropbox.Api.Sharing.MountFolderError
+  name: IsAlreadyMounted
+  nameWithType: MountFolderError.IsAlreadyMounted
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsAlreadyMounted
+- uid: Dropbox.Api.Sharing.MountFolderError.AsAlreadyMounted
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AsAlreadyMounted
+  parent: Dropbox.Api.Sharing.MountFolderError
+  name: AsAlreadyMounted
+  nameWithType: MountFolderError.AsAlreadyMounted
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsAlreadyMounted
+- uid: Dropbox.Api.Sharing.MountFolderError.IsNoPermission
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.IsNoPermission
+  parent: Dropbox.Api.Sharing.MountFolderError
+  name: IsNoPermission
+  nameWithType: MountFolderError.IsNoPermission
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsNoPermission
+- uid: Dropbox.Api.Sharing.MountFolderError.AsNoPermission
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AsNoPermission
+  parent: Dropbox.Api.Sharing.MountFolderError
+  name: AsNoPermission
+  nameWithType: MountFolderError.AsNoPermission
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsNoPermission
+- uid: Dropbox.Api.Sharing.MountFolderError.IsNotMountable
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.IsNotMountable
+  parent: Dropbox.Api.Sharing.MountFolderError
+  name: IsNotMountable
+  nameWithType: MountFolderError.IsNotMountable
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsNotMountable
+- uid: Dropbox.Api.Sharing.MountFolderError.AsNotMountable
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AsNotMountable
+  parent: Dropbox.Api.Sharing.MountFolderError
+  name: AsNotMountable
+  nameWithType: MountFolderError.AsNotMountable
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsNotMountable
+- uid: Dropbox.Api.Sharing.MountFolderError.IsOther
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.IsOther
+  parent: Dropbox.Api.Sharing.MountFolderError
+  name: IsOther
+  nameWithType: MountFolderError.IsOther
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsOther
+- uid: Dropbox.Api.Sharing.MountFolderError.AsOther
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AsOther
+  parent: Dropbox.Api.Sharing.MountFolderError
+  name: AsOther
+  nameWithType: MountFolderError.AsOther
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.MountFolderError.AccessError
+  commentId: T:Dropbox.Api.Sharing.MountFolderError.AccessError
+  parent: Dropbox.Api.Sharing
+  name: MountFolderError.AccessError
+  nameWithType: MountFolderError.AccessError
+  fullName: Dropbox.Api.Sharing.MountFolderError.AccessError
+- uid: Dropbox.Api.Sharing.MountFolderError.AccessError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.AccessError.#ctor
+  name: AccessError
+  nameWithType: MountFolderError.AccessError.AccessError
+  fullName: Dropbox.Api.Sharing.MountFolderError.AccessError.AccessError
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError
+  commentId: T:Dropbox.Api.Sharing.SharedFolderAccessError
+  parent: Dropbox.Api.Sharing
+  name: SharedFolderAccessError
+  nameWithType: SharedFolderAccessError
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError
+- uid: Dropbox.Api.Sharing.MountFolderError.AccessError.Value*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.AccessError.Value
+  name: Value
+  nameWithType: MountFolderError.AccessError.Value
+  fullName: Dropbox.Api.Sharing.MountFolderError.AccessError.Value

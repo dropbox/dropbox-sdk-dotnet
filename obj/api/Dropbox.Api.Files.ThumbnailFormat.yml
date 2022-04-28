@@ -1,0 +1,582 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ThumbnailFormat
+  commentId: T:Dropbox.Api.Files.ThumbnailFormat
+  id: ThumbnailFormat
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ThumbnailFormat.#ctor
+  - Dropbox.Api.Files.ThumbnailFormat.AsJpeg
+  - Dropbox.Api.Files.ThumbnailFormat.AsPng
+  - Dropbox.Api.Files.ThumbnailFormat.IsJpeg
+  - Dropbox.Api.Files.ThumbnailFormat.IsPng
+  langs:
+  - csharp
+  - vb
+  name: ThumbnailFormat
+  nameWithType: ThumbnailFormat
+  fullName: Dropbox.Api.Files.ThumbnailFormat
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailFormat.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ThumbnailFormat
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailFormat.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The thumbnail format object</p>\n"
+  example: []
+  syntax:
+    content: public class ThumbnailFormat
+    content.vb: Public Class ThumbnailFormat
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.ThumbnailFormat.Jpeg
+  - Dropbox.Api.Files.ThumbnailFormat.Png
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ThumbnailFormat.#ctor
+  commentId: M:Dropbox.Api.Files.ThumbnailFormat.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.ThumbnailFormat
+  langs:
+  - csharp
+  - vb
+  name: ThumbnailFormat()
+  nameWithType: ThumbnailFormat.ThumbnailFormat()
+  fullName: Dropbox.Api.Files.ThumbnailFormat.ThumbnailFormat()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailFormat.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailFormat.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ThumbnailFormat\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailFormat()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.ThumbnailFormat.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ThumbnailFormat.IsJpeg
+  commentId: P:Dropbox.Api.Files.ThumbnailFormat.IsJpeg
+  id: IsJpeg
+  parent: Dropbox.Api.Files.ThumbnailFormat
+  langs:
+  - csharp
+  - vb
+  name: IsJpeg
+  nameWithType: ThumbnailFormat.IsJpeg
+  fullName: Dropbox.Api.Files.ThumbnailFormat.IsJpeg
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailFormat.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsJpeg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailFormat.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Jpeg</p>\n"
+  example: []
+  syntax:
+    content: public bool IsJpeg { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsJpeg As Boolean
+  overload: Dropbox.Api.Files.ThumbnailFormat.IsJpeg*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailFormat.AsJpeg
+  commentId: P:Dropbox.Api.Files.ThumbnailFormat.AsJpeg
+  id: AsJpeg
+  parent: Dropbox.Api.Files.ThumbnailFormat
+  langs:
+  - csharp
+  - vb
+  name: AsJpeg
+  nameWithType: ThumbnailFormat.AsJpeg
+  fullName: Dropbox.Api.Files.ThumbnailFormat.AsJpeg
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailFormat.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsJpeg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailFormat.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Jpeg, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailFormat.Jpeg AsJpeg { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailFormat.Jpeg
+    content.vb: Public ReadOnly Property AsJpeg As ThumbnailFormat.Jpeg
+  overload: Dropbox.Api.Files.ThumbnailFormat.AsJpeg*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailFormat.IsPng
+  commentId: P:Dropbox.Api.Files.ThumbnailFormat.IsPng
+  id: IsPng
+  parent: Dropbox.Api.Files.ThumbnailFormat
+  langs:
+  - csharp
+  - vb
+  name: IsPng
+  nameWithType: ThumbnailFormat.IsPng
+  fullName: Dropbox.Api.Files.ThumbnailFormat.IsPng
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailFormat.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPng
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailFormat.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Png</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPng { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPng As Boolean
+  overload: Dropbox.Api.Files.ThumbnailFormat.IsPng*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailFormat.AsPng
+  commentId: P:Dropbox.Api.Files.ThumbnailFormat.AsPng
+  id: AsPng
+  parent: Dropbox.Api.Files.ThumbnailFormat
+  langs:
+  - csharp
+  - vb
+  name: AsPng
+  nameWithType: ThumbnailFormat.AsPng
+  fullName: Dropbox.Api.Files.ThumbnailFormat.AsPng
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailFormat.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPng
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailFormat.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Png, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailFormat.Png AsPng { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailFormat.Png
+    content.vb: Public ReadOnly Property AsPng As ThumbnailFormat.Png
+  overload: Dropbox.Api.Files.ThumbnailFormat.AsPng*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.ThumbnailFormat
+  commentId: T:Dropbox.Api.Files.ThumbnailFormat
+  parent: Dropbox.Api.Files
+  name: ThumbnailFormat
+  nameWithType: ThumbnailFormat
+  fullName: Dropbox.Api.Files.ThumbnailFormat
+- uid: Dropbox.Api.Files.ThumbnailFormat.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailFormat.#ctor
+  name: ThumbnailFormat
+  nameWithType: ThumbnailFormat.ThumbnailFormat
+  fullName: Dropbox.Api.Files.ThumbnailFormat.ThumbnailFormat
+- uid: Dropbox.Api.Files.ThumbnailFormat.IsJpeg*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailFormat.IsJpeg
+  name: IsJpeg
+  nameWithType: ThumbnailFormat.IsJpeg
+  fullName: Dropbox.Api.Files.ThumbnailFormat.IsJpeg
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.ThumbnailFormat.AsJpeg*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailFormat.AsJpeg
+  name: AsJpeg
+  nameWithType: ThumbnailFormat.AsJpeg
+  fullName: Dropbox.Api.Files.ThumbnailFormat.AsJpeg
+- uid: Dropbox.Api.Files.ThumbnailFormat.Jpeg
+  commentId: T:Dropbox.Api.Files.ThumbnailFormat.Jpeg
+  parent: Dropbox.Api.Files
+  name: ThumbnailFormat.Jpeg
+  nameWithType: ThumbnailFormat.Jpeg
+  fullName: Dropbox.Api.Files.ThumbnailFormat.Jpeg
+- uid: Dropbox.Api.Files.ThumbnailFormat.IsPng*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailFormat.IsPng
+  name: IsPng
+  nameWithType: ThumbnailFormat.IsPng
+  fullName: Dropbox.Api.Files.ThumbnailFormat.IsPng
+- uid: Dropbox.Api.Files.ThumbnailFormat.AsPng*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailFormat.AsPng
+  name: AsPng
+  nameWithType: ThumbnailFormat.AsPng
+  fullName: Dropbox.Api.Files.ThumbnailFormat.AsPng
+- uid: Dropbox.Api.Files.ThumbnailFormat.Png
+  commentId: T:Dropbox.Api.Files.ThumbnailFormat.Png
+  parent: Dropbox.Api.Files
+  name: ThumbnailFormat.Png
+  nameWithType: ThumbnailFormat.Png
+  fullName: Dropbox.Api.Files.ThumbnailFormat.Png

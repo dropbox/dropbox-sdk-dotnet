@@ -1,0 +1,553 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AdminRole.MemberOnly
+  commentId: T:Dropbox.Api.TeamLog.AdminRole.MemberOnly
+  id: AdminRole.MemberOnly
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AdminRole.MemberOnly.Instance
+  langs:
+  - csharp
+  - vb
+  name: AdminRole.MemberOnly
+  nameWithType: AdminRole.MemberOnly
+  fullName: Dropbox.Api.TeamLog.AdminRole.MemberOnly
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminRole.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MemberOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminRole.cs
+    startLine: 701
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The member only object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class MemberOnly : AdminRole'
+    content.vb: >-
+      Public NotInheritable Class MemberOnly
+          Inherits AdminRole
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.AdminRole
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.AdminRole.IsBillingAdmin
+  - Dropbox.Api.TeamLog.AdminRole.AsBillingAdmin
+  - Dropbox.Api.TeamLog.AdminRole.IsComplianceAdmin
+  - Dropbox.Api.TeamLog.AdminRole.AsComplianceAdmin
+  - Dropbox.Api.TeamLog.AdminRole.IsContentAdmin
+  - Dropbox.Api.TeamLog.AdminRole.AsContentAdmin
+  - Dropbox.Api.TeamLog.AdminRole.IsLimitedAdmin
+  - Dropbox.Api.TeamLog.AdminRole.AsLimitedAdmin
+  - Dropbox.Api.TeamLog.AdminRole.IsMemberOnly
+  - Dropbox.Api.TeamLog.AdminRole.AsMemberOnly
+  - Dropbox.Api.TeamLog.AdminRole.IsReportingAdmin
+  - Dropbox.Api.TeamLog.AdminRole.AsReportingAdmin
+  - Dropbox.Api.TeamLog.AdminRole.IsSecurityAdmin
+  - Dropbox.Api.TeamLog.AdminRole.AsSecurityAdmin
+  - Dropbox.Api.TeamLog.AdminRole.IsSupportAdmin
+  - Dropbox.Api.TeamLog.AdminRole.AsSupportAdmin
+  - Dropbox.Api.TeamLog.AdminRole.IsTeamAdmin
+  - Dropbox.Api.TeamLog.AdminRole.AsTeamAdmin
+  - Dropbox.Api.TeamLog.AdminRole.IsUserManagementAdmin
+  - Dropbox.Api.TeamLog.AdminRole.AsUserManagementAdmin
+  - Dropbox.Api.TeamLog.AdminRole.IsOther
+  - Dropbox.Api.TeamLog.AdminRole.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.AdminRole.MemberOnly.Instance
+  commentId: F:Dropbox.Api.TeamLog.AdminRole.MemberOnly.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.AdminRole.MemberOnly
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: AdminRole.MemberOnly.Instance
+  fullName: Dropbox.Api.TeamLog.AdminRole.MemberOnly.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminRole.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminRole.cs
+    startLine: 725
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of MemberOnly</p>\n"
+  example: []
+  syntax:
+    content: public static readonly AdminRole.MemberOnly Instance
+    return:
+      type: Dropbox.Api.TeamLog.AdminRole.MemberOnly
+    content.vb: Public Shared ReadOnly Instance As AdminRole.MemberOnly
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AdminRole
+  commentId: T:Dropbox.Api.TeamLog.AdminRole
+  parent: Dropbox.Api.TeamLog
+  name: AdminRole
+  nameWithType: AdminRole
+  fullName: Dropbox.Api.TeamLog.AdminRole
+- uid: Dropbox.Api.TeamLog.AdminRole.IsBillingAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.IsBillingAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: IsBillingAdmin
+  nameWithType: AdminRole.IsBillingAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.IsBillingAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.AsBillingAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.AsBillingAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: AsBillingAdmin
+  nameWithType: AdminRole.AsBillingAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.AsBillingAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.IsComplianceAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.IsComplianceAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: IsComplianceAdmin
+  nameWithType: AdminRole.IsComplianceAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.IsComplianceAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.AsComplianceAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.AsComplianceAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: AsComplianceAdmin
+  nameWithType: AdminRole.AsComplianceAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.AsComplianceAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.IsContentAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.IsContentAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: IsContentAdmin
+  nameWithType: AdminRole.IsContentAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.IsContentAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.AsContentAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.AsContentAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: AsContentAdmin
+  nameWithType: AdminRole.AsContentAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.AsContentAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.IsLimitedAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.IsLimitedAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: IsLimitedAdmin
+  nameWithType: AdminRole.IsLimitedAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.IsLimitedAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.AsLimitedAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.AsLimitedAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: AsLimitedAdmin
+  nameWithType: AdminRole.AsLimitedAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.AsLimitedAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.IsMemberOnly
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.IsMemberOnly
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: IsMemberOnly
+  nameWithType: AdminRole.IsMemberOnly
+  fullName: Dropbox.Api.TeamLog.AdminRole.IsMemberOnly
+- uid: Dropbox.Api.TeamLog.AdminRole.AsMemberOnly
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.AsMemberOnly
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: AsMemberOnly
+  nameWithType: AdminRole.AsMemberOnly
+  fullName: Dropbox.Api.TeamLog.AdminRole.AsMemberOnly
+- uid: Dropbox.Api.TeamLog.AdminRole.IsReportingAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.IsReportingAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: IsReportingAdmin
+  nameWithType: AdminRole.IsReportingAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.IsReportingAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.AsReportingAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.AsReportingAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: AsReportingAdmin
+  nameWithType: AdminRole.AsReportingAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.AsReportingAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.IsSecurityAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.IsSecurityAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: IsSecurityAdmin
+  nameWithType: AdminRole.IsSecurityAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.IsSecurityAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.AsSecurityAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.AsSecurityAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: AsSecurityAdmin
+  nameWithType: AdminRole.AsSecurityAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.AsSecurityAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.IsSupportAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.IsSupportAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: IsSupportAdmin
+  nameWithType: AdminRole.IsSupportAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.IsSupportAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.AsSupportAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.AsSupportAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: AsSupportAdmin
+  nameWithType: AdminRole.AsSupportAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.AsSupportAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.IsTeamAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.IsTeamAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: IsTeamAdmin
+  nameWithType: AdminRole.IsTeamAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.IsTeamAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.AsTeamAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.AsTeamAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: AsTeamAdmin
+  nameWithType: AdminRole.AsTeamAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.AsTeamAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.IsUserManagementAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.IsUserManagementAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: IsUserManagementAdmin
+  nameWithType: AdminRole.IsUserManagementAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.IsUserManagementAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.AsUserManagementAdmin
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.AsUserManagementAdmin
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: AsUserManagementAdmin
+  nameWithType: AdminRole.AsUserManagementAdmin
+  fullName: Dropbox.Api.TeamLog.AdminRole.AsUserManagementAdmin
+- uid: Dropbox.Api.TeamLog.AdminRole.IsOther
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.IsOther
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: IsOther
+  nameWithType: AdminRole.IsOther
+  fullName: Dropbox.Api.TeamLog.AdminRole.IsOther
+- uid: Dropbox.Api.TeamLog.AdminRole.AsOther
+  commentId: P:Dropbox.Api.TeamLog.AdminRole.AsOther
+  parent: Dropbox.Api.TeamLog.AdminRole
+  name: AsOther
+  nameWithType: AdminRole.AsOther
+  fullName: Dropbox.Api.TeamLog.AdminRole.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.AdminRole.MemberOnly
+  commentId: T:Dropbox.Api.TeamLog.AdminRole.MemberOnly
+  parent: Dropbox.Api.TeamLog
+  name: AdminRole.MemberOnly
+  nameWithType: AdminRole.MemberOnly
+  fullName: Dropbox.Api.TeamLog.AdminRole.MemberOnly

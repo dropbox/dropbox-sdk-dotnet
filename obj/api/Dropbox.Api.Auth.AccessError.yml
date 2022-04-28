@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.AccessError
+  commentId: T:Dropbox.Api.Auth.AccessError
+  id: AccessError
+  parent: Dropbox.Api.Auth
+  children:
+  - Dropbox.Api.Auth.AccessError.#ctor
+  - Dropbox.Api.Auth.AccessError.AsInvalidAccountType
+  - Dropbox.Api.Auth.AccessError.AsOther
+  - Dropbox.Api.Auth.AccessError.AsPaperAccessDenied
+  - Dropbox.Api.Auth.AccessError.IsInvalidAccountType
+  - Dropbox.Api.Auth.AccessError.IsOther
+  - Dropbox.Api.Auth.AccessError.IsPaperAccessDenied
+  langs:
+  - csharp
+  - vb
+  name: AccessError
+  nameWithType: AccessError
+  fullName: Dropbox.Api.Auth.AccessError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Error occurred because the account doesn&apos;t have permission to access the\nresource.</p>\n"
+  example: []
+  syntax:
+    content: public class AccessError
+    content.vb: Public Class AccessError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Auth.AccessError.InvalidAccountType
+  - Dropbox.Api.Auth.AccessError.Other
+  - Dropbox.Api.Auth.AccessError.PaperAccessDenied
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Auth.AccessError.#ctor
+  commentId: M:Dropbox.Api.Auth.AccessError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Auth.AccessError
+  langs:
+  - csharp
+  - vb
+  name: AccessError()
+  nameWithType: AccessError.AccessError()
+  fullName: Dropbox.Api.Auth.AccessError.AccessError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Auth.AccessError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AccessError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Auth.AccessError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.AccessError.IsInvalidAccountType
+  commentId: P:Dropbox.Api.Auth.AccessError.IsInvalidAccountType
+  id: IsInvalidAccountType
+  parent: Dropbox.Api.Auth.AccessError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidAccountType
+  nameWithType: AccessError.IsInvalidAccountType
+  fullName: Dropbox.Api.Auth.AccessError.IsInvalidAccountType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInvalidAccountType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidAccountType</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidAccountType { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidAccountType As Boolean
+  overload: Dropbox.Api.Auth.AccessError.IsInvalidAccountType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AccessError.AsInvalidAccountType
+  commentId: P:Dropbox.Api.Auth.AccessError.AsInvalidAccountType
+  id: AsInvalidAccountType
+  parent: Dropbox.Api.Auth.AccessError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidAccountType
+  nameWithType: AccessError.AsInvalidAccountType
+  fullName: Dropbox.Api.Auth.AccessError.AsInvalidAccountType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInvalidAccountType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets this instance as a InvalidAccountType, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AccessError.InvalidAccountType AsInvalidAccountType { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.AccessError.InvalidAccountType
+    content.vb: Public ReadOnly Property AsInvalidAccountType As AccessError.InvalidAccountType
+  overload: Dropbox.Api.Auth.AccessError.AsInvalidAccountType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AccessError.IsPaperAccessDenied
+  commentId: P:Dropbox.Api.Auth.AccessError.IsPaperAccessDenied
+  id: IsPaperAccessDenied
+  parent: Dropbox.Api.Auth.AccessError
+  langs:
+  - csharp
+  - vb
+  name: IsPaperAccessDenied
+  nameWithType: AccessError.IsPaperAccessDenied
+  fullName: Dropbox.Api.Auth.AccessError.IsPaperAccessDenied
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPaperAccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets a value indicating whether this instance is PaperAccessDenied</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPaperAccessDenied { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPaperAccessDenied As Boolean
+  overload: Dropbox.Api.Auth.AccessError.IsPaperAccessDenied*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AccessError.AsPaperAccessDenied
+  commentId: P:Dropbox.Api.Auth.AccessError.AsPaperAccessDenied
+  id: AsPaperAccessDenied
+  parent: Dropbox.Api.Auth.AccessError
+  langs:
+  - csharp
+  - vb
+  name: AsPaperAccessDenied
+  nameWithType: AccessError.AsPaperAccessDenied
+  fullName: Dropbox.Api.Auth.AccessError.AsPaperAccessDenied
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPaperAccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets this instance as a PaperAccessDenied, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AccessError.PaperAccessDenied AsPaperAccessDenied { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.AccessError.PaperAccessDenied
+    content.vb: Public ReadOnly Property AsPaperAccessDenied As AccessError.PaperAccessDenied
+  overload: Dropbox.Api.Auth.AccessError.AsPaperAccessDenied*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AccessError.IsOther
+  commentId: P:Dropbox.Api.Auth.AccessError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Auth.AccessError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: AccessError.IsOther
+  fullName: Dropbox.Api.Auth.AccessError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Auth.AccessError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AccessError.AsOther
+  commentId: P:Dropbox.Api.Auth.AccessError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Auth.AccessError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: AccessError.AsOther
+  fullName: Dropbox.Api.Auth.AccessError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AccessError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.AccessError.Other
+    content.vb: Public ReadOnly Property AsOther As AccessError.Other
+  overload: Dropbox.Api.Auth.AccessError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Auth.AccessError
+  commentId: T:Dropbox.Api.Auth.AccessError
+  parent: Dropbox.Api.Auth
+  name: AccessError
+  nameWithType: AccessError
+  fullName: Dropbox.Api.Auth.AccessError
+- uid: Dropbox.Api.Auth.AccessError.#ctor*
+  commentId: Overload:Dropbox.Api.Auth.AccessError.#ctor
+  name: AccessError
+  nameWithType: AccessError.AccessError
+  fullName: Dropbox.Api.Auth.AccessError.AccessError
+- uid: Dropbox.Api.Auth.AccessError.IsInvalidAccountType*
+  commentId: Overload:Dropbox.Api.Auth.AccessError.IsInvalidAccountType
+  name: IsInvalidAccountType
+  nameWithType: AccessError.IsInvalidAccountType
+  fullName: Dropbox.Api.Auth.AccessError.IsInvalidAccountType
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Auth.AccessError.AsInvalidAccountType*
+  commentId: Overload:Dropbox.Api.Auth.AccessError.AsInvalidAccountType
+  name: AsInvalidAccountType
+  nameWithType: AccessError.AsInvalidAccountType
+  fullName: Dropbox.Api.Auth.AccessError.AsInvalidAccountType
+- uid: Dropbox.Api.Auth.AccessError.InvalidAccountType
+  commentId: T:Dropbox.Api.Auth.AccessError.InvalidAccountType
+  parent: Dropbox.Api.Auth
+  name: AccessError.InvalidAccountType
+  nameWithType: AccessError.InvalidAccountType
+  fullName: Dropbox.Api.Auth.AccessError.InvalidAccountType
+- uid: Dropbox.Api.Auth.AccessError.IsPaperAccessDenied*
+  commentId: Overload:Dropbox.Api.Auth.AccessError.IsPaperAccessDenied
+  name: IsPaperAccessDenied
+  nameWithType: AccessError.IsPaperAccessDenied
+  fullName: Dropbox.Api.Auth.AccessError.IsPaperAccessDenied
+- uid: Dropbox.Api.Auth.AccessError.AsPaperAccessDenied*
+  commentId: Overload:Dropbox.Api.Auth.AccessError.AsPaperAccessDenied
+  name: AsPaperAccessDenied
+  nameWithType: AccessError.AsPaperAccessDenied
+  fullName: Dropbox.Api.Auth.AccessError.AsPaperAccessDenied
+- uid: Dropbox.Api.Auth.AccessError.PaperAccessDenied
+  commentId: T:Dropbox.Api.Auth.AccessError.PaperAccessDenied
+  parent: Dropbox.Api.Auth
+  name: AccessError.PaperAccessDenied
+  nameWithType: AccessError.PaperAccessDenied
+  fullName: Dropbox.Api.Auth.AccessError.PaperAccessDenied
+- uid: Dropbox.Api.Auth.AccessError.IsOther*
+  commentId: Overload:Dropbox.Api.Auth.AccessError.IsOther
+  name: IsOther
+  nameWithType: AccessError.IsOther
+  fullName: Dropbox.Api.Auth.AccessError.IsOther
+- uid: Dropbox.Api.Auth.AccessError.AsOther*
+  commentId: Overload:Dropbox.Api.Auth.AccessError.AsOther
+  name: AsOther
+  nameWithType: AccessError.AsOther
+  fullName: Dropbox.Api.Auth.AccessError.AsOther
+- uid: Dropbox.Api.Auth.AccessError.Other
+  commentId: T:Dropbox.Api.Auth.AccessError.Other
+  parent: Dropbox.Api.Auth
+  name: AccessError.Other
+  nameWithType: AccessError.Other
+  fullName: Dropbox.Api.Auth.AccessError.Other

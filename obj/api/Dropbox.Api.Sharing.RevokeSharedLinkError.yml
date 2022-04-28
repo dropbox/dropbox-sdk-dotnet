@@ -1,0 +1,861 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError
+  commentId: T:Dropbox.Api.Sharing.RevokeSharedLinkError
+  id: RevokeSharedLinkError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.#ctor
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.AsOther
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkAccessDenied
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkMalformed
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkNotFound
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.AsUnsupportedLinkType
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.IsOther
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkAccessDenied
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkMalformed
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkNotFound
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.IsUnsupportedLinkType
+  langs:
+  - csharp
+  - vb
+  name: RevokeSharedLinkError
+  nameWithType: RevokeSharedLinkError
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: RevokeSharedLinkError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The revoke shared link error object</p>\n"
+  example: []
+  syntax:
+    content: public class RevokeSharedLinkError
+    content.vb: Public Class RevokeSharedLinkError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.Other
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkAccessDenied
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkMalformed
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkNotFound
+  - Dropbox.Api.Sharing.RevokeSharedLinkError.UnsupportedLinkType
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.#ctor
+  commentId: M:Dropbox.Api.Sharing.RevokeSharedLinkError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.RevokeSharedLinkError
+  langs:
+  - csharp
+  - vb
+  name: RevokeSharedLinkError()
+  nameWithType: RevokeSharedLinkError.RevokeSharedLinkError()
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.RevokeSharedLinkError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.RevokeSharedLinkError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeSharedLinkError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.RevokeSharedLinkError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkMalformed
+  commentId: P:Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkMalformed
+  id: IsSharedLinkMalformed
+  parent: Dropbox.Api.Sharing.RevokeSharedLinkError
+  langs:
+  - csharp
+  - vb
+  name: IsSharedLinkMalformed
+  nameWithType: RevokeSharedLinkError.IsSharedLinkMalformed
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkMalformed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSharedLinkMalformed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is SharedLinkMalformed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSharedLinkMalformed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSharedLinkMalformed As Boolean
+  overload: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkMalformed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkMalformed
+  commentId: P:Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkMalformed
+  id: AsSharedLinkMalformed
+  parent: Dropbox.Api.Sharing.RevokeSharedLinkError
+  langs:
+  - csharp
+  - vb
+  name: AsSharedLinkMalformed
+  nameWithType: RevokeSharedLinkError.AsSharedLinkMalformed
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkMalformed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSharedLinkMalformed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a SharedLinkMalformed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeSharedLinkError.SharedLinkMalformed AsSharedLinkMalformed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkMalformed
+    content.vb: Public ReadOnly Property AsSharedLinkMalformed As RevokeSharedLinkError.SharedLinkMalformed
+  overload: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkMalformed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkNotFound
+  commentId: P:Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkNotFound
+  id: IsSharedLinkNotFound
+  parent: Dropbox.Api.Sharing.RevokeSharedLinkError
+  langs:
+  - csharp
+  - vb
+  name: IsSharedLinkNotFound
+  nameWithType: RevokeSharedLinkError.IsSharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSharedLinkNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is SharedLinkNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSharedLinkNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSharedLinkNotFound As Boolean
+  overload: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkNotFound
+  commentId: P:Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkNotFound
+  id: AsSharedLinkNotFound
+  parent: Dropbox.Api.Sharing.RevokeSharedLinkError
+  langs:
+  - csharp
+  - vb
+  name: AsSharedLinkNotFound
+  nameWithType: RevokeSharedLinkError.AsSharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSharedLinkNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a SharedLinkNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeSharedLinkError.SharedLinkNotFound AsSharedLinkNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkNotFound
+    content.vb: Public ReadOnly Property AsSharedLinkNotFound As RevokeSharedLinkError.SharedLinkNotFound
+  overload: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkAccessDenied
+  commentId: P:Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkAccessDenied
+  id: IsSharedLinkAccessDenied
+  parent: Dropbox.Api.Sharing.RevokeSharedLinkError
+  langs:
+  - csharp
+  - vb
+  name: IsSharedLinkAccessDenied
+  nameWithType: RevokeSharedLinkError.IsSharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkAccessDenied
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSharedLinkAccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is\nSharedLinkAccessDenied</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSharedLinkAccessDenied { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSharedLinkAccessDenied As Boolean
+  overload: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkAccessDenied*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkAccessDenied
+  commentId: P:Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkAccessDenied
+  id: AsSharedLinkAccessDenied
+  parent: Dropbox.Api.Sharing.RevokeSharedLinkError
+  langs:
+  - csharp
+  - vb
+  name: AsSharedLinkAccessDenied
+  nameWithType: RevokeSharedLinkError.AsSharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkAccessDenied
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSharedLinkAccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a SharedLinkAccessDenied, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeSharedLinkError.SharedLinkAccessDenied AsSharedLinkAccessDenied { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkAccessDenied
+    content.vb: Public ReadOnly Property AsSharedLinkAccessDenied As RevokeSharedLinkError.SharedLinkAccessDenied
+  overload: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkAccessDenied*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.IsUnsupportedLinkType
+  commentId: P:Dropbox.Api.Sharing.RevokeSharedLinkError.IsUnsupportedLinkType
+  id: IsUnsupportedLinkType
+  parent: Dropbox.Api.Sharing.RevokeSharedLinkError
+  langs:
+  - csharp
+  - vb
+  name: IsUnsupportedLinkType
+  nameWithType: RevokeSharedLinkError.IsUnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.IsUnsupportedLinkType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUnsupportedLinkType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is UnsupportedLinkType</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnsupportedLinkType { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnsupportedLinkType As Boolean
+  overload: Dropbox.Api.Sharing.RevokeSharedLinkError.IsUnsupportedLinkType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.AsUnsupportedLinkType
+  commentId: P:Dropbox.Api.Sharing.RevokeSharedLinkError.AsUnsupportedLinkType
+  id: AsUnsupportedLinkType
+  parent: Dropbox.Api.Sharing.RevokeSharedLinkError
+  langs:
+  - csharp
+  - vb
+  name: AsUnsupportedLinkType
+  nameWithType: RevokeSharedLinkError.AsUnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.AsUnsupportedLinkType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUnsupportedLinkType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a UnsupportedLinkType, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeSharedLinkError.UnsupportedLinkType AsUnsupportedLinkType { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.RevokeSharedLinkError.UnsupportedLinkType
+    content.vb: Public ReadOnly Property AsUnsupportedLinkType As RevokeSharedLinkError.UnsupportedLinkType
+  overload: Dropbox.Api.Sharing.RevokeSharedLinkError.AsUnsupportedLinkType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.IsOther
+  commentId: P:Dropbox.Api.Sharing.RevokeSharedLinkError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.RevokeSharedLinkError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: RevokeSharedLinkError.IsOther
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.RevokeSharedLinkError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.AsOther
+  commentId: P:Dropbox.Api.Sharing.RevokeSharedLinkError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.RevokeSharedLinkError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: RevokeSharedLinkError.AsOther
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RevokeSharedLinkError.cs
+    startLine: 140
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeSharedLinkError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.RevokeSharedLinkError.Other
+    content.vb: Public ReadOnly Property AsOther As RevokeSharedLinkError.Other
+  overload: Dropbox.Api.Sharing.RevokeSharedLinkError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError
+  commentId: T:Dropbox.Api.Sharing.RevokeSharedLinkError
+  parent: Dropbox.Api.Sharing
+  name: RevokeSharedLinkError
+  nameWithType: RevokeSharedLinkError
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.RevokeSharedLinkError.#ctor
+  name: RevokeSharedLinkError
+  nameWithType: RevokeSharedLinkError.RevokeSharedLinkError
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.RevokeSharedLinkError
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkMalformed*
+  commentId: Overload:Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkMalformed
+  name: IsSharedLinkMalformed
+  nameWithType: RevokeSharedLinkError.IsSharedLinkMalformed
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkMalformed
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkMalformed*
+  commentId: Overload:Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkMalformed
+  name: AsSharedLinkMalformed
+  nameWithType: RevokeSharedLinkError.AsSharedLinkMalformed
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkMalformed
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkMalformed
+  commentId: T:Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkMalformed
+  parent: Dropbox.Api.Sharing
+  name: RevokeSharedLinkError.SharedLinkMalformed
+  nameWithType: RevokeSharedLinkError.SharedLinkMalformed
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkMalformed
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkNotFound*
+  commentId: Overload:Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkNotFound
+  name: IsSharedLinkNotFound
+  nameWithType: RevokeSharedLinkError.IsSharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkNotFound
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkNotFound*
+  commentId: Overload:Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkNotFound
+  name: AsSharedLinkNotFound
+  nameWithType: RevokeSharedLinkError.AsSharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkNotFound
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkNotFound
+  commentId: T:Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkNotFound
+  parent: Dropbox.Api.Sharing
+  name: RevokeSharedLinkError.SharedLinkNotFound
+  nameWithType: RevokeSharedLinkError.SharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkNotFound
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkAccessDenied*
+  commentId: Overload:Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkAccessDenied
+  name: IsSharedLinkAccessDenied
+  nameWithType: RevokeSharedLinkError.IsSharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.IsSharedLinkAccessDenied
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkAccessDenied*
+  commentId: Overload:Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkAccessDenied
+  name: AsSharedLinkAccessDenied
+  nameWithType: RevokeSharedLinkError.AsSharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.AsSharedLinkAccessDenied
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkAccessDenied
+  commentId: T:Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkAccessDenied
+  parent: Dropbox.Api.Sharing
+  name: RevokeSharedLinkError.SharedLinkAccessDenied
+  nameWithType: RevokeSharedLinkError.SharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.SharedLinkAccessDenied
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.IsUnsupportedLinkType*
+  commentId: Overload:Dropbox.Api.Sharing.RevokeSharedLinkError.IsUnsupportedLinkType
+  name: IsUnsupportedLinkType
+  nameWithType: RevokeSharedLinkError.IsUnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.IsUnsupportedLinkType
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.AsUnsupportedLinkType*
+  commentId: Overload:Dropbox.Api.Sharing.RevokeSharedLinkError.AsUnsupportedLinkType
+  name: AsUnsupportedLinkType
+  nameWithType: RevokeSharedLinkError.AsUnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.AsUnsupportedLinkType
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.UnsupportedLinkType
+  commentId: T:Dropbox.Api.Sharing.RevokeSharedLinkError.UnsupportedLinkType
+  parent: Dropbox.Api.Sharing
+  name: RevokeSharedLinkError.UnsupportedLinkType
+  nameWithType: RevokeSharedLinkError.UnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.UnsupportedLinkType
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.RevokeSharedLinkError.IsOther
+  name: IsOther
+  nameWithType: RevokeSharedLinkError.IsOther
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.IsOther
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.RevokeSharedLinkError.AsOther
+  name: AsOther
+  nameWithType: RevokeSharedLinkError.AsOther
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.AsOther
+- uid: Dropbox.Api.Sharing.RevokeSharedLinkError.Other
+  commentId: T:Dropbox.Api.Sharing.RevokeSharedLinkError.Other
+  parent: Dropbox.Api.Sharing
+  name: RevokeSharedLinkError.Other
+  nameWithType: RevokeSharedLinkError.Other
+  fullName: Dropbox.Api.Sharing.RevokeSharedLinkError.Other

@@ -1,0 +1,509 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Common.TeamRootInfo
+  commentId: T:Dropbox.Api.Common.TeamRootInfo
+  id: TeamRootInfo
+  parent: Dropbox.Api.Common
+  children:
+  - Dropbox.Api.Common.TeamRootInfo.#ctor(System.String,System.String,System.String)
+  - Dropbox.Api.Common.TeamRootInfo.HomePath
+  langs:
+  - csharp
+  - vb
+  name: TeamRootInfo
+  nameWithType: TeamRootInfo
+  fullName: Dropbox.Api.Common.TeamRootInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/TeamRootInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TeamRootInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/TeamRootInfo.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Root info when user is member of a team with a separate root namespace ID.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamRootInfo : RootInfo'
+    content.vb: >-
+      Public Class TeamRootInfo
+          Inherits RootInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Common.RootInfo
+  inheritedMembers:
+  - Dropbox.Api.Common.RootInfo.IsTeam
+  - Dropbox.Api.Common.RootInfo.AsTeam
+  - Dropbox.Api.Common.RootInfo.IsUser
+  - Dropbox.Api.Common.RootInfo.AsUser
+  - Dropbox.Api.Common.RootInfo.RootNamespaceId
+  - Dropbox.Api.Common.RootInfo.HomeNamespaceId
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Common.TeamRootInfo.#ctor(System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.Common.TeamRootInfo.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: Dropbox.Api.Common.TeamRootInfo
+  langs:
+  - csharp
+  - vb
+  name: TeamRootInfo(String, String, String)
+  nameWithType: TeamRootInfo.TeamRootInfo(String, String, String)
+  fullName: Dropbox.Api.Common.TeamRootInfo.TeamRootInfo(System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/TeamRootInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/TeamRootInfo.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Common.TeamRootInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamRootInfo(string rootNamespaceId, string homeNamespaceId, string homePath)
+    parameters:
+    - id: rootNamespaceId
+      type: System.String
+      description: >-
+        The namespace ID for user&apos;s root namespace. It will
+
+        be the namespace ID of the shared team root if the user is member of a team with a
+
+        separate team root. Otherwise it will be same as <xref href="Dropbox.Api.Common.RootInfo.HomeNamespaceId" data-throw-if-not-resolved="false"></xref>.
+    - id: homeNamespaceId
+      type: System.String
+      description: The namespace ID for user&apos;s home namespace.
+    - id: homePath
+      type: System.String
+      description: >-
+        The path for user&apos;s home directory under the shared team
+
+        root.
+    content.vb: Public Sub New(rootNamespaceId As String, homeNamespaceId As String, homePath As String)
+  overload: Dropbox.Api.Common.TeamRootInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Common.TeamRootInfo.HomePath
+  commentId: P:Dropbox.Api.Common.TeamRootInfo.HomePath
+  id: HomePath
+  parent: Dropbox.Api.Common.TeamRootInfo
+  langs:
+  - csharp
+  - vb
+  name: HomePath
+  nameWithType: TeamRootInfo.HomePath
+  fullName: Dropbox.Api.Common.TeamRootInfo.HomePath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/TeamRootInfo.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: HomePath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/TeamRootInfo.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>The path for user&apos;s home directory under the shared team root.</p>\n"
+  example: []
+  syntax:
+    content: public string HomePath { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HomePath As String
+  overload: Dropbox.Api.Common.TeamRootInfo.HomePath*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Common
+  commentId: N:Dropbox.Api.Common
+  name: Dropbox.Api.Common
+  nameWithType: Dropbox.Api.Common
+  fullName: Dropbox.Api.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Common.RootInfo
+  commentId: T:Dropbox.Api.Common.RootInfo
+  parent: Dropbox.Api.Common
+  name: RootInfo
+  nameWithType: RootInfo
+  fullName: Dropbox.Api.Common.RootInfo
+- uid: Dropbox.Api.Common.RootInfo.IsTeam
+  commentId: P:Dropbox.Api.Common.RootInfo.IsTeam
+  parent: Dropbox.Api.Common.RootInfo
+  name: IsTeam
+  nameWithType: RootInfo.IsTeam
+  fullName: Dropbox.Api.Common.RootInfo.IsTeam
+- uid: Dropbox.Api.Common.RootInfo.AsTeam
+  commentId: P:Dropbox.Api.Common.RootInfo.AsTeam
+  parent: Dropbox.Api.Common.RootInfo
+  name: AsTeam
+  nameWithType: RootInfo.AsTeam
+  fullName: Dropbox.Api.Common.RootInfo.AsTeam
+- uid: Dropbox.Api.Common.RootInfo.IsUser
+  commentId: P:Dropbox.Api.Common.RootInfo.IsUser
+  parent: Dropbox.Api.Common.RootInfo
+  name: IsUser
+  nameWithType: RootInfo.IsUser
+  fullName: Dropbox.Api.Common.RootInfo.IsUser
+- uid: Dropbox.Api.Common.RootInfo.AsUser
+  commentId: P:Dropbox.Api.Common.RootInfo.AsUser
+  parent: Dropbox.Api.Common.RootInfo
+  name: AsUser
+  nameWithType: RootInfo.AsUser
+  fullName: Dropbox.Api.Common.RootInfo.AsUser
+- uid: Dropbox.Api.Common.RootInfo.RootNamespaceId
+  commentId: P:Dropbox.Api.Common.RootInfo.RootNamespaceId
+  parent: Dropbox.Api.Common.RootInfo
+  name: RootNamespaceId
+  nameWithType: RootInfo.RootNamespaceId
+  fullName: Dropbox.Api.Common.RootInfo.RootNamespaceId
+- uid: Dropbox.Api.Common.RootInfo.HomeNamespaceId
+  commentId: P:Dropbox.Api.Common.RootInfo.HomeNamespaceId
+  parent: Dropbox.Api.Common.RootInfo
+  name: HomeNamespaceId
+  nameWithType: RootInfo.HomeNamespaceId
+  fullName: Dropbox.Api.Common.RootInfo.HomeNamespaceId
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Common.TeamRootInfo
+  commentId: T:Dropbox.Api.Common.TeamRootInfo
+  parent: Dropbox.Api.Common
+  name: TeamRootInfo
+  nameWithType: TeamRootInfo
+  fullName: Dropbox.Api.Common.TeamRootInfo
+- uid: Dropbox.Api.Common.TeamRootInfo.#ctor*
+  commentId: Overload:Dropbox.Api.Common.TeamRootInfo.#ctor
+  name: TeamRootInfo
+  nameWithType: TeamRootInfo.TeamRootInfo
+  fullName: Dropbox.Api.Common.TeamRootInfo.TeamRootInfo
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Common.TeamRootInfo.HomePath*
+  commentId: Overload:Dropbox.Api.Common.TeamRootInfo.HomePath
+  name: HomePath
+  nameWithType: TeamRootInfo.HomePath
+  fullName: Dropbox.Api.Common.TeamRootInfo.HomePath

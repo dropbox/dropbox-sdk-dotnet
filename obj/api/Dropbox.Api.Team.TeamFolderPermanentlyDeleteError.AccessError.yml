@@ -1,0 +1,508 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError
+  commentId: T:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError
+  id: TeamFolderPermanentlyDeleteError.AccessError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.#ctor(Dropbox.Api.Team.TeamFolderAccessError)
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.Value
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderPermanentlyDeleteError.AccessError
+  nameWithType: TeamFolderPermanentlyDeleteError.AccessError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+    startLine: 216
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The access error object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class AccessError : TeamFolderPermanentlyDeleteError'
+    content.vb: >-
+      Public NotInheritable Class AccessError
+          Inherits TeamFolderPermanentlyDeleteError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  inheritedMembers:
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsAccessError
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsAccessError
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsStatusError
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsStatusError
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsOther
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.#ctor(Dropbox.Api.Team.TeamFolderAccessError)
+  commentId: M:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.#ctor(Dropbox.Api.Team.TeamFolderAccessError)
+  id: '#ctor(Dropbox.Api.Team.TeamFolderAccessError)'
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError
+  langs:
+  - csharp
+  - vb
+  name: AccessError(TeamFolderAccessError)
+  nameWithType: TeamFolderPermanentlyDeleteError.AccessError.AccessError(TeamFolderAccessError)
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.AccessError(Dropbox.Api.Team.TeamFolderAccessError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+    startLine: 235
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AccessError(TeamFolderAccessError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Team.TeamFolderAccessError
+      description: The value
+    content.vb: Public Sub New(value As TeamFolderAccessError)
+  overload: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.Value
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.Value
+  id: Value
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: TeamFolderPermanentlyDeleteError.AccessError.Value
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+    startLine: 250
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderAccessError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderAccessError
+    content.vb: Public ReadOnly Property Value As TeamFolderAccessError
+  overload: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  commentId: T:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  parent: Dropbox.Api.Team
+  name: TeamFolderPermanentlyDeleteError
+  nameWithType: TeamFolderPermanentlyDeleteError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsAccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsAccessError
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  name: IsAccessError
+  nameWithType: TeamFolderPermanentlyDeleteError.IsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsAccessError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsAccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsAccessError
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  name: AsAccessError
+  nameWithType: TeamFolderPermanentlyDeleteError.AsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsAccessError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsStatusError
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsStatusError
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  name: IsStatusError
+  nameWithType: TeamFolderPermanentlyDeleteError.IsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsStatusError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsStatusError
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsStatusError
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  name: AsStatusError
+  nameWithType: TeamFolderPermanentlyDeleteError.AsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsStatusError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  name: IsTeamSharedDropboxError
+  nameWithType: TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  name: AsTeamSharedDropboxError
+  nameWithType: TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsOther
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  name: IsOther
+  nameWithType: TeamFolderPermanentlyDeleteError.IsOther
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsOther
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsOther
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  name: AsOther
+  nameWithType: TeamFolderPermanentlyDeleteError.AsOther
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError
+  commentId: T:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError
+  parent: Dropbox.Api.Team
+  name: TeamFolderPermanentlyDeleteError.AccessError
+  nameWithType: TeamFolderPermanentlyDeleteError.AccessError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.#ctor
+  name: AccessError
+  nameWithType: TeamFolderPermanentlyDeleteError.AccessError.AccessError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.AccessError
+- uid: Dropbox.Api.Team.TeamFolderAccessError
+  commentId: T:Dropbox.Api.Team.TeamFolderAccessError
+  parent: Dropbox.Api.Team
+  name: TeamFolderAccessError
+  nameWithType: TeamFolderAccessError
+  fullName: Dropbox.Api.Team.TeamFolderAccessError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.Value*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.Value
+  name: Value
+  nameWithType: TeamFolderPermanentlyDeleteError.AccessError.Value
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError.Value

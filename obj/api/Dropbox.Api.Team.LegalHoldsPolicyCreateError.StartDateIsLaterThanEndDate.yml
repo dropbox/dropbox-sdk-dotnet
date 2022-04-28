@@ -1,0 +1,553 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate
+  commentId: T:Dropbox.Api.Team.LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate
+  id: LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate.Instance
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate
+  nameWithType: LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: StartDateIsLaterThanEndDate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs
+    startLine: 430
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Start date must be earlier than end date.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class StartDateIsLaterThanEndDate : LegalHoldsPolicyCreateError'
+    content.vb: >-
+      Public NotInheritable Class StartDateIsLaterThanEndDate
+          Inherits LegalHoldsPolicyCreateError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  inheritedMembers:
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsStartDateIsLaterThanEndDate
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsStartDateIsLaterThanEndDate
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsEmptyMembersList
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsEmptyMembersList
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInvalidMembers
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInvalidMembers
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsNumberOfUsersOnHoldIsGreaterThanHoldLimitation
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsNumberOfUsersOnHoldIsGreaterThanHoldLimitation
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsTransientError
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsTransientError
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsNameMustBeUnique
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsNameMustBeUnique
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsTeamExceededLegalHoldQuota
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsTeamExceededLegalHoldQuota
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInvalidDate
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInvalidDate
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsUnknownLegalHoldError
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsUnknownLegalHoldError
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInsufficientPermissions
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInsufficientPermissions
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsOther
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate.Instance
+  commentId: F:Dropbox.Api.Team.LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate.Instance
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs
+    startLine: 455
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of StartDateIsLaterThanEndDate</p>\n"
+  example: []
+  syntax:
+    content: public static readonly LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate Instance
+    return:
+      type: Dropbox.Api.Team.LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate
+    content.vb: Public Shared ReadOnly Instance As LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  commentId: T:Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  parent: Dropbox.Api.Team
+  name: LegalHoldsPolicyCreateError
+  nameWithType: LegalHoldsPolicyCreateError
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsStartDateIsLaterThanEndDate
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsStartDateIsLaterThanEndDate
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: IsStartDateIsLaterThanEndDate
+  nameWithType: LegalHoldsPolicyCreateError.IsStartDateIsLaterThanEndDate
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsStartDateIsLaterThanEndDate
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsStartDateIsLaterThanEndDate
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsStartDateIsLaterThanEndDate
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: AsStartDateIsLaterThanEndDate
+  nameWithType: LegalHoldsPolicyCreateError.AsStartDateIsLaterThanEndDate
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsStartDateIsLaterThanEndDate
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsEmptyMembersList
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsEmptyMembersList
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: IsEmptyMembersList
+  nameWithType: LegalHoldsPolicyCreateError.IsEmptyMembersList
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsEmptyMembersList
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsEmptyMembersList
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsEmptyMembersList
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: AsEmptyMembersList
+  nameWithType: LegalHoldsPolicyCreateError.AsEmptyMembersList
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsEmptyMembersList
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInvalidMembers
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInvalidMembers
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: IsInvalidMembers
+  nameWithType: LegalHoldsPolicyCreateError.IsInvalidMembers
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInvalidMembers
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInvalidMembers
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInvalidMembers
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: AsInvalidMembers
+  nameWithType: LegalHoldsPolicyCreateError.AsInvalidMembers
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInvalidMembers
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsNumberOfUsersOnHoldIsGreaterThanHoldLimitation
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsNumberOfUsersOnHoldIsGreaterThanHoldLimitation
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: IsNumberOfUsersOnHoldIsGreaterThanHoldLimitation
+  nameWithType: LegalHoldsPolicyCreateError.IsNumberOfUsersOnHoldIsGreaterThanHoldLimitation
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsNumberOfUsersOnHoldIsGreaterThanHoldLimitation
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsNumberOfUsersOnHoldIsGreaterThanHoldLimitation
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsNumberOfUsersOnHoldIsGreaterThanHoldLimitation
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: AsNumberOfUsersOnHoldIsGreaterThanHoldLimitation
+  nameWithType: LegalHoldsPolicyCreateError.AsNumberOfUsersOnHoldIsGreaterThanHoldLimitation
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsNumberOfUsersOnHoldIsGreaterThanHoldLimitation
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsTransientError
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsTransientError
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: IsTransientError
+  nameWithType: LegalHoldsPolicyCreateError.IsTransientError
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsTransientError
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsTransientError
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsTransientError
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: AsTransientError
+  nameWithType: LegalHoldsPolicyCreateError.AsTransientError
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsTransientError
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsNameMustBeUnique
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsNameMustBeUnique
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: IsNameMustBeUnique
+  nameWithType: LegalHoldsPolicyCreateError.IsNameMustBeUnique
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsNameMustBeUnique
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsNameMustBeUnique
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsNameMustBeUnique
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: AsNameMustBeUnique
+  nameWithType: LegalHoldsPolicyCreateError.AsNameMustBeUnique
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsNameMustBeUnique
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsTeamExceededLegalHoldQuota
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsTeamExceededLegalHoldQuota
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: IsTeamExceededLegalHoldQuota
+  nameWithType: LegalHoldsPolicyCreateError.IsTeamExceededLegalHoldQuota
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsTeamExceededLegalHoldQuota
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsTeamExceededLegalHoldQuota
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsTeamExceededLegalHoldQuota
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: AsTeamExceededLegalHoldQuota
+  nameWithType: LegalHoldsPolicyCreateError.AsTeamExceededLegalHoldQuota
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsTeamExceededLegalHoldQuota
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInvalidDate
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInvalidDate
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: IsInvalidDate
+  nameWithType: LegalHoldsPolicyCreateError.IsInvalidDate
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInvalidDate
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInvalidDate
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInvalidDate
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: AsInvalidDate
+  nameWithType: LegalHoldsPolicyCreateError.AsInvalidDate
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInvalidDate
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsUnknownLegalHoldError
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsUnknownLegalHoldError
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: IsUnknownLegalHoldError
+  nameWithType: LegalHoldsPolicyCreateError.IsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsUnknownLegalHoldError
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsUnknownLegalHoldError
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsUnknownLegalHoldError
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: AsUnknownLegalHoldError
+  nameWithType: LegalHoldsPolicyCreateError.AsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsUnknownLegalHoldError
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInsufficientPermissions
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInsufficientPermissions
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: IsInsufficientPermissions
+  nameWithType: LegalHoldsPolicyCreateError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInsufficientPermissions
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInsufficientPermissions
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInsufficientPermissions
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: AsInsufficientPermissions
+  nameWithType: LegalHoldsPolicyCreateError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInsufficientPermissions
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsOther
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsOther
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: IsOther
+  nameWithType: LegalHoldsPolicyCreateError.IsOther
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsOther
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsOther
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsOther
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateError
+  name: AsOther
+  nameWithType: LegalHoldsPolicyCreateError.AsOther
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate
+  commentId: T:Dropbox.Api.Team.LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate
+  parent: Dropbox.Api.Team
+  name: LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate
+  nameWithType: LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate

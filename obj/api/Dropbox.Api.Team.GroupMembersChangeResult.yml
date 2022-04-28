@@ -1,0 +1,514 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupMembersChangeResult
+  commentId: T:Dropbox.Api.Team.GroupMembersChangeResult
+  id: GroupMembersChangeResult
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupMembersChangeResult.#ctor(Dropbox.Api.Team.GroupFullInfo,System.String)
+  - Dropbox.Api.Team.GroupMembersChangeResult.AsyncJobId
+  - Dropbox.Api.Team.GroupMembersChangeResult.GroupInfo
+  langs:
+  - csharp
+  - vb
+  name: GroupMembersChangeResult
+  nameWithType: GroupMembersChangeResult
+  fullName: Dropbox.Api.Team.GroupMembersChangeResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersChangeResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: GroupMembersChangeResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersChangeResult.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Result returned by <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersAddAsync(Dropbox.Api.Team.GroupMembersAddArg)\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersRemoveAsync(Dropbox.Api.Team.GroupMembersRemoveArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public class GroupMembersChangeResult
+    content.vb: Public Class GroupMembersChangeResult
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GroupMembersChangeResult.#ctor(Dropbox.Api.Team.GroupFullInfo,System.String)
+  commentId: M:Dropbox.Api.Team.GroupMembersChangeResult.#ctor(Dropbox.Api.Team.GroupFullInfo,System.String)
+  id: '#ctor(Dropbox.Api.Team.GroupFullInfo,System.String)'
+  parent: Dropbox.Api.Team.GroupMembersChangeResult
+  langs:
+  - csharp
+  - vb
+  name: GroupMembersChangeResult(GroupFullInfo, String)
+  nameWithType: GroupMembersChangeResult.GroupMembersChangeResult(GroupFullInfo, String)
+  fullName: Dropbox.Api.Team.GroupMembersChangeResult.GroupMembersChangeResult(Dropbox.Api.Team.GroupFullInfo, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersChangeResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersChangeResult.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupMembersChangeResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupMembersChangeResult(GroupFullInfo groupInfo, string asyncJobId)
+    parameters:
+    - id: groupInfo
+      type: Dropbox.Api.Team.GroupFullInfo
+      description: >-
+        The group info after member change operation has been
+
+        performed.
+    - id: asyncJobId
+      type: System.String
+      description: >-
+        For legacy purposes async_job_id will always return one
+
+        space &apos; &apos;. Formerly, it was an ID that was used to obtain the status of
+
+        granting/revoking group-owned resources. It&apos;s no longer necessary because the async
+
+        processing now happens automatically.
+    content.vb: Public Sub New(groupInfo As GroupFullInfo, asyncJobId As String)
+  overload: Dropbox.Api.Team.GroupMembersChangeResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupMembersChangeResult.GroupInfo
+  commentId: P:Dropbox.Api.Team.GroupMembersChangeResult.GroupInfo
+  id: GroupInfo
+  parent: Dropbox.Api.Team.GroupMembersChangeResult
+  langs:
+  - csharp
+  - vb
+  name: GroupInfo
+  nameWithType: GroupMembersChangeResult.GroupInfo
+  fullName: Dropbox.Api.Team.GroupMembersChangeResult.GroupInfo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersChangeResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: GroupInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersChangeResult.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The group info after member change operation has been performed.</p>\n"
+  example: []
+  syntax:
+    content: public GroupFullInfo GroupInfo { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupFullInfo
+    content.vb: Public Property GroupInfo As GroupFullInfo
+  overload: Dropbox.Api.Team.GroupMembersChangeResult.GroupInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GroupMembersChangeResult.AsyncJobId
+  commentId: P:Dropbox.Api.Team.GroupMembersChangeResult.AsyncJobId
+  id: AsyncJobId
+  parent: Dropbox.Api.Team.GroupMembersChangeResult
+  langs:
+  - csharp
+  - vb
+  name: AsyncJobId
+  nameWithType: GroupMembersChangeResult.AsyncJobId
+  fullName: Dropbox.Api.Team.GroupMembersChangeResult.AsyncJobId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersChangeResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsyncJobId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersChangeResult.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>For legacy purposes async_job_id will always return one space &apos; &apos;. Formerly,\nit was an ID that was used to obtain the status of granting/revoking group-owned\nresources. It&apos;s no longer necessary because the async processing now happens\nautomatically.</p>\n"
+  example: []
+  syntax:
+    content: public string AsyncJobId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AsyncJobId As String
+  overload: Dropbox.Api.Team.GroupMembersChangeResult.AsyncJobId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersAddAsync(Dropbox.Api.Team.GroupMembersAddArg)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersAddAsync(Dropbox.Api.Team.GroupMembersAddArg)
+  isExternal: true
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersRemoveAsync(Dropbox.Api.Team.GroupMembersRemoveArg)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersRemoveAsync(Dropbox.Api.Team.GroupMembersRemoveArg)
+  isExternal: true
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.GroupMembersChangeResult
+  commentId: T:Dropbox.Api.Team.GroupMembersChangeResult
+  parent: Dropbox.Api.Team
+  name: GroupMembersChangeResult
+  nameWithType: GroupMembersChangeResult
+  fullName: Dropbox.Api.Team.GroupMembersChangeResult
+- uid: Dropbox.Api.Team.GroupMembersChangeResult.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupMembersChangeResult.#ctor
+  name: GroupMembersChangeResult
+  nameWithType: GroupMembersChangeResult.GroupMembersChangeResult
+  fullName: Dropbox.Api.Team.GroupMembersChangeResult.GroupMembersChangeResult
+- uid: Dropbox.Api.Team.GroupFullInfo
+  commentId: T:Dropbox.Api.Team.GroupFullInfo
+  parent: Dropbox.Api.Team
+  name: GroupFullInfo
+  nameWithType: GroupFullInfo
+  fullName: Dropbox.Api.Team.GroupFullInfo
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.GroupMembersChangeResult.GroupInfo*
+  commentId: Overload:Dropbox.Api.Team.GroupMembersChangeResult.GroupInfo
+  name: GroupInfo
+  nameWithType: GroupMembersChangeResult.GroupInfo
+  fullName: Dropbox.Api.Team.GroupMembersChangeResult.GroupInfo
+- uid: Dropbox.Api.Team.GroupMembersChangeResult.AsyncJobId*
+  commentId: Overload:Dropbox.Api.Team.GroupMembersChangeResult.AsyncJobId
+  name: AsyncJobId
+  nameWithType: GroupMembersChangeResult.AsyncJobId
+  fullName: Dropbox.Api.Team.GroupMembersChangeResult.AsyncJobId

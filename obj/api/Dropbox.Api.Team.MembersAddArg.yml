@@ -1,0 +1,634 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersAddArg
+  commentId: T:Dropbox.Api.Team.MembersAddArg
+  id: MembersAddArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersAddArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAddArg},System.Boolean)
+  - Dropbox.Api.Team.MembersAddArg.NewMembers
+  langs:
+  - csharp
+  - vb
+  name: MembersAddArg
+  nameWithType: MembersAddArg
+  fullName: Dropbox.Api.Team.MembersAddArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MembersAddArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The members add arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersAddArg : MembersAddArgBase'
+    content.vb: >-
+      Public Class MembersAddArg
+          Inherits MembersAddArgBase
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MembersAddArgBase
+  inheritedMembers:
+  - Dropbox.Api.Team.MembersAddArgBase.ForceAsync
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersAddArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAddArg},System.Boolean)
+  commentId: M:Dropbox.Api.Team.MembersAddArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAddArg},System.Boolean)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAddArg},System.Boolean)'
+  parent: Dropbox.Api.Team.MembersAddArg
+  langs:
+  - csharp
+  - vb
+  name: MembersAddArg(IEnumerable<MemberAddArg>, Boolean)
+  nameWithType: MembersAddArg.MembersAddArg(IEnumerable<MemberAddArg>, Boolean)
+  fullName: Dropbox.Api.Team.MembersAddArg.MembersAddArg(System.Collections.Generic.IEnumerable<Dropbox.Api.Team.MemberAddArg>, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersAddArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MembersAddArg(IEnumerable<MemberAddArg> newMembers, bool forceAsync = false)
+    parameters:
+    - id: newMembers
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAddArg}
+      description: Details of new members to be added to the team.
+    - id: forceAsync
+      type: System.Boolean
+      description: Whether to force the add to happen asynchronously.
+    content.vb: Public Sub New(newMembers As IEnumerable(Of MemberAddArg), forceAsync As Boolean = False)
+  overload: Dropbox.Api.Team.MembersAddArg.#ctor*
+  nameWithType.vb: MembersAddArg.MembersAddArg(IEnumerable(Of MemberAddArg), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.MembersAddArg.MembersAddArg(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.MemberAddArg), System.Boolean)
+  name.vb: MembersAddArg(IEnumerable(Of MemberAddArg), Boolean)
+- uid: Dropbox.Api.Team.MembersAddArg.NewMembers
+  commentId: P:Dropbox.Api.Team.MembersAddArg.NewMembers
+  id: NewMembers
+  parent: Dropbox.Api.Team.MembersAddArg
+  langs:
+  - csharp
+  - vb
+  name: NewMembers
+  nameWithType: MembersAddArg.NewMembers
+  fullName: Dropbox.Api.Team.MembersAddArg.NewMembers
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddArg.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NewMembers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddArg.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Details of new members to be added to the team.</p>\n"
+  example: []
+  syntax:
+    content: public IList<MemberAddArg> NewMembers { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.MemberAddArg}
+    content.vb: Public Property NewMembers As IList(Of MemberAddArg)
+  overload: Dropbox.Api.Team.MembersAddArg.NewMembers*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersAddArgBase
+  commentId: T:Dropbox.Api.Team.MembersAddArgBase
+  parent: Dropbox.Api.Team
+  name: MembersAddArgBase
+  nameWithType: MembersAddArgBase
+  fullName: Dropbox.Api.Team.MembersAddArgBase
+- uid: Dropbox.Api.Team.MembersAddArgBase.ForceAsync
+  commentId: P:Dropbox.Api.Team.MembersAddArgBase.ForceAsync
+  parent: Dropbox.Api.Team.MembersAddArgBase
+  name: ForceAsync
+  nameWithType: MembersAddArgBase.ForceAsync
+  fullName: Dropbox.Api.Team.MembersAddArgBase.ForceAsync
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.MembersAddArg
+  commentId: T:Dropbox.Api.Team.MembersAddArg
+  parent: Dropbox.Api.Team
+  name: MembersAddArg
+  nameWithType: MembersAddArg
+  fullName: Dropbox.Api.Team.MembersAddArg
+- uid: Dropbox.Api.Team.MembersAddArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersAddArg.#ctor
+  name: MembersAddArg
+  nameWithType: MembersAddArg.MembersAddArg
+  fullName: Dropbox.Api.Team.MembersAddArg.MembersAddArg
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAddArg}
+  commentId: T:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAddArg}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<MemberAddArg>
+  nameWithType: IEnumerable<MemberAddArg>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.MemberAddArg>
+  nameWithType.vb: IEnumerable(Of MemberAddArg)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.MemberAddArg)
+  name.vb: IEnumerable(Of MemberAddArg)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.MemberAddArg
+    name: MemberAddArg
+    nameWithType: MemberAddArg
+    fullName: Dropbox.Api.Team.MemberAddArg
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.MemberAddArg
+    name: MemberAddArg
+    nameWithType: MemberAddArg
+    fullName: Dropbox.Api.Team.MemberAddArg
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Dropbox.Api.Team.MembersAddArg.NewMembers*
+  commentId: Overload:Dropbox.Api.Team.MembersAddArg.NewMembers
+  name: NewMembers
+  nameWithType: MembersAddArg.NewMembers
+  fullName: Dropbox.Api.Team.MembersAddArg.NewMembers
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.MemberAddArg}
+  commentId: T:System.Collections.Generic.IList{Dropbox.Api.Team.MemberAddArg}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<MemberAddArg>
+  nameWithType: IList<MemberAddArg>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.MemberAddArg>
+  nameWithType.vb: IList(Of MemberAddArg)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.MemberAddArg)
+  name.vb: IList(Of MemberAddArg)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.MemberAddArg
+    name: MemberAddArg
+    nameWithType: MemberAddArg
+    fullName: Dropbox.Api.Team.MemberAddArg
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.MemberAddArg
+    name: MemberAddArg
+    nameWithType: MemberAddArg
+    fullName: Dropbox.Api.Team.MemberAddArg
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

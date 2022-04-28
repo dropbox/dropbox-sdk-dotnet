@@ -1,0 +1,1791 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.FolderAction
+  commentId: T:Dropbox.Api.Sharing.FolderAction
+  id: FolderAction
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.FolderAction.#ctor
+  - Dropbox.Api.Sharing.FolderAction.AsChangeOptions
+  - Dropbox.Api.Sharing.FolderAction.AsCreateLink
+  - Dropbox.Api.Sharing.FolderAction.AsDisableViewerInfo
+  - Dropbox.Api.Sharing.FolderAction.AsEditContents
+  - Dropbox.Api.Sharing.FolderAction.AsEnableViewerInfo
+  - Dropbox.Api.Sharing.FolderAction.AsInviteEditor
+  - Dropbox.Api.Sharing.FolderAction.AsInviteViewer
+  - Dropbox.Api.Sharing.FolderAction.AsInviteViewerNoComment
+  - Dropbox.Api.Sharing.FolderAction.AsLeaveACopy
+  - Dropbox.Api.Sharing.FolderAction.AsOther
+  - Dropbox.Api.Sharing.FolderAction.AsRelinquishMembership
+  - Dropbox.Api.Sharing.FolderAction.AsSetAccessInheritance
+  - Dropbox.Api.Sharing.FolderAction.AsShareLink
+  - Dropbox.Api.Sharing.FolderAction.AsUnmount
+  - Dropbox.Api.Sharing.FolderAction.AsUnshare
+  - Dropbox.Api.Sharing.FolderAction.IsChangeOptions
+  - Dropbox.Api.Sharing.FolderAction.IsCreateLink
+  - Dropbox.Api.Sharing.FolderAction.IsDisableViewerInfo
+  - Dropbox.Api.Sharing.FolderAction.IsEditContents
+  - Dropbox.Api.Sharing.FolderAction.IsEnableViewerInfo
+  - Dropbox.Api.Sharing.FolderAction.IsInviteEditor
+  - Dropbox.Api.Sharing.FolderAction.IsInviteViewer
+  - Dropbox.Api.Sharing.FolderAction.IsInviteViewerNoComment
+  - Dropbox.Api.Sharing.FolderAction.IsLeaveACopy
+  - Dropbox.Api.Sharing.FolderAction.IsOther
+  - Dropbox.Api.Sharing.FolderAction.IsRelinquishMembership
+  - Dropbox.Api.Sharing.FolderAction.IsSetAccessInheritance
+  - Dropbox.Api.Sharing.FolderAction.IsShareLink
+  - Dropbox.Api.Sharing.FolderAction.IsUnmount
+  - Dropbox.Api.Sharing.FolderAction.IsUnshare
+  langs:
+  - csharp
+  - vb
+  name: FolderAction
+  nameWithType: FolderAction
+  fullName: Dropbox.Api.Sharing.FolderAction
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FolderAction
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Actions that may be taken on shared folders.</p>\n"
+  example: []
+  syntax:
+    content: public class FolderAction
+    content.vb: Public Class FolderAction
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.FolderAction.ChangeOptions
+  - Dropbox.Api.Sharing.FolderAction.CreateLink
+  - Dropbox.Api.Sharing.FolderAction.DisableViewerInfo
+  - Dropbox.Api.Sharing.FolderAction.EditContents
+  - Dropbox.Api.Sharing.FolderAction.EnableViewerInfo
+  - Dropbox.Api.Sharing.FolderAction.InviteEditor
+  - Dropbox.Api.Sharing.FolderAction.InviteViewer
+  - Dropbox.Api.Sharing.FolderAction.InviteViewerNoComment
+  - Dropbox.Api.Sharing.FolderAction.LeaveACopy
+  - Dropbox.Api.Sharing.FolderAction.Other
+  - Dropbox.Api.Sharing.FolderAction.RelinquishMembership
+  - Dropbox.Api.Sharing.FolderAction.SetAccessInheritance
+  - Dropbox.Api.Sharing.FolderAction.ShareLink
+  - Dropbox.Api.Sharing.FolderAction.Unmount
+  - Dropbox.Api.Sharing.FolderAction.Unshare
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.FolderAction.#ctor
+  commentId: M:Dropbox.Api.Sharing.FolderAction.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: FolderAction()
+  nameWithType: FolderAction.FolderAction()
+  fullName: Dropbox.Api.Sharing.FolderAction.FolderAction()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.FolderAction\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.FolderAction.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.FolderAction.IsChangeOptions
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsChangeOptions
+  id: IsChangeOptions
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsChangeOptions
+  nameWithType: FolderAction.IsChangeOptions
+  fullName: Dropbox.Api.Sharing.FolderAction.IsChangeOptions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsChangeOptions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is ChangeOptions</p>\n"
+  example: []
+  syntax:
+    content: public bool IsChangeOptions { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsChangeOptions As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsChangeOptions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsChangeOptions
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsChangeOptions
+  id: AsChangeOptions
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsChangeOptions
+  nameWithType: FolderAction.AsChangeOptions
+  fullName: Dropbox.Api.Sharing.FolderAction.AsChangeOptions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsChangeOptions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a ChangeOptions, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.ChangeOptions AsChangeOptions { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.ChangeOptions
+    content.vb: Public ReadOnly Property AsChangeOptions As FolderAction.ChangeOptions
+  overload: Dropbox.Api.Sharing.FolderAction.AsChangeOptions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.IsDisableViewerInfo
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsDisableViewerInfo
+  id: IsDisableViewerInfo
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsDisableViewerInfo
+  nameWithType: FolderAction.IsDisableViewerInfo
+  fullName: Dropbox.Api.Sharing.FolderAction.IsDisableViewerInfo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDisableViewerInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is DisableViewerInfo</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisableViewerInfo { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisableViewerInfo As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsDisableViewerInfo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsDisableViewerInfo
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsDisableViewerInfo
+  id: AsDisableViewerInfo
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsDisableViewerInfo
+  nameWithType: FolderAction.AsDisableViewerInfo
+  fullName: Dropbox.Api.Sharing.FolderAction.AsDisableViewerInfo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDisableViewerInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a DisableViewerInfo, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.DisableViewerInfo AsDisableViewerInfo { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.DisableViewerInfo
+    content.vb: Public ReadOnly Property AsDisableViewerInfo As FolderAction.DisableViewerInfo
+  overload: Dropbox.Api.Sharing.FolderAction.AsDisableViewerInfo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.IsEditContents
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsEditContents
+  id: IsEditContents
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsEditContents
+  nameWithType: FolderAction.IsEditContents
+  fullName: Dropbox.Api.Sharing.FolderAction.IsEditContents
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsEditContents
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is EditContents</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEditContents { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEditContents As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsEditContents*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsEditContents
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsEditContents
+  id: AsEditContents
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsEditContents
+  nameWithType: FolderAction.AsEditContents
+  fullName: Dropbox.Api.Sharing.FolderAction.AsEditContents
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsEditContents
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a EditContents, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.EditContents AsEditContents { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.EditContents
+    content.vb: Public ReadOnly Property AsEditContents As FolderAction.EditContents
+  overload: Dropbox.Api.Sharing.FolderAction.AsEditContents*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.IsEnableViewerInfo
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsEnableViewerInfo
+  id: IsEnableViewerInfo
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsEnableViewerInfo
+  nameWithType: FolderAction.IsEnableViewerInfo
+  fullName: Dropbox.Api.Sharing.FolderAction.IsEnableViewerInfo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsEnableViewerInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is EnableViewerInfo</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnableViewerInfo { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnableViewerInfo As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsEnableViewerInfo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsEnableViewerInfo
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsEnableViewerInfo
+  id: AsEnableViewerInfo
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsEnableViewerInfo
+  nameWithType: FolderAction.AsEnableViewerInfo
+  fullName: Dropbox.Api.Sharing.FolderAction.AsEnableViewerInfo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsEnableViewerInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a EnableViewerInfo, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.EnableViewerInfo AsEnableViewerInfo { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.EnableViewerInfo
+    content.vb: Public ReadOnly Property AsEnableViewerInfo As FolderAction.EnableViewerInfo
+  overload: Dropbox.Api.Sharing.FolderAction.AsEnableViewerInfo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.IsInviteEditor
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsInviteEditor
+  id: IsInviteEditor
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsInviteEditor
+  nameWithType: FolderAction.IsInviteEditor
+  fullName: Dropbox.Api.Sharing.FolderAction.IsInviteEditor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInviteEditor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InviteEditor</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInviteEditor { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInviteEditor As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsInviteEditor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsInviteEditor
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsInviteEditor
+  id: AsInviteEditor
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsInviteEditor
+  nameWithType: FolderAction.AsInviteEditor
+  fullName: Dropbox.Api.Sharing.FolderAction.AsInviteEditor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInviteEditor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InviteEditor, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.InviteEditor AsInviteEditor { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.InviteEditor
+    content.vb: Public ReadOnly Property AsInviteEditor As FolderAction.InviteEditor
+  overload: Dropbox.Api.Sharing.FolderAction.AsInviteEditor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.IsInviteViewer
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsInviteViewer
+  id: IsInviteViewer
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsInviteViewer
+  nameWithType: FolderAction.IsInviteViewer
+  fullName: Dropbox.Api.Sharing.FolderAction.IsInviteViewer
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInviteViewer
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 149
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InviteViewer</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInviteViewer { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInviteViewer As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsInviteViewer*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsInviteViewer
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsInviteViewer
+  id: AsInviteViewer
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsInviteViewer
+  nameWithType: FolderAction.AsInviteViewer
+  fullName: Dropbox.Api.Sharing.FolderAction.AsInviteViewer
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInviteViewer
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 160
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InviteViewer, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.InviteViewer AsInviteViewer { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.InviteViewer
+    content.vb: Public ReadOnly Property AsInviteViewer As FolderAction.InviteViewer
+  overload: Dropbox.Api.Sharing.FolderAction.AsInviteViewer*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.IsInviteViewerNoComment
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsInviteViewerNoComment
+  id: IsInviteViewerNoComment
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsInviteViewerNoComment
+  nameWithType: FolderAction.IsInviteViewerNoComment
+  fullName: Dropbox.Api.Sharing.FolderAction.IsInviteViewerNoComment
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInviteViewerNoComment
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 171
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InviteViewerNoComment</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInviteViewerNoComment { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInviteViewerNoComment As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsInviteViewerNoComment*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsInviteViewerNoComment
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsInviteViewerNoComment
+  id: AsInviteViewerNoComment
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsInviteViewerNoComment
+  nameWithType: FolderAction.AsInviteViewerNoComment
+  fullName: Dropbox.Api.Sharing.FolderAction.AsInviteViewerNoComment
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInviteViewerNoComment
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 182
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InviteViewerNoComment, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.InviteViewerNoComment AsInviteViewerNoComment { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.InviteViewerNoComment
+    content.vb: Public ReadOnly Property AsInviteViewerNoComment As FolderAction.InviteViewerNoComment
+  overload: Dropbox.Api.Sharing.FolderAction.AsInviteViewerNoComment*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.IsRelinquishMembership
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsRelinquishMembership
+  id: IsRelinquishMembership
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsRelinquishMembership
+  nameWithType: FolderAction.IsRelinquishMembership
+  fullName: Dropbox.Api.Sharing.FolderAction.IsRelinquishMembership
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsRelinquishMembership
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 193
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is RelinquishMembership</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRelinquishMembership { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRelinquishMembership As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsRelinquishMembership*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsRelinquishMembership
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsRelinquishMembership
+  id: AsRelinquishMembership
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsRelinquishMembership
+  nameWithType: FolderAction.AsRelinquishMembership
+  fullName: Dropbox.Api.Sharing.FolderAction.AsRelinquishMembership
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsRelinquishMembership
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 204
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a RelinquishMembership, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.RelinquishMembership AsRelinquishMembership { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.RelinquishMembership
+    content.vb: Public ReadOnly Property AsRelinquishMembership As FolderAction.RelinquishMembership
+  overload: Dropbox.Api.Sharing.FolderAction.AsRelinquishMembership*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.IsUnmount
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsUnmount
+  id: IsUnmount
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsUnmount
+  nameWithType: FolderAction.IsUnmount
+  fullName: Dropbox.Api.Sharing.FolderAction.IsUnmount
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUnmount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 215
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Unmount</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnmount { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnmount As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsUnmount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsUnmount
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsUnmount
+  id: AsUnmount
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsUnmount
+  nameWithType: FolderAction.AsUnmount
+  fullName: Dropbox.Api.Sharing.FolderAction.AsUnmount
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUnmount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 226
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Unmount, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.Unmount AsUnmount { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.Unmount
+    content.vb: Public ReadOnly Property AsUnmount As FolderAction.Unmount
+  overload: Dropbox.Api.Sharing.FolderAction.AsUnmount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.IsUnshare
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsUnshare
+  id: IsUnshare
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsUnshare
+  nameWithType: FolderAction.IsUnshare
+  fullName: Dropbox.Api.Sharing.FolderAction.IsUnshare
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUnshare
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 237
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Unshare</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnshare { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnshare As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsUnshare*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsUnshare
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsUnshare
+  id: AsUnshare
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsUnshare
+  nameWithType: FolderAction.AsUnshare
+  fullName: Dropbox.Api.Sharing.FolderAction.AsUnshare
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUnshare
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 248
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Unshare, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.Unshare AsUnshare { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.Unshare
+    content.vb: Public ReadOnly Property AsUnshare As FolderAction.Unshare
+  overload: Dropbox.Api.Sharing.FolderAction.AsUnshare*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.IsLeaveACopy
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsLeaveACopy
+  id: IsLeaveACopy
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsLeaveACopy
+  nameWithType: FolderAction.IsLeaveACopy
+  fullName: Dropbox.Api.Sharing.FolderAction.IsLeaveACopy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsLeaveACopy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 259
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is LeaveACopy</p>\n"
+  example: []
+  syntax:
+    content: public bool IsLeaveACopy { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLeaveACopy As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsLeaveACopy*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsLeaveACopy
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsLeaveACopy
+  id: AsLeaveACopy
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsLeaveACopy
+  nameWithType: FolderAction.AsLeaveACopy
+  fullName: Dropbox.Api.Sharing.FolderAction.AsLeaveACopy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsLeaveACopy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 270
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a LeaveACopy, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.LeaveACopy AsLeaveACopy { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.LeaveACopy
+    content.vb: Public ReadOnly Property AsLeaveACopy As FolderAction.LeaveACopy
+  overload: Dropbox.Api.Sharing.FolderAction.AsLeaveACopy*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.IsShareLink
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsShareLink
+  id: IsShareLink
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsShareLink
+  nameWithType: FolderAction.IsShareLink
+  fullName: Dropbox.Api.Sharing.FolderAction.IsShareLink
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsShareLink
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 281
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is ShareLink</p>\n"
+  example: []
+  syntax:
+    content: public bool IsShareLink { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsShareLink As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsShareLink*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsShareLink
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsShareLink
+  id: AsShareLink
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsShareLink
+  nameWithType: FolderAction.AsShareLink
+  fullName: Dropbox.Api.Sharing.FolderAction.AsShareLink
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsShareLink
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 292
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a ShareLink, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.ShareLink AsShareLink { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.ShareLink
+    content.vb: Public ReadOnly Property AsShareLink As FolderAction.ShareLink
+  overload: Dropbox.Api.Sharing.FolderAction.AsShareLink*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.IsCreateLink
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsCreateLink
+  id: IsCreateLink
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsCreateLink
+  nameWithType: FolderAction.IsCreateLink
+  fullName: Dropbox.Api.Sharing.FolderAction.IsCreateLink
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsCreateLink
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 303
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is CreateLink</p>\n"
+  example: []
+  syntax:
+    content: public bool IsCreateLink { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCreateLink As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsCreateLink*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsCreateLink
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsCreateLink
+  id: AsCreateLink
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsCreateLink
+  nameWithType: FolderAction.AsCreateLink
+  fullName: Dropbox.Api.Sharing.FolderAction.AsCreateLink
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsCreateLink
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 314
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a CreateLink, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.CreateLink AsCreateLink { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.CreateLink
+    content.vb: Public ReadOnly Property AsCreateLink As FolderAction.CreateLink
+  overload: Dropbox.Api.Sharing.FolderAction.AsCreateLink*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.IsSetAccessInheritance
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsSetAccessInheritance
+  id: IsSetAccessInheritance
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsSetAccessInheritance
+  nameWithType: FolderAction.IsSetAccessInheritance
+  fullName: Dropbox.Api.Sharing.FolderAction.IsSetAccessInheritance
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSetAccessInheritance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 325
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is SetAccessInheritance</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSetAccessInheritance { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSetAccessInheritance As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsSetAccessInheritance*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsSetAccessInheritance
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsSetAccessInheritance
+  id: AsSetAccessInheritance
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsSetAccessInheritance
+  nameWithType: FolderAction.AsSetAccessInheritance
+  fullName: Dropbox.Api.Sharing.FolderAction.AsSetAccessInheritance
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSetAccessInheritance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 336
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a SetAccessInheritance, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.SetAccessInheritance AsSetAccessInheritance { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.SetAccessInheritance
+    content.vb: Public ReadOnly Property AsSetAccessInheritance As FolderAction.SetAccessInheritance
+  overload: Dropbox.Api.Sharing.FolderAction.AsSetAccessInheritance*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.IsOther
+  commentId: P:Dropbox.Api.Sharing.FolderAction.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: FolderAction.IsOther
+  fullName: Dropbox.Api.Sharing.FolderAction.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 347
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.FolderAction.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FolderAction.AsOther
+  commentId: P:Dropbox.Api.Sharing.FolderAction.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.FolderAction
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: FolderAction.AsOther
+  fullName: Dropbox.Api.Sharing.FolderAction.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs
+    startLine: 358
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction.Other
+    content.vb: Public ReadOnly Property AsOther As FolderAction.Other
+  overload: Dropbox.Api.Sharing.FolderAction.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.FolderAction
+  commentId: T:Dropbox.Api.Sharing.FolderAction
+  parent: Dropbox.Api.Sharing
+  name: FolderAction
+  nameWithType: FolderAction
+  fullName: Dropbox.Api.Sharing.FolderAction
+- uid: Dropbox.Api.Sharing.FolderAction.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.#ctor
+  name: FolderAction
+  nameWithType: FolderAction.FolderAction
+  fullName: Dropbox.Api.Sharing.FolderAction.FolderAction
+- uid: Dropbox.Api.Sharing.FolderAction.IsChangeOptions*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsChangeOptions
+  name: IsChangeOptions
+  nameWithType: FolderAction.IsChangeOptions
+  fullName: Dropbox.Api.Sharing.FolderAction.IsChangeOptions
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.FolderAction.AsChangeOptions*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsChangeOptions
+  name: AsChangeOptions
+  nameWithType: FolderAction.AsChangeOptions
+  fullName: Dropbox.Api.Sharing.FolderAction.AsChangeOptions
+- uid: Dropbox.Api.Sharing.FolderAction.ChangeOptions
+  commentId: T:Dropbox.Api.Sharing.FolderAction.ChangeOptions
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.ChangeOptions
+  nameWithType: FolderAction.ChangeOptions
+  fullName: Dropbox.Api.Sharing.FolderAction.ChangeOptions
+- uid: Dropbox.Api.Sharing.FolderAction.IsDisableViewerInfo*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsDisableViewerInfo
+  name: IsDisableViewerInfo
+  nameWithType: FolderAction.IsDisableViewerInfo
+  fullName: Dropbox.Api.Sharing.FolderAction.IsDisableViewerInfo
+- uid: Dropbox.Api.Sharing.FolderAction.AsDisableViewerInfo*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsDisableViewerInfo
+  name: AsDisableViewerInfo
+  nameWithType: FolderAction.AsDisableViewerInfo
+  fullName: Dropbox.Api.Sharing.FolderAction.AsDisableViewerInfo
+- uid: Dropbox.Api.Sharing.FolderAction.DisableViewerInfo
+  commentId: T:Dropbox.Api.Sharing.FolderAction.DisableViewerInfo
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.DisableViewerInfo
+  nameWithType: FolderAction.DisableViewerInfo
+  fullName: Dropbox.Api.Sharing.FolderAction.DisableViewerInfo
+- uid: Dropbox.Api.Sharing.FolderAction.IsEditContents*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsEditContents
+  name: IsEditContents
+  nameWithType: FolderAction.IsEditContents
+  fullName: Dropbox.Api.Sharing.FolderAction.IsEditContents
+- uid: Dropbox.Api.Sharing.FolderAction.AsEditContents*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsEditContents
+  name: AsEditContents
+  nameWithType: FolderAction.AsEditContents
+  fullName: Dropbox.Api.Sharing.FolderAction.AsEditContents
+- uid: Dropbox.Api.Sharing.FolderAction.EditContents
+  commentId: T:Dropbox.Api.Sharing.FolderAction.EditContents
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.EditContents
+  nameWithType: FolderAction.EditContents
+  fullName: Dropbox.Api.Sharing.FolderAction.EditContents
+- uid: Dropbox.Api.Sharing.FolderAction.IsEnableViewerInfo*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsEnableViewerInfo
+  name: IsEnableViewerInfo
+  nameWithType: FolderAction.IsEnableViewerInfo
+  fullName: Dropbox.Api.Sharing.FolderAction.IsEnableViewerInfo
+- uid: Dropbox.Api.Sharing.FolderAction.AsEnableViewerInfo*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsEnableViewerInfo
+  name: AsEnableViewerInfo
+  nameWithType: FolderAction.AsEnableViewerInfo
+  fullName: Dropbox.Api.Sharing.FolderAction.AsEnableViewerInfo
+- uid: Dropbox.Api.Sharing.FolderAction.EnableViewerInfo
+  commentId: T:Dropbox.Api.Sharing.FolderAction.EnableViewerInfo
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.EnableViewerInfo
+  nameWithType: FolderAction.EnableViewerInfo
+  fullName: Dropbox.Api.Sharing.FolderAction.EnableViewerInfo
+- uid: Dropbox.Api.Sharing.FolderAction.IsInviteEditor*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsInviteEditor
+  name: IsInviteEditor
+  nameWithType: FolderAction.IsInviteEditor
+  fullName: Dropbox.Api.Sharing.FolderAction.IsInviteEditor
+- uid: Dropbox.Api.Sharing.FolderAction.AsInviteEditor*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsInviteEditor
+  name: AsInviteEditor
+  nameWithType: FolderAction.AsInviteEditor
+  fullName: Dropbox.Api.Sharing.FolderAction.AsInviteEditor
+- uid: Dropbox.Api.Sharing.FolderAction.InviteEditor
+  commentId: T:Dropbox.Api.Sharing.FolderAction.InviteEditor
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.InviteEditor
+  nameWithType: FolderAction.InviteEditor
+  fullName: Dropbox.Api.Sharing.FolderAction.InviteEditor
+- uid: Dropbox.Api.Sharing.FolderAction.IsInviteViewer*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsInviteViewer
+  name: IsInviteViewer
+  nameWithType: FolderAction.IsInviteViewer
+  fullName: Dropbox.Api.Sharing.FolderAction.IsInviteViewer
+- uid: Dropbox.Api.Sharing.FolderAction.AsInviteViewer*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsInviteViewer
+  name: AsInviteViewer
+  nameWithType: FolderAction.AsInviteViewer
+  fullName: Dropbox.Api.Sharing.FolderAction.AsInviteViewer
+- uid: Dropbox.Api.Sharing.FolderAction.InviteViewer
+  commentId: T:Dropbox.Api.Sharing.FolderAction.InviteViewer
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.InviteViewer
+  nameWithType: FolderAction.InviteViewer
+  fullName: Dropbox.Api.Sharing.FolderAction.InviteViewer
+- uid: Dropbox.Api.Sharing.FolderAction.IsInviteViewerNoComment*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsInviteViewerNoComment
+  name: IsInviteViewerNoComment
+  nameWithType: FolderAction.IsInviteViewerNoComment
+  fullName: Dropbox.Api.Sharing.FolderAction.IsInviteViewerNoComment
+- uid: Dropbox.Api.Sharing.FolderAction.AsInviteViewerNoComment*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsInviteViewerNoComment
+  name: AsInviteViewerNoComment
+  nameWithType: FolderAction.AsInviteViewerNoComment
+  fullName: Dropbox.Api.Sharing.FolderAction.AsInviteViewerNoComment
+- uid: Dropbox.Api.Sharing.FolderAction.InviteViewerNoComment
+  commentId: T:Dropbox.Api.Sharing.FolderAction.InviteViewerNoComment
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.InviteViewerNoComment
+  nameWithType: FolderAction.InviteViewerNoComment
+  fullName: Dropbox.Api.Sharing.FolderAction.InviteViewerNoComment
+- uid: Dropbox.Api.Sharing.FolderAction.IsRelinquishMembership*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsRelinquishMembership
+  name: IsRelinquishMembership
+  nameWithType: FolderAction.IsRelinquishMembership
+  fullName: Dropbox.Api.Sharing.FolderAction.IsRelinquishMembership
+- uid: Dropbox.Api.Sharing.FolderAction.AsRelinquishMembership*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsRelinquishMembership
+  name: AsRelinquishMembership
+  nameWithType: FolderAction.AsRelinquishMembership
+  fullName: Dropbox.Api.Sharing.FolderAction.AsRelinquishMembership
+- uid: Dropbox.Api.Sharing.FolderAction.RelinquishMembership
+  commentId: T:Dropbox.Api.Sharing.FolderAction.RelinquishMembership
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.RelinquishMembership
+  nameWithType: FolderAction.RelinquishMembership
+  fullName: Dropbox.Api.Sharing.FolderAction.RelinquishMembership
+- uid: Dropbox.Api.Sharing.FolderAction.IsUnmount*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsUnmount
+  name: IsUnmount
+  nameWithType: FolderAction.IsUnmount
+  fullName: Dropbox.Api.Sharing.FolderAction.IsUnmount
+- uid: Dropbox.Api.Sharing.FolderAction.AsUnmount*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsUnmount
+  name: AsUnmount
+  nameWithType: FolderAction.AsUnmount
+  fullName: Dropbox.Api.Sharing.FolderAction.AsUnmount
+- uid: Dropbox.Api.Sharing.FolderAction.Unmount
+  commentId: T:Dropbox.Api.Sharing.FolderAction.Unmount
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.Unmount
+  nameWithType: FolderAction.Unmount
+  fullName: Dropbox.Api.Sharing.FolderAction.Unmount
+- uid: Dropbox.Api.Sharing.FolderAction.IsUnshare*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsUnshare
+  name: IsUnshare
+  nameWithType: FolderAction.IsUnshare
+  fullName: Dropbox.Api.Sharing.FolderAction.IsUnshare
+- uid: Dropbox.Api.Sharing.FolderAction.AsUnshare*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsUnshare
+  name: AsUnshare
+  nameWithType: FolderAction.AsUnshare
+  fullName: Dropbox.Api.Sharing.FolderAction.AsUnshare
+- uid: Dropbox.Api.Sharing.FolderAction.Unshare
+  commentId: T:Dropbox.Api.Sharing.FolderAction.Unshare
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.Unshare
+  nameWithType: FolderAction.Unshare
+  fullName: Dropbox.Api.Sharing.FolderAction.Unshare
+- uid: Dropbox.Api.Sharing.FolderAction.IsLeaveACopy*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsLeaveACopy
+  name: IsLeaveACopy
+  nameWithType: FolderAction.IsLeaveACopy
+  fullName: Dropbox.Api.Sharing.FolderAction.IsLeaveACopy
+- uid: Dropbox.Api.Sharing.FolderAction.AsLeaveACopy*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsLeaveACopy
+  name: AsLeaveACopy
+  nameWithType: FolderAction.AsLeaveACopy
+  fullName: Dropbox.Api.Sharing.FolderAction.AsLeaveACopy
+- uid: Dropbox.Api.Sharing.FolderAction.LeaveACopy
+  commentId: T:Dropbox.Api.Sharing.FolderAction.LeaveACopy
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.LeaveACopy
+  nameWithType: FolderAction.LeaveACopy
+  fullName: Dropbox.Api.Sharing.FolderAction.LeaveACopy
+- uid: Dropbox.Api.Sharing.FolderAction.IsShareLink*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsShareLink
+  name: IsShareLink
+  nameWithType: FolderAction.IsShareLink
+  fullName: Dropbox.Api.Sharing.FolderAction.IsShareLink
+- uid: Dropbox.Api.Sharing.FolderAction.AsShareLink*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsShareLink
+  name: AsShareLink
+  nameWithType: FolderAction.AsShareLink
+  fullName: Dropbox.Api.Sharing.FolderAction.AsShareLink
+- uid: Dropbox.Api.Sharing.FolderAction.ShareLink
+  commentId: T:Dropbox.Api.Sharing.FolderAction.ShareLink
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.ShareLink
+  nameWithType: FolderAction.ShareLink
+  fullName: Dropbox.Api.Sharing.FolderAction.ShareLink
+- uid: Dropbox.Api.Sharing.FolderAction.IsCreateLink*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsCreateLink
+  name: IsCreateLink
+  nameWithType: FolderAction.IsCreateLink
+  fullName: Dropbox.Api.Sharing.FolderAction.IsCreateLink
+- uid: Dropbox.Api.Sharing.FolderAction.AsCreateLink*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsCreateLink
+  name: AsCreateLink
+  nameWithType: FolderAction.AsCreateLink
+  fullName: Dropbox.Api.Sharing.FolderAction.AsCreateLink
+- uid: Dropbox.Api.Sharing.FolderAction.CreateLink
+  commentId: T:Dropbox.Api.Sharing.FolderAction.CreateLink
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.CreateLink
+  nameWithType: FolderAction.CreateLink
+  fullName: Dropbox.Api.Sharing.FolderAction.CreateLink
+- uid: Dropbox.Api.Sharing.FolderAction.IsSetAccessInheritance*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsSetAccessInheritance
+  name: IsSetAccessInheritance
+  nameWithType: FolderAction.IsSetAccessInheritance
+  fullName: Dropbox.Api.Sharing.FolderAction.IsSetAccessInheritance
+- uid: Dropbox.Api.Sharing.FolderAction.AsSetAccessInheritance*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsSetAccessInheritance
+  name: AsSetAccessInheritance
+  nameWithType: FolderAction.AsSetAccessInheritance
+  fullName: Dropbox.Api.Sharing.FolderAction.AsSetAccessInheritance
+- uid: Dropbox.Api.Sharing.FolderAction.SetAccessInheritance
+  commentId: T:Dropbox.Api.Sharing.FolderAction.SetAccessInheritance
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.SetAccessInheritance
+  nameWithType: FolderAction.SetAccessInheritance
+  fullName: Dropbox.Api.Sharing.FolderAction.SetAccessInheritance
+- uid: Dropbox.Api.Sharing.FolderAction.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.IsOther
+  name: IsOther
+  nameWithType: FolderAction.IsOther
+  fullName: Dropbox.Api.Sharing.FolderAction.IsOther
+- uid: Dropbox.Api.Sharing.FolderAction.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.FolderAction.AsOther
+  name: AsOther
+  nameWithType: FolderAction.AsOther
+  fullName: Dropbox.Api.Sharing.FolderAction.AsOther
+- uid: Dropbox.Api.Sharing.FolderAction.Other
+  commentId: T:Dropbox.Api.Sharing.FolderAction.Other
+  parent: Dropbox.Api.Sharing
+  name: FolderAction.Other
+  nameWithType: FolderAction.Other
+  fullName: Dropbox.Api.Sharing.FolderAction.Other

@@ -1,0 +1,861 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersRecoverError
+  commentId: T:Dropbox.Api.Team.MembersRecoverError
+  id: MembersRecoverError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersRecoverError.#ctor
+  - Dropbox.Api.Team.MembersRecoverError.AsOther
+  - Dropbox.Api.Team.MembersRecoverError.AsTeamLicenseLimit
+  - Dropbox.Api.Team.MembersRecoverError.AsUserNotFound
+  - Dropbox.Api.Team.MembersRecoverError.AsUserNotInTeam
+  - Dropbox.Api.Team.MembersRecoverError.AsUserUnrecoverable
+  - Dropbox.Api.Team.MembersRecoverError.IsOther
+  - Dropbox.Api.Team.MembersRecoverError.IsTeamLicenseLimit
+  - Dropbox.Api.Team.MembersRecoverError.IsUserNotFound
+  - Dropbox.Api.Team.MembersRecoverError.IsUserNotInTeam
+  - Dropbox.Api.Team.MembersRecoverError.IsUserUnrecoverable
+  langs:
+  - csharp
+  - vb
+  name: MembersRecoverError
+  nameWithType: MembersRecoverError
+  fullName: Dropbox.Api.Team.MembersRecoverError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MembersRecoverError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The members recover error object</p>\n"
+  example: []
+  syntax:
+    content: public class MembersRecoverError
+    content.vb: Public Class MembersRecoverError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.MembersRecoverError.Other
+  - Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit
+  - Dropbox.Api.Team.MembersRecoverError.UserNotFound
+  - Dropbox.Api.Team.MembersRecoverError.UserNotInTeam
+  - Dropbox.Api.Team.MembersRecoverError.UserUnrecoverable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersRecoverError.#ctor
+  commentId: M:Dropbox.Api.Team.MembersRecoverError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersRecoverError
+  langs:
+  - csharp
+  - vb
+  name: MembersRecoverError()
+  nameWithType: MembersRecoverError.MembersRecoverError()
+  fullName: Dropbox.Api.Team.MembersRecoverError.MembersRecoverError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersRecoverError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersRecoverError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersRecoverError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersRecoverError.IsUserUnrecoverable
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.IsUserUnrecoverable
+  id: IsUserUnrecoverable
+  parent: Dropbox.Api.Team.MembersRecoverError
+  langs:
+  - csharp
+  - vb
+  name: IsUserUnrecoverable
+  nameWithType: MembersRecoverError.IsUserUnrecoverable
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsUserUnrecoverable
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUserUnrecoverable
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UserUnrecoverable</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserUnrecoverable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserUnrecoverable As Boolean
+  overload: Dropbox.Api.Team.MembersRecoverError.IsUserUnrecoverable*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersRecoverError.AsUserUnrecoverable
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.AsUserUnrecoverable
+  id: AsUserUnrecoverable
+  parent: Dropbox.Api.Team.MembersRecoverError
+  langs:
+  - csharp
+  - vb
+  name: AsUserUnrecoverable
+  nameWithType: MembersRecoverError.AsUserUnrecoverable
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsUserUnrecoverable
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUserUnrecoverable
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UserUnrecoverable, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersRecoverError.UserUnrecoverable AsUserUnrecoverable { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersRecoverError.UserUnrecoverable
+    content.vb: Public ReadOnly Property AsUserUnrecoverable As MembersRecoverError.UserUnrecoverable
+  overload: Dropbox.Api.Team.MembersRecoverError.AsUserUnrecoverable*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersRecoverError.IsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.IsUserNotInTeam
+  id: IsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersRecoverError
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotInTeam
+  nameWithType: MembersRecoverError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotInTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotInTeam As Boolean
+  overload: Dropbox.Api.Team.MembersRecoverError.IsUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersRecoverError.AsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.AsUserNotInTeam
+  id: AsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersRecoverError
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotInTeam
+  nameWithType: MembersRecoverError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UserNotInTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersRecoverError.UserNotInTeam AsUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersRecoverError.UserNotInTeam
+    content.vb: Public ReadOnly Property AsUserNotInTeam As MembersRecoverError.UserNotInTeam
+  overload: Dropbox.Api.Team.MembersRecoverError.AsUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersRecoverError.IsTeamLicenseLimit
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.IsTeamLicenseLimit
+  id: IsTeamLicenseLimit
+  parent: Dropbox.Api.Team.MembersRecoverError
+  langs:
+  - csharp
+  - vb
+  name: IsTeamLicenseLimit
+  nameWithType: MembersRecoverError.IsTeamLicenseLimit
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsTeamLicenseLimit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTeamLicenseLimit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is TeamLicenseLimit</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamLicenseLimit { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeamLicenseLimit As Boolean
+  overload: Dropbox.Api.Team.MembersRecoverError.IsTeamLicenseLimit*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersRecoverError.AsTeamLicenseLimit
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.AsTeamLicenseLimit
+  id: AsTeamLicenseLimit
+  parent: Dropbox.Api.Team.MembersRecoverError
+  langs:
+  - csharp
+  - vb
+  name: AsTeamLicenseLimit
+  nameWithType: MembersRecoverError.AsTeamLicenseLimit
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsTeamLicenseLimit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTeamLicenseLimit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TeamLicenseLimit, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersRecoverError.TeamLicenseLimit AsTeamLicenseLimit { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit
+    content.vb: Public ReadOnly Property AsTeamLicenseLimit As MembersRecoverError.TeamLicenseLimit
+  overload: Dropbox.Api.Team.MembersRecoverError.AsTeamLicenseLimit*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersRecoverError.IsOther
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.MembersRecoverError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MembersRecoverError.IsOther
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.MembersRecoverError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersRecoverError.AsOther
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.MembersRecoverError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MembersRecoverError.AsOther
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersRecoverError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersRecoverError.Other
+    content.vb: Public ReadOnly Property AsOther As MembersRecoverError.Other
+  overload: Dropbox.Api.Team.MembersRecoverError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersRecoverError.IsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.IsUserNotFound
+  id: IsUserNotFound
+  parent: Dropbox.Api.Team.MembersRecoverError
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotFound
+  nameWithType: MembersRecoverError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotFound As Boolean
+  overload: Dropbox.Api.Team.MembersRecoverError.IsUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersRecoverError.AsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.AsUserNotFound
+  id: AsUserNotFound
+  parent: Dropbox.Api.Team.MembersRecoverError
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotFound
+  nameWithType: MembersRecoverError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UserNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersRecoverError.UserNotFound AsUserNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersRecoverError.UserNotFound
+    content.vb: Public ReadOnly Property AsUserNotFound As MembersRecoverError.UserNotFound
+  overload: Dropbox.Api.Team.MembersRecoverError.AsUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.MembersRecoverError
+  commentId: T:Dropbox.Api.Team.MembersRecoverError
+  parent: Dropbox.Api.Team
+  name: MembersRecoverError
+  nameWithType: MembersRecoverError
+  fullName: Dropbox.Api.Team.MembersRecoverError
+- uid: Dropbox.Api.Team.MembersRecoverError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersRecoverError.#ctor
+  name: MembersRecoverError
+  nameWithType: MembersRecoverError.MembersRecoverError
+  fullName: Dropbox.Api.Team.MembersRecoverError.MembersRecoverError
+- uid: Dropbox.Api.Team.MembersRecoverError.IsUserUnrecoverable*
+  commentId: Overload:Dropbox.Api.Team.MembersRecoverError.IsUserUnrecoverable
+  name: IsUserUnrecoverable
+  nameWithType: MembersRecoverError.IsUserUnrecoverable
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsUserUnrecoverable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.MembersRecoverError.AsUserUnrecoverable*
+  commentId: Overload:Dropbox.Api.Team.MembersRecoverError.AsUserUnrecoverable
+  name: AsUserUnrecoverable
+  nameWithType: MembersRecoverError.AsUserUnrecoverable
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsUserUnrecoverable
+- uid: Dropbox.Api.Team.MembersRecoverError.UserUnrecoverable
+  commentId: T:Dropbox.Api.Team.MembersRecoverError.UserUnrecoverable
+  parent: Dropbox.Api.Team
+  name: MembersRecoverError.UserUnrecoverable
+  nameWithType: MembersRecoverError.UserUnrecoverable
+  fullName: Dropbox.Api.Team.MembersRecoverError.UserUnrecoverable
+- uid: Dropbox.Api.Team.MembersRecoverError.IsUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersRecoverError.IsUserNotInTeam
+  name: IsUserNotInTeam
+  nameWithType: MembersRecoverError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersRecoverError.AsUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersRecoverError.AsUserNotInTeam
+  name: AsUserNotInTeam
+  nameWithType: MembersRecoverError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersRecoverError.UserNotInTeam
+  commentId: T:Dropbox.Api.Team.MembersRecoverError.UserNotInTeam
+  parent: Dropbox.Api.Team
+  name: MembersRecoverError.UserNotInTeam
+  nameWithType: MembersRecoverError.UserNotInTeam
+  fullName: Dropbox.Api.Team.MembersRecoverError.UserNotInTeam
+- uid: Dropbox.Api.Team.MembersRecoverError.IsTeamLicenseLimit*
+  commentId: Overload:Dropbox.Api.Team.MembersRecoverError.IsTeamLicenseLimit
+  name: IsTeamLicenseLimit
+  nameWithType: MembersRecoverError.IsTeamLicenseLimit
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsTeamLicenseLimit
+- uid: Dropbox.Api.Team.MembersRecoverError.AsTeamLicenseLimit*
+  commentId: Overload:Dropbox.Api.Team.MembersRecoverError.AsTeamLicenseLimit
+  name: AsTeamLicenseLimit
+  nameWithType: MembersRecoverError.AsTeamLicenseLimit
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsTeamLicenseLimit
+- uid: Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit
+  commentId: T:Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit
+  parent: Dropbox.Api.Team
+  name: MembersRecoverError.TeamLicenseLimit
+  nameWithType: MembersRecoverError.TeamLicenseLimit
+  fullName: Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit
+- uid: Dropbox.Api.Team.MembersRecoverError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersRecoverError.IsOther
+  name: IsOther
+  nameWithType: MembersRecoverError.IsOther
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsOther
+- uid: Dropbox.Api.Team.MembersRecoverError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersRecoverError.AsOther
+  name: AsOther
+  nameWithType: MembersRecoverError.AsOther
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsOther
+- uid: Dropbox.Api.Team.MembersRecoverError.Other
+  commentId: T:Dropbox.Api.Team.MembersRecoverError.Other
+  parent: Dropbox.Api.Team
+  name: MembersRecoverError.Other
+  nameWithType: MembersRecoverError.Other
+  fullName: Dropbox.Api.Team.MembersRecoverError.Other
+- uid: Dropbox.Api.Team.MembersRecoverError.IsUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersRecoverError.IsUserNotFound
+  name: IsUserNotFound
+  nameWithType: MembersRecoverError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsUserNotFound
+- uid: Dropbox.Api.Team.MembersRecoverError.AsUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersRecoverError.AsUserNotFound
+  name: AsUserNotFound
+  nameWithType: MembersRecoverError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsUserNotFound
+- uid: Dropbox.Api.Team.MembersRecoverError.UserNotFound
+  commentId: T:Dropbox.Api.Team.MembersRecoverError.UserNotFound
+  parent: Dropbox.Api.Team
+  name: MembersRecoverError.UserNotFound
+  nameWithType: MembersRecoverError.UserNotFound
+  fullName: Dropbox.Api.Team.MembersRecoverError.UserNotFound

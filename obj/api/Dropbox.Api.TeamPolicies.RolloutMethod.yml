@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod
+  commentId: T:Dropbox.Api.TeamPolicies.RolloutMethod
+  id: RolloutMethod
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.RolloutMethod.#ctor
+  - Dropbox.Api.TeamPolicies.RolloutMethod.AsAddMemberToExceptions
+  - Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkAll
+  - Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkMostInactive
+  - Dropbox.Api.TeamPolicies.RolloutMethod.IsAddMemberToExceptions
+  - Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkAll
+  - Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkMostInactive
+  langs:
+  - csharp
+  - vb
+  name: RolloutMethod
+  nameWithType: RolloutMethod
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: RolloutMethod
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>The rollout method object</p>\n"
+  example: []
+  syntax:
+    content: public class RolloutMethod
+    content.vb: Public Class RolloutMethod
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamPolicies.RolloutMethod.AddMemberToExceptions
+  - Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll
+  - Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkMostInactive
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.#ctor
+  commentId: M:Dropbox.Api.TeamPolicies.RolloutMethod.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamPolicies.RolloutMethod
+  langs:
+  - csharp
+  - vb
+  name: RolloutMethod()
+  nameWithType: RolloutMethod.RolloutMethod()
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.RolloutMethod()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamPolicies.RolloutMethod\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public RolloutMethod()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamPolicies.RolloutMethod.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkAll
+  commentId: P:Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkAll
+  id: IsUnlinkAll
+  parent: Dropbox.Api.TeamPolicies.RolloutMethod
+  langs:
+  - csharp
+  - vb
+  name: IsUnlinkAll
+  nameWithType: RolloutMethod.IsUnlinkAll
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkAll
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUnlinkAll
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is UnlinkAll</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnlinkAll { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnlinkAll As Boolean
+  overload: Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkAll*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkAll
+  commentId: P:Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkAll
+  id: AsUnlinkAll
+  parent: Dropbox.Api.TeamPolicies.RolloutMethod
+  langs:
+  - csharp
+  - vb
+  name: AsUnlinkAll
+  nameWithType: RolloutMethod.AsUnlinkAll
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkAll
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUnlinkAll
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a UnlinkAll, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RolloutMethod.UnlinkAll AsUnlinkAll { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll
+    content.vb: Public ReadOnly Property AsUnlinkAll As RolloutMethod.UnlinkAll
+  overload: Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkAll*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkMostInactive
+  commentId: P:Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkMostInactive
+  id: IsUnlinkMostInactive
+  parent: Dropbox.Api.TeamPolicies.RolloutMethod
+  langs:
+  - csharp
+  - vb
+  name: IsUnlinkMostInactive
+  nameWithType: RolloutMethod.IsUnlinkMostInactive
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkMostInactive
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUnlinkMostInactive
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is UnlinkMostInactive</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnlinkMostInactive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnlinkMostInactive As Boolean
+  overload: Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkMostInactive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkMostInactive
+  commentId: P:Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkMostInactive
+  id: AsUnlinkMostInactive
+  parent: Dropbox.Api.TeamPolicies.RolloutMethod
+  langs:
+  - csharp
+  - vb
+  name: AsUnlinkMostInactive
+  nameWithType: RolloutMethod.AsUnlinkMostInactive
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkMostInactive
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUnlinkMostInactive
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a UnlinkMostInactive, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RolloutMethod.UnlinkMostInactive AsUnlinkMostInactive { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkMostInactive
+    content.vb: Public ReadOnly Property AsUnlinkMostInactive As RolloutMethod.UnlinkMostInactive
+  overload: Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkMostInactive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.IsAddMemberToExceptions
+  commentId: P:Dropbox.Api.TeamPolicies.RolloutMethod.IsAddMemberToExceptions
+  id: IsAddMemberToExceptions
+  parent: Dropbox.Api.TeamPolicies.RolloutMethod
+  langs:
+  - csharp
+  - vb
+  name: IsAddMemberToExceptions
+  nameWithType: RolloutMethod.IsAddMemberToExceptions
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.IsAddMemberToExceptions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAddMemberToExceptions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is AddMemberToExceptions</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAddMemberToExceptions { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAddMemberToExceptions As Boolean
+  overload: Dropbox.Api.TeamPolicies.RolloutMethod.IsAddMemberToExceptions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.AsAddMemberToExceptions
+  commentId: P:Dropbox.Api.TeamPolicies.RolloutMethod.AsAddMemberToExceptions
+  id: AsAddMemberToExceptions
+  parent: Dropbox.Api.TeamPolicies.RolloutMethod
+  langs:
+  - csharp
+  - vb
+  name: AsAddMemberToExceptions
+  nameWithType: RolloutMethod.AsAddMemberToExceptions
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.AsAddMemberToExceptions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAddMemberToExceptions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a AddMemberToExceptions, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RolloutMethod.AddMemberToExceptions AsAddMemberToExceptions { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.RolloutMethod.AddMemberToExceptions
+    content.vb: Public ReadOnly Property AsAddMemberToExceptions As RolloutMethod.AddMemberToExceptions
+  overload: Dropbox.Api.TeamPolicies.RolloutMethod.AsAddMemberToExceptions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod
+  commentId: T:Dropbox.Api.TeamPolicies.RolloutMethod
+  parent: Dropbox.Api.TeamPolicies
+  name: RolloutMethod
+  nameWithType: RolloutMethod
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.#ctor*
+  commentId: Overload:Dropbox.Api.TeamPolicies.RolloutMethod.#ctor
+  name: RolloutMethod
+  nameWithType: RolloutMethod.RolloutMethod
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.RolloutMethod
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkAll*
+  commentId: Overload:Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkAll
+  name: IsUnlinkAll
+  nameWithType: RolloutMethod.IsUnlinkAll
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkAll
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkAll*
+  commentId: Overload:Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkAll
+  name: AsUnlinkAll
+  nameWithType: RolloutMethod.AsUnlinkAll
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkAll
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll
+  commentId: T:Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll
+  parent: Dropbox.Api.TeamPolicies
+  name: RolloutMethod.UnlinkAll
+  nameWithType: RolloutMethod.UnlinkAll
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkMostInactive*
+  commentId: Overload:Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkMostInactive
+  name: IsUnlinkMostInactive
+  nameWithType: RolloutMethod.IsUnlinkMostInactive
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkMostInactive
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkMostInactive*
+  commentId: Overload:Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkMostInactive
+  name: AsUnlinkMostInactive
+  nameWithType: RolloutMethod.AsUnlinkMostInactive
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkMostInactive
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkMostInactive
+  commentId: T:Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkMostInactive
+  parent: Dropbox.Api.TeamPolicies
+  name: RolloutMethod.UnlinkMostInactive
+  nameWithType: RolloutMethod.UnlinkMostInactive
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkMostInactive
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.IsAddMemberToExceptions*
+  commentId: Overload:Dropbox.Api.TeamPolicies.RolloutMethod.IsAddMemberToExceptions
+  name: IsAddMemberToExceptions
+  nameWithType: RolloutMethod.IsAddMemberToExceptions
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.IsAddMemberToExceptions
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.AsAddMemberToExceptions*
+  commentId: Overload:Dropbox.Api.TeamPolicies.RolloutMethod.AsAddMemberToExceptions
+  name: AsAddMemberToExceptions
+  nameWithType: RolloutMethod.AsAddMemberToExceptions
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.AsAddMemberToExceptions
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.AddMemberToExceptions
+  commentId: T:Dropbox.Api.TeamPolicies.RolloutMethod.AddMemberToExceptions
+  parent: Dropbox.Api.TeamPolicies
+  name: RolloutMethod.AddMemberToExceptions
+  nameWithType: RolloutMethod.AddMemberToExceptions
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.AddMemberToExceptions

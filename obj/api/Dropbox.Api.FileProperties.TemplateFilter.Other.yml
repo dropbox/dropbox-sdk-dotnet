@@ -1,0 +1,441 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.TemplateFilter.Other
+  commentId: T:Dropbox.Api.FileProperties.TemplateFilter.Other
+  id: TemplateFilter.Other
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.TemplateFilter.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: TemplateFilter.Other
+  nameWithType: TemplateFilter.Other
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+    startLine: 350
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : TemplateFilter'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits TemplateFilter
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileProperties.TemplateFilter
+  inheritedMembers:
+  - Dropbox.Api.FileProperties.TemplateFilter.IsFilterNone
+  - Dropbox.Api.FileProperties.TemplateFilter.AsFilterNone
+  - Dropbox.Api.FileProperties.TemplateFilter.IsFilterSome
+  - Dropbox.Api.FileProperties.TemplateFilter.AsFilterSome
+  - Dropbox.Api.FileProperties.TemplateFilter.IsOther
+  - Dropbox.Api.FileProperties.TemplateFilter.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileProperties.TemplateFilter.Other.Instance
+  commentId: F:Dropbox.Api.FileProperties.TemplateFilter.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.FileProperties.TemplateFilter.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: TemplateFilter.Other.Instance
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+    startLine: 374
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly TemplateFilter.Other Instance
+    return:
+      type: Dropbox.Api.FileProperties.TemplateFilter.Other
+    content.vb: Public Shared ReadOnly Instance As TemplateFilter.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.TemplateFilter
+  commentId: T:Dropbox.Api.FileProperties.TemplateFilter
+  parent: Dropbox.Api.FileProperties
+  name: TemplateFilter
+  nameWithType: TemplateFilter
+  fullName: Dropbox.Api.FileProperties.TemplateFilter
+- uid: Dropbox.Api.FileProperties.TemplateFilter.IsFilterNone
+  commentId: P:Dropbox.Api.FileProperties.TemplateFilter.IsFilterNone
+  parent: Dropbox.Api.FileProperties.TemplateFilter
+  name: IsFilterNone
+  nameWithType: TemplateFilter.IsFilterNone
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.IsFilterNone
+- uid: Dropbox.Api.FileProperties.TemplateFilter.AsFilterNone
+  commentId: P:Dropbox.Api.FileProperties.TemplateFilter.AsFilterNone
+  parent: Dropbox.Api.FileProperties.TemplateFilter
+  name: AsFilterNone
+  nameWithType: TemplateFilter.AsFilterNone
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.AsFilterNone
+- uid: Dropbox.Api.FileProperties.TemplateFilter.IsFilterSome
+  commentId: P:Dropbox.Api.FileProperties.TemplateFilter.IsFilterSome
+  parent: Dropbox.Api.FileProperties.TemplateFilter
+  name: IsFilterSome
+  nameWithType: TemplateFilter.IsFilterSome
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.IsFilterSome
+- uid: Dropbox.Api.FileProperties.TemplateFilter.AsFilterSome
+  commentId: P:Dropbox.Api.FileProperties.TemplateFilter.AsFilterSome
+  parent: Dropbox.Api.FileProperties.TemplateFilter
+  name: AsFilterSome
+  nameWithType: TemplateFilter.AsFilterSome
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.AsFilterSome
+- uid: Dropbox.Api.FileProperties.TemplateFilter.IsOther
+  commentId: P:Dropbox.Api.FileProperties.TemplateFilter.IsOther
+  parent: Dropbox.Api.FileProperties.TemplateFilter
+  name: IsOther
+  nameWithType: TemplateFilter.IsOther
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.IsOther
+- uid: Dropbox.Api.FileProperties.TemplateFilter.AsOther
+  commentId: P:Dropbox.Api.FileProperties.TemplateFilter.AsOther
+  parent: Dropbox.Api.FileProperties.TemplateFilter
+  name: AsOther
+  nameWithType: TemplateFilter.AsOther
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.FileProperties.TemplateFilter.Other
+  commentId: T:Dropbox.Api.FileProperties.TemplateFilter.Other
+  parent: Dropbox.Api.FileProperties
+  name: TemplateFilter.Other
+  nameWithType: TemplateFilter.Other
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.Other

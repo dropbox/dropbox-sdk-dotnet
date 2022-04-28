@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RemoveTagError
+  commentId: T:Dropbox.Api.Files.RemoveTagError
+  id: RemoveTagError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RemoveTagError.#ctor
+  - Dropbox.Api.Files.RemoveTagError.AsOther
+  - Dropbox.Api.Files.RemoveTagError.AsPath
+  - Dropbox.Api.Files.RemoveTagError.AsTagNotPresent
+  - Dropbox.Api.Files.RemoveTagError.IsOther
+  - Dropbox.Api.Files.RemoveTagError.IsPath
+  - Dropbox.Api.Files.RemoveTagError.IsTagNotPresent
+  langs:
+  - csharp
+  - vb
+  name: RemoveTagError
+  nameWithType: RemoveTagError
+  fullName: Dropbox.Api.Files.RemoveTagError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: RemoveTagError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The remove tag error object</p>\n"
+  example: []
+  syntax:
+    content: public class RemoveTagError
+    content.vb: Public Class RemoveTagError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.RemoveTagError.Other
+  - Dropbox.Api.Files.RemoveTagError.Path
+  - Dropbox.Api.Files.RemoveTagError.TagNotPresent
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.RemoveTagError.#ctor
+  commentId: M:Dropbox.Api.Files.RemoveTagError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.RemoveTagError
+  langs:
+  - csharp
+  - vb
+  name: RemoveTagError()
+  nameWithType: RemoveTagError.RemoveTagError()
+  fullName: Dropbox.Api.Files.RemoveTagError.RemoveTagError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RemoveTagError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public RemoveTagError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.RemoveTagError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RemoveTagError.IsTagNotPresent
+  commentId: P:Dropbox.Api.Files.RemoveTagError.IsTagNotPresent
+  id: IsTagNotPresent
+  parent: Dropbox.Api.Files.RemoveTagError
+  langs:
+  - csharp
+  - vb
+  name: IsTagNotPresent
+  nameWithType: RemoveTagError.IsTagNotPresent
+  fullName: Dropbox.Api.Files.RemoveTagError.IsTagNotPresent
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTagNotPresent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is TagNotPresent</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTagNotPresent { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTagNotPresent As Boolean
+  overload: Dropbox.Api.Files.RemoveTagError.IsTagNotPresent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RemoveTagError.AsTagNotPresent
+  commentId: P:Dropbox.Api.Files.RemoveTagError.AsTagNotPresent
+  id: AsTagNotPresent
+  parent: Dropbox.Api.Files.RemoveTagError
+  langs:
+  - csharp
+  - vb
+  name: AsTagNotPresent
+  nameWithType: RemoveTagError.AsTagNotPresent
+  fullName: Dropbox.Api.Files.RemoveTagError.AsTagNotPresent
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTagNotPresent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a TagNotPresent, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RemoveTagError.TagNotPresent AsTagNotPresent { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RemoveTagError.TagNotPresent
+    content.vb: Public ReadOnly Property AsTagNotPresent As RemoveTagError.TagNotPresent
+  overload: Dropbox.Api.Files.RemoveTagError.AsTagNotPresent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RemoveTagError.IsPath
+  commentId: P:Dropbox.Api.Files.RemoveTagError.IsPath
+  id: IsPath
+  parent: Dropbox.Api.Files.RemoveTagError
+  langs:
+  - csharp
+  - vb
+  name: IsPath
+  nameWithType: RemoveTagError.IsPath
+  fullName: Dropbox.Api.Files.RemoveTagError.IsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Path</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPath As Boolean
+  overload: Dropbox.Api.Files.RemoveTagError.IsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RemoveTagError.AsPath
+  commentId: P:Dropbox.Api.Files.RemoveTagError.AsPath
+  id: AsPath
+  parent: Dropbox.Api.Files.RemoveTagError
+  langs:
+  - csharp
+  - vb
+  name: AsPath
+  nameWithType: RemoveTagError.AsPath
+  fullName: Dropbox.Api.Files.RemoveTagError.AsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Path, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RemoveTagError.Path AsPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RemoveTagError.Path
+    content.vb: Public ReadOnly Property AsPath As RemoveTagError.Path
+  overload: Dropbox.Api.Files.RemoveTagError.AsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RemoveTagError.IsOther
+  commentId: P:Dropbox.Api.Files.RemoveTagError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.RemoveTagError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: RemoveTagError.IsOther
+  fullName: Dropbox.Api.Files.RemoveTagError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.RemoveTagError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RemoveTagError.AsOther
+  commentId: P:Dropbox.Api.Files.RemoveTagError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.RemoveTagError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: RemoveTagError.AsOther
+  fullName: Dropbox.Api.Files.RemoveTagError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RemoveTagError.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RemoveTagError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RemoveTagError.Other
+    content.vb: Public ReadOnly Property AsOther As RemoveTagError.Other
+  overload: Dropbox.Api.Files.RemoveTagError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.RemoveTagError
+  commentId: T:Dropbox.Api.Files.RemoveTagError
+  parent: Dropbox.Api.Files
+  name: RemoveTagError
+  nameWithType: RemoveTagError
+  fullName: Dropbox.Api.Files.RemoveTagError
+- uid: Dropbox.Api.Files.RemoveTagError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.RemoveTagError.#ctor
+  name: RemoveTagError
+  nameWithType: RemoveTagError.RemoveTagError
+  fullName: Dropbox.Api.Files.RemoveTagError.RemoveTagError
+- uid: Dropbox.Api.Files.RemoveTagError.IsTagNotPresent*
+  commentId: Overload:Dropbox.Api.Files.RemoveTagError.IsTagNotPresent
+  name: IsTagNotPresent
+  nameWithType: RemoveTagError.IsTagNotPresent
+  fullName: Dropbox.Api.Files.RemoveTagError.IsTagNotPresent
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.RemoveTagError.AsTagNotPresent*
+  commentId: Overload:Dropbox.Api.Files.RemoveTagError.AsTagNotPresent
+  name: AsTagNotPresent
+  nameWithType: RemoveTagError.AsTagNotPresent
+  fullName: Dropbox.Api.Files.RemoveTagError.AsTagNotPresent
+- uid: Dropbox.Api.Files.RemoveTagError.TagNotPresent
+  commentId: T:Dropbox.Api.Files.RemoveTagError.TagNotPresent
+  parent: Dropbox.Api.Files
+  name: RemoveTagError.TagNotPresent
+  nameWithType: RemoveTagError.TagNotPresent
+  fullName: Dropbox.Api.Files.RemoveTagError.TagNotPresent
+- uid: Dropbox.Api.Files.RemoveTagError.IsPath*
+  commentId: Overload:Dropbox.Api.Files.RemoveTagError.IsPath
+  name: IsPath
+  nameWithType: RemoveTagError.IsPath
+  fullName: Dropbox.Api.Files.RemoveTagError.IsPath
+- uid: Dropbox.Api.Files.RemoveTagError.AsPath*
+  commentId: Overload:Dropbox.Api.Files.RemoveTagError.AsPath
+  name: AsPath
+  nameWithType: RemoveTagError.AsPath
+  fullName: Dropbox.Api.Files.RemoveTagError.AsPath
+- uid: Dropbox.Api.Files.RemoveTagError.Path
+  commentId: T:Dropbox.Api.Files.RemoveTagError.Path
+  parent: Dropbox.Api.Files
+  name: RemoveTagError.Path
+  nameWithType: RemoveTagError.Path
+  fullName: Dropbox.Api.Files.RemoveTagError.Path
+- uid: Dropbox.Api.Files.RemoveTagError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.RemoveTagError.IsOther
+  name: IsOther
+  nameWithType: RemoveTagError.IsOther
+  fullName: Dropbox.Api.Files.RemoveTagError.IsOther
+- uid: Dropbox.Api.Files.RemoveTagError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.RemoveTagError.AsOther
+  name: AsOther
+  nameWithType: RemoveTagError.AsOther
+  fullName: Dropbox.Api.Files.RemoveTagError.AsOther
+- uid: Dropbox.Api.Files.RemoveTagError.Other
+  commentId: T:Dropbox.Api.Files.RemoveTagError.Other
+  parent: Dropbox.Api.Files
+  name: RemoveTagError.Other
+  nameWithType: RemoveTagError.Other
+  fullName: Dropbox.Api.Files.RemoveTagError.Other

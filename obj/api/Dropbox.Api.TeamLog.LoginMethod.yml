@@ -1,0 +1,1233 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.LoginMethod
+  commentId: T:Dropbox.Api.TeamLog.LoginMethod
+  id: LoginMethod
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.LoginMethod.#ctor
+  - Dropbox.Api.TeamLog.LoginMethod.AsAppleOauth
+  - Dropbox.Api.TeamLog.LoginMethod.AsFirstPartyTokenExchange
+  - Dropbox.Api.TeamLog.LoginMethod.AsGoogleOauth
+  - Dropbox.Api.TeamLog.LoginMethod.AsOther
+  - Dropbox.Api.TeamLog.LoginMethod.AsPassword
+  - Dropbox.Api.TeamLog.LoginMethod.AsQrCode
+  - Dropbox.Api.TeamLog.LoginMethod.AsSaml
+  - Dropbox.Api.TeamLog.LoginMethod.AsTwoFactorAuthentication
+  - Dropbox.Api.TeamLog.LoginMethod.AsWebSession
+  - Dropbox.Api.TeamLog.LoginMethod.IsAppleOauth
+  - Dropbox.Api.TeamLog.LoginMethod.IsFirstPartyTokenExchange
+  - Dropbox.Api.TeamLog.LoginMethod.IsGoogleOauth
+  - Dropbox.Api.TeamLog.LoginMethod.IsOther
+  - Dropbox.Api.TeamLog.LoginMethod.IsPassword
+  - Dropbox.Api.TeamLog.LoginMethod.IsQrCode
+  - Dropbox.Api.TeamLog.LoginMethod.IsSaml
+  - Dropbox.Api.TeamLog.LoginMethod.IsTwoFactorAuthentication
+  - Dropbox.Api.TeamLog.LoginMethod.IsWebSession
+  langs:
+  - csharp
+  - vb
+  name: LoginMethod
+  nameWithType: LoginMethod
+  fullName: Dropbox.Api.TeamLog.LoginMethod
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LoginMethod
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The login method object</p>\n"
+  example: []
+  syntax:
+    content: public class LoginMethod
+    content.vb: Public Class LoginMethod
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.LoginMethod.AppleOauth
+  - Dropbox.Api.TeamLog.LoginMethod.FirstPartyTokenExchange
+  - Dropbox.Api.TeamLog.LoginMethod.GoogleOauth
+  - Dropbox.Api.TeamLog.LoginMethod.Other
+  - Dropbox.Api.TeamLog.LoginMethod.Password
+  - Dropbox.Api.TeamLog.LoginMethod.QrCode
+  - Dropbox.Api.TeamLog.LoginMethod.Saml
+  - Dropbox.Api.TeamLog.LoginMethod.TwoFactorAuthentication
+  - Dropbox.Api.TeamLog.LoginMethod.WebSession
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.LoginMethod.#ctor
+  commentId: M:Dropbox.Api.TeamLog.LoginMethod.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: LoginMethod()
+  nameWithType: LoginMethod.LoginMethod()
+  fullName: Dropbox.Api.TeamLog.LoginMethod.LoginMethod()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.LoginMethod\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public LoginMethod()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.LoginMethod.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsAppleOauth
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.IsAppleOauth
+  id: IsAppleOauth
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: IsAppleOauth
+  nameWithType: LoginMethod.IsAppleOauth
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsAppleOauth
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAppleOauth
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is AppleOauth</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAppleOauth { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAppleOauth As Boolean
+  overload: Dropbox.Api.TeamLog.LoginMethod.IsAppleOauth*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsAppleOauth
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.AsAppleOauth
+  id: AsAppleOauth
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: AsAppleOauth
+  nameWithType: LoginMethod.AsAppleOauth
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsAppleOauth
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAppleOauth
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a AppleOauth, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LoginMethod.AppleOauth AsAppleOauth { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LoginMethod.AppleOauth
+    content.vb: Public ReadOnly Property AsAppleOauth As LoginMethod.AppleOauth
+  overload: Dropbox.Api.TeamLog.LoginMethod.AsAppleOauth*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsFirstPartyTokenExchange
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.IsFirstPartyTokenExchange
+  id: IsFirstPartyTokenExchange
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: IsFirstPartyTokenExchange
+  nameWithType: LoginMethod.IsFirstPartyTokenExchange
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsFirstPartyTokenExchange
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsFirstPartyTokenExchange
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is\nFirstPartyTokenExchange</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFirstPartyTokenExchange { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFirstPartyTokenExchange As Boolean
+  overload: Dropbox.Api.TeamLog.LoginMethod.IsFirstPartyTokenExchange*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsFirstPartyTokenExchange
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.AsFirstPartyTokenExchange
+  id: AsFirstPartyTokenExchange
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: AsFirstPartyTokenExchange
+  nameWithType: LoginMethod.AsFirstPartyTokenExchange
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsFirstPartyTokenExchange
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsFirstPartyTokenExchange
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a FirstPartyTokenExchange, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LoginMethod.FirstPartyTokenExchange AsFirstPartyTokenExchange { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LoginMethod.FirstPartyTokenExchange
+    content.vb: Public ReadOnly Property AsFirstPartyTokenExchange As LoginMethod.FirstPartyTokenExchange
+  overload: Dropbox.Api.TeamLog.LoginMethod.AsFirstPartyTokenExchange*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsGoogleOauth
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.IsGoogleOauth
+  id: IsGoogleOauth
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: IsGoogleOauth
+  nameWithType: LoginMethod.IsGoogleOauth
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsGoogleOauth
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsGoogleOauth
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is GoogleOauth</p>\n"
+  example: []
+  syntax:
+    content: public bool IsGoogleOauth { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGoogleOauth As Boolean
+  overload: Dropbox.Api.TeamLog.LoginMethod.IsGoogleOauth*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsGoogleOauth
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.AsGoogleOauth
+  id: AsGoogleOauth
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: AsGoogleOauth
+  nameWithType: LoginMethod.AsGoogleOauth
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsGoogleOauth
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsGoogleOauth
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a GoogleOauth, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LoginMethod.GoogleOauth AsGoogleOauth { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LoginMethod.GoogleOauth
+    content.vb: Public ReadOnly Property AsGoogleOauth As LoginMethod.GoogleOauth
+  overload: Dropbox.Api.TeamLog.LoginMethod.AsGoogleOauth*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsPassword
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.IsPassword
+  id: IsPassword
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: IsPassword
+  nameWithType: LoginMethod.IsPassword
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsPassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Password</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPassword { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPassword As Boolean
+  overload: Dropbox.Api.TeamLog.LoginMethod.IsPassword*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsPassword
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.AsPassword
+  id: AsPassword
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: AsPassword
+  nameWithType: LoginMethod.AsPassword
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsPassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Password, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LoginMethod.Password AsPassword { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LoginMethod.Password
+    content.vb: Public ReadOnly Property AsPassword As LoginMethod.Password
+  overload: Dropbox.Api.TeamLog.LoginMethod.AsPassword*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsQrCode
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.IsQrCode
+  id: IsQrCode
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: IsQrCode
+  nameWithType: LoginMethod.IsQrCode
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsQrCode
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsQrCode
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is QrCode</p>\n"
+  example: []
+  syntax:
+    content: public bool IsQrCode { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsQrCode As Boolean
+  overload: Dropbox.Api.TeamLog.LoginMethod.IsQrCode*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsQrCode
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.AsQrCode
+  id: AsQrCode
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: AsQrCode
+  nameWithType: LoginMethod.AsQrCode
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsQrCode
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsQrCode
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a QrCode, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LoginMethod.QrCode AsQrCode { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LoginMethod.QrCode
+    content.vb: Public ReadOnly Property AsQrCode As LoginMethod.QrCode
+  overload: Dropbox.Api.TeamLog.LoginMethod.AsQrCode*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsSaml
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.IsSaml
+  id: IsSaml
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: IsSaml
+  nameWithType: LoginMethod.IsSaml
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsSaml
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSaml
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 150
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Saml</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSaml { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSaml As Boolean
+  overload: Dropbox.Api.TeamLog.LoginMethod.IsSaml*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsSaml
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.AsSaml
+  id: AsSaml
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: AsSaml
+  nameWithType: LoginMethod.AsSaml
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsSaml
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSaml
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Saml, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LoginMethod.Saml AsSaml { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LoginMethod.Saml
+    content.vb: Public ReadOnly Property AsSaml As LoginMethod.Saml
+  overload: Dropbox.Api.TeamLog.LoginMethod.AsSaml*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsTwoFactorAuthentication
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.IsTwoFactorAuthentication
+  id: IsTwoFactorAuthentication
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: IsTwoFactorAuthentication
+  nameWithType: LoginMethod.IsTwoFactorAuthentication
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsTwoFactorAuthentication
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTwoFactorAuthentication
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 173
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is\nTwoFactorAuthentication</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTwoFactorAuthentication { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTwoFactorAuthentication As Boolean
+  overload: Dropbox.Api.TeamLog.LoginMethod.IsTwoFactorAuthentication*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsTwoFactorAuthentication
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.AsTwoFactorAuthentication
+  id: AsTwoFactorAuthentication
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: AsTwoFactorAuthentication
+  nameWithType: LoginMethod.AsTwoFactorAuthentication
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsTwoFactorAuthentication
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTwoFactorAuthentication
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 184
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a TwoFactorAuthentication, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LoginMethod.TwoFactorAuthentication AsTwoFactorAuthentication { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LoginMethod.TwoFactorAuthentication
+    content.vb: Public ReadOnly Property AsTwoFactorAuthentication As LoginMethod.TwoFactorAuthentication
+  overload: Dropbox.Api.TeamLog.LoginMethod.AsTwoFactorAuthentication*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsWebSession
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.IsWebSession
+  id: IsWebSession
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: IsWebSession
+  nameWithType: LoginMethod.IsWebSession
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsWebSession
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsWebSession
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 195
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is WebSession</p>\n"
+  example: []
+  syntax:
+    content: public bool IsWebSession { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsWebSession As Boolean
+  overload: Dropbox.Api.TeamLog.LoginMethod.IsWebSession*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsWebSession
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.AsWebSession
+  id: AsWebSession
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: AsWebSession
+  nameWithType: LoginMethod.AsWebSession
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsWebSession
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsWebSession
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 206
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a WebSession, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LoginMethod.WebSession AsWebSession { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LoginMethod.WebSession
+    content.vb: Public ReadOnly Property AsWebSession As LoginMethod.WebSession
+  overload: Dropbox.Api.TeamLog.LoginMethod.AsWebSession*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsOther
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: LoginMethod.IsOther
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 217
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.LoginMethod.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsOther
+  commentId: P:Dropbox.Api.TeamLog.LoginMethod.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: LoginMethod.AsOther
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs
+    startLine: 228
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LoginMethod.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LoginMethod.Other
+    content.vb: Public ReadOnly Property AsOther As LoginMethod.Other
+  overload: Dropbox.Api.TeamLog.LoginMethod.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.LoginMethod
+  commentId: T:Dropbox.Api.TeamLog.LoginMethod
+  parent: Dropbox.Api.TeamLog
+  name: LoginMethod
+  nameWithType: LoginMethod
+  fullName: Dropbox.Api.TeamLog.LoginMethod
+- uid: Dropbox.Api.TeamLog.LoginMethod.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.#ctor
+  name: LoginMethod
+  nameWithType: LoginMethod.LoginMethod
+  fullName: Dropbox.Api.TeamLog.LoginMethod.LoginMethod
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsAppleOauth*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.IsAppleOauth
+  name: IsAppleOauth
+  nameWithType: LoginMethod.IsAppleOauth
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsAppleOauth
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsAppleOauth*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.AsAppleOauth
+  name: AsAppleOauth
+  nameWithType: LoginMethod.AsAppleOauth
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsAppleOauth
+- uid: Dropbox.Api.TeamLog.LoginMethod.AppleOauth
+  commentId: T:Dropbox.Api.TeamLog.LoginMethod.AppleOauth
+  parent: Dropbox.Api.TeamLog
+  name: LoginMethod.AppleOauth
+  nameWithType: LoginMethod.AppleOauth
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AppleOauth
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsFirstPartyTokenExchange*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.IsFirstPartyTokenExchange
+  name: IsFirstPartyTokenExchange
+  nameWithType: LoginMethod.IsFirstPartyTokenExchange
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsFirstPartyTokenExchange
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsFirstPartyTokenExchange*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.AsFirstPartyTokenExchange
+  name: AsFirstPartyTokenExchange
+  nameWithType: LoginMethod.AsFirstPartyTokenExchange
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsFirstPartyTokenExchange
+- uid: Dropbox.Api.TeamLog.LoginMethod.FirstPartyTokenExchange
+  commentId: T:Dropbox.Api.TeamLog.LoginMethod.FirstPartyTokenExchange
+  parent: Dropbox.Api.TeamLog
+  name: LoginMethod.FirstPartyTokenExchange
+  nameWithType: LoginMethod.FirstPartyTokenExchange
+  fullName: Dropbox.Api.TeamLog.LoginMethod.FirstPartyTokenExchange
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsGoogleOauth*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.IsGoogleOauth
+  name: IsGoogleOauth
+  nameWithType: LoginMethod.IsGoogleOauth
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsGoogleOauth
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsGoogleOauth*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.AsGoogleOauth
+  name: AsGoogleOauth
+  nameWithType: LoginMethod.AsGoogleOauth
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsGoogleOauth
+- uid: Dropbox.Api.TeamLog.LoginMethod.GoogleOauth
+  commentId: T:Dropbox.Api.TeamLog.LoginMethod.GoogleOauth
+  parent: Dropbox.Api.TeamLog
+  name: LoginMethod.GoogleOauth
+  nameWithType: LoginMethod.GoogleOauth
+  fullName: Dropbox.Api.TeamLog.LoginMethod.GoogleOauth
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsPassword*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.IsPassword
+  name: IsPassword
+  nameWithType: LoginMethod.IsPassword
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsPassword
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsPassword*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.AsPassword
+  name: AsPassword
+  nameWithType: LoginMethod.AsPassword
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsPassword
+- uid: Dropbox.Api.TeamLog.LoginMethod.Password
+  commentId: T:Dropbox.Api.TeamLog.LoginMethod.Password
+  parent: Dropbox.Api.TeamLog
+  name: LoginMethod.Password
+  nameWithType: LoginMethod.Password
+  fullName: Dropbox.Api.TeamLog.LoginMethod.Password
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsQrCode*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.IsQrCode
+  name: IsQrCode
+  nameWithType: LoginMethod.IsQrCode
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsQrCode
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsQrCode*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.AsQrCode
+  name: AsQrCode
+  nameWithType: LoginMethod.AsQrCode
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsQrCode
+- uid: Dropbox.Api.TeamLog.LoginMethod.QrCode
+  commentId: T:Dropbox.Api.TeamLog.LoginMethod.QrCode
+  parent: Dropbox.Api.TeamLog
+  name: LoginMethod.QrCode
+  nameWithType: LoginMethod.QrCode
+  fullName: Dropbox.Api.TeamLog.LoginMethod.QrCode
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsSaml*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.IsSaml
+  name: IsSaml
+  nameWithType: LoginMethod.IsSaml
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsSaml
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsSaml*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.AsSaml
+  name: AsSaml
+  nameWithType: LoginMethod.AsSaml
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsSaml
+- uid: Dropbox.Api.TeamLog.LoginMethod.Saml
+  commentId: T:Dropbox.Api.TeamLog.LoginMethod.Saml
+  parent: Dropbox.Api.TeamLog
+  name: LoginMethod.Saml
+  nameWithType: LoginMethod.Saml
+  fullName: Dropbox.Api.TeamLog.LoginMethod.Saml
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsTwoFactorAuthentication*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.IsTwoFactorAuthentication
+  name: IsTwoFactorAuthentication
+  nameWithType: LoginMethod.IsTwoFactorAuthentication
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsTwoFactorAuthentication
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsTwoFactorAuthentication*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.AsTwoFactorAuthentication
+  name: AsTwoFactorAuthentication
+  nameWithType: LoginMethod.AsTwoFactorAuthentication
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsTwoFactorAuthentication
+- uid: Dropbox.Api.TeamLog.LoginMethod.TwoFactorAuthentication
+  commentId: T:Dropbox.Api.TeamLog.LoginMethod.TwoFactorAuthentication
+  parent: Dropbox.Api.TeamLog
+  name: LoginMethod.TwoFactorAuthentication
+  nameWithType: LoginMethod.TwoFactorAuthentication
+  fullName: Dropbox.Api.TeamLog.LoginMethod.TwoFactorAuthentication
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsWebSession*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.IsWebSession
+  name: IsWebSession
+  nameWithType: LoginMethod.IsWebSession
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsWebSession
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsWebSession*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.AsWebSession
+  name: AsWebSession
+  nameWithType: LoginMethod.AsWebSession
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsWebSession
+- uid: Dropbox.Api.TeamLog.LoginMethod.WebSession
+  commentId: T:Dropbox.Api.TeamLog.LoginMethod.WebSession
+  parent: Dropbox.Api.TeamLog
+  name: LoginMethod.WebSession
+  nameWithType: LoginMethod.WebSession
+  fullName: Dropbox.Api.TeamLog.LoginMethod.WebSession
+- uid: Dropbox.Api.TeamLog.LoginMethod.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.IsOther
+  name: IsOther
+  nameWithType: LoginMethod.IsOther
+  fullName: Dropbox.Api.TeamLog.LoginMethod.IsOther
+- uid: Dropbox.Api.TeamLog.LoginMethod.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginMethod.AsOther
+  name: AsOther
+  nameWithType: LoginMethod.AsOther
+  fullName: Dropbox.Api.TeamLog.LoginMethod.AsOther
+- uid: Dropbox.Api.TeamLog.LoginMethod.Other
+  commentId: T:Dropbox.Api.TeamLog.LoginMethod.Other
+  parent: Dropbox.Api.TeamLog
+  name: LoginMethod.Other
+  nameWithType: LoginMethod.Other
+  fullName: Dropbox.Api.TeamLog.LoginMethod.Other

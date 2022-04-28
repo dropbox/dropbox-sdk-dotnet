@@ -1,0 +1,1047 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.LinkAction
+  commentId: T:Dropbox.Api.Sharing.LinkAction
+  id: LinkAction
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.LinkAction.#ctor
+  - Dropbox.Api.Sharing.LinkAction.AsChangeAccessLevel
+  - Dropbox.Api.Sharing.LinkAction.AsChangeAudience
+  - Dropbox.Api.Sharing.LinkAction.AsOther
+  - Dropbox.Api.Sharing.LinkAction.AsRemoveExpiry
+  - Dropbox.Api.Sharing.LinkAction.AsRemovePassword
+  - Dropbox.Api.Sharing.LinkAction.AsSetExpiry
+  - Dropbox.Api.Sharing.LinkAction.AsSetPassword
+  - Dropbox.Api.Sharing.LinkAction.IsChangeAccessLevel
+  - Dropbox.Api.Sharing.LinkAction.IsChangeAudience
+  - Dropbox.Api.Sharing.LinkAction.IsOther
+  - Dropbox.Api.Sharing.LinkAction.IsRemoveExpiry
+  - Dropbox.Api.Sharing.LinkAction.IsRemovePassword
+  - Dropbox.Api.Sharing.LinkAction.IsSetExpiry
+  - Dropbox.Api.Sharing.LinkAction.IsSetPassword
+  langs:
+  - csharp
+  - vb
+  name: LinkAction
+  nameWithType: LinkAction
+  fullName: Dropbox.Api.Sharing.LinkAction
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LinkAction
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Actions that can be performed on a link.</p>\n"
+  example: []
+  syntax:
+    content: public class LinkAction
+    content.vb: Public Class LinkAction
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.LinkAction.ChangeAccessLevel
+  - Dropbox.Api.Sharing.LinkAction.ChangeAudience
+  - Dropbox.Api.Sharing.LinkAction.Other
+  - Dropbox.Api.Sharing.LinkAction.RemoveExpiry
+  - Dropbox.Api.Sharing.LinkAction.RemovePassword
+  - Dropbox.Api.Sharing.LinkAction.SetExpiry
+  - Dropbox.Api.Sharing.LinkAction.SetPassword
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.LinkAction.#ctor
+  commentId: M:Dropbox.Api.Sharing.LinkAction.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: LinkAction()
+  nameWithType: LinkAction.LinkAction()
+  fullName: Dropbox.Api.Sharing.LinkAction.LinkAction()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.LinkAction\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAction()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.LinkAction.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.LinkAction.IsChangeAccessLevel
+  commentId: P:Dropbox.Api.Sharing.LinkAction.IsChangeAccessLevel
+  id: IsChangeAccessLevel
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: IsChangeAccessLevel
+  nameWithType: LinkAction.IsChangeAccessLevel
+  fullName: Dropbox.Api.Sharing.LinkAction.IsChangeAccessLevel
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsChangeAccessLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is ChangeAccessLevel</p>\n"
+  example: []
+  syntax:
+    content: public bool IsChangeAccessLevel { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsChangeAccessLevel As Boolean
+  overload: Dropbox.Api.Sharing.LinkAction.IsChangeAccessLevel*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAction.AsChangeAccessLevel
+  commentId: P:Dropbox.Api.Sharing.LinkAction.AsChangeAccessLevel
+  id: AsChangeAccessLevel
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: AsChangeAccessLevel
+  nameWithType: LinkAction.AsChangeAccessLevel
+  fullName: Dropbox.Api.Sharing.LinkAction.AsChangeAccessLevel
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsChangeAccessLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a ChangeAccessLevel, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAction.ChangeAccessLevel AsChangeAccessLevel { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAction.ChangeAccessLevel
+    content.vb: Public ReadOnly Property AsChangeAccessLevel As LinkAction.ChangeAccessLevel
+  overload: Dropbox.Api.Sharing.LinkAction.AsChangeAccessLevel*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAction.IsChangeAudience
+  commentId: P:Dropbox.Api.Sharing.LinkAction.IsChangeAudience
+  id: IsChangeAudience
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: IsChangeAudience
+  nameWithType: LinkAction.IsChangeAudience
+  fullName: Dropbox.Api.Sharing.LinkAction.IsChangeAudience
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsChangeAudience
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is ChangeAudience</p>\n"
+  example: []
+  syntax:
+    content: public bool IsChangeAudience { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsChangeAudience As Boolean
+  overload: Dropbox.Api.Sharing.LinkAction.IsChangeAudience*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAction.AsChangeAudience
+  commentId: P:Dropbox.Api.Sharing.LinkAction.AsChangeAudience
+  id: AsChangeAudience
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: AsChangeAudience
+  nameWithType: LinkAction.AsChangeAudience
+  fullName: Dropbox.Api.Sharing.LinkAction.AsChangeAudience
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsChangeAudience
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a ChangeAudience, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAction.ChangeAudience AsChangeAudience { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAction.ChangeAudience
+    content.vb: Public ReadOnly Property AsChangeAudience As LinkAction.ChangeAudience
+  overload: Dropbox.Api.Sharing.LinkAction.AsChangeAudience*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAction.IsRemoveExpiry
+  commentId: P:Dropbox.Api.Sharing.LinkAction.IsRemoveExpiry
+  id: IsRemoveExpiry
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: IsRemoveExpiry
+  nameWithType: LinkAction.IsRemoveExpiry
+  fullName: Dropbox.Api.Sharing.LinkAction.IsRemoveExpiry
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsRemoveExpiry
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is RemoveExpiry</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRemoveExpiry { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRemoveExpiry As Boolean
+  overload: Dropbox.Api.Sharing.LinkAction.IsRemoveExpiry*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAction.AsRemoveExpiry
+  commentId: P:Dropbox.Api.Sharing.LinkAction.AsRemoveExpiry
+  id: AsRemoveExpiry
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: AsRemoveExpiry
+  nameWithType: LinkAction.AsRemoveExpiry
+  fullName: Dropbox.Api.Sharing.LinkAction.AsRemoveExpiry
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsRemoveExpiry
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a RemoveExpiry, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAction.RemoveExpiry AsRemoveExpiry { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAction.RemoveExpiry
+    content.vb: Public ReadOnly Property AsRemoveExpiry As LinkAction.RemoveExpiry
+  overload: Dropbox.Api.Sharing.LinkAction.AsRemoveExpiry*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAction.IsRemovePassword
+  commentId: P:Dropbox.Api.Sharing.LinkAction.IsRemovePassword
+  id: IsRemovePassword
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: IsRemovePassword
+  nameWithType: LinkAction.IsRemovePassword
+  fullName: Dropbox.Api.Sharing.LinkAction.IsRemovePassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsRemovePassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is RemovePassword</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRemovePassword { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRemovePassword As Boolean
+  overload: Dropbox.Api.Sharing.LinkAction.IsRemovePassword*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAction.AsRemovePassword
+  commentId: P:Dropbox.Api.Sharing.LinkAction.AsRemovePassword
+  id: AsRemovePassword
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: AsRemovePassword
+  nameWithType: LinkAction.AsRemovePassword
+  fullName: Dropbox.Api.Sharing.LinkAction.AsRemovePassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsRemovePassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a RemovePassword, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAction.RemovePassword AsRemovePassword { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAction.RemovePassword
+    content.vb: Public ReadOnly Property AsRemovePassword As LinkAction.RemovePassword
+  overload: Dropbox.Api.Sharing.LinkAction.AsRemovePassword*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAction.IsSetExpiry
+  commentId: P:Dropbox.Api.Sharing.LinkAction.IsSetExpiry
+  id: IsSetExpiry
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: IsSetExpiry
+  nameWithType: LinkAction.IsSetExpiry
+  fullName: Dropbox.Api.Sharing.LinkAction.IsSetExpiry
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSetExpiry
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is SetExpiry</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSetExpiry { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSetExpiry As Boolean
+  overload: Dropbox.Api.Sharing.LinkAction.IsSetExpiry*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAction.AsSetExpiry
+  commentId: P:Dropbox.Api.Sharing.LinkAction.AsSetExpiry
+  id: AsSetExpiry
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: AsSetExpiry
+  nameWithType: LinkAction.AsSetExpiry
+  fullName: Dropbox.Api.Sharing.LinkAction.AsSetExpiry
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSetExpiry
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a SetExpiry, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAction.SetExpiry AsSetExpiry { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAction.SetExpiry
+    content.vb: Public ReadOnly Property AsSetExpiry As LinkAction.SetExpiry
+  overload: Dropbox.Api.Sharing.LinkAction.AsSetExpiry*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAction.IsSetPassword
+  commentId: P:Dropbox.Api.Sharing.LinkAction.IsSetPassword
+  id: IsSetPassword
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: IsSetPassword
+  nameWithType: LinkAction.IsSetPassword
+  fullName: Dropbox.Api.Sharing.LinkAction.IsSetPassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSetPassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 149
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is SetPassword</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSetPassword { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSetPassword As Boolean
+  overload: Dropbox.Api.Sharing.LinkAction.IsSetPassword*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAction.AsSetPassword
+  commentId: P:Dropbox.Api.Sharing.LinkAction.AsSetPassword
+  id: AsSetPassword
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: AsSetPassword
+  nameWithType: LinkAction.AsSetPassword
+  fullName: Dropbox.Api.Sharing.LinkAction.AsSetPassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSetPassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 160
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a SetPassword, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAction.SetPassword AsSetPassword { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAction.SetPassword
+    content.vb: Public ReadOnly Property AsSetPassword As LinkAction.SetPassword
+  overload: Dropbox.Api.Sharing.LinkAction.AsSetPassword*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAction.IsOther
+  commentId: P:Dropbox.Api.Sharing.LinkAction.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: LinkAction.IsOther
+  fullName: Dropbox.Api.Sharing.LinkAction.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 171
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.LinkAction.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAction.AsOther
+  commentId: P:Dropbox.Api.Sharing.LinkAction.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.LinkAction
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: LinkAction.AsOther
+  fullName: Dropbox.Api.Sharing.LinkAction.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAction.cs
+    startLine: 182
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAction.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAction.Other
+    content.vb: Public ReadOnly Property AsOther As LinkAction.Other
+  overload: Dropbox.Api.Sharing.LinkAction.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.LinkAction
+  commentId: T:Dropbox.Api.Sharing.LinkAction
+  parent: Dropbox.Api.Sharing
+  name: LinkAction
+  nameWithType: LinkAction
+  fullName: Dropbox.Api.Sharing.LinkAction
+- uid: Dropbox.Api.Sharing.LinkAction.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.#ctor
+  name: LinkAction
+  nameWithType: LinkAction.LinkAction
+  fullName: Dropbox.Api.Sharing.LinkAction.LinkAction
+- uid: Dropbox.Api.Sharing.LinkAction.IsChangeAccessLevel*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.IsChangeAccessLevel
+  name: IsChangeAccessLevel
+  nameWithType: LinkAction.IsChangeAccessLevel
+  fullName: Dropbox.Api.Sharing.LinkAction.IsChangeAccessLevel
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.LinkAction.AsChangeAccessLevel*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.AsChangeAccessLevel
+  name: AsChangeAccessLevel
+  nameWithType: LinkAction.AsChangeAccessLevel
+  fullName: Dropbox.Api.Sharing.LinkAction.AsChangeAccessLevel
+- uid: Dropbox.Api.Sharing.LinkAction.ChangeAccessLevel
+  commentId: T:Dropbox.Api.Sharing.LinkAction.ChangeAccessLevel
+  parent: Dropbox.Api.Sharing
+  name: LinkAction.ChangeAccessLevel
+  nameWithType: LinkAction.ChangeAccessLevel
+  fullName: Dropbox.Api.Sharing.LinkAction.ChangeAccessLevel
+- uid: Dropbox.Api.Sharing.LinkAction.IsChangeAudience*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.IsChangeAudience
+  name: IsChangeAudience
+  nameWithType: LinkAction.IsChangeAudience
+  fullName: Dropbox.Api.Sharing.LinkAction.IsChangeAudience
+- uid: Dropbox.Api.Sharing.LinkAction.AsChangeAudience*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.AsChangeAudience
+  name: AsChangeAudience
+  nameWithType: LinkAction.AsChangeAudience
+  fullName: Dropbox.Api.Sharing.LinkAction.AsChangeAudience
+- uid: Dropbox.Api.Sharing.LinkAction.ChangeAudience
+  commentId: T:Dropbox.Api.Sharing.LinkAction.ChangeAudience
+  parent: Dropbox.Api.Sharing
+  name: LinkAction.ChangeAudience
+  nameWithType: LinkAction.ChangeAudience
+  fullName: Dropbox.Api.Sharing.LinkAction.ChangeAudience
+- uid: Dropbox.Api.Sharing.LinkAction.IsRemoveExpiry*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.IsRemoveExpiry
+  name: IsRemoveExpiry
+  nameWithType: LinkAction.IsRemoveExpiry
+  fullName: Dropbox.Api.Sharing.LinkAction.IsRemoveExpiry
+- uid: Dropbox.Api.Sharing.LinkAction.AsRemoveExpiry*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.AsRemoveExpiry
+  name: AsRemoveExpiry
+  nameWithType: LinkAction.AsRemoveExpiry
+  fullName: Dropbox.Api.Sharing.LinkAction.AsRemoveExpiry
+- uid: Dropbox.Api.Sharing.LinkAction.RemoveExpiry
+  commentId: T:Dropbox.Api.Sharing.LinkAction.RemoveExpiry
+  parent: Dropbox.Api.Sharing
+  name: LinkAction.RemoveExpiry
+  nameWithType: LinkAction.RemoveExpiry
+  fullName: Dropbox.Api.Sharing.LinkAction.RemoveExpiry
+- uid: Dropbox.Api.Sharing.LinkAction.IsRemovePassword*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.IsRemovePassword
+  name: IsRemovePassword
+  nameWithType: LinkAction.IsRemovePassword
+  fullName: Dropbox.Api.Sharing.LinkAction.IsRemovePassword
+- uid: Dropbox.Api.Sharing.LinkAction.AsRemovePassword*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.AsRemovePassword
+  name: AsRemovePassword
+  nameWithType: LinkAction.AsRemovePassword
+  fullName: Dropbox.Api.Sharing.LinkAction.AsRemovePassword
+- uid: Dropbox.Api.Sharing.LinkAction.RemovePassword
+  commentId: T:Dropbox.Api.Sharing.LinkAction.RemovePassword
+  parent: Dropbox.Api.Sharing
+  name: LinkAction.RemovePassword
+  nameWithType: LinkAction.RemovePassword
+  fullName: Dropbox.Api.Sharing.LinkAction.RemovePassword
+- uid: Dropbox.Api.Sharing.LinkAction.IsSetExpiry*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.IsSetExpiry
+  name: IsSetExpiry
+  nameWithType: LinkAction.IsSetExpiry
+  fullName: Dropbox.Api.Sharing.LinkAction.IsSetExpiry
+- uid: Dropbox.Api.Sharing.LinkAction.AsSetExpiry*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.AsSetExpiry
+  name: AsSetExpiry
+  nameWithType: LinkAction.AsSetExpiry
+  fullName: Dropbox.Api.Sharing.LinkAction.AsSetExpiry
+- uid: Dropbox.Api.Sharing.LinkAction.SetExpiry
+  commentId: T:Dropbox.Api.Sharing.LinkAction.SetExpiry
+  parent: Dropbox.Api.Sharing
+  name: LinkAction.SetExpiry
+  nameWithType: LinkAction.SetExpiry
+  fullName: Dropbox.Api.Sharing.LinkAction.SetExpiry
+- uid: Dropbox.Api.Sharing.LinkAction.IsSetPassword*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.IsSetPassword
+  name: IsSetPassword
+  nameWithType: LinkAction.IsSetPassword
+  fullName: Dropbox.Api.Sharing.LinkAction.IsSetPassword
+- uid: Dropbox.Api.Sharing.LinkAction.AsSetPassword*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.AsSetPassword
+  name: AsSetPassword
+  nameWithType: LinkAction.AsSetPassword
+  fullName: Dropbox.Api.Sharing.LinkAction.AsSetPassword
+- uid: Dropbox.Api.Sharing.LinkAction.SetPassword
+  commentId: T:Dropbox.Api.Sharing.LinkAction.SetPassword
+  parent: Dropbox.Api.Sharing
+  name: LinkAction.SetPassword
+  nameWithType: LinkAction.SetPassword
+  fullName: Dropbox.Api.Sharing.LinkAction.SetPassword
+- uid: Dropbox.Api.Sharing.LinkAction.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.IsOther
+  name: IsOther
+  nameWithType: LinkAction.IsOther
+  fullName: Dropbox.Api.Sharing.LinkAction.IsOther
+- uid: Dropbox.Api.Sharing.LinkAction.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAction.AsOther
+  name: AsOther
+  nameWithType: LinkAction.AsOther
+  fullName: Dropbox.Api.Sharing.LinkAction.AsOther
+- uid: Dropbox.Api.Sharing.LinkAction.Other
+  commentId: T:Dropbox.Api.Sharing.LinkAction.Other
+  parent: Dropbox.Api.Sharing
+  name: LinkAction.Other
+  nameWithType: LinkAction.Other
+  fullName: Dropbox.Api.Sharing.LinkAction.Other

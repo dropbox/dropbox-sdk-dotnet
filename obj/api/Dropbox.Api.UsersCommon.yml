@@ -1,0 +1,49 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.UsersCommon
+  commentId: N:Dropbox.Api.UsersCommon
+  id: Dropbox.Api.UsersCommon
+  children:
+  - Dropbox.Api.UsersCommon.AccountType
+  - Dropbox.Api.UsersCommon.AccountType.Basic
+  - Dropbox.Api.UsersCommon.AccountType.Business
+  - Dropbox.Api.UsersCommon.AccountType.Pro
+  langs:
+  - csharp
+  - vb
+  name: Dropbox.Api.UsersCommon
+  nameWithType: Dropbox.Api.UsersCommon
+  fullName: Dropbox.Api.UsersCommon
+  type: Namespace
+  assemblies:
+  - Dropbox.Api
+references:
+- uid: Dropbox.Api.UsersCommon.AccountType
+  commentId: T:Dropbox.Api.UsersCommon.AccountType
+  parent: Dropbox.Api.UsersCommon
+  name: AccountType
+  nameWithType: AccountType
+  fullName: Dropbox.Api.UsersCommon.AccountType
+- uid: Dropbox.Api.UsersCommon.AccountType.Basic
+  commentId: T:Dropbox.Api.UsersCommon.AccountType.Basic
+  parent: Dropbox.Api.UsersCommon
+  name: AccountType.Basic
+  nameWithType: AccountType.Basic
+  fullName: Dropbox.Api.UsersCommon.AccountType.Basic
+- uid: Dropbox.Api.UsersCommon.AccountType.Pro
+  commentId: T:Dropbox.Api.UsersCommon.AccountType.Pro
+  parent: Dropbox.Api.UsersCommon
+  name: AccountType.Pro
+  nameWithType: AccountType.Pro
+  fullName: Dropbox.Api.UsersCommon.AccountType.Pro
+- uid: Dropbox.Api.UsersCommon.AccountType.Business
+  commentId: T:Dropbox.Api.UsersCommon.AccountType.Business
+  parent: Dropbox.Api.UsersCommon
+  name: AccountType.Business
+  nameWithType: AccountType.Business
+  fullName: Dropbox.Api.UsersCommon.AccountType.Business
+- uid: Dropbox.Api.UsersCommon
+  commentId: N:Dropbox.Api.UsersCommon
+  name: Dropbox.Api.UsersCommon
+  nameWithType: Dropbox.Api.UsersCommon
+  fullName: Dropbox.Api.UsersCommon

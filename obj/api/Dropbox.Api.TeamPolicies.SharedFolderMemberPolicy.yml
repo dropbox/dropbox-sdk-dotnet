@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+  id: SharedFolderMemberPolicy
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.#ctor
+  - Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsAnyone
+  - Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsOther
+  - Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsTeam
+  - Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsAnyone
+  - Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsOther
+  - Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsTeam
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMemberPolicy
+  nameWithType: SharedFolderMemberPolicy
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SharedFolderMemberPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Policy governing who can be a member of a folder shared by a team member.</p>\n"
+  example: []
+  syntax:
+    content: public class SharedFolderMemberPolicy
+    content.vb: Public Class SharedFolderMemberPolicy
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Anyone
+  - Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Other
+  - Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Team
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMemberPolicy()
+  nameWithType: SharedFolderMemberPolicy.SharedFolderMemberPolicy()
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.SharedFolderMemberPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMemberPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsTeam
+  commentId: P:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsTeam
+  id: IsTeam
+  parent: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsTeam
+  nameWithType: SharedFolderMemberPolicy.IsTeam
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Team</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeam As Boolean
+  overload: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsTeam
+  commentId: P:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsTeam
+  id: AsTeam
+  parent: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsTeam
+  nameWithType: SharedFolderMemberPolicy.AsTeam
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Team, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMemberPolicy.Team AsTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Team
+    content.vb: Public ReadOnly Property AsTeam As SharedFolderMemberPolicy.Team
+  overload: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsAnyone
+  commentId: P:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsAnyone
+  id: IsAnyone
+  parent: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsAnyone
+  nameWithType: SharedFolderMemberPolicy.IsAnyone
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsAnyone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAnyone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Anyone</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAnyone { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAnyone As Boolean
+  overload: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsAnyone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsAnyone
+  commentId: P:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsAnyone
+  id: AsAnyone
+  parent: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsAnyone
+  nameWithType: SharedFolderMemberPolicy.AsAnyone
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsAnyone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAnyone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Anyone, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMemberPolicy.Anyone AsAnyone { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Anyone
+    content.vb: Public ReadOnly Property AsAnyone As SharedFolderMemberPolicy.Anyone
+  overload: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsAnyone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SharedFolderMemberPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SharedFolderMemberPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderMemberPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMemberPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As SharedFolderMemberPolicy.Other
+  overload: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: SharedFolderMemberPolicy
+  nameWithType: SharedFolderMemberPolicy
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.#ctor
+  name: SharedFolderMemberPolicy
+  nameWithType: SharedFolderMemberPolicy.SharedFolderMemberPolicy
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.SharedFolderMemberPolicy
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsTeam*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsTeam
+  name: IsTeam
+  nameWithType: SharedFolderMemberPolicy.IsTeam
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsTeam
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsTeam*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsTeam
+  name: AsTeam
+  nameWithType: SharedFolderMemberPolicy.AsTeam
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsTeam
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Team
+  commentId: T:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Team
+  parent: Dropbox.Api.TeamPolicies
+  name: SharedFolderMemberPolicy.Team
+  nameWithType: SharedFolderMemberPolicy.Team
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Team
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsAnyone*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsAnyone
+  name: IsAnyone
+  nameWithType: SharedFolderMemberPolicy.IsAnyone
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsAnyone
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsAnyone*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsAnyone
+  name: AsAnyone
+  nameWithType: SharedFolderMemberPolicy.AsAnyone
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsAnyone
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Anyone
+  commentId: T:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Anyone
+  parent: Dropbox.Api.TeamPolicies
+  name: SharedFolderMemberPolicy.Anyone
+  nameWithType: SharedFolderMemberPolicy.Anyone
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Anyone
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsOther
+  name: IsOther
+  nameWithType: SharedFolderMemberPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.IsOther
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsOther
+  name: AsOther
+  nameWithType: SharedFolderMemberPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.AsOther
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Other
+  commentId: T:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Other
+  parent: Dropbox.Api.TeamPolicies
+  name: SharedFolderMemberPolicy.Other
+  nameWithType: SharedFolderMemberPolicy.Other
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Other

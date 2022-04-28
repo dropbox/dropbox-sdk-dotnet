@@ -1,0 +1,702 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails
+  id: AdminAlertingAlertStateChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.#ctor(System.String,Dropbox.Api.TeamLog.AdminAlertSeverityEnum,Dropbox.Api.TeamLog.AdminAlertCategoryEnum,System.String,Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum,Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum)
+  - Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertCategory
+  - Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertInstanceId
+  - Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertName
+  - Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertSeverity
+  - Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.NewValue
+  - Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: AdminAlertingAlertStateChangedDetails
+  nameWithType: AdminAlertingAlertStateChangedDetails
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AdminAlertingAlertStateChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed an alert state.</p>\n"
+  example: []
+  syntax:
+    content: public class AdminAlertingAlertStateChangedDetails
+    content.vb: Public Class AdminAlertingAlertStateChangedDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.#ctor(System.String,Dropbox.Api.TeamLog.AdminAlertSeverityEnum,Dropbox.Api.TeamLog.AdminAlertCategoryEnum,System.String,Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum,Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum)
+  commentId: M:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.#ctor(System.String,Dropbox.Api.TeamLog.AdminAlertSeverityEnum,Dropbox.Api.TeamLog.AdminAlertCategoryEnum,System.String,Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum,Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum)
+  id: '#ctor(System.String,Dropbox.Api.TeamLog.AdminAlertSeverityEnum,Dropbox.Api.TeamLog.AdminAlertCategoryEnum,System.String,Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum,Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum)'
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: AdminAlertingAlertStateChangedDetails(String, AdminAlertSeverityEnum, AdminAlertCategoryEnum, String, AdminAlertGeneralStateEnum, AdminAlertGeneralStateEnum)
+  nameWithType: AdminAlertingAlertStateChangedDetails.AdminAlertingAlertStateChangedDetails(String, AdminAlertSeverityEnum, AdminAlertCategoryEnum, String, AdminAlertGeneralStateEnum, AdminAlertGeneralStateEnum)
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AdminAlertingAlertStateChangedDetails(System.String, Dropbox.Api.TeamLog.AdminAlertSeverityEnum, Dropbox.Api.TeamLog.AdminAlertCategoryEnum, System.String, Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum, Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertingAlertStateChangedDetails(string alertName, AdminAlertSeverityEnum alertSeverity, AdminAlertCategoryEnum alertCategory, string alertInstanceId, AdminAlertGeneralStateEnum previousValue, AdminAlertGeneralStateEnum newValue)
+    parameters:
+    - id: alertName
+      type: System.String
+      description: Alert name.
+    - id: alertSeverity
+      type: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+      description: Alert severity.
+    - id: alertCategory
+      type: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+      description: Alert category.
+    - id: alertInstanceId
+      type: System.String
+      description: Alert ID.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum
+      description: Alert state before the change.
+    - id: newValue
+      type: Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum
+      description: Alert state after the change.
+    content.vb: Public Sub New(alertName As String, alertSeverity As AdminAlertSeverityEnum, alertCategory As AdminAlertCategoryEnum, alertInstanceId As String, previousValue As AdminAlertGeneralStateEnum, newValue As AdminAlertGeneralStateEnum)
+  overload: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertName
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertName
+  id: AlertName
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: AlertName
+  nameWithType: AdminAlertingAlertStateChangedDetails.AlertName
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AlertName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+    startLine: 98
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Alert name.</p>\n"
+  example: []
+  syntax:
+    content: public string AlertName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AlertName As String
+  overload: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertSeverity
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertSeverity
+  id: AlertSeverity
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: AlertSeverity
+  nameWithType: AdminAlertingAlertStateChangedDetails.AlertSeverity
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertSeverity
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AlertSeverity
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+    startLine: 103
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Alert severity.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertSeverityEnum AlertSeverity { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+    content.vb: Public Property AlertSeverity As AdminAlertSeverityEnum
+  overload: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertSeverity*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertCategory
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertCategory
+  id: AlertCategory
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: AlertCategory
+  nameWithType: AdminAlertingAlertStateChangedDetails.AlertCategory
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertCategory
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AlertCategory
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+    startLine: 108
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Alert category.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertCategoryEnum AlertCategory { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+    content.vb: Public Property AlertCategory As AdminAlertCategoryEnum
+  overload: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertCategory*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertInstanceId
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertInstanceId
+  id: AlertInstanceId
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: AlertInstanceId
+  nameWithType: AdminAlertingAlertStateChangedDetails.AlertInstanceId
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertInstanceId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AlertInstanceId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+    startLine: 113
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Alert ID.</p>\n"
+  example: []
+  syntax:
+    content: public string AlertInstanceId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AlertInstanceId As String
+  overload: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertInstanceId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: AdminAlertingAlertStateChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Alert state before the change.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertGeneralStateEnum PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum
+    content.vb: Public Property PreviousValue As AdminAlertGeneralStateEnum
+  overload: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: AdminAlertingAlertStateChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertStateChangedDetails.cs
+    startLine: 123
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Alert state after the change.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertGeneralStateEnum NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum
+    content.vb: Public Property NewValue As AdminAlertGeneralStateEnum
+  overload: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertingAlertStateChangedDetails
+  nameWithType: AdminAlertingAlertStateChangedDetails
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.#ctor
+  name: AdminAlertingAlertStateChangedDetails
+  nameWithType: AdminAlertingAlertStateChangedDetails.AdminAlertingAlertStateChangedDetails
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AdminAlertingAlertStateChangedDetails
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertSeverityEnum
+  nameWithType: AdminAlertSeverityEnum
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertCategoryEnum
+  nameWithType: AdminAlertCategoryEnum
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+- uid: Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertGeneralStateEnum
+  nameWithType: AdminAlertGeneralStateEnum
+  fullName: Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertName*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertName
+  name: AlertName
+  nameWithType: AdminAlertingAlertStateChangedDetails.AlertName
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertName
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertSeverity*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertSeverity
+  name: AlertSeverity
+  nameWithType: AdminAlertingAlertStateChangedDetails.AlertSeverity
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertSeverity
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertCategory*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertCategory
+  name: AlertCategory
+  nameWithType: AdminAlertingAlertStateChangedDetails.AlertCategory
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertCategory
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertInstanceId*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertInstanceId
+  name: AlertInstanceId
+  nameWithType: AdminAlertingAlertStateChangedDetails.AlertInstanceId
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.AlertInstanceId
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: AdminAlertingAlertStateChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.PreviousValue
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.NewValue
+  name: NewValue
+  nameWithType: AdminAlertingAlertStateChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertStateChangedDetails.NewValue

@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupsPollError
+  commentId: T:Dropbox.Api.Team.GroupsPollError
+  id: GroupsPollError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupsPollError.#ctor
+  - Dropbox.Api.Team.GroupsPollError.AsAccessDenied
+  - Dropbox.Api.Team.GroupsPollError.AsInternalError
+  - Dropbox.Api.Team.GroupsPollError.AsInvalidAsyncJobId
+  - Dropbox.Api.Team.GroupsPollError.AsOther
+  - Dropbox.Api.Team.GroupsPollError.IsAccessDenied
+  - Dropbox.Api.Team.GroupsPollError.IsInternalError
+  - Dropbox.Api.Team.GroupsPollError.IsInvalidAsyncJobId
+  - Dropbox.Api.Team.GroupsPollError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: GroupsPollError
+  nameWithType: GroupsPollError
+  fullName: Dropbox.Api.Team.GroupsPollError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: GroupsPollError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The groups poll error object</p>\n"
+  example: []
+  syntax:
+    content: public class GroupsPollError
+    content.vb: Public Class GroupsPollError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.GroupsPollError.AccessDenied
+  - Dropbox.Api.Team.GroupsPollError.InternalError
+  - Dropbox.Api.Team.GroupsPollError.InvalidAsyncJobId
+  - Dropbox.Api.Team.GroupsPollError.Other
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GroupsPollError.#ctor
+  commentId: M:Dropbox.Api.Team.GroupsPollError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.GroupsPollError
+  langs:
+  - csharp
+  - vb
+  name: GroupsPollError()
+  nameWithType: GroupsPollError.GroupsPollError()
+  fullName: Dropbox.Api.Team.GroupsPollError.GroupsPollError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupsPollError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupsPollError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.GroupsPollError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupsPollError.IsAccessDenied
+  commentId: P:Dropbox.Api.Team.GroupsPollError.IsAccessDenied
+  id: IsAccessDenied
+  parent: Dropbox.Api.Team.GroupsPollError
+  langs:
+  - csharp
+  - vb
+  name: IsAccessDenied
+  nameWithType: GroupsPollError.IsAccessDenied
+  fullName: Dropbox.Api.Team.GroupsPollError.IsAccessDenied
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is AccessDenied</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAccessDenied { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAccessDenied As Boolean
+  overload: Dropbox.Api.Team.GroupsPollError.IsAccessDenied*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupsPollError.AsAccessDenied
+  commentId: P:Dropbox.Api.Team.GroupsPollError.AsAccessDenied
+  id: AsAccessDenied
+  parent: Dropbox.Api.Team.GroupsPollError
+  langs:
+  - csharp
+  - vb
+  name: AsAccessDenied
+  nameWithType: GroupsPollError.AsAccessDenied
+  fullName: Dropbox.Api.Team.GroupsPollError.AsAccessDenied
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a AccessDenied, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupsPollError.AccessDenied AsAccessDenied { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupsPollError.AccessDenied
+    content.vb: Public ReadOnly Property AsAccessDenied As GroupsPollError.AccessDenied
+  overload: Dropbox.Api.Team.GroupsPollError.AsAccessDenied*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupsPollError.IsInvalidAsyncJobId
+  commentId: P:Dropbox.Api.Team.GroupsPollError.IsInvalidAsyncJobId
+  id: IsInvalidAsyncJobId
+  parent: Dropbox.Api.Team.GroupsPollError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidAsyncJobId
+  nameWithType: GroupsPollError.IsInvalidAsyncJobId
+  fullName: Dropbox.Api.Team.GroupsPollError.IsInvalidAsyncJobId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInvalidAsyncJobId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidAsyncJobId</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidAsyncJobId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidAsyncJobId As Boolean
+  overload: Dropbox.Api.Team.GroupsPollError.IsInvalidAsyncJobId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupsPollError.AsInvalidAsyncJobId
+  commentId: P:Dropbox.Api.Team.GroupsPollError.AsInvalidAsyncJobId
+  id: AsInvalidAsyncJobId
+  parent: Dropbox.Api.Team.GroupsPollError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidAsyncJobId
+  nameWithType: GroupsPollError.AsInvalidAsyncJobId
+  fullName: Dropbox.Api.Team.GroupsPollError.AsInvalidAsyncJobId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInvalidAsyncJobId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a InvalidAsyncJobId, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupsPollError.InvalidAsyncJobId AsInvalidAsyncJobId { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupsPollError.InvalidAsyncJobId
+    content.vb: Public ReadOnly Property AsInvalidAsyncJobId As GroupsPollError.InvalidAsyncJobId
+  overload: Dropbox.Api.Team.GroupsPollError.AsInvalidAsyncJobId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupsPollError.IsInternalError
+  commentId: P:Dropbox.Api.Team.GroupsPollError.IsInternalError
+  id: IsInternalError
+  parent: Dropbox.Api.Team.GroupsPollError
+  langs:
+  - csharp
+  - vb
+  name: IsInternalError
+  nameWithType: GroupsPollError.IsInternalError
+  fullName: Dropbox.Api.Team.GroupsPollError.IsInternalError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInternalError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is InternalError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInternalError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInternalError As Boolean
+  overload: Dropbox.Api.Team.GroupsPollError.IsInternalError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupsPollError.AsInternalError
+  commentId: P:Dropbox.Api.Team.GroupsPollError.AsInternalError
+  id: AsInternalError
+  parent: Dropbox.Api.Team.GroupsPollError
+  langs:
+  - csharp
+  - vb
+  name: AsInternalError
+  nameWithType: GroupsPollError.AsInternalError
+  fullName: Dropbox.Api.Team.GroupsPollError.AsInternalError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInternalError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a InternalError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupsPollError.InternalError AsInternalError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupsPollError.InternalError
+    content.vb: Public ReadOnly Property AsInternalError As GroupsPollError.InternalError
+  overload: Dropbox.Api.Team.GroupsPollError.AsInternalError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupsPollError.IsOther
+  commentId: P:Dropbox.Api.Team.GroupsPollError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.GroupsPollError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: GroupsPollError.IsOther
+  fullName: Dropbox.Api.Team.GroupsPollError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.GroupsPollError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupsPollError.AsOther
+  commentId: P:Dropbox.Api.Team.GroupsPollError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.GroupsPollError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: GroupsPollError.AsOther
+  fullName: Dropbox.Api.Team.GroupsPollError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupsPollError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupsPollError.Other
+    content.vb: Public ReadOnly Property AsOther As GroupsPollError.Other
+  overload: Dropbox.Api.Team.GroupsPollError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.GroupsPollError
+  commentId: T:Dropbox.Api.Team.GroupsPollError
+  parent: Dropbox.Api.Team
+  name: GroupsPollError
+  nameWithType: GroupsPollError
+  fullName: Dropbox.Api.Team.GroupsPollError
+- uid: Dropbox.Api.Team.GroupsPollError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupsPollError.#ctor
+  name: GroupsPollError
+  nameWithType: GroupsPollError.GroupsPollError
+  fullName: Dropbox.Api.Team.GroupsPollError.GroupsPollError
+- uid: Dropbox.Api.Team.GroupsPollError.IsAccessDenied*
+  commentId: Overload:Dropbox.Api.Team.GroupsPollError.IsAccessDenied
+  name: IsAccessDenied
+  nameWithType: GroupsPollError.IsAccessDenied
+  fullName: Dropbox.Api.Team.GroupsPollError.IsAccessDenied
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.GroupsPollError.AsAccessDenied*
+  commentId: Overload:Dropbox.Api.Team.GroupsPollError.AsAccessDenied
+  name: AsAccessDenied
+  nameWithType: GroupsPollError.AsAccessDenied
+  fullName: Dropbox.Api.Team.GroupsPollError.AsAccessDenied
+- uid: Dropbox.Api.Team.GroupsPollError.AccessDenied
+  commentId: T:Dropbox.Api.Team.GroupsPollError.AccessDenied
+  parent: Dropbox.Api.Team
+  name: GroupsPollError.AccessDenied
+  nameWithType: GroupsPollError.AccessDenied
+  fullName: Dropbox.Api.Team.GroupsPollError.AccessDenied
+- uid: Dropbox.Api.Team.GroupsPollError.IsInvalidAsyncJobId*
+  commentId: Overload:Dropbox.Api.Team.GroupsPollError.IsInvalidAsyncJobId
+  name: IsInvalidAsyncJobId
+  nameWithType: GroupsPollError.IsInvalidAsyncJobId
+  fullName: Dropbox.Api.Team.GroupsPollError.IsInvalidAsyncJobId
+- uid: Dropbox.Api.Team.GroupsPollError.AsInvalidAsyncJobId*
+  commentId: Overload:Dropbox.Api.Team.GroupsPollError.AsInvalidAsyncJobId
+  name: AsInvalidAsyncJobId
+  nameWithType: GroupsPollError.AsInvalidAsyncJobId
+  fullName: Dropbox.Api.Team.GroupsPollError.AsInvalidAsyncJobId
+- uid: Dropbox.Api.Team.GroupsPollError.InvalidAsyncJobId
+  commentId: T:Dropbox.Api.Team.GroupsPollError.InvalidAsyncJobId
+  parent: Dropbox.Api.Team
+  name: GroupsPollError.InvalidAsyncJobId
+  nameWithType: GroupsPollError.InvalidAsyncJobId
+  fullName: Dropbox.Api.Team.GroupsPollError.InvalidAsyncJobId
+- uid: Dropbox.Api.Team.GroupsPollError.IsInternalError*
+  commentId: Overload:Dropbox.Api.Team.GroupsPollError.IsInternalError
+  name: IsInternalError
+  nameWithType: GroupsPollError.IsInternalError
+  fullName: Dropbox.Api.Team.GroupsPollError.IsInternalError
+- uid: Dropbox.Api.Team.GroupsPollError.AsInternalError*
+  commentId: Overload:Dropbox.Api.Team.GroupsPollError.AsInternalError
+  name: AsInternalError
+  nameWithType: GroupsPollError.AsInternalError
+  fullName: Dropbox.Api.Team.GroupsPollError.AsInternalError
+- uid: Dropbox.Api.Team.GroupsPollError.InternalError
+  commentId: T:Dropbox.Api.Team.GroupsPollError.InternalError
+  parent: Dropbox.Api.Team
+  name: GroupsPollError.InternalError
+  nameWithType: GroupsPollError.InternalError
+  fullName: Dropbox.Api.Team.GroupsPollError.InternalError
+- uid: Dropbox.Api.Team.GroupsPollError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.GroupsPollError.IsOther
+  name: IsOther
+  nameWithType: GroupsPollError.IsOther
+  fullName: Dropbox.Api.Team.GroupsPollError.IsOther
+- uid: Dropbox.Api.Team.GroupsPollError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.GroupsPollError.AsOther
+  name: AsOther
+  nameWithType: GroupsPollError.AsOther
+  fullName: Dropbox.Api.Team.GroupsPollError.AsOther
+- uid: Dropbox.Api.Team.GroupsPollError.Other
+  commentId: T:Dropbox.Api.Team.GroupsPollError.Other
+  parent: Dropbox.Api.Team
+  name: GroupsPollError.Other
+  nameWithType: GroupsPollError.Other
+  fullName: Dropbox.Api.Team.GroupsPollError.Other

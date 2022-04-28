@@ -1,0 +1,499 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ListFolderError.TemplateError
+  commentId: T:Dropbox.Api.Files.ListFolderError.TemplateError
+  id: ListFolderError.TemplateError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ListFolderError.TemplateError.#ctor(Dropbox.Api.FileProperties.TemplateError)
+  - Dropbox.Api.Files.ListFolderError.TemplateError.Value
+  langs:
+  - csharp
+  - vb
+  name: ListFolderError.TemplateError
+  nameWithType: ListFolderError.TemplateError
+  fullName: Dropbox.Api.Files.ListFolderError.TemplateError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TemplateError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderError.cs
+    startLine: 278
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The template error object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class TemplateError : ListFolderError'
+    content.vb: >-
+      Public NotInheritable Class TemplateError
+          Inherits ListFolderError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.ListFolderError
+  inheritedMembers:
+  - Dropbox.Api.Files.ListFolderError.IsPath
+  - Dropbox.Api.Files.ListFolderError.AsPath
+  - Dropbox.Api.Files.ListFolderError.IsTemplateError
+  - Dropbox.Api.Files.ListFolderError.AsTemplateError
+  - Dropbox.Api.Files.ListFolderError.IsOther
+  - Dropbox.Api.Files.ListFolderError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.ListFolderError.TemplateError.#ctor(Dropbox.Api.FileProperties.TemplateError)
+  commentId: M:Dropbox.Api.Files.ListFolderError.TemplateError.#ctor(Dropbox.Api.FileProperties.TemplateError)
+  id: '#ctor(Dropbox.Api.FileProperties.TemplateError)'
+  parent: Dropbox.Api.Files.ListFolderError.TemplateError
+  langs:
+  - csharp
+  - vb
+  name: TemplateError(TemplateError)
+  nameWithType: ListFolderError.TemplateError.TemplateError(TemplateError)
+  fullName: Dropbox.Api.Files.ListFolderError.TemplateError.TemplateError(Dropbox.Api.FileProperties.TemplateError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderError.cs
+    startLine: 297
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListFolderError.TemplateError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateError(TemplateError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.FileProperties.TemplateError
+      description: The value
+    content.vb: Public Sub New(value As TemplateError)
+  overload: Dropbox.Api.Files.ListFolderError.TemplateError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ListFolderError.TemplateError.Value
+  commentId: P:Dropbox.Api.Files.ListFolderError.TemplateError.Value
+  id: Value
+  parent: Dropbox.Api.Files.ListFolderError.TemplateError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ListFolderError.TemplateError.Value
+  fullName: Dropbox.Api.Files.ListFolderError.TemplateError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderError.cs
+    startLine: 312
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.TemplateError
+    content.vb: Public ReadOnly Property Value As TemplateError
+  overload: Dropbox.Api.Files.ListFolderError.TemplateError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.ListFolderError
+  commentId: T:Dropbox.Api.Files.ListFolderError
+  parent: Dropbox.Api.Files
+  name: ListFolderError
+  nameWithType: ListFolderError
+  fullName: Dropbox.Api.Files.ListFolderError
+- uid: Dropbox.Api.Files.ListFolderError.IsPath
+  commentId: P:Dropbox.Api.Files.ListFolderError.IsPath
+  parent: Dropbox.Api.Files.ListFolderError
+  name: IsPath
+  nameWithType: ListFolderError.IsPath
+  fullName: Dropbox.Api.Files.ListFolderError.IsPath
+- uid: Dropbox.Api.Files.ListFolderError.AsPath
+  commentId: P:Dropbox.Api.Files.ListFolderError.AsPath
+  parent: Dropbox.Api.Files.ListFolderError
+  name: AsPath
+  nameWithType: ListFolderError.AsPath
+  fullName: Dropbox.Api.Files.ListFolderError.AsPath
+- uid: Dropbox.Api.Files.ListFolderError.IsTemplateError
+  commentId: P:Dropbox.Api.Files.ListFolderError.IsTemplateError
+  parent: Dropbox.Api.Files.ListFolderError
+  name: IsTemplateError
+  nameWithType: ListFolderError.IsTemplateError
+  fullName: Dropbox.Api.Files.ListFolderError.IsTemplateError
+- uid: Dropbox.Api.Files.ListFolderError.AsTemplateError
+  commentId: P:Dropbox.Api.Files.ListFolderError.AsTemplateError
+  parent: Dropbox.Api.Files.ListFolderError
+  name: AsTemplateError
+  nameWithType: ListFolderError.AsTemplateError
+  fullName: Dropbox.Api.Files.ListFolderError.AsTemplateError
+- uid: Dropbox.Api.Files.ListFolderError.IsOther
+  commentId: P:Dropbox.Api.Files.ListFolderError.IsOther
+  parent: Dropbox.Api.Files.ListFolderError
+  name: IsOther
+  nameWithType: ListFolderError.IsOther
+  fullName: Dropbox.Api.Files.ListFolderError.IsOther
+- uid: Dropbox.Api.Files.ListFolderError.AsOther
+  commentId: P:Dropbox.Api.Files.ListFolderError.AsOther
+  parent: Dropbox.Api.Files.ListFolderError
+  name: AsOther
+  nameWithType: ListFolderError.AsOther
+  fullName: Dropbox.Api.Files.ListFolderError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.ListFolderError.TemplateError
+  commentId: T:Dropbox.Api.Files.ListFolderError.TemplateError
+  parent: Dropbox.Api.Files
+  name: ListFolderError.TemplateError
+  nameWithType: ListFolderError.TemplateError
+  fullName: Dropbox.Api.Files.ListFolderError.TemplateError
+- uid: Dropbox.Api.Files.ListFolderError.TemplateError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ListFolderError.TemplateError.#ctor
+  name: TemplateError
+  nameWithType: ListFolderError.TemplateError.TemplateError
+  fullName: Dropbox.Api.Files.ListFolderError.TemplateError.TemplateError
+- uid: Dropbox.Api.FileProperties.TemplateError
+  commentId: T:Dropbox.Api.FileProperties.TemplateError
+  parent: Dropbox.Api.FileProperties
+  name: TemplateError
+  nameWithType: TemplateError
+  fullName: Dropbox.Api.FileProperties.TemplateError
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: Dropbox.Api.Files.ListFolderError.TemplateError.Value*
+  commentId: Overload:Dropbox.Api.Files.ListFolderError.TemplateError.Value
+  name: Value
+  nameWithType: ListFolderError.TemplateError.Value
+  fullName: Dropbox.Api.Files.ListFolderError.TemplateError.Value

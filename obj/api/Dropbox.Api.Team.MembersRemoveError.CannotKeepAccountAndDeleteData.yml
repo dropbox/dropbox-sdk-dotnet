@@ -1,0 +1,721 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersRemoveError.CannotKeepAccountAndDeleteData
+  commentId: T:Dropbox.Api.Team.MembersRemoveError.CannotKeepAccountAndDeleteData
+  id: MembersRemoveError.CannotKeepAccountAndDeleteData
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersRemoveError.CannotKeepAccountAndDeleteData.Instance
+  langs:
+  - csharp
+  - vb
+  name: MembersRemoveError.CannotKeepAccountAndDeleteData
+  nameWithType: MembersRemoveError.CannotKeepAccountAndDeleteData
+  fullName: Dropbox.Api.Team.MembersRemoveError.CannotKeepAccountAndDeleteData
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRemoveError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: CannotKeepAccountAndDeleteData
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRemoveError.cs
+    startLine: 954
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Cannot keep account and delete the data at the same time. To keep the account\nthe argument wipe_data should be set to <code>false</code>.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class CannotKeepAccountAndDeleteData : MembersRemoveError'
+    content.vb: >-
+      Public NotInheritable Class CannotKeepAccountAndDeleteData
+          Inherits MembersRemoveError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MembersRemoveError
+  inheritedMembers:
+  - Dropbox.Api.Team.MembersRemoveError.IsRemoveLastAdmin
+  - Dropbox.Api.Team.MembersRemoveError.AsRemoveLastAdmin
+  - Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountAndTransfer
+  - Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountAndTransfer
+  - Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountAndDeleteData
+  - Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountAndDeleteData
+  - Dropbox.Api.Team.MembersRemoveError.IsEmailAddressTooLongToBeDisabled
+  - Dropbox.Api.Team.MembersRemoveError.AsEmailAddressTooLongToBeDisabled
+  - Dropbox.Api.Team.MembersRemoveError.IsCannotKeepInvitedUserAccount
+  - Dropbox.Api.Team.MembersRemoveError.AsCannotKeepInvitedUserAccount
+  - Dropbox.Api.Team.MembersRemoveError.IsCannotRetainSharesWhenDataWiped
+  - Dropbox.Api.Team.MembersRemoveError.AsCannotRetainSharesWhenDataWiped
+  - Dropbox.Api.Team.MembersRemoveError.IsCannotRetainSharesWhenNoAccountKept
+  - Dropbox.Api.Team.MembersRemoveError.AsCannotRetainSharesWhenNoAccountKept
+  - Dropbox.Api.Team.MembersRemoveError.IsCannotRetainSharesWhenTeamExternalSharingOff
+  - Dropbox.Api.Team.MembersRemoveError.AsCannotRetainSharesWhenTeamExternalSharingOff
+  - Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccount
+  - Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccount
+  - Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountUnderLegalHold
+  - Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountUnderLegalHold
+  - Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountRequiredToSignTos
+  - Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountRequiredToSignTos
+  - Dropbox.Api.Team.MembersRemoveError.IsRemovedAndTransferDestShouldDiffer
+  - Dropbox.Api.Team.MembersRemoveError.AsRemovedAndTransferDestShouldDiffer
+  - Dropbox.Api.Team.MembersRemoveError.IsRemovedAndTransferAdminShouldDiffer
+  - Dropbox.Api.Team.MembersRemoveError.AsRemovedAndTransferAdminShouldDiffer
+  - Dropbox.Api.Team.MembersRemoveError.IsTransferDestUserNotFound
+  - Dropbox.Api.Team.MembersRemoveError.AsTransferDestUserNotFound
+  - Dropbox.Api.Team.MembersRemoveError.IsTransferDestUserNotInTeam
+  - Dropbox.Api.Team.MembersRemoveError.AsTransferDestUserNotInTeam
+  - Dropbox.Api.Team.MembersRemoveError.IsTransferAdminUserNotInTeam
+  - Dropbox.Api.Team.MembersRemoveError.AsTransferAdminUserNotInTeam
+  - Dropbox.Api.Team.MembersRemoveError.IsTransferAdminUserNotFound
+  - Dropbox.Api.Team.MembersRemoveError.AsTransferAdminUserNotFound
+  - Dropbox.Api.Team.MembersRemoveError.IsUnspecifiedTransferAdminId
+  - Dropbox.Api.Team.MembersRemoveError.AsUnspecifiedTransferAdminId
+  - Dropbox.Api.Team.MembersRemoveError.IsTransferAdminIsNotAdmin
+  - Dropbox.Api.Team.MembersRemoveError.AsTransferAdminIsNotAdmin
+  - Dropbox.Api.Team.MembersRemoveError.IsRecipientNotVerified
+  - Dropbox.Api.Team.MembersRemoveError.AsRecipientNotVerified
+  - Dropbox.Api.Team.MembersRemoveError.IsUserNotInTeam
+  - Dropbox.Api.Team.MembersRemoveError.AsUserNotInTeam
+  - Dropbox.Api.Team.MembersRemoveError.IsOther
+  - Dropbox.Api.Team.MembersRemoveError.AsOther
+  - Dropbox.Api.Team.MembersRemoveError.IsUserNotFound
+  - Dropbox.Api.Team.MembersRemoveError.AsUserNotFound
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.MembersRemoveError.CannotKeepAccountAndDeleteData.Instance
+  commentId: F:Dropbox.Api.Team.MembersRemoveError.CannotKeepAccountAndDeleteData.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.MembersRemoveError.CannotKeepAccountAndDeleteData
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: MembersRemoveError.CannotKeepAccountAndDeleteData.Instance
+  fullName: Dropbox.Api.Team.MembersRemoveError.CannotKeepAccountAndDeleteData.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRemoveError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRemoveError.cs
+    startLine: 979
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of CannotKeepAccountAndDeleteData</p>\n"
+  example: []
+  syntax:
+    content: public static readonly MembersRemoveError.CannotKeepAccountAndDeleteData Instance
+    return:
+      type: Dropbox.Api.Team.MembersRemoveError.CannotKeepAccountAndDeleteData
+    content.vb: Public Shared ReadOnly Instance As MembersRemoveError.CannotKeepAccountAndDeleteData
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersRemoveError
+  commentId: T:Dropbox.Api.Team.MembersRemoveError
+  parent: Dropbox.Api.Team
+  name: MembersRemoveError
+  nameWithType: MembersRemoveError
+  fullName: Dropbox.Api.Team.MembersRemoveError
+- uid: Dropbox.Api.Team.MembersRemoveError.IsRemoveLastAdmin
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsRemoveLastAdmin
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsRemoveLastAdmin
+  nameWithType: MembersRemoveError.IsRemoveLastAdmin
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsRemoveLastAdmin
+- uid: Dropbox.Api.Team.MembersRemoveError.AsRemoveLastAdmin
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsRemoveLastAdmin
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsRemoveLastAdmin
+  nameWithType: MembersRemoveError.AsRemoveLastAdmin
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsRemoveLastAdmin
+- uid: Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountAndTransfer
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountAndTransfer
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsCannotKeepAccountAndTransfer
+  nameWithType: MembersRemoveError.IsCannotKeepAccountAndTransfer
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountAndTransfer
+- uid: Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountAndTransfer
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountAndTransfer
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsCannotKeepAccountAndTransfer
+  nameWithType: MembersRemoveError.AsCannotKeepAccountAndTransfer
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountAndTransfer
+- uid: Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountAndDeleteData
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountAndDeleteData
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsCannotKeepAccountAndDeleteData
+  nameWithType: MembersRemoveError.IsCannotKeepAccountAndDeleteData
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountAndDeleteData
+- uid: Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountAndDeleteData
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountAndDeleteData
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsCannotKeepAccountAndDeleteData
+  nameWithType: MembersRemoveError.AsCannotKeepAccountAndDeleteData
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountAndDeleteData
+- uid: Dropbox.Api.Team.MembersRemoveError.IsEmailAddressTooLongToBeDisabled
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsEmailAddressTooLongToBeDisabled
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsEmailAddressTooLongToBeDisabled
+  nameWithType: MembersRemoveError.IsEmailAddressTooLongToBeDisabled
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsEmailAddressTooLongToBeDisabled
+- uid: Dropbox.Api.Team.MembersRemoveError.AsEmailAddressTooLongToBeDisabled
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsEmailAddressTooLongToBeDisabled
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsEmailAddressTooLongToBeDisabled
+  nameWithType: MembersRemoveError.AsEmailAddressTooLongToBeDisabled
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsEmailAddressTooLongToBeDisabled
+- uid: Dropbox.Api.Team.MembersRemoveError.IsCannotKeepInvitedUserAccount
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsCannotKeepInvitedUserAccount
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsCannotKeepInvitedUserAccount
+  nameWithType: MembersRemoveError.IsCannotKeepInvitedUserAccount
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsCannotKeepInvitedUserAccount
+- uid: Dropbox.Api.Team.MembersRemoveError.AsCannotKeepInvitedUserAccount
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsCannotKeepInvitedUserAccount
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsCannotKeepInvitedUserAccount
+  nameWithType: MembersRemoveError.AsCannotKeepInvitedUserAccount
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsCannotKeepInvitedUserAccount
+- uid: Dropbox.Api.Team.MembersRemoveError.IsCannotRetainSharesWhenDataWiped
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsCannotRetainSharesWhenDataWiped
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsCannotRetainSharesWhenDataWiped
+  nameWithType: MembersRemoveError.IsCannotRetainSharesWhenDataWiped
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsCannotRetainSharesWhenDataWiped
+- uid: Dropbox.Api.Team.MembersRemoveError.AsCannotRetainSharesWhenDataWiped
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsCannotRetainSharesWhenDataWiped
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsCannotRetainSharesWhenDataWiped
+  nameWithType: MembersRemoveError.AsCannotRetainSharesWhenDataWiped
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsCannotRetainSharesWhenDataWiped
+- uid: Dropbox.Api.Team.MembersRemoveError.IsCannotRetainSharesWhenNoAccountKept
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsCannotRetainSharesWhenNoAccountKept
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsCannotRetainSharesWhenNoAccountKept
+  nameWithType: MembersRemoveError.IsCannotRetainSharesWhenNoAccountKept
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsCannotRetainSharesWhenNoAccountKept
+- uid: Dropbox.Api.Team.MembersRemoveError.AsCannotRetainSharesWhenNoAccountKept
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsCannotRetainSharesWhenNoAccountKept
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsCannotRetainSharesWhenNoAccountKept
+  nameWithType: MembersRemoveError.AsCannotRetainSharesWhenNoAccountKept
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsCannotRetainSharesWhenNoAccountKept
+- uid: Dropbox.Api.Team.MembersRemoveError.IsCannotRetainSharesWhenTeamExternalSharingOff
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsCannotRetainSharesWhenTeamExternalSharingOff
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsCannotRetainSharesWhenTeamExternalSharingOff
+  nameWithType: MembersRemoveError.IsCannotRetainSharesWhenTeamExternalSharingOff
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsCannotRetainSharesWhenTeamExternalSharingOff
+- uid: Dropbox.Api.Team.MembersRemoveError.AsCannotRetainSharesWhenTeamExternalSharingOff
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsCannotRetainSharesWhenTeamExternalSharingOff
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsCannotRetainSharesWhenTeamExternalSharingOff
+  nameWithType: MembersRemoveError.AsCannotRetainSharesWhenTeamExternalSharingOff
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsCannotRetainSharesWhenTeamExternalSharingOff
+- uid: Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccount
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccount
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsCannotKeepAccount
+  nameWithType: MembersRemoveError.IsCannotKeepAccount
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccount
+- uid: Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccount
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccount
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsCannotKeepAccount
+  nameWithType: MembersRemoveError.AsCannotKeepAccount
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccount
+- uid: Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountUnderLegalHold
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountUnderLegalHold
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsCannotKeepAccountUnderLegalHold
+  nameWithType: MembersRemoveError.IsCannotKeepAccountUnderLegalHold
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountUnderLegalHold
+- uid: Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountUnderLegalHold
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountUnderLegalHold
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsCannotKeepAccountUnderLegalHold
+  nameWithType: MembersRemoveError.AsCannotKeepAccountUnderLegalHold
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountUnderLegalHold
+- uid: Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountRequiredToSignTos
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountRequiredToSignTos
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsCannotKeepAccountRequiredToSignTos
+  nameWithType: MembersRemoveError.IsCannotKeepAccountRequiredToSignTos
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsCannotKeepAccountRequiredToSignTos
+- uid: Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountRequiredToSignTos
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountRequiredToSignTos
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsCannotKeepAccountRequiredToSignTos
+  nameWithType: MembersRemoveError.AsCannotKeepAccountRequiredToSignTos
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsCannotKeepAccountRequiredToSignTos
+- uid: Dropbox.Api.Team.MembersRemoveError.IsRemovedAndTransferDestShouldDiffer
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsRemovedAndTransferDestShouldDiffer
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsRemovedAndTransferDestShouldDiffer
+  nameWithType: MembersRemoveError.IsRemovedAndTransferDestShouldDiffer
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsRemovedAndTransferDestShouldDiffer
+- uid: Dropbox.Api.Team.MembersRemoveError.AsRemovedAndTransferDestShouldDiffer
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsRemovedAndTransferDestShouldDiffer
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsRemovedAndTransferDestShouldDiffer
+  nameWithType: MembersRemoveError.AsRemovedAndTransferDestShouldDiffer
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsRemovedAndTransferDestShouldDiffer
+- uid: Dropbox.Api.Team.MembersRemoveError.IsRemovedAndTransferAdminShouldDiffer
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsRemovedAndTransferAdminShouldDiffer
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsRemovedAndTransferAdminShouldDiffer
+  nameWithType: MembersRemoveError.IsRemovedAndTransferAdminShouldDiffer
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsRemovedAndTransferAdminShouldDiffer
+- uid: Dropbox.Api.Team.MembersRemoveError.AsRemovedAndTransferAdminShouldDiffer
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsRemovedAndTransferAdminShouldDiffer
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsRemovedAndTransferAdminShouldDiffer
+  nameWithType: MembersRemoveError.AsRemovedAndTransferAdminShouldDiffer
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsRemovedAndTransferAdminShouldDiffer
+- uid: Dropbox.Api.Team.MembersRemoveError.IsTransferDestUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsTransferDestUserNotFound
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsTransferDestUserNotFound
+  nameWithType: MembersRemoveError.IsTransferDestUserNotFound
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsTransferDestUserNotFound
+- uid: Dropbox.Api.Team.MembersRemoveError.AsTransferDestUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsTransferDestUserNotFound
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsTransferDestUserNotFound
+  nameWithType: MembersRemoveError.AsTransferDestUserNotFound
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsTransferDestUserNotFound
+- uid: Dropbox.Api.Team.MembersRemoveError.IsTransferDestUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsTransferDestUserNotInTeam
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsTransferDestUserNotInTeam
+  nameWithType: MembersRemoveError.IsTransferDestUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsTransferDestUserNotInTeam
+- uid: Dropbox.Api.Team.MembersRemoveError.AsTransferDestUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsTransferDestUserNotInTeam
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsTransferDestUserNotInTeam
+  nameWithType: MembersRemoveError.AsTransferDestUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsTransferDestUserNotInTeam
+- uid: Dropbox.Api.Team.MembersRemoveError.IsTransferAdminUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsTransferAdminUserNotInTeam
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsTransferAdminUserNotInTeam
+  nameWithType: MembersRemoveError.IsTransferAdminUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsTransferAdminUserNotInTeam
+- uid: Dropbox.Api.Team.MembersRemoveError.AsTransferAdminUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsTransferAdminUserNotInTeam
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsTransferAdminUserNotInTeam
+  nameWithType: MembersRemoveError.AsTransferAdminUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsTransferAdminUserNotInTeam
+- uid: Dropbox.Api.Team.MembersRemoveError.IsTransferAdminUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsTransferAdminUserNotFound
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsTransferAdminUserNotFound
+  nameWithType: MembersRemoveError.IsTransferAdminUserNotFound
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsTransferAdminUserNotFound
+- uid: Dropbox.Api.Team.MembersRemoveError.AsTransferAdminUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsTransferAdminUserNotFound
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsTransferAdminUserNotFound
+  nameWithType: MembersRemoveError.AsTransferAdminUserNotFound
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsTransferAdminUserNotFound
+- uid: Dropbox.Api.Team.MembersRemoveError.IsUnspecifiedTransferAdminId
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsUnspecifiedTransferAdminId
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsUnspecifiedTransferAdminId
+  nameWithType: MembersRemoveError.IsUnspecifiedTransferAdminId
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsUnspecifiedTransferAdminId
+- uid: Dropbox.Api.Team.MembersRemoveError.AsUnspecifiedTransferAdminId
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsUnspecifiedTransferAdminId
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsUnspecifiedTransferAdminId
+  nameWithType: MembersRemoveError.AsUnspecifiedTransferAdminId
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsUnspecifiedTransferAdminId
+- uid: Dropbox.Api.Team.MembersRemoveError.IsTransferAdminIsNotAdmin
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsTransferAdminIsNotAdmin
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsTransferAdminIsNotAdmin
+  nameWithType: MembersRemoveError.IsTransferAdminIsNotAdmin
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsTransferAdminIsNotAdmin
+- uid: Dropbox.Api.Team.MembersRemoveError.AsTransferAdminIsNotAdmin
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsTransferAdminIsNotAdmin
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsTransferAdminIsNotAdmin
+  nameWithType: MembersRemoveError.AsTransferAdminIsNotAdmin
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsTransferAdminIsNotAdmin
+- uid: Dropbox.Api.Team.MembersRemoveError.IsRecipientNotVerified
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsRecipientNotVerified
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsRecipientNotVerified
+  nameWithType: MembersRemoveError.IsRecipientNotVerified
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsRecipientNotVerified
+- uid: Dropbox.Api.Team.MembersRemoveError.AsRecipientNotVerified
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsRecipientNotVerified
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsRecipientNotVerified
+  nameWithType: MembersRemoveError.AsRecipientNotVerified
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsRecipientNotVerified
+- uid: Dropbox.Api.Team.MembersRemoveError.IsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsUserNotInTeam
+  nameWithType: MembersRemoveError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersRemoveError.AsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsUserNotInTeam
+  nameWithType: MembersRemoveError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersRemoveError.IsOther
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsOther
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsOther
+  nameWithType: MembersRemoveError.IsOther
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsOther
+- uid: Dropbox.Api.Team.MembersRemoveError.AsOther
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsOther
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsOther
+  nameWithType: MembersRemoveError.AsOther
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsOther
+- uid: Dropbox.Api.Team.MembersRemoveError.IsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.IsUserNotFound
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: IsUserNotFound
+  nameWithType: MembersRemoveError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersRemoveError.IsUserNotFound
+- uid: Dropbox.Api.Team.MembersRemoveError.AsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersRemoveError.AsUserNotFound
+  parent: Dropbox.Api.Team.MembersRemoveError
+  name: AsUserNotFound
+  nameWithType: MembersRemoveError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersRemoveError.AsUserNotFound
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.MembersRemoveError.CannotKeepAccountAndDeleteData
+  commentId: T:Dropbox.Api.Team.MembersRemoveError.CannotKeepAccountAndDeleteData
+  parent: Dropbox.Api.Team
+  name: MembersRemoveError.CannotKeepAccountAndDeleteData
+  nameWithType: MembersRemoveError.CannotKeepAccountAndDeleteData
+  fullName: Dropbox.Api.Team.MembersRemoveError.CannotKeepAccountAndDeleteData

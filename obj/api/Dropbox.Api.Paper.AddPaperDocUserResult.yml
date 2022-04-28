@@ -1,0 +1,1140 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserResult
+  id: AddPaperDocUserResult
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.AddPaperDocUserResult.#ctor
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsDailyLimitReached
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsFailedUserDataRetrieval
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsOther
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsPermissionAlreadyGranted
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsSharingOutsideTeamDisabled
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsSuccess
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsUnknownError
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsUserIsOwner
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsDailyLimitReached
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsFailedUserDataRetrieval
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsOther
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsPermissionAlreadyGranted
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsSharingOutsideTeamDisabled
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsSuccess
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsUnknownError
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsUserIsOwner
+  langs:
+  - csharp
+  - vb
+  name: AddPaperDocUserResult
+  nameWithType: AddPaperDocUserResult
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AddPaperDocUserResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The add paper doc user result object</p>\n"
+  example: []
+  syntax:
+    content: public class AddPaperDocUserResult
+    content.vb: Public Class AddPaperDocUserResult
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Paper.AddPaperDocUserResult.DailyLimitReached
+  - Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval
+  - Dropbox.Api.Paper.AddPaperDocUserResult.Other
+  - Dropbox.Api.Paper.AddPaperDocUserResult.PermissionAlreadyGranted
+  - Dropbox.Api.Paper.AddPaperDocUserResult.SharingOutsideTeamDisabled
+  - Dropbox.Api.Paper.AddPaperDocUserResult.Success
+  - Dropbox.Api.Paper.AddPaperDocUserResult.UnknownError
+  - Dropbox.Api.Paper.AddPaperDocUserResult.UserIsOwner
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.#ctor
+  commentId: M:Dropbox.Api.Paper.AddPaperDocUserResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: AddPaperDocUserResult()
+  nameWithType: AddPaperDocUserResult.AddPaperDocUserResult()
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AddPaperDocUserResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.AddPaperDocUserResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AddPaperDocUserResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsSuccess
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsSuccess
+  id: IsSuccess
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: IsSuccess
+  nameWithType: AddPaperDocUserResult.IsSuccess
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is Success</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSuccess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSuccess As Boolean
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.IsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsSuccess
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsSuccess
+  id: AsSuccess
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: AsSuccess
+  nameWithType: AddPaperDocUserResult.AsSuccess
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a Success, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddPaperDocUserResult.Success AsSuccess { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.AddPaperDocUserResult.Success
+    content.vb: Public ReadOnly Property AsSuccess As AddPaperDocUserResult.Success
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.AsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsUnknownError
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsUnknownError
+  id: IsUnknownError
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: IsUnknownError
+  nameWithType: AddPaperDocUserResult.IsUnknownError
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsUnknownError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUnknownError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is UnknownError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnknownError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnknownError As Boolean
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.IsUnknownError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsUnknownError
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsUnknownError
+  id: AsUnknownError
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: AsUnknownError
+  nameWithType: AddPaperDocUserResult.AsUnknownError
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsUnknownError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUnknownError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a UnknownError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddPaperDocUserResult.UnknownError AsUnknownError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.AddPaperDocUserResult.UnknownError
+    content.vb: Public ReadOnly Property AsUnknownError As AddPaperDocUserResult.UnknownError
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.AsUnknownError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsSharingOutsideTeamDisabled
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsSharingOutsideTeamDisabled
+  id: IsSharingOutsideTeamDisabled
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: IsSharingOutsideTeamDisabled
+  nameWithType: AddPaperDocUserResult.IsSharingOutsideTeamDisabled
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsSharingOutsideTeamDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSharingOutsideTeamDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is\nSharingOutsideTeamDisabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSharingOutsideTeamDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSharingOutsideTeamDisabled As Boolean
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.IsSharingOutsideTeamDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsSharingOutsideTeamDisabled
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsSharingOutsideTeamDisabled
+  id: AsSharingOutsideTeamDisabled
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: AsSharingOutsideTeamDisabled
+  nameWithType: AddPaperDocUserResult.AsSharingOutsideTeamDisabled
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsSharingOutsideTeamDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSharingOutsideTeamDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a SharingOutsideTeamDisabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddPaperDocUserResult.SharingOutsideTeamDisabled AsSharingOutsideTeamDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.AddPaperDocUserResult.SharingOutsideTeamDisabled
+    content.vb: Public ReadOnly Property AsSharingOutsideTeamDisabled As AddPaperDocUserResult.SharingOutsideTeamDisabled
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.AsSharingOutsideTeamDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsDailyLimitReached
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsDailyLimitReached
+  id: IsDailyLimitReached
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: IsDailyLimitReached
+  nameWithType: AddPaperDocUserResult.IsDailyLimitReached
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsDailyLimitReached
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDailyLimitReached
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is DailyLimitReached</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDailyLimitReached { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDailyLimitReached As Boolean
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.IsDailyLimitReached*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsDailyLimitReached
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsDailyLimitReached
+  id: AsDailyLimitReached
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: AsDailyLimitReached
+  nameWithType: AddPaperDocUserResult.AsDailyLimitReached
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsDailyLimitReached
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDailyLimitReached
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a DailyLimitReached, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddPaperDocUserResult.DailyLimitReached AsDailyLimitReached { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.AddPaperDocUserResult.DailyLimitReached
+    content.vb: Public ReadOnly Property AsDailyLimitReached As AddPaperDocUserResult.DailyLimitReached
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.AsDailyLimitReached*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsUserIsOwner
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsUserIsOwner
+  id: IsUserIsOwner
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: IsUserIsOwner
+  nameWithType: AddPaperDocUserResult.IsUserIsOwner
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsUserIsOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUserIsOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is UserIsOwner</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserIsOwner { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserIsOwner As Boolean
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.IsUserIsOwner*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsUserIsOwner
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsUserIsOwner
+  id: AsUserIsOwner
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: AsUserIsOwner
+  nameWithType: AddPaperDocUserResult.AsUserIsOwner
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsUserIsOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUserIsOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 140
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a UserIsOwner, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddPaperDocUserResult.UserIsOwner AsUserIsOwner { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.AddPaperDocUserResult.UserIsOwner
+    content.vb: Public ReadOnly Property AsUserIsOwner As AddPaperDocUserResult.UserIsOwner
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.AsUserIsOwner*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsFailedUserDataRetrieval
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsFailedUserDataRetrieval
+  id: IsFailedUserDataRetrieval
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: IsFailedUserDataRetrieval
+  nameWithType: AddPaperDocUserResult.IsFailedUserDataRetrieval
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsFailedUserDataRetrieval
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsFailedUserDataRetrieval
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 152
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is\nFailedUserDataRetrieval</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFailedUserDataRetrieval { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFailedUserDataRetrieval As Boolean
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.IsFailedUserDataRetrieval*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsFailedUserDataRetrieval
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsFailedUserDataRetrieval
+  id: AsFailedUserDataRetrieval
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: AsFailedUserDataRetrieval
+  nameWithType: AddPaperDocUserResult.AsFailedUserDataRetrieval
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsFailedUserDataRetrieval
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsFailedUserDataRetrieval
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 163
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a FailedUserDataRetrieval, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddPaperDocUserResult.FailedUserDataRetrieval AsFailedUserDataRetrieval { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval
+    content.vb: Public ReadOnly Property AsFailedUserDataRetrieval As AddPaperDocUserResult.FailedUserDataRetrieval
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.AsFailedUserDataRetrieval*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsPermissionAlreadyGranted
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsPermissionAlreadyGranted
+  id: IsPermissionAlreadyGranted
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: IsPermissionAlreadyGranted
+  nameWithType: AddPaperDocUserResult.IsPermissionAlreadyGranted
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsPermissionAlreadyGranted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPermissionAlreadyGranted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 175
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is\nPermissionAlreadyGranted</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPermissionAlreadyGranted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPermissionAlreadyGranted As Boolean
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.IsPermissionAlreadyGranted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsPermissionAlreadyGranted
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsPermissionAlreadyGranted
+  id: AsPermissionAlreadyGranted
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: AsPermissionAlreadyGranted
+  nameWithType: AddPaperDocUserResult.AsPermissionAlreadyGranted
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsPermissionAlreadyGranted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPermissionAlreadyGranted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 186
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a PermissionAlreadyGranted, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddPaperDocUserResult.PermissionAlreadyGranted AsPermissionAlreadyGranted { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.AddPaperDocUserResult.PermissionAlreadyGranted
+    content.vb: Public ReadOnly Property AsPermissionAlreadyGranted As AddPaperDocUserResult.PermissionAlreadyGranted
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.AsPermissionAlreadyGranted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsOther
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: AddPaperDocUserResult.IsOther
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 197
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsOther
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: AddPaperDocUserResult.AsOther
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 208
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddPaperDocUserResult.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.AddPaperDocUserResult.Other
+    content.vb: Public ReadOnly Property AsOther As AddPaperDocUserResult.Other
+  overload: Dropbox.Api.Paper.AddPaperDocUserResult.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserResult
+  parent: Dropbox.Api.Paper
+  name: AddPaperDocUserResult
+  nameWithType: AddPaperDocUserResult
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.#ctor
+  name: AddPaperDocUserResult
+  nameWithType: AddPaperDocUserResult.AddPaperDocUserResult
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AddPaperDocUserResult
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsSuccess*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.IsSuccess
+  name: IsSuccess
+  nameWithType: AddPaperDocUserResult.IsSuccess
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsSuccess
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsSuccess*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.AsSuccess
+  name: AsSuccess
+  nameWithType: AddPaperDocUserResult.AsSuccess
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsSuccess
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.Success
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserResult.Success
+  parent: Dropbox.Api.Paper
+  name: AddPaperDocUserResult.Success
+  nameWithType: AddPaperDocUserResult.Success
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.Success
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsUnknownError*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.IsUnknownError
+  name: IsUnknownError
+  nameWithType: AddPaperDocUserResult.IsUnknownError
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsUnknownError
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsUnknownError*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.AsUnknownError
+  name: AsUnknownError
+  nameWithType: AddPaperDocUserResult.AsUnknownError
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsUnknownError
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.UnknownError
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserResult.UnknownError
+  parent: Dropbox.Api.Paper
+  name: AddPaperDocUserResult.UnknownError
+  nameWithType: AddPaperDocUserResult.UnknownError
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.UnknownError
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsSharingOutsideTeamDisabled*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.IsSharingOutsideTeamDisabled
+  name: IsSharingOutsideTeamDisabled
+  nameWithType: AddPaperDocUserResult.IsSharingOutsideTeamDisabled
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsSharingOutsideTeamDisabled
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsSharingOutsideTeamDisabled*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.AsSharingOutsideTeamDisabled
+  name: AsSharingOutsideTeamDisabled
+  nameWithType: AddPaperDocUserResult.AsSharingOutsideTeamDisabled
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsSharingOutsideTeamDisabled
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.SharingOutsideTeamDisabled
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserResult.SharingOutsideTeamDisabled
+  parent: Dropbox.Api.Paper
+  name: AddPaperDocUserResult.SharingOutsideTeamDisabled
+  nameWithType: AddPaperDocUserResult.SharingOutsideTeamDisabled
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.SharingOutsideTeamDisabled
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsDailyLimitReached*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.IsDailyLimitReached
+  name: IsDailyLimitReached
+  nameWithType: AddPaperDocUserResult.IsDailyLimitReached
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsDailyLimitReached
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsDailyLimitReached*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.AsDailyLimitReached
+  name: AsDailyLimitReached
+  nameWithType: AddPaperDocUserResult.AsDailyLimitReached
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsDailyLimitReached
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.DailyLimitReached
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserResult.DailyLimitReached
+  parent: Dropbox.Api.Paper
+  name: AddPaperDocUserResult.DailyLimitReached
+  nameWithType: AddPaperDocUserResult.DailyLimitReached
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.DailyLimitReached
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsUserIsOwner*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.IsUserIsOwner
+  name: IsUserIsOwner
+  nameWithType: AddPaperDocUserResult.IsUserIsOwner
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsUserIsOwner
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsUserIsOwner*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.AsUserIsOwner
+  name: AsUserIsOwner
+  nameWithType: AddPaperDocUserResult.AsUserIsOwner
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsUserIsOwner
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.UserIsOwner
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserResult.UserIsOwner
+  parent: Dropbox.Api.Paper
+  name: AddPaperDocUserResult.UserIsOwner
+  nameWithType: AddPaperDocUserResult.UserIsOwner
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.UserIsOwner
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsFailedUserDataRetrieval*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.IsFailedUserDataRetrieval
+  name: IsFailedUserDataRetrieval
+  nameWithType: AddPaperDocUserResult.IsFailedUserDataRetrieval
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsFailedUserDataRetrieval
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsFailedUserDataRetrieval*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.AsFailedUserDataRetrieval
+  name: AsFailedUserDataRetrieval
+  nameWithType: AddPaperDocUserResult.AsFailedUserDataRetrieval
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsFailedUserDataRetrieval
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval
+  parent: Dropbox.Api.Paper
+  name: AddPaperDocUserResult.FailedUserDataRetrieval
+  nameWithType: AddPaperDocUserResult.FailedUserDataRetrieval
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsPermissionAlreadyGranted*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.IsPermissionAlreadyGranted
+  name: IsPermissionAlreadyGranted
+  nameWithType: AddPaperDocUserResult.IsPermissionAlreadyGranted
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsPermissionAlreadyGranted
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsPermissionAlreadyGranted*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.AsPermissionAlreadyGranted
+  name: AsPermissionAlreadyGranted
+  nameWithType: AddPaperDocUserResult.AsPermissionAlreadyGranted
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsPermissionAlreadyGranted
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.PermissionAlreadyGranted
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserResult.PermissionAlreadyGranted
+  parent: Dropbox.Api.Paper
+  name: AddPaperDocUserResult.PermissionAlreadyGranted
+  nameWithType: AddPaperDocUserResult.PermissionAlreadyGranted
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.PermissionAlreadyGranted
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsOther*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.IsOther
+  name: IsOther
+  nameWithType: AddPaperDocUserResult.IsOther
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsOther
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsOther*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserResult.AsOther
+  name: AsOther
+  nameWithType: AddPaperDocUserResult.AsOther
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsOther
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.Other
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserResult.Other
+  parent: Dropbox.Api.Paper
+  name: AddPaperDocUserResult.Other
+  nameWithType: AddPaperDocUserResult.Other
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.Other

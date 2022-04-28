@@ -1,0 +1,806 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.PropertyGroupUpdate
+  commentId: T:Dropbox.Api.FileProperties.PropertyGroupUpdate
+  id: PropertyGroupUpdate
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.PropertyGroupUpdate.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyField},System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.FileProperties.PropertyGroupUpdate.AddOrUpdateFields
+  - Dropbox.Api.FileProperties.PropertyGroupUpdate.RemoveFields
+  - Dropbox.Api.FileProperties.PropertyGroupUpdate.TemplateId
+  langs:
+  - csharp
+  - vb
+  name: PropertyGroupUpdate
+  nameWithType: PropertyGroupUpdate
+  fullName: Dropbox.Api.FileProperties.PropertyGroupUpdate
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyGroupUpdate.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PropertyGroupUpdate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyGroupUpdate.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The property group update object</p>\n"
+  example: []
+  syntax:
+    content: public class PropertyGroupUpdate
+    content.vb: Public Class PropertyGroupUpdate
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.PropertyGroupUpdate.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyField},System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.FileProperties.PropertyGroupUpdate.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyField},System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyField},System.Collections.Generic.IEnumerable{System.String})'
+  parent: Dropbox.Api.FileProperties.PropertyGroupUpdate
+  langs:
+  - csharp
+  - vb
+  name: PropertyGroupUpdate(String, IEnumerable<PropertyField>, IEnumerable<String>)
+  nameWithType: PropertyGroupUpdate.PropertyGroupUpdate(String, IEnumerable<PropertyField>, IEnumerable<String>)
+  fullName: Dropbox.Api.FileProperties.PropertyGroupUpdate.PropertyGroupUpdate(System.String, System.Collections.Generic.IEnumerable<Dropbox.Api.FileProperties.PropertyField>, System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyGroupUpdate.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyGroupUpdate.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.PropertyGroupUpdate\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PropertyGroupUpdate(string templateId, IEnumerable<PropertyField> addOrUpdateFields = null, IEnumerable<string> removeFields = null)
+    parameters:
+    - id: templateId
+      type: System.String
+      description: A unique identifier for a property template.
+    - id: addOrUpdateFields
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyField}
+      description: >-
+        Property fields to update. If the property field
+
+        already exists, it is updated. If the property field doesn&apos;t exist, the property
+
+        group is added.
+    - id: removeFields
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: >-
+        Property fields to remove (by name), provided they
+
+        exist.
+    content.vb: Public Sub New(templateId As String, addOrUpdateFields As IEnumerable(Of PropertyField) = Nothing, removeFields As IEnumerable(Of String) = Nothing)
+  overload: Dropbox.Api.FileProperties.PropertyGroupUpdate.#ctor*
+  nameWithType.vb: PropertyGroupUpdate.PropertyGroupUpdate(String, IEnumerable(Of PropertyField), IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileProperties.PropertyGroupUpdate.PropertyGroupUpdate(System.String, System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileProperties.PropertyField), System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: PropertyGroupUpdate(String, IEnumerable(Of PropertyField), IEnumerable(Of String))
+- uid: Dropbox.Api.FileProperties.PropertyGroupUpdate.TemplateId
+  commentId: P:Dropbox.Api.FileProperties.PropertyGroupUpdate.TemplateId
+  id: TemplateId
+  parent: Dropbox.Api.FileProperties.PropertyGroupUpdate
+  langs:
+  - csharp
+  - vb
+  name: TemplateId
+  nameWithType: PropertyGroupUpdate.TemplateId
+  fullName: Dropbox.Api.FileProperties.PropertyGroupUpdate.TemplateId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyGroupUpdate.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: TemplateId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyGroupUpdate.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>A unique identifier for a property template.</p>\n"
+  example: []
+  syntax:
+    content: public string TemplateId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TemplateId As String
+  overload: Dropbox.Api.FileProperties.PropertyGroupUpdate.TemplateId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileProperties.PropertyGroupUpdate.AddOrUpdateFields
+  commentId: P:Dropbox.Api.FileProperties.PropertyGroupUpdate.AddOrUpdateFields
+  id: AddOrUpdateFields
+  parent: Dropbox.Api.FileProperties.PropertyGroupUpdate
+  langs:
+  - csharp
+  - vb
+  name: AddOrUpdateFields
+  nameWithType: PropertyGroupUpdate.AddOrUpdateFields
+  fullName: Dropbox.Api.FileProperties.PropertyGroupUpdate.AddOrUpdateFields
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyGroupUpdate.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AddOrUpdateFields
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyGroupUpdate.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Property fields to update. If the property field already exists, it is\nupdated. If the property field doesn&apos;t exist, the property group is added.</p>\n"
+  example: []
+  syntax:
+    content: public IList<PropertyField> AddOrUpdateFields { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.FileProperties.PropertyField}
+    content.vb: Public Property AddOrUpdateFields As IList(Of PropertyField)
+  overload: Dropbox.Api.FileProperties.PropertyGroupUpdate.AddOrUpdateFields*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileProperties.PropertyGroupUpdate.RemoveFields
+  commentId: P:Dropbox.Api.FileProperties.PropertyGroupUpdate.RemoveFields
+  id: RemoveFields
+  parent: Dropbox.Api.FileProperties.PropertyGroupUpdate
+  langs:
+  - csharp
+  - vb
+  name: RemoveFields
+  nameWithType: PropertyGroupUpdate.RemoveFields
+  fullName: Dropbox.Api.FileProperties.PropertyGroupUpdate.RemoveFields
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyGroupUpdate.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: RemoveFields
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyGroupUpdate.cs
+    startLine: 90
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Property fields to remove (by name), provided they exist.</p>\n"
+  example: []
+  syntax:
+    content: public IList<string> RemoveFields { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property RemoveFields As IList(Of String)
+  overload: Dropbox.Api.FileProperties.PropertyGroupUpdate.RemoveFields*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.FileProperties.PropertyGroupUpdate
+  commentId: T:Dropbox.Api.FileProperties.PropertyGroupUpdate
+  name: PropertyGroupUpdate
+  nameWithType: PropertyGroupUpdate
+  fullName: Dropbox.Api.FileProperties.PropertyGroupUpdate
+- uid: Dropbox.Api.FileProperties.PropertyGroupUpdate.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertyGroupUpdate.#ctor
+  name: PropertyGroupUpdate
+  nameWithType: PropertyGroupUpdate.PropertyGroupUpdate
+  fullName: Dropbox.Api.FileProperties.PropertyGroupUpdate.PropertyGroupUpdate
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyField}
+  commentId: T:System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyField}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<PropertyField>
+  nameWithType: IEnumerable<PropertyField>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.FileProperties.PropertyField>
+  nameWithType.vb: IEnumerable(Of PropertyField)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileProperties.PropertyField)
+  name.vb: IEnumerable(Of PropertyField)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileProperties.PropertyField
+    name: PropertyField
+    nameWithType: PropertyField
+    fullName: Dropbox.Api.FileProperties.PropertyField
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileProperties.PropertyField
+    name: PropertyField
+    nameWithType: PropertyField
+    fullName: Dropbox.Api.FileProperties.PropertyField
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Dropbox.Api.FileProperties.PropertyGroupUpdate.TemplateId*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertyGroupUpdate.TemplateId
+  name: TemplateId
+  nameWithType: PropertyGroupUpdate.TemplateId
+  fullName: Dropbox.Api.FileProperties.PropertyGroupUpdate.TemplateId
+- uid: Dropbox.Api.FileProperties.PropertyGroupUpdate.AddOrUpdateFields*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertyGroupUpdate.AddOrUpdateFields
+  name: AddOrUpdateFields
+  nameWithType: PropertyGroupUpdate.AddOrUpdateFields
+  fullName: Dropbox.Api.FileProperties.PropertyGroupUpdate.AddOrUpdateFields
+- uid: System.Collections.Generic.IList{Dropbox.Api.FileProperties.PropertyField}
+  commentId: T:System.Collections.Generic.IList{Dropbox.Api.FileProperties.PropertyField}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<PropertyField>
+  nameWithType: IList<PropertyField>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.FileProperties.PropertyField>
+  nameWithType.vb: IList(Of PropertyField)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.FileProperties.PropertyField)
+  name.vb: IList(Of PropertyField)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileProperties.PropertyField
+    name: PropertyField
+    nameWithType: PropertyField
+    fullName: Dropbox.Api.FileProperties.PropertyField
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileProperties.PropertyField
+    name: PropertyField
+    nameWithType: PropertyField
+    fullName: Dropbox.Api.FileProperties.PropertyField
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileProperties.PropertyGroupUpdate.RemoveFields*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertyGroupUpdate.RemoveFields
+  name: RemoveFields
+  nameWithType: PropertyGroupUpdate.RemoveFields
+  fullName: Dropbox.Api.FileProperties.PropertyGroupUpdate.RemoveFields
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: T:System.Collections.Generic.IList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<String>
+  nameWithType: IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

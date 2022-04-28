@@ -1,0 +1,446 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  commentId: T:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  id: EndedEnterpriseAdminSessionDeprecatedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor(Dropbox.Api.TeamLog.FedExtraDetails)
+  - Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: EndedEnterpriseAdminSessionDeprecatedDetails
+  nameWithType: EndedEnterpriseAdminSessionDeprecatedDetails
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDeprecatedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: EndedEnterpriseAdminSessionDeprecatedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDeprecatedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Ended enterprise admin session.</p>\n"
+  example: []
+  syntax:
+    content: public class EndedEnterpriseAdminSessionDeprecatedDetails
+    content.vb: Public Class EndedEnterpriseAdminSessionDeprecatedDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor(Dropbox.Api.TeamLog.FedExtraDetails)
+  commentId: M:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor(Dropbox.Api.TeamLog.FedExtraDetails)
+  id: '#ctor(Dropbox.Api.TeamLog.FedExtraDetails)'
+  parent: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  langs:
+  - csharp
+  - vb
+  name: EndedEnterpriseAdminSessionDeprecatedDetails(FedExtraDetails)
+  nameWithType: EndedEnterpriseAdminSessionDeprecatedDetails.EndedEnterpriseAdminSessionDeprecatedDetails(FedExtraDetails)
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.EndedEnterpriseAdminSessionDeprecatedDetails(Dropbox.Api.TeamLog.FedExtraDetails)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDeprecatedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDeprecatedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public EndedEnterpriseAdminSessionDeprecatedDetails(FedExtraDetails federationExtraDetails)
+    parameters:
+    - id: federationExtraDetails
+      type: Dropbox.Api.TeamLog.FedExtraDetails
+      description: >-
+        More information about the organization or
+
+        team.
+    content.vb: Public Sub New(federationExtraDetails As FedExtraDetails)
+  overload: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+  commentId: P:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+  id: FederationExtraDetails
+  parent: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  langs:
+  - csharp
+  - vb
+  name: FederationExtraDetails
+  nameWithType: EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDeprecatedDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FederationExtraDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDeprecatedDetails.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>More information about the organization or team.</p>\n"
+  example: []
+  syntax:
+    content: public FedExtraDetails FederationExtraDetails { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FedExtraDetails
+    content.vb: Public Property FederationExtraDetails As FedExtraDetails
+  overload: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  commentId: T:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  parent: Dropbox.Api.TeamLog
+  name: EndedEnterpriseAdminSessionDeprecatedDetails
+  nameWithType: EndedEnterpriseAdminSessionDeprecatedDetails
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor
+  name: EndedEnterpriseAdminSessionDeprecatedDetails
+  nameWithType: EndedEnterpriseAdminSessionDeprecatedDetails.EndedEnterpriseAdminSessionDeprecatedDetails
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.EndedEnterpriseAdminSessionDeprecatedDetails
+- uid: Dropbox.Api.TeamLog.FedExtraDetails
+  commentId: T:Dropbox.Api.TeamLog.FedExtraDetails
+  parent: Dropbox.Api.TeamLog
+  name: FedExtraDetails
+  nameWithType: FedExtraDetails
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+  name: FederationExtraDetails
+  nameWithType: EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails

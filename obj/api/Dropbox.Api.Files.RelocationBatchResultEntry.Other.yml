@@ -1,0 +1,441 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.Other
+  commentId: T:Dropbox.Api.Files.RelocationBatchResultEntry.Other
+  id: RelocationBatchResultEntry.Other
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RelocationBatchResultEntry.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchResultEntry.Other
+  nameWithType: RelocationBatchResultEntry.Other
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultEntry.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultEntry.cs
+    startLine: 375
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : RelocationBatchResultEntry'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits RelocationBatchResultEntry
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.RelocationBatchResultEntry
+  inheritedMembers:
+  - Dropbox.Api.Files.RelocationBatchResultEntry.IsSuccess
+  - Dropbox.Api.Files.RelocationBatchResultEntry.AsSuccess
+  - Dropbox.Api.Files.RelocationBatchResultEntry.IsFailure
+  - Dropbox.Api.Files.RelocationBatchResultEntry.AsFailure
+  - Dropbox.Api.Files.RelocationBatchResultEntry.IsOther
+  - Dropbox.Api.Files.RelocationBatchResultEntry.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.Other.Instance
+  commentId: F:Dropbox.Api.Files.RelocationBatchResultEntry.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: RelocationBatchResultEntry.Other.Instance
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultEntry.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultEntry.cs
+    startLine: 399
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly RelocationBatchResultEntry.Other Instance
+    return:
+      type: Dropbox.Api.Files.RelocationBatchResultEntry.Other
+    content.vb: Public Shared ReadOnly Instance As RelocationBatchResultEntry.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry
+  commentId: T:Dropbox.Api.Files.RelocationBatchResultEntry
+  parent: Dropbox.Api.Files
+  name: RelocationBatchResultEntry
+  nameWithType: RelocationBatchResultEntry
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.IsSuccess
+  commentId: P:Dropbox.Api.Files.RelocationBatchResultEntry.IsSuccess
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry
+  name: IsSuccess
+  nameWithType: RelocationBatchResultEntry.IsSuccess
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.IsSuccess
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.AsSuccess
+  commentId: P:Dropbox.Api.Files.RelocationBatchResultEntry.AsSuccess
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry
+  name: AsSuccess
+  nameWithType: RelocationBatchResultEntry.AsSuccess
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.AsSuccess
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.IsFailure
+  commentId: P:Dropbox.Api.Files.RelocationBatchResultEntry.IsFailure
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry
+  name: IsFailure
+  nameWithType: RelocationBatchResultEntry.IsFailure
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.IsFailure
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.AsFailure
+  commentId: P:Dropbox.Api.Files.RelocationBatchResultEntry.AsFailure
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry
+  name: AsFailure
+  nameWithType: RelocationBatchResultEntry.AsFailure
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.AsFailure
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.IsOther
+  commentId: P:Dropbox.Api.Files.RelocationBatchResultEntry.IsOther
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry
+  name: IsOther
+  nameWithType: RelocationBatchResultEntry.IsOther
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.IsOther
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.AsOther
+  commentId: P:Dropbox.Api.Files.RelocationBatchResultEntry.AsOther
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry
+  name: AsOther
+  nameWithType: RelocationBatchResultEntry.AsOther
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.Other
+  commentId: T:Dropbox.Api.Files.RelocationBatchResultEntry.Other
+  parent: Dropbox.Api.Files
+  name: RelocationBatchResultEntry.Other
+  nameWithType: RelocationBatchResultEntry.Other
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.Other

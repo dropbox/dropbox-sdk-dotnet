@@ -1,0 +1,1047 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError
+  commentId: T:Dropbox.Api.Sharing.AddMemberSelectorError
+  id: AddMemberSelectorError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.AddMemberSelectorError.#ctor
+  - Dropbox.Api.Sharing.AddMemberSelectorError.AsAutomaticGroup
+  - Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupDeleted
+  - Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupNotOnTeam
+  - Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidDropboxId
+  - Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidEmail
+  - Dropbox.Api.Sharing.AddMemberSelectorError.AsOther
+  - Dropbox.Api.Sharing.AddMemberSelectorError.AsUnverifiedDropboxId
+  - Dropbox.Api.Sharing.AddMemberSelectorError.IsAutomaticGroup
+  - Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupDeleted
+  - Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupNotOnTeam
+  - Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidDropboxId
+  - Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidEmail
+  - Dropbox.Api.Sharing.AddMemberSelectorError.IsOther
+  - Dropbox.Api.Sharing.AddMemberSelectorError.IsUnverifiedDropboxId
+  langs:
+  - csharp
+  - vb
+  name: AddMemberSelectorError
+  nameWithType: AddMemberSelectorError
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AddMemberSelectorError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The add member selector error object</p>\n"
+  example: []
+  syntax:
+    content: public class AddMemberSelectorError
+    content.vb: Public Class AddMemberSelectorError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.AddMemberSelectorError.AutomaticGroup
+  - Dropbox.Api.Sharing.AddMemberSelectorError.GroupDeleted
+  - Dropbox.Api.Sharing.AddMemberSelectorError.GroupNotOnTeam
+  - Dropbox.Api.Sharing.AddMemberSelectorError.InvalidDropboxId
+  - Dropbox.Api.Sharing.AddMemberSelectorError.InvalidEmail
+  - Dropbox.Api.Sharing.AddMemberSelectorError.Other
+  - Dropbox.Api.Sharing.AddMemberSelectorError.UnverifiedDropboxId
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.#ctor
+  commentId: M:Dropbox.Api.Sharing.AddMemberSelectorError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: AddMemberSelectorError()
+  nameWithType: AddMemberSelectorError.AddMemberSelectorError()
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AddMemberSelectorError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.AddMemberSelectorError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AddMemberSelectorError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.IsAutomaticGroup
+  commentId: P:Dropbox.Api.Sharing.AddMemberSelectorError.IsAutomaticGroup
+  id: IsAutomaticGroup
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: IsAutomaticGroup
+  nameWithType: AddMemberSelectorError.IsAutomaticGroup
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.IsAutomaticGroup
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAutomaticGroup
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is AutomaticGroup</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAutomaticGroup { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAutomaticGroup As Boolean
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.IsAutomaticGroup*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AsAutomaticGroup
+  commentId: P:Dropbox.Api.Sharing.AddMemberSelectorError.AsAutomaticGroup
+  id: AsAutomaticGroup
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: AsAutomaticGroup
+  nameWithType: AddMemberSelectorError.AsAutomaticGroup
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AsAutomaticGroup
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAutomaticGroup
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a AutomaticGroup, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddMemberSelectorError.AutomaticGroup AsAutomaticGroup { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AddMemberSelectorError.AutomaticGroup
+    content.vb: Public ReadOnly Property AsAutomaticGroup As AddMemberSelectorError.AutomaticGroup
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.AsAutomaticGroup*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidDropboxId
+  commentId: P:Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidDropboxId
+  id: IsInvalidDropboxId
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidDropboxId
+  nameWithType: AddMemberSelectorError.IsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidDropboxId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInvalidDropboxId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidDropboxId</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidDropboxId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidDropboxId As Boolean
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidDropboxId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidDropboxId
+  commentId: P:Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidDropboxId
+  id: AsInvalidDropboxId
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidDropboxId
+  nameWithType: AddMemberSelectorError.AsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidDropboxId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInvalidDropboxId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InvalidDropboxId, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddMemberSelectorError.InvalidDropboxId AsInvalidDropboxId { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AddMemberSelectorError.InvalidDropboxId
+    content.vb: Public ReadOnly Property AsInvalidDropboxId As AddMemberSelectorError.InvalidDropboxId
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidDropboxId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidEmail
+  commentId: P:Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidEmail
+  id: IsInvalidEmail
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidEmail
+  nameWithType: AddMemberSelectorError.IsInvalidEmail
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidEmail
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInvalidEmail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidEmail</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidEmail { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidEmail As Boolean
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidEmail*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidEmail
+  commentId: P:Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidEmail
+  id: AsInvalidEmail
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidEmail
+  nameWithType: AddMemberSelectorError.AsInvalidEmail
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidEmail
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInvalidEmail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InvalidEmail, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddMemberSelectorError.InvalidEmail AsInvalidEmail { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AddMemberSelectorError.InvalidEmail
+    content.vb: Public ReadOnly Property AsInvalidEmail As AddMemberSelectorError.InvalidEmail
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidEmail*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.IsUnverifiedDropboxId
+  commentId: P:Dropbox.Api.Sharing.AddMemberSelectorError.IsUnverifiedDropboxId
+  id: IsUnverifiedDropboxId
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: IsUnverifiedDropboxId
+  nameWithType: AddMemberSelectorError.IsUnverifiedDropboxId
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.IsUnverifiedDropboxId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUnverifiedDropboxId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is UnverifiedDropboxId</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnverifiedDropboxId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnverifiedDropboxId As Boolean
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.IsUnverifiedDropboxId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AsUnverifiedDropboxId
+  commentId: P:Dropbox.Api.Sharing.AddMemberSelectorError.AsUnverifiedDropboxId
+  id: AsUnverifiedDropboxId
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: AsUnverifiedDropboxId
+  nameWithType: AddMemberSelectorError.AsUnverifiedDropboxId
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AsUnverifiedDropboxId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUnverifiedDropboxId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a UnverifiedDropboxId, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddMemberSelectorError.UnverifiedDropboxId AsUnverifiedDropboxId { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AddMemberSelectorError.UnverifiedDropboxId
+    content.vb: Public ReadOnly Property AsUnverifiedDropboxId As AddMemberSelectorError.UnverifiedDropboxId
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.AsUnverifiedDropboxId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupDeleted
+  commentId: P:Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupDeleted
+  id: IsGroupDeleted
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: IsGroupDeleted
+  nameWithType: AddMemberSelectorError.IsGroupDeleted
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupDeleted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsGroupDeleted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is GroupDeleted</p>\n"
+  example: []
+  syntax:
+    content: public bool IsGroupDeleted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGroupDeleted As Boolean
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupDeleted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupDeleted
+  commentId: P:Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupDeleted
+  id: AsGroupDeleted
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: AsGroupDeleted
+  nameWithType: AddMemberSelectorError.AsGroupDeleted
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupDeleted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsGroupDeleted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a GroupDeleted, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddMemberSelectorError.GroupDeleted AsGroupDeleted { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AddMemberSelectorError.GroupDeleted
+    content.vb: Public ReadOnly Property AsGroupDeleted As AddMemberSelectorError.GroupDeleted
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupDeleted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupNotOnTeam
+  commentId: P:Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupNotOnTeam
+  id: IsGroupNotOnTeam
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: IsGroupNotOnTeam
+  nameWithType: AddMemberSelectorError.IsGroupNotOnTeam
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupNotOnTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsGroupNotOnTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 150
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is GroupNotOnTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsGroupNotOnTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGroupNotOnTeam As Boolean
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupNotOnTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupNotOnTeam
+  commentId: P:Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupNotOnTeam
+  id: AsGroupNotOnTeam
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: AsGroupNotOnTeam
+  nameWithType: AddMemberSelectorError.AsGroupNotOnTeam
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupNotOnTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsGroupNotOnTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a GroupNotOnTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddMemberSelectorError.GroupNotOnTeam AsGroupNotOnTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AddMemberSelectorError.GroupNotOnTeam
+    content.vb: Public ReadOnly Property AsGroupNotOnTeam As AddMemberSelectorError.GroupNotOnTeam
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupNotOnTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.IsOther
+  commentId: P:Dropbox.Api.Sharing.AddMemberSelectorError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: AddMemberSelectorError.IsOther
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 172
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AsOther
+  commentId: P:Dropbox.Api.Sharing.AddMemberSelectorError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.AddMemberSelectorError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: AddMemberSelectorError.AsOther
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddMemberSelectorError.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddMemberSelectorError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AddMemberSelectorError.Other
+    content.vb: Public ReadOnly Property AsOther As AddMemberSelectorError.Other
+  overload: Dropbox.Api.Sharing.AddMemberSelectorError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError
+  commentId: T:Dropbox.Api.Sharing.AddMemberSelectorError
+  parent: Dropbox.Api.Sharing
+  name: AddMemberSelectorError
+  nameWithType: AddMemberSelectorError
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.#ctor
+  name: AddMemberSelectorError
+  nameWithType: AddMemberSelectorError.AddMemberSelectorError
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AddMemberSelectorError
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.IsAutomaticGroup*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.IsAutomaticGroup
+  name: IsAutomaticGroup
+  nameWithType: AddMemberSelectorError.IsAutomaticGroup
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.IsAutomaticGroup
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AsAutomaticGroup*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.AsAutomaticGroup
+  name: AsAutomaticGroup
+  nameWithType: AddMemberSelectorError.AsAutomaticGroup
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AsAutomaticGroup
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AutomaticGroup
+  commentId: T:Dropbox.Api.Sharing.AddMemberSelectorError.AutomaticGroup
+  parent: Dropbox.Api.Sharing
+  name: AddMemberSelectorError.AutomaticGroup
+  nameWithType: AddMemberSelectorError.AutomaticGroup
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AutomaticGroup
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidDropboxId*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidDropboxId
+  name: IsInvalidDropboxId
+  nameWithType: AddMemberSelectorError.IsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidDropboxId
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidDropboxId*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidDropboxId
+  name: AsInvalidDropboxId
+  nameWithType: AddMemberSelectorError.AsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidDropboxId
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.InvalidDropboxId
+  commentId: T:Dropbox.Api.Sharing.AddMemberSelectorError.InvalidDropboxId
+  parent: Dropbox.Api.Sharing
+  name: AddMemberSelectorError.InvalidDropboxId
+  nameWithType: AddMemberSelectorError.InvalidDropboxId
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.InvalidDropboxId
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidEmail*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidEmail
+  name: IsInvalidEmail
+  nameWithType: AddMemberSelectorError.IsInvalidEmail
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.IsInvalidEmail
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidEmail*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidEmail
+  name: AsInvalidEmail
+  nameWithType: AddMemberSelectorError.AsInvalidEmail
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AsInvalidEmail
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.InvalidEmail
+  commentId: T:Dropbox.Api.Sharing.AddMemberSelectorError.InvalidEmail
+  parent: Dropbox.Api.Sharing
+  name: AddMemberSelectorError.InvalidEmail
+  nameWithType: AddMemberSelectorError.InvalidEmail
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.InvalidEmail
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.IsUnverifiedDropboxId*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.IsUnverifiedDropboxId
+  name: IsUnverifiedDropboxId
+  nameWithType: AddMemberSelectorError.IsUnverifiedDropboxId
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.IsUnverifiedDropboxId
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AsUnverifiedDropboxId*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.AsUnverifiedDropboxId
+  name: AsUnverifiedDropboxId
+  nameWithType: AddMemberSelectorError.AsUnverifiedDropboxId
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AsUnverifiedDropboxId
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.UnverifiedDropboxId
+  commentId: T:Dropbox.Api.Sharing.AddMemberSelectorError.UnverifiedDropboxId
+  parent: Dropbox.Api.Sharing
+  name: AddMemberSelectorError.UnverifiedDropboxId
+  nameWithType: AddMemberSelectorError.UnverifiedDropboxId
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.UnverifiedDropboxId
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupDeleted*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupDeleted
+  name: IsGroupDeleted
+  nameWithType: AddMemberSelectorError.IsGroupDeleted
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupDeleted
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupDeleted*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupDeleted
+  name: AsGroupDeleted
+  nameWithType: AddMemberSelectorError.AsGroupDeleted
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupDeleted
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.GroupDeleted
+  commentId: T:Dropbox.Api.Sharing.AddMemberSelectorError.GroupDeleted
+  parent: Dropbox.Api.Sharing
+  name: AddMemberSelectorError.GroupDeleted
+  nameWithType: AddMemberSelectorError.GroupDeleted
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.GroupDeleted
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupNotOnTeam*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupNotOnTeam
+  name: IsGroupNotOnTeam
+  nameWithType: AddMemberSelectorError.IsGroupNotOnTeam
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.IsGroupNotOnTeam
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupNotOnTeam*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupNotOnTeam
+  name: AsGroupNotOnTeam
+  nameWithType: AddMemberSelectorError.AsGroupNotOnTeam
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AsGroupNotOnTeam
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.GroupNotOnTeam
+  commentId: T:Dropbox.Api.Sharing.AddMemberSelectorError.GroupNotOnTeam
+  parent: Dropbox.Api.Sharing
+  name: AddMemberSelectorError.GroupNotOnTeam
+  nameWithType: AddMemberSelectorError.GroupNotOnTeam
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.GroupNotOnTeam
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.IsOther
+  name: IsOther
+  nameWithType: AddMemberSelectorError.IsOther
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.IsOther
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.AddMemberSelectorError.AsOther
+  name: AsOther
+  nameWithType: AddMemberSelectorError.AsOther
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.AsOther
+- uid: Dropbox.Api.Sharing.AddMemberSelectorError.Other
+  commentId: T:Dropbox.Api.Sharing.AddMemberSelectorError.Other
+  parent: Dropbox.Api.Sharing
+  name: AddMemberSelectorError.Other
+  nameWithType: AddMemberSelectorError.Other
+  fullName: Dropbox.Api.Sharing.AddMemberSelectorError.Other

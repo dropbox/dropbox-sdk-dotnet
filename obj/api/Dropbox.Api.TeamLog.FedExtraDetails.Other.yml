@@ -1,0 +1,441 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.Other
+  commentId: T:Dropbox.Api.TeamLog.FedExtraDetails.Other
+  id: FedExtraDetails.Other
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FedExtraDetails.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: FedExtraDetails.Other
+  nameWithType: FedExtraDetails.Other
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+    startLine: 358
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : FedExtraDetails'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits FedExtraDetails
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.FedExtraDetails
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.FedExtraDetails.IsOrganization
+  - Dropbox.Api.TeamLog.FedExtraDetails.AsOrganization
+  - Dropbox.Api.TeamLog.FedExtraDetails.IsTeam
+  - Dropbox.Api.TeamLog.FedExtraDetails.AsTeam
+  - Dropbox.Api.TeamLog.FedExtraDetails.IsOther
+  - Dropbox.Api.TeamLog.FedExtraDetails.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.Other.Instance
+  commentId: F:Dropbox.Api.TeamLog.FedExtraDetails.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.FedExtraDetails.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: FedExtraDetails.Other.Instance
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+    startLine: 382
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly FedExtraDetails.Other Instance
+    return:
+      type: Dropbox.Api.TeamLog.FedExtraDetails.Other
+    content.vb: Public Shared ReadOnly Instance As FedExtraDetails.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FedExtraDetails
+  commentId: T:Dropbox.Api.TeamLog.FedExtraDetails
+  parent: Dropbox.Api.TeamLog
+  name: FedExtraDetails
+  nameWithType: FedExtraDetails
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.IsOrganization
+  commentId: P:Dropbox.Api.TeamLog.FedExtraDetails.IsOrganization
+  parent: Dropbox.Api.TeamLog.FedExtraDetails
+  name: IsOrganization
+  nameWithType: FedExtraDetails.IsOrganization
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.IsOrganization
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.AsOrganization
+  commentId: P:Dropbox.Api.TeamLog.FedExtraDetails.AsOrganization
+  parent: Dropbox.Api.TeamLog.FedExtraDetails
+  name: AsOrganization
+  nameWithType: FedExtraDetails.AsOrganization
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.AsOrganization
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.IsTeam
+  commentId: P:Dropbox.Api.TeamLog.FedExtraDetails.IsTeam
+  parent: Dropbox.Api.TeamLog.FedExtraDetails
+  name: IsTeam
+  nameWithType: FedExtraDetails.IsTeam
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.IsTeam
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.AsTeam
+  commentId: P:Dropbox.Api.TeamLog.FedExtraDetails.AsTeam
+  parent: Dropbox.Api.TeamLog.FedExtraDetails
+  name: AsTeam
+  nameWithType: FedExtraDetails.AsTeam
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.AsTeam
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.IsOther
+  commentId: P:Dropbox.Api.TeamLog.FedExtraDetails.IsOther
+  parent: Dropbox.Api.TeamLog.FedExtraDetails
+  name: IsOther
+  nameWithType: FedExtraDetails.IsOther
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.IsOther
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.AsOther
+  commentId: P:Dropbox.Api.TeamLog.FedExtraDetails.AsOther
+  parent: Dropbox.Api.TeamLog.FedExtraDetails
+  name: AsOther
+  nameWithType: FedExtraDetails.AsOther
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.Other
+  commentId: T:Dropbox.Api.TeamLog.FedExtraDetails.Other
+  parent: Dropbox.Api.TeamLog
+  name: FedExtraDetails.Other
+  nameWithType: FedExtraDetails.Other
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.Other

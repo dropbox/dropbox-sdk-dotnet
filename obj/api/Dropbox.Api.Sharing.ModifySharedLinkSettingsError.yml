@@ -1,0 +1,954 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  commentId: T:Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  id: ModifySharedLinkSettingsError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.#ctor
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsEmailNotVerified
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsOther
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSettingsError
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkAccessDenied
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkNotFound
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsUnsupportedLinkType
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsEmailNotVerified
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsOther
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSettingsError
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkAccessDenied
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkNotFound
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsUnsupportedLinkType
+  langs:
+  - csharp
+  - vb
+  name: ModifySharedLinkSettingsError
+  nameWithType: ModifySharedLinkSettingsError
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ModifySharedLinkSettingsError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The modify shared link settings error object</p>\n"
+  example: []
+  syntax:
+    content: public class ModifySharedLinkSettingsError
+    content.vb: Public Class ModifySharedLinkSettingsError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.EmailNotVerified
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.Other
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SettingsError
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SharedLinkAccessDenied
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SharedLinkNotFound
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsError.UnsupportedLinkType
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.#ctor
+  commentId: M:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: ModifySharedLinkSettingsError()
+  nameWithType: ModifySharedLinkSettingsError.ModifySharedLinkSettingsError()
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.ModifySharedLinkSettingsError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ModifySharedLinkSettingsError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ModifySharedLinkSettingsError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSettingsError
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSettingsError
+  id: IsSettingsError
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: IsSettingsError
+  nameWithType: ModifySharedLinkSettingsError.IsSettingsError
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSettingsError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSettingsError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is SettingsError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSettingsError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSettingsError As Boolean
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSettingsError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSettingsError
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSettingsError
+  id: AsSettingsError
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: AsSettingsError
+  nameWithType: ModifySharedLinkSettingsError.AsSettingsError
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSettingsError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSettingsError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a SettingsError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ModifySharedLinkSettingsError.SettingsError AsSettingsError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SettingsError
+    content.vb: Public ReadOnly Property AsSettingsError As ModifySharedLinkSettingsError.SettingsError
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSettingsError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsEmailNotVerified
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsEmailNotVerified
+  id: IsEmailNotVerified
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: IsEmailNotVerified
+  nameWithType: ModifySharedLinkSettingsError.IsEmailNotVerified
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsEmailNotVerified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsEmailNotVerified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is EmailNotVerified</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEmailNotVerified { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmailNotVerified As Boolean
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsEmailNotVerified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsEmailNotVerified
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsEmailNotVerified
+  id: AsEmailNotVerified
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: AsEmailNotVerified
+  nameWithType: ModifySharedLinkSettingsError.AsEmailNotVerified
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsEmailNotVerified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsEmailNotVerified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a EmailNotVerified, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ModifySharedLinkSettingsError.EmailNotVerified AsEmailNotVerified { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.EmailNotVerified
+    content.vb: Public ReadOnly Property AsEmailNotVerified As ModifySharedLinkSettingsError.EmailNotVerified
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsEmailNotVerified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkNotFound
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkNotFound
+  id: IsSharedLinkNotFound
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: IsSharedLinkNotFound
+  nameWithType: ModifySharedLinkSettingsError.IsSharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSharedLinkNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is SharedLinkNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSharedLinkNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSharedLinkNotFound As Boolean
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkNotFound
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkNotFound
+  id: AsSharedLinkNotFound
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: AsSharedLinkNotFound
+  nameWithType: ModifySharedLinkSettingsError.AsSharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSharedLinkNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a SharedLinkNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ModifySharedLinkSettingsError.SharedLinkNotFound AsSharedLinkNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SharedLinkNotFound
+    content.vb: Public ReadOnly Property AsSharedLinkNotFound As ModifySharedLinkSettingsError.SharedLinkNotFound
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkAccessDenied
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkAccessDenied
+  id: IsSharedLinkAccessDenied
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: IsSharedLinkAccessDenied
+  nameWithType: ModifySharedLinkSettingsError.IsSharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkAccessDenied
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSharedLinkAccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is\nSharedLinkAccessDenied</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSharedLinkAccessDenied { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSharedLinkAccessDenied As Boolean
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkAccessDenied*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkAccessDenied
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkAccessDenied
+  id: AsSharedLinkAccessDenied
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: AsSharedLinkAccessDenied
+  nameWithType: ModifySharedLinkSettingsError.AsSharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkAccessDenied
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSharedLinkAccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a SharedLinkAccessDenied, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ModifySharedLinkSettingsError.SharedLinkAccessDenied AsSharedLinkAccessDenied { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SharedLinkAccessDenied
+    content.vb: Public ReadOnly Property AsSharedLinkAccessDenied As ModifySharedLinkSettingsError.SharedLinkAccessDenied
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkAccessDenied*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsUnsupportedLinkType
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsUnsupportedLinkType
+  id: IsUnsupportedLinkType
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: IsUnsupportedLinkType
+  nameWithType: ModifySharedLinkSettingsError.IsUnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsUnsupportedLinkType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUnsupportedLinkType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is UnsupportedLinkType</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnsupportedLinkType { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnsupportedLinkType As Boolean
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsUnsupportedLinkType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsUnsupportedLinkType
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsUnsupportedLinkType
+  id: AsUnsupportedLinkType
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: AsUnsupportedLinkType
+  nameWithType: ModifySharedLinkSettingsError.AsUnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsUnsupportedLinkType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUnsupportedLinkType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+    startLine: 140
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a UnsupportedLinkType, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ModifySharedLinkSettingsError.UnsupportedLinkType AsUnsupportedLinkType { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.UnsupportedLinkType
+    content.vb: Public ReadOnly Property AsUnsupportedLinkType As ModifySharedLinkSettingsError.UnsupportedLinkType
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsUnsupportedLinkType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsOther
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ModifySharedLinkSettingsError.IsOther
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+    startLine: 151
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsOther
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ModifySharedLinkSettingsError.AsOther
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsError.cs
+    startLine: 162
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ModifySharedLinkSettingsError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.Other
+    content.vb: Public ReadOnly Property AsOther As ModifySharedLinkSettingsError.Other
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  commentId: T:Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+  parent: Dropbox.Api.Sharing
+  name: ModifySharedLinkSettingsError
+  nameWithType: ModifySharedLinkSettingsError
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.#ctor
+  name: ModifySharedLinkSettingsError
+  nameWithType: ModifySharedLinkSettingsError.ModifySharedLinkSettingsError
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.ModifySharedLinkSettingsError
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSettingsError*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSettingsError
+  name: IsSettingsError
+  nameWithType: ModifySharedLinkSettingsError.IsSettingsError
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSettingsError
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSettingsError*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSettingsError
+  name: AsSettingsError
+  nameWithType: ModifySharedLinkSettingsError.AsSettingsError
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSettingsError
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SettingsError
+  commentId: T:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SettingsError
+  parent: Dropbox.Api.Sharing
+  name: ModifySharedLinkSettingsError.SettingsError
+  nameWithType: ModifySharedLinkSettingsError.SettingsError
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SettingsError
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsEmailNotVerified*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsEmailNotVerified
+  name: IsEmailNotVerified
+  nameWithType: ModifySharedLinkSettingsError.IsEmailNotVerified
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsEmailNotVerified
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsEmailNotVerified*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsEmailNotVerified
+  name: AsEmailNotVerified
+  nameWithType: ModifySharedLinkSettingsError.AsEmailNotVerified
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsEmailNotVerified
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.EmailNotVerified
+  commentId: T:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.EmailNotVerified
+  parent: Dropbox.Api.Sharing
+  name: ModifySharedLinkSettingsError.EmailNotVerified
+  nameWithType: ModifySharedLinkSettingsError.EmailNotVerified
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.EmailNotVerified
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkNotFound*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkNotFound
+  name: IsSharedLinkNotFound
+  nameWithType: ModifySharedLinkSettingsError.IsSharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkNotFound
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkNotFound*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkNotFound
+  name: AsSharedLinkNotFound
+  nameWithType: ModifySharedLinkSettingsError.AsSharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkNotFound
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SharedLinkNotFound
+  commentId: T:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SharedLinkNotFound
+  parent: Dropbox.Api.Sharing
+  name: ModifySharedLinkSettingsError.SharedLinkNotFound
+  nameWithType: ModifySharedLinkSettingsError.SharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SharedLinkNotFound
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkAccessDenied*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkAccessDenied
+  name: IsSharedLinkAccessDenied
+  nameWithType: ModifySharedLinkSettingsError.IsSharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsSharedLinkAccessDenied
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkAccessDenied*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkAccessDenied
+  name: AsSharedLinkAccessDenied
+  nameWithType: ModifySharedLinkSettingsError.AsSharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsSharedLinkAccessDenied
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SharedLinkAccessDenied
+  commentId: T:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SharedLinkAccessDenied
+  parent: Dropbox.Api.Sharing
+  name: ModifySharedLinkSettingsError.SharedLinkAccessDenied
+  nameWithType: ModifySharedLinkSettingsError.SharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.SharedLinkAccessDenied
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsUnsupportedLinkType*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsUnsupportedLinkType
+  name: IsUnsupportedLinkType
+  nameWithType: ModifySharedLinkSettingsError.IsUnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsUnsupportedLinkType
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsUnsupportedLinkType*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsUnsupportedLinkType
+  name: AsUnsupportedLinkType
+  nameWithType: ModifySharedLinkSettingsError.AsUnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsUnsupportedLinkType
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.UnsupportedLinkType
+  commentId: T:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.UnsupportedLinkType
+  parent: Dropbox.Api.Sharing
+  name: ModifySharedLinkSettingsError.UnsupportedLinkType
+  nameWithType: ModifySharedLinkSettingsError.UnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.UnsupportedLinkType
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsOther
+  name: IsOther
+  nameWithType: ModifySharedLinkSettingsError.IsOther
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.IsOther
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsOther
+  name: AsOther
+  nameWithType: ModifySharedLinkSettingsError.AsOther
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.AsOther
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.Other
+  commentId: T:Dropbox.Api.Sharing.ModifySharedLinkSettingsError.Other
+  parent: Dropbox.Api.Sharing
+  name: ModifySharedLinkSettingsError.Other
+  nameWithType: ModifySharedLinkSettingsError.Other
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsError.Other

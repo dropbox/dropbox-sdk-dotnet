@@ -1,0 +1,1140 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.GetFileRequestError
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestError
+  id: GetFileRequestError
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.GetFileRequestError.#ctor
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsAppLacksAccess
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsDisabledForTeam
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsEmailUnverified
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsNoPermission
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsNotAFolder
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsNotFound
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsOther
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsValidationError
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsAppLacksAccess
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsDisabledForTeam
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsEmailUnverified
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsNoPermission
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsNotAFolder
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsNotFound
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsOther
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsValidationError
+  langs:
+  - csharp
+  - vb
+  name: GetFileRequestError
+  nameWithType: GetFileRequestError
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: GetFileRequestError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>There was an error retrieving the specified file request.</p>\n"
+  example: []
+  syntax:
+    content: public class GetFileRequestError
+    content.vb: Public Class GetFileRequestError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.FileRequests.GetFileRequestError.AppLacksAccess
+  - Dropbox.Api.FileRequests.GetFileRequestError.DisabledForTeam
+  - Dropbox.Api.FileRequests.GetFileRequestError.EmailUnverified
+  - Dropbox.Api.FileRequests.GetFileRequestError.NoPermission
+  - Dropbox.Api.FileRequests.GetFileRequestError.NotAFolder
+  - Dropbox.Api.FileRequests.GetFileRequestError.NotFound
+  - Dropbox.Api.FileRequests.GetFileRequestError.Other
+  - Dropbox.Api.FileRequests.GetFileRequestError.ValidationError
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.#ctor
+  commentId: M:Dropbox.Api.FileRequests.GetFileRequestError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: GetFileRequestError()
+  nameWithType: GetFileRequestError.GetFileRequestError()
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.GetFileRequestError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.GetFileRequestError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileRequestError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsNotFound
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsNotFound
+  id: IsNotFound
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsNotFound
+  nameWithType: GetFileRequestError.IsNotFound
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is NotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotFound As Boolean
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.IsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsNotFound
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsNotFound
+  id: AsNotFound
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsNotFound
+  nameWithType: GetFileRequestError.AsNotFound
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a NotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileRequestError.NotFound AsNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.GetFileRequestError.NotFound
+    content.vb: Public ReadOnly Property AsNotFound As GetFileRequestError.NotFound
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.AsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsNotAFolder
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsNotAFolder
+  id: IsNotAFolder
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsNotAFolder
+  nameWithType: GetFileRequestError.IsNotAFolder
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsNotAFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNotAFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is NotAFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotAFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotAFolder As Boolean
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.IsNotAFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsNotAFolder
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsNotAFolder
+  id: AsNotAFolder
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsNotAFolder
+  nameWithType: GetFileRequestError.AsNotAFolder
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsNotAFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNotAFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a NotAFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileRequestError.NotAFolder AsNotAFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.GetFileRequestError.NotAFolder
+    content.vb: Public ReadOnly Property AsNotAFolder As GetFileRequestError.NotAFolder
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.AsNotAFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsAppLacksAccess
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsAppLacksAccess
+  id: IsAppLacksAccess
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsAppLacksAccess
+  nameWithType: GetFileRequestError.IsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsAppLacksAccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAppLacksAccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is AppLacksAccess</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAppLacksAccess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAppLacksAccess As Boolean
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.IsAppLacksAccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsAppLacksAccess
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsAppLacksAccess
+  id: AsAppLacksAccess
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsAppLacksAccess
+  nameWithType: GetFileRequestError.AsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsAppLacksAccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAppLacksAccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a AppLacksAccess, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileRequestError.AppLacksAccess AsAppLacksAccess { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.GetFileRequestError.AppLacksAccess
+    content.vb: Public ReadOnly Property AsAppLacksAccess As GetFileRequestError.AppLacksAccess
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.AsAppLacksAccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsNoPermission
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsNoPermission
+  id: IsNoPermission
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsNoPermission
+  nameWithType: GetFileRequestError.IsNoPermission
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsNoPermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNoPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is NoPermission</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNoPermission { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNoPermission As Boolean
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.IsNoPermission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsNoPermission
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsNoPermission
+  id: AsNoPermission
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsNoPermission
+  nameWithType: GetFileRequestError.AsNoPermission
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsNoPermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNoPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a NoPermission, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileRequestError.NoPermission AsNoPermission { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.GetFileRequestError.NoPermission
+    content.vb: Public ReadOnly Property AsNoPermission As GetFileRequestError.NoPermission
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.AsNoPermission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsEmailUnverified
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsEmailUnverified
+  id: IsEmailUnverified
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsEmailUnverified
+  nameWithType: GetFileRequestError.IsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsEmailUnverified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsEmailUnverified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is EmailUnverified</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEmailUnverified { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmailUnverified As Boolean
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.IsEmailUnverified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsEmailUnverified
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsEmailUnverified
+  id: AsEmailUnverified
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsEmailUnverified
+  nameWithType: GetFileRequestError.AsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsEmailUnverified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsEmailUnverified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a EmailUnverified, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileRequestError.EmailUnverified AsEmailUnverified { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.GetFileRequestError.EmailUnverified
+    content.vb: Public ReadOnly Property AsEmailUnverified As GetFileRequestError.EmailUnverified
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.AsEmailUnverified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsValidationError
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsValidationError
+  id: IsValidationError
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsValidationError
+  nameWithType: GetFileRequestError.IsValidationError
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsValidationError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsValidationError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 150
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is ValidationError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsValidationError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsValidationError As Boolean
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.IsValidationError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsValidationError
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsValidationError
+  id: AsValidationError
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsValidationError
+  nameWithType: GetFileRequestError.AsValidationError
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsValidationError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsValidationError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a ValidationError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileRequestError.ValidationError AsValidationError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.GetFileRequestError.ValidationError
+    content.vb: Public ReadOnly Property AsValidationError As GetFileRequestError.ValidationError
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.AsValidationError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsDisabledForTeam
+  id: IsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsDisabledForTeam
+  nameWithType: GetFileRequestError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsDisabledForTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDisabledForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 172
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is DisabledForTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabledForTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabledForTeam As Boolean
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.IsDisabledForTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsDisabledForTeam
+  id: AsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsDisabledForTeam
+  nameWithType: GetFileRequestError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsDisabledForTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDisabledForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a DisabledForTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileRequestError.DisabledForTeam AsDisabledForTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.GetFileRequestError.DisabledForTeam
+    content.vb: Public ReadOnly Property AsDisabledForTeam As GetFileRequestError.DisabledForTeam
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.AsDisabledForTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsOther
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: GetFileRequestError.IsOther
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 194
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsOther
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: GetFileRequestError.AsOther
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 205
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileRequestError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.GetFileRequestError.Other
+    content.vb: Public ReadOnly Property AsOther As GetFileRequestError.Other
+  overload: Dropbox.Api.FileRequests.GetFileRequestError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.FileRequests.GetFileRequestError
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestError
+  parent: Dropbox.Api.FileRequests
+  name: GetFileRequestError
+  nameWithType: GetFileRequestError
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.#ctor*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.#ctor
+  name: GetFileRequestError
+  nameWithType: GetFileRequestError.GetFileRequestError
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.GetFileRequestError
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsNotFound*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.IsNotFound
+  name: IsNotFound
+  nameWithType: GetFileRequestError.IsNotFound
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsNotFound
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsNotFound*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.AsNotFound
+  name: AsNotFound
+  nameWithType: GetFileRequestError.AsNotFound
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsNotFound
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.NotFound
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestError.NotFound
+  parent: Dropbox.Api.FileRequests
+  name: GetFileRequestError.NotFound
+  nameWithType: GetFileRequestError.NotFound
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.NotFound
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsNotAFolder*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.IsNotAFolder
+  name: IsNotAFolder
+  nameWithType: GetFileRequestError.IsNotAFolder
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsNotAFolder
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsNotAFolder*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.AsNotAFolder
+  name: AsNotAFolder
+  nameWithType: GetFileRequestError.AsNotAFolder
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsNotAFolder
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.NotAFolder
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestError.NotAFolder
+  parent: Dropbox.Api.FileRequests
+  name: GetFileRequestError.NotAFolder
+  nameWithType: GetFileRequestError.NotAFolder
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.NotAFolder
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsAppLacksAccess*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.IsAppLacksAccess
+  name: IsAppLacksAccess
+  nameWithType: GetFileRequestError.IsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsAppLacksAccess
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsAppLacksAccess*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.AsAppLacksAccess
+  name: AsAppLacksAccess
+  nameWithType: GetFileRequestError.AsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsAppLacksAccess
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AppLacksAccess
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestError.AppLacksAccess
+  parent: Dropbox.Api.FileRequests
+  name: GetFileRequestError.AppLacksAccess
+  nameWithType: GetFileRequestError.AppLacksAccess
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AppLacksAccess
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsNoPermission*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.IsNoPermission
+  name: IsNoPermission
+  nameWithType: GetFileRequestError.IsNoPermission
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsNoPermission
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsNoPermission*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.AsNoPermission
+  name: AsNoPermission
+  nameWithType: GetFileRequestError.AsNoPermission
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsNoPermission
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.NoPermission
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestError.NoPermission
+  parent: Dropbox.Api.FileRequests
+  name: GetFileRequestError.NoPermission
+  nameWithType: GetFileRequestError.NoPermission
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.NoPermission
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsEmailUnverified*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.IsEmailUnverified
+  name: IsEmailUnverified
+  nameWithType: GetFileRequestError.IsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsEmailUnverified
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsEmailUnverified*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.AsEmailUnverified
+  name: AsEmailUnverified
+  nameWithType: GetFileRequestError.AsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsEmailUnverified
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.EmailUnverified
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestError.EmailUnverified
+  parent: Dropbox.Api.FileRequests
+  name: GetFileRequestError.EmailUnverified
+  nameWithType: GetFileRequestError.EmailUnverified
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.EmailUnverified
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsValidationError*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.IsValidationError
+  name: IsValidationError
+  nameWithType: GetFileRequestError.IsValidationError
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsValidationError
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsValidationError*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.AsValidationError
+  name: AsValidationError
+  nameWithType: GetFileRequestError.AsValidationError
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsValidationError
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.ValidationError
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestError.ValidationError
+  parent: Dropbox.Api.FileRequests
+  name: GetFileRequestError.ValidationError
+  nameWithType: GetFileRequestError.ValidationError
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.ValidationError
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsDisabledForTeam*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.IsDisabledForTeam
+  name: IsDisabledForTeam
+  nameWithType: GetFileRequestError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsDisabledForTeam*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.AsDisabledForTeam
+  name: AsDisabledForTeam
+  nameWithType: GetFileRequestError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.DisabledForTeam
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestError.DisabledForTeam
+  parent: Dropbox.Api.FileRequests
+  name: GetFileRequestError.DisabledForTeam
+  nameWithType: GetFileRequestError.DisabledForTeam
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.DisabledForTeam
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsOther*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.IsOther
+  name: IsOther
+  nameWithType: GetFileRequestError.IsOther
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsOther
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsOther*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestError.AsOther
+  name: AsOther
+  nameWithType: GetFileRequestError.AsOther
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsOther
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.Other
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestError.Other
+  parent: Dropbox.Api.FileRequests
+  name: GetFileRequestError.Other
+  nameWithType: GetFileRequestError.Other
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.Other

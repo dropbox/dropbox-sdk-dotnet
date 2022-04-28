@@ -1,0 +1,497 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.LockFileResult
+  commentId: T:Dropbox.Api.Files.LockFileResult
+  id: LockFileResult
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.LockFileResult.#ctor(Dropbox.Api.Files.Metadata,Dropbox.Api.Files.FileLock)
+  - Dropbox.Api.Files.LockFileResult.Lock
+  - Dropbox.Api.Files.LockFileResult.Metadata
+  langs:
+  - csharp
+  - vb
+  name: LockFileResult
+  nameWithType: LockFileResult
+  fullName: Dropbox.Api.Files.LockFileResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LockFileResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The lock file result object</p>\n"
+  example: []
+  syntax:
+    content: public class LockFileResult
+    content.vb: Public Class LockFileResult
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.LockFileResult.#ctor(Dropbox.Api.Files.Metadata,Dropbox.Api.Files.FileLock)
+  commentId: M:Dropbox.Api.Files.LockFileResult.#ctor(Dropbox.Api.Files.Metadata,Dropbox.Api.Files.FileLock)
+  id: '#ctor(Dropbox.Api.Files.Metadata,Dropbox.Api.Files.FileLock)'
+  parent: Dropbox.Api.Files.LockFileResult
+  langs:
+  - csharp
+  - vb
+  name: LockFileResult(Metadata, FileLock)
+  nameWithType: LockFileResult.LockFileResult(Metadata, FileLock)
+  fullName: Dropbox.Api.Files.LockFileResult.LockFileResult(Dropbox.Api.Files.Metadata, Dropbox.Api.Files.FileLock)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResult.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.LockFileResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileResult(Metadata metadata, FileLock lock)
+    parameters:
+    - id: metadata
+      type: Dropbox.Api.Files.Metadata
+      description: Metadata of the file.
+    - id: lock
+      type: Dropbox.Api.Files.FileLock
+      description: The file lock state after the operation.
+    content.vb: Public Sub New(metadata As Metadata, lock As FileLock)
+  overload: Dropbox.Api.Files.LockFileResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.LockFileResult.Metadata
+  commentId: P:Dropbox.Api.Files.LockFileResult.Metadata
+  id: Metadata
+  parent: Dropbox.Api.Files.LockFileResult
+  langs:
+  - csharp
+  - vb
+  name: Metadata
+  nameWithType: LockFileResult.Metadata
+  fullName: Dropbox.Api.Files.LockFileResult.Metadata
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Metadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResult.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Metadata of the file.</p>\n"
+  example: []
+  syntax:
+    content: public Metadata Metadata { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.Metadata
+    content.vb: Public Property Metadata As Metadata
+  overload: Dropbox.Api.Files.LockFileResult.Metadata*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.LockFileResult.Lock
+  commentId: P:Dropbox.Api.Files.LockFileResult.Lock
+  id: Lock
+  parent: Dropbox.Api.Files.LockFileResult
+  langs:
+  - csharp
+  - vb
+  name: Lock
+  nameWithType: LockFileResult.Lock
+  fullName: Dropbox.Api.Files.LockFileResult.Lock
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Lock
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileResult.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The file lock state after the operation.</p>\n"
+  example: []
+  syntax:
+    content: public FileLock Lock { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileLock
+    content.vb: Public Property Lock As FileLock
+  overload: Dropbox.Api.Files.LockFileResult.Lock*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.LockFileResult
+  commentId: T:Dropbox.Api.Files.LockFileResult
+  parent: Dropbox.Api.Files
+  name: LockFileResult
+  nameWithType: LockFileResult
+  fullName: Dropbox.Api.Files.LockFileResult
+- uid: Dropbox.Api.Files.LockFileResult.#ctor*
+  commentId: Overload:Dropbox.Api.Files.LockFileResult.#ctor
+  name: LockFileResult
+  nameWithType: LockFileResult.LockFileResult
+  fullName: Dropbox.Api.Files.LockFileResult.LockFileResult
+- uid: Dropbox.Api.Files.Metadata
+  commentId: T:Dropbox.Api.Files.Metadata
+  parent: Dropbox.Api.Files
+  name: Metadata
+  nameWithType: Metadata
+  fullName: Dropbox.Api.Files.Metadata
+- uid: Dropbox.Api.Files.FileLock
+  commentId: T:Dropbox.Api.Files.FileLock
+  parent: Dropbox.Api.Files
+  name: FileLock
+  nameWithType: FileLock
+  fullName: Dropbox.Api.Files.FileLock
+- uid: Dropbox.Api.Files.LockFileResult.Metadata*
+  commentId: Overload:Dropbox.Api.Files.LockFileResult.Metadata
+  name: Metadata
+  nameWithType: LockFileResult.Metadata
+  fullName: Dropbox.Api.Files.LockFileResult.Metadata
+- uid: Dropbox.Api.Files.LockFileResult.Lock*
+  commentId: Overload:Dropbox.Api.Files.LockFileResult.Lock
+  name: Lock
+  nameWithType: LockFileResult.Lock
+  fullName: Dropbox.Api.Files.LockFileResult.Lock

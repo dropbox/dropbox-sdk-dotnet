@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  commentId: T:Dropbox.Api.Team.DeleteSecondaryEmailResult
+  id: DeleteSecondaryEmailResult
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.#ctor
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.AsCannotRemovePrimary
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.AsNotFound
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.AsOther
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.AsSuccess
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.IsCannotRemovePrimary
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.IsNotFound
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.IsOther
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.IsSuccess
+  langs:
+  - csharp
+  - vb
+  name: DeleteSecondaryEmailResult
+  nameWithType: DeleteSecondaryEmailResult
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: DeleteSecondaryEmailResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Result of trying to delete a secondary email address. &apos;success&apos; is the only value\nindicating that a secondary email was successfully deleted. The other values explain\nthe type of error that occurred, and include the email for which the error\noccurred.</p>\n"
+  example: []
+  syntax:
+    content: public class DeleteSecondaryEmailResult
+    content.vb: Public Class DeleteSecondaryEmailResult
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.CannotRemovePrimary
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.NotFound
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.Other
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.Success
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.#ctor
+  commentId: M:Dropbox.Api.Team.DeleteSecondaryEmailResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: DeleteSecondaryEmailResult()
+  nameWithType: DeleteSecondaryEmailResult.DeleteSecondaryEmailResult()
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.DeleteSecondaryEmailResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.DeleteSecondaryEmailResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteSecondaryEmailResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.DeleteSecondaryEmailResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsSuccess
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.IsSuccess
+  id: IsSuccess
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: IsSuccess
+  nameWithType: DeleteSecondaryEmailResult.IsSuccess
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+    startLine: 43
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Success</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSuccess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSuccess As Boolean
+  overload: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsSuccess
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.AsSuccess
+  id: AsSuccess
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AsSuccess
+  nameWithType: DeleteSecondaryEmailResult.AsSuccess
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Success, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteSecondaryEmailResult.Success AsSuccess { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.DeleteSecondaryEmailResult.Success
+    content.vb: Public ReadOnly Property AsSuccess As DeleteSecondaryEmailResult.Success
+  overload: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsNotFound
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.IsNotFound
+  id: IsNotFound
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: IsNotFound
+  nameWithType: DeleteSecondaryEmailResult.IsNotFound
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is NotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotFound As Boolean
+  overload: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsNotFound
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.AsNotFound
+  id: AsNotFound
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AsNotFound
+  nameWithType: DeleteSecondaryEmailResult.AsNotFound
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a NotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteSecondaryEmailResult.NotFound AsNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.DeleteSecondaryEmailResult.NotFound
+    content.vb: Public ReadOnly Property AsNotFound As DeleteSecondaryEmailResult.NotFound
+  overload: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsCannotRemovePrimary
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.IsCannotRemovePrimary
+  id: IsCannotRemovePrimary
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: IsCannotRemovePrimary
+  nameWithType: DeleteSecondaryEmailResult.IsCannotRemovePrimary
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsCannotRemovePrimary
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsCannotRemovePrimary
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is CannotRemovePrimary</p>\n"
+  example: []
+  syntax:
+    content: public bool IsCannotRemovePrimary { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCannotRemovePrimary As Boolean
+  overload: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsCannotRemovePrimary*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsCannotRemovePrimary
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.AsCannotRemovePrimary
+  id: AsCannotRemovePrimary
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AsCannotRemovePrimary
+  nameWithType: DeleteSecondaryEmailResult.AsCannotRemovePrimary
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsCannotRemovePrimary
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsCannotRemovePrimary
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+    startLine: 98
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a CannotRemovePrimary, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteSecondaryEmailResult.CannotRemovePrimary AsCannotRemovePrimary { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.DeleteSecondaryEmailResult.CannotRemovePrimary
+    content.vb: Public ReadOnly Property AsCannotRemovePrimary As DeleteSecondaryEmailResult.CannotRemovePrimary
+  overload: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsCannotRemovePrimary*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsOther
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: DeleteSecondaryEmailResult.IsOther
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+    startLine: 109
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsOther
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: DeleteSecondaryEmailResult.AsOther
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+    startLine: 120
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteSecondaryEmailResult.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.DeleteSecondaryEmailResult.Other
+    content.vb: Public ReadOnly Property AsOther As DeleteSecondaryEmailResult.Other
+  overload: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  commentId: T:Dropbox.Api.Team.DeleteSecondaryEmailResult
+  parent: Dropbox.Api.Team
+  name: DeleteSecondaryEmailResult
+  nameWithType: DeleteSecondaryEmailResult
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.#ctor*
+  commentId: Overload:Dropbox.Api.Team.DeleteSecondaryEmailResult.#ctor
+  name: DeleteSecondaryEmailResult
+  nameWithType: DeleteSecondaryEmailResult.DeleteSecondaryEmailResult
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.DeleteSecondaryEmailResult
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsSuccess*
+  commentId: Overload:Dropbox.Api.Team.DeleteSecondaryEmailResult.IsSuccess
+  name: IsSuccess
+  nameWithType: DeleteSecondaryEmailResult.IsSuccess
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsSuccess
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsSuccess*
+  commentId: Overload:Dropbox.Api.Team.DeleteSecondaryEmailResult.AsSuccess
+  name: AsSuccess
+  nameWithType: DeleteSecondaryEmailResult.AsSuccess
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsSuccess
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.Success
+  commentId: T:Dropbox.Api.Team.DeleteSecondaryEmailResult.Success
+  parent: Dropbox.Api.Team
+  name: DeleteSecondaryEmailResult.Success
+  nameWithType: DeleteSecondaryEmailResult.Success
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.Success
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsNotFound*
+  commentId: Overload:Dropbox.Api.Team.DeleteSecondaryEmailResult.IsNotFound
+  name: IsNotFound
+  nameWithType: DeleteSecondaryEmailResult.IsNotFound
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsNotFound
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsNotFound*
+  commentId: Overload:Dropbox.Api.Team.DeleteSecondaryEmailResult.AsNotFound
+  name: AsNotFound
+  nameWithType: DeleteSecondaryEmailResult.AsNotFound
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsNotFound
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.NotFound
+  commentId: T:Dropbox.Api.Team.DeleteSecondaryEmailResult.NotFound
+  parent: Dropbox.Api.Team
+  name: DeleteSecondaryEmailResult.NotFound
+  nameWithType: DeleteSecondaryEmailResult.NotFound
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.NotFound
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsCannotRemovePrimary*
+  commentId: Overload:Dropbox.Api.Team.DeleteSecondaryEmailResult.IsCannotRemovePrimary
+  name: IsCannotRemovePrimary
+  nameWithType: DeleteSecondaryEmailResult.IsCannotRemovePrimary
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsCannotRemovePrimary
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsCannotRemovePrimary*
+  commentId: Overload:Dropbox.Api.Team.DeleteSecondaryEmailResult.AsCannotRemovePrimary
+  name: AsCannotRemovePrimary
+  nameWithType: DeleteSecondaryEmailResult.AsCannotRemovePrimary
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsCannotRemovePrimary
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.CannotRemovePrimary
+  commentId: T:Dropbox.Api.Team.DeleteSecondaryEmailResult.CannotRemovePrimary
+  parent: Dropbox.Api.Team
+  name: DeleteSecondaryEmailResult.CannotRemovePrimary
+  nameWithType: DeleteSecondaryEmailResult.CannotRemovePrimary
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.CannotRemovePrimary
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsOther*
+  commentId: Overload:Dropbox.Api.Team.DeleteSecondaryEmailResult.IsOther
+  name: IsOther
+  nameWithType: DeleteSecondaryEmailResult.IsOther
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsOther
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsOther*
+  commentId: Overload:Dropbox.Api.Team.DeleteSecondaryEmailResult.AsOther
+  name: AsOther
+  nameWithType: DeleteSecondaryEmailResult.AsOther
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsOther
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.Other
+  commentId: T:Dropbox.Api.Team.DeleteSecondaryEmailResult.Other
+  parent: Dropbox.Api.Team
+  name: DeleteSecondaryEmailResult.Other
+  nameWithType: DeleteSecondaryEmailResult.Other
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.Other

@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.Routes
+  commentId: N:Dropbox.Api.Team.Routes
+  id: Dropbox.Api.Team.Routes
+  children:
+  - Dropbox.Api.Team.Routes.TeamTeamRoutes
+  langs:
+  - csharp
+  - vb
+  name: Dropbox.Api.Team.Routes
+  nameWithType: Dropbox.Api.Team.Routes
+  fullName: Dropbox.Api.Team.Routes
+  type: Namespace
+  assemblies:
+  - Dropbox.Api
+references:
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes
+  commentId: T:Dropbox.Api.Team.Routes.TeamTeamRoutes
+  parent: Dropbox.Api.Team.Routes
+  name: TeamTeamRoutes
+  nameWithType: TeamTeamRoutes
+  fullName: Dropbox.Api.Team.Routes.TeamTeamRoutes
+- uid: Dropbox.Api.Team.Routes
+  commentId: N:Dropbox.Api.Team.Routes
+  name: Dropbox.Api.Team.Routes
+  nameWithType: Dropbox.Api.Team.Routes
+  fullName: Dropbox.Api.Team.Routes

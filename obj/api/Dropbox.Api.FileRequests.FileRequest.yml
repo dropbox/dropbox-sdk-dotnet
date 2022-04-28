@@ -1,0 +1,868 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.FileRequest
+  commentId: T:Dropbox.Api.FileRequests.FileRequest
+  id: FileRequest
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.FileRequest.#ctor(System.String,System.String,System.String,System.DateTime,System.Boolean,System.Int64,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.String)
+  - Dropbox.Api.FileRequests.FileRequest.Created
+  - Dropbox.Api.FileRequests.FileRequest.Deadline
+  - Dropbox.Api.FileRequests.FileRequest.Description
+  - Dropbox.Api.FileRequests.FileRequest.Destination
+  - Dropbox.Api.FileRequests.FileRequest.FileCount
+  - Dropbox.Api.FileRequests.FileRequest.Id
+  - Dropbox.Api.FileRequests.FileRequest.IsOpen
+  - Dropbox.Api.FileRequests.FileRequest.Title
+  - Dropbox.Api.FileRequests.FileRequest.Url
+  langs:
+  - csharp
+  - vb
+  name: FileRequest
+  nameWithType: FileRequest
+  fullName: Dropbox.Api.FileRequests.FileRequest
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FileRequest
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>A <a href=\"https://www.dropbox.com/help/9090\">file request</a> for receiving\nfiles into the user&apos;s Dropbox account.</p>\n"
+  example: []
+  syntax:
+    content: public class FileRequest
+    content.vb: Public Class FileRequest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.FileRequest.#ctor(System.String,System.String,System.String,System.DateTime,System.Boolean,System.Int64,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.String)
+  commentId: M:Dropbox.Api.FileRequests.FileRequest.#ctor(System.String,System.String,System.String,System.DateTime,System.Boolean,System.Int64,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.String)
+  id: '#ctor(System.String,System.String,System.String,System.DateTime,System.Boolean,System.Int64,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.String)'
+  parent: Dropbox.Api.FileRequests.FileRequest
+  langs:
+  - csharp
+  - vb
+  name: FileRequest(String, String, String, DateTime, Boolean, Int64, String, FileRequestDeadline, String)
+  nameWithType: FileRequest.FileRequest(String, String, String, DateTime, Boolean, Int64, String, FileRequestDeadline, String)
+  fullName: Dropbox.Api.FileRequests.FileRequest.FileRequest(System.String, System.String, System.String, System.DateTime, System.Boolean, System.Int64, System.String, Dropbox.Api.FileRequests.FileRequestDeadline, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+    startLine: 47
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.FileRequest\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequest(string id, string url, string title, DateTime created, bool isOpen, long fileCount, string destination = null, FileRequestDeadline deadline = null, string description = null)
+    parameters:
+    - id: id
+      type: System.String
+      description: The ID of the file request.
+    - id: url
+      type: System.String
+      description: The URL of the file request.
+    - id: title
+      type: System.String
+      description: The title of the file request.
+    - id: created
+      type: System.DateTime
+      description: When this file request was created.
+    - id: isOpen
+      type: System.Boolean
+      description: >-
+        Whether or not the file request is open. If the file request
+
+        is closed, it will not accept any more file submissions.
+    - id: fileCount
+      type: System.Int64
+      description: The number of files this file request has received.
+    - id: destination
+      type: System.String
+      description: >-
+        The path of the folder in the Dropbox where uploaded
+
+        files will be sent. This can be <code>null</code> if the destination was removed. For
+
+        apps with the app folder permission, this will be relative to the app
+
+        folder.
+    - id: deadline
+      type: Dropbox.Api.FileRequests.FileRequestDeadline
+      description: >-
+        The deadline for this file request. Only set if the request
+
+        has a deadline.
+    - id: description
+      type: System.String
+      description: A description of the file request.
+    content.vb: Public Sub New(id As String, url As String, title As String, created As Date, isOpen As Boolean, fileCount As Long, destination As String = Nothing, deadline As FileRequestDeadline = Nothing, description As String = Nothing)
+  overload: Dropbox.Api.FileRequests.FileRequest.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.FileRequest.Id
+  commentId: P:Dropbox.Api.FileRequests.FileRequest.Id
+  id: Id
+  parent: Dropbox.Api.FileRequests.FileRequest
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: FileRequest.Id
+  fullName: Dropbox.Api.FileRequests.FileRequest.Id
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Id
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+    startLine: 120
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The ID of the file request.</p>\n"
+  example: []
+  syntax:
+    content: public string Id { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: Dropbox.Api.FileRequests.FileRequest.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.FileRequest.Url
+  commentId: P:Dropbox.Api.FileRequests.FileRequest.Url
+  id: Url
+  parent: Dropbox.Api.FileRequests.FileRequest
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: FileRequest.Url
+  fullName: Dropbox.Api.FileRequests.FileRequest.Url
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Url
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+    startLine: 125
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The URL of the file request.</p>\n"
+  example: []
+  syntax:
+    content: public string Url { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Url As String
+  overload: Dropbox.Api.FileRequests.FileRequest.Url*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.FileRequest.Title
+  commentId: P:Dropbox.Api.FileRequests.FileRequest.Title
+  id: Title
+  parent: Dropbox.Api.FileRequests.FileRequest
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: FileRequest.Title
+  fullName: Dropbox.Api.FileRequests.FileRequest.Title
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Title
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+    startLine: 130
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The title of the file request.</p>\n"
+  example: []
+  syntax:
+    content: public string Title { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Title As String
+  overload: Dropbox.Api.FileRequests.FileRequest.Title*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.FileRequest.Created
+  commentId: P:Dropbox.Api.FileRequests.FileRequest.Created
+  id: Created
+  parent: Dropbox.Api.FileRequests.FileRequest
+  langs:
+  - csharp
+  - vb
+  name: Created
+  nameWithType: FileRequest.Created
+  fullName: Dropbox.Api.FileRequests.FileRequest.Created
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Created
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+    startLine: 135
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>When this file request was created.</p>\n"
+  example: []
+  syntax:
+    content: public DateTime Created { get; protected set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Created As Date
+  overload: Dropbox.Api.FileRequests.FileRequest.Created*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.FileRequest.IsOpen
+  commentId: P:Dropbox.Api.FileRequests.FileRequest.IsOpen
+  id: IsOpen
+  parent: Dropbox.Api.FileRequests.FileRequest
+  langs:
+  - csharp
+  - vb
+  name: IsOpen
+  nameWithType: FileRequest.IsOpen
+  fullName: Dropbox.Api.FileRequests.FileRequest.IsOpen
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOpen
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+    startLine: 141
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Whether or not the file request is open. If the file request is closed, it\nwill not accept any more file submissions.</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOpen { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsOpen As Boolean
+  overload: Dropbox.Api.FileRequests.FileRequest.IsOpen*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.FileRequest.FileCount
+  commentId: P:Dropbox.Api.FileRequests.FileRequest.FileCount
+  id: FileCount
+  parent: Dropbox.Api.FileRequests.FileRequest
+  langs:
+  - csharp
+  - vb
+  name: FileCount
+  nameWithType: FileRequest.FileCount
+  fullName: Dropbox.Api.FileRequests.FileRequest.FileCount
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: FileCount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+    startLine: 146
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The number of files this file request has received.</p>\n"
+  example: []
+  syntax:
+    content: public long FileCount { get; protected set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property FileCount As Long
+  overload: Dropbox.Api.FileRequests.FileRequest.FileCount*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.FileRequest.Destination
+  commentId: P:Dropbox.Api.FileRequests.FileRequest.Destination
+  id: Destination
+  parent: Dropbox.Api.FileRequests.FileRequest
+  langs:
+  - csharp
+  - vb
+  name: Destination
+  nameWithType: FileRequest.Destination
+  fullName: Dropbox.Api.FileRequests.FileRequest.Destination
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Destination
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+    startLine: 153
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The path of the folder in the Dropbox where uploaded files will be sent. This\ncan be <code>null</code> if the destination was removed. For apps with the app folder\npermission, this will be relative to the app folder.</p>\n"
+  example: []
+  syntax:
+    content: public string Destination { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Destination As String
+  overload: Dropbox.Api.FileRequests.FileRequest.Destination*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.FileRequest.Deadline
+  commentId: P:Dropbox.Api.FileRequests.FileRequest.Deadline
+  id: Deadline
+  parent: Dropbox.Api.FileRequests.FileRequest
+  langs:
+  - csharp
+  - vb
+  name: Deadline
+  nameWithType: FileRequest.Deadline
+  fullName: Dropbox.Api.FileRequests.FileRequest.Deadline
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Deadline
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+    startLine: 159
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The deadline for this file request. Only set if the request has a\ndeadline.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestDeadline Deadline { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.FileRequestDeadline
+    content.vb: Public Property Deadline As FileRequestDeadline
+  overload: Dropbox.Api.FileRequests.FileRequest.Deadline*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.FileRequest.Description
+  commentId: P:Dropbox.Api.FileRequests.FileRequest.Description
+  id: Description
+  parent: Dropbox.Api.FileRequests.FileRequest
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: FileRequest.Description
+  fullName: Dropbox.Api.FileRequests.FileRequest.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequest.cs
+    startLine: 164
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>A description of the file request.</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.FileRequests.FileRequest.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.FileRequests.FileRequest
+  commentId: T:Dropbox.Api.FileRequests.FileRequest
+  parent: Dropbox.Api.FileRequests
+  name: FileRequest
+  nameWithType: FileRequest
+  fullName: Dropbox.Api.FileRequests.FileRequest
+- uid: Dropbox.Api.FileRequests.FileRequest.#ctor*
+  commentId: Overload:Dropbox.Api.FileRequests.FileRequest.#ctor
+  name: FileRequest
+  nameWithType: FileRequest.FileRequest
+  fullName: Dropbox.Api.FileRequests.FileRequest.FileRequest
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Dropbox.Api.FileRequests.FileRequestDeadline
+  commentId: T:Dropbox.Api.FileRequests.FileRequestDeadline
+  parent: Dropbox.Api.FileRequests
+  name: FileRequestDeadline
+  nameWithType: FileRequestDeadline
+  fullName: Dropbox.Api.FileRequests.FileRequestDeadline
+- uid: Dropbox.Api.FileRequests.FileRequest.Id*
+  commentId: Overload:Dropbox.Api.FileRequests.FileRequest.Id
+  name: Id
+  nameWithType: FileRequest.Id
+  fullName: Dropbox.Api.FileRequests.FileRequest.Id
+- uid: Dropbox.Api.FileRequests.FileRequest.Url*
+  commentId: Overload:Dropbox.Api.FileRequests.FileRequest.Url
+  name: Url
+  nameWithType: FileRequest.Url
+  fullName: Dropbox.Api.FileRequests.FileRequest.Url
+- uid: Dropbox.Api.FileRequests.FileRequest.Title*
+  commentId: Overload:Dropbox.Api.FileRequests.FileRequest.Title
+  name: Title
+  nameWithType: FileRequest.Title
+  fullName: Dropbox.Api.FileRequests.FileRequest.Title
+- uid: Dropbox.Api.FileRequests.FileRequest.Created*
+  commentId: Overload:Dropbox.Api.FileRequests.FileRequest.Created
+  name: Created
+  nameWithType: FileRequest.Created
+  fullName: Dropbox.Api.FileRequests.FileRequest.Created
+- uid: Dropbox.Api.FileRequests.FileRequest.IsOpen*
+  commentId: Overload:Dropbox.Api.FileRequests.FileRequest.IsOpen
+  name: IsOpen
+  nameWithType: FileRequest.IsOpen
+  fullName: Dropbox.Api.FileRequests.FileRequest.IsOpen
+- uid: Dropbox.Api.FileRequests.FileRequest.FileCount*
+  commentId: Overload:Dropbox.Api.FileRequests.FileRequest.FileCount
+  name: FileCount
+  nameWithType: FileRequest.FileCount
+  fullName: Dropbox.Api.FileRequests.FileRequest.FileCount
+- uid: Dropbox.Api.FileRequests.FileRequest.Destination*
+  commentId: Overload:Dropbox.Api.FileRequests.FileRequest.Destination
+  name: Destination
+  nameWithType: FileRequest.Destination
+  fullName: Dropbox.Api.FileRequests.FileRequest.Destination
+- uid: Dropbox.Api.FileRequests.FileRequest.Deadline*
+  commentId: Overload:Dropbox.Api.FileRequests.FileRequest.Deadline
+  name: Deadline
+  nameWithType: FileRequest.Deadline
+  fullName: Dropbox.Api.FileRequests.FileRequest.Deadline
+- uid: Dropbox.Api.FileRequests.FileRequest.Description*
+  commentId: Overload:Dropbox.Api.FileRequests.FileRequest.Description
+  name: Description
+  nameWithType: FileRequest.Description
+  fullName: Dropbox.Api.FileRequests.FileRequest.Description

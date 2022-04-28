@@ -1,0 +1,494 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.UserResendResult.InvalidUser
+  commentId: T:Dropbox.Api.Team.UserResendResult.InvalidUser
+  id: UserResendResult.InvalidUser
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.UserResendResult.InvalidUser.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  - Dropbox.Api.Team.UserResendResult.InvalidUser.Value
+  langs:
+  - csharp
+  - vb
+  name: UserResendResult.InvalidUser
+  nameWithType: UserResendResult.InvalidUser
+  fullName: Dropbox.Api.Team.UserResendResult.InvalidUser
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: InvalidUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendResult.cs
+    startLine: 274
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Specified user is not a valid target for resending verification\nemails.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class InvalidUser : UserResendResult'
+    content.vb: >-
+      Public NotInheritable Class InvalidUser
+          Inherits UserResendResult
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.UserResendResult
+  inheritedMembers:
+  - Dropbox.Api.Team.UserResendResult.IsSuccess
+  - Dropbox.Api.Team.UserResendResult.AsSuccess
+  - Dropbox.Api.Team.UserResendResult.IsInvalidUser
+  - Dropbox.Api.Team.UserResendResult.AsInvalidUser
+  - Dropbox.Api.Team.UserResendResult.IsOther
+  - Dropbox.Api.Team.UserResendResult.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.UserResendResult.InvalidUser.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  commentId: M:Dropbox.Api.Team.UserResendResult.InvalidUser.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  id: '#ctor(Dropbox.Api.Team.UserSelectorArg)'
+  parent: Dropbox.Api.Team.UserResendResult.InvalidUser
+  langs:
+  - csharp
+  - vb
+  name: InvalidUser(UserSelectorArg)
+  nameWithType: UserResendResult.InvalidUser.InvalidUser(UserSelectorArg)
+  fullName: Dropbox.Api.Team.UserResendResult.InvalidUser.InvalidUser(Dropbox.Api.Team.UserSelectorArg)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendResult.cs
+    startLine: 293
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.UserResendResult.InvalidUser\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public InvalidUser(UserSelectorArg value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: The value
+    content.vb: Public Sub New(value As UserSelectorArg)
+  overload: Dropbox.Api.Team.UserResendResult.InvalidUser.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.UserResendResult.InvalidUser.Value
+  commentId: P:Dropbox.Api.Team.UserResendResult.InvalidUser.Value
+  id: Value
+  parent: Dropbox.Api.Team.UserResendResult.InvalidUser
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: UserResendResult.InvalidUser.Value
+  fullName: Dropbox.Api.Team.UserResendResult.InvalidUser.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendResult.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendResult.cs
+    startLine: 308
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorArg Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserSelectorArg
+    content.vb: Public ReadOnly Property Value As UserSelectorArg
+  overload: Dropbox.Api.Team.UserResendResult.InvalidUser.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.UserResendResult
+  commentId: T:Dropbox.Api.Team.UserResendResult
+  parent: Dropbox.Api.Team
+  name: UserResendResult
+  nameWithType: UserResendResult
+  fullName: Dropbox.Api.Team.UserResendResult
+- uid: Dropbox.Api.Team.UserResendResult.IsSuccess
+  commentId: P:Dropbox.Api.Team.UserResendResult.IsSuccess
+  parent: Dropbox.Api.Team.UserResendResult
+  name: IsSuccess
+  nameWithType: UserResendResult.IsSuccess
+  fullName: Dropbox.Api.Team.UserResendResult.IsSuccess
+- uid: Dropbox.Api.Team.UserResendResult.AsSuccess
+  commentId: P:Dropbox.Api.Team.UserResendResult.AsSuccess
+  parent: Dropbox.Api.Team.UserResendResult
+  name: AsSuccess
+  nameWithType: UserResendResult.AsSuccess
+  fullName: Dropbox.Api.Team.UserResendResult.AsSuccess
+- uid: Dropbox.Api.Team.UserResendResult.IsInvalidUser
+  commentId: P:Dropbox.Api.Team.UserResendResult.IsInvalidUser
+  parent: Dropbox.Api.Team.UserResendResult
+  name: IsInvalidUser
+  nameWithType: UserResendResult.IsInvalidUser
+  fullName: Dropbox.Api.Team.UserResendResult.IsInvalidUser
+- uid: Dropbox.Api.Team.UserResendResult.AsInvalidUser
+  commentId: P:Dropbox.Api.Team.UserResendResult.AsInvalidUser
+  parent: Dropbox.Api.Team.UserResendResult
+  name: AsInvalidUser
+  nameWithType: UserResendResult.AsInvalidUser
+  fullName: Dropbox.Api.Team.UserResendResult.AsInvalidUser
+- uid: Dropbox.Api.Team.UserResendResult.IsOther
+  commentId: P:Dropbox.Api.Team.UserResendResult.IsOther
+  parent: Dropbox.Api.Team.UserResendResult
+  name: IsOther
+  nameWithType: UserResendResult.IsOther
+  fullName: Dropbox.Api.Team.UserResendResult.IsOther
+- uid: Dropbox.Api.Team.UserResendResult.AsOther
+  commentId: P:Dropbox.Api.Team.UserResendResult.AsOther
+  parent: Dropbox.Api.Team.UserResendResult
+  name: AsOther
+  nameWithType: UserResendResult.AsOther
+  fullName: Dropbox.Api.Team.UserResendResult.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.UserResendResult.InvalidUser
+  commentId: T:Dropbox.Api.Team.UserResendResult.InvalidUser
+  parent: Dropbox.Api.Team
+  name: UserResendResult.InvalidUser
+  nameWithType: UserResendResult.InvalidUser
+  fullName: Dropbox.Api.Team.UserResendResult.InvalidUser
+- uid: Dropbox.Api.Team.UserResendResult.InvalidUser.#ctor*
+  commentId: Overload:Dropbox.Api.Team.UserResendResult.InvalidUser.#ctor
+  name: InvalidUser
+  nameWithType: UserResendResult.InvalidUser.InvalidUser
+  fullName: Dropbox.Api.Team.UserResendResult.InvalidUser.InvalidUser
+- uid: Dropbox.Api.Team.UserSelectorArg
+  commentId: T:Dropbox.Api.Team.UserSelectorArg
+  parent: Dropbox.Api.Team
+  name: UserSelectorArg
+  nameWithType: UserSelectorArg
+  fullName: Dropbox.Api.Team.UserSelectorArg
+- uid: Dropbox.Api.Team.UserResendResult.InvalidUser.Value*
+  commentId: Overload:Dropbox.Api.Team.UserResendResult.InvalidUser.Value
+  name: Value
+  nameWithType: UserResendResult.InvalidUser.Value
+  fullName: Dropbox.Api.Team.UserResendResult.InvalidUser.Value

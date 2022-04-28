@@ -1,0 +1,49 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Contacts
+  commentId: N:Dropbox.Api.Contacts
+  id: Dropbox.Api.Contacts
+  children:
+  - Dropbox.Api.Contacts.DeleteManualContactsArg
+  - Dropbox.Api.Contacts.DeleteManualContactsError
+  - Dropbox.Api.Contacts.DeleteManualContactsError.ContactsNotFound
+  - Dropbox.Api.Contacts.DeleteManualContactsError.Other
+  langs:
+  - csharp
+  - vb
+  name: Dropbox.Api.Contacts
+  nameWithType: Dropbox.Api.Contacts
+  fullName: Dropbox.Api.Contacts
+  type: Namespace
+  assemblies:
+  - Dropbox.Api
+references:
+- uid: Dropbox.Api.Contacts.DeleteManualContactsArg
+  commentId: T:Dropbox.Api.Contacts.DeleteManualContactsArg
+  parent: Dropbox.Api.Contacts
+  name: DeleteManualContactsArg
+  nameWithType: DeleteManualContactsArg
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsArg
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError
+  commentId: T:Dropbox.Api.Contacts.DeleteManualContactsError
+  parent: Dropbox.Api.Contacts
+  name: DeleteManualContactsError
+  nameWithType: DeleteManualContactsError
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.ContactsNotFound
+  commentId: T:Dropbox.Api.Contacts.DeleteManualContactsError.ContactsNotFound
+  parent: Dropbox.Api.Contacts
+  name: DeleteManualContactsError.ContactsNotFound
+  nameWithType: DeleteManualContactsError.ContactsNotFound
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.ContactsNotFound
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.Other
+  commentId: T:Dropbox.Api.Contacts.DeleteManualContactsError.Other
+  parent: Dropbox.Api.Contacts
+  name: DeleteManualContactsError.Other
+  nameWithType: DeleteManualContactsError.Other
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.Other
+- uid: Dropbox.Api.Contacts
+  commentId: N:Dropbox.Api.Contacts
+  name: Dropbox.Api.Contacts
+  nameWithType: Dropbox.Api.Contacts
+  fullName: Dropbox.Api.Contacts

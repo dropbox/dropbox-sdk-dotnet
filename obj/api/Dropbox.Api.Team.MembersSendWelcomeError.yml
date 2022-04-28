@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersSendWelcomeError
+  commentId: T:Dropbox.Api.Team.MembersSendWelcomeError
+  id: MembersSendWelcomeError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersSendWelcomeError.#ctor
+  - Dropbox.Api.Team.MembersSendWelcomeError.AsOther
+  - Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotFound
+  - Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotInTeam
+  - Dropbox.Api.Team.MembersSendWelcomeError.IsOther
+  - Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotFound
+  - Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotInTeam
+  langs:
+  - csharp
+  - vb
+  name: MembersSendWelcomeError
+  nameWithType: MembersSendWelcomeError
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: MembersSendWelcomeError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The members send welcome error object</p>\n"
+  example: []
+  syntax:
+    content: public class MembersSendWelcomeError
+    content.vb: Public Class MembersSendWelcomeError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.MembersSendWelcomeError.Other
+  - Dropbox.Api.Team.MembersSendWelcomeError.UserNotFound
+  - Dropbox.Api.Team.MembersSendWelcomeError.UserNotInTeam
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.#ctor
+  commentId: M:Dropbox.Api.Team.MembersSendWelcomeError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersSendWelcomeError
+  langs:
+  - csharp
+  - vb
+  name: MembersSendWelcomeError()
+  nameWithType: MembersSendWelcomeError.MembersSendWelcomeError()
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.MembersSendWelcomeError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersSendWelcomeError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSendWelcomeError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersSendWelcomeError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.IsOther
+  commentId: P:Dropbox.Api.Team.MembersSendWelcomeError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.MembersSendWelcomeError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MembersSendWelcomeError.IsOther
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.MembersSendWelcomeError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.AsOther
+  commentId: P:Dropbox.Api.Team.MembersSendWelcomeError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.MembersSendWelcomeError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MembersSendWelcomeError.AsOther
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSendWelcomeError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSendWelcomeError.Other
+    content.vb: Public ReadOnly Property AsOther As MembersSendWelcomeError.Other
+  overload: Dropbox.Api.Team.MembersSendWelcomeError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotInTeam
+  id: IsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersSendWelcomeError
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotInTeam
+  nameWithType: MembersSendWelcomeError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotInTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotInTeam As Boolean
+  overload: Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotInTeam
+  id: AsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersSendWelcomeError
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotInTeam
+  nameWithType: MembersSendWelcomeError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UserNotInTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSendWelcomeError.UserNotInTeam AsUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSendWelcomeError.UserNotInTeam
+    content.vb: Public ReadOnly Property AsUserNotInTeam As MembersSendWelcomeError.UserNotInTeam
+  overload: Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotFound
+  id: IsUserNotFound
+  parent: Dropbox.Api.Team.MembersSendWelcomeError
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotFound
+  nameWithType: MembersSendWelcomeError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotFound As Boolean
+  overload: Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotFound
+  id: AsUserNotFound
+  parent: Dropbox.Api.Team.MembersSendWelcomeError
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotFound
+  nameWithType: MembersSendWelcomeError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSendWelcomeError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UserNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSendWelcomeError.UserNotFound AsUserNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSendWelcomeError.UserNotFound
+    content.vb: Public ReadOnly Property AsUserNotFound As MembersSendWelcomeError.UserNotFound
+  overload: Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.MembersSendWelcomeError
+  commentId: T:Dropbox.Api.Team.MembersSendWelcomeError
+  parent: Dropbox.Api.Team
+  name: MembersSendWelcomeError
+  nameWithType: MembersSendWelcomeError
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersSendWelcomeError.#ctor
+  name: MembersSendWelcomeError
+  nameWithType: MembersSendWelcomeError.MembersSendWelcomeError
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.MembersSendWelcomeError
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersSendWelcomeError.IsOther
+  name: IsOther
+  nameWithType: MembersSendWelcomeError.IsOther
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.IsOther
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersSendWelcomeError.AsOther
+  name: AsOther
+  nameWithType: MembersSendWelcomeError.AsOther
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.AsOther
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.Other
+  commentId: T:Dropbox.Api.Team.MembersSendWelcomeError.Other
+  parent: Dropbox.Api.Team
+  name: MembersSendWelcomeError.Other
+  nameWithType: MembersSendWelcomeError.Other
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.Other
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotInTeam
+  name: IsUserNotInTeam
+  nameWithType: MembersSendWelcomeError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotInTeam
+  name: AsUserNotInTeam
+  nameWithType: MembersSendWelcomeError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.UserNotInTeam
+  commentId: T:Dropbox.Api.Team.MembersSendWelcomeError.UserNotInTeam
+  parent: Dropbox.Api.Team
+  name: MembersSendWelcomeError.UserNotInTeam
+  nameWithType: MembersSendWelcomeError.UserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.UserNotInTeam
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotFound
+  name: IsUserNotFound
+  nameWithType: MembersSendWelcomeError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.IsUserNotFound
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotFound
+  name: AsUserNotFound
+  nameWithType: MembersSendWelcomeError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.AsUserNotFound
+- uid: Dropbox.Api.Team.MembersSendWelcomeError.UserNotFound
+  commentId: T:Dropbox.Api.Team.MembersSendWelcomeError.UserNotFound
+  parent: Dropbox.Api.Team
+  name: MembersSendWelcomeError.UserNotFound
+  nameWithType: MembersSendWelcomeError.UserNotFound
+  fullName: Dropbox.Api.Team.MembersSendWelcomeError.UserNotFound

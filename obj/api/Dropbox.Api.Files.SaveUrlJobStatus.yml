@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SaveUrlJobStatus
+  commentId: T:Dropbox.Api.Files.SaveUrlJobStatus
+  id: SaveUrlJobStatus
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SaveUrlJobStatus.#ctor
+  - Dropbox.Api.Files.SaveUrlJobStatus.AsComplete
+  - Dropbox.Api.Files.SaveUrlJobStatus.AsFailed
+  - Dropbox.Api.Files.SaveUrlJobStatus.AsInProgress
+  - Dropbox.Api.Files.SaveUrlJobStatus.IsComplete
+  - Dropbox.Api.Files.SaveUrlJobStatus.IsFailed
+  - Dropbox.Api.Files.SaveUrlJobStatus.IsInProgress
+  langs:
+  - csharp
+  - vb
+  name: SaveUrlJobStatus
+  nameWithType: SaveUrlJobStatus
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SaveUrlJobStatus
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The save url job status object</p>\n"
+  example: []
+  syntax:
+    content: public class SaveUrlJobStatus
+    content.vb: Public Class SaveUrlJobStatus
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.SaveUrlJobStatus.Complete
+  - Dropbox.Api.Files.SaveUrlJobStatus.Failed
+  - Dropbox.Api.Files.SaveUrlJobStatus.InProgress
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.#ctor
+  commentId: M:Dropbox.Api.Files.SaveUrlJobStatus.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.SaveUrlJobStatus
+  langs:
+  - csharp
+  - vb
+  name: SaveUrlJobStatus()
+  nameWithType: SaveUrlJobStatus.SaveUrlJobStatus()
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.SaveUrlJobStatus()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SaveUrlJobStatus\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SaveUrlJobStatus()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.SaveUrlJobStatus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.IsComplete
+  commentId: P:Dropbox.Api.Files.SaveUrlJobStatus.IsComplete
+  id: IsComplete
+  parent: Dropbox.Api.Files.SaveUrlJobStatus
+  langs:
+  - csharp
+  - vb
+  name: IsComplete
+  nameWithType: SaveUrlJobStatus.IsComplete
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.IsComplete
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsComplete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Complete</p>\n"
+  example: []
+  syntax:
+    content: public bool IsComplete { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsComplete As Boolean
+  overload: Dropbox.Api.Files.SaveUrlJobStatus.IsComplete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.AsComplete
+  commentId: P:Dropbox.Api.Files.SaveUrlJobStatus.AsComplete
+  id: AsComplete
+  parent: Dropbox.Api.Files.SaveUrlJobStatus
+  langs:
+  - csharp
+  - vb
+  name: AsComplete
+  nameWithType: SaveUrlJobStatus.AsComplete
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.AsComplete
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsComplete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Complete, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SaveUrlJobStatus.Complete AsComplete { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SaveUrlJobStatus.Complete
+    content.vb: Public ReadOnly Property AsComplete As SaveUrlJobStatus.Complete
+  overload: Dropbox.Api.Files.SaveUrlJobStatus.AsComplete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.IsFailed
+  commentId: P:Dropbox.Api.Files.SaveUrlJobStatus.IsFailed
+  id: IsFailed
+  parent: Dropbox.Api.Files.SaveUrlJobStatus
+  langs:
+  - csharp
+  - vb
+  name: IsFailed
+  nameWithType: SaveUrlJobStatus.IsFailed
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.IsFailed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsFailed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Failed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFailed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFailed As Boolean
+  overload: Dropbox.Api.Files.SaveUrlJobStatus.IsFailed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.AsFailed
+  commentId: P:Dropbox.Api.Files.SaveUrlJobStatus.AsFailed
+  id: AsFailed
+  parent: Dropbox.Api.Files.SaveUrlJobStatus
+  langs:
+  - csharp
+  - vb
+  name: AsFailed
+  nameWithType: SaveUrlJobStatus.AsFailed
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.AsFailed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsFailed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Failed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SaveUrlJobStatus.Failed AsFailed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SaveUrlJobStatus.Failed
+    content.vb: Public ReadOnly Property AsFailed As SaveUrlJobStatus.Failed
+  overload: Dropbox.Api.Files.SaveUrlJobStatus.AsFailed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.IsInProgress
+  commentId: P:Dropbox.Api.Files.SaveUrlJobStatus.IsInProgress
+  id: IsInProgress
+  parent: Dropbox.Api.Files.SaveUrlJobStatus
+  langs:
+  - csharp
+  - vb
+  name: IsInProgress
+  nameWithType: SaveUrlJobStatus.IsInProgress
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.IsInProgress
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsInProgress
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is InProgress</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInProgress { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInProgress As Boolean
+  overload: Dropbox.Api.Files.SaveUrlJobStatus.IsInProgress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.AsInProgress
+  commentId: P:Dropbox.Api.Files.SaveUrlJobStatus.AsInProgress
+  id: AsInProgress
+  parent: Dropbox.Api.Files.SaveUrlJobStatus
+  langs:
+  - csharp
+  - vb
+  name: AsInProgress
+  nameWithType: SaveUrlJobStatus.AsInProgress
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.AsInProgress
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsInProgress
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlJobStatus.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a InProgress, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SaveUrlJobStatus.InProgress AsInProgress { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SaveUrlJobStatus.InProgress
+    content.vb: Public ReadOnly Property AsInProgress As SaveUrlJobStatus.InProgress
+  overload: Dropbox.Api.Files.SaveUrlJobStatus.AsInProgress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.SaveUrlJobStatus
+  commentId: T:Dropbox.Api.Files.SaveUrlJobStatus
+  parent: Dropbox.Api.Files
+  name: SaveUrlJobStatus
+  nameWithType: SaveUrlJobStatus
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.#ctor*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlJobStatus.#ctor
+  name: SaveUrlJobStatus
+  nameWithType: SaveUrlJobStatus.SaveUrlJobStatus
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.SaveUrlJobStatus
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.IsComplete*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlJobStatus.IsComplete
+  name: IsComplete
+  nameWithType: SaveUrlJobStatus.IsComplete
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.IsComplete
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.AsComplete*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlJobStatus.AsComplete
+  name: AsComplete
+  nameWithType: SaveUrlJobStatus.AsComplete
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.AsComplete
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.Complete
+  commentId: T:Dropbox.Api.Files.SaveUrlJobStatus.Complete
+  parent: Dropbox.Api.Files
+  name: SaveUrlJobStatus.Complete
+  nameWithType: SaveUrlJobStatus.Complete
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.Complete
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.IsFailed*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlJobStatus.IsFailed
+  name: IsFailed
+  nameWithType: SaveUrlJobStatus.IsFailed
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.IsFailed
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.AsFailed*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlJobStatus.AsFailed
+  name: AsFailed
+  nameWithType: SaveUrlJobStatus.AsFailed
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.AsFailed
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.Failed
+  commentId: T:Dropbox.Api.Files.SaveUrlJobStatus.Failed
+  parent: Dropbox.Api.Files
+  name: SaveUrlJobStatus.Failed
+  nameWithType: SaveUrlJobStatus.Failed
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.Failed
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.IsInProgress*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlJobStatus.IsInProgress
+  name: IsInProgress
+  nameWithType: SaveUrlJobStatus.IsInProgress
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.IsInProgress
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.AsInProgress*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlJobStatus.AsInProgress
+  name: AsInProgress
+  nameWithType: SaveUrlJobStatus.AsInProgress
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.AsInProgress
+- uid: Dropbox.Api.Files.SaveUrlJobStatus.InProgress
+  commentId: T:Dropbox.Api.Files.SaveUrlJobStatus.InProgress
+  parent: Dropbox.Api.Files
+  name: SaveUrlJobStatus.InProgress
+  nameWithType: SaveUrlJobStatus.InProgress
+  fullName: Dropbox.Api.Files.SaveUrlJobStatus.InProgress

@@ -1,0 +1,861 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadError
+  commentId: T:Dropbox.Api.Files.UploadError
+  id: UploadError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadError.#ctor
+  - Dropbox.Api.Files.UploadError.AsContentHashMismatch
+  - Dropbox.Api.Files.UploadError.AsOther
+  - Dropbox.Api.Files.UploadError.AsPath
+  - Dropbox.Api.Files.UploadError.AsPayloadTooLarge
+  - Dropbox.Api.Files.UploadError.AsPropertiesError
+  - Dropbox.Api.Files.UploadError.IsContentHashMismatch
+  - Dropbox.Api.Files.UploadError.IsOther
+  - Dropbox.Api.Files.UploadError.IsPath
+  - Dropbox.Api.Files.UploadError.IsPayloadTooLarge
+  - Dropbox.Api.Files.UploadError.IsPropertiesError
+  langs:
+  - csharp
+  - vb
+  name: UploadError
+  nameWithType: UploadError
+  fullName: Dropbox.Api.Files.UploadError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: UploadError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The upload error object</p>\n"
+  example: []
+  syntax:
+    content: public class UploadError
+    content.vb: Public Class UploadError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.UploadError.ContentHashMismatch
+  - Dropbox.Api.Files.UploadError.Other
+  - Dropbox.Api.Files.UploadError.Path
+  - Dropbox.Api.Files.UploadError.PayloadTooLarge
+  - Dropbox.Api.Files.UploadError.PropertiesError
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.UploadError.#ctor
+  commentId: M:Dropbox.Api.Files.UploadError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.UploadError
+  langs:
+  - csharp
+  - vb
+  name: UploadError()
+  nameWithType: UploadError.UploadError()
+  fullName: Dropbox.Api.Files.UploadError.UploadError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public UploadError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.UploadError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadError.IsPath
+  commentId: P:Dropbox.Api.Files.UploadError.IsPath
+  id: IsPath
+  parent: Dropbox.Api.Files.UploadError
+  langs:
+  - csharp
+  - vb
+  name: IsPath
+  nameWithType: UploadError.IsPath
+  fullName: Dropbox.Api.Files.UploadError.IsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Path</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPath As Boolean
+  overload: Dropbox.Api.Files.UploadError.IsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadError.AsPath
+  commentId: P:Dropbox.Api.Files.UploadError.AsPath
+  id: AsPath
+  parent: Dropbox.Api.Files.UploadError
+  langs:
+  - csharp
+  - vb
+  name: AsPath
+  nameWithType: UploadError.AsPath
+  fullName: Dropbox.Api.Files.UploadError.AsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Path, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadError.Path AsPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadError.Path
+    content.vb: Public ReadOnly Property AsPath As UploadError.Path
+  overload: Dropbox.Api.Files.UploadError.AsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadError.IsPropertiesError
+  commentId: P:Dropbox.Api.Files.UploadError.IsPropertiesError
+  id: IsPropertiesError
+  parent: Dropbox.Api.Files.UploadError
+  langs:
+  - csharp
+  - vb
+  name: IsPropertiesError
+  nameWithType: UploadError.IsPropertiesError
+  fullName: Dropbox.Api.Files.UploadError.IsPropertiesError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPropertiesError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is PropertiesError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPropertiesError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPropertiesError As Boolean
+  overload: Dropbox.Api.Files.UploadError.IsPropertiesError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadError.AsPropertiesError
+  commentId: P:Dropbox.Api.Files.UploadError.AsPropertiesError
+  id: AsPropertiesError
+  parent: Dropbox.Api.Files.UploadError
+  langs:
+  - csharp
+  - vb
+  name: AsPropertiesError
+  nameWithType: UploadError.AsPropertiesError
+  fullName: Dropbox.Api.Files.UploadError.AsPropertiesError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPropertiesError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a PropertiesError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadError.PropertiesError AsPropertiesError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadError.PropertiesError
+    content.vb: Public ReadOnly Property AsPropertiesError As UploadError.PropertiesError
+  overload: Dropbox.Api.Files.UploadError.AsPropertiesError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadError.IsPayloadTooLarge
+  commentId: P:Dropbox.Api.Files.UploadError.IsPayloadTooLarge
+  id: IsPayloadTooLarge
+  parent: Dropbox.Api.Files.UploadError
+  langs:
+  - csharp
+  - vb
+  name: IsPayloadTooLarge
+  nameWithType: UploadError.IsPayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadError.IsPayloadTooLarge
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsPayloadTooLarge
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is PayloadTooLarge</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPayloadTooLarge { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPayloadTooLarge As Boolean
+  overload: Dropbox.Api.Files.UploadError.IsPayloadTooLarge*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadError.AsPayloadTooLarge
+  commentId: P:Dropbox.Api.Files.UploadError.AsPayloadTooLarge
+  id: AsPayloadTooLarge
+  parent: Dropbox.Api.Files.UploadError
+  langs:
+  - csharp
+  - vb
+  name: AsPayloadTooLarge
+  nameWithType: UploadError.AsPayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadError.AsPayloadTooLarge
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsPayloadTooLarge
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a PayloadTooLarge, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadError.PayloadTooLarge AsPayloadTooLarge { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadError.PayloadTooLarge
+    content.vb: Public ReadOnly Property AsPayloadTooLarge As UploadError.PayloadTooLarge
+  overload: Dropbox.Api.Files.UploadError.AsPayloadTooLarge*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadError.IsContentHashMismatch
+  commentId: P:Dropbox.Api.Files.UploadError.IsContentHashMismatch
+  id: IsContentHashMismatch
+  parent: Dropbox.Api.Files.UploadError
+  langs:
+  - csharp
+  - vb
+  name: IsContentHashMismatch
+  nameWithType: UploadError.IsContentHashMismatch
+  fullName: Dropbox.Api.Files.UploadError.IsContentHashMismatch
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsContentHashMismatch
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is ContentHashMismatch</p>\n"
+  example: []
+  syntax:
+    content: public bool IsContentHashMismatch { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsContentHashMismatch As Boolean
+  overload: Dropbox.Api.Files.UploadError.IsContentHashMismatch*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadError.AsContentHashMismatch
+  commentId: P:Dropbox.Api.Files.UploadError.AsContentHashMismatch
+  id: AsContentHashMismatch
+  parent: Dropbox.Api.Files.UploadError
+  langs:
+  - csharp
+  - vb
+  name: AsContentHashMismatch
+  nameWithType: UploadError.AsContentHashMismatch
+  fullName: Dropbox.Api.Files.UploadError.AsContentHashMismatch
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsContentHashMismatch
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a ContentHashMismatch, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadError.ContentHashMismatch AsContentHashMismatch { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadError.ContentHashMismatch
+    content.vb: Public ReadOnly Property AsContentHashMismatch As UploadError.ContentHashMismatch
+  overload: Dropbox.Api.Files.UploadError.AsContentHashMismatch*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadError.IsOther
+  commentId: P:Dropbox.Api.Files.UploadError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.UploadError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: UploadError.IsOther
+  fullName: Dropbox.Api.Files.UploadError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.UploadError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.UploadError.AsOther
+  commentId: P:Dropbox.Api.Files.UploadError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.UploadError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: UploadError.AsOther
+  fullName: Dropbox.Api.Files.UploadError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadError.Other
+    content.vb: Public ReadOnly Property AsOther As UploadError.Other
+  overload: Dropbox.Api.Files.UploadError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.UploadError
+  commentId: T:Dropbox.Api.Files.UploadError
+  parent: Dropbox.Api.Files
+  name: UploadError
+  nameWithType: UploadError
+  fullName: Dropbox.Api.Files.UploadError
+- uid: Dropbox.Api.Files.UploadError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.UploadError.#ctor
+  name: UploadError
+  nameWithType: UploadError.UploadError
+  fullName: Dropbox.Api.Files.UploadError.UploadError
+- uid: Dropbox.Api.Files.UploadError.IsPath*
+  commentId: Overload:Dropbox.Api.Files.UploadError.IsPath
+  name: IsPath
+  nameWithType: UploadError.IsPath
+  fullName: Dropbox.Api.Files.UploadError.IsPath
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.UploadError.AsPath*
+  commentId: Overload:Dropbox.Api.Files.UploadError.AsPath
+  name: AsPath
+  nameWithType: UploadError.AsPath
+  fullName: Dropbox.Api.Files.UploadError.AsPath
+- uid: Dropbox.Api.Files.UploadError.Path
+  commentId: T:Dropbox.Api.Files.UploadError.Path
+  parent: Dropbox.Api.Files
+  name: UploadError.Path
+  nameWithType: UploadError.Path
+  fullName: Dropbox.Api.Files.UploadError.Path
+- uid: Dropbox.Api.Files.UploadError.IsPropertiesError*
+  commentId: Overload:Dropbox.Api.Files.UploadError.IsPropertiesError
+  name: IsPropertiesError
+  nameWithType: UploadError.IsPropertiesError
+  fullName: Dropbox.Api.Files.UploadError.IsPropertiesError
+- uid: Dropbox.Api.Files.UploadError.AsPropertiesError*
+  commentId: Overload:Dropbox.Api.Files.UploadError.AsPropertiesError
+  name: AsPropertiesError
+  nameWithType: UploadError.AsPropertiesError
+  fullName: Dropbox.Api.Files.UploadError.AsPropertiesError
+- uid: Dropbox.Api.Files.UploadError.PropertiesError
+  commentId: T:Dropbox.Api.Files.UploadError.PropertiesError
+  parent: Dropbox.Api.Files
+  name: UploadError.PropertiesError
+  nameWithType: UploadError.PropertiesError
+  fullName: Dropbox.Api.Files.UploadError.PropertiesError
+- uid: Dropbox.Api.Files.UploadError.IsPayloadTooLarge*
+  commentId: Overload:Dropbox.Api.Files.UploadError.IsPayloadTooLarge
+  name: IsPayloadTooLarge
+  nameWithType: UploadError.IsPayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadError.IsPayloadTooLarge
+- uid: Dropbox.Api.Files.UploadError.AsPayloadTooLarge*
+  commentId: Overload:Dropbox.Api.Files.UploadError.AsPayloadTooLarge
+  name: AsPayloadTooLarge
+  nameWithType: UploadError.AsPayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadError.AsPayloadTooLarge
+- uid: Dropbox.Api.Files.UploadError.PayloadTooLarge
+  commentId: T:Dropbox.Api.Files.UploadError.PayloadTooLarge
+  parent: Dropbox.Api.Files
+  name: UploadError.PayloadTooLarge
+  nameWithType: UploadError.PayloadTooLarge
+  fullName: Dropbox.Api.Files.UploadError.PayloadTooLarge
+- uid: Dropbox.Api.Files.UploadError.IsContentHashMismatch*
+  commentId: Overload:Dropbox.Api.Files.UploadError.IsContentHashMismatch
+  name: IsContentHashMismatch
+  nameWithType: UploadError.IsContentHashMismatch
+  fullName: Dropbox.Api.Files.UploadError.IsContentHashMismatch
+- uid: Dropbox.Api.Files.UploadError.AsContentHashMismatch*
+  commentId: Overload:Dropbox.Api.Files.UploadError.AsContentHashMismatch
+  name: AsContentHashMismatch
+  nameWithType: UploadError.AsContentHashMismatch
+  fullName: Dropbox.Api.Files.UploadError.AsContentHashMismatch
+- uid: Dropbox.Api.Files.UploadError.ContentHashMismatch
+  commentId: T:Dropbox.Api.Files.UploadError.ContentHashMismatch
+  parent: Dropbox.Api.Files
+  name: UploadError.ContentHashMismatch
+  nameWithType: UploadError.ContentHashMismatch
+  fullName: Dropbox.Api.Files.UploadError.ContentHashMismatch
+- uid: Dropbox.Api.Files.UploadError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.UploadError.IsOther
+  name: IsOther
+  nameWithType: UploadError.IsOther
+  fullName: Dropbox.Api.Files.UploadError.IsOther
+- uid: Dropbox.Api.Files.UploadError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.UploadError.AsOther
+  name: AsOther
+  nameWithType: UploadError.AsOther
+  fullName: Dropbox.Api.Files.UploadError.AsOther
+- uid: Dropbox.Api.Files.UploadError.Other
+  commentId: T:Dropbox.Api.Files.UploadError.Other
+  parent: Dropbox.Api.Files
+  name: UploadError.Other
+  nameWithType: UploadError.Other
+  fullName: Dropbox.Api.Files.UploadError.Other

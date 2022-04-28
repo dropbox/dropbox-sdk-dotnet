@@ -1,0 +1,441 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.Enabled
+  commentId: T:Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.Enabled
+  id: SmarterSmartSyncPolicyState.Enabled
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.Enabled.Instance
+  langs:
+  - csharp
+  - vb
+  name: SmarterSmartSyncPolicyState.Enabled
+  nameWithType: SmarterSmartSyncPolicyState.Enabled
+  fullName: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.Enabled
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmarterSmartSyncPolicyState.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Enabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmarterSmartSyncPolicyState.cs
+    startLine: 252
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Smarter Smart Sync feature is enabled.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Enabled : SmarterSmartSyncPolicyState'
+    content.vb: >-
+      Public NotInheritable Class Enabled
+          Inherits SmarterSmartSyncPolicyState
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState
+  inheritedMembers:
+  - Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.IsDisabled
+  - Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.AsDisabled
+  - Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.IsEnabled
+  - Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.AsEnabled
+  - Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.IsOther
+  - Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.Enabled.Instance
+  commentId: F:Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.Enabled.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.Enabled
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SmarterSmartSyncPolicyState.Enabled.Instance
+  fullName: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.Enabled.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmarterSmartSyncPolicyState.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmarterSmartSyncPolicyState.cs
+    startLine: 276
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>A singleton instance of Enabled</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SmarterSmartSyncPolicyState.Enabled Instance
+    return:
+      type: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.Enabled
+    content.vb: Public Shared ReadOnly Instance As SmarterSmartSyncPolicyState.Enabled
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState
+  commentId: T:Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState
+  parent: Dropbox.Api.TeamPolicies
+  name: SmarterSmartSyncPolicyState
+  nameWithType: SmarterSmartSyncPolicyState
+  fullName: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState
+- uid: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.IsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.IsDisabled
+  parent: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState
+  name: IsDisabled
+  nameWithType: SmarterSmartSyncPolicyState.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.IsDisabled
+- uid: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.AsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.AsDisabled
+  parent: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState
+  name: AsDisabled
+  nameWithType: SmarterSmartSyncPolicyState.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.AsDisabled
+- uid: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.IsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.IsEnabled
+  parent: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState
+  name: IsEnabled
+  nameWithType: SmarterSmartSyncPolicyState.IsEnabled
+  fullName: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.IsEnabled
+- uid: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.AsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.AsEnabled
+  parent: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState
+  name: AsEnabled
+  nameWithType: SmarterSmartSyncPolicyState.AsEnabled
+  fullName: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.AsEnabled
+- uid: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.IsOther
+  parent: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState
+  name: IsOther
+  nameWithType: SmarterSmartSyncPolicyState.IsOther
+  fullName: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.IsOther
+- uid: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.AsOther
+  parent: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState
+  name: AsOther
+  nameWithType: SmarterSmartSyncPolicyState.AsOther
+  fullName: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.Enabled
+  commentId: T:Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.Enabled
+  parent: Dropbox.Api.TeamPolicies
+  name: SmarterSmartSyncPolicyState.Enabled
+  nameWithType: SmarterSmartSyncPolicyState.Enabled
+  fullName: Dropbox.Api.TeamPolicies.SmarterSmartSyncPolicyState.Enabled

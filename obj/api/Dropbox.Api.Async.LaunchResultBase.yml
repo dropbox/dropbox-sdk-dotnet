@@ -1,0 +1,495 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Async.LaunchResultBase
+  commentId: T:Dropbox.Api.Async.LaunchResultBase
+  id: LaunchResultBase
+  parent: Dropbox.Api.Async
+  children:
+  - Dropbox.Api.Async.LaunchResultBase.#ctor
+  - Dropbox.Api.Async.LaunchResultBase.AsAsyncJobId
+  - Dropbox.Api.Async.LaunchResultBase.IsAsyncJobId
+  langs:
+  - csharp
+  - vb
+  name: LaunchResultBase
+  nameWithType: LaunchResultBase
+  fullName: Dropbox.Api.Async.LaunchResultBase
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchResultBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: LaunchResultBase
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchResultBase.cs
+    startLine: 19
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>Result returned by methods that launch an asynchronous job.</p>\n<p>A method who may either launch an asynchronous job, or complete the request\nsynchronously, can use this union by extending it, and adding a &apos;complete&apos; field with\nthe type of the synchronous response.</p>\n<p>See <xref href=\"Dropbox.Api.Async.LaunchEmptyResult\" data-throw-if-not-resolved=\"false\"></xref> for an example.</p>\n"
+  example: []
+  syntax:
+    content: public class LaunchResultBase
+    content.vb: Public Class LaunchResultBase
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Async.LaunchResultBase.AsyncJobId
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Async.LaunchResultBase.#ctor
+  commentId: M:Dropbox.Api.Async.LaunchResultBase.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Async.LaunchResultBase
+  langs:
+  - csharp
+  - vb
+  name: LaunchResultBase()
+  nameWithType: LaunchResultBase.LaunchResultBase()
+  fullName: Dropbox.Api.Async.LaunchResultBase.LaunchResultBase()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchResultBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchResultBase.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Async.LaunchResultBase\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LaunchResultBase()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Async.LaunchResultBase.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Async.LaunchResultBase.IsAsyncJobId
+  commentId: P:Dropbox.Api.Async.LaunchResultBase.IsAsyncJobId
+  id: IsAsyncJobId
+  parent: Dropbox.Api.Async.LaunchResultBase
+  langs:
+  - csharp
+  - vb
+  name: IsAsyncJobId
+  nameWithType: LaunchResultBase.IsAsyncJobId
+  fullName: Dropbox.Api.Async.LaunchResultBase.IsAsyncJobId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchResultBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsAsyncJobId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchResultBase.cs
+    startLine: 44
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>Gets a value indicating whether this instance is AsyncJobId</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAsyncJobId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAsyncJobId As Boolean
+  overload: Dropbox.Api.Async.LaunchResultBase.IsAsyncJobId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Async.LaunchResultBase.AsAsyncJobId
+  commentId: P:Dropbox.Api.Async.LaunchResultBase.AsAsyncJobId
+  id: AsAsyncJobId
+  parent: Dropbox.Api.Async.LaunchResultBase
+  langs:
+  - csharp
+  - vb
+  name: AsAsyncJobId
+  nameWithType: LaunchResultBase.AsAsyncJobId
+  fullName: Dropbox.Api.Async.LaunchResultBase.AsAsyncJobId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchResultBase.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsAsyncJobId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchResultBase.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>Gets this instance as a AsyncJobId, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LaunchResultBase.AsyncJobId AsAsyncJobId { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Async.LaunchResultBase.AsyncJobId
+    content.vb: Public ReadOnly Property AsAsyncJobId As LaunchResultBase.AsyncJobId
+  overload: Dropbox.Api.Async.LaunchResultBase.AsAsyncJobId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Async.LaunchEmptyResult
+  commentId: T:Dropbox.Api.Async.LaunchEmptyResult
+  parent: Dropbox.Api.Async
+  name: LaunchEmptyResult
+  nameWithType: LaunchEmptyResult
+  fullName: Dropbox.Api.Async.LaunchEmptyResult
+- uid: Dropbox.Api.Async
+  commentId: N:Dropbox.Api.Async
+  name: Dropbox.Api.Async
+  nameWithType: Dropbox.Api.Async
+  fullName: Dropbox.Api.Async
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Async.LaunchResultBase
+  commentId: T:Dropbox.Api.Async.LaunchResultBase
+  parent: Dropbox.Api.Async
+  name: LaunchResultBase
+  nameWithType: LaunchResultBase
+  fullName: Dropbox.Api.Async.LaunchResultBase
+- uid: Dropbox.Api.Async.LaunchResultBase.#ctor*
+  commentId: Overload:Dropbox.Api.Async.LaunchResultBase.#ctor
+  name: LaunchResultBase
+  nameWithType: LaunchResultBase.LaunchResultBase
+  fullName: Dropbox.Api.Async.LaunchResultBase.LaunchResultBase
+- uid: Dropbox.Api.Async.LaunchResultBase.IsAsyncJobId*
+  commentId: Overload:Dropbox.Api.Async.LaunchResultBase.IsAsyncJobId
+  name: IsAsyncJobId
+  nameWithType: LaunchResultBase.IsAsyncJobId
+  fullName: Dropbox.Api.Async.LaunchResultBase.IsAsyncJobId
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Async.LaunchResultBase.AsAsyncJobId*
+  commentId: Overload:Dropbox.Api.Async.LaunchResultBase.AsAsyncJobId
+  name: AsAsyncJobId
+  nameWithType: LaunchResultBase.AsAsyncJobId
+  fullName: Dropbox.Api.Async.LaunchResultBase.AsAsyncJobId
+- uid: Dropbox.Api.Async.LaunchResultBase.AsyncJobId
+  commentId: T:Dropbox.Api.Async.LaunchResultBase.AsyncJobId
+  parent: Dropbox.Api.Async
+  name: LaunchResultBase.AsyncJobId
+  nameWithType: LaunchResultBase.AsyncJobId
+  fullName: Dropbox.Api.Async.LaunchResultBase.AsyncJobId

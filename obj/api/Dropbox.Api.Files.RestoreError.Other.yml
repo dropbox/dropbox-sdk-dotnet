@@ -1,0 +1,469 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RestoreError.Other
+  commentId: T:Dropbox.Api.Files.RestoreError.Other
+  id: RestoreError.Other
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RestoreError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: RestoreError.Other
+  nameWithType: RestoreError.Other
+  fullName: Dropbox.Api.Files.RestoreError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RestoreError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RestoreError.cs
+    startLine: 573
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : RestoreError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits RestoreError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.RestoreError
+  inheritedMembers:
+  - Dropbox.Api.Files.RestoreError.IsPathLookup
+  - Dropbox.Api.Files.RestoreError.AsPathLookup
+  - Dropbox.Api.Files.RestoreError.IsPathWrite
+  - Dropbox.Api.Files.RestoreError.AsPathWrite
+  - Dropbox.Api.Files.RestoreError.IsInvalidRevision
+  - Dropbox.Api.Files.RestoreError.AsInvalidRevision
+  - Dropbox.Api.Files.RestoreError.IsInProgress
+  - Dropbox.Api.Files.RestoreError.AsInProgress
+  - Dropbox.Api.Files.RestoreError.IsOther
+  - Dropbox.Api.Files.RestoreError.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.RestoreError.Other.Instance
+  commentId: F:Dropbox.Api.Files.RestoreError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.RestoreError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: RestoreError.Other.Instance
+  fullName: Dropbox.Api.Files.RestoreError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RestoreError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RestoreError.cs
+    startLine: 597
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly RestoreError.Other Instance
+    return:
+      type: Dropbox.Api.Files.RestoreError.Other
+    content.vb: Public Shared ReadOnly Instance As RestoreError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RestoreError
+  commentId: T:Dropbox.Api.Files.RestoreError
+  parent: Dropbox.Api.Files
+  name: RestoreError
+  nameWithType: RestoreError
+  fullName: Dropbox.Api.Files.RestoreError
+- uid: Dropbox.Api.Files.RestoreError.IsPathLookup
+  commentId: P:Dropbox.Api.Files.RestoreError.IsPathLookup
+  parent: Dropbox.Api.Files.RestoreError
+  name: IsPathLookup
+  nameWithType: RestoreError.IsPathLookup
+  fullName: Dropbox.Api.Files.RestoreError.IsPathLookup
+- uid: Dropbox.Api.Files.RestoreError.AsPathLookup
+  commentId: P:Dropbox.Api.Files.RestoreError.AsPathLookup
+  parent: Dropbox.Api.Files.RestoreError
+  name: AsPathLookup
+  nameWithType: RestoreError.AsPathLookup
+  fullName: Dropbox.Api.Files.RestoreError.AsPathLookup
+- uid: Dropbox.Api.Files.RestoreError.IsPathWrite
+  commentId: P:Dropbox.Api.Files.RestoreError.IsPathWrite
+  parent: Dropbox.Api.Files.RestoreError
+  name: IsPathWrite
+  nameWithType: RestoreError.IsPathWrite
+  fullName: Dropbox.Api.Files.RestoreError.IsPathWrite
+- uid: Dropbox.Api.Files.RestoreError.AsPathWrite
+  commentId: P:Dropbox.Api.Files.RestoreError.AsPathWrite
+  parent: Dropbox.Api.Files.RestoreError
+  name: AsPathWrite
+  nameWithType: RestoreError.AsPathWrite
+  fullName: Dropbox.Api.Files.RestoreError.AsPathWrite
+- uid: Dropbox.Api.Files.RestoreError.IsInvalidRevision
+  commentId: P:Dropbox.Api.Files.RestoreError.IsInvalidRevision
+  parent: Dropbox.Api.Files.RestoreError
+  name: IsInvalidRevision
+  nameWithType: RestoreError.IsInvalidRevision
+  fullName: Dropbox.Api.Files.RestoreError.IsInvalidRevision
+- uid: Dropbox.Api.Files.RestoreError.AsInvalidRevision
+  commentId: P:Dropbox.Api.Files.RestoreError.AsInvalidRevision
+  parent: Dropbox.Api.Files.RestoreError
+  name: AsInvalidRevision
+  nameWithType: RestoreError.AsInvalidRevision
+  fullName: Dropbox.Api.Files.RestoreError.AsInvalidRevision
+- uid: Dropbox.Api.Files.RestoreError.IsInProgress
+  commentId: P:Dropbox.Api.Files.RestoreError.IsInProgress
+  parent: Dropbox.Api.Files.RestoreError
+  name: IsInProgress
+  nameWithType: RestoreError.IsInProgress
+  fullName: Dropbox.Api.Files.RestoreError.IsInProgress
+- uid: Dropbox.Api.Files.RestoreError.AsInProgress
+  commentId: P:Dropbox.Api.Files.RestoreError.AsInProgress
+  parent: Dropbox.Api.Files.RestoreError
+  name: AsInProgress
+  nameWithType: RestoreError.AsInProgress
+  fullName: Dropbox.Api.Files.RestoreError.AsInProgress
+- uid: Dropbox.Api.Files.RestoreError.IsOther
+  commentId: P:Dropbox.Api.Files.RestoreError.IsOther
+  parent: Dropbox.Api.Files.RestoreError
+  name: IsOther
+  nameWithType: RestoreError.IsOther
+  fullName: Dropbox.Api.Files.RestoreError.IsOther
+- uid: Dropbox.Api.Files.RestoreError.AsOther
+  commentId: P:Dropbox.Api.Files.RestoreError.AsOther
+  parent: Dropbox.Api.Files.RestoreError
+  name: AsOther
+  nameWithType: RestoreError.AsOther
+  fullName: Dropbox.Api.Files.RestoreError.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Files.RestoreError.Other
+  commentId: T:Dropbox.Api.Files.RestoreError.Other
+  parent: Dropbox.Api.Files
+  name: RestoreError.Other
+  nameWithType: RestoreError.Other
+  fullName: Dropbox.Api.Files.RestoreError.Other

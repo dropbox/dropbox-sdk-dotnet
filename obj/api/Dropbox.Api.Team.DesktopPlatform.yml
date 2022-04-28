@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.DesktopPlatform
+  commentId: T:Dropbox.Api.Team.DesktopPlatform
+  id: DesktopPlatform
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.DesktopPlatform.#ctor
+  - Dropbox.Api.Team.DesktopPlatform.AsLinux
+  - Dropbox.Api.Team.DesktopPlatform.AsMac
+  - Dropbox.Api.Team.DesktopPlatform.AsOther
+  - Dropbox.Api.Team.DesktopPlatform.AsWindows
+  - Dropbox.Api.Team.DesktopPlatform.IsLinux
+  - Dropbox.Api.Team.DesktopPlatform.IsMac
+  - Dropbox.Api.Team.DesktopPlatform.IsOther
+  - Dropbox.Api.Team.DesktopPlatform.IsWindows
+  langs:
+  - csharp
+  - vb
+  name: DesktopPlatform
+  nameWithType: DesktopPlatform
+  fullName: Dropbox.Api.Team.DesktopPlatform
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: DesktopPlatform
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The desktop platform object</p>\n"
+  example: []
+  syntax:
+    content: public class DesktopPlatform
+    content.vb: Public Class DesktopPlatform
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.DesktopPlatform.Linux
+  - Dropbox.Api.Team.DesktopPlatform.Mac
+  - Dropbox.Api.Team.DesktopPlatform.Other
+  - Dropbox.Api.Team.DesktopPlatform.Windows
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.DesktopPlatform.#ctor
+  commentId: M:Dropbox.Api.Team.DesktopPlatform.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.DesktopPlatform
+  langs:
+  - csharp
+  - vb
+  name: DesktopPlatform()
+  nameWithType: DesktopPlatform.DesktopPlatform()
+  fullName: Dropbox.Api.Team.DesktopPlatform.DesktopPlatform()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.DesktopPlatform\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public DesktopPlatform()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.DesktopPlatform.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.DesktopPlatform.IsWindows
+  commentId: P:Dropbox.Api.Team.DesktopPlatform.IsWindows
+  id: IsWindows
+  parent: Dropbox.Api.Team.DesktopPlatform
+  langs:
+  - csharp
+  - vb
+  name: IsWindows
+  nameWithType: DesktopPlatform.IsWindows
+  fullName: Dropbox.Api.Team.DesktopPlatform.IsWindows
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsWindows
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Windows</p>\n"
+  example: []
+  syntax:
+    content: public bool IsWindows { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsWindows As Boolean
+  overload: Dropbox.Api.Team.DesktopPlatform.IsWindows*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DesktopPlatform.AsWindows
+  commentId: P:Dropbox.Api.Team.DesktopPlatform.AsWindows
+  id: AsWindows
+  parent: Dropbox.Api.Team.DesktopPlatform
+  langs:
+  - csharp
+  - vb
+  name: AsWindows
+  nameWithType: DesktopPlatform.AsWindows
+  fullName: Dropbox.Api.Team.DesktopPlatform.AsWindows
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsWindows
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Windows, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DesktopPlatform.Windows AsWindows { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.DesktopPlatform.Windows
+    content.vb: Public ReadOnly Property AsWindows As DesktopPlatform.Windows
+  overload: Dropbox.Api.Team.DesktopPlatform.AsWindows*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DesktopPlatform.IsMac
+  commentId: P:Dropbox.Api.Team.DesktopPlatform.IsMac
+  id: IsMac
+  parent: Dropbox.Api.Team.DesktopPlatform
+  langs:
+  - csharp
+  - vb
+  name: IsMac
+  nameWithType: DesktopPlatform.IsMac
+  fullName: Dropbox.Api.Team.DesktopPlatform.IsMac
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsMac
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Mac</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMac { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMac As Boolean
+  overload: Dropbox.Api.Team.DesktopPlatform.IsMac*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DesktopPlatform.AsMac
+  commentId: P:Dropbox.Api.Team.DesktopPlatform.AsMac
+  id: AsMac
+  parent: Dropbox.Api.Team.DesktopPlatform
+  langs:
+  - csharp
+  - vb
+  name: AsMac
+  nameWithType: DesktopPlatform.AsMac
+  fullName: Dropbox.Api.Team.DesktopPlatform.AsMac
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsMac
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Mac, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DesktopPlatform.Mac AsMac { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.DesktopPlatform.Mac
+    content.vb: Public ReadOnly Property AsMac As DesktopPlatform.Mac
+  overload: Dropbox.Api.Team.DesktopPlatform.AsMac*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DesktopPlatform.IsLinux
+  commentId: P:Dropbox.Api.Team.DesktopPlatform.IsLinux
+  id: IsLinux
+  parent: Dropbox.Api.Team.DesktopPlatform
+  langs:
+  - csharp
+  - vb
+  name: IsLinux
+  nameWithType: DesktopPlatform.IsLinux
+  fullName: Dropbox.Api.Team.DesktopPlatform.IsLinux
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsLinux
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Linux</p>\n"
+  example: []
+  syntax:
+    content: public bool IsLinux { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLinux As Boolean
+  overload: Dropbox.Api.Team.DesktopPlatform.IsLinux*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DesktopPlatform.AsLinux
+  commentId: P:Dropbox.Api.Team.DesktopPlatform.AsLinux
+  id: AsLinux
+  parent: Dropbox.Api.Team.DesktopPlatform
+  langs:
+  - csharp
+  - vb
+  name: AsLinux
+  nameWithType: DesktopPlatform.AsLinux
+  fullName: Dropbox.Api.Team.DesktopPlatform.AsLinux
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsLinux
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Linux, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DesktopPlatform.Linux AsLinux { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.DesktopPlatform.Linux
+    content.vb: Public ReadOnly Property AsLinux As DesktopPlatform.Linux
+  overload: Dropbox.Api.Team.DesktopPlatform.AsLinux*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DesktopPlatform.IsOther
+  commentId: P:Dropbox.Api.Team.DesktopPlatform.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.DesktopPlatform
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: DesktopPlatform.IsOther
+  fullName: Dropbox.Api.Team.DesktopPlatform.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.DesktopPlatform.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DesktopPlatform.AsOther
+  commentId: P:Dropbox.Api.Team.DesktopPlatform.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.DesktopPlatform
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: DesktopPlatform.AsOther
+  fullName: Dropbox.Api.Team.DesktopPlatform.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DesktopPlatform.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DesktopPlatform.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.DesktopPlatform.Other
+    content.vb: Public ReadOnly Property AsOther As DesktopPlatform.Other
+  overload: Dropbox.Api.Team.DesktopPlatform.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.DesktopPlatform
+  commentId: T:Dropbox.Api.Team.DesktopPlatform
+  parent: Dropbox.Api.Team
+  name: DesktopPlatform
+  nameWithType: DesktopPlatform
+  fullName: Dropbox.Api.Team.DesktopPlatform
+- uid: Dropbox.Api.Team.DesktopPlatform.#ctor*
+  commentId: Overload:Dropbox.Api.Team.DesktopPlatform.#ctor
+  name: DesktopPlatform
+  nameWithType: DesktopPlatform.DesktopPlatform
+  fullName: Dropbox.Api.Team.DesktopPlatform.DesktopPlatform
+- uid: Dropbox.Api.Team.DesktopPlatform.IsWindows*
+  commentId: Overload:Dropbox.Api.Team.DesktopPlatform.IsWindows
+  name: IsWindows
+  nameWithType: DesktopPlatform.IsWindows
+  fullName: Dropbox.Api.Team.DesktopPlatform.IsWindows
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.DesktopPlatform.AsWindows*
+  commentId: Overload:Dropbox.Api.Team.DesktopPlatform.AsWindows
+  name: AsWindows
+  nameWithType: DesktopPlatform.AsWindows
+  fullName: Dropbox.Api.Team.DesktopPlatform.AsWindows
+- uid: Dropbox.Api.Team.DesktopPlatform.Windows
+  commentId: T:Dropbox.Api.Team.DesktopPlatform.Windows
+  parent: Dropbox.Api.Team
+  name: DesktopPlatform.Windows
+  nameWithType: DesktopPlatform.Windows
+  fullName: Dropbox.Api.Team.DesktopPlatform.Windows
+- uid: Dropbox.Api.Team.DesktopPlatform.IsMac*
+  commentId: Overload:Dropbox.Api.Team.DesktopPlatform.IsMac
+  name: IsMac
+  nameWithType: DesktopPlatform.IsMac
+  fullName: Dropbox.Api.Team.DesktopPlatform.IsMac
+- uid: Dropbox.Api.Team.DesktopPlatform.AsMac*
+  commentId: Overload:Dropbox.Api.Team.DesktopPlatform.AsMac
+  name: AsMac
+  nameWithType: DesktopPlatform.AsMac
+  fullName: Dropbox.Api.Team.DesktopPlatform.AsMac
+- uid: Dropbox.Api.Team.DesktopPlatform.Mac
+  commentId: T:Dropbox.Api.Team.DesktopPlatform.Mac
+  parent: Dropbox.Api.Team
+  name: DesktopPlatform.Mac
+  nameWithType: DesktopPlatform.Mac
+  fullName: Dropbox.Api.Team.DesktopPlatform.Mac
+- uid: Dropbox.Api.Team.DesktopPlatform.IsLinux*
+  commentId: Overload:Dropbox.Api.Team.DesktopPlatform.IsLinux
+  name: IsLinux
+  nameWithType: DesktopPlatform.IsLinux
+  fullName: Dropbox.Api.Team.DesktopPlatform.IsLinux
+- uid: Dropbox.Api.Team.DesktopPlatform.AsLinux*
+  commentId: Overload:Dropbox.Api.Team.DesktopPlatform.AsLinux
+  name: AsLinux
+  nameWithType: DesktopPlatform.AsLinux
+  fullName: Dropbox.Api.Team.DesktopPlatform.AsLinux
+- uid: Dropbox.Api.Team.DesktopPlatform.Linux
+  commentId: T:Dropbox.Api.Team.DesktopPlatform.Linux
+  parent: Dropbox.Api.Team
+  name: DesktopPlatform.Linux
+  nameWithType: DesktopPlatform.Linux
+  fullName: Dropbox.Api.Team.DesktopPlatform.Linux
+- uid: Dropbox.Api.Team.DesktopPlatform.IsOther*
+  commentId: Overload:Dropbox.Api.Team.DesktopPlatform.IsOther
+  name: IsOther
+  nameWithType: DesktopPlatform.IsOther
+  fullName: Dropbox.Api.Team.DesktopPlatform.IsOther
+- uid: Dropbox.Api.Team.DesktopPlatform.AsOther*
+  commentId: Overload:Dropbox.Api.Team.DesktopPlatform.AsOther
+  name: AsOther
+  nameWithType: DesktopPlatform.AsOther
+  fullName: Dropbox.Api.Team.DesktopPlatform.AsOther
+- uid: Dropbox.Api.Team.DesktopPlatform.Other
+  commentId: T:Dropbox.Api.Team.DesktopPlatform.Other
+  parent: Dropbox.Api.Team
+  name: DesktopPlatform.Other
+  nameWithType: DesktopPlatform.Other
+  fullName: Dropbox.Api.Team.DesktopPlatform.Other

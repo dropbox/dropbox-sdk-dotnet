@@ -1,0 +1,469 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other
+  commentId: T:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other
+  id: ClassificationPolicyEnumWrapper.Other
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: ClassificationPolicyEnumWrapper.Other
+  nameWithType: ClassificationPolicyEnumWrapper.Other
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+    startLine: 522
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : ClassificationPolicyEnumWrapper'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits ClassificationPolicyEnumWrapper
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsDisabled
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsDisabled
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsEnabled
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsEnabled
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsTeamFolders
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsTeamFolders
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsOther
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other.Instance
+  commentId: F:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ClassificationPolicyEnumWrapper.Other.Instance
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+    startLine: 546
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ClassificationPolicyEnumWrapper.Other Instance
+    return:
+      type: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other
+    content.vb: Public Shared ReadOnly Instance As ClassificationPolicyEnumWrapper.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  commentId: T:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  parent: Dropbox.Api.TeamLog
+  name: ClassificationPolicyEnumWrapper
+  nameWithType: ClassificationPolicyEnumWrapper
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsDisabled
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsDisabled
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  name: IsDisabled
+  nameWithType: ClassificationPolicyEnumWrapper.IsDisabled
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsDisabled
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsDisabled
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsDisabled
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  name: AsDisabled
+  nameWithType: ClassificationPolicyEnumWrapper.AsDisabled
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsDisabled
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsEnabled
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsEnabled
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  name: IsEnabled
+  nameWithType: ClassificationPolicyEnumWrapper.IsEnabled
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsEnabled
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsEnabled
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsEnabled
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  name: AsEnabled
+  nameWithType: ClassificationPolicyEnumWrapper.AsEnabled
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsEnabled
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  name: IsMemberAndTeamFolders
+  nameWithType: ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  name: AsMemberAndTeamFolders
+  nameWithType: ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsTeamFolders
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsTeamFolders
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  name: IsTeamFolders
+  nameWithType: ClassificationPolicyEnumWrapper.IsTeamFolders
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsTeamFolders
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsTeamFolders
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsTeamFolders
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  name: AsTeamFolders
+  nameWithType: ClassificationPolicyEnumWrapper.AsTeamFolders
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsTeamFolders
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsOther
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsOther
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  name: IsOther
+  nameWithType: ClassificationPolicyEnumWrapper.IsOther
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsOther
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsOther
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsOther
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  name: AsOther
+  nameWithType: ClassificationPolicyEnumWrapper.AsOther
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other
+  commentId: T:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other
+  parent: Dropbox.Api.TeamLog
+  name: ClassificationPolicyEnumWrapper.Other
+  nameWithType: ClassificationPolicyEnumWrapper.Other
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other

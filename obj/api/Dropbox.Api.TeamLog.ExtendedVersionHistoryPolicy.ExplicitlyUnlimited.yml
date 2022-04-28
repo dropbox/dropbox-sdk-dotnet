@@ -1,0 +1,469 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.ExplicitlyUnlimited
+  commentId: T:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.ExplicitlyUnlimited
+  id: ExtendedVersionHistoryPolicy.ExplicitlyUnlimited
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.ExplicitlyUnlimited.Instance
+  langs:
+  - csharp
+  - vb
+  name: ExtendedVersionHistoryPolicy.ExplicitlyUnlimited
+  nameWithType: ExtendedVersionHistoryPolicy.ExplicitlyUnlimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.ExplicitlyUnlimited
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExtendedVersionHistoryPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: ExplicitlyUnlimited
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExtendedVersionHistoryPolicy.cs
+    startLine: 314
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The explicitly unlimited object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class ExplicitlyUnlimited : ExtendedVersionHistoryPolicy'
+    content.vb: >-
+      Public NotInheritable Class ExplicitlyUnlimited
+          Inherits ExtendedVersionHistoryPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyLimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyLimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyUnlimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyUnlimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyLimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyLimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyUnlimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyUnlimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsOther
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.ExplicitlyUnlimited.Instance
+  commentId: F:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.ExplicitlyUnlimited.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.ExplicitlyUnlimited
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ExtendedVersionHistoryPolicy.ExplicitlyUnlimited.Instance
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.ExplicitlyUnlimited.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExtendedVersionHistoryPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExtendedVersionHistoryPolicy.cs
+    startLine: 339
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of ExplicitlyUnlimited</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ExtendedVersionHistoryPolicy.ExplicitlyUnlimited Instance
+    return:
+      type: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.ExplicitlyUnlimited
+    content.vb: Public Shared ReadOnly Instance As ExtendedVersionHistoryPolicy.ExplicitlyUnlimited
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  commentId: T:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  parent: Dropbox.Api.TeamLog
+  name: ExtendedVersionHistoryPolicy
+  nameWithType: ExtendedVersionHistoryPolicy
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyLimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyLimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: IsExplicitlyLimited
+  nameWithType: ExtendedVersionHistoryPolicy.IsExplicitlyLimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyLimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyLimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyLimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: AsExplicitlyLimited
+  nameWithType: ExtendedVersionHistoryPolicy.AsExplicitlyLimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyLimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyUnlimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyUnlimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: IsExplicitlyUnlimited
+  nameWithType: ExtendedVersionHistoryPolicy.IsExplicitlyUnlimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyUnlimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyUnlimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyUnlimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: AsExplicitlyUnlimited
+  nameWithType: ExtendedVersionHistoryPolicy.AsExplicitlyUnlimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyUnlimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyLimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyLimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: IsImplicitlyLimited
+  nameWithType: ExtendedVersionHistoryPolicy.IsImplicitlyLimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyLimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyLimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyLimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: AsImplicitlyLimited
+  nameWithType: ExtendedVersionHistoryPolicy.AsImplicitlyLimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyLimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyUnlimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyUnlimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: IsImplicitlyUnlimited
+  nameWithType: ExtendedVersionHistoryPolicy.IsImplicitlyUnlimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyUnlimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyUnlimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyUnlimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: AsImplicitlyUnlimited
+  nameWithType: ExtendedVersionHistoryPolicy.AsImplicitlyUnlimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyUnlimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsOther
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: IsOther
+  nameWithType: ExtendedVersionHistoryPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsOther
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: AsOther
+  nameWithType: ExtendedVersionHistoryPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.ExplicitlyUnlimited
+  commentId: T:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.ExplicitlyUnlimited
+  parent: Dropbox.Api.TeamLog
+  name: ExtendedVersionHistoryPolicy.ExplicitlyUnlimited
+  nameWithType: ExtendedVersionHistoryPolicy.ExplicitlyUnlimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.ExplicitlyUnlimited

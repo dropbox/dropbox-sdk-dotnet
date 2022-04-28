@@ -1,0 +1,441 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersDeactivateError.UserNotFound
+  commentId: T:Dropbox.Api.Team.MembersDeactivateError.UserNotFound
+  id: MembersDeactivateError.UserNotFound
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersDeactivateError.UserNotFound.Instance
+  langs:
+  - csharp
+  - vb
+  name: MembersDeactivateError.UserNotFound
+  nameWithType: MembersDeactivateError.UserNotFound
+  fullName: Dropbox.Api.Team.MembersDeactivateError.UserNotFound
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: UserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateError.cs
+    startLine: 323
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>No matching user found. The provided team_member_id, email, or external_id\ndoes not exist on this team.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class UserNotFound : MembersDeactivateError'
+    content.vb: >-
+      Public NotInheritable Class UserNotFound
+          Inherits MembersDeactivateError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MembersDeactivateError
+  inheritedMembers:
+  - Dropbox.Api.Team.MembersDeactivateError.IsUserNotInTeam
+  - Dropbox.Api.Team.MembersDeactivateError.AsUserNotInTeam
+  - Dropbox.Api.Team.MembersDeactivateError.IsOther
+  - Dropbox.Api.Team.MembersDeactivateError.AsOther
+  - Dropbox.Api.Team.MembersDeactivateError.IsUserNotFound
+  - Dropbox.Api.Team.MembersDeactivateError.AsUserNotFound
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.MembersDeactivateError.UserNotFound.Instance
+  commentId: F:Dropbox.Api.Team.MembersDeactivateError.UserNotFound.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.MembersDeactivateError.UserNotFound
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: MembersDeactivateError.UserNotFound.Instance
+  fullName: Dropbox.Api.Team.MembersDeactivateError.UserNotFound.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateError.cs
+    startLine: 348
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of UserNotFound</p>\n"
+  example: []
+  syntax:
+    content: public static readonly MembersDeactivateError.UserNotFound Instance
+    return:
+      type: Dropbox.Api.Team.MembersDeactivateError.UserNotFound
+    content.vb: Public Shared ReadOnly Instance As MembersDeactivateError.UserNotFound
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersDeactivateError
+  commentId: T:Dropbox.Api.Team.MembersDeactivateError
+  parent: Dropbox.Api.Team
+  name: MembersDeactivateError
+  nameWithType: MembersDeactivateError
+  fullName: Dropbox.Api.Team.MembersDeactivateError
+- uid: Dropbox.Api.Team.MembersDeactivateError.IsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersDeactivateError.IsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersDeactivateError
+  name: IsUserNotInTeam
+  nameWithType: MembersDeactivateError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersDeactivateError.IsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersDeactivateError.AsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersDeactivateError.AsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersDeactivateError
+  name: AsUserNotInTeam
+  nameWithType: MembersDeactivateError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersDeactivateError.AsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersDeactivateError.IsOther
+  commentId: P:Dropbox.Api.Team.MembersDeactivateError.IsOther
+  parent: Dropbox.Api.Team.MembersDeactivateError
+  name: IsOther
+  nameWithType: MembersDeactivateError.IsOther
+  fullName: Dropbox.Api.Team.MembersDeactivateError.IsOther
+- uid: Dropbox.Api.Team.MembersDeactivateError.AsOther
+  commentId: P:Dropbox.Api.Team.MembersDeactivateError.AsOther
+  parent: Dropbox.Api.Team.MembersDeactivateError
+  name: AsOther
+  nameWithType: MembersDeactivateError.AsOther
+  fullName: Dropbox.Api.Team.MembersDeactivateError.AsOther
+- uid: Dropbox.Api.Team.MembersDeactivateError.IsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersDeactivateError.IsUserNotFound
+  parent: Dropbox.Api.Team.MembersDeactivateError
+  name: IsUserNotFound
+  nameWithType: MembersDeactivateError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersDeactivateError.IsUserNotFound
+- uid: Dropbox.Api.Team.MembersDeactivateError.AsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersDeactivateError.AsUserNotFound
+  parent: Dropbox.Api.Team.MembersDeactivateError
+  name: AsUserNotFound
+  nameWithType: MembersDeactivateError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersDeactivateError.AsUserNotFound
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.MembersDeactivateError.UserNotFound
+  commentId: T:Dropbox.Api.Team.MembersDeactivateError.UserNotFound
+  parent: Dropbox.Api.Team
+  name: MembersDeactivateError.UserNotFound
+  nameWithType: MembersDeactivateError.UserNotFound
+  fullName: Dropbox.Api.Team.MembersDeactivateError.UserNotFound

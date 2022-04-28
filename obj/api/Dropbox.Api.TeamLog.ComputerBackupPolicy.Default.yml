@@ -1,0 +1,455 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicy.Default
+  commentId: T:Dropbox.Api.TeamLog.ComputerBackupPolicy.Default
+  id: ComputerBackupPolicy.Default
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ComputerBackupPolicy.Default.Instance
+  langs:
+  - csharp
+  - vb
+  name: ComputerBackupPolicy.Default
+  nameWithType: ComputerBackupPolicy.Default
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicy.Default
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ComputerBackupPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Default
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ComputerBackupPolicy.cs
+    startLine: 212
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The default object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Default : ComputerBackupPolicy'
+    content.vb: >-
+      Public NotInheritable Class Default
+          Inherits ComputerBackupPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.ComputerBackupPolicy
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.ComputerBackupPolicy.IsDefault
+  - Dropbox.Api.TeamLog.ComputerBackupPolicy.AsDefault
+  - Dropbox.Api.TeamLog.ComputerBackupPolicy.IsDisabled
+  - Dropbox.Api.TeamLog.ComputerBackupPolicy.AsDisabled
+  - Dropbox.Api.TeamLog.ComputerBackupPolicy.IsEnabled
+  - Dropbox.Api.TeamLog.ComputerBackupPolicy.AsEnabled
+  - Dropbox.Api.TeamLog.ComputerBackupPolicy.IsOther
+  - Dropbox.Api.TeamLog.ComputerBackupPolicy.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicy.Default.Instance
+  commentId: F:Dropbox.Api.TeamLog.ComputerBackupPolicy.Default.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.ComputerBackupPolicy.Default
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ComputerBackupPolicy.Default.Instance
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicy.Default.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ComputerBackupPolicy.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ComputerBackupPolicy.cs
+    startLine: 236
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Default</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ComputerBackupPolicy.Default Instance
+    return:
+      type: Dropbox.Api.TeamLog.ComputerBackupPolicy.Default
+    content.vb: Public Shared ReadOnly Instance As ComputerBackupPolicy.Default
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicy
+  commentId: T:Dropbox.Api.TeamLog.ComputerBackupPolicy
+  parent: Dropbox.Api.TeamLog
+  name: ComputerBackupPolicy
+  nameWithType: ComputerBackupPolicy
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicy
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicy.IsDefault
+  commentId: P:Dropbox.Api.TeamLog.ComputerBackupPolicy.IsDefault
+  parent: Dropbox.Api.TeamLog.ComputerBackupPolicy
+  name: IsDefault
+  nameWithType: ComputerBackupPolicy.IsDefault
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicy.IsDefault
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicy.AsDefault
+  commentId: P:Dropbox.Api.TeamLog.ComputerBackupPolicy.AsDefault
+  parent: Dropbox.Api.TeamLog.ComputerBackupPolicy
+  name: AsDefault
+  nameWithType: ComputerBackupPolicy.AsDefault
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicy.AsDefault
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamLog.ComputerBackupPolicy.IsDisabled
+  parent: Dropbox.Api.TeamLog.ComputerBackupPolicy
+  name: IsDisabled
+  nameWithType: ComputerBackupPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicy.IsDisabled
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamLog.ComputerBackupPolicy.AsDisabled
+  parent: Dropbox.Api.TeamLog.ComputerBackupPolicy
+  name: AsDisabled
+  nameWithType: ComputerBackupPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicy.AsDisabled
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicy.IsEnabled
+  commentId: P:Dropbox.Api.TeamLog.ComputerBackupPolicy.IsEnabled
+  parent: Dropbox.Api.TeamLog.ComputerBackupPolicy
+  name: IsEnabled
+  nameWithType: ComputerBackupPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicy.IsEnabled
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicy.AsEnabled
+  commentId: P:Dropbox.Api.TeamLog.ComputerBackupPolicy.AsEnabled
+  parent: Dropbox.Api.TeamLog.ComputerBackupPolicy
+  name: AsEnabled
+  nameWithType: ComputerBackupPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicy.AsEnabled
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.ComputerBackupPolicy.IsOther
+  parent: Dropbox.Api.TeamLog.ComputerBackupPolicy
+  name: IsOther
+  nameWithType: ComputerBackupPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.ComputerBackupPolicy.AsOther
+  parent: Dropbox.Api.TeamLog.ComputerBackupPolicy
+  name: AsOther
+  nameWithType: ComputerBackupPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicy.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicy.Default
+  commentId: T:Dropbox.Api.TeamLog.ComputerBackupPolicy.Default
+  parent: Dropbox.Api.TeamLog
+  name: ComputerBackupPolicy.Default
+  nameWithType: ComputerBackupPolicy.Default
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicy.Default

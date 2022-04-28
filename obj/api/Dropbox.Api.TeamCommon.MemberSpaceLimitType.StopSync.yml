@@ -1,0 +1,455 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamCommon.MemberSpaceLimitType.StopSync
+  commentId: T:Dropbox.Api.TeamCommon.MemberSpaceLimitType.StopSync
+  id: MemberSpaceLimitType.StopSync
+  parent: Dropbox.Api.TeamCommon
+  children:
+  - Dropbox.Api.TeamCommon.MemberSpaceLimitType.StopSync.Instance
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitType.StopSync
+  nameWithType: MemberSpaceLimitType.StopSync
+  fullName: Dropbox.Api.TeamCommon.MemberSpaceLimitType.StopSync
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/MemberSpaceLimitType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: StopSync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/MemberSpaceLimitType.cs
+    startLine: 352
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>The team member has hard imposed space limit - Dropbox file sync will stop\nafter the limit is reached.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class StopSync : MemberSpaceLimitType'
+    content.vb: >-
+      Public NotInheritable Class StopSync
+          Inherits MemberSpaceLimitType
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamCommon.MemberSpaceLimitType
+  inheritedMembers:
+  - Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsOff
+  - Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsOff
+  - Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsAlertOnly
+  - Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsAlertOnly
+  - Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsStopSync
+  - Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsStopSync
+  - Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsOther
+  - Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsOther
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamCommon.MemberSpaceLimitType.StopSync.Instance
+  commentId: F:Dropbox.Api.TeamCommon.MemberSpaceLimitType.StopSync.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamCommon.MemberSpaceLimitType.StopSync
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: MemberSpaceLimitType.StopSync.Instance
+  fullName: Dropbox.Api.TeamCommon.MemberSpaceLimitType.StopSync.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/MemberSpaceLimitType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/MemberSpaceLimitType.cs
+    startLine: 376
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>A singleton instance of StopSync</p>\n"
+  example: []
+  syntax:
+    content: public static readonly MemberSpaceLimitType.StopSync Instance
+    return:
+      type: Dropbox.Api.TeamCommon.MemberSpaceLimitType.StopSync
+    content.vb: Public Shared ReadOnly Instance As MemberSpaceLimitType.StopSync
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamCommon
+  commentId: N:Dropbox.Api.TeamCommon
+  name: Dropbox.Api.TeamCommon
+  nameWithType: Dropbox.Api.TeamCommon
+  fullName: Dropbox.Api.TeamCommon
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamCommon.MemberSpaceLimitType
+  commentId: T:Dropbox.Api.TeamCommon.MemberSpaceLimitType
+  parent: Dropbox.Api.TeamCommon
+  name: MemberSpaceLimitType
+  nameWithType: MemberSpaceLimitType
+  fullName: Dropbox.Api.TeamCommon.MemberSpaceLimitType
+- uid: Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsOff
+  commentId: P:Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsOff
+  parent: Dropbox.Api.TeamCommon.MemberSpaceLimitType
+  name: IsOff
+  nameWithType: MemberSpaceLimitType.IsOff
+  fullName: Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsOff
+- uid: Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsOff
+  commentId: P:Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsOff
+  parent: Dropbox.Api.TeamCommon.MemberSpaceLimitType
+  name: AsOff
+  nameWithType: MemberSpaceLimitType.AsOff
+  fullName: Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsOff
+- uid: Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsAlertOnly
+  commentId: P:Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsAlertOnly
+  parent: Dropbox.Api.TeamCommon.MemberSpaceLimitType
+  name: IsAlertOnly
+  nameWithType: MemberSpaceLimitType.IsAlertOnly
+  fullName: Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsAlertOnly
+- uid: Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsAlertOnly
+  commentId: P:Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsAlertOnly
+  parent: Dropbox.Api.TeamCommon.MemberSpaceLimitType
+  name: AsAlertOnly
+  nameWithType: MemberSpaceLimitType.AsAlertOnly
+  fullName: Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsAlertOnly
+- uid: Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsStopSync
+  commentId: P:Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsStopSync
+  parent: Dropbox.Api.TeamCommon.MemberSpaceLimitType
+  name: IsStopSync
+  nameWithType: MemberSpaceLimitType.IsStopSync
+  fullName: Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsStopSync
+- uid: Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsStopSync
+  commentId: P:Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsStopSync
+  parent: Dropbox.Api.TeamCommon.MemberSpaceLimitType
+  name: AsStopSync
+  nameWithType: MemberSpaceLimitType.AsStopSync
+  fullName: Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsStopSync
+- uid: Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsOther
+  commentId: P:Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsOther
+  parent: Dropbox.Api.TeamCommon.MemberSpaceLimitType
+  name: IsOther
+  nameWithType: MemberSpaceLimitType.IsOther
+  fullName: Dropbox.Api.TeamCommon.MemberSpaceLimitType.IsOther
+- uid: Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsOther
+  commentId: P:Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsOther
+  parent: Dropbox.Api.TeamCommon.MemberSpaceLimitType
+  name: AsOther
+  nameWithType: MemberSpaceLimitType.AsOther
+  fullName: Dropbox.Api.TeamCommon.MemberSpaceLimitType.AsOther
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.TeamCommon.MemberSpaceLimitType.StopSync
+  commentId: T:Dropbox.Api.TeamCommon.MemberSpaceLimitType.StopSync
+  parent: Dropbox.Api.TeamCommon
+  name: MemberSpaceLimitType.StopSync
+  nameWithType: MemberSpaceLimitType.StopSync
+  fullName: Dropbox.Api.TeamCommon.MemberSpaceLimitType.StopSync

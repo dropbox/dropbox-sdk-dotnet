@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.SetCustomQuotaError
+  commentId: T:Dropbox.Api.Team.SetCustomQuotaError
+  id: SetCustomQuotaError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.SetCustomQuotaError.#ctor
+  - Dropbox.Api.Team.SetCustomQuotaError.AsOther
+  - Dropbox.Api.Team.SetCustomQuotaError.AsSomeUsersAreExcluded
+  - Dropbox.Api.Team.SetCustomQuotaError.AsTooManyUsers
+  - Dropbox.Api.Team.SetCustomQuotaError.IsOther
+  - Dropbox.Api.Team.SetCustomQuotaError.IsSomeUsersAreExcluded
+  - Dropbox.Api.Team.SetCustomQuotaError.IsTooManyUsers
+  langs:
+  - csharp
+  - vb
+  name: SetCustomQuotaError
+  nameWithType: SetCustomQuotaError
+  fullName: Dropbox.Api.Team.SetCustomQuotaError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: SetCustomQuotaError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Error returned when setting member custom quota.</p>\n"
+  example: []
+  syntax:
+    content: public class SetCustomQuotaError
+    content.vb: Public Class SetCustomQuotaError
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.SetCustomQuotaError.Other
+  - Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded
+  - Dropbox.Api.Team.SetCustomQuotaError.TooManyUsers
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.SetCustomQuotaError.#ctor
+  commentId: M:Dropbox.Api.Team.SetCustomQuotaError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.SetCustomQuotaError
+  langs:
+  - csharp
+  - vb
+  name: SetCustomQuotaError()
+  nameWithType: SetCustomQuotaError.SetCustomQuotaError()
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.SetCustomQuotaError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.SetCustomQuotaError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SetCustomQuotaError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.SetCustomQuotaError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.SetCustomQuotaError.IsSomeUsersAreExcluded
+  commentId: P:Dropbox.Api.Team.SetCustomQuotaError.IsSomeUsersAreExcluded
+  id: IsSomeUsersAreExcluded
+  parent: Dropbox.Api.Team.SetCustomQuotaError
+  langs:
+  - csharp
+  - vb
+  name: IsSomeUsersAreExcluded
+  nameWithType: SetCustomQuotaError.IsSomeUsersAreExcluded
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.IsSomeUsersAreExcluded
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsSomeUsersAreExcluded
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is SomeUsersAreExcluded</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSomeUsersAreExcluded { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSomeUsersAreExcluded As Boolean
+  overload: Dropbox.Api.Team.SetCustomQuotaError.IsSomeUsersAreExcluded*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.SetCustomQuotaError.AsSomeUsersAreExcluded
+  commentId: P:Dropbox.Api.Team.SetCustomQuotaError.AsSomeUsersAreExcluded
+  id: AsSomeUsersAreExcluded
+  parent: Dropbox.Api.Team.SetCustomQuotaError
+  langs:
+  - csharp
+  - vb
+  name: AsSomeUsersAreExcluded
+  nameWithType: SetCustomQuotaError.AsSomeUsersAreExcluded
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.AsSomeUsersAreExcluded
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsSomeUsersAreExcluded
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a SomeUsersAreExcluded, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SetCustomQuotaError.SomeUsersAreExcluded AsSomeUsersAreExcluded { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded
+    content.vb: Public ReadOnly Property AsSomeUsersAreExcluded As SetCustomQuotaError.SomeUsersAreExcluded
+  overload: Dropbox.Api.Team.SetCustomQuotaError.AsSomeUsersAreExcluded*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.SetCustomQuotaError.IsTooManyUsers
+  commentId: P:Dropbox.Api.Team.SetCustomQuotaError.IsTooManyUsers
+  id: IsTooManyUsers
+  parent: Dropbox.Api.Team.SetCustomQuotaError
+  langs:
+  - csharp
+  - vb
+  name: IsTooManyUsers
+  nameWithType: SetCustomQuotaError.IsTooManyUsers
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.IsTooManyUsers
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsTooManyUsers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is TooManyUsers</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooManyUsers { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooManyUsers As Boolean
+  overload: Dropbox.Api.Team.SetCustomQuotaError.IsTooManyUsers*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.SetCustomQuotaError.AsTooManyUsers
+  commentId: P:Dropbox.Api.Team.SetCustomQuotaError.AsTooManyUsers
+  id: AsTooManyUsers
+  parent: Dropbox.Api.Team.SetCustomQuotaError
+  langs:
+  - csharp
+  - vb
+  name: AsTooManyUsers
+  nameWithType: SetCustomQuotaError.AsTooManyUsers
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.AsTooManyUsers
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsTooManyUsers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TooManyUsers, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SetCustomQuotaError.TooManyUsers AsTooManyUsers { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.SetCustomQuotaError.TooManyUsers
+    content.vb: Public ReadOnly Property AsTooManyUsers As SetCustomQuotaError.TooManyUsers
+  overload: Dropbox.Api.Team.SetCustomQuotaError.AsTooManyUsers*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.SetCustomQuotaError.IsOther
+  commentId: P:Dropbox.Api.Team.SetCustomQuotaError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.SetCustomQuotaError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SetCustomQuotaError.IsOther
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.SetCustomQuotaError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.SetCustomQuotaError.AsOther
+  commentId: P:Dropbox.Api.Team.SetCustomQuotaError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.SetCustomQuotaError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SetCustomQuotaError.AsOther
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SetCustomQuotaError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.SetCustomQuotaError.Other
+    content.vb: Public ReadOnly Property AsOther As SetCustomQuotaError.Other
+  overload: Dropbox.Api.Team.SetCustomQuotaError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.Team.SetCustomQuotaError
+  commentId: T:Dropbox.Api.Team.SetCustomQuotaError
+  parent: Dropbox.Api.Team
+  name: SetCustomQuotaError
+  nameWithType: SetCustomQuotaError
+  fullName: Dropbox.Api.Team.SetCustomQuotaError
+- uid: Dropbox.Api.Team.SetCustomQuotaError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.SetCustomQuotaError.#ctor
+  name: SetCustomQuotaError
+  nameWithType: SetCustomQuotaError.SetCustomQuotaError
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.SetCustomQuotaError
+- uid: Dropbox.Api.Team.SetCustomQuotaError.IsSomeUsersAreExcluded*
+  commentId: Overload:Dropbox.Api.Team.SetCustomQuotaError.IsSomeUsersAreExcluded
+  name: IsSomeUsersAreExcluded
+  nameWithType: SetCustomQuotaError.IsSomeUsersAreExcluded
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.IsSomeUsersAreExcluded
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.SetCustomQuotaError.AsSomeUsersAreExcluded*
+  commentId: Overload:Dropbox.Api.Team.SetCustomQuotaError.AsSomeUsersAreExcluded
+  name: AsSomeUsersAreExcluded
+  nameWithType: SetCustomQuotaError.AsSomeUsersAreExcluded
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.AsSomeUsersAreExcluded
+- uid: Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded
+  commentId: T:Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded
+  parent: Dropbox.Api.Team
+  name: SetCustomQuotaError.SomeUsersAreExcluded
+  nameWithType: SetCustomQuotaError.SomeUsersAreExcluded
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded
+- uid: Dropbox.Api.Team.SetCustomQuotaError.IsTooManyUsers*
+  commentId: Overload:Dropbox.Api.Team.SetCustomQuotaError.IsTooManyUsers
+  name: IsTooManyUsers
+  nameWithType: SetCustomQuotaError.IsTooManyUsers
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.IsTooManyUsers
+- uid: Dropbox.Api.Team.SetCustomQuotaError.AsTooManyUsers*
+  commentId: Overload:Dropbox.Api.Team.SetCustomQuotaError.AsTooManyUsers
+  name: AsTooManyUsers
+  nameWithType: SetCustomQuotaError.AsTooManyUsers
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.AsTooManyUsers
+- uid: Dropbox.Api.Team.SetCustomQuotaError.TooManyUsers
+  commentId: T:Dropbox.Api.Team.SetCustomQuotaError.TooManyUsers
+  parent: Dropbox.Api.Team
+  name: SetCustomQuotaError.TooManyUsers
+  nameWithType: SetCustomQuotaError.TooManyUsers
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.TooManyUsers
+- uid: Dropbox.Api.Team.SetCustomQuotaError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.SetCustomQuotaError.IsOther
+  name: IsOther
+  nameWithType: SetCustomQuotaError.IsOther
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.IsOther
+- uid: Dropbox.Api.Team.SetCustomQuotaError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.SetCustomQuotaError.AsOther
+  name: AsOther
+  nameWithType: SetCustomQuotaError.AsOther
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.AsOther
+- uid: Dropbox.Api.Team.SetCustomQuotaError.Other
+  commentId: T:Dropbox.Api.Team.SetCustomQuotaError.Other
+  parent: Dropbox.Api.Team
+  name: SetCustomQuotaError.Other
+  nameWithType: SetCustomQuotaError.Other
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.Other

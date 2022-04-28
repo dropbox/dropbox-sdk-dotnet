@@ -1,0 +1,1140 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.SeenState.PlatformType
+  commentId: T:Dropbox.Api.SeenState.PlatformType
+  id: PlatformType
+  parent: Dropbox.Api.SeenState
+  children:
+  - Dropbox.Api.SeenState.PlatformType.#ctor
+  - Dropbox.Api.SeenState.PlatformType.AsApi
+  - Dropbox.Api.SeenState.PlatformType.AsDesktop
+  - Dropbox.Api.SeenState.PlatformType.AsMobile
+  - Dropbox.Api.SeenState.PlatformType.AsMobileAndroid
+  - Dropbox.Api.SeenState.PlatformType.AsMobileIos
+  - Dropbox.Api.SeenState.PlatformType.AsOther
+  - Dropbox.Api.SeenState.PlatformType.AsUnknown
+  - Dropbox.Api.SeenState.PlatformType.AsWeb
+  - Dropbox.Api.SeenState.PlatformType.IsApi
+  - Dropbox.Api.SeenState.PlatformType.IsDesktop
+  - Dropbox.Api.SeenState.PlatformType.IsMobile
+  - Dropbox.Api.SeenState.PlatformType.IsMobileAndroid
+  - Dropbox.Api.SeenState.PlatformType.IsMobileIos
+  - Dropbox.Api.SeenState.PlatformType.IsOther
+  - Dropbox.Api.SeenState.PlatformType.IsUnknown
+  - Dropbox.Api.SeenState.PlatformType.IsWeb
+  langs:
+  - csharp
+  - vb
+  name: PlatformType
+  nameWithType: PlatformType
+  fullName: Dropbox.Api.SeenState.PlatformType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: PlatformType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Possible platforms on which a user may view content.</p>\n"
+  example: []
+  syntax:
+    content: public class PlatformType
+    content.vb: Public Class PlatformType
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.SeenState.PlatformType.Api
+  - Dropbox.Api.SeenState.PlatformType.Desktop
+  - Dropbox.Api.SeenState.PlatformType.Mobile
+  - Dropbox.Api.SeenState.PlatformType.MobileAndroid
+  - Dropbox.Api.SeenState.PlatformType.MobileIos
+  - Dropbox.Api.SeenState.PlatformType.Other
+  - Dropbox.Api.SeenState.PlatformType.Unknown
+  - Dropbox.Api.SeenState.PlatformType.Web
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.SeenState.PlatformType.#ctor
+  commentId: M:Dropbox.Api.SeenState.PlatformType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: PlatformType()
+  nameWithType: PlatformType.PlatformType()
+  fullName: Dropbox.Api.SeenState.PlatformType.PlatformType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.SeenState.PlatformType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PlatformType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.SeenState.PlatformType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.SeenState.PlatformType.IsWeb
+  commentId: P:Dropbox.Api.SeenState.PlatformType.IsWeb
+  id: IsWeb
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: IsWeb
+  nameWithType: PlatformType.IsWeb
+  fullName: Dropbox.Api.SeenState.PlatformType.IsWeb
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsWeb
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets a value indicating whether this instance is Web</p>\n"
+  example: []
+  syntax:
+    content: public bool IsWeb { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsWeb As Boolean
+  overload: Dropbox.Api.SeenState.PlatformType.IsWeb*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.AsWeb
+  commentId: P:Dropbox.Api.SeenState.PlatformType.AsWeb
+  id: AsWeb
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: AsWeb
+  nameWithType: PlatformType.AsWeb
+  fullName: Dropbox.Api.SeenState.PlatformType.AsWeb
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsWeb
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets this instance as a Web, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PlatformType.Web AsWeb { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.SeenState.PlatformType.Web
+    content.vb: Public ReadOnly Property AsWeb As PlatformType.Web
+  overload: Dropbox.Api.SeenState.PlatformType.AsWeb*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.IsDesktop
+  commentId: P:Dropbox.Api.SeenState.PlatformType.IsDesktop
+  id: IsDesktop
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: IsDesktop
+  nameWithType: PlatformType.IsDesktop
+  fullName: Dropbox.Api.SeenState.PlatformType.IsDesktop
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsDesktop
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets a value indicating whether this instance is Desktop</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDesktop { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDesktop As Boolean
+  overload: Dropbox.Api.SeenState.PlatformType.IsDesktop*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.AsDesktop
+  commentId: P:Dropbox.Api.SeenState.PlatformType.AsDesktop
+  id: AsDesktop
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: AsDesktop
+  nameWithType: PlatformType.AsDesktop
+  fullName: Dropbox.Api.SeenState.PlatformType.AsDesktop
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsDesktop
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets this instance as a Desktop, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PlatformType.Desktop AsDesktop { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.SeenState.PlatformType.Desktop
+    content.vb: Public ReadOnly Property AsDesktop As PlatformType.Desktop
+  overload: Dropbox.Api.SeenState.PlatformType.AsDesktop*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.IsMobileIos
+  commentId: P:Dropbox.Api.SeenState.PlatformType.IsMobileIos
+  id: IsMobileIos
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: IsMobileIos
+  nameWithType: PlatformType.IsMobileIos
+  fullName: Dropbox.Api.SeenState.PlatformType.IsMobileIos
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsMobileIos
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets a value indicating whether this instance is MobileIos</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMobileIos { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMobileIos As Boolean
+  overload: Dropbox.Api.SeenState.PlatformType.IsMobileIos*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.AsMobileIos
+  commentId: P:Dropbox.Api.SeenState.PlatformType.AsMobileIos
+  id: AsMobileIos
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: AsMobileIos
+  nameWithType: PlatformType.AsMobileIos
+  fullName: Dropbox.Api.SeenState.PlatformType.AsMobileIos
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsMobileIos
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets this instance as a MobileIos, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PlatformType.MobileIos AsMobileIos { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.SeenState.PlatformType.MobileIos
+    content.vb: Public ReadOnly Property AsMobileIos As PlatformType.MobileIos
+  overload: Dropbox.Api.SeenState.PlatformType.AsMobileIos*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.IsMobileAndroid
+  commentId: P:Dropbox.Api.SeenState.PlatformType.IsMobileAndroid
+  id: IsMobileAndroid
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: IsMobileAndroid
+  nameWithType: PlatformType.IsMobileAndroid
+  fullName: Dropbox.Api.SeenState.PlatformType.IsMobileAndroid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsMobileAndroid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets a value indicating whether this instance is MobileAndroid</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMobileAndroid { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMobileAndroid As Boolean
+  overload: Dropbox.Api.SeenState.PlatformType.IsMobileAndroid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.AsMobileAndroid
+  commentId: P:Dropbox.Api.SeenState.PlatformType.AsMobileAndroid
+  id: AsMobileAndroid
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: AsMobileAndroid
+  nameWithType: PlatformType.AsMobileAndroid
+  fullName: Dropbox.Api.SeenState.PlatformType.AsMobileAndroid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsMobileAndroid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets this instance as a MobileAndroid, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PlatformType.MobileAndroid AsMobileAndroid { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.SeenState.PlatformType.MobileAndroid
+    content.vb: Public ReadOnly Property AsMobileAndroid As PlatformType.MobileAndroid
+  overload: Dropbox.Api.SeenState.PlatformType.AsMobileAndroid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.IsApi
+  commentId: P:Dropbox.Api.SeenState.PlatformType.IsApi
+  id: IsApi
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: IsApi
+  nameWithType: PlatformType.IsApi
+  fullName: Dropbox.Api.SeenState.PlatformType.IsApi
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsApi
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets a value indicating whether this instance is Api</p>\n"
+  example: []
+  syntax:
+    content: public bool IsApi { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsApi As Boolean
+  overload: Dropbox.Api.SeenState.PlatformType.IsApi*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.AsApi
+  commentId: P:Dropbox.Api.SeenState.PlatformType.AsApi
+  id: AsApi
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: AsApi
+  nameWithType: PlatformType.AsApi
+  fullName: Dropbox.Api.SeenState.PlatformType.AsApi
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsApi
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets this instance as a Api, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PlatformType.Api AsApi { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.SeenState.PlatformType.Api
+    content.vb: Public ReadOnly Property AsApi As PlatformType.Api
+  overload: Dropbox.Api.SeenState.PlatformType.AsApi*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.IsUnknown
+  commentId: P:Dropbox.Api.SeenState.PlatformType.IsUnknown
+  id: IsUnknown
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: IsUnknown
+  nameWithType: PlatformType.IsUnknown
+  fullName: Dropbox.Api.SeenState.PlatformType.IsUnknown
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsUnknown
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 149
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets a value indicating whether this instance is Unknown</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnknown { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnknown As Boolean
+  overload: Dropbox.Api.SeenState.PlatformType.IsUnknown*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.AsUnknown
+  commentId: P:Dropbox.Api.SeenState.PlatformType.AsUnknown
+  id: AsUnknown
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: AsUnknown
+  nameWithType: PlatformType.AsUnknown
+  fullName: Dropbox.Api.SeenState.PlatformType.AsUnknown
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsUnknown
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 160
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets this instance as a Unknown, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PlatformType.Unknown AsUnknown { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.SeenState.PlatformType.Unknown
+    content.vb: Public ReadOnly Property AsUnknown As PlatformType.Unknown
+  overload: Dropbox.Api.SeenState.PlatformType.AsUnknown*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.IsMobile
+  commentId: P:Dropbox.Api.SeenState.PlatformType.IsMobile
+  id: IsMobile
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: IsMobile
+  nameWithType: PlatformType.IsMobile
+  fullName: Dropbox.Api.SeenState.PlatformType.IsMobile
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsMobile
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 171
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets a value indicating whether this instance is Mobile</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMobile { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMobile As Boolean
+  overload: Dropbox.Api.SeenState.PlatformType.IsMobile*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.AsMobile
+  commentId: P:Dropbox.Api.SeenState.PlatformType.AsMobile
+  id: AsMobile
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: AsMobile
+  nameWithType: PlatformType.AsMobile
+  fullName: Dropbox.Api.SeenState.PlatformType.AsMobile
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsMobile
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 182
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets this instance as a Mobile, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PlatformType.Mobile AsMobile { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.SeenState.PlatformType.Mobile
+    content.vb: Public ReadOnly Property AsMobile As PlatformType.Mobile
+  overload: Dropbox.Api.SeenState.PlatformType.AsMobile*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.IsOther
+  commentId: P:Dropbox.Api.SeenState.PlatformType.IsOther
+  id: IsOther
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: PlatformType.IsOther
+  fullName: Dropbox.Api.SeenState.PlatformType.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 193
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.SeenState.PlatformType.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.SeenState.PlatformType.AsOther
+  commentId: P:Dropbox.Api.SeenState.PlatformType.AsOther
+  id: AsOther
+  parent: Dropbox.Api.SeenState.PlatformType
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: PlatformType.AsOther
+  fullName: Dropbox.Api.SeenState.PlatformType.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+      branch: doc_fx_integration
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet.git
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SeenState/PlatformType.cs
+    startLine: 204
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SeenState
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PlatformType.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.SeenState.PlatformType.Other
+    content.vb: Public ReadOnly Property AsOther As PlatformType.Other
+  overload: Dropbox.Api.SeenState.PlatformType.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.SeenState
+  commentId: N:Dropbox.Api.SeenState
+  name: Dropbox.Api.SeenState
+  nameWithType: Dropbox.Api.SeenState
+  fullName: Dropbox.Api.SeenState
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dropbox.Api.SeenState.PlatformType
+  commentId: T:Dropbox.Api.SeenState.PlatformType
+  parent: Dropbox.Api.SeenState
+  name: PlatformType
+  nameWithType: PlatformType
+  fullName: Dropbox.Api.SeenState.PlatformType
+- uid: Dropbox.Api.SeenState.PlatformType.#ctor*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.#ctor
+  name: PlatformType
+  nameWithType: PlatformType.PlatformType
+  fullName: Dropbox.Api.SeenState.PlatformType.PlatformType
+- uid: Dropbox.Api.SeenState.PlatformType.IsWeb*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.IsWeb
+  name: IsWeb
+  nameWithType: PlatformType.IsWeb
+  fullName: Dropbox.Api.SeenState.PlatformType.IsWeb
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.SeenState.PlatformType.AsWeb*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.AsWeb
+  name: AsWeb
+  nameWithType: PlatformType.AsWeb
+  fullName: Dropbox.Api.SeenState.PlatformType.AsWeb
+- uid: Dropbox.Api.SeenState.PlatformType.Web
+  commentId: T:Dropbox.Api.SeenState.PlatformType.Web
+  parent: Dropbox.Api.SeenState
+  name: PlatformType.Web
+  nameWithType: PlatformType.Web
+  fullName: Dropbox.Api.SeenState.PlatformType.Web
+- uid: Dropbox.Api.SeenState.PlatformType.IsDesktop*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.IsDesktop
+  name: IsDesktop
+  nameWithType: PlatformType.IsDesktop
+  fullName: Dropbox.Api.SeenState.PlatformType.IsDesktop
+- uid: Dropbox.Api.SeenState.PlatformType.AsDesktop*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.AsDesktop
+  name: AsDesktop
+  nameWithType: PlatformType.AsDesktop
+  fullName: Dropbox.Api.SeenState.PlatformType.AsDesktop
+- uid: Dropbox.Api.SeenState.PlatformType.Desktop
+  commentId: T:Dropbox.Api.SeenState.PlatformType.Desktop
+  parent: Dropbox.Api.SeenState
+  name: PlatformType.Desktop
+  nameWithType: PlatformType.Desktop
+  fullName: Dropbox.Api.SeenState.PlatformType.Desktop
+- uid: Dropbox.Api.SeenState.PlatformType.IsMobileIos*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.IsMobileIos
+  name: IsMobileIos
+  nameWithType: PlatformType.IsMobileIos
+  fullName: Dropbox.Api.SeenState.PlatformType.IsMobileIos
+- uid: Dropbox.Api.SeenState.PlatformType.AsMobileIos*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.AsMobileIos
+  name: AsMobileIos
+  nameWithType: PlatformType.AsMobileIos
+  fullName: Dropbox.Api.SeenState.PlatformType.AsMobileIos
+- uid: Dropbox.Api.SeenState.PlatformType.MobileIos
+  commentId: T:Dropbox.Api.SeenState.PlatformType.MobileIos
+  parent: Dropbox.Api.SeenState
+  name: PlatformType.MobileIos
+  nameWithType: PlatformType.MobileIos
+  fullName: Dropbox.Api.SeenState.PlatformType.MobileIos
+- uid: Dropbox.Api.SeenState.PlatformType.IsMobileAndroid*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.IsMobileAndroid
+  name: IsMobileAndroid
+  nameWithType: PlatformType.IsMobileAndroid
+  fullName: Dropbox.Api.SeenState.PlatformType.IsMobileAndroid
+- uid: Dropbox.Api.SeenState.PlatformType.AsMobileAndroid*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.AsMobileAndroid
+  name: AsMobileAndroid
+  nameWithType: PlatformType.AsMobileAndroid
+  fullName: Dropbox.Api.SeenState.PlatformType.AsMobileAndroid
+- uid: Dropbox.Api.SeenState.PlatformType.MobileAndroid
+  commentId: T:Dropbox.Api.SeenState.PlatformType.MobileAndroid
+  parent: Dropbox.Api.SeenState
+  name: PlatformType.MobileAndroid
+  nameWithType: PlatformType.MobileAndroid
+  fullName: Dropbox.Api.SeenState.PlatformType.MobileAndroid
+- uid: Dropbox.Api.SeenState.PlatformType.IsApi*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.IsApi
+  name: IsApi
+  nameWithType: PlatformType.IsApi
+  fullName: Dropbox.Api.SeenState.PlatformType.IsApi
+- uid: Dropbox.Api.SeenState.PlatformType.AsApi*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.AsApi
+  name: AsApi
+  nameWithType: PlatformType.AsApi
+  fullName: Dropbox.Api.SeenState.PlatformType.AsApi
+- uid: Dropbox.Api.SeenState.PlatformType.Api
+  commentId: T:Dropbox.Api.SeenState.PlatformType.Api
+  parent: Dropbox.Api.SeenState
+  name: PlatformType.Api
+  nameWithType: PlatformType.Api
+  fullName: Dropbox.Api.SeenState.PlatformType.Api
+- uid: Dropbox.Api.SeenState.PlatformType.IsUnknown*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.IsUnknown
+  name: IsUnknown
+  nameWithType: PlatformType.IsUnknown
+  fullName: Dropbox.Api.SeenState.PlatformType.IsUnknown
+- uid: Dropbox.Api.SeenState.PlatformType.AsUnknown*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.AsUnknown
+  name: AsUnknown
+  nameWithType: PlatformType.AsUnknown
+  fullName: Dropbox.Api.SeenState.PlatformType.AsUnknown
+- uid: Dropbox.Api.SeenState.PlatformType.Unknown
+  commentId: T:Dropbox.Api.SeenState.PlatformType.Unknown
+  parent: Dropbox.Api.SeenState
+  name: PlatformType.Unknown
+  nameWithType: PlatformType.Unknown
+  fullName: Dropbox.Api.SeenState.PlatformType.Unknown
+- uid: Dropbox.Api.SeenState.PlatformType.IsMobile*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.IsMobile
+  name: IsMobile
+  nameWithType: PlatformType.IsMobile
+  fullName: Dropbox.Api.SeenState.PlatformType.IsMobile
+- uid: Dropbox.Api.SeenState.PlatformType.AsMobile*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.AsMobile
+  name: AsMobile
+  nameWithType: PlatformType.AsMobile
+  fullName: Dropbox.Api.SeenState.PlatformType.AsMobile
+- uid: Dropbox.Api.SeenState.PlatformType.Mobile
+  commentId: T:Dropbox.Api.SeenState.PlatformType.Mobile
+  parent: Dropbox.Api.SeenState
+  name: PlatformType.Mobile
+  nameWithType: PlatformType.Mobile
+  fullName: Dropbox.Api.SeenState.PlatformType.Mobile
+- uid: Dropbox.Api.SeenState.PlatformType.IsOther*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.IsOther
+  name: IsOther
+  nameWithType: PlatformType.IsOther
+  fullName: Dropbox.Api.SeenState.PlatformType.IsOther
+- uid: Dropbox.Api.SeenState.PlatformType.AsOther*
+  commentId: Overload:Dropbox.Api.SeenState.PlatformType.AsOther
+  name: AsOther
+  nameWithType: PlatformType.AsOther
+  fullName: Dropbox.Api.SeenState.PlatformType.AsOther
+- uid: Dropbox.Api.SeenState.PlatformType.Other
+  commentId: T:Dropbox.Api.SeenState.PlatformType.Other
+  parent: Dropbox.Api.SeenState
+  name: PlatformType.Other
+  nameWithType: PlatformType.Other
+  fullName: Dropbox.Api.SeenState.PlatformType.Other
