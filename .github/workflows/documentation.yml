@@ -14,6 +14,8 @@ jobs:
         with:
           ref: gh-pages-holder
           path: gh-pages
+      - name: validate folder
+        run: ls gh-pages
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
