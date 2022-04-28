@@ -1,0 +1,680 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AuthError
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AuthError
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Auth.AuthError">
+  
+  
+  <h1 id="Dropbox_Api_Auth_AuthError" data-uid="Dropbox.Api.Auth.AuthError" class="text-break">Class AuthError
+  </h1>
+  <div class="markdown level0 summary"><p>Errors occurred during authentication.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AuthError</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Auth.AuthError.ExpiredAccessToken.html">AuthError.ExpiredAccessToken</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Auth.AuthError.InvalidAccessToken.html">AuthError.InvalidAccessToken</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Auth.AuthError.InvalidSelectAdmin.html">AuthError.InvalidSelectAdmin</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Auth.AuthError.InvalidSelectUser.html">AuthError.InvalidSelectUser</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Auth.AuthError.MissingScope.html">AuthError.MissingScope</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Auth.AuthError.Other.html">AuthError.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Auth.AuthError.RouteAccessDenied.html">AuthError.RouteAccessDenied</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Auth.AuthError.UserSuspended.html">AuthError.UserSuspended</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Auth.html">Dropbox.Api.Auth</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Auth_AuthError_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AuthError</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L33">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError__ctor_" data-uid="Dropbox.Api.Auth.AuthError.#ctor*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError__ctor" data-uid="Dropbox.Api.Auth.AuthError.#ctor">AuthError()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Auth.AuthError.html">AuthError</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthError()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_AsExpiredAccessToken.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.AsExpiredAccessToken%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L139">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_AsExpiredAccessToken_" data-uid="Dropbox.Api.Auth.AuthError.AsExpiredAccessToken*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_AsExpiredAccessToken" data-uid="Dropbox.Api.Auth.AuthError.AsExpiredAccessToken">AsExpiredAccessToken</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a ExpiredAccessToken, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthError.ExpiredAccessToken AsExpiredAccessToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Auth.AuthError.ExpiredAccessToken.html">AuthError.ExpiredAccessToken</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_AsInvalidAccessToken.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.AsInvalidAccessToken%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L51">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_AsInvalidAccessToken_" data-uid="Dropbox.Api.Auth.AuthError.AsInvalidAccessToken*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_AsInvalidAccessToken" data-uid="Dropbox.Api.Auth.AuthError.AsInvalidAccessToken">AsInvalidAccessToken</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InvalidAccessToken, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthError.InvalidAccessToken AsInvalidAccessToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Auth.AuthError.InvalidAccessToken.html">AuthError.InvalidAccessToken</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_AsInvalidSelectAdmin.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L95">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_AsInvalidSelectAdmin_" data-uid="Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_AsInvalidSelectAdmin" data-uid="Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin">AsInvalidSelectAdmin</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InvalidSelectAdmin, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthError.InvalidSelectAdmin AsInvalidSelectAdmin { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Auth.AuthError.InvalidSelectAdmin.html">AuthError.InvalidSelectAdmin</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_AsInvalidSelectUser.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.AsInvalidSelectUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L73">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_AsInvalidSelectUser_" data-uid="Dropbox.Api.Auth.AuthError.AsInvalidSelectUser*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_AsInvalidSelectUser" data-uid="Dropbox.Api.Auth.AuthError.AsInvalidSelectUser">AsInvalidSelectUser</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InvalidSelectUser, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthError.InvalidSelectUser AsInvalidSelectUser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Auth.AuthError.InvalidSelectUser.html">AuthError.InvalidSelectUser</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_AsMissingScope.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.AsMissingScope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L161">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_AsMissingScope_" data-uid="Dropbox.Api.Auth.AuthError.AsMissingScope*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_AsMissingScope" data-uid="Dropbox.Api.Auth.AuthError.AsMissingScope">AsMissingScope</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a MissingScope, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthError.MissingScope AsMissingScope { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Auth.AuthError.MissingScope.html">AuthError.MissingScope</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L205">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_AsOther_" data-uid="Dropbox.Api.Auth.AuthError.AsOther*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_AsOther" data-uid="Dropbox.Api.Auth.AuthError.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthError.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Auth.AuthError.Other.html">AuthError.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_AsRouteAccessDenied.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.AsRouteAccessDenied%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L183">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_AsRouteAccessDenied_" data-uid="Dropbox.Api.Auth.AuthError.AsRouteAccessDenied*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_AsRouteAccessDenied" data-uid="Dropbox.Api.Auth.AuthError.AsRouteAccessDenied">AsRouteAccessDenied</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a RouteAccessDenied, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthError.RouteAccessDenied AsRouteAccessDenied { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Auth.AuthError.RouteAccessDenied.html">AuthError.RouteAccessDenied</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_AsUserSuspended.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.AsUserSuspended%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L117">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_AsUserSuspended_" data-uid="Dropbox.Api.Auth.AuthError.AsUserSuspended*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_AsUserSuspended" data-uid="Dropbox.Api.Auth.AuthError.AsUserSuspended">AsUserSuspended</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a UserSuspended, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthError.UserSuspended AsUserSuspended { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Auth.AuthError.UserSuspended.html">AuthError.UserSuspended</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_IsExpiredAccessToken.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.IsExpiredAccessToken%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L128">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_IsExpiredAccessToken_" data-uid="Dropbox.Api.Auth.AuthError.IsExpiredAccessToken*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_IsExpiredAccessToken" data-uid="Dropbox.Api.Auth.AuthError.IsExpiredAccessToken">IsExpiredAccessToken</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is ExpiredAccessToken</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsExpiredAccessToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_IsInvalidAccessToken.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.IsInvalidAccessToken%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L40">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_IsInvalidAccessToken_" data-uid="Dropbox.Api.Auth.AuthError.IsInvalidAccessToken*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_IsInvalidAccessToken" data-uid="Dropbox.Api.Auth.AuthError.IsInvalidAccessToken">IsInvalidAccessToken</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InvalidAccessToken</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInvalidAccessToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_IsInvalidSelectAdmin.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L84">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_IsInvalidSelectAdmin_" data-uid="Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_IsInvalidSelectAdmin" data-uid="Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin">IsInvalidSelectAdmin</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InvalidSelectAdmin</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInvalidSelectAdmin { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_IsInvalidSelectUser.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.IsInvalidSelectUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L62">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_IsInvalidSelectUser_" data-uid="Dropbox.Api.Auth.AuthError.IsInvalidSelectUser*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_IsInvalidSelectUser" data-uid="Dropbox.Api.Auth.AuthError.IsInvalidSelectUser">IsInvalidSelectUser</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InvalidSelectUser</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInvalidSelectUser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_IsMissingScope.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.IsMissingScope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L150">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_IsMissingScope_" data-uid="Dropbox.Api.Auth.AuthError.IsMissingScope*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_IsMissingScope" data-uid="Dropbox.Api.Auth.AuthError.IsMissingScope">IsMissingScope</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is MissingScope</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMissingScope { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L194">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_IsOther_" data-uid="Dropbox.Api.Auth.AuthError.IsOther*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_IsOther" data-uid="Dropbox.Api.Auth.AuthError.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_IsRouteAccessDenied.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.IsRouteAccessDenied%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L172">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_IsRouteAccessDenied_" data-uid="Dropbox.Api.Auth.AuthError.IsRouteAccessDenied*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_IsRouteAccessDenied" data-uid="Dropbox.Api.Auth.AuthError.IsRouteAccessDenied">IsRouteAccessDenied</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is RouteAccessDenied</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRouteAccessDenied { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError_IsUserSuspended.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError.IsUserSuspended%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L106">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Auth_AuthError_IsUserSuspended_" data-uid="Dropbox.Api.Auth.AuthError.IsUserSuspended*"></a>
+  <h4 id="Dropbox_Api_Auth_AuthError_IsUserSuspended" data-uid="Dropbox.Api.Auth.AuthError.IsUserSuspended">IsUserSuspended</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is UserSuspended</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUserSuspended { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Auth_AuthError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Auth.AuthError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

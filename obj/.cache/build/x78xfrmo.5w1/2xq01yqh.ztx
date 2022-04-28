@@ -1,0 +1,476 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Dropbox.Api.FileProperties
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Dropbox.Api.FileProperties
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.FileProperties">
+  
+  <h1 id="Dropbox_Api_FileProperties" data-uid="Dropbox.Api.FileProperties" class="text-break">Namespace Dropbox.Api.FileProperties
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.AddPropertiesArg.html">AddPropertiesArg</a></h4>
+      <section><p>The add properties arg object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.AddPropertiesError.html">AddPropertiesError</a></h4>
+      <section><p>The add properties error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.AddPropertiesError.DoesNotFitTemplate.html">AddPropertiesError.DoesNotFitTemplate</a></h4>
+      <section><p>One or more of the supplied property fields does not conform to the template
+specifications.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.AddPropertiesError.DuplicatePropertyGroups.html">AddPropertiesError.DuplicatePropertyGroups</a></h4>
+      <section><p>There are 2 or more property groups referring to the same templates in the
+input.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.AddPropertiesError.Other.html">AddPropertiesError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.AddPropertiesError.Path.html">AddPropertiesError.Path</a></h4>
+      <section><p>The path object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.AddPropertiesError.PropertyFieldTooLarge.html">AddPropertiesError.PropertyFieldTooLarge</a></h4>
+      <section><p>One or more of the supplied property field values is too large.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.AddPropertiesError.PropertyGroupAlreadyExists.html">AddPropertiesError.PropertyGroupAlreadyExists</a></h4>
+      <section><p>A property group associated with this template and file already
+exists.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.AddPropertiesError.RestrictedContent.html">AddPropertiesError.RestrictedContent</a></h4>
+      <section><p>You do not have permission to modify this template.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.AddPropertiesError.TemplateNotFound.html">AddPropertiesError.TemplateNotFound</a></h4>
+      <section><p>Template does not exist for the given identifier.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.AddPropertiesError.UnsupportedFolder.html">AddPropertiesError.UnsupportedFolder</a></h4>
+      <section><p>This folder cannot be tagged. Tagging folders is not supported for team-owned
+templates.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.AddTemplateArg.html">AddTemplateArg</a></h4>
+      <section><p>The add template arg object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.AddTemplateResult.html">AddTemplateResult</a></h4>
+      <section><p>The add template result object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.GetTemplateArg.html">GetTemplateArg</a></h4>
+      <section><p>The get template arg object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.GetTemplateResult.html">GetTemplateResult</a></h4>
+      <section><p>The get template result object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.InvalidPropertyGroupError.html">InvalidPropertyGroupError</a></h4>
+      <section><p>The invalid property group error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.InvalidPropertyGroupError.DoesNotFitTemplate.html">InvalidPropertyGroupError.DoesNotFitTemplate</a></h4>
+      <section><p>One or more of the supplied property fields does not conform to the template
+specifications.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.InvalidPropertyGroupError.DuplicatePropertyGroups.html">InvalidPropertyGroupError.DuplicatePropertyGroups</a></h4>
+      <section><p>There are 2 or more property groups referring to the same templates in the
+input.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.InvalidPropertyGroupError.Other.html">InvalidPropertyGroupError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.InvalidPropertyGroupError.Path.html">InvalidPropertyGroupError.Path</a></h4>
+      <section><p>The path object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.InvalidPropertyGroupError.PropertyFieldTooLarge.html">InvalidPropertyGroupError.PropertyFieldTooLarge</a></h4>
+      <section><p>One or more of the supplied property field values is too large.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.InvalidPropertyGroupError.RestrictedContent.html">InvalidPropertyGroupError.RestrictedContent</a></h4>
+      <section><p>You do not have permission to modify this template.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.InvalidPropertyGroupError.TemplateNotFound.html">InvalidPropertyGroupError.TemplateNotFound</a></h4>
+      <section><p>Template does not exist for the given identifier.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.InvalidPropertyGroupError.UnsupportedFolder.html">InvalidPropertyGroupError.UnsupportedFolder</a></h4>
+      <section><p>This folder cannot be tagged. Tagging folders is not supported for team-owned
+templates.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.ListTemplateResult.html">ListTemplateResult</a></h4>
+      <section><p>The list template result object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.LogicalOperator.html">LogicalOperator</a></h4>
+      <section><p>Logical operator to join search queries together.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.LogicalOperator.OrOperator.html">LogicalOperator.OrOperator</a></h4>
+      <section><p>Append a query with an &quot;or&quot; operator.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.LogicalOperator.Other.html">LogicalOperator.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.LookupError.html">LookupError</a></h4>
+      <section><p>The lookup error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.LookupError.MalformedPath.html">LookupError.MalformedPath</a></h4>
+      <section><p>The malformed path object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.LookupError.NotFile.html">LookupError.NotFile</a></h4>
+      <section><p>We were expecting a file, but the given path refers to something that isn&apos;t a
+file.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.LookupError.NotFolder.html">LookupError.NotFolder</a></h4>
+      <section><p>We were expecting a folder, but the given path refers to something that isn&apos;t
+a folder.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.LookupError.NotFound.html">LookupError.NotFound</a></h4>
+      <section><p>There is nothing at the given path.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.LookupError.Other.html">LookupError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.LookupError.RestrictedContent.html">LookupError.RestrictedContent</a></h4>
+      <section><p>The file cannot be transferred because the content is restricted. For
+example, we might restrict a file due to legal requirements.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.LookUpPropertiesError.html">LookUpPropertiesError</a></h4>
+      <section><p>The look up properties error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.LookUpPropertiesError.Other.html">LookUpPropertiesError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.LookUpPropertiesError.PropertyGroupNotFound.html">LookUpPropertiesError.PropertyGroupNotFound</a></h4>
+      <section><p>No property group was found.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.ModifyTemplateError.html">ModifyTemplateError</a></h4>
+      <section><p>The modify template error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.ModifyTemplateError.ConflictingPropertyNames.html">ModifyTemplateError.ConflictingPropertyNames</a></h4>
+      <section><p>A property field key with that name already exists in the template.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.ModifyTemplateError.Other.html">ModifyTemplateError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.ModifyTemplateError.RestrictedContent.html">ModifyTemplateError.RestrictedContent</a></h4>
+      <section><p>You do not have permission to modify this template.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.ModifyTemplateError.TemplateAttributeTooLarge.html">ModifyTemplateError.TemplateAttributeTooLarge</a></h4>
+      <section><p>The template name, description or one or more of the property field keys is
+too large.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.ModifyTemplateError.TemplateNotFound.html">ModifyTemplateError.TemplateNotFound</a></h4>
+      <section><p>Template does not exist for the given identifier.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.ModifyTemplateError.TooManyProperties.html">ModifyTemplateError.TooManyProperties</a></h4>
+      <section><p>There are too many properties in the changed template. The maximum number of
+properties per template is 32.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.ModifyTemplateError.TooManyTemplates.html">ModifyTemplateError.TooManyTemplates</a></h4>
+      <section><p>There are too many templates for the team.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.OverwritePropertyGroupArg.html">OverwritePropertyGroupArg</a></h4>
+      <section><p>The overwrite property group arg object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesError.html">PropertiesError</a></h4>
+      <section><p>The properties error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesError.Other.html">PropertiesError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesError.Path.html">PropertiesError.Path</a></h4>
+      <section><p>The path object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesError.RestrictedContent.html">PropertiesError.RestrictedContent</a></h4>
+      <section><p>You do not have permission to modify this template.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesError.TemplateNotFound.html">PropertiesError.TemplateNotFound</a></h4>
+      <section><p>Template does not exist for the given identifier.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesError.UnsupportedFolder.html">PropertiesError.UnsupportedFolder</a></h4>
+      <section><p>This folder cannot be tagged. Tagging folders is not supported for team-owned
+templates.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesSearchArg.html">PropertiesSearchArg</a></h4>
+      <section><p>The properties search arg object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesSearchContinueArg.html">PropertiesSearchContinueArg</a></h4>
+      <section><p>The properties search continue arg object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesSearchContinueError.html">PropertiesSearchContinueError</a></h4>
+      <section><p>The properties search continue error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesSearchContinueError.Other.html">PropertiesSearchContinueError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesSearchContinueError.Reset.html">PropertiesSearchContinueError.Reset</a></h4>
+      <section><p>Indicates that the cursor has been invalidated. Call <a class="xref" href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.html#Dropbox_Api_FileProperties_Routes_FilePropertiesUserRoutes_PropertiesSearchAsync_Dropbox_Api_FileProperties_PropertiesSearchArg_">PropertiesSearchAsync(PropertiesSearchArg)</a> to obtain a new cursor.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesSearchError.html">PropertiesSearchError</a></h4>
+      <section><p>The properties search error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesSearchError.Other.html">PropertiesSearchError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesSearchError.PropertyGroupLookup.html">PropertiesSearchError.PropertyGroupLookup</a></h4>
+      <section><p>The property group lookup object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesSearchMatch.html">PropertiesSearchMatch</a></h4>
+      <section><p>The properties search match object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesSearchMode.html">PropertiesSearchMode</a></h4>
+      <section><p>The properties search mode object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.html">PropertiesSearchMode.FieldName</a></h4>
+      <section><p>Search for a value associated with this field name.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesSearchMode.Other.html">PropertiesSearchMode.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesSearchQuery.html">PropertiesSearchQuery</a></h4>
+      <section><p>The properties search query object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertiesSearchResult.html">PropertiesSearchResult</a></h4>
+      <section><p>The properties search result object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertyField.html">PropertyField</a></h4>
+      <section><p>Raw key/value data to be associated with a Dropbox file. Property fields are
+added to Dropbox files as a <a class="xref" href="Dropbox.Api.FileProperties.PropertyGroup.html">PropertyGroup</a>.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertyFieldTemplate.html">PropertyFieldTemplate</a></h4>
+      <section><p>Defines how a single property field may be structured. Used exclusively by <a class="xref" href="Dropbox.Api.FileProperties.PropertyGroupTemplate.html">PropertyGroupTemplate</a>.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertyGroup.html">PropertyGroup</a></h4>
+      <section><p>A subset of the property fields described by the corresponding <a class="xref" href="Dropbox.Api.FileProperties.PropertyGroupTemplate.html">PropertyGroupTemplate</a>. Properties are always added to a Dropbox file as a
+<a class="xref" href="Dropbox.Api.FileProperties.PropertyGroup.html">PropertyGroup</a>. The possible key names and value types in this group are
+defined by the corresponding <a class="xref" href="Dropbox.Api.FileProperties.PropertyGroupTemplate.html">PropertyGroupTemplate</a>.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertyGroupTemplate.html">PropertyGroupTemplate</a></h4>
+      <section><p>Defines how a property group may be structured.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertyGroupUpdate.html">PropertyGroupUpdate</a></h4>
+      <section><p>The property group update object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertyType.html">PropertyType</a></h4>
+      <section><p>Data type of the given property field added.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertyType.Other.html">PropertyType.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.PropertyType.String.html">PropertyType.String</a></h4>
+      <section><p>The associated property field will be of type string. Unicode is
+supported.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.RemovePropertiesArg.html">RemovePropertiesArg</a></h4>
+      <section><p>The remove properties arg object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.RemovePropertiesError.html">RemovePropertiesError</a></h4>
+      <section><p>The remove properties error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.RemovePropertiesError.Other.html">RemovePropertiesError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.RemovePropertiesError.Path.html">RemovePropertiesError.Path</a></h4>
+      <section><p>The path object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.RemovePropertiesError.PropertyGroupLookup.html">RemovePropertiesError.PropertyGroupLookup</a></h4>
+      <section><p>The property group lookup object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.RemovePropertiesError.RestrictedContent.html">RemovePropertiesError.RestrictedContent</a></h4>
+      <section><p>You do not have permission to modify this template.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.RemovePropertiesError.TemplateNotFound.html">RemovePropertiesError.TemplateNotFound</a></h4>
+      <section><p>Template does not exist for the given identifier.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.RemovePropertiesError.UnsupportedFolder.html">RemovePropertiesError.UnsupportedFolder</a></h4>
+      <section><p>This folder cannot be tagged. Tagging folders is not supported for team-owned
+templates.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.RemoveTemplateArg.html">RemoveTemplateArg</a></h4>
+      <section><p>The remove template arg object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateError.html">TemplateError</a></h4>
+      <section><p>The template error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateError.Other.html">TemplateError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateError.RestrictedContent.html">TemplateError.RestrictedContent</a></h4>
+      <section><p>You do not have permission to modify this template.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateError.TemplateNotFound.html">TemplateError.TemplateNotFound</a></h4>
+      <section><p>Template does not exist for the given identifier.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateFilter.html">TemplateFilter</a></h4>
+      <section><p>The template filter object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateFilter.FilterNone.html">TemplateFilter.FilterNone</a></h4>
+      <section><p>No templates will be filtered from the result (all templates will be
+returned).</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateFilter.FilterSome.html">TemplateFilter.FilterSome</a></h4>
+      <section><p>Only templates with an ID in the supplied list will be returned (a subset of
+templates will be returned).</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateFilter.Other.html">TemplateFilter.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateFilterBase.html">TemplateFilterBase</a></h4>
+      <section><p>The template filter base object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateFilterBase.FilterSome.html">TemplateFilterBase.FilterSome</a></h4>
+      <section><p>Only templates with an ID in the supplied list will be returned (a subset of
+templates will be returned).</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateFilterBase.Other.html">TemplateFilterBase.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateOwnerType.html">TemplateOwnerType</a></h4>
+      <section><p>The template owner type object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateOwnerType.Other.html">TemplateOwnerType.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateOwnerType.Team.html">TemplateOwnerType.Team</a></h4>
+      <section><p>Template will be associated with a team.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.TemplateOwnerType.User.html">TemplateOwnerType.User</a></h4>
+      <section><p>Template will be associated with a user.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesArg.html">UpdatePropertiesArg</a></h4>
+      <section><p>The update properties arg object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.html">UpdatePropertiesError</a></h4>
+      <section><p>The update properties error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.DoesNotFitTemplate.html">UpdatePropertiesError.DoesNotFitTemplate</a></h4>
+      <section><p>One or more of the supplied property fields does not conform to the template
+specifications.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.DuplicatePropertyGroups.html">UpdatePropertiesError.DuplicatePropertyGroups</a></h4>
+      <section><p>There are 2 or more property groups referring to the same templates in the
+input.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.Other.html">UpdatePropertiesError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.Path.html">UpdatePropertiesError.Path</a></h4>
+      <section><p>The path object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyFieldTooLarge.html">UpdatePropertiesError.PropertyFieldTooLarge</a></h4>
+      <section><p>One or more of the supplied property field values is too large.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.html">UpdatePropertiesError.PropertyGroupLookup</a></h4>
+      <section><p>The property group lookup object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.RestrictedContent.html">UpdatePropertiesError.RestrictedContent</a></h4>
+      <section><p>You do not have permission to modify this template.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.TemplateNotFound.html">UpdatePropertiesError.TemplateNotFound</a></h4>
+      <section><p>Template does not exist for the given identifier.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.UnsupportedFolder.html">UpdatePropertiesError.UnsupportedFolder</a></h4>
+      <section><p>This folder cannot be tagged. Tagging folders is not supported for team-owned
+templates.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.UpdateTemplateArg.html">UpdateTemplateArg</a></h4>
+      <section><p>The update template arg object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.FileProperties.UpdateTemplateResult.html">UpdateTemplateResult</a></h4>
+      <section><p>The update template result object</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

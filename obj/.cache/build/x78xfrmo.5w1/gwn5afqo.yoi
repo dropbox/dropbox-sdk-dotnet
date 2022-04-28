@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TeamFolderCreateError
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TeamFolderCreateError
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Team.TeamFolderCreateError">
+  
+  
+  <h1 id="Dropbox_Api_Team_TeamFolderCreateError" data-uid="Dropbox.Api.Team.TeamFolderCreateError" class="text-break">Class TeamFolderCreateError
+  </h1>
+  <div class="markdown level0 summary"><p>The team folder create error object</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TeamFolderCreateError</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.TeamFolderCreateError.FolderNameAlreadyUsed.html">TeamFolderCreateError.FolderNameAlreadyUsed</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.TeamFolderCreateError.FolderNameReserved.html">TeamFolderCreateError.FolderNameReserved</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.TeamFolderCreateError.InvalidFolderName.html">TeamFolderCreateError.InvalidFolderName</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.TeamFolderCreateError.Other.html">TeamFolderCreateError.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.TeamFolderCreateError.SyncSettingsError.html">TeamFolderCreateError.SyncSettingsError</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Team.html">Dropbox.Api.Team</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Team_TeamFolderCreateError_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TeamFolderCreateError</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderCreateError__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderCreateError.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs/#L34">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderCreateError__ctor_" data-uid="Dropbox.Api.Team.TeamFolderCreateError.#ctor*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderCreateError__ctor" data-uid="Dropbox.Api.Team.TeamFolderCreateError.#ctor">TeamFolderCreateError()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Team.TeamFolderCreateError.html">TeamFolderCreateError</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamFolderCreateError()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderCreateError_AsFolderNameAlreadyUsed.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderCreateError.AsFolderNameAlreadyUsed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs/#L74">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderCreateError_AsFolderNameAlreadyUsed_" data-uid="Dropbox.Api.Team.TeamFolderCreateError.AsFolderNameAlreadyUsed*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderCreateError_AsFolderNameAlreadyUsed" data-uid="Dropbox.Api.Team.TeamFolderCreateError.AsFolderNameAlreadyUsed">AsFolderNameAlreadyUsed</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a FolderNameAlreadyUsed, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamFolderCreateError.FolderNameAlreadyUsed AsFolderNameAlreadyUsed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamFolderCreateError.FolderNameAlreadyUsed.html">TeamFolderCreateError.FolderNameAlreadyUsed</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderCreateError_AsFolderNameReserved.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderCreateError.AsFolderNameReserved%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs/#L96">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderCreateError_AsFolderNameReserved_" data-uid="Dropbox.Api.Team.TeamFolderCreateError.AsFolderNameReserved*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderCreateError_AsFolderNameReserved" data-uid="Dropbox.Api.Team.TeamFolderCreateError.AsFolderNameReserved">AsFolderNameReserved</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a FolderNameReserved, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamFolderCreateError.FolderNameReserved AsFolderNameReserved { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamFolderCreateError.FolderNameReserved.html">TeamFolderCreateError.FolderNameReserved</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderCreateError_AsInvalidFolderName.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderCreateError.AsInvalidFolderName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs/#L52">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderCreateError_AsInvalidFolderName_" data-uid="Dropbox.Api.Team.TeamFolderCreateError.AsInvalidFolderName*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderCreateError_AsInvalidFolderName" data-uid="Dropbox.Api.Team.TeamFolderCreateError.AsInvalidFolderName">AsInvalidFolderName</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InvalidFolderName, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamFolderCreateError.InvalidFolderName AsInvalidFolderName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamFolderCreateError.InvalidFolderName.html">TeamFolderCreateError.InvalidFolderName</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderCreateError_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderCreateError.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs/#L140">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderCreateError_AsOther_" data-uid="Dropbox.Api.Team.TeamFolderCreateError.AsOther*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderCreateError_AsOther" data-uid="Dropbox.Api.Team.TeamFolderCreateError.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamFolderCreateError.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamFolderCreateError.Other.html">TeamFolderCreateError.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderCreateError_AsSyncSettingsError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderCreateError.AsSyncSettingsError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs/#L118">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderCreateError_AsSyncSettingsError_" data-uid="Dropbox.Api.Team.TeamFolderCreateError.AsSyncSettingsError*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderCreateError_AsSyncSettingsError" data-uid="Dropbox.Api.Team.TeamFolderCreateError.AsSyncSettingsError">AsSyncSettingsError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a SyncSettingsError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamFolderCreateError.SyncSettingsError AsSyncSettingsError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamFolderCreateError.SyncSettingsError.html">TeamFolderCreateError.SyncSettingsError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderCreateError_IsFolderNameAlreadyUsed.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderCreateError.IsFolderNameAlreadyUsed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs/#L63">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderCreateError_IsFolderNameAlreadyUsed_" data-uid="Dropbox.Api.Team.TeamFolderCreateError.IsFolderNameAlreadyUsed*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderCreateError_IsFolderNameAlreadyUsed" data-uid="Dropbox.Api.Team.TeamFolderCreateError.IsFolderNameAlreadyUsed">IsFolderNameAlreadyUsed</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is FolderNameAlreadyUsed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFolderNameAlreadyUsed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderCreateError_IsFolderNameReserved.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderCreateError.IsFolderNameReserved%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs/#L85">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderCreateError_IsFolderNameReserved_" data-uid="Dropbox.Api.Team.TeamFolderCreateError.IsFolderNameReserved*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderCreateError_IsFolderNameReserved" data-uid="Dropbox.Api.Team.TeamFolderCreateError.IsFolderNameReserved">IsFolderNameReserved</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is FolderNameReserved</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFolderNameReserved { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderCreateError_IsInvalidFolderName.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderCreateError.IsInvalidFolderName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs/#L41">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderCreateError_IsInvalidFolderName_" data-uid="Dropbox.Api.Team.TeamFolderCreateError.IsInvalidFolderName*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderCreateError_IsInvalidFolderName" data-uid="Dropbox.Api.Team.TeamFolderCreateError.IsInvalidFolderName">IsInvalidFolderName</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InvalidFolderName</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInvalidFolderName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderCreateError_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderCreateError.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs/#L129">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderCreateError_IsOther_" data-uid="Dropbox.Api.Team.TeamFolderCreateError.IsOther*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderCreateError_IsOther" data-uid="Dropbox.Api.Team.TeamFolderCreateError.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderCreateError_IsSyncSettingsError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderCreateError.IsSyncSettingsError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs/#L107">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderCreateError_IsSyncSettingsError_" data-uid="Dropbox.Api.Team.TeamFolderCreateError.IsSyncSettingsError*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderCreateError_IsSyncSettingsError" data-uid="Dropbox.Api.Team.TeamFolderCreateError.IsSyncSettingsError">IsSyncSettingsError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is SyncSettingsError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSyncSettingsError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderCreateError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderCreateError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

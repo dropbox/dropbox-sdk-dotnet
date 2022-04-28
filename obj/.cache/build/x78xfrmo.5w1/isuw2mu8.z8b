@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ThumbnailSize
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ThumbnailSize
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Files.ThumbnailSize">
+  
+  
+  <h1 id="Dropbox_Api_Files_ThumbnailSize" data-uid="Dropbox.Api.Files.ThumbnailSize" class="text-break">Class ThumbnailSize
+  </h1>
+  <div class="markdown level0 summary"><p>The thumbnail size object</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ThumbnailSize</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W1024h768.html">ThumbnailSize.W1024h768</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W128h128.html">ThumbnailSize.W128h128</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W2048h1536.html">ThumbnailSize.W2048h1536</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W256h256.html">ThumbnailSize.W256h256</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W32h32.html">ThumbnailSize.W32h32</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W480h320.html">ThumbnailSize.W480h320</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W640h480.html">ThumbnailSize.W640h480</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W64h64.html">ThumbnailSize.W64h64</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W960h640.html">ThumbnailSize.W960h640</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Files.html">Dropbox.Api.Files</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Files_ThumbnailSize_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ThumbnailSize</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L33">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize__ctor_" data-uid="Dropbox.Api.Files.ThumbnailSize.#ctor*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize__ctor" data-uid="Dropbox.Api.Files.ThumbnailSize.#ctor">ThumbnailSize()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Files.ThumbnailSize.html">ThumbnailSize</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ThumbnailSize()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_AsW1024h768.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.AsW1024h768%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L205">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_AsW1024h768_" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW1024h768*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_AsW1024h768" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW1024h768">AsW1024h768</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a W1024h768, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ThumbnailSize.W1024h768 AsW1024h768 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W1024h768.html">ThumbnailSize.W1024h768</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_AsW128h128.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.AsW128h128%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L95">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_AsW128h128_" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW128h128*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_AsW128h128" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW128h128">AsW128h128</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a W128h128, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ThumbnailSize.W128h128 AsW128h128 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W128h128.html">ThumbnailSize.W128h128</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_AsW2048h1536.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.AsW2048h1536%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L227">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_AsW2048h1536_" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW2048h1536*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_AsW2048h1536" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW2048h1536">AsW2048h1536</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a W2048h1536, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ThumbnailSize.W2048h1536 AsW2048h1536 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W2048h1536.html">ThumbnailSize.W2048h1536</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_AsW256h256.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.AsW256h256%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L117">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_AsW256h256_" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW256h256*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_AsW256h256" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW256h256">AsW256h256</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a W256h256, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ThumbnailSize.W256h256 AsW256h256 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W256h256.html">ThumbnailSize.W256h256</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_AsW32h32.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.AsW32h32%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L51">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_AsW32h32_" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW32h32*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_AsW32h32" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW32h32">AsW32h32</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a W32h32, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ThumbnailSize.W32h32 AsW32h32 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W32h32.html">ThumbnailSize.W32h32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_AsW480h320.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.AsW480h320%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L139">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_AsW480h320_" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW480h320*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_AsW480h320" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW480h320">AsW480h320</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a W480h320, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ThumbnailSize.W480h320 AsW480h320 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W480h320.html">ThumbnailSize.W480h320</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_AsW640h480.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.AsW640h480%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L161">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_AsW640h480_" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW640h480*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_AsW640h480" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW640h480">AsW640h480</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a W640h480, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ThumbnailSize.W640h480 AsW640h480 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W640h480.html">ThumbnailSize.W640h480</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_AsW64h64.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.AsW64h64%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L73">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_AsW64h64_" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW64h64*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_AsW64h64" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW64h64">AsW64h64</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a W64h64, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ThumbnailSize.W64h64 AsW64h64 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W64h64.html">ThumbnailSize.W64h64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_AsW960h640.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.AsW960h640%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L183">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_AsW960h640_" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW960h640*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_AsW960h640" data-uid="Dropbox.Api.Files.ThumbnailSize.AsW960h640">AsW960h640</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a W960h640, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ThumbnailSize.W960h640 AsW960h640 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.ThumbnailSize.W960h640.html">ThumbnailSize.W960h640</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_IsW1024h768.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.IsW1024h768%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L194">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_IsW1024h768_" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW1024h768*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_IsW1024h768" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW1024h768">IsW1024h768</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is W1024h768</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsW1024h768 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_IsW128h128.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.IsW128h128%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L84">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_IsW128h128_" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW128h128*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_IsW128h128" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW128h128">IsW128h128</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is W128h128</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsW128h128 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_IsW2048h1536.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.IsW2048h1536%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L216">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_IsW2048h1536_" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW2048h1536*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_IsW2048h1536" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW2048h1536">IsW2048h1536</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is W2048h1536</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsW2048h1536 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_IsW256h256.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.IsW256h256%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L106">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_IsW256h256_" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW256h256*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_IsW256h256" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW256h256">IsW256h256</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is W256h256</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsW256h256 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_IsW32h32.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.IsW32h32%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L40">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_IsW32h32_" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW32h32*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_IsW32h32" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW32h32">IsW32h32</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is W32h32</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsW32h32 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_IsW480h320.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.IsW480h320%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L128">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_IsW480h320_" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW480h320*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_IsW480h320" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW480h320">IsW480h320</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is W480h320</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsW480h320 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_IsW640h480.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.IsW640h480%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L150">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_IsW640h480_" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW640h480*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_IsW640h480" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW640h480">IsW640h480</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is W640h480</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsW640h480 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_IsW64h64.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.IsW64h64%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L62">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_IsW64h64_" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW64h64*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_IsW64h64" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW64h64">IsW64h64</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is W64h64</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsW64h64 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize_IsW960h640.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize.IsW960h640%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L172">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_ThumbnailSize_IsW960h640_" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW960h640*"></a>
+  <h4 id="Dropbox_Api_Files_ThumbnailSize_IsW960h640" data-uid="Dropbox.Api.Files.ThumbnailSize.IsW960h640">IsW960h640</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is W960h640</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsW960h640 { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_ThumbnailSize.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.ThumbnailSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,680 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DeleteAllClosedFileRequestsError
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DeleteAllClosedFileRequestsError
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError">
+  
+  
+  <h1 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError" class="text-break">Class DeleteAllClosedFileRequestsError
+  </h1>
+  <div class="markdown level0 summary"><p>There was an error deleting all closed file requests.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DeleteAllClosedFileRequestsError</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AppLacksAccess.html">DeleteAllClosedFileRequestsError.AppLacksAccess</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.DisabledForTeam.html">DeleteAllClosedFileRequestsError.DisabledForTeam</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.EmailUnverified.html">DeleteAllClosedFileRequestsError.EmailUnverified</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NoPermission.html">DeleteAllClosedFileRequestsError.NoPermission</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotAFolder.html">DeleteAllClosedFileRequestsError.NotAFolder</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound.html">DeleteAllClosedFileRequestsError.NotFound</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.Other.html">DeleteAllClosedFileRequestsError.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.ValidationError.html">DeleteAllClosedFileRequestsError.ValidationError</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.FileRequests.html">Dropbox.Api.FileRequests</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DeleteAllClosedFileRequestsError</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L34">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError__ctor_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.#ctor*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError__ctor" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.#ctor">DeleteAllClosedFileRequestsError()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.html">DeleteAllClosedFileRequestsError</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeleteAllClosedFileRequestsError()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsAppLacksAccess.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L96">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsAppLacksAccess_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsAppLacksAccess" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess">AsAppLacksAccess</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a AppLacksAccess, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeleteAllClosedFileRequestsError.AppLacksAccess AsAppLacksAccess { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AppLacksAccess.html">DeleteAllClosedFileRequestsError.AppLacksAccess</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsDisabledForTeam.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L184">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsDisabledForTeam_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsDisabledForTeam" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam">AsDisabledForTeam</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a DisabledForTeam, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeleteAllClosedFileRequestsError.DisabledForTeam AsDisabledForTeam { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.DisabledForTeam.html">DeleteAllClosedFileRequestsError.DisabledForTeam</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsEmailUnverified.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L140">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsEmailUnverified_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsEmailUnverified" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified">AsEmailUnverified</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a EmailUnverified, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeleteAllClosedFileRequestsError.EmailUnverified AsEmailUnverified { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.EmailUnverified.html">DeleteAllClosedFileRequestsError.EmailUnverified</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsNoPermission.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L118">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsNoPermission_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsNoPermission" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission">AsNoPermission</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a NoPermission, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeleteAllClosedFileRequestsError.NoPermission AsNoPermission { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NoPermission.html">DeleteAllClosedFileRequestsError.NoPermission</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsNotAFolder.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L74">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsNotAFolder_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsNotAFolder" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder">AsNotAFolder</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a NotAFolder, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeleteAllClosedFileRequestsError.NotAFolder AsNotAFolder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotAFolder.html">DeleteAllClosedFileRequestsError.NotAFolder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsNotFound.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L52">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsNotFound_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsNotFound" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound">AsNotFound</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a NotFound, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeleteAllClosedFileRequestsError.NotFound AsNotFound { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound.html">DeleteAllClosedFileRequestsError.NotFound</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L206">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsOther_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsOther" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeleteAllClosedFileRequestsError.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.Other.html">DeleteAllClosedFileRequestsError.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsValidationError.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L162">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsValidationError_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_AsValidationError" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError">AsValidationError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a ValidationError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeleteAllClosedFileRequestsError.ValidationError AsValidationError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.ValidationError.html">DeleteAllClosedFileRequestsError.ValidationError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsAppLacksAccess.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L85">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsAppLacksAccess_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsAppLacksAccess" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess">IsAppLacksAccess</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is AppLacksAccess</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAppLacksAccess { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsDisabledForTeam.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L173">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsDisabledForTeam_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsDisabledForTeam" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam">IsDisabledForTeam</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is DisabledForTeam</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDisabledForTeam { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsEmailUnverified.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L129">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsEmailUnverified_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsEmailUnverified" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified">IsEmailUnverified</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is EmailUnverified</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEmailUnverified { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsNoPermission.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L107">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsNoPermission_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsNoPermission" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission">IsNoPermission</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is NoPermission</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNoPermission { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsNotAFolder.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L63">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsNotAFolder_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsNotAFolder" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder">IsNotAFolder</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is NotAFolder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNotAFolder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsNotFound.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L41">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsNotFound_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsNotFound" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound">IsNotFound</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is NotFound</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNotFound { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L195">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsOther_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsOther" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsValidationError.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L151">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsValidationError_" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError*"></a>
+  <h4 id="Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError_IsValidationError" data-uid="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError">IsValidationError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is ValidationError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValidationError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_DeleteAllClosedFileRequestsError.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

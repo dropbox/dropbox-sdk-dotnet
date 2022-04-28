@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TransferFolderError
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TransferFolderError
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Sharing.TransferFolderError">
+  
+  
+  <h1 id="Dropbox_Api_Sharing_TransferFolderError" data-uid="Dropbox.Api.Sharing.TransferFolderError" class="text-break">Class TransferFolderError
+  </h1>
+  <div class="markdown level0 summary"><p>The transfer folder error object</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TransferFolderError</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.AccessError.html">TransferFolderError.AccessError</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId.html">TransferFolderError.InvalidDropboxId</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.NewOwnerEmailUnverified.html">TransferFolderError.NewOwnerEmailUnverified</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.NewOwnerNotAMember.html">TransferFolderError.NewOwnerNotAMember</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.NewOwnerUnmounted.html">TransferFolderError.NewOwnerUnmounted</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.NoPermission.html">TransferFolderError.NoPermission</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.Other.html">TransferFolderError.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.TeamFolder.html">TransferFolderError.TeamFolder</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Sharing.html">Dropbox.Api.Sharing</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Sharing_TransferFolderError_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TransferFolderError</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L34">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError__ctor_" data-uid="Dropbox.Api.Sharing.TransferFolderError.#ctor*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError__ctor" data-uid="Dropbox.Api.Sharing.TransferFolderError.#ctor">TransferFolderError()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.html">TransferFolderError</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransferFolderError()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_AsAccessError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.AsAccessError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L52">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_AsAccessError_" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsAccessError*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_AsAccessError" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsAccessError">AsAccessError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a AccessError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransferFolderError.AccessError AsAccessError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.AccessError.html">TransferFolderError.AccessError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_AsInvalidDropboxId.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L74">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_AsInvalidDropboxId_" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_AsInvalidDropboxId" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId">AsInvalidDropboxId</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InvalidDropboxId, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransferFolderError.InvalidDropboxId AsInvalidDropboxId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId.html">TransferFolderError.InvalidDropboxId</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_AsNewOwnerEmailUnverified.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L141">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_AsNewOwnerEmailUnverified_" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_AsNewOwnerEmailUnverified" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified">AsNewOwnerEmailUnverified</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a NewOwnerEmailUnverified, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransferFolderError.NewOwnerEmailUnverified AsNewOwnerEmailUnverified { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.NewOwnerEmailUnverified.html">TransferFolderError.NewOwnerEmailUnverified</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_AsNewOwnerNotAMember.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L96">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_AsNewOwnerNotAMember_" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_AsNewOwnerNotAMember" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember">AsNewOwnerNotAMember</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a NewOwnerNotAMember, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransferFolderError.NewOwnerNotAMember AsNewOwnerNotAMember { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.NewOwnerNotAMember.html">TransferFolderError.NewOwnerNotAMember</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_AsNewOwnerUnmounted.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L118">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_AsNewOwnerUnmounted_" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_AsNewOwnerUnmounted" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted">AsNewOwnerUnmounted</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a NewOwnerUnmounted, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransferFolderError.NewOwnerUnmounted AsNewOwnerUnmounted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.NewOwnerUnmounted.html">TransferFolderError.NewOwnerUnmounted</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_AsNoPermission.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.AsNoPermission%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L185">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_AsNoPermission_" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsNoPermission*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_AsNoPermission" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsNoPermission">AsNoPermission</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a NoPermission, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransferFolderError.NoPermission AsNoPermission { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.NoPermission.html">TransferFolderError.NoPermission</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L207">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_AsOther_" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsOther*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_AsOther" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransferFolderError.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.Other.html">TransferFolderError.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_AsTeamFolder.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L163">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_AsTeamFolder_" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_AsTeamFolder" data-uid="Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder">AsTeamFolder</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a TeamFolder, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransferFolderError.TeamFolder AsTeamFolder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.TransferFolderError.TeamFolder.html">TransferFolderError.TeamFolder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_IsAccessError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.IsAccessError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L41">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_IsAccessError_" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsAccessError*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_IsAccessError" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsAccessError">IsAccessError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is AccessError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAccessError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_IsInvalidDropboxId.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L63">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_IsInvalidDropboxId_" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_IsInvalidDropboxId" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId">IsInvalidDropboxId</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InvalidDropboxId</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInvalidDropboxId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_IsNewOwnerEmailUnverified.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L130">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_IsNewOwnerEmailUnverified_" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_IsNewOwnerEmailUnverified" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified">IsNewOwnerEmailUnverified</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+NewOwnerEmailUnverified</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNewOwnerEmailUnverified { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_IsNewOwnerNotAMember.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L85">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_IsNewOwnerNotAMember_" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_IsNewOwnerNotAMember" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember">IsNewOwnerNotAMember</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is NewOwnerNotAMember</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNewOwnerNotAMember { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_IsNewOwnerUnmounted.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L107">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_IsNewOwnerUnmounted_" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_IsNewOwnerUnmounted" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted">IsNewOwnerUnmounted</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is NewOwnerUnmounted</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNewOwnerUnmounted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_IsNoPermission.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.IsNoPermission%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L174">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_IsNoPermission_" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsNoPermission*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_IsNoPermission" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsNoPermission">IsNoPermission</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is NoPermission</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNoPermission { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L196">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_IsOther_" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsOther*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_IsOther" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError_IsTeamFolder.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L152">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_TransferFolderError_IsTeamFolder_" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder*"></a>
+  <h4 id="Dropbox_Api_Sharing_TransferFolderError_IsTeamFolder" data-uid="Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder">IsTeamFolder</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is TeamFolder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTeamFolder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_TransferFolderError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.TransferFolderError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

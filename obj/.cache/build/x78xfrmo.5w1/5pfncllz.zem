@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AdminAlertGeneralStateEnum
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AdminAlertGeneralStateEnum
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum">
+  
+  
+  <h1 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum" class="text-break">Class AdminAlertGeneralStateEnum
+  </h1>
+  <div class="markdown level0 summary"><p>Alert state</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AdminAlertGeneralStateEnum</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.Active.html">AdminAlertGeneralStateEnum.Active</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.Dismissed.html">AdminAlertGeneralStateEnum.Dismissed</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.InProgress.html">AdminAlertGeneralStateEnum.InProgress</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.Na.html">AdminAlertGeneralStateEnum.Na</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.Other.html">AdminAlertGeneralStateEnum.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.Resolved.html">AdminAlertGeneralStateEnum.Resolved</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.TeamLog.html">Dropbox.Api.TeamLog</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AdminAlertGeneralStateEnum</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertGeneralStateEnum.cs/#L34">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum__ctor_" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.#ctor*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum__ctor" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.#ctor">AdminAlertGeneralStateEnum()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.html">AdminAlertGeneralStateEnum</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AdminAlertGeneralStateEnum()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsActive.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsActive%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertGeneralStateEnum.cs/#L52">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsActive_" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsActive*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsActive" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsActive">AsActive</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Active, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AdminAlertGeneralStateEnum.Active AsActive { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.Active.html">AdminAlertGeneralStateEnum.Active</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsDismissed.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsDismissed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertGeneralStateEnum.cs/#L74">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsDismissed_" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsDismissed*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsDismissed" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsDismissed">AsDismissed</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Dismissed, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AdminAlertGeneralStateEnum.Dismissed AsDismissed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.Dismissed.html">AdminAlertGeneralStateEnum.Dismissed</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsInProgress.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsInProgress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertGeneralStateEnum.cs/#L96">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsInProgress_" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsInProgress*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsInProgress" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsInProgress">AsInProgress</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InProgress, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AdminAlertGeneralStateEnum.InProgress AsInProgress { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.InProgress.html">AdminAlertGeneralStateEnum.InProgress</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsNa.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsNa%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertGeneralStateEnum.cs/#L118">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsNa_" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsNa*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsNa" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsNa">AsNa</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Na, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AdminAlertGeneralStateEnum.Na AsNa { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.Na.html">AdminAlertGeneralStateEnum.Na</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertGeneralStateEnum.cs/#L162">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsOther_" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsOther*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsOther" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AdminAlertGeneralStateEnum.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.Other.html">AdminAlertGeneralStateEnum.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsResolved.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsResolved%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertGeneralStateEnum.cs/#L140">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsResolved_" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsResolved*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_AsResolved" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.AsResolved">AsResolved</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Resolved, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AdminAlertGeneralStateEnum.Resolved AsResolved { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.Resolved.html">AdminAlertGeneralStateEnum.Resolved</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsActive.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsActive%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertGeneralStateEnum.cs/#L41">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsActive_" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsActive*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsActive" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsActive">IsActive</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Active</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsDismissed.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsDismissed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertGeneralStateEnum.cs/#L63">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsDismissed_" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsDismissed*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsDismissed" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsDismissed">IsDismissed</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Dismissed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDismissed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsInProgress.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsInProgress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertGeneralStateEnum.cs/#L85">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsInProgress_" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsInProgress*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsInProgress" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsInProgress">IsInProgress</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InProgress</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInProgress { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsNa.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsNa%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertGeneralStateEnum.cs/#L107">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsNa_" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsNa*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsNa" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsNa">IsNa</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Na</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNa { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertGeneralStateEnum.cs/#L151">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsOther_" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsOther*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsOther" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsResolved.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsResolved%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertGeneralStateEnum.cs/#L129">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsResolved_" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsResolved*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum_IsResolved" data-uid="Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum.IsResolved">IsResolved</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Resolved</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsResolved { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AdminAlertGeneralStateEnum.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AdminAlertGeneralStateEnum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertGeneralStateEnum.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

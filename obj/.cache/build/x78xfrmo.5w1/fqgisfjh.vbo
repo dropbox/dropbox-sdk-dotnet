@@ -1,0 +1,1562 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class EventCategory
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class EventCategory
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.TeamLog.EventCategory">
+  
+  
+  <h1 id="Dropbox_Api_TeamLog_EventCategory" data-uid="Dropbox.Api.TeamLog.EventCategory" class="text-break">Class EventCategory
+  </h1>
+  <div class="markdown level0 summary"><p>Category of events in event audit log.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">EventCategory</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Apps.html">EventCategory.Apps</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Comments.html">EventCategory.Comments</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.DataGovernance.html">EventCategory.DataGovernance</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Devices.html">EventCategory.Devices</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Domains.html">EventCategory.Domains</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.FileOperations.html">EventCategory.FileOperations</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.FileRequests.html">EventCategory.FileRequests</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Groups.html">EventCategory.Groups</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Logins.html">EventCategory.Logins</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Members.html">EventCategory.Members</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Other.html">EventCategory.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Paper.html">EventCategory.Paper</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Passwords.html">EventCategory.Passwords</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Reports.html">EventCategory.Reports</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Sharing.html">EventCategory.Sharing</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Showcase.html">EventCategory.Showcase</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Sso.html">EventCategory.Sso</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.TeamFolders.html">EventCategory.TeamFolders</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.TeamPolicies.html">EventCategory.TeamPolicies</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.TeamProfile.html">EventCategory.TeamProfile</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Tfa.html">EventCategory.Tfa</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.TrustedTeams.html">EventCategory.TrustedTeams</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.TeamLog.html">Dropbox.Api.TeamLog</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_TeamLog_EventCategory_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class EventCategory</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L33">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory__ctor_" data-uid="Dropbox.Api.TeamLog.EventCategory.#ctor*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory__ctor" data-uid="Dropbox.Api.TeamLog.EventCategory.#ctor">EventCategory()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.TeamLog.EventCategory.html">EventCategory</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsApps.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsApps%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L51">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsApps_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsApps*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsApps" data-uid="Dropbox.Api.TeamLog.EventCategory.AsApps">AsApps</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Apps, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Apps AsApps { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Apps.html">EventCategory.Apps</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsComments.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsComments%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L73">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsComments_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsComments*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsComments" data-uid="Dropbox.Api.TeamLog.EventCategory.AsComments">AsComments</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Comments, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Comments AsComments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Comments.html">EventCategory.Comments</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsDataGovernance.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsDataGovernance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L95">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsDataGovernance_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsDataGovernance*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsDataGovernance" data-uid="Dropbox.Api.TeamLog.EventCategory.AsDataGovernance">AsDataGovernance</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a DataGovernance, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.DataGovernance AsDataGovernance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.DataGovernance.html">EventCategory.DataGovernance</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsDevices.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsDevices%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L117">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsDevices_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsDevices*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsDevices" data-uid="Dropbox.Api.TeamLog.EventCategory.AsDevices">AsDevices</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Devices, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Devices AsDevices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Devices.html">EventCategory.Devices</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsDomains.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsDomains%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L139">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsDomains_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsDomains*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsDomains" data-uid="Dropbox.Api.TeamLog.EventCategory.AsDomains">AsDomains</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Domains, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Domains AsDomains { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Domains.html">EventCategory.Domains</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsFileOperations.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsFileOperations%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L161">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsFileOperations_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsFileOperations*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsFileOperations" data-uid="Dropbox.Api.TeamLog.EventCategory.AsFileOperations">AsFileOperations</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a FileOperations, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.FileOperations AsFileOperations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.FileOperations.html">EventCategory.FileOperations</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsFileRequests.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsFileRequests%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L183">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsFileRequests_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsFileRequests*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsFileRequests" data-uid="Dropbox.Api.TeamLog.EventCategory.AsFileRequests">AsFileRequests</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a FileRequests, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.FileRequests AsFileRequests { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.FileRequests.html">EventCategory.FileRequests</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsGroups.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsGroups%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L205">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsGroups_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsGroups*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsGroups" data-uid="Dropbox.Api.TeamLog.EventCategory.AsGroups">AsGroups</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Groups, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Groups AsGroups { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Groups.html">EventCategory.Groups</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsLogins.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsLogins%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L227">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsLogins_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsLogins*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsLogins" data-uid="Dropbox.Api.TeamLog.EventCategory.AsLogins">AsLogins</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Logins, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Logins AsLogins { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Logins.html">EventCategory.Logins</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsMembers.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsMembers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L249">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsMembers_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsMembers*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsMembers" data-uid="Dropbox.Api.TeamLog.EventCategory.AsMembers">AsMembers</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Members, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Members AsMembers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Members.html">EventCategory.Members</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L513">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsOther_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsOther*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsOther" data-uid="Dropbox.Api.TeamLog.EventCategory.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Other.html">EventCategory.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsPaper.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsPaper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L271">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsPaper_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsPaper*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsPaper" data-uid="Dropbox.Api.TeamLog.EventCategory.AsPaper">AsPaper</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Paper, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Paper AsPaper { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Paper.html">EventCategory.Paper</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsPasswords.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsPasswords%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L293">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsPasswords_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsPasswords*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsPasswords" data-uid="Dropbox.Api.TeamLog.EventCategory.AsPasswords">AsPasswords</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Passwords, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Passwords AsPasswords { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Passwords.html">EventCategory.Passwords</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsReports.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsReports%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L315">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsReports_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsReports*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsReports" data-uid="Dropbox.Api.TeamLog.EventCategory.AsReports">AsReports</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Reports, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Reports AsReports { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Reports.html">EventCategory.Reports</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsSharing.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsSharing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L337">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsSharing_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsSharing*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsSharing" data-uid="Dropbox.Api.TeamLog.EventCategory.AsSharing">AsSharing</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Sharing, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Sharing AsSharing { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Sharing.html">EventCategory.Sharing</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsShowcase.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsShowcase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L359">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsShowcase_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsShowcase*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsShowcase" data-uid="Dropbox.Api.TeamLog.EventCategory.AsShowcase">AsShowcase</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Showcase, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Showcase AsShowcase { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Showcase.html">EventCategory.Showcase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsSso.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsSso%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L381">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsSso_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsSso*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsSso" data-uid="Dropbox.Api.TeamLog.EventCategory.AsSso">AsSso</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Sso, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Sso AsSso { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Sso.html">EventCategory.Sso</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsTeamFolders.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsTeamFolders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L403">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsTeamFolders_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsTeamFolders*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsTeamFolders" data-uid="Dropbox.Api.TeamLog.EventCategory.AsTeamFolders">AsTeamFolders</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a TeamFolders, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.TeamFolders AsTeamFolders { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.TeamFolders.html">EventCategory.TeamFolders</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsTeamPolicies.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsTeamPolicies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L425">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsTeamPolicies_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsTeamPolicies*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsTeamPolicies" data-uid="Dropbox.Api.TeamLog.EventCategory.AsTeamPolicies">AsTeamPolicies</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a TeamPolicies, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.TeamPolicies AsTeamPolicies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.TeamPolicies.html">EventCategory.TeamPolicies</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsTeamProfile.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsTeamProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L447">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsTeamProfile_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsTeamProfile*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsTeamProfile" data-uid="Dropbox.Api.TeamLog.EventCategory.AsTeamProfile">AsTeamProfile</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a TeamProfile, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.TeamProfile AsTeamProfile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.TeamProfile.html">EventCategory.TeamProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsTfa.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsTfa%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L469">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsTfa_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsTfa*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsTfa" data-uid="Dropbox.Api.TeamLog.EventCategory.AsTfa">AsTfa</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Tfa, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.Tfa AsTfa { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.Tfa.html">EventCategory.Tfa</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_AsTrustedTeams.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.AsTrustedTeams%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L491">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_AsTrustedTeams_" data-uid="Dropbox.Api.TeamLog.EventCategory.AsTrustedTeams*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_AsTrustedTeams" data-uid="Dropbox.Api.TeamLog.EventCategory.AsTrustedTeams">AsTrustedTeams</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a TrustedTeams, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventCategory.TrustedTeams AsTrustedTeams { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.TrustedTeams.html">EventCategory.TrustedTeams</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsApps.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsApps%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L40">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsApps_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsApps*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsApps" data-uid="Dropbox.Api.TeamLog.EventCategory.IsApps">IsApps</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Apps</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsApps { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsComments.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsComments%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L62">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsComments_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsComments*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsComments" data-uid="Dropbox.Api.TeamLog.EventCategory.IsComments">IsComments</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Comments</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsComments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsDataGovernance.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsDataGovernance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L84">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsDataGovernance_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsDataGovernance*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsDataGovernance" data-uid="Dropbox.Api.TeamLog.EventCategory.IsDataGovernance">IsDataGovernance</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is DataGovernance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDataGovernance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsDevices.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsDevices%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L106">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsDevices_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsDevices*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsDevices" data-uid="Dropbox.Api.TeamLog.EventCategory.IsDevices">IsDevices</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Devices</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDevices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsDomains.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsDomains%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L128">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsDomains_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsDomains*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsDomains" data-uid="Dropbox.Api.TeamLog.EventCategory.IsDomains">IsDomains</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Domains</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDomains { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsFileOperations.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsFileOperations%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L150">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsFileOperations_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsFileOperations*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsFileOperations" data-uid="Dropbox.Api.TeamLog.EventCategory.IsFileOperations">IsFileOperations</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is FileOperations</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFileOperations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsFileRequests.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsFileRequests%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L172">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsFileRequests_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsFileRequests*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsFileRequests" data-uid="Dropbox.Api.TeamLog.EventCategory.IsFileRequests">IsFileRequests</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is FileRequests</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFileRequests { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsGroups.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsGroups%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L194">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsGroups_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsGroups*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsGroups" data-uid="Dropbox.Api.TeamLog.EventCategory.IsGroups">IsGroups</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Groups</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsGroups { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsLogins.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsLogins%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L216">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsLogins_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsLogins*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsLogins" data-uid="Dropbox.Api.TeamLog.EventCategory.IsLogins">IsLogins</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Logins</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsLogins { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsMembers.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsMembers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L238">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsMembers_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsMembers*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsMembers" data-uid="Dropbox.Api.TeamLog.EventCategory.IsMembers">IsMembers</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Members</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMembers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L502">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsOther_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsOther*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsOther" data-uid="Dropbox.Api.TeamLog.EventCategory.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsPaper.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsPaper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L260">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsPaper_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsPaper*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsPaper" data-uid="Dropbox.Api.TeamLog.EventCategory.IsPaper">IsPaper</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Paper</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPaper { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsPasswords.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsPasswords%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L282">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsPasswords_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsPasswords*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsPasswords" data-uid="Dropbox.Api.TeamLog.EventCategory.IsPasswords">IsPasswords</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Passwords</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPasswords { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsReports.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsReports%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L304">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsReports_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsReports*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsReports" data-uid="Dropbox.Api.TeamLog.EventCategory.IsReports">IsReports</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Reports</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsReports { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsSharing.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsSharing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L326">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsSharing_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsSharing*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsSharing" data-uid="Dropbox.Api.TeamLog.EventCategory.IsSharing">IsSharing</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Sharing</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSharing { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsShowcase.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsShowcase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L348">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsShowcase_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsShowcase*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsShowcase" data-uid="Dropbox.Api.TeamLog.EventCategory.IsShowcase">IsShowcase</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Showcase</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsShowcase { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsSso.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsSso%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L370">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsSso_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsSso*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsSso" data-uid="Dropbox.Api.TeamLog.EventCategory.IsSso">IsSso</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Sso</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSso { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsTeamFolders.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsTeamFolders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L392">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsTeamFolders_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsTeamFolders*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsTeamFolders" data-uid="Dropbox.Api.TeamLog.EventCategory.IsTeamFolders">IsTeamFolders</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is TeamFolders</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTeamFolders { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsTeamPolicies.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsTeamPolicies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L414">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsTeamPolicies_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsTeamPolicies*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsTeamPolicies" data-uid="Dropbox.Api.TeamLog.EventCategory.IsTeamPolicies">IsTeamPolicies</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is TeamPolicies</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTeamPolicies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsTeamProfile.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsTeamProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L436">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsTeamProfile_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsTeamProfile*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsTeamProfile" data-uid="Dropbox.Api.TeamLog.EventCategory.IsTeamProfile">IsTeamProfile</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is TeamProfile</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTeamProfile { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsTfa.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsTfa%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L458">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsTfa_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsTfa*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsTfa" data-uid="Dropbox.Api.TeamLog.EventCategory.IsTfa">IsTfa</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Tfa</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTfa { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory_IsTrustedTeams.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory.IsTrustedTeams%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L480">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_EventCategory_IsTrustedTeams_" data-uid="Dropbox.Api.TeamLog.EventCategory.IsTrustedTeams*"></a>
+  <h4 id="Dropbox_Api_TeamLog_EventCategory_IsTrustedTeams" data-uid="Dropbox.Api.TeamLog.EventCategory.IsTrustedTeams">IsTrustedTeams</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is TrustedTeams</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTrustedTeams { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_EventCategory.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.EventCategory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EventCategory.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

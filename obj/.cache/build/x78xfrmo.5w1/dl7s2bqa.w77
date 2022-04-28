@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CreateFileRequestError
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CreateFileRequestError
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError">
+  
+  
+  <h1 id="Dropbox_Api_FileRequests_CreateFileRequestError" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError" class="text-break">Class CreateFileRequestError
+  </h1>
+  <div class="markdown level0 summary"><p>There was an error creating the file request.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CreateFileRequestError</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.AppLacksAccess.html">CreateFileRequestError.AppLacksAccess</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.DisabledForTeam.html">CreateFileRequestError.DisabledForTeam</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.EmailUnverified.html">CreateFileRequestError.EmailUnverified</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.InvalidLocation.html">CreateFileRequestError.InvalidLocation</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.NoPermission.html">CreateFileRequestError.NoPermission</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.NotAFolder.html">CreateFileRequestError.NotAFolder</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.NotFound.html">CreateFileRequestError.NotFound</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.Other.html">CreateFileRequestError.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.RateLimit.html">CreateFileRequestError.RateLimit</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.ValidationError.html">CreateFileRequestError.ValidationError</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.FileRequests.html">Dropbox.Api.FileRequests</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_FileRequests_CreateFileRequestError_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CreateFileRequestError</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L34">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError__ctor_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.#ctor*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError__ctor" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.#ctor">CreateFileRequestError()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.html">CreateFileRequestError</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CreateFileRequestError()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_AsAppLacksAccess.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.AsAppLacksAccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L140">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_AsAppLacksAccess_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsAppLacksAccess*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_AsAppLacksAccess" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsAppLacksAccess">AsAppLacksAccess</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a AppLacksAccess, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CreateFileRequestError.AppLacksAccess AsAppLacksAccess { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.AppLacksAccess.html">CreateFileRequestError.AppLacksAccess</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_AsDisabledForTeam.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.AsDisabledForTeam%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L228">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_AsDisabledForTeam_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsDisabledForTeam*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_AsDisabledForTeam" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsDisabledForTeam">AsDisabledForTeam</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a DisabledForTeam, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CreateFileRequestError.DisabledForTeam AsDisabledForTeam { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.DisabledForTeam.html">CreateFileRequestError.DisabledForTeam</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_AsEmailUnverified.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.AsEmailUnverified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L184">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_AsEmailUnverified_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsEmailUnverified*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_AsEmailUnverified" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsEmailUnverified">AsEmailUnverified</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a EmailUnverified, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CreateFileRequestError.EmailUnverified AsEmailUnverified { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.EmailUnverified.html">CreateFileRequestError.EmailUnverified</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_AsInvalidLocation.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.AsInvalidLocation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L52">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_AsInvalidLocation_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsInvalidLocation*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_AsInvalidLocation" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsInvalidLocation">AsInvalidLocation</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InvalidLocation, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CreateFileRequestError.InvalidLocation AsInvalidLocation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.InvalidLocation.html">CreateFileRequestError.InvalidLocation</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_AsNoPermission.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.AsNoPermission%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L162">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_AsNoPermission_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsNoPermission*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_AsNoPermission" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsNoPermission">AsNoPermission</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a NoPermission, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CreateFileRequestError.NoPermission AsNoPermission { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.NoPermission.html">CreateFileRequestError.NoPermission</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_AsNotAFolder.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.AsNotAFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L118">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_AsNotAFolder_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsNotAFolder*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_AsNotAFolder" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsNotAFolder">AsNotAFolder</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a NotAFolder, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CreateFileRequestError.NotAFolder AsNotAFolder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.NotAFolder.html">CreateFileRequestError.NotAFolder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_AsNotFound.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.AsNotFound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L96">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_AsNotFound_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsNotFound*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_AsNotFound" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsNotFound">AsNotFound</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a NotFound, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CreateFileRequestError.NotFound AsNotFound { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.NotFound.html">CreateFileRequestError.NotFound</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L250">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_AsOther_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsOther*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_AsOther" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CreateFileRequestError.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.Other.html">CreateFileRequestError.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_AsRateLimit.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.AsRateLimit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L74">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_AsRateLimit_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsRateLimit*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_AsRateLimit" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsRateLimit">AsRateLimit</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a RateLimit, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CreateFileRequestError.RateLimit AsRateLimit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.RateLimit.html">CreateFileRequestError.RateLimit</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_AsValidationError.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.AsValidationError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L206">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_AsValidationError_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsValidationError*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_AsValidationError" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.AsValidationError">AsValidationError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a ValidationError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CreateFileRequestError.ValidationError AsValidationError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.ValidationError.html">CreateFileRequestError.ValidationError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_IsAppLacksAccess.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.IsAppLacksAccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L129">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_IsAppLacksAccess_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsAppLacksAccess*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_IsAppLacksAccess" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsAppLacksAccess">IsAppLacksAccess</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is AppLacksAccess</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAppLacksAccess { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_IsDisabledForTeam.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.IsDisabledForTeam%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L217">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_IsDisabledForTeam_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsDisabledForTeam*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_IsDisabledForTeam" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsDisabledForTeam">IsDisabledForTeam</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is DisabledForTeam</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDisabledForTeam { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_IsEmailUnverified.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.IsEmailUnverified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L173">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_IsEmailUnverified_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsEmailUnverified*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_IsEmailUnverified" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsEmailUnverified">IsEmailUnverified</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is EmailUnverified</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEmailUnverified { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_IsInvalidLocation.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.IsInvalidLocation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L41">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_IsInvalidLocation_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsInvalidLocation*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_IsInvalidLocation" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsInvalidLocation">IsInvalidLocation</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InvalidLocation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInvalidLocation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_IsNoPermission.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.IsNoPermission%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L151">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_IsNoPermission_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsNoPermission*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_IsNoPermission" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsNoPermission">IsNoPermission</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is NoPermission</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNoPermission { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_IsNotAFolder.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.IsNotAFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L107">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_IsNotAFolder_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsNotAFolder*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_IsNotAFolder" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsNotAFolder">IsNotAFolder</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is NotAFolder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNotAFolder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_IsNotFound.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.IsNotFound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L85">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_IsNotFound_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsNotFound*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_IsNotFound" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsNotFound">IsNotFound</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is NotFound</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNotFound { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L239">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_IsOther_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsOther*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_IsOther" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_IsRateLimit.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.IsRateLimit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L63">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_IsRateLimit_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsRateLimit*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_IsRateLimit" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsRateLimit">IsRateLimit</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is RateLimit</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRateLimit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError_IsValidationError.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError.IsValidationError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L195">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_CreateFileRequestError_IsValidationError_" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsValidationError*"></a>
+  <h4 id="Dropbox_Api_FileRequests_CreateFileRequestError_IsValidationError" data-uid="Dropbox.Api.FileRequests.CreateFileRequestError.IsValidationError">IsValidationError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is ValidationError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValidationError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_CreateFileRequestError.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.CreateFileRequestError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestError.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

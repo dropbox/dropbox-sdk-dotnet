@@ -1,0 +1,838 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TeamLogTeamRoutes
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TeamLogTeamRoutes
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes">
+  
+  
+  <h1 id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes" class="text-break">Class TeamLogTeamRoutes
+  </h1>
+  <div class="markdown level0 summary"><p>The routes for the <a class="xref" href="Dropbox.Api.TeamLog.html">Dropbox.Api.TeamLog</a> namespace</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TeamLogTeamRoutes</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.TeamLog.Routes.html">Dropbox.Api.TeamLog.Routes</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TeamLogTeamRoutes</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_BeginGetEvents_Dropbox_Api_TeamLog_GetTeamEventsArg_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.BeginGetEvents(Dropbox.Api.TeamLog.GetTeamEventsArg%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLogTeamRoutes.cs/#L70">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_BeginGetEvents_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.BeginGetEvents*"></a>
+  <h4 id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_BeginGetEvents_Dropbox_Api_TeamLog_GetTeamEventsArg_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.BeginGetEvents(Dropbox.Api.TeamLog.GetTeamEventsArg,System.AsyncCallback,System.Object)">BeginGetEvents(GetTeamEventsArg, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the get events route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGetEvents(GetTeamEventsArg getTeamEventsArg, AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.GetTeamEventsArg.html">GetTeamEventsArg</a></td>
+        <td><span class="parametername">getTeamEventsArg</span></td>
+        <td><p>The request parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_BeginGetEvents_System_UInt32_System_String_Dropbox_Api_TeamCommon_TimeRange_Dropbox_Api_TeamLog_EventCategory_Dropbox_Api_TeamLog_EventTypeArg_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.BeginGetEvents(System.UInt32%2CSystem.String%2CDropbox.Api.TeamCommon.TimeRange%2CDropbox.Api.TeamLog.EventCategory%2CDropbox.Api.TeamLog.EventTypeArg%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLogTeamRoutes.cs/#L148">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_BeginGetEvents_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.BeginGetEvents*"></a>
+  <h4 id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_BeginGetEvents_System_UInt32_System_String_Dropbox_Api_TeamCommon_TimeRange_Dropbox_Api_TeamLog_EventCategory_Dropbox_Api_TeamLog_EventTypeArg_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.BeginGetEvents(System.UInt32,System.String,Dropbox.Api.TeamCommon.TimeRange,Dropbox.Api.TeamLog.EventCategory,Dropbox.Api.TeamLog.EventTypeArg,System.AsyncCallback,System.Object)">BeginGetEvents(UInt32, String, TimeRange, EventCategory, EventTypeArg, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the get events route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGetEvents(uint limit = 1000U, string accountId = null, TimeRange time = null, EventCategory category = null, EventTypeArg eventType = null, AsyncCallback callback = null, object callbackState = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>The maximal number of results to return per call. Note that
+some calls may not return <code data-dev-comment-type="paramref" class="paramref">limit</code> number of events, and may even
+return no events, even with <code>has_more</code> set to true. In this case, callers should
+fetch again using <a class="xref" href="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.html#Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsContinueAsync_Dropbox_Api_TeamLog_GetTeamEventsContinueArg_">GetEventsContinueAsync(GetTeamEventsContinueArg)</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">accountId</span></td>
+        <td><p>Filter the events by account ID. Return only events with
+this account_id as either Actor, Context, or Participants.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamCommon.TimeRange.html">TimeRange</a></td>
+        <td><span class="parametername">time</span></td>
+        <td><p>Filter by time range.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.html">EventCategory</a></td>
+        <td><span class="parametername">category</span></td>
+        <td><p>Filter the returned events to a single category. Note that
+category shouldn&apos;t be provided together with event_type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventTypeArg.html">EventTypeArg</a></td>
+        <td><span class="parametername">eventType</span></td>
+        <td><p>Filter the returned events to a single event type. Note
+that event_type shouldn&apos;t be provided together with category.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">callbackState</span></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_BeginGetEventsContinue_Dropbox_Api_TeamLog_GetTeamEventsContinueArg_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.BeginGetEventsContinue(Dropbox.Api.TeamLog.GetTeamEventsContinueArg%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLogTeamRoutes.cs/#L212">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_BeginGetEventsContinue_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.BeginGetEventsContinue*"></a>
+  <h4 id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_BeginGetEventsContinue_Dropbox_Api_TeamLog_GetTeamEventsContinueArg_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.BeginGetEventsContinue(Dropbox.Api.TeamLog.GetTeamEventsContinueArg,System.AsyncCallback,System.Object)">BeginGetEventsContinue(GetTeamEventsContinueArg, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the get events continue route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGetEventsContinue(GetTeamEventsContinueArg getTeamEventsContinueArg, AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.GetTeamEventsContinueArg.html">GetTeamEventsContinueArg</a></td>
+        <td><span class="parametername">getTeamEventsContinueArg</span></td>
+        <td><p>The request parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_BeginGetEventsContinue_System_String_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.BeginGetEventsContinue(System.String%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLogTeamRoutes.cs/#L249">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_BeginGetEventsContinue_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.BeginGetEventsContinue*"></a>
+  <h4 id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_BeginGetEventsContinue_System_String_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.BeginGetEventsContinue(System.String,System.AsyncCallback,System.Object)">BeginGetEventsContinue(String, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the get events continue route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGetEventsContinue(string cursor, AsyncCallback callback, object callbackState = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cursor</span></td>
+        <td><p>Indicates from what point to get the next set of
+events.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">callbackState</span></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_EndGetEvents_System_IAsyncResult_.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.EndGetEvents(System.IAsyncResult)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLogTeamRoutes.cs/#L175">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_EndGetEvents_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.EndGetEvents*"></a>
+  <h4 id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_EndGetEvents_System_IAsyncResult_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.EndGetEvents(System.IAsyncResult)">EndGetEvents(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the get events route to
+complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GetTeamEventsResult EndGetEvents(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.GetTeamEventsResult.html">GetTeamEventsResult</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.TeamLog.GetTeamEventsError.html">GetTeamEventsError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_EndGetEventsContinue_System_IAsyncResult_.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.EndGetEventsContinue(System.IAsyncResult)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLogTeamRoutes.cs/#L268">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_EndGetEventsContinue_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.EndGetEventsContinue*"></a>
+  <h4 id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_EndGetEventsContinue_System_IAsyncResult_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.EndGetEventsContinue(System.IAsyncResult)">EndGetEventsContinue(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the get events continue route to
+complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GetTeamEventsResult EndGetEventsContinue(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.GetTeamEventsResult.html">GetTeamEventsResult</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.TeamLog.GetTeamEventsContinueError.html">GetTeamEventsContinueError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsAsync_Dropbox_Api_TeamLog_GetTeamEventsArg_.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync(Dropbox.Api.TeamLog.GetTeamEventsArg)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLogTeamRoutes.cs/#L56">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsAsync_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync*"></a>
+  <h4 id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsAsync_Dropbox_Api_TeamLog_GetTeamEventsArg_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync(Dropbox.Api.TeamLog.GetTeamEventsArg)">GetEventsAsync(GetTeamEventsArg)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;GetTeamEventsResult&gt; GetEventsAsync(GetTeamEventsArg getTeamEventsArg)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.GetTeamEventsArg.html">GetTeamEventsArg</a></td>
+        <td><span class="parametername">getTeamEventsArg</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.TeamLog.GetTeamEventsResult.html">GetTeamEventsResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsAsync_System_UInt32_System_String_Dropbox_Api_TeamCommon_TimeRange_Dropbox_Api_TeamLog_EventCategory_Dropbox_Api_TeamLog_EventTypeArg_.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync(System.UInt32%2CSystem.String%2CDropbox.Api.TeamCommon.TimeRange%2CDropbox.Api.TeamLog.EventCategory%2CDropbox.Api.TeamLog.EventTypeArg)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLogTeamRoutes.cs/#L112">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsAsync_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync*"></a>
+  <h4 id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsAsync_System_UInt32_System_String_Dropbox_Api_TeamCommon_TimeRange_Dropbox_Api_TeamLog_EventCategory_Dropbox_Api_TeamLog_EventTypeArg_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync(System.UInt32,System.String,Dropbox.Api.TeamCommon.TimeRange,Dropbox.Api.TeamLog.EventCategory,Dropbox.Api.TeamLog.EventTypeArg)">GetEventsAsync(UInt32, String, TimeRange, EventCategory, EventTypeArg)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;GetTeamEventsResult&gt; GetEventsAsync(uint limit = 1000U, string accountId = null, TimeRange time = null, EventCategory category = null, EventTypeArg eventType = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">accountId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamCommon.TimeRange.html">TimeRange</a></td>
+        <td><span class="parametername">time</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventCategory.html">EventCategory</a></td>
+        <td><span class="parametername">category</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.EventTypeArg.html">EventTypeArg</a></td>
+        <td><span class="parametername">eventType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.TeamLog.GetTeamEventsResult.html">GetTeamEventsResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsContinueAsync_Dropbox_Api_TeamLog_GetTeamEventsContinueArg_.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(Dropbox.Api.TeamLog.GetTeamEventsContinueArg)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLogTeamRoutes.cs/#L198">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsContinueAsync_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync*"></a>
+  <h4 id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsContinueAsync_Dropbox_Api_TeamLog_GetTeamEventsContinueArg_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(Dropbox.Api.TeamLog.GetTeamEventsContinueArg)">GetEventsContinueAsync(GetTeamEventsContinueArg)</h4>
+  <div class="markdown level1 summary"><p>Once a cursor has been retrieved from <a class="xref" href="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.html#Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsAsync_Dropbox_Api_TeamLog_GetTeamEventsArg_">GetEventsAsync(GetTeamEventsArg)</a>, use this to
+paginate through all events.</p>
+<p>Permission : Team Auditing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;GetTeamEventsResult&gt; GetEventsContinueAsync(GetTeamEventsContinueArg getTeamEventsContinueArg)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.GetTeamEventsContinueArg.html">GetTeamEventsContinueArg</a></td>
+        <td><span class="parametername">getTeamEventsContinueArg</span></td>
+        <td><p>The request parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.TeamLog.GetTeamEventsResult.html">GetTeamEventsResult</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.TeamLog.GetTeamEventsContinueError.html">GetTeamEventsContinueError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsContinueAsync_System_String_.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLogTeamRoutes.cs/#L232">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsContinueAsync_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync*"></a>
+  <h4 id="Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsContinueAsync_System_String_" data-uid="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(System.String)">GetEventsContinueAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Once a cursor has been retrieved from <a class="xref" href="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.html#Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes_GetEventsAsync_Dropbox_Api_TeamLog_GetTeamEventsArg_">GetEventsAsync(GetTeamEventsArg)</a>, use this to
+paginate through all events.</p>
+<p>Permission : Team Auditing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;GetTeamEventsResult&gt; GetEventsContinueAsync(string cursor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cursor</span></td>
+        <td><p>Indicates from what point to get the next set of
+events.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.TeamLog.GetTeamEventsResult.html">GetTeamEventsResult</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.TeamLog.GetTeamEventsContinueError.html">GetTeamEventsContinueError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_Routes_TeamLogTeamRoutes.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLogTeamRoutes.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

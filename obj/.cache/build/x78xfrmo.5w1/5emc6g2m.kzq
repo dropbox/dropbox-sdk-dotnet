@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UpdatePropertiesError
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UpdatePropertiesError
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError">
+  
+  
+  <h1 id="Dropbox_Api_FileProperties_UpdatePropertiesError" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError" class="text-break">Class UpdatePropertiesError
+  </h1>
+  <div class="markdown level0 summary"><p>The update properties error object</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">UpdatePropertiesError</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.DoesNotFitTemplate.html">UpdatePropertiesError.DoesNotFitTemplate</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.DuplicatePropertyGroups.html">UpdatePropertiesError.DuplicatePropertyGroups</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.Other.html">UpdatePropertiesError.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.Path.html">UpdatePropertiesError.Path</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyFieldTooLarge.html">UpdatePropertiesError.PropertyFieldTooLarge</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.html">UpdatePropertiesError.PropertyGroupLookup</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.RestrictedContent.html">UpdatePropertiesError.RestrictedContent</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.TemplateNotFound.html">UpdatePropertiesError.TemplateNotFound</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.UnsupportedFolder.html">UpdatePropertiesError.UnsupportedFolder</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.FileProperties.html">Dropbox.Api.FileProperties</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_FileProperties_UpdatePropertiesError_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UpdatePropertiesError</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L34">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError__ctor_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.#ctor*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError__ctor" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.#ctor">UpdatePropertiesError()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.html">UpdatePropertiesError</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdatePropertiesError()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_AsDoesNotFitTemplate.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.AsDoesNotFitTemplate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L96">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsDoesNotFitTemplate_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsDoesNotFitTemplate*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsDoesNotFitTemplate" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsDoesNotFitTemplate">AsDoesNotFitTemplate</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a DoesNotFitTemplate, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdatePropertiesError.DoesNotFitTemplate AsDoesNotFitTemplate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.DoesNotFitTemplate.html">UpdatePropertiesError.DoesNotFitTemplate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_AsDuplicatePropertyGroups.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.AsDuplicatePropertyGroups%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L119">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsDuplicatePropertyGroups_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsDuplicatePropertyGroups*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsDuplicatePropertyGroups" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsDuplicatePropertyGroups">AsDuplicatePropertyGroups</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a DuplicatePropertyGroups, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdatePropertiesError.DuplicatePropertyGroups AsDuplicatePropertyGroups { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.DuplicatePropertyGroups.html">UpdatePropertiesError.DuplicatePropertyGroups</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L229">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsOther_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsOther*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsOther" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdatePropertiesError.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.Other.html">UpdatePropertiesError.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_AsPath.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.AsPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L141">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsPath_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsPath*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsPath" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsPath">AsPath</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Path, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdatePropertiesError.Path AsPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.Path.html">UpdatePropertiesError.Path</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_AsPropertyFieldTooLarge.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.AsPropertyFieldTooLarge%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L74">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsPropertyFieldTooLarge_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsPropertyFieldTooLarge*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsPropertyFieldTooLarge" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsPropertyFieldTooLarge">AsPropertyFieldTooLarge</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a PropertyFieldTooLarge, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdatePropertiesError.PropertyFieldTooLarge AsPropertyFieldTooLarge { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyFieldTooLarge.html">UpdatePropertiesError.PropertyFieldTooLarge</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_AsPropertyGroupLookup.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.AsPropertyGroupLookup%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L52">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsPropertyGroupLookup_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsPropertyGroupLookup*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsPropertyGroupLookup" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsPropertyGroupLookup">AsPropertyGroupLookup</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a PropertyGroupLookup, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdatePropertiesError.PropertyGroupLookup AsPropertyGroupLookup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.html">UpdatePropertiesError.PropertyGroupLookup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_AsRestrictedContent.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.AsRestrictedContent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L207">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsRestrictedContent_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsRestrictedContent*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsRestrictedContent" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsRestrictedContent">AsRestrictedContent</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a RestrictedContent, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdatePropertiesError.RestrictedContent AsRestrictedContent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.RestrictedContent.html">UpdatePropertiesError.RestrictedContent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_AsTemplateNotFound.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.AsTemplateNotFound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L185">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsTemplateNotFound_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsTemplateNotFound*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsTemplateNotFound" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsTemplateNotFound">AsTemplateNotFound</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a TemplateNotFound, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdatePropertiesError.TemplateNotFound AsTemplateNotFound { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.TemplateNotFound.html">UpdatePropertiesError.TemplateNotFound</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_AsUnsupportedFolder.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.AsUnsupportedFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L163">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsUnsupportedFolder_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsUnsupportedFolder*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_AsUnsupportedFolder" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.AsUnsupportedFolder">AsUnsupportedFolder</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a UnsupportedFolder, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdatePropertiesError.UnsupportedFolder AsUnsupportedFolder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileProperties.UpdatePropertiesError.UnsupportedFolder.html">UpdatePropertiesError.UnsupportedFolder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_IsDoesNotFitTemplate.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.IsDoesNotFitTemplate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L85">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsDoesNotFitTemplate_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsDoesNotFitTemplate*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsDoesNotFitTemplate" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsDoesNotFitTemplate">IsDoesNotFitTemplate</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is DoesNotFitTemplate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDoesNotFitTemplate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_IsDuplicatePropertyGroups.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.IsDuplicatePropertyGroups%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L108">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsDuplicatePropertyGroups_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsDuplicatePropertyGroups*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsDuplicatePropertyGroups" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsDuplicatePropertyGroups">IsDuplicatePropertyGroups</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+DuplicatePropertyGroups</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDuplicatePropertyGroups { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L218">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsOther_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsOther*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsOther" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_IsPath.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.IsPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L130">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsPath_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsPath*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsPath" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsPath">IsPath</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Path</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_IsPropertyFieldTooLarge.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.IsPropertyFieldTooLarge%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L63">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsPropertyFieldTooLarge_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsPropertyFieldTooLarge*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsPropertyFieldTooLarge" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsPropertyFieldTooLarge">IsPropertyFieldTooLarge</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is PropertyFieldTooLarge</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPropertyFieldTooLarge { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_IsPropertyGroupLookup.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.IsPropertyGroupLookup%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L41">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsPropertyGroupLookup_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsPropertyGroupLookup*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsPropertyGroupLookup" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsPropertyGroupLookup">IsPropertyGroupLookup</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is PropertyGroupLookup</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPropertyGroupLookup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_IsRestrictedContent.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.IsRestrictedContent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L196">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsRestrictedContent_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsRestrictedContent*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsRestrictedContent" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsRestrictedContent">IsRestrictedContent</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is RestrictedContent</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRestrictedContent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_IsTemplateNotFound.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.IsTemplateNotFound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L174">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsTemplateNotFound_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsTemplateNotFound*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsTemplateNotFound" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsTemplateNotFound">IsTemplateNotFound</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is TemplateNotFound</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTemplateNotFound { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError_IsUnsupportedFolder.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError.IsUnsupportedFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L152">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsUnsupportedFolder_" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsUnsupportedFolder*"></a>
+  <h4 id="Dropbox_Api_FileProperties_UpdatePropertiesError_IsUnsupportedFolder" data-uid="Dropbox.Api.FileProperties.UpdatePropertiesError.IsUnsupportedFolder">IsUnsupportedFolder</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is UnsupportedFolder</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUnsupportedFolder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileProperties_UpdatePropertiesError.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileProperties.UpdatePropertiesError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

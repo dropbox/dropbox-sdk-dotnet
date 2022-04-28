@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AlertRecipientsSettingType
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AlertRecipientsSettingType
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType">
+  
+  
+  <h1 id="Dropbox_Api_TeamLog_AlertRecipientsSettingType" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType" class="text-break">Class AlertRecipientsSettingType
+  </h1>
+  <div class="markdown level0 summary"><p>Alert recipients setting type</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AlertRecipientsSettingType</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.AlertRecipientsSettingType.CustomList.html">AlertRecipientsSettingType.CustomList</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.AlertRecipientsSettingType.Invalid.html">AlertRecipientsSettingType.Invalid</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.AlertRecipientsSettingType.None.html">AlertRecipientsSettingType.None</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.AlertRecipientsSettingType.Other.html">AlertRecipientsSettingType.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.AlertRecipientsSettingType.TeamAdmins.html">AlertRecipientsSettingType.TeamAdmins</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.TeamLog.html">Dropbox.Api.TeamLog</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AlertRecipientsSettingType</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AlertRecipientsSettingType__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AlertRecipientsSettingType.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs/#L34">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AlertRecipientsSettingType__ctor_" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.#ctor*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AlertRecipientsSettingType__ctor" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.#ctor">AlertRecipientsSettingType()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.TeamLog.AlertRecipientsSettingType.html">AlertRecipientsSettingType</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlertRecipientsSettingType()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsCustomList.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsCustomList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs/#L52">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsCustomList_" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsCustomList*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsCustomList" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsCustomList">AsCustomList</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a CustomList, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlertRecipientsSettingType.CustomList AsCustomList { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.AlertRecipientsSettingType.CustomList.html">AlertRecipientsSettingType.CustomList</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsInvalid.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsInvalid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs/#L74">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsInvalid_" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsInvalid*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsInvalid" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsInvalid">AsInvalid</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Invalid, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlertRecipientsSettingType.Invalid AsInvalid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.AlertRecipientsSettingType.Invalid.html">AlertRecipientsSettingType.Invalid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsNone.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsNone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs/#L96">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsNone_" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsNone*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsNone" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsNone">AsNone</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a None, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlertRecipientsSettingType.None AsNone { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.AlertRecipientsSettingType.None.html">AlertRecipientsSettingType.None</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs/#L140">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsOther_" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsOther*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsOther" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlertRecipientsSettingType.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.AlertRecipientsSettingType.Other.html">AlertRecipientsSettingType.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsTeamAdmins.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsTeamAdmins%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs/#L118">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsTeamAdmins_" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsTeamAdmins*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_AsTeamAdmins" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsTeamAdmins">AsTeamAdmins</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a TeamAdmins, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlertRecipientsSettingType.TeamAdmins AsTeamAdmins { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.AlertRecipientsSettingType.TeamAdmins.html">AlertRecipientsSettingType.TeamAdmins</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsCustomList.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsCustomList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs/#L41">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsCustomList_" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsCustomList*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsCustomList" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsCustomList">IsCustomList</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is CustomList</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCustomList { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsInvalid.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsInvalid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs/#L63">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsInvalid_" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsInvalid*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsInvalid" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsInvalid">IsInvalid</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Invalid</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInvalid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsNone.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsNone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs/#L85">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsNone_" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsNone*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsNone" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsNone">IsNone</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is None</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNone { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs/#L129">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsOther_" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsOther*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsOther" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsTeamAdmins.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsTeamAdmins%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs/#L107">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsTeamAdmins_" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsTeamAdmins*"></a>
+  <h4 id="Dropbox_Api_TeamLog_AlertRecipientsSettingType_IsTeamAdmins" data-uid="Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsTeamAdmins">IsTeamAdmins</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is TeamAdmins</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTeamAdmins { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_AlertRecipientsSettingType.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.AlertRecipientsSettingType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

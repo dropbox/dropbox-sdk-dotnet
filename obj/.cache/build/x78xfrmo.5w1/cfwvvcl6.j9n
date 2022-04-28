@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GetActivityReport
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GetActivityReport
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Team.GetActivityReport">
+  
+  
+  <h1 id="Dropbox_Api_Team_GetActivityReport" data-uid="Dropbox.Api.Team.GetActivityReport" class="text-break">Class GetActivityReport
+  </h1>
+  <div class="markdown level0 summary"><p>Activity Report Result. Each of the items in the storage report is an array of
+values, one value per day. If there is no data for a day, then the value will be
+None.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Dropbox.Api.Team.BaseDfbReport.html">BaseDfbReport</a></div>
+    <div class="level2"><span class="xref">GetActivityReport</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Dropbox.Api.Team.BaseDfbReport.html#Dropbox_Api_Team_BaseDfbReport_StartDate">BaseDfbReport.StartDate</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Team.html">Dropbox.Api.Team</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Team_GetActivityReport_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GetActivityReport : BaseDfbReport</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport__ctor_System_String_System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.%23ctor(System.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.Nullable%7BSystem.UInt64%7D%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Nullable%7BSystem.UInt64%7D%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Nullable%7BSystem.UInt64%7D%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Nullable%7BSystem.UInt64%7D%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Nullable%7BSystem.UInt64%7D%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Nullable%7BSystem.UInt64%7D%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Nullable%7BSystem.UInt64%7D%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Nullable%7BSystem.UInt64%7D%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Nullable%7BSystem.UInt64%7D%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Nullable%7BSystem.UInt64%7D%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Nullable%7BSystem.UInt64%7D%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Nullable%7BSystem.UInt64%7D%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Nullable%7BSystem.UInt64%7D%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.Nullable%7BSystem.UInt64%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L65">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport__ctor_" data-uid="Dropbox.Api.Team.GetActivityReport.#ctor*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport__ctor_System_String_System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___System_Collections_Generic_IEnumerable_System_Nullable_System_UInt64___" data-uid="Dropbox.Api.Team.GetActivityReport.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}})">GetActivityReport(String, IEnumerable&lt;Nullable&lt;UInt64&gt;&gt;, IEnumerable&lt;Nullable&lt;UInt64&gt;&gt;, IEnumerable&lt;Nullable&lt;UInt64&gt;&gt;, IEnumerable&lt;Nullable&lt;UInt64&gt;&gt;, IEnumerable&lt;Nullable&lt;UInt64&gt;&gt;, IEnumerable&lt;Nullable&lt;UInt64&gt;&gt;, IEnumerable&lt;Nullable&lt;UInt64&gt;&gt;, IEnumerable&lt;Nullable&lt;UInt64&gt;&gt;, IEnumerable&lt;Nullable&lt;UInt64&gt;&gt;, IEnumerable&lt;Nullable&lt;UInt64&gt;&gt;, IEnumerable&lt;Nullable&lt;UInt64&gt;&gt;, IEnumerable&lt;Nullable&lt;UInt64&gt;&gt;, IEnumerable&lt;Nullable&lt;UInt64&gt;&gt;, IEnumerable&lt;Nullable&lt;UInt64&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Team.GetActivityReport.html">GetActivityReport</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GetActivityReport(string startDate, IEnumerable&lt;ulong?&gt; adds, IEnumerable&lt;ulong?&gt; edits, IEnumerable&lt;ulong?&gt; deletes, IEnumerable&lt;ulong?&gt; activeUsers28Day, IEnumerable&lt;ulong?&gt; activeUsers7Day, IEnumerable&lt;ulong?&gt; activeUsers1Day, IEnumerable&lt;ulong?&gt; activeSharedFolders28Day, IEnumerable&lt;ulong?&gt; activeSharedFolders7Day, IEnumerable&lt;ulong?&gt; activeSharedFolders1Day, IEnumerable&lt;ulong?&gt; sharedLinksCreated, IEnumerable&lt;ulong?&gt; sharedLinksViewedByTeam, IEnumerable&lt;ulong?&gt; sharedLinksViewedByOutsideUser, IEnumerable&lt;ulong?&gt; sharedLinksViewedByNotLoggedIn, IEnumerable&lt;ulong?&gt; sharedLinksViewedTotal)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">startDate</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="2">First date present in the results as &apos;YYYY-MM-DD&apos; or
+None.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td><span class="parametername">adds</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Array of total number of adds by team members.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td><span class="parametername">edits</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Array of number of edits by team members. If the same user
+edits the same file multiple times this is counted as a single edit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td><span class="parametername">deletes</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Array of total number of deletes by team members.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td><span class="parametername">activeUsers28Day</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Array of the number of users who have been active in
+the last 28 days.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td><span class="parametername">activeUsers7Day</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Array of the number of users who have been active in
+the last week.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td><span class="parametername">activeUsers1Day</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Array of the number of users who have been active in
+the last day.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td><span class="parametername">activeSharedFolders28Day</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Array of the number of shared folders with
+some activity in the last 28 days.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td><span class="parametername">activeSharedFolders7Day</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Array of the number of shared folders with
+some activity in the last week.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td><span class="parametername">activeSharedFolders1Day</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Array of the number of shared folders with
+some activity in the last day.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td><span class="parametername">sharedLinksCreated</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Array of the number of shared links
+created.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td><span class="parametername">sharedLinksViewedByTeam</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Array of the number of views by team users to
+shared links created by the team.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td><span class="parametername">sharedLinksViewedByOutsideUser</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Array of the number of views by users
+outside of the team to shared links created by the team.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td><span class="parametername">sharedLinksViewedByNotLoggedIn</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Array of the number of views by
+non-logged-in users to shared links created by the team.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td><span class="parametername">sharedLinksViewedTotal</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Team.GetActivityReport.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Array of the total number of views to shared
+links created by the team.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport_ActiveSharedFolders1Day.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.ActiveSharedFolders1Day%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L254">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport_ActiveSharedFolders1Day_" data-uid="Dropbox.Api.Team.GetActivityReport.ActiveSharedFolders1Day*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport_ActiveSharedFolders1Day" data-uid="Dropbox.Api.Team.GetActivityReport.ActiveSharedFolders1Day">ActiveSharedFolders1Day</h4>
+  <div class="markdown level1 summary"><p>Array of the number of shared folders with some activity in the last
+day.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ulong?&gt; ActiveSharedFolders1Day { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport_ActiveSharedFolders28Day.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.ActiveSharedFolders28Day%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L242">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport_ActiveSharedFolders28Day_" data-uid="Dropbox.Api.Team.GetActivityReport.ActiveSharedFolders28Day*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport_ActiveSharedFolders28Day" data-uid="Dropbox.Api.Team.GetActivityReport.ActiveSharedFolders28Day">ActiveSharedFolders28Day</h4>
+  <div class="markdown level1 summary"><p>Array of the number of shared folders with some activity in the last 28
+days.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ulong?&gt; ActiveSharedFolders28Day { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport_ActiveSharedFolders7Day.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.ActiveSharedFolders7Day%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L248">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport_ActiveSharedFolders7Day_" data-uid="Dropbox.Api.Team.GetActivityReport.ActiveSharedFolders7Day*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport_ActiveSharedFolders7Day" data-uid="Dropbox.Api.Team.GetActivityReport.ActiveSharedFolders7Day">ActiveSharedFolders7Day</h4>
+  <div class="markdown level1 summary"><p>Array of the number of shared folders with some activity in the last
+week.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ulong?&gt; ActiveSharedFolders7Day { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport_ActiveUsers1Day.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.ActiveUsers1Day%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L236">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport_ActiveUsers1Day_" data-uid="Dropbox.Api.Team.GetActivityReport.ActiveUsers1Day*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport_ActiveUsers1Day" data-uid="Dropbox.Api.Team.GetActivityReport.ActiveUsers1Day">ActiveUsers1Day</h4>
+  <div class="markdown level1 summary"><p>Array of the number of users who have been active in the last day.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ulong?&gt; ActiveUsers1Day { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport_ActiveUsers28Day.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.ActiveUsers28Day%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L226">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport_ActiveUsers28Day_" data-uid="Dropbox.Api.Team.GetActivityReport.ActiveUsers28Day*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport_ActiveUsers28Day" data-uid="Dropbox.Api.Team.GetActivityReport.ActiveUsers28Day">ActiveUsers28Day</h4>
+  <div class="markdown level1 summary"><p>Array of the number of users who have been active in the last 28 days.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ulong?&gt; ActiveUsers28Day { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport_ActiveUsers7Day.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.ActiveUsers7Day%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L231">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport_ActiveUsers7Day_" data-uid="Dropbox.Api.Team.GetActivityReport.ActiveUsers7Day*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport_ActiveUsers7Day" data-uid="Dropbox.Api.Team.GetActivityReport.ActiveUsers7Day">ActiveUsers7Day</h4>
+  <div class="markdown level1 summary"><p>Array of the number of users who have been active in the last week.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ulong?&gt; ActiveUsers7Day { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport_Adds.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.Adds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L210">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport_Adds_" data-uid="Dropbox.Api.Team.GetActivityReport.Adds*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport_Adds" data-uid="Dropbox.Api.Team.GetActivityReport.Adds">Adds</h4>
+  <div class="markdown level1 summary"><p>Array of total number of adds by team members.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ulong?&gt; Adds { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport_Deletes.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.Deletes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L221">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport_Deletes_" data-uid="Dropbox.Api.Team.GetActivityReport.Deletes*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport_Deletes" data-uid="Dropbox.Api.Team.GetActivityReport.Deletes">Deletes</h4>
+  <div class="markdown level1 summary"><p>Array of total number of deletes by team members.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ulong?&gt; Deletes { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport_Edits.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.Edits%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L216">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport_Edits_" data-uid="Dropbox.Api.Team.GetActivityReport.Edits*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport_Edits" data-uid="Dropbox.Api.Team.GetActivityReport.Edits">Edits</h4>
+  <div class="markdown level1 summary"><p>Array of number of edits by team members. If the same user edits the same
+file multiple times this is counted as a single edit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ulong?&gt; Edits { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport_SharedLinksCreated.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.SharedLinksCreated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L259">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport_SharedLinksCreated_" data-uid="Dropbox.Api.Team.GetActivityReport.SharedLinksCreated*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport_SharedLinksCreated" data-uid="Dropbox.Api.Team.GetActivityReport.SharedLinksCreated">SharedLinksCreated</h4>
+  <div class="markdown level1 summary"><p>Array of the number of shared links created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ulong?&gt; SharedLinksCreated { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport_SharedLinksViewedByNotLoggedIn.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.SharedLinksViewedByNotLoggedIn%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L277">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport_SharedLinksViewedByNotLoggedIn_" data-uid="Dropbox.Api.Team.GetActivityReport.SharedLinksViewedByNotLoggedIn*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport_SharedLinksViewedByNotLoggedIn" data-uid="Dropbox.Api.Team.GetActivityReport.SharedLinksViewedByNotLoggedIn">SharedLinksViewedByNotLoggedIn</h4>
+  <div class="markdown level1 summary"><p>Array of the number of views by non-logged-in users to shared links created
+by the team.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ulong?&gt; SharedLinksViewedByNotLoggedIn { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport_SharedLinksViewedByOutsideUser.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.SharedLinksViewedByOutsideUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L271">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport_SharedLinksViewedByOutsideUser_" data-uid="Dropbox.Api.Team.GetActivityReport.SharedLinksViewedByOutsideUser*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport_SharedLinksViewedByOutsideUser" data-uid="Dropbox.Api.Team.GetActivityReport.SharedLinksViewedByOutsideUser">SharedLinksViewedByOutsideUser</h4>
+  <div class="markdown level1 summary"><p>Array of the number of views by users outside of the team to shared links
+created by the team.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ulong?&gt; SharedLinksViewedByOutsideUser { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport_SharedLinksViewedByTeam.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.SharedLinksViewedByTeam%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L265">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport_SharedLinksViewedByTeam_" data-uid="Dropbox.Api.Team.GetActivityReport.SharedLinksViewedByTeam*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport_SharedLinksViewedByTeam" data-uid="Dropbox.Api.Team.GetActivityReport.SharedLinksViewedByTeam">SharedLinksViewedByTeam</h4>
+  <div class="markdown level1 summary"><p>Array of the number of views by team users to shared links created by the
+team.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ulong?&gt; SharedLinksViewedByTeam { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport_SharedLinksViewedTotal.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport.SharedLinksViewedTotal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L283">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GetActivityReport_SharedLinksViewedTotal_" data-uid="Dropbox.Api.Team.GetActivityReport.SharedLinksViewedTotal*"></a>
+  <h4 id="Dropbox_Api_Team_GetActivityReport_SharedLinksViewedTotal" data-uid="Dropbox.Api.Team.GetActivityReport.SharedLinksViewedTotal">SharedLinksViewedTotal</h4>
+  <div class="markdown level1 summary"><p>Array of the total number of views to shared links created by the
+team.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;ulong?&gt; SharedLinksViewedTotal { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.UInt64</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GetActivityReport.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GetActivityReport%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetActivityReport.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

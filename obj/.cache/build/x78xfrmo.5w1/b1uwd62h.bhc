@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FolderSharingInfo
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FolderSharingInfo
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Files.FolderSharingInfo">
+  
+  
+  <h1 id="Dropbox_Api_Files_FolderSharingInfo" data-uid="Dropbox.Api.Files.FolderSharingInfo" class="text-break">Class FolderSharingInfo
+  </h1>
+  <div class="markdown level0 summary"><p>Sharing info for a folder which is contained in a shared folder or is a shared
+folder mount point.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Dropbox.Api.Files.SharingInfo.html">SharingInfo</a></div>
+    <div class="level2"><span class="xref">FolderSharingInfo</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.SharingInfo.html#Dropbox_Api_Files_SharingInfo_ReadOnly">SharingInfo.ReadOnly</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Files.html">Dropbox.Api.Files</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Files_FolderSharingInfo_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FolderSharingInfo : SharingInfo</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_FolderSharingInfo__ctor_System_Boolean_System_String_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.FolderSharingInfo.%23ctor(System.Boolean%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs/#L48">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_FolderSharingInfo__ctor_" data-uid="Dropbox.Api.Files.FolderSharingInfo.#ctor*"></a>
+  <h4 id="Dropbox_Api_Files_FolderSharingInfo__ctor_System_Boolean_System_String_System_String_System_Boolean_System_Boolean_" data-uid="Dropbox.Api.Files.FolderSharingInfo.#ctor(System.Boolean,System.String,System.String,System.Boolean,System.Boolean)">FolderSharingInfo(Boolean, String, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Files.FolderSharingInfo.html">FolderSharingInfo</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderSharingInfo(bool readOnly, string parentSharedFolderId = null, string sharedFolderId = null, bool traverseOnly = false, bool noAccess = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">readOnly</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Files.FolderSharingInfo.yml" sourcestartlinenumber="1" sourceendlinenumber="2">True if the file or folder is inside a read-only shared
+folder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">parentSharedFolderId</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Files.FolderSharingInfo.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Set if the folder is contained by a shared
+folder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sharedFolderId</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Files.FolderSharingInfo.yml" sourcestartlinenumber="1" sourceendlinenumber="2">If this folder is a shared folder mount point, the ID
+of the shared folder mounted at this location.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">traverseOnly</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Files.FolderSharingInfo.yml" sourcestartlinenumber="1" sourceendlinenumber="4">Specifies that the folder can only be traversed and the
+user can only see a limited subset of the contents of this folder because they
+don&apos;t have read access to this folder. They do, however, have access to some sub
+folder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">noAccess</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Files.FolderSharingInfo.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Specifies that the folder cannot be accessed by the
+user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_FolderSharingInfo_NoAccess.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.FolderSharingInfo.NoAccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs/#L111">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_FolderSharingInfo_NoAccess_" data-uid="Dropbox.Api.Files.FolderSharingInfo.NoAccess*"></a>
+  <h4 id="Dropbox_Api_Files_FolderSharingInfo_NoAccess" data-uid="Dropbox.Api.Files.FolderSharingInfo.NoAccess">NoAccess</h4>
+  <div class="markdown level1 summary"><p>Specifies that the folder cannot be accessed by the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool NoAccess { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_FolderSharingInfo_ParentSharedFolderId.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs/#L93">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_FolderSharingInfo_ParentSharedFolderId_" data-uid="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId*"></a>
+  <h4 id="Dropbox_Api_Files_FolderSharingInfo_ParentSharedFolderId" data-uid="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId">ParentSharedFolderId</h4>
+  <div class="markdown level1 summary"><p>Set if the folder is contained by a shared folder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ParentSharedFolderId { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_FolderSharingInfo_SharedFolderId.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.FolderSharingInfo.SharedFolderId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs/#L99">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_FolderSharingInfo_SharedFolderId_" data-uid="Dropbox.Api.Files.FolderSharingInfo.SharedFolderId*"></a>
+  <h4 id="Dropbox_Api_Files_FolderSharingInfo_SharedFolderId" data-uid="Dropbox.Api.Files.FolderSharingInfo.SharedFolderId">SharedFolderId</h4>
+  <div class="markdown level1 summary"><p>If this folder is a shared folder mount point, the ID of the shared folder
+mounted at this location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SharedFolderId { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_FolderSharingInfo_TraverseOnly.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.FolderSharingInfo.TraverseOnly%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs/#L106">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_FolderSharingInfo_TraverseOnly_" data-uid="Dropbox.Api.Files.FolderSharingInfo.TraverseOnly*"></a>
+  <h4 id="Dropbox_Api_Files_FolderSharingInfo_TraverseOnly" data-uid="Dropbox.Api.Files.FolderSharingInfo.TraverseOnly">TraverseOnly</h4>
+  <div class="markdown level1 summary"><p>Specifies that the folder can only be traversed and the user can only see a
+limited subset of the contents of this folder because they don&apos;t have read access
+to this folder. They do, however, have access to some sub folder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TraverseOnly { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_FolderSharingInfo.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.FolderSharingInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

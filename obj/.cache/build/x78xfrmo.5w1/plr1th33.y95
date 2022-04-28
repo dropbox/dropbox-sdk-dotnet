@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MemberProfile
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MemberProfile
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Team.MemberProfile">
+  
+  
+  <h1 id="Dropbox_Api_Team_MemberProfile" data-uid="Dropbox.Api.Team.MemberProfile" class="text-break">Class MemberProfile
+  </h1>
+  <div class="markdown level0 summary"><p>Basic member profile.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">MemberProfile</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.TeamMemberProfile.html">TeamMemberProfile</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Team.html">Dropbox.Api.Team</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Team_MemberProfile_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MemberProfile</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile__ctor_System_String_System_String_System_Boolean_Dropbox_Api_Team_TeamMemberStatus_Dropbox_Api_Users_Name_Dropbox_Api_Team_TeamMembershipType_System_String_System_String_System_Collections_Generic_IEnumerable_Dropbox_Api_SecondaryEmails_SecondaryEmail__System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_String_System_Nullable_System_Boolean__System_String_.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.%23ctor(System.String%2CSystem.String%2CSystem.Boolean%2CDropbox.Api.Team.TeamMemberStatus%2CDropbox.Api.Users.Name%2CDropbox.Api.Team.TeamMembershipType%2CSystem.String%2CSystem.String%2CSystem.Collections.Generic.IEnumerable%7BDropbox.Api.SecondaryEmails.SecondaryEmail%7D%2CSystem.Nullable%7BSystem.DateTime%7D%2CSystem.Nullable%7BSystem.DateTime%7D%2CSystem.Nullable%7BSystem.DateTime%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L62">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile__ctor_" data-uid="Dropbox.Api.Team.MemberProfile.#ctor*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile__ctor_System_String_System_String_System_Boolean_Dropbox_Api_Team_TeamMemberStatus_Dropbox_Api_Users_Name_Dropbox_Api_Team_TeamMembershipType_System_String_System_String_System_Collections_Generic_IEnumerable_Dropbox_Api_SecondaryEmails_SecondaryEmail__System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_Nullable_System_DateTime__System_String_System_Nullable_System_Boolean__System_String_" data-uid="Dropbox.Api.Team.MemberProfile.#ctor(System.String,System.String,System.Boolean,Dropbox.Api.Team.TeamMemberStatus,Dropbox.Api.Users.Name,Dropbox.Api.Team.TeamMembershipType,System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.SecondaryEmails.SecondaryEmail},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.Nullable{System.Boolean},System.String)">MemberProfile(String, String, Boolean, TeamMemberStatus, Name, TeamMembershipType, String, String, IEnumerable&lt;SecondaryEmail&gt;, Nullable&lt;DateTime&gt;, Nullable&lt;DateTime&gt;, Nullable&lt;DateTime&gt;, String, Nullable&lt;Boolean&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Team.MemberProfile.html">MemberProfile</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MemberProfile(string teamMemberId, string email, bool emailVerified, TeamMemberStatus status, Name name, TeamMembershipType membershipType, string externalId = null, string accountId = null, IEnumerable&lt;SecondaryEmail&gt; secondaryEmails = null, DateTime? invitedOn = null, DateTime? joinedOn = null, DateTime? suspendedOn = null, string persistentId = null, bool? isDirectoryRestricted = null, string profilePhotoUrl = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">teamMemberId</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="1">ID of user as a member of a team.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">email</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Email address of user.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">emailVerified</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Is true if the user&apos;s email is verified to be owned by
+the user.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamMemberStatus.html">TeamMemberStatus</a></td>
+        <td><span class="parametername">status</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The user&apos;s status as a member of a specific team.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Users.Name.html">Name</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Representations for a person&apos;s name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamMembershipType.html">TeamMembershipType</a></td>
+        <td><span class="parametername">membershipType</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The user&apos;s membership type: full (normal team member)
+vs limited (does not use a license; no access to the team&apos;s shared quota).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">externalId</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="3">External ID that a team can attach to the user. An
+application using the API may find it easier to use their own IDs instead of
+Dropbox IDs like account_id or team_member_id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">accountId</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="1">A user&apos;s account identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Dropbox.Api.SecondaryEmails.SecondaryEmail.html">SecondaryEmail</a>&gt;</td>
+        <td><span class="parametername">secondaryEmails</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="1">Secondary emails of a user.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">invitedOn</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The date and time the user was invited to the team
+(contains value only when the member&apos;s status matches <a class="xref" href="Dropbox.Api.Team.TeamMemberStatus.Invited.html">TeamMemberStatus.Invited</a>).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">joinedOn</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The date and time the user joined as a member of a specific
+team.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td><span class="parametername">suspendedOn</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The date and time the user was suspended from the team
+(contains value only when the member&apos;s status matches <a class="xref" href="Dropbox.Api.Team.TeamMemberStatus.Suspended.html">TeamMemberStatus.Suspended</a>).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">persistentId</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Persistent ID that a team can attach to the user. The
+persistent ID is unique ID to be used for SAML authentication.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">isDirectoryRestricted</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Whether the user is a directory restricted
+user.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">profilePhotoUrl</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Team.MemberProfile.yml" sourcestartlinenumber="1" sourceendlinenumber="2">URL for the photo representing the user, if one is
+set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_AccountId.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.AccountId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L185">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_AccountId_" data-uid="Dropbox.Api.Team.MemberProfile.AccountId*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_AccountId" data-uid="Dropbox.Api.Team.MemberProfile.AccountId">AccountId</h4>
+  <div class="markdown level1 summary"><p>A user&apos;s account identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AccountId { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_Email.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.Email%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L152">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_Email_" data-uid="Dropbox.Api.Team.MemberProfile.Email*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_Email" data-uid="Dropbox.Api.Team.MemberProfile.Email">Email</h4>
+  <div class="markdown level1 summary"><p>Email address of user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Email { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_EmailVerified.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.EmailVerified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L157">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_EmailVerified_" data-uid="Dropbox.Api.Team.MemberProfile.EmailVerified*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_EmailVerified" data-uid="Dropbox.Api.Team.MemberProfile.EmailVerified">EmailVerified</h4>
+  <div class="markdown level1 summary"><p>Is true if the user&apos;s email is verified to be owned by the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EmailVerified { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_ExternalId.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.ExternalId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L180">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_ExternalId_" data-uid="Dropbox.Api.Team.MemberProfile.ExternalId*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_ExternalId" data-uid="Dropbox.Api.Team.MemberProfile.ExternalId">ExternalId</h4>
+  <div class="markdown level1 summary"><p>External ID that a team can attach to the user. An application using the API
+may find it easier to use their own IDs instead of Dropbox IDs like account_id or
+team_member_id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ExternalId { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_InvitedOn.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.InvitedOn%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L197">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_InvitedOn_" data-uid="Dropbox.Api.Team.MemberProfile.InvitedOn*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_InvitedOn" data-uid="Dropbox.Api.Team.MemberProfile.InvitedOn">InvitedOn</h4>
+  <div class="markdown level1 summary"><p>The date and time the user was invited to the team (contains value only when
+the member&apos;s status matches <a class="xref" href="Dropbox.Api.Team.TeamMemberStatus.Invited.html">TeamMemberStatus.Invited</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime? InvitedOn { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_IsDirectoryRestricted.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.IsDirectoryRestricted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L220">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_IsDirectoryRestricted_" data-uid="Dropbox.Api.Team.MemberProfile.IsDirectoryRestricted*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_IsDirectoryRestricted" data-uid="Dropbox.Api.Team.MemberProfile.IsDirectoryRestricted">IsDirectoryRestricted</h4>
+  <div class="markdown level1 summary"><p>Whether the user is a directory restricted user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IsDirectoryRestricted { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_JoinedOn.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.JoinedOn%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L202">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_JoinedOn_" data-uid="Dropbox.Api.Team.MemberProfile.JoinedOn*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_JoinedOn" data-uid="Dropbox.Api.Team.MemberProfile.JoinedOn">JoinedOn</h4>
+  <div class="markdown level1 summary"><p>The date and time the user joined as a member of a specific team.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime? JoinedOn { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_MembershipType.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.MembershipType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L173">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_MembershipType_" data-uid="Dropbox.Api.Team.MemberProfile.MembershipType*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_MembershipType" data-uid="Dropbox.Api.Team.MemberProfile.MembershipType">MembershipType</h4>
+  <div class="markdown level1 summary"><p>The user&apos;s membership type: full (normal team member) vs limited (does not
+use a license; no access to the team&apos;s shared quota).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamMembershipType MembershipType { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamMembershipType.html">TeamMembershipType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_Name.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L167">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_Name_" data-uid="Dropbox.Api.Team.MemberProfile.Name*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_Name" data-uid="Dropbox.Api.Team.MemberProfile.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Representations for a person&apos;s name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Name Name { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Users.Name.html">Name</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_PersistentId.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.PersistentId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L215">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_PersistentId_" data-uid="Dropbox.Api.Team.MemberProfile.PersistentId*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_PersistentId" data-uid="Dropbox.Api.Team.MemberProfile.PersistentId">PersistentId</h4>
+  <div class="markdown level1 summary"><p>Persistent ID that a team can attach to the user. The persistent ID is unique
+ID to be used for SAML authentication.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PersistentId { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_ProfilePhotoUrl.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.ProfilePhotoUrl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L225">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_ProfilePhotoUrl_" data-uid="Dropbox.Api.Team.MemberProfile.ProfilePhotoUrl*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_ProfilePhotoUrl" data-uid="Dropbox.Api.Team.MemberProfile.ProfilePhotoUrl">ProfilePhotoUrl</h4>
+  <div class="markdown level1 summary"><p>URL for the photo representing the user, if one is set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ProfilePhotoUrl { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_SecondaryEmails.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.SecondaryEmails%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L190">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_SecondaryEmails_" data-uid="Dropbox.Api.Team.MemberProfile.SecondaryEmails*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_SecondaryEmails" data-uid="Dropbox.Api.Team.MemberProfile.SecondaryEmails">SecondaryEmails</h4>
+  <div class="markdown level1 summary"><p>Secondary emails of a user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;SecondaryEmail&gt; SecondaryEmails { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Dropbox.Api.SecondaryEmails.SecondaryEmail.html">SecondaryEmail</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_Status.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.Status%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L162">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_Status_" data-uid="Dropbox.Api.Team.MemberProfile.Status*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_Status" data-uid="Dropbox.Api.Team.MemberProfile.Status">Status</h4>
+  <div class="markdown level1 summary"><p>The user&apos;s status as a member of a specific team.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamMemberStatus Status { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamMemberStatus.html">TeamMemberStatus</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_SuspendedOn.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.SuspendedOn%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L209">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_SuspendedOn_" data-uid="Dropbox.Api.Team.MemberProfile.SuspendedOn*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_SuspendedOn" data-uid="Dropbox.Api.Team.MemberProfile.SuspendedOn">SuspendedOn</h4>
+  <div class="markdown level1 summary"><p>The date and time the user was suspended from the team (contains value only
+when the member&apos;s status matches <a class="xref" href="Dropbox.Api.Team.TeamMemberStatus.Suspended.html">TeamMemberStatus.Suspended</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime? SuspendedOn { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile_TeamMemberId.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile.TeamMemberId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L147">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MemberProfile_TeamMemberId_" data-uid="Dropbox.Api.Team.MemberProfile.TeamMemberId*"></a>
+  <h4 id="Dropbox_Api_Team_MemberProfile_TeamMemberId" data-uid="Dropbox.Api.Team.MemberProfile.TeamMemberId">TeamMemberId</h4>
+  <div class="markdown level1 summary"><p>ID of user as a member of a team.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TeamMemberId { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Dropbox.Api.Team.GroupMemberInfo.html">GroupMemberInfo</a></div>
+      <div><a class="xref" href="Dropbox.Api.Team.TeamMemberProfile.html">TeamMemberProfile</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MemberProfile.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MemberProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberProfile.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

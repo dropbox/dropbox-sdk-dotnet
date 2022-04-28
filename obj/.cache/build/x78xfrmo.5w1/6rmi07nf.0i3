@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TeamFolderRenameError
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TeamFolderRenameError
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Team.TeamFolderRenameError">
+  
+  
+  <h1 id="Dropbox_Api_Team_TeamFolderRenameError" data-uid="Dropbox.Api.Team.TeamFolderRenameError" class="text-break">Class TeamFolderRenameError
+  </h1>
+  <div class="markdown level0 summary"><p>The team folder rename error object</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">TeamFolderRenameError</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.AccessError.html">TeamFolderRenameError.AccessError</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.FolderNameAlreadyUsed.html">TeamFolderRenameError.FolderNameAlreadyUsed</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.FolderNameReserved.html">TeamFolderRenameError.FolderNameReserved</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.InvalidFolderName.html">TeamFolderRenameError.InvalidFolderName</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.Other.html">TeamFolderRenameError.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.StatusError.html">TeamFolderRenameError.StatusError</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.TeamSharedDropboxError.html">TeamFolderRenameError.TeamSharedDropboxError</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Team.html">Dropbox.Api.Team</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Team_TeamFolderRenameError_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TeamFolderRenameError</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L34">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError__ctor_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.#ctor*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError__ctor" data-uid="Dropbox.Api.Team.TeamFolderRenameError.#ctor">TeamFolderRenameError()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.html">TeamFolderRenameError</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamFolderRenameError()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError_AsAccessError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.AsAccessError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L118">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError_AsAccessError_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.AsAccessError*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError_AsAccessError" data-uid="Dropbox.Api.Team.TeamFolderRenameError.AsAccessError">AsAccessError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a AccessError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamFolderRenameError.AccessError AsAccessError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.AccessError.html">TeamFolderRenameError.AccessError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError_AsFolderNameAlreadyUsed.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L74">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError_AsFolderNameAlreadyUsed_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError_AsFolderNameAlreadyUsed" data-uid="Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed">AsFolderNameAlreadyUsed</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a FolderNameAlreadyUsed, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamFolderRenameError.FolderNameAlreadyUsed AsFolderNameAlreadyUsed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.FolderNameAlreadyUsed.html">TeamFolderRenameError.FolderNameAlreadyUsed</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError_AsFolderNameReserved.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L96">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError_AsFolderNameReserved_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError_AsFolderNameReserved" data-uid="Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved">AsFolderNameReserved</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a FolderNameReserved, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamFolderRenameError.FolderNameReserved AsFolderNameReserved { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.FolderNameReserved.html">TeamFolderRenameError.FolderNameReserved</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError_AsInvalidFolderName.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L52">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError_AsInvalidFolderName_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError_AsInvalidFolderName" data-uid="Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName">AsInvalidFolderName</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InvalidFolderName, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamFolderRenameError.InvalidFolderName AsInvalidFolderName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.InvalidFolderName.html">TeamFolderRenameError.InvalidFolderName</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L185">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError_AsOther_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.AsOther*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError_AsOther" data-uid="Dropbox.Api.Team.TeamFolderRenameError.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamFolderRenameError.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.Other.html">TeamFolderRenameError.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError_AsStatusError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.AsStatusError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L140">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError_AsStatusError_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.AsStatusError*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError_AsStatusError" data-uid="Dropbox.Api.Team.TeamFolderRenameError.AsStatusError">AsStatusError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a StatusError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamFolderRenameError.StatusError AsStatusError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.StatusError.html">TeamFolderRenameError.StatusError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError_AsTeamSharedDropboxError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L163">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError_AsTeamSharedDropboxError_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError_AsTeamSharedDropboxError" data-uid="Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError">AsTeamSharedDropboxError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a TeamSharedDropboxError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamFolderRenameError.TeamSharedDropboxError AsTeamSharedDropboxError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.TeamFolderRenameError.TeamSharedDropboxError.html">TeamFolderRenameError.TeamSharedDropboxError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError_IsAccessError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.IsAccessError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L107">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError_IsAccessError_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.IsAccessError*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError_IsAccessError" data-uid="Dropbox.Api.Team.TeamFolderRenameError.IsAccessError">IsAccessError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is AccessError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAccessError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError_IsFolderNameAlreadyUsed.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L63">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError_IsFolderNameAlreadyUsed_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError_IsFolderNameAlreadyUsed" data-uid="Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed">IsFolderNameAlreadyUsed</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is FolderNameAlreadyUsed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFolderNameAlreadyUsed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError_IsFolderNameReserved.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L85">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError_IsFolderNameReserved_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError_IsFolderNameReserved" data-uid="Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved">IsFolderNameReserved</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is FolderNameReserved</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFolderNameReserved { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError_IsInvalidFolderName.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L41">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError_IsInvalidFolderName_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError_IsInvalidFolderName" data-uid="Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName">IsInvalidFolderName</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InvalidFolderName</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInvalidFolderName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L174">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError_IsOther_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.IsOther*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError_IsOther" data-uid="Dropbox.Api.Team.TeamFolderRenameError.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError_IsStatusError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.IsStatusError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L129">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError_IsStatusError_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.IsStatusError*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError_IsStatusError" data-uid="Dropbox.Api.Team.TeamFolderRenameError.IsStatusError">IsStatusError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is StatusError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsStatusError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError_IsTeamSharedDropboxError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L152">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_TeamFolderRenameError_IsTeamSharedDropboxError_" data-uid="Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError*"></a>
+  <h4 id="Dropbox_Api_Team_TeamFolderRenameError_IsTeamSharedDropboxError" data-uid="Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError">IsTeamSharedDropboxError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+TeamSharedDropboxError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTeamSharedDropboxError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_TeamFolderRenameError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.TeamFolderRenameError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

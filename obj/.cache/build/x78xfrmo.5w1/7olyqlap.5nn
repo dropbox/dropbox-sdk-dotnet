@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SetProfilePhotoError
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SetProfilePhotoError
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Account.SetProfilePhotoError">
+  
+  
+  <h1 id="Dropbox_Api_Account_SetProfilePhotoError" data-uid="Dropbox.Api.Account.SetProfilePhotoError" class="text-break">Class SetProfilePhotoError
+  </h1>
+  <div class="markdown level0 summary"><p>The set profile photo error object</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SetProfilePhotoError</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Account.SetProfilePhotoError.DimensionError.html">SetProfilePhotoError.DimensionError</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Account.SetProfilePhotoError.FileSizeError.html">SetProfilePhotoError.FileSizeError</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Account.SetProfilePhotoError.FileTypeError.html">SetProfilePhotoError.FileTypeError</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Account.SetProfilePhotoError.Other.html">SetProfilePhotoError.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Account.SetProfilePhotoError.ThumbnailError.html">SetProfilePhotoError.ThumbnailError</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Account.SetProfilePhotoError.TransientError.html">SetProfilePhotoError.TransientError</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Account.html">Dropbox.Api.Account</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Account_SetProfilePhotoError_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SetProfilePhotoError</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Account_SetProfilePhotoError__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.Account.SetProfilePhotoError.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs/#L34">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Account_SetProfilePhotoError__ctor_" data-uid="Dropbox.Api.Account.SetProfilePhotoError.#ctor*"></a>
+  <h4 id="Dropbox_Api_Account_SetProfilePhotoError__ctor" data-uid="Dropbox.Api.Account.SetProfilePhotoError.#ctor">SetProfilePhotoError()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Account.SetProfilePhotoError.html">SetProfilePhotoError</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SetProfilePhotoError()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Account_SetProfilePhotoError_AsDimensionError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Account.SetProfilePhotoError.AsDimensionError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs/#L96">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Account_SetProfilePhotoError_AsDimensionError_" data-uid="Dropbox.Api.Account.SetProfilePhotoError.AsDimensionError*"></a>
+  <h4 id="Dropbox_Api_Account_SetProfilePhotoError_AsDimensionError" data-uid="Dropbox.Api.Account.SetProfilePhotoError.AsDimensionError">AsDimensionError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a DimensionError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SetProfilePhotoError.DimensionError AsDimensionError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Account.SetProfilePhotoError.DimensionError.html">SetProfilePhotoError.DimensionError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Account_SetProfilePhotoError_AsFileSizeError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Account.SetProfilePhotoError.AsFileSizeError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs/#L74">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Account_SetProfilePhotoError_AsFileSizeError_" data-uid="Dropbox.Api.Account.SetProfilePhotoError.AsFileSizeError*"></a>
+  <h4 id="Dropbox_Api_Account_SetProfilePhotoError_AsFileSizeError" data-uid="Dropbox.Api.Account.SetProfilePhotoError.AsFileSizeError">AsFileSizeError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a FileSizeError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SetProfilePhotoError.FileSizeError AsFileSizeError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Account.SetProfilePhotoError.FileSizeError.html">SetProfilePhotoError.FileSizeError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Account_SetProfilePhotoError_AsFileTypeError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Account.SetProfilePhotoError.AsFileTypeError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs/#L52">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Account_SetProfilePhotoError_AsFileTypeError_" data-uid="Dropbox.Api.Account.SetProfilePhotoError.AsFileTypeError*"></a>
+  <h4 id="Dropbox_Api_Account_SetProfilePhotoError_AsFileTypeError" data-uid="Dropbox.Api.Account.SetProfilePhotoError.AsFileTypeError">AsFileTypeError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a FileTypeError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SetProfilePhotoError.FileTypeError AsFileTypeError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Account.SetProfilePhotoError.FileTypeError.html">SetProfilePhotoError.FileTypeError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Account_SetProfilePhotoError_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Account.SetProfilePhotoError.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs/#L162">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Account_SetProfilePhotoError_AsOther_" data-uid="Dropbox.Api.Account.SetProfilePhotoError.AsOther*"></a>
+  <h4 id="Dropbox_Api_Account_SetProfilePhotoError_AsOther" data-uid="Dropbox.Api.Account.SetProfilePhotoError.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SetProfilePhotoError.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Account.SetProfilePhotoError.Other.html">SetProfilePhotoError.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Account_SetProfilePhotoError_AsThumbnailError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Account.SetProfilePhotoError.AsThumbnailError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs/#L118">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Account_SetProfilePhotoError_AsThumbnailError_" data-uid="Dropbox.Api.Account.SetProfilePhotoError.AsThumbnailError*"></a>
+  <h4 id="Dropbox_Api_Account_SetProfilePhotoError_AsThumbnailError" data-uid="Dropbox.Api.Account.SetProfilePhotoError.AsThumbnailError">AsThumbnailError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a ThumbnailError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SetProfilePhotoError.ThumbnailError AsThumbnailError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Account.SetProfilePhotoError.ThumbnailError.html">SetProfilePhotoError.ThumbnailError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Account_SetProfilePhotoError_AsTransientError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Account.SetProfilePhotoError.AsTransientError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs/#L140">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Account_SetProfilePhotoError_AsTransientError_" data-uid="Dropbox.Api.Account.SetProfilePhotoError.AsTransientError*"></a>
+  <h4 id="Dropbox_Api_Account_SetProfilePhotoError_AsTransientError" data-uid="Dropbox.Api.Account.SetProfilePhotoError.AsTransientError">AsTransientError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a TransientError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SetProfilePhotoError.TransientError AsTransientError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Account.SetProfilePhotoError.TransientError.html">SetProfilePhotoError.TransientError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Account_SetProfilePhotoError_IsDimensionError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Account.SetProfilePhotoError.IsDimensionError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs/#L85">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Account_SetProfilePhotoError_IsDimensionError_" data-uid="Dropbox.Api.Account.SetProfilePhotoError.IsDimensionError*"></a>
+  <h4 id="Dropbox_Api_Account_SetProfilePhotoError_IsDimensionError" data-uid="Dropbox.Api.Account.SetProfilePhotoError.IsDimensionError">IsDimensionError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is DimensionError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDimensionError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Account_SetProfilePhotoError_IsFileSizeError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Account.SetProfilePhotoError.IsFileSizeError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs/#L63">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Account_SetProfilePhotoError_IsFileSizeError_" data-uid="Dropbox.Api.Account.SetProfilePhotoError.IsFileSizeError*"></a>
+  <h4 id="Dropbox_Api_Account_SetProfilePhotoError_IsFileSizeError" data-uid="Dropbox.Api.Account.SetProfilePhotoError.IsFileSizeError">IsFileSizeError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is FileSizeError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFileSizeError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Account_SetProfilePhotoError_IsFileTypeError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Account.SetProfilePhotoError.IsFileTypeError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs/#L41">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Account_SetProfilePhotoError_IsFileTypeError_" data-uid="Dropbox.Api.Account.SetProfilePhotoError.IsFileTypeError*"></a>
+  <h4 id="Dropbox_Api_Account_SetProfilePhotoError_IsFileTypeError" data-uid="Dropbox.Api.Account.SetProfilePhotoError.IsFileTypeError">IsFileTypeError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is FileTypeError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFileTypeError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Account_SetProfilePhotoError_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Account.SetProfilePhotoError.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs/#L151">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Account_SetProfilePhotoError_IsOther_" data-uid="Dropbox.Api.Account.SetProfilePhotoError.IsOther*"></a>
+  <h4 id="Dropbox_Api_Account_SetProfilePhotoError_IsOther" data-uid="Dropbox.Api.Account.SetProfilePhotoError.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Account_SetProfilePhotoError_IsThumbnailError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Account.SetProfilePhotoError.IsThumbnailError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs/#L107">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Account_SetProfilePhotoError_IsThumbnailError_" data-uid="Dropbox.Api.Account.SetProfilePhotoError.IsThumbnailError*"></a>
+  <h4 id="Dropbox_Api_Account_SetProfilePhotoError_IsThumbnailError" data-uid="Dropbox.Api.Account.SetProfilePhotoError.IsThumbnailError">IsThumbnailError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is ThumbnailError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsThumbnailError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Account_SetProfilePhotoError_IsTransientError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Account.SetProfilePhotoError.IsTransientError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs/#L129">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Account_SetProfilePhotoError_IsTransientError_" data-uid="Dropbox.Api.Account.SetProfilePhotoError.IsTransientError*"></a>
+  <h4 id="Dropbox_Api_Account_SetProfilePhotoError_IsTransientError" data-uid="Dropbox.Api.Account.SetProfilePhotoError.IsTransientError">IsTransientError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is TransientError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTransientError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Account_SetProfilePhotoError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Account.SetProfilePhotoError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoError.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

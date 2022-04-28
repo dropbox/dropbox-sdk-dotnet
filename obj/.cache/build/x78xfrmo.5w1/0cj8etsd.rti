@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GroupUpdateError
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GroupUpdateError
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Team.GroupUpdateError">
+  
+  
+  <h1 id="Dropbox_Api_Team_GroupUpdateError" data-uid="Dropbox.Api.Team.GroupUpdateError" class="text-break">Class GroupUpdateError
+  </h1>
+  <div class="markdown level0 summary"><p>The group update error object</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">GroupUpdateError</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.GroupUpdateError.ExternalIdAlreadyInUse.html">GroupUpdateError.ExternalIdAlreadyInUse</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.GroupUpdateError.GroupNameAlreadyUsed.html">GroupUpdateError.GroupNameAlreadyUsed</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.GroupUpdateError.GroupNameInvalid.html">GroupUpdateError.GroupNameInvalid</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.GroupUpdateError.GroupNotFound.html">GroupUpdateError.GroupNotFound</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.GroupUpdateError.Other.html">GroupUpdateError.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.GroupUpdateError.SystemManagedGroupDisallowed.html">GroupUpdateError.SystemManagedGroupDisallowed</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Team.html">Dropbox.Api.Team</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Team_GroupUpdateError_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GroupUpdateError</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GroupUpdateError__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GroupUpdateError.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs/#L34">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GroupUpdateError__ctor_" data-uid="Dropbox.Api.Team.GroupUpdateError.#ctor*"></a>
+  <h4 id="Dropbox_Api_Team_GroupUpdateError__ctor" data-uid="Dropbox.Api.Team.GroupUpdateError.#ctor">GroupUpdateError()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Team.GroupUpdateError.html">GroupUpdateError</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GroupUpdateError()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GroupUpdateError_AsExternalIdAlreadyInUse.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GroupUpdateError.AsExternalIdAlreadyInUse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs/#L97">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GroupUpdateError_AsExternalIdAlreadyInUse_" data-uid="Dropbox.Api.Team.GroupUpdateError.AsExternalIdAlreadyInUse*"></a>
+  <h4 id="Dropbox_Api_Team_GroupUpdateError_AsExternalIdAlreadyInUse" data-uid="Dropbox.Api.Team.GroupUpdateError.AsExternalIdAlreadyInUse">AsExternalIdAlreadyInUse</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a ExternalIdAlreadyInUse, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GroupUpdateError.ExternalIdAlreadyInUse AsExternalIdAlreadyInUse { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.GroupUpdateError.ExternalIdAlreadyInUse.html">GroupUpdateError.ExternalIdAlreadyInUse</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GroupUpdateError_AsGroupNameAlreadyUsed.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GroupUpdateError.AsGroupNameAlreadyUsed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs/#L52">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GroupUpdateError_AsGroupNameAlreadyUsed_" data-uid="Dropbox.Api.Team.GroupUpdateError.AsGroupNameAlreadyUsed*"></a>
+  <h4 id="Dropbox_Api_Team_GroupUpdateError_AsGroupNameAlreadyUsed" data-uid="Dropbox.Api.Team.GroupUpdateError.AsGroupNameAlreadyUsed">AsGroupNameAlreadyUsed</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a GroupNameAlreadyUsed, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GroupUpdateError.GroupNameAlreadyUsed AsGroupNameAlreadyUsed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.GroupUpdateError.GroupNameAlreadyUsed.html">GroupUpdateError.GroupNameAlreadyUsed</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GroupUpdateError_AsGroupNameInvalid.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GroupUpdateError.AsGroupNameInvalid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs/#L74">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GroupUpdateError_AsGroupNameInvalid_" data-uid="Dropbox.Api.Team.GroupUpdateError.AsGroupNameInvalid*"></a>
+  <h4 id="Dropbox_Api_Team_GroupUpdateError_AsGroupNameInvalid" data-uid="Dropbox.Api.Team.GroupUpdateError.AsGroupNameInvalid">AsGroupNameInvalid</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a GroupNameInvalid, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GroupUpdateError.GroupNameInvalid AsGroupNameInvalid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.GroupUpdateError.GroupNameInvalid.html">GroupUpdateError.GroupNameInvalid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GroupUpdateError_AsGroupNotFound.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GroupUpdateError.AsGroupNotFound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs/#L142">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GroupUpdateError_AsGroupNotFound_" data-uid="Dropbox.Api.Team.GroupUpdateError.AsGroupNotFound*"></a>
+  <h4 id="Dropbox_Api_Team_GroupUpdateError_AsGroupNotFound" data-uid="Dropbox.Api.Team.GroupUpdateError.AsGroupNotFound">AsGroupNotFound</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a GroupNotFound, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GroupUpdateError.GroupNotFound AsGroupNotFound { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.GroupUpdateError.GroupNotFound.html">GroupUpdateError.GroupNotFound</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GroupUpdateError_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GroupUpdateError.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs/#L164">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GroupUpdateError_AsOther_" data-uid="Dropbox.Api.Team.GroupUpdateError.AsOther*"></a>
+  <h4 id="Dropbox_Api_Team_GroupUpdateError_AsOther" data-uid="Dropbox.Api.Team.GroupUpdateError.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GroupUpdateError.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.GroupUpdateError.Other.html">GroupUpdateError.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GroupUpdateError_AsSystemManagedGroupDisallowed.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GroupUpdateError.AsSystemManagedGroupDisallowed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs/#L120">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GroupUpdateError_AsSystemManagedGroupDisallowed_" data-uid="Dropbox.Api.Team.GroupUpdateError.AsSystemManagedGroupDisallowed*"></a>
+  <h4 id="Dropbox_Api_Team_GroupUpdateError_AsSystemManagedGroupDisallowed" data-uid="Dropbox.Api.Team.GroupUpdateError.AsSystemManagedGroupDisallowed">AsSystemManagedGroupDisallowed</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a SystemManagedGroupDisallowed, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GroupUpdateError.SystemManagedGroupDisallowed AsSystemManagedGroupDisallowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.GroupUpdateError.SystemManagedGroupDisallowed.html">GroupUpdateError.SystemManagedGroupDisallowed</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GroupUpdateError_IsExternalIdAlreadyInUse.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GroupUpdateError.IsExternalIdAlreadyInUse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs/#L86">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GroupUpdateError_IsExternalIdAlreadyInUse_" data-uid="Dropbox.Api.Team.GroupUpdateError.IsExternalIdAlreadyInUse*"></a>
+  <h4 id="Dropbox_Api_Team_GroupUpdateError_IsExternalIdAlreadyInUse" data-uid="Dropbox.Api.Team.GroupUpdateError.IsExternalIdAlreadyInUse">IsExternalIdAlreadyInUse</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+ExternalIdAlreadyInUse</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsExternalIdAlreadyInUse { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GroupUpdateError_IsGroupNameAlreadyUsed.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GroupUpdateError.IsGroupNameAlreadyUsed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs/#L41">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GroupUpdateError_IsGroupNameAlreadyUsed_" data-uid="Dropbox.Api.Team.GroupUpdateError.IsGroupNameAlreadyUsed*"></a>
+  <h4 id="Dropbox_Api_Team_GroupUpdateError_IsGroupNameAlreadyUsed" data-uid="Dropbox.Api.Team.GroupUpdateError.IsGroupNameAlreadyUsed">IsGroupNameAlreadyUsed</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is GroupNameAlreadyUsed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsGroupNameAlreadyUsed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GroupUpdateError_IsGroupNameInvalid.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GroupUpdateError.IsGroupNameInvalid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs/#L63">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GroupUpdateError_IsGroupNameInvalid_" data-uid="Dropbox.Api.Team.GroupUpdateError.IsGroupNameInvalid*"></a>
+  <h4 id="Dropbox_Api_Team_GroupUpdateError_IsGroupNameInvalid" data-uid="Dropbox.Api.Team.GroupUpdateError.IsGroupNameInvalid">IsGroupNameInvalid</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is GroupNameInvalid</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsGroupNameInvalid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GroupUpdateError_IsGroupNotFound.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GroupUpdateError.IsGroupNotFound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs/#L131">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GroupUpdateError_IsGroupNotFound_" data-uid="Dropbox.Api.Team.GroupUpdateError.IsGroupNotFound*"></a>
+  <h4 id="Dropbox_Api_Team_GroupUpdateError_IsGroupNotFound" data-uid="Dropbox.Api.Team.GroupUpdateError.IsGroupNotFound">IsGroupNotFound</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is GroupNotFound</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsGroupNotFound { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GroupUpdateError_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GroupUpdateError.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs/#L153">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GroupUpdateError_IsOther_" data-uid="Dropbox.Api.Team.GroupUpdateError.IsOther*"></a>
+  <h4 id="Dropbox_Api_Team_GroupUpdateError_IsOther" data-uid="Dropbox.Api.Team.GroupUpdateError.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GroupUpdateError_IsSystemManagedGroupDisallowed.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GroupUpdateError.IsSystemManagedGroupDisallowed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs/#L109">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_GroupUpdateError_IsSystemManagedGroupDisallowed_" data-uid="Dropbox.Api.Team.GroupUpdateError.IsSystemManagedGroupDisallowed*"></a>
+  <h4 id="Dropbox_Api_Team_GroupUpdateError_IsSystemManagedGroupDisallowed" data-uid="Dropbox.Api.Team.GroupUpdateError.IsSystemManagedGroupDisallowed">IsSystemManagedGroupDisallowed</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+SystemManagedGroupDisallowed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSystemManagedGroupDisallowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_GroupUpdateError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.GroupUpdateError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

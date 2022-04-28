@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LegalHoldsPolicyCreateError
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LegalHoldsPolicyCreateError
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError">
+  
+  
+  <h1 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError" class="text-break">Class LegalHoldsPolicyCreateError
+  </h1>
+  <div class="markdown level0 summary"><p>The legal holds policy create error object</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">LegalHoldsPolicyCreateError</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.EmptyMembersList.html">LegalHoldsPolicyCreateError.EmptyMembersList</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.InsufficientPermissions.html">LegalHoldsPolicyCreateError.InsufficientPermissions</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.InvalidDate.html">LegalHoldsPolicyCreateError.InvalidDate</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.InvalidMembers.html">LegalHoldsPolicyCreateError.InvalidMembers</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.NameMustBeUnique.html">LegalHoldsPolicyCreateError.NameMustBeUnique</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.NumberOfUsersOnHoldIsGreaterThanHoldLimitation.html">LegalHoldsPolicyCreateError.NumberOfUsersOnHoldIsGreaterThanHoldLimitation</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.Other.html">LegalHoldsPolicyCreateError.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate.html">LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.TeamExceededLegalHoldQuota.html">LegalHoldsPolicyCreateError.TeamExceededLegalHoldQuota</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.TransientError.html">LegalHoldsPolicyCreateError.TransientError</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.UnknownLegalHoldError.html">LegalHoldsPolicyCreateError.UnknownLegalHoldError</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Team.html">Dropbox.Api.Team</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LegalHoldsPolicyCreateError</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L34">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError__ctor_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.#ctor*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError__ctor" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.#ctor">LegalHoldsPolicyCreateError()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.html">LegalHoldsPolicyCreateError</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LegalHoldsPolicyCreateError()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsEmptyMembersList.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsEmptyMembersList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L75">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsEmptyMembersList_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsEmptyMembersList*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsEmptyMembersList" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsEmptyMembersList">AsEmptyMembersList</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a EmptyMembersList, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LegalHoldsPolicyCreateError.EmptyMembersList AsEmptyMembersList { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.EmptyMembersList.html">LegalHoldsPolicyCreateError.EmptyMembersList</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsInsufficientPermissions.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInsufficientPermissions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L255">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsInsufficientPermissions_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInsufficientPermissions*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsInsufficientPermissions" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInsufficientPermissions">AsInsufficientPermissions</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InsufficientPermissions, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LegalHoldsPolicyCreateError.InsufficientPermissions AsInsufficientPermissions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.InsufficientPermissions.html">LegalHoldsPolicyCreateError.InsufficientPermissions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsInvalidDate.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInvalidDate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L210">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsInvalidDate_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInvalidDate*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsInvalidDate" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInvalidDate">AsInvalidDate</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InvalidDate, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LegalHoldsPolicyCreateError.InvalidDate AsInvalidDate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.InvalidDate.html">LegalHoldsPolicyCreateError.InvalidDate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsInvalidMembers.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInvalidMembers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L97">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsInvalidMembers_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInvalidMembers*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsInvalidMembers" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsInvalidMembers">AsInvalidMembers</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InvalidMembers, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LegalHoldsPolicyCreateError.InvalidMembers AsInvalidMembers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.InvalidMembers.html">LegalHoldsPolicyCreateError.InvalidMembers</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsNameMustBeUnique.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsNameMustBeUnique%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L165">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsNameMustBeUnique_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsNameMustBeUnique*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsNameMustBeUnique" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsNameMustBeUnique">AsNameMustBeUnique</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a NameMustBeUnique, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LegalHoldsPolicyCreateError.NameMustBeUnique AsNameMustBeUnique { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.NameMustBeUnique.html">LegalHoldsPolicyCreateError.NameMustBeUnique</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsNumberOfUsersOnHoldIsGreaterThanHoldLimitation.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsNumberOfUsersOnHoldIsGreaterThanHoldLimitation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L121">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsNumberOfUsersOnHoldIsGreaterThanHoldLimitation_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsNumberOfUsersOnHoldIsGreaterThanHoldLimitation*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsNumberOfUsersOnHoldIsGreaterThanHoldLimitation" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsNumberOfUsersOnHoldIsGreaterThanHoldLimitation">AsNumberOfUsersOnHoldIsGreaterThanHoldLimitation</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a NumberOfUsersOnHoldIsGreaterThanHoldLimitation, or
+<code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LegalHoldsPolicyCreateError.NumberOfUsersOnHoldIsGreaterThanHoldLimitation AsNumberOfUsersOnHoldIsGreaterThanHoldLimitation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.NumberOfUsersOnHoldIsGreaterThanHoldLimitation.html">LegalHoldsPolicyCreateError.NumberOfUsersOnHoldIsGreaterThanHoldLimitation</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L277">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsOther_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsOther*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsOther" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LegalHoldsPolicyCreateError.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.Other.html">LegalHoldsPolicyCreateError.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsStartDateIsLaterThanEndDate.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsStartDateIsLaterThanEndDate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L53">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsStartDateIsLaterThanEndDate_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsStartDateIsLaterThanEndDate*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsStartDateIsLaterThanEndDate" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsStartDateIsLaterThanEndDate">AsStartDateIsLaterThanEndDate</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a StartDateIsLaterThanEndDate, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate AsStartDateIsLaterThanEndDate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate.html">LegalHoldsPolicyCreateError.StartDateIsLaterThanEndDate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsTeamExceededLegalHoldQuota.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsTeamExceededLegalHoldQuota%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L188">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsTeamExceededLegalHoldQuota_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsTeamExceededLegalHoldQuota*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsTeamExceededLegalHoldQuota" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsTeamExceededLegalHoldQuota">AsTeamExceededLegalHoldQuota</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a TeamExceededLegalHoldQuota, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LegalHoldsPolicyCreateError.TeamExceededLegalHoldQuota AsTeamExceededLegalHoldQuota { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.TeamExceededLegalHoldQuota.html">LegalHoldsPolicyCreateError.TeamExceededLegalHoldQuota</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsTransientError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsTransientError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L143">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsTransientError_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsTransientError*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsTransientError" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsTransientError">AsTransientError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a TransientError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LegalHoldsPolicyCreateError.TransientError AsTransientError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.TransientError.html">LegalHoldsPolicyCreateError.TransientError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsUnknownLegalHoldError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsUnknownLegalHoldError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L232">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsUnknownLegalHoldError_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsUnknownLegalHoldError*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_AsUnknownLegalHoldError" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.AsUnknownLegalHoldError">AsUnknownLegalHoldError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a UnknownLegalHoldError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LegalHoldsPolicyCreateError.UnknownLegalHoldError AsUnknownLegalHoldError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.LegalHoldsPolicyCreateError.UnknownLegalHoldError.html">LegalHoldsPolicyCreateError.UnknownLegalHoldError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsEmptyMembersList.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsEmptyMembersList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L64">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsEmptyMembersList_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsEmptyMembersList*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsEmptyMembersList" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsEmptyMembersList">IsEmptyMembersList</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is EmptyMembersList</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEmptyMembersList { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsInsufficientPermissions.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInsufficientPermissions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L244">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsInsufficientPermissions_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInsufficientPermissions*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsInsufficientPermissions" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInsufficientPermissions">IsInsufficientPermissions</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+InsufficientPermissions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInsufficientPermissions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsInvalidDate.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInvalidDate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L199">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsInvalidDate_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInvalidDate*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsInvalidDate" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInvalidDate">IsInvalidDate</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InvalidDate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInvalidDate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsInvalidMembers.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInvalidMembers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L86">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsInvalidMembers_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInvalidMembers*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsInvalidMembers" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsInvalidMembers">IsInvalidMembers</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InvalidMembers</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInvalidMembers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsNameMustBeUnique.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsNameMustBeUnique%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L154">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsNameMustBeUnique_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsNameMustBeUnique*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsNameMustBeUnique" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsNameMustBeUnique">IsNameMustBeUnique</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is NameMustBeUnique</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNameMustBeUnique { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsNumberOfUsersOnHoldIsGreaterThanHoldLimitation.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsNumberOfUsersOnHoldIsGreaterThanHoldLimitation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L109">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsNumberOfUsersOnHoldIsGreaterThanHoldLimitation_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsNumberOfUsersOnHoldIsGreaterThanHoldLimitation*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsNumberOfUsersOnHoldIsGreaterThanHoldLimitation" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsNumberOfUsersOnHoldIsGreaterThanHoldLimitation">IsNumberOfUsersOnHoldIsGreaterThanHoldLimitation</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+NumberOfUsersOnHoldIsGreaterThanHoldLimitation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNumberOfUsersOnHoldIsGreaterThanHoldLimitation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L266">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsOther_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsOther*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsOther" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsStartDateIsLaterThanEndDate.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsStartDateIsLaterThanEndDate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L42">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsStartDateIsLaterThanEndDate_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsStartDateIsLaterThanEndDate*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsStartDateIsLaterThanEndDate" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsStartDateIsLaterThanEndDate">IsStartDateIsLaterThanEndDate</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+StartDateIsLaterThanEndDate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsStartDateIsLaterThanEndDate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsTeamExceededLegalHoldQuota.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsTeamExceededLegalHoldQuota%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L177">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsTeamExceededLegalHoldQuota_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsTeamExceededLegalHoldQuota*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsTeamExceededLegalHoldQuota" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsTeamExceededLegalHoldQuota">IsTeamExceededLegalHoldQuota</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+TeamExceededLegalHoldQuota</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTeamExceededLegalHoldQuota { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsTransientError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsTransientError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L132">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsTransientError_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsTransientError*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsTransientError" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsTransientError">IsTransientError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is TransientError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTransientError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsUnknownLegalHoldError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsUnknownLegalHoldError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L221">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsUnknownLegalHoldError_" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsUnknownLegalHoldError*"></a>
+  <h4 id="Dropbox_Api_Team_LegalHoldsPolicyCreateError_IsUnknownLegalHoldError" data-uid="Dropbox.Api.Team.LegalHoldsPolicyCreateError.IsUnknownLegalHoldError">IsUnknownLegalHoldError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is UnknownLegalHoldError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUnknownLegalHoldError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_LegalHoldsPolicyCreateError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.LegalHoldsPolicyCreateError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateError.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

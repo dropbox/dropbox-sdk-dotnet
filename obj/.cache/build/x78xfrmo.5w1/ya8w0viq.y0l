@@ -1,0 +1,744 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LockFileError
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LockFileError
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Files.LockFileError">
+  
+  
+  <h1 id="Dropbox_Api_Files_LockFileError" data-uid="Dropbox.Api.Files.LockFileError" class="text-break">Class LockFileError
+  </h1>
+  <div class="markdown level0 summary"><p>The lock file error object</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">LockFileError</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.LockFileError.CannotBeLocked.html">LockFileError.CannotBeLocked</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.LockFileError.FileNotShared.html">LockFileError.FileNotShared</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.LockFileError.InternalError.html">LockFileError.InternalError</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.LockFileError.LockConflict.html">LockFileError.LockConflict</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.LockFileError.NoWritePermission.html">LockFileError.NoWritePermission</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.LockFileError.Other.html">LockFileError.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.LockFileError.PathLookup.html">LockFileError.PathLookup</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.LockFileError.TooManyFiles.html">LockFileError.TooManyFiles</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.LockFileError.TooManyWriteOperations.html">LockFileError.TooManyWriteOperations</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Files.html">Dropbox.Api.Files</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Files_LockFileError_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LockFileError</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L33">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError__ctor_" data-uid="Dropbox.Api.Files.LockFileError.#ctor*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError__ctor" data-uid="Dropbox.Api.Files.LockFileError.#ctor">LockFileError()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Files.LockFileError.html">LockFileError</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LockFileError()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_AsCannotBeLocked.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.AsCannotBeLocked%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L140">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_AsCannotBeLocked_" data-uid="Dropbox.Api.Files.LockFileError.AsCannotBeLocked*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_AsCannotBeLocked" data-uid="Dropbox.Api.Files.LockFileError.AsCannotBeLocked">AsCannotBeLocked</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a CannotBeLocked, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LockFileError.CannotBeLocked AsCannotBeLocked { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.LockFileError.CannotBeLocked.html">LockFileError.CannotBeLocked</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_AsFileNotShared.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.AsFileNotShared%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L162">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_AsFileNotShared_" data-uid="Dropbox.Api.Files.LockFileError.AsFileNotShared*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_AsFileNotShared" data-uid="Dropbox.Api.Files.LockFileError.AsFileNotShared">AsFileNotShared</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a FileNotShared, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LockFileError.FileNotShared AsFileNotShared { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.LockFileError.FileNotShared.html">LockFileError.FileNotShared</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_AsInternalError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.AsInternalError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L206">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_AsInternalError_" data-uid="Dropbox.Api.Files.LockFileError.AsInternalError*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_AsInternalError" data-uid="Dropbox.Api.Files.LockFileError.AsInternalError">AsInternalError</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InternalError, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LockFileError.InternalError AsInternalError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.LockFileError.InternalError.html">LockFileError.InternalError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_AsLockConflict.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.AsLockConflict%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L184">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_AsLockConflict_" data-uid="Dropbox.Api.Files.LockFileError.AsLockConflict*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_AsLockConflict" data-uid="Dropbox.Api.Files.LockFileError.AsLockConflict">AsLockConflict</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a LockConflict, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LockFileError.LockConflict AsLockConflict { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.LockFileError.LockConflict.html">LockFileError.LockConflict</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_AsNoWritePermission.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.AsNoWritePermission%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L118">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_AsNoWritePermission_" data-uid="Dropbox.Api.Files.LockFileError.AsNoWritePermission*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_AsNoWritePermission" data-uid="Dropbox.Api.Files.LockFileError.AsNoWritePermission">AsNoWritePermission</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a NoWritePermission, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LockFileError.NoWritePermission AsNoWritePermission { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.LockFileError.NoWritePermission.html">LockFileError.NoWritePermission</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L228">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_AsOther_" data-uid="Dropbox.Api.Files.LockFileError.AsOther*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_AsOther" data-uid="Dropbox.Api.Files.LockFileError.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LockFileError.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.LockFileError.Other.html">LockFileError.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_AsPathLookup.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.AsPathLookup%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L51">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_AsPathLookup_" data-uid="Dropbox.Api.Files.LockFileError.AsPathLookup*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_AsPathLookup" data-uid="Dropbox.Api.Files.LockFileError.AsPathLookup">AsPathLookup</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a PathLookup, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LockFileError.PathLookup AsPathLookup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.LockFileError.PathLookup.html">LockFileError.PathLookup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_AsTooManyFiles.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.AsTooManyFiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L96">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_AsTooManyFiles_" data-uid="Dropbox.Api.Files.LockFileError.AsTooManyFiles*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_AsTooManyFiles" data-uid="Dropbox.Api.Files.LockFileError.AsTooManyFiles">AsTooManyFiles</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a TooManyFiles, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LockFileError.TooManyFiles AsTooManyFiles { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.LockFileError.TooManyFiles.html">LockFileError.TooManyFiles</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_AsTooManyWriteOperations.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L74">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_AsTooManyWriteOperations_" data-uid="Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_AsTooManyWriteOperations" data-uid="Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations">AsTooManyWriteOperations</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a TooManyWriteOperations, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LockFileError.TooManyWriteOperations AsTooManyWriteOperations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.LockFileError.TooManyWriteOperations.html">LockFileError.TooManyWriteOperations</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_IsCannotBeLocked.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.IsCannotBeLocked%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L129">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_IsCannotBeLocked_" data-uid="Dropbox.Api.Files.LockFileError.IsCannotBeLocked*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_IsCannotBeLocked" data-uid="Dropbox.Api.Files.LockFileError.IsCannotBeLocked">IsCannotBeLocked</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is CannotBeLocked</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCannotBeLocked { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_IsFileNotShared.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.IsFileNotShared%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L151">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_IsFileNotShared_" data-uid="Dropbox.Api.Files.LockFileError.IsFileNotShared*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_IsFileNotShared" data-uid="Dropbox.Api.Files.LockFileError.IsFileNotShared">IsFileNotShared</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is FileNotShared</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFileNotShared { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_IsInternalError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.IsInternalError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L195">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_IsInternalError_" data-uid="Dropbox.Api.Files.LockFileError.IsInternalError*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_IsInternalError" data-uid="Dropbox.Api.Files.LockFileError.IsInternalError">IsInternalError</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InternalError</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInternalError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_IsLockConflict.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.IsLockConflict%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L173">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_IsLockConflict_" data-uid="Dropbox.Api.Files.LockFileError.IsLockConflict*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_IsLockConflict" data-uid="Dropbox.Api.Files.LockFileError.IsLockConflict">IsLockConflict</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is LockConflict</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsLockConflict { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_IsNoWritePermission.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.IsNoWritePermission%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L107">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_IsNoWritePermission_" data-uid="Dropbox.Api.Files.LockFileError.IsNoWritePermission*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_IsNoWritePermission" data-uid="Dropbox.Api.Files.LockFileError.IsNoWritePermission">IsNoWritePermission</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is NoWritePermission</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNoWritePermission { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L217">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_IsOther_" data-uid="Dropbox.Api.Files.LockFileError.IsOther*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_IsOther" data-uid="Dropbox.Api.Files.LockFileError.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_IsPathLookup.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.IsPathLookup%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L40">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_IsPathLookup_" data-uid="Dropbox.Api.Files.LockFileError.IsPathLookup*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_IsPathLookup" data-uid="Dropbox.Api.Files.LockFileError.IsPathLookup">IsPathLookup</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is PathLookup</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPathLookup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_IsTooManyFiles.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.IsTooManyFiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L85">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_IsTooManyFiles_" data-uid="Dropbox.Api.Files.LockFileError.IsTooManyFiles*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_IsTooManyFiles" data-uid="Dropbox.Api.Files.LockFileError.IsTooManyFiles">IsTooManyFiles</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is TooManyFiles</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTooManyFiles { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError_IsTooManyWriteOperations.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L63">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_LockFileError_IsTooManyWriteOperations_" data-uid="Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations*"></a>
+  <h4 id="Dropbox_Api_Files_LockFileError_IsTooManyWriteOperations" data-uid="Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations">IsTooManyWriteOperations</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+TooManyWriteOperations</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTooManyWriteOperations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_LockFileError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.LockFileError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

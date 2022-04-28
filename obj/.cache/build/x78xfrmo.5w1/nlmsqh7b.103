@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FolderAction
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FolderAction
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Sharing.FolderAction">
+  
+  
+  <h1 id="Dropbox_Api_Sharing_FolderAction" data-uid="Dropbox.Api.Sharing.FolderAction" class="text-break">Class FolderAction
+  </h1>
+  <div class="markdown level0 summary"><p>Actions that may be taken on shared folders.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FolderAction</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.ChangeOptions.html">FolderAction.ChangeOptions</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.CreateLink.html">FolderAction.CreateLink</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.DisableViewerInfo.html">FolderAction.DisableViewerInfo</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.EditContents.html">FolderAction.EditContents</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.EnableViewerInfo.html">FolderAction.EnableViewerInfo</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.InviteEditor.html">FolderAction.InviteEditor</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.InviteViewer.html">FolderAction.InviteViewer</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.InviteViewerNoComment.html">FolderAction.InviteViewerNoComment</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.LeaveACopy.html">FolderAction.LeaveACopy</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.Other.html">FolderAction.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.RelinquishMembership.html">FolderAction.RelinquishMembership</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.SetAccessInheritance.html">FolderAction.SetAccessInheritance</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.ShareLink.html">FolderAction.ShareLink</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.Unmount.html">FolderAction.Unmount</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Sharing.FolderAction.Unshare.html">FolderAction.Unshare</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Sharing.html">Dropbox.Api.Sharing</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Sharing_FolderAction_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FolderAction</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L33">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction__ctor_" data-uid="Dropbox.Api.Sharing.FolderAction.#ctor*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction__ctor" data-uid="Dropbox.Api.Sharing.FolderAction.#ctor">FolderAction()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Sharing.FolderAction.html">FolderAction</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsChangeOptions.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsChangeOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L51">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsChangeOptions_" data-uid="Dropbox.Api.Sharing.FolderAction.AsChangeOptions*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsChangeOptions" data-uid="Dropbox.Api.Sharing.FolderAction.AsChangeOptions">AsChangeOptions</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a ChangeOptions, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.ChangeOptions AsChangeOptions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.ChangeOptions.html">FolderAction.ChangeOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsCreateLink.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsCreateLink%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L315">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsCreateLink_" data-uid="Dropbox.Api.Sharing.FolderAction.AsCreateLink*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsCreateLink" data-uid="Dropbox.Api.Sharing.FolderAction.AsCreateLink">AsCreateLink</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a CreateLink, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.CreateLink AsCreateLink { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.CreateLink.html">FolderAction.CreateLink</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsDisableViewerInfo.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsDisableViewerInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L73">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsDisableViewerInfo_" data-uid="Dropbox.Api.Sharing.FolderAction.AsDisableViewerInfo*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsDisableViewerInfo" data-uid="Dropbox.Api.Sharing.FolderAction.AsDisableViewerInfo">AsDisableViewerInfo</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a DisableViewerInfo, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.DisableViewerInfo AsDisableViewerInfo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.DisableViewerInfo.html">FolderAction.DisableViewerInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsEditContents.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsEditContents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L95">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsEditContents_" data-uid="Dropbox.Api.Sharing.FolderAction.AsEditContents*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsEditContents" data-uid="Dropbox.Api.Sharing.FolderAction.AsEditContents">AsEditContents</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a EditContents, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.EditContents AsEditContents { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.EditContents.html">FolderAction.EditContents</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsEnableViewerInfo.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsEnableViewerInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L117">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsEnableViewerInfo_" data-uid="Dropbox.Api.Sharing.FolderAction.AsEnableViewerInfo*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsEnableViewerInfo" data-uid="Dropbox.Api.Sharing.FolderAction.AsEnableViewerInfo">AsEnableViewerInfo</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a EnableViewerInfo, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.EnableViewerInfo AsEnableViewerInfo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.EnableViewerInfo.html">FolderAction.EnableViewerInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsInviteEditor.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsInviteEditor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L139">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsInviteEditor_" data-uid="Dropbox.Api.Sharing.FolderAction.AsInviteEditor*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsInviteEditor" data-uid="Dropbox.Api.Sharing.FolderAction.AsInviteEditor">AsInviteEditor</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InviteEditor, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.InviteEditor AsInviteEditor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.InviteEditor.html">FolderAction.InviteEditor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsInviteViewer.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsInviteViewer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L161">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsInviteViewer_" data-uid="Dropbox.Api.Sharing.FolderAction.AsInviteViewer*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsInviteViewer" data-uid="Dropbox.Api.Sharing.FolderAction.AsInviteViewer">AsInviteViewer</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InviteViewer, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.InviteViewer AsInviteViewer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.InviteViewer.html">FolderAction.InviteViewer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsInviteViewerNoComment.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsInviteViewerNoComment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L183">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsInviteViewerNoComment_" data-uid="Dropbox.Api.Sharing.FolderAction.AsInviteViewerNoComment*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsInviteViewerNoComment" data-uid="Dropbox.Api.Sharing.FolderAction.AsInviteViewerNoComment">AsInviteViewerNoComment</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InviteViewerNoComment, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.InviteViewerNoComment AsInviteViewerNoComment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.InviteViewerNoComment.html">FolderAction.InviteViewerNoComment</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsLeaveACopy.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsLeaveACopy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L271">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsLeaveACopy_" data-uid="Dropbox.Api.Sharing.FolderAction.AsLeaveACopy*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsLeaveACopy" data-uid="Dropbox.Api.Sharing.FolderAction.AsLeaveACopy">AsLeaveACopy</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a LeaveACopy, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.LeaveACopy AsLeaveACopy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.LeaveACopy.html">FolderAction.LeaveACopy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L359">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsOther_" data-uid="Dropbox.Api.Sharing.FolderAction.AsOther*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsOther" data-uid="Dropbox.Api.Sharing.FolderAction.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.Other.html">FolderAction.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsRelinquishMembership.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsRelinquishMembership%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L205">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsRelinquishMembership_" data-uid="Dropbox.Api.Sharing.FolderAction.AsRelinquishMembership*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsRelinquishMembership" data-uid="Dropbox.Api.Sharing.FolderAction.AsRelinquishMembership">AsRelinquishMembership</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a RelinquishMembership, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.RelinquishMembership AsRelinquishMembership { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.RelinquishMembership.html">FolderAction.RelinquishMembership</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsSetAccessInheritance.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsSetAccessInheritance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L337">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsSetAccessInheritance_" data-uid="Dropbox.Api.Sharing.FolderAction.AsSetAccessInheritance*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsSetAccessInheritance" data-uid="Dropbox.Api.Sharing.FolderAction.AsSetAccessInheritance">AsSetAccessInheritance</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a SetAccessInheritance, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.SetAccessInheritance AsSetAccessInheritance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.SetAccessInheritance.html">FolderAction.SetAccessInheritance</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsShareLink.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsShareLink%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L293">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsShareLink_" data-uid="Dropbox.Api.Sharing.FolderAction.AsShareLink*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsShareLink" data-uid="Dropbox.Api.Sharing.FolderAction.AsShareLink">AsShareLink</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a ShareLink, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.ShareLink AsShareLink { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.ShareLink.html">FolderAction.ShareLink</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsUnmount.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsUnmount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L227">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsUnmount_" data-uid="Dropbox.Api.Sharing.FolderAction.AsUnmount*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsUnmount" data-uid="Dropbox.Api.Sharing.FolderAction.AsUnmount">AsUnmount</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Unmount, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.Unmount AsUnmount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.Unmount.html">FolderAction.Unmount</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_AsUnshare.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.AsUnshare%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L249">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_AsUnshare_" data-uid="Dropbox.Api.Sharing.FolderAction.AsUnshare*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_AsUnshare" data-uid="Dropbox.Api.Sharing.FolderAction.AsUnshare">AsUnshare</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Unshare, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderAction.Unshare AsUnshare { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.FolderAction.Unshare.html">FolderAction.Unshare</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsChangeOptions.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsChangeOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L40">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsChangeOptions_" data-uid="Dropbox.Api.Sharing.FolderAction.IsChangeOptions*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsChangeOptions" data-uid="Dropbox.Api.Sharing.FolderAction.IsChangeOptions">IsChangeOptions</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is ChangeOptions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsChangeOptions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsCreateLink.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsCreateLink%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L304">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsCreateLink_" data-uid="Dropbox.Api.Sharing.FolderAction.IsCreateLink*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsCreateLink" data-uid="Dropbox.Api.Sharing.FolderAction.IsCreateLink">IsCreateLink</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is CreateLink</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCreateLink { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsDisableViewerInfo.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsDisableViewerInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L62">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsDisableViewerInfo_" data-uid="Dropbox.Api.Sharing.FolderAction.IsDisableViewerInfo*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsDisableViewerInfo" data-uid="Dropbox.Api.Sharing.FolderAction.IsDisableViewerInfo">IsDisableViewerInfo</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is DisableViewerInfo</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDisableViewerInfo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsEditContents.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsEditContents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L84">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsEditContents_" data-uid="Dropbox.Api.Sharing.FolderAction.IsEditContents*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsEditContents" data-uid="Dropbox.Api.Sharing.FolderAction.IsEditContents">IsEditContents</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is EditContents</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEditContents { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsEnableViewerInfo.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsEnableViewerInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L106">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsEnableViewerInfo_" data-uid="Dropbox.Api.Sharing.FolderAction.IsEnableViewerInfo*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsEnableViewerInfo" data-uid="Dropbox.Api.Sharing.FolderAction.IsEnableViewerInfo">IsEnableViewerInfo</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is EnableViewerInfo</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEnableViewerInfo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsInviteEditor.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsInviteEditor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L128">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsInviteEditor_" data-uid="Dropbox.Api.Sharing.FolderAction.IsInviteEditor*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsInviteEditor" data-uid="Dropbox.Api.Sharing.FolderAction.IsInviteEditor">IsInviteEditor</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InviteEditor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInviteEditor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsInviteViewer.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsInviteViewer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L150">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsInviteViewer_" data-uid="Dropbox.Api.Sharing.FolderAction.IsInviteViewer*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsInviteViewer" data-uid="Dropbox.Api.Sharing.FolderAction.IsInviteViewer">IsInviteViewer</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InviteViewer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInviteViewer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsInviteViewerNoComment.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsInviteViewerNoComment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L172">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsInviteViewerNoComment_" data-uid="Dropbox.Api.Sharing.FolderAction.IsInviteViewerNoComment*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsInviteViewerNoComment" data-uid="Dropbox.Api.Sharing.FolderAction.IsInviteViewerNoComment">IsInviteViewerNoComment</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InviteViewerNoComment</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInviteViewerNoComment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsLeaveACopy.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsLeaveACopy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L260">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsLeaveACopy_" data-uid="Dropbox.Api.Sharing.FolderAction.IsLeaveACopy*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsLeaveACopy" data-uid="Dropbox.Api.Sharing.FolderAction.IsLeaveACopy">IsLeaveACopy</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is LeaveACopy</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsLeaveACopy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L348">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsOther_" data-uid="Dropbox.Api.Sharing.FolderAction.IsOther*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsOther" data-uid="Dropbox.Api.Sharing.FolderAction.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsRelinquishMembership.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsRelinquishMembership%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L194">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsRelinquishMembership_" data-uid="Dropbox.Api.Sharing.FolderAction.IsRelinquishMembership*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsRelinquishMembership" data-uid="Dropbox.Api.Sharing.FolderAction.IsRelinquishMembership">IsRelinquishMembership</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is RelinquishMembership</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRelinquishMembership { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsSetAccessInheritance.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsSetAccessInheritance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L326">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsSetAccessInheritance_" data-uid="Dropbox.Api.Sharing.FolderAction.IsSetAccessInheritance*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsSetAccessInheritance" data-uid="Dropbox.Api.Sharing.FolderAction.IsSetAccessInheritance">IsSetAccessInheritance</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is SetAccessInheritance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSetAccessInheritance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsShareLink.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsShareLink%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L282">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsShareLink_" data-uid="Dropbox.Api.Sharing.FolderAction.IsShareLink*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsShareLink" data-uid="Dropbox.Api.Sharing.FolderAction.IsShareLink">IsShareLink</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is ShareLink</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsShareLink { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsUnmount.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsUnmount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L216">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsUnmount_" data-uid="Dropbox.Api.Sharing.FolderAction.IsUnmount*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsUnmount" data-uid="Dropbox.Api.Sharing.FolderAction.IsUnmount">IsUnmount</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Unmount</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUnmount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction_IsUnshare.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction.IsUnshare%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L238">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_FolderAction_IsUnshare_" data-uid="Dropbox.Api.Sharing.FolderAction.IsUnshare*"></a>
+  <h4 id="Dropbox_Api_Sharing_FolderAction_IsUnshare" data-uid="Dropbox.Api.Sharing.FolderAction.IsUnshare">IsUnshare</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Unshare</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUnshare { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Sharing_FolderAction.md&amp;value=---%0Auid%3A%20Dropbox.Api.Sharing.FolderAction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderAction.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

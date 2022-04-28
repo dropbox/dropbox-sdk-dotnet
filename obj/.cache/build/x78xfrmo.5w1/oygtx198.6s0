@@ -1,0 +1,2824 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FileRequestsUserRoutes
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FileRequestsUserRoutes
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes">
+  
+  
+  <h1 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes" class="text-break">Class FileRequestsUserRoutes
+  </h1>
+  <div class="markdown level0 summary"><p>The routes for the <a class="xref" href="Dropbox.Api.FileRequests.html">Dropbox.Api.FileRequests</a> namespace</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FileRequestsUserRoutes</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.FileRequests.Routes.html">Dropbox.Api.FileRequests.Routes</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FileRequestsUserRoutes</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginCount_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCount(System.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L55">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginCount_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCount*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginCount_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCount(System.AsyncCallback,System.Object)">BeginCount(AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the count route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginCount(AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginCreate_Dropbox_Api_FileRequests_CreateFileRequestArgs_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate(Dropbox.Api.FileRequests.CreateFileRequestArgs%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L105">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginCreate_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginCreate_Dropbox_Api_FileRequests_CreateFileRequestArgs_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate(Dropbox.Api.FileRequests.CreateFileRequestArgs,System.AsyncCallback,System.Object)">BeginCreate(CreateFileRequestArgs, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the create route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginCreate(CreateFileRequestArgs createFileRequestArgs, AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestArgs.html">CreateFileRequestArgs</a></td>
+        <td><span class="parametername">createFileRequestArgs</span></td>
+        <td><p>The request parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginCreate_System_String_System_String_Dropbox_Api_FileRequests_FileRequestDeadline_System_Boolean_System_String_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate(System.String%2CSystem.String%2CDropbox.Api.FileRequests.FileRequestDeadline%2CSystem.Boolean%2CSystem.String%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L163">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginCreate_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginCreate_System_String_System_String_Dropbox_Api_FileRequests_FileRequestDeadline_System_Boolean_System_String_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate(System.String,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.Boolean,System.String,System.AsyncCallback,System.Object)">BeginCreate(String, String, FileRequestDeadline, Boolean, String, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the create route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginCreate(string title, string destination, FileRequestDeadline deadline = null, bool open = true, string description = null, AsyncCallback callback = null, object callbackState = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">title</span></td>
+        <td><p>The title of the file request. Must not be empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">destination</span></td>
+        <td><p>The path of the folder in the Dropbox where uploaded
+files will be sent. For apps with the app folder permission, this will be relative
+to the app folder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.FileRequestDeadline.html">FileRequestDeadline</a></td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>The deadline for the file request. Deadlines can only be set
+by Professional and Business accounts.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">open</span></td>
+        <td><p>Whether or not the file request should be open. If the file
+request is closed, it will not accept any file submissions, but it can be opened
+later.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A description of the file request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">callbackState</span></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginDelete_Dropbox_Api_FileRequests_DeleteFileRequestArgs_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete(Dropbox.Api.FileRequests.DeleteFileRequestArgs%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L224">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginDelete_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginDelete_Dropbox_Api_FileRequests_DeleteFileRequestArgs_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete(Dropbox.Api.FileRequests.DeleteFileRequestArgs,System.AsyncCallback,System.Object)">BeginDelete(DeleteFileRequestArgs, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the delete route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginDelete(DeleteFileRequestArgs deleteFileRequestArgs, AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.DeleteFileRequestArgs.html">DeleteFileRequestArgs</a></td>
+        <td><span class="parametername">deleteFileRequestArgs</span></td>
+        <td><p>The request parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginDelete_System_Collections_Generic_IEnumerable_System_String__System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete(System.Collections.Generic.IEnumerable%7BSystem.String%7D%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L256">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginDelete_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginDelete_System_Collections_Generic_IEnumerable_System_String__System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete(System.Collections.Generic.IEnumerable{System.String},System.AsyncCallback,System.Object)">BeginDelete(IEnumerable&lt;String&gt;, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the delete route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginDelete(IEnumerable&lt;string&gt; ids, AsyncCallback callback, object callbackState = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">ids</span></td>
+        <td><p>List IDs of the file requests to delete.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">callbackState</span></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginDeleteAllClosed_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDeleteAllClosed(System.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L307">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginDeleteAllClosed_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDeleteAllClosed*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginDeleteAllClosed_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDeleteAllClosed(System.AsyncCallback,System.Object)">BeginDeleteAllClosed(AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the delete all closed route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginDeleteAllClosed(AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginGet_Dropbox_Api_FileRequests_GetFileRequestArgs_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet(Dropbox.Api.FileRequests.GetFileRequestArgs%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L358">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginGet_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginGet_Dropbox_Api_FileRequests_GetFileRequestArgs_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet(Dropbox.Api.FileRequests.GetFileRequestArgs,System.AsyncCallback,System.Object)">BeginGet(GetFileRequestArgs, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the get route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGet(GetFileRequestArgs getFileRequestArgs, AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.GetFileRequestArgs.html">GetFileRequestArgs</a></td>
+        <td><span class="parametername">getFileRequestArgs</span></td>
+        <td><p>The request parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginGet_System_String_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet(System.String%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L390">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginGet_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginGet_System_String_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet(System.String,System.AsyncCallback,System.Object)">BeginGet(String, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the get route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGet(string id, AsyncCallback callback, object callbackState = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The ID of the file request to retrieve.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">callbackState</span></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginList_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginList(System.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L532">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginList_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginList*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginList_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginList(System.AsyncCallback,System.Object)">BeginList(AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the list route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginList(AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginListContinue_Dropbox_Api_FileRequests_ListFileRequestsContinueArg_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue(Dropbox.Api.FileRequests.ListFileRequestsContinueArg%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L589">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginListContinue_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginListContinue_Dropbox_Api_FileRequests_ListFileRequestsContinueArg_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue(Dropbox.Api.FileRequests.ListFileRequestsContinueArg,System.AsyncCallback,System.Object)">BeginListContinue(ListFileRequestsContinueArg, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the list continue route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginListContinue(ListFileRequestsContinueArg listFileRequestsContinueArg, AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsContinueArg.html">ListFileRequestsContinueArg</a></td>
+        <td><span class="parametername">listFileRequestsContinueArg</span></td>
+        <td><p>The request parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginListContinue_System_String_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue(System.String%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L630">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginListContinue_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginListContinue_System_String_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue(System.String,System.AsyncCallback,System.Object)">BeginListContinue(String, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the list continue route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginListContinue(string cursor, AsyncCallback callback, object callbackState = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cursor</span></td>
+        <td><p>The cursor returned by the previous API call specified in the
+endpoint description.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">callbackState</span></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginListV2_Dropbox_Api_FileRequests_ListFileRequestsArg_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2(Dropbox.Api.FileRequests.ListFileRequestsArg%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L444">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginListV2_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginListV2_Dropbox_Api_FileRequests_ListFileRequestsArg_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2(Dropbox.Api.FileRequests.ListFileRequestsArg,System.AsyncCallback,System.Object)">BeginListV2(ListFileRequestsArg, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the list route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginListV2(ListFileRequestsArg listFileRequestsArg, AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsArg.html">ListFileRequestsArg</a></td>
+        <td><span class="parametername">listFileRequestsArg</span></td>
+        <td><p>The request parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginListV2_System_UInt64_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2(System.UInt64%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L480">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginListV2_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginListV2_System_UInt64_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2(System.UInt64,System.AsyncCallback,System.Object)">BeginListV2(UInt64, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the list route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginListV2(ulong limit = 1000UL, AsyncCallback callback = null, object callbackState = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>The maximum number of file requests that should be returned per
+request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">callbackState</span></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginUpdate_Dropbox_Api_FileRequests_UpdateFileRequestArgs_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate(Dropbox.Api.FileRequests.UpdateFileRequestArgs%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L683">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginUpdate_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginUpdate_Dropbox_Api_FileRequests_UpdateFileRequestArgs_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate(Dropbox.Api.FileRequests.UpdateFileRequestArgs,System.AsyncCallback,System.Object)">BeginUpdate(UpdateFileRequestArgs, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the update route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginUpdate(UpdateFileRequestArgs updateFileRequestArgs, AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.UpdateFileRequestArgs.html">UpdateFileRequestArgs</a></td>
+        <td><span class="parametername">updateFileRequestArgs</span></td>
+        <td><p>The request parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginUpdate_System_String_System_String_System_String_Dropbox_Api_FileRequests_UpdateFileRequestDeadline_System_Nullable_System_Boolean__System_String_System_AsyncCallback_System_Object_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate(System.String%2CSystem.String%2CSystem.String%2CDropbox.Api.FileRequests.UpdateFileRequestDeadline%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.AsyncCallback%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L741">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginUpdate_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_BeginUpdate_System_String_System_String_System_String_Dropbox_Api_FileRequests_UpdateFileRequestDeadline_System_Nullable_System_Boolean__System_String_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate(System.String,System.String,System.String,Dropbox.Api.FileRequests.UpdateFileRequestDeadline,System.Nullable{System.Boolean},System.String,System.AsyncCallback,System.Object)">BeginUpdate(String, String, String, UpdateFileRequestDeadline, Nullable&lt;Boolean&gt;, String, AsyncCallback, Object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the update route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginUpdate(string id, string title = null, string destination = null, UpdateFileRequestDeadline deadline = null, bool? open = null, string description = null, AsyncCallback callback = null, object callbackState = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The ID of the file request to update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">title</span></td>
+        <td><p>The new title of the file request. Must not be empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">destination</span></td>
+        <td><p>The new path of the folder in the Dropbox where uploaded
+files will be sent. For apps with the app folder permission, this will be relative
+to the app folder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.UpdateFileRequestDeadline.html">UpdateFileRequestDeadline</a></td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>The new deadline for the file request. Deadlines can only be
+set by Professional and Business accounts.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">open</span></td>
+        <td><p>Whether to set this file request as open or closed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The description of the file request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.AsyncCallback</span></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">callbackState</span></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_CountAsync.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CountAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L42">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_CountAsync_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CountAsync*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_CountAsync" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CountAsync">CountAsync()</h4>
+  <div class="markdown level1 summary"><p>Returns the total number of file requests owned by this user. Includes both
+open and closed file requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;CountFileRequestsResult&gt; CountAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.CountFileRequestsResult.html">CountFileRequestsResult</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.CountFileRequestsError.html">CountFileRequestsError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_CreateAsync_Dropbox_Api_FileRequests_CreateFileRequestArgs_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(Dropbox.Api.FileRequests.CreateFileRequestArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L91">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_CreateAsync_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_CreateAsync_Dropbox_Api_FileRequests_CreateFileRequestArgs_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(Dropbox.Api.FileRequests.CreateFileRequestArgs)">CreateAsync(CreateFileRequestArgs)</h4>
+  <div class="markdown level1 summary"><p>Creates a file request for this user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;FileRequest&gt; CreateAsync(CreateFileRequestArgs createFileRequestArgs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestArgs.html">CreateFileRequestArgs</a></td>
+        <td><span class="parametername">createFileRequestArgs</span></td>
+        <td><p>The request parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.FileRequest.html">FileRequest</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.html">CreateFileRequestError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_CreateAsync_System_String_System_String_Dropbox_Api_FileRequests_FileRequestDeadline_System_Boolean_System_String_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(System.String%2CSystem.String%2CDropbox.Api.FileRequests.FileRequestDeadline%2CSystem.Boolean%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L130">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_CreateAsync_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_CreateAsync_System_String_System_String_Dropbox_Api_FileRequests_FileRequestDeadline_System_Boolean_System_String_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(System.String,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.Boolean,System.String)">CreateAsync(String, String, FileRequestDeadline, Boolean, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a file request for this user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;FileRequest&gt; CreateAsync(string title, string destination, FileRequestDeadline deadline = null, bool open = true, string description = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">title</span></td>
+        <td><p>The title of the file request. Must not be empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">destination</span></td>
+        <td><p>The path of the folder in the Dropbox where uploaded
+files will be sent. For apps with the app folder permission, this will be relative
+to the app folder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.FileRequestDeadline.html">FileRequestDeadline</a></td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>The deadline for the file request. Deadlines can only be set
+by Professional and Business accounts.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">open</span></td>
+        <td><p>Whether or not the file request should be open. If the file
+request is closed, it will not accept any file submissions, but it can be opened
+later.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>A description of the file request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.FileRequest.html">FileRequest</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.html">CreateFileRequestError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_DeleteAllClosedAsync.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAllClosedAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L294">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_DeleteAllClosedAsync_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAllClosedAsync*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_DeleteAllClosedAsync" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAllClosedAsync">DeleteAllClosedAsync()</h4>
+  <div class="markdown level1 summary"><p>Delete all closed file requests owned by this user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DeleteAllClosedFileRequestsResult&gt; DeleteAllClosedAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult.html">DeleteAllClosedFileRequestsResult</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.html">DeleteAllClosedFileRequestsError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_DeleteAsync_Dropbox_Api_FileRequests_DeleteFileRequestArgs_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(Dropbox.Api.FileRequests.DeleteFileRequestArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L210">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_DeleteAsync_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_DeleteAsync_Dropbox_Api_FileRequests_DeleteFileRequestArgs_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(Dropbox.Api.FileRequests.DeleteFileRequestArgs)">DeleteAsync(DeleteFileRequestArgs)</h4>
+  <div class="markdown level1 summary"><p>Delete a batch of closed file requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DeleteFileRequestsResult&gt; DeleteAsync(DeleteFileRequestArgs deleteFileRequestArgs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.DeleteFileRequestArgs.html">DeleteFileRequestArgs</a></td>
+        <td><span class="parametername">deleteFileRequestArgs</span></td>
+        <td><p>The request parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.DeleteFileRequestsResult.html">DeleteFileRequestsResult</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.DeleteFileRequestError.html">DeleteFileRequestError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_DeleteAsync_System_Collections_Generic_IEnumerable_System_String__.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(System.Collections.Generic.IEnumerable%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L240">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_DeleteAsync_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_DeleteAsync_System_Collections_Generic_IEnumerable_System_String__" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(System.Collections.Generic.IEnumerable{System.String})">DeleteAsync(IEnumerable&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Delete a batch of closed file requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DeleteFileRequestsResult&gt; DeleteAsync(IEnumerable&lt;string&gt; ids)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">ids</span></td>
+        <td><p>List IDs of the file requests to delete.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.DeleteFileRequestsResult.html">DeleteFileRequestsResult</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.DeleteFileRequestError.html">DeleteFileRequestError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndCount_System_IAsyncResult_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCount(System.IAsyncResult)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L71">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndCount_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCount*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndCount_System_IAsyncResult_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCount(System.IAsyncResult)">EndCount(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the count route to complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CountFileRequestsResult EndCount(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.CountFileRequestsResult.html">CountFileRequestsResult</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.CountFileRequestsError.html">CountFileRequestsError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndCreate_System_IAsyncResult_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCreate(System.IAsyncResult)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L190">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndCreate_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCreate*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndCreate_System_IAsyncResult_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCreate(System.IAsyncResult)">EndCreate(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the create route to
+complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileRequest EndCreate(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.FileRequest.html">FileRequest</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.CreateFileRequestError.html">CreateFileRequestError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndDelete_System_IAsyncResult_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDelete(System.IAsyncResult)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L275">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndDelete_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDelete*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndDelete_System_IAsyncResult_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDelete(System.IAsyncResult)">EndDelete(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the delete route to
+complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeleteFileRequestsResult EndDelete(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.DeleteFileRequestsResult.html">DeleteFileRequestsResult</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.DeleteFileRequestError.html">DeleteFileRequestError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndDeleteAllClosed_System_IAsyncResult_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDeleteAllClosed(System.IAsyncResult)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L324">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndDeleteAllClosed_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDeleteAllClosed*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndDeleteAllClosed_System_IAsyncResult_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDeleteAllClosed(System.IAsyncResult)">EndDeleteAllClosed(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the delete all closed route to
+complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeleteAllClosedFileRequestsResult EndDeleteAllClosed(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult.html">DeleteAllClosedFileRequestsResult</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.html">DeleteAllClosedFileRequestsError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndGet_System_IAsyncResult_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndGet(System.IAsyncResult)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L408">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndGet_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndGet*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndGet_System_IAsyncResult_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndGet(System.IAsyncResult)">EndGet(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the get route to complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileRequest EndGet(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.FileRequest.html">FileRequest</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.GetFileRequestError.html">GetFileRequestError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndList_System_IAsyncResult_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndList(System.IAsyncResult)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L548">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndList_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndList*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndList_System_IAsyncResult_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndList(System.IAsyncResult)">EndList(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the list route to complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ListFileRequestsResult EndList(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsResult.html">ListFileRequestsResult</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsError.html">ListFileRequestsError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndListContinue_System_IAsyncResult_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListContinue(System.IAsyncResult)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L649">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndListContinue_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListContinue*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndListContinue_System_IAsyncResult_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListContinue(System.IAsyncResult)">EndListContinue(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the list continue route to
+complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ListFileRequestsV2Result EndListContinue(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsV2Result.html">ListFileRequestsV2Result</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsContinueError.html">ListFileRequestsContinueError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndListV2_System_IAsyncResult_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListV2(System.IAsyncResult)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L498">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndListV2_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListV2*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndListV2_System_IAsyncResult_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListV2(System.IAsyncResult)">EndListV2(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the list route to complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ListFileRequestsV2Result EndListV2(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsV2Result.html">ListFileRequestsV2Result</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsError.html">ListFileRequestsError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndUpdate_System_IAsyncResult_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndUpdate(System.IAsyncResult)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L770">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndUpdate_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndUpdate*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_EndUpdate_System_IAsyncResult_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndUpdate(System.IAsyncResult)">EndUpdate(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the update route to
+complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FileRequest EndUpdate(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IAsyncResult</span></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.FileRequest.html">FileRequest</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.UpdateFileRequestError.html">UpdateFileRequestError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_GetAsync_Dropbox_Api_FileRequests_GetFileRequestArgs_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(Dropbox.Api.FileRequests.GetFileRequestArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L344">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_GetAsync_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_GetAsync_Dropbox_Api_FileRequests_GetFileRequestArgs_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(Dropbox.Api.FileRequests.GetFileRequestArgs)">GetAsync(GetFileRequestArgs)</h4>
+  <div class="markdown level1 summary"><p>Returns the specified file request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;FileRequest&gt; GetAsync(GetFileRequestArgs getFileRequestArgs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.GetFileRequestArgs.html">GetFileRequestArgs</a></td>
+        <td><span class="parametername">getFileRequestArgs</span></td>
+        <td><p>The request parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.FileRequest.html">FileRequest</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.GetFileRequestError.html">GetFileRequestError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_GetAsync_System_String_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L374">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_GetAsync_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_GetAsync_System_String_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(System.String)">GetAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Returns the specified file request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;FileRequest&gt; GetAsync(string id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The ID of the file request to retrieve.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.FileRequest.html">FileRequest</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.GetFileRequestError.html">GetFileRequestError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListAsync.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L519">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListAsync_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListAsync*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListAsync" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListAsync">ListAsync()</h4>
+  <div class="markdown level1 summary"><p>Returns a list of file requests owned by this user. For apps with the app
+folder permission, this will only return file requests with destinations in the app
+folder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ListFileRequestsResult&gt; ListAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsResult.html">ListFileRequestsResult</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsError.html">ListFileRequestsError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListContinueAsync_Dropbox_Api_FileRequests_ListFileRequestsContinueArg_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L575">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListContinueAsync_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListContinueAsync_Dropbox_Api_FileRequests_ListFileRequestsContinueArg_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)">ListContinueAsync(ListFileRequestsContinueArg)</h4>
+  <div class="markdown level1 summary"><p>Once a cursor has been retrieved from <a class="xref" href="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.html#Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListV2Async_Dropbox_Api_FileRequests_ListFileRequestsArg_">ListV2Async(ListFileRequestsArg)</a>, use
+this to paginate through all file requests. The cursor must come from a previous
+call to <a class="xref" href="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.html#Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListV2Async_Dropbox_Api_FileRequests_ListFileRequestsArg_">ListV2Async(ListFileRequestsArg)</a> or
+<a class="xref" href="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.html#Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListContinueAsync_Dropbox_Api_FileRequests_ListFileRequestsContinueArg_">ListContinueAsync(ListFileRequestsContinueArg)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ListFileRequestsV2Result&gt; ListContinueAsync(ListFileRequestsContinueArg listFileRequestsContinueArg)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsContinueArg.html">ListFileRequestsContinueArg</a></td>
+        <td><span class="parametername">listFileRequestsContinueArg</span></td>
+        <td><p>The request parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsV2Result.html">ListFileRequestsV2Result</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsContinueError.html">ListFileRequestsContinueError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListContinueAsync_System_String_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L613">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListContinueAsync_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListContinueAsync_System_String_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(System.String)">ListContinueAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Once a cursor has been retrieved from <a class="xref" href="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.html#Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListV2Async_Dropbox_Api_FileRequests_ListFileRequestsArg_">ListV2Async(ListFileRequestsArg)</a>, use
+this to paginate through all file requests. The cursor must come from a previous
+call to <a class="xref" href="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.html#Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListV2Async_Dropbox_Api_FileRequests_ListFileRequestsArg_">ListV2Async(ListFileRequestsArg)</a> or
+<a class="xref" href="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.html#Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListContinueAsync_Dropbox_Api_FileRequests_ListFileRequestsContinueArg_">ListContinueAsync(ListFileRequestsContinueArg)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ListFileRequestsV2Result&gt; ListContinueAsync(string cursor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cursor</span></td>
+        <td><p>The cursor returned by the previous API call specified in the
+endpoint description.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsV2Result.html">ListFileRequestsV2Result</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsContinueError.html">ListFileRequestsContinueError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListV2Async_Dropbox_Api_FileRequests_ListFileRequestsArg_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L430">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListV2Async_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListV2Async_Dropbox_Api_FileRequests_ListFileRequestsArg_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)">ListV2Async(ListFileRequestsArg)</h4>
+  <div class="markdown level1 summary"><p>Returns a list of file requests owned by this user. For apps with the app
+folder permission, this will only return file requests with destinations in the app
+folder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ListFileRequestsV2Result&gt; ListV2Async(ListFileRequestsArg listFileRequestsArg)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsArg.html">ListFileRequestsArg</a></td>
+        <td><span class="parametername">listFileRequestsArg</span></td>
+        <td><p>The request parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsV2Result.html">ListFileRequestsV2Result</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsError.html">ListFileRequestsError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListV2Async_System_UInt64_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(System.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L463">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListV2Async_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_ListV2Async_System_UInt64_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(System.UInt64)">ListV2Async(UInt64)</h4>
+  <div class="markdown level1 summary"><p>Returns a list of file requests owned by this user. For apps with the app
+folder permission, this will only return file requests with destinations in the app
+folder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ListFileRequestsV2Result&gt; ListV2Async(ulong limit = 1000UL)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>The maximum number of file requests that should be returned per
+request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsV2Result.html">ListFileRequestsV2Result</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.ListFileRequestsError.html">ListFileRequestsError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_UpdateAsync_Dropbox_Api_FileRequests_UpdateFileRequestArgs_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync(Dropbox.Api.FileRequests.UpdateFileRequestArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L669">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_UpdateAsync_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_UpdateAsync_Dropbox_Api_FileRequests_UpdateFileRequestArgs_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync(Dropbox.Api.FileRequests.UpdateFileRequestArgs)">UpdateAsync(UpdateFileRequestArgs)</h4>
+  <div class="markdown level1 summary"><p>Update a file request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;FileRequest&gt; UpdateAsync(UpdateFileRequestArgs updateFileRequestArgs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.UpdateFileRequestArgs.html">UpdateFileRequestArgs</a></td>
+        <td><span class="parametername">updateFileRequestArgs</span></td>
+        <td><p>The request parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.FileRequest.html">FileRequest</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.UpdateFileRequestError.html">UpdateFileRequestError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_UpdateAsync_System_String_System_String_System_String_Dropbox_Api_FileRequests_UpdateFileRequestDeadline_System_Nullable_System_Boolean__System_String_.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync(System.String%2CSystem.String%2CSystem.String%2CDropbox.Api.FileRequests.UpdateFileRequestDeadline%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L707">View Source</a>
+  </span>
+  <a id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_UpdateAsync_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync*"></a>
+  <h4 id="Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes_UpdateAsync_System_String_System_String_System_String_Dropbox_Api_FileRequests_UpdateFileRequestDeadline_System_Nullable_System_Boolean__System_String_" data-uid="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync(System.String,System.String,System.String,Dropbox.Api.FileRequests.UpdateFileRequestDeadline,System.Nullable{System.Boolean},System.String)">UpdateAsync(String, String, String, UpdateFileRequestDeadline, Nullable&lt;Boolean&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Update a file request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;FileRequest&gt; UpdateAsync(string id, string title = null, string destination = null, UpdateFileRequestDeadline deadline = null, bool? open = null, string description = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The ID of the file request to update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">title</span></td>
+        <td><p>The new title of the file request. Must not be empty.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">destination</span></td>
+        <td><p>The new path of the folder in the Dropbox where uploaded
+files will be sent. For apps with the app folder permission, this will be relative
+to the app folder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileRequests.UpdateFileRequestDeadline.html">UpdateFileRequestDeadline</a></td>
+        <td><span class="parametername">deadline</span></td>
+        <td><p>The new deadline for the file request. Deadlines can only be
+set by Professional and Business accounts.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">open</span></td>
+        <td><p>Whether to set this file request as open or closed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The description of the file request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.FileRequests.FileRequest.html">FileRequest</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.FileRequests.UpdateFileRequestError.html">UpdateFileRequestError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_FileRequests_Routes_FileRequestsUserRoutes.md&amp;value=---%0Auid%3A%20Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

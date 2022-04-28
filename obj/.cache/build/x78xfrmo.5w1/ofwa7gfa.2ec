@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LoginMethod
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LoginMethod
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.TeamLog.LoginMethod">
+  
+  
+  <h1 id="Dropbox_Api_TeamLog_LoginMethod" data-uid="Dropbox.Api.TeamLog.LoginMethod" class="text-break">Class LoginMethod
+  </h1>
+  <div class="markdown level0 summary"><p>The login method object</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">LoginMethod</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.AppleOauth.html">LoginMethod.AppleOauth</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.FirstPartyTokenExchange.html">LoginMethod.FirstPartyTokenExchange</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.GoogleOauth.html">LoginMethod.GoogleOauth</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.Other.html">LoginMethod.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.Password.html">LoginMethod.Password</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.QrCode.html">LoginMethod.QrCode</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.Saml.html">LoginMethod.Saml</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.TwoFactorAuthentication.html">LoginMethod.TwoFactorAuthentication</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.WebSession.html">LoginMethod.WebSession</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.TeamLog.html">Dropbox.Api.TeamLog</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_TeamLog_LoginMethod_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LoginMethod</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L33">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod__ctor_" data-uid="Dropbox.Api.TeamLog.LoginMethod.#ctor*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod__ctor" data-uid="Dropbox.Api.TeamLog.LoginMethod.#ctor">LoginMethod()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.html">LoginMethod</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoginMethod()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_AsAppleOauth.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.AsAppleOauth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L51">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_AsAppleOauth_" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsAppleOauth*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_AsAppleOauth" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsAppleOauth">AsAppleOauth</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a AppleOauth, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoginMethod.AppleOauth AsAppleOauth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.AppleOauth.html">LoginMethod.AppleOauth</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_AsFirstPartyTokenExchange.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.AsFirstPartyTokenExchange%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L74">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_AsFirstPartyTokenExchange_" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsFirstPartyTokenExchange*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_AsFirstPartyTokenExchange" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsFirstPartyTokenExchange">AsFirstPartyTokenExchange</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a FirstPartyTokenExchange, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoginMethod.FirstPartyTokenExchange AsFirstPartyTokenExchange { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.FirstPartyTokenExchange.html">LoginMethod.FirstPartyTokenExchange</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_AsGoogleOauth.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.AsGoogleOauth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L96">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_AsGoogleOauth_" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsGoogleOauth*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_AsGoogleOauth" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsGoogleOauth">AsGoogleOauth</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a GoogleOauth, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoginMethod.GoogleOauth AsGoogleOauth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.GoogleOauth.html">LoginMethod.GoogleOauth</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L229">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_AsOther_" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsOther*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_AsOther" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoginMethod.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.Other.html">LoginMethod.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_AsPassword.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.AsPassword%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L118">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_AsPassword_" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsPassword*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_AsPassword" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsPassword">AsPassword</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Password, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoginMethod.Password AsPassword { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.Password.html">LoginMethod.Password</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_AsQrCode.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.AsQrCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L140">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_AsQrCode_" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsQrCode*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_AsQrCode" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsQrCode">AsQrCode</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a QrCode, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoginMethod.QrCode AsQrCode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.QrCode.html">LoginMethod.QrCode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_AsSaml.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.AsSaml%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L162">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_AsSaml_" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsSaml*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_AsSaml" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsSaml">AsSaml</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Saml, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoginMethod.Saml AsSaml { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.Saml.html">LoginMethod.Saml</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_AsTwoFactorAuthentication.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.AsTwoFactorAuthentication%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L185">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_AsTwoFactorAuthentication_" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsTwoFactorAuthentication*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_AsTwoFactorAuthentication" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsTwoFactorAuthentication">AsTwoFactorAuthentication</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a TwoFactorAuthentication, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoginMethod.TwoFactorAuthentication AsTwoFactorAuthentication { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.TwoFactorAuthentication.html">LoginMethod.TwoFactorAuthentication</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_AsWebSession.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.AsWebSession%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L207">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_AsWebSession_" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsWebSession*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_AsWebSession" data-uid="Dropbox.Api.TeamLog.LoginMethod.AsWebSession">AsWebSession</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a WebSession, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoginMethod.WebSession AsWebSession { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.LoginMethod.WebSession.html">LoginMethod.WebSession</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_IsAppleOauth.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.IsAppleOauth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L40">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_IsAppleOauth_" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsAppleOauth*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_IsAppleOauth" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsAppleOauth">IsAppleOauth</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is AppleOauth</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAppleOauth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_IsFirstPartyTokenExchange.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.IsFirstPartyTokenExchange%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L63">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_IsFirstPartyTokenExchange_" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsFirstPartyTokenExchange*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_IsFirstPartyTokenExchange" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsFirstPartyTokenExchange">IsFirstPartyTokenExchange</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+FirstPartyTokenExchange</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFirstPartyTokenExchange { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_IsGoogleOauth.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.IsGoogleOauth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L85">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_IsGoogleOauth_" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsGoogleOauth*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_IsGoogleOauth" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsGoogleOauth">IsGoogleOauth</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is GoogleOauth</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsGoogleOauth { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L218">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_IsOther_" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsOther*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_IsOther" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_IsPassword.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.IsPassword%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L107">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_IsPassword_" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsPassword*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_IsPassword" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsPassword">IsPassword</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Password</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPassword { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_IsQrCode.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.IsQrCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L129">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_IsQrCode_" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsQrCode*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_IsQrCode" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsQrCode">IsQrCode</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is QrCode</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsQrCode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_IsSaml.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.IsSaml%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L151">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_IsSaml_" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsSaml*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_IsSaml" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsSaml">IsSaml</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Saml</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSaml { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_IsTwoFactorAuthentication.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.IsTwoFactorAuthentication%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L174">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_IsTwoFactorAuthentication_" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsTwoFactorAuthentication*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_IsTwoFactorAuthentication" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsTwoFactorAuthentication">IsTwoFactorAuthentication</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+TwoFactorAuthentication</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTwoFactorAuthentication { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod_IsWebSession.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod.IsWebSession%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L196">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_LoginMethod_IsWebSession_" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsWebSession*"></a>
+  <h4 id="Dropbox_Api_TeamLog_LoginMethod_IsWebSession" data-uid="Dropbox.Api.TeamLog.LoginMethod.IsWebSession">IsWebSession</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is WebSession</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsWebSession { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_TeamLog_LoginMethod.md&amp;value=---%0Auid%3A%20Dropbox.Api.TeamLog.LoginMethod%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginMethod.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

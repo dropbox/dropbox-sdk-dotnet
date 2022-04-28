@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MembersSetProfileError
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MembersSetProfileError
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Team.MembersSetProfileError">
+  
+  
+  <h1 id="Dropbox_Api_Team_MembersSetProfileError" data-uid="Dropbox.Api.Team.MembersSetProfileError" class="text-break">Class MembersSetProfileError
+  </h1>
+  <div class="markdown level0 summary"><p>The members set profile error object</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">MembersSetProfileError</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.DirectoryRestrictedOff.html">MembersSetProfileError.DirectoryRestrictedOff</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.EmailReservedForOtherUser.html">MembersSetProfileError.EmailReservedForOtherUser</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.ExternalIdAndNewExternalIdUnsafe.html">MembersSetProfileError.ExternalIdAndNewExternalIdUnsafe</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.ExternalIdUsedByOtherUser.html">MembersSetProfileError.ExternalIdUsedByOtherUser</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.NoNewDataSpecified.html">MembersSetProfileError.NoNewDataSpecified</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.Other.html">MembersSetProfileError.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.ParamCannotBeEmpty.html">MembersSetProfileError.ParamCannotBeEmpty</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.PersistentIdDisabled.html">MembersSetProfileError.PersistentIdDisabled</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.PersistentIdUsedByOtherUser.html">MembersSetProfileError.PersistentIdUsedByOtherUser</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.SetProfileDisallowed.html">MembersSetProfileError.SetProfileDisallowed</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.UserNotFound.html">MembersSetProfileError.UserNotFound</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.UserNotInTeam.html">MembersSetProfileError.UserNotInTeam</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Team.html">Dropbox.Api.Team</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Team_MembersSetProfileError_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MembersSetProfileError</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L34">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError__ctor_" data-uid="Dropbox.Api.Team.MembersSetProfileError.#ctor*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError__ctor" data-uid="Dropbox.Api.Team.MembersSetProfileError.#ctor">MembersSetProfileError()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.html">MembersSetProfileError</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MembersSetProfileError()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_AsDirectoryRestrictedOff.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.AsDirectoryRestrictedOff%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L234">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_AsDirectoryRestrictedOff_" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsDirectoryRestrictedOff*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_AsDirectoryRestrictedOff" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsDirectoryRestrictedOff">AsDirectoryRestrictedOff</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a DirectoryRestrictedOff, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MembersSetProfileError.DirectoryRestrictedOff AsDirectoryRestrictedOff { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.DirectoryRestrictedOff.html">MembersSetProfileError.DirectoryRestrictedOff</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_AsEmailReservedForOtherUser.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.AsEmailReservedForOtherUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L99">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_AsEmailReservedForOtherUser_" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsEmailReservedForOtherUser*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_AsEmailReservedForOtherUser" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsEmailReservedForOtherUser">AsEmailReservedForOtherUser</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a EmailReservedForOtherUser, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MembersSetProfileError.EmailReservedForOtherUser AsEmailReservedForOtherUser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.EmailReservedForOtherUser.html">MembersSetProfileError.EmailReservedForOtherUser</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_AsExternalIdAndNewExternalIdUnsafe.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.AsExternalIdAndNewExternalIdUnsafe%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L54">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_AsExternalIdAndNewExternalIdUnsafe_" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsExternalIdAndNewExternalIdUnsafe*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_AsExternalIdAndNewExternalIdUnsafe" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsExternalIdAndNewExternalIdUnsafe">AsExternalIdAndNewExternalIdUnsafe</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a ExternalIdAndNewExternalIdUnsafe, or
+<code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MembersSetProfileError.ExternalIdAndNewExternalIdUnsafe AsExternalIdAndNewExternalIdUnsafe { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.ExternalIdAndNewExternalIdUnsafe.html">MembersSetProfileError.ExternalIdAndNewExternalIdUnsafe</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_AsExternalIdUsedByOtherUser.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.AsExternalIdUsedByOtherUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L122">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_AsExternalIdUsedByOtherUser_" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsExternalIdUsedByOtherUser*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_AsExternalIdUsedByOtherUser" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsExternalIdUsedByOtherUser">AsExternalIdUsedByOtherUser</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a ExternalIdUsedByOtherUser, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MembersSetProfileError.ExternalIdUsedByOtherUser AsExternalIdUsedByOtherUser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.ExternalIdUsedByOtherUser.html">MembersSetProfileError.ExternalIdUsedByOtherUser</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_AsNoNewDataSpecified.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.AsNoNewDataSpecified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L76">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_AsNoNewDataSpecified_" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsNoNewDataSpecified*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_AsNoNewDataSpecified" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsNoNewDataSpecified">AsNoNewDataSpecified</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a NoNewDataSpecified, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MembersSetProfileError.NoNewDataSpecified AsNoNewDataSpecified { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.NoNewDataSpecified.html">MembersSetProfileError.NoNewDataSpecified</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L256">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_AsOther_" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsOther*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_AsOther" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MembersSetProfileError.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.Other.html">MembersSetProfileError.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_AsParamCannotBeEmpty.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.AsParamCannotBeEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L166">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_AsParamCannotBeEmpty_" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsParamCannotBeEmpty*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_AsParamCannotBeEmpty" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsParamCannotBeEmpty">AsParamCannotBeEmpty</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a ParamCannotBeEmpty, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MembersSetProfileError.ParamCannotBeEmpty AsParamCannotBeEmpty { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.ParamCannotBeEmpty.html">MembersSetProfileError.ParamCannotBeEmpty</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_AsPersistentIdDisabled.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdDisabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L188">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_AsPersistentIdDisabled_" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdDisabled*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_AsPersistentIdDisabled" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdDisabled">AsPersistentIdDisabled</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a PersistentIdDisabled, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MembersSetProfileError.PersistentIdDisabled AsPersistentIdDisabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.PersistentIdDisabled.html">MembersSetProfileError.PersistentIdDisabled</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_AsPersistentIdUsedByOtherUser.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdUsedByOtherUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L211">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_AsPersistentIdUsedByOtherUser_" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdUsedByOtherUser*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_AsPersistentIdUsedByOtherUser" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsPersistentIdUsedByOtherUser">AsPersistentIdUsedByOtherUser</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a PersistentIdUsedByOtherUser, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MembersSetProfileError.PersistentIdUsedByOtherUser AsPersistentIdUsedByOtherUser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.PersistentIdUsedByOtherUser.html">MembersSetProfileError.PersistentIdUsedByOtherUser</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_AsSetProfileDisallowed.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.AsSetProfileDisallowed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L144">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_AsSetProfileDisallowed_" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsSetProfileDisallowed*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_AsSetProfileDisallowed" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsSetProfileDisallowed">AsSetProfileDisallowed</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a SetProfileDisallowed, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MembersSetProfileError.SetProfileDisallowed AsSetProfileDisallowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.SetProfileDisallowed.html">MembersSetProfileError.SetProfileDisallowed</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_AsUserNotFound.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.AsUserNotFound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L300">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_AsUserNotFound_" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsUserNotFound*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_AsUserNotFound" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsUserNotFound">AsUserNotFound</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a UserNotFound, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MembersSetProfileError.UserNotFound AsUserNotFound { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.UserNotFound.html">MembersSetProfileError.UserNotFound</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_AsUserNotInTeam.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.AsUserNotInTeam%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L278">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_AsUserNotInTeam_" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsUserNotInTeam*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_AsUserNotInTeam" data-uid="Dropbox.Api.Team.MembersSetProfileError.AsUserNotInTeam">AsUserNotInTeam</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a UserNotInTeam, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MembersSetProfileError.UserNotInTeam AsUserNotInTeam { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSetProfileError.UserNotInTeam.html">MembersSetProfileError.UserNotInTeam</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_IsDirectoryRestrictedOff.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.IsDirectoryRestrictedOff%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L223">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_IsDirectoryRestrictedOff_" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsDirectoryRestrictedOff*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_IsDirectoryRestrictedOff" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsDirectoryRestrictedOff">IsDirectoryRestrictedOff</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+DirectoryRestrictedOff</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDirectoryRestrictedOff { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_IsEmailReservedForOtherUser.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.IsEmailReservedForOtherUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L88">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_IsEmailReservedForOtherUser_" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsEmailReservedForOtherUser*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_IsEmailReservedForOtherUser" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsEmailReservedForOtherUser">IsEmailReservedForOtherUser</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+EmailReservedForOtherUser</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEmailReservedForOtherUser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_IsExternalIdAndNewExternalIdUnsafe.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.IsExternalIdAndNewExternalIdUnsafe%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L42">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_IsExternalIdAndNewExternalIdUnsafe_" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsExternalIdAndNewExternalIdUnsafe*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_IsExternalIdAndNewExternalIdUnsafe" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsExternalIdAndNewExternalIdUnsafe">IsExternalIdAndNewExternalIdUnsafe</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+ExternalIdAndNewExternalIdUnsafe</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsExternalIdAndNewExternalIdUnsafe { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_IsExternalIdUsedByOtherUser.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.IsExternalIdUsedByOtherUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L111">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_IsExternalIdUsedByOtherUser_" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsExternalIdUsedByOtherUser*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_IsExternalIdUsedByOtherUser" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsExternalIdUsedByOtherUser">IsExternalIdUsedByOtherUser</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+ExternalIdUsedByOtherUser</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsExternalIdUsedByOtherUser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_IsNoNewDataSpecified.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.IsNoNewDataSpecified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L65">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_IsNoNewDataSpecified_" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsNoNewDataSpecified*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_IsNoNewDataSpecified" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsNoNewDataSpecified">IsNoNewDataSpecified</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is NoNewDataSpecified</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsNoNewDataSpecified { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L245">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_IsOther_" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsOther*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_IsOther" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_IsParamCannotBeEmpty.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.IsParamCannotBeEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L155">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_IsParamCannotBeEmpty_" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsParamCannotBeEmpty*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_IsParamCannotBeEmpty" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsParamCannotBeEmpty">IsParamCannotBeEmpty</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is ParamCannotBeEmpty</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsParamCannotBeEmpty { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_IsPersistentIdDisabled.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdDisabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L177">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_IsPersistentIdDisabled_" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdDisabled*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_IsPersistentIdDisabled" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdDisabled">IsPersistentIdDisabled</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is PersistentIdDisabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPersistentIdDisabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_IsPersistentIdUsedByOtherUser.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdUsedByOtherUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L200">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_IsPersistentIdUsedByOtherUser_" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdUsedByOtherUser*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_IsPersistentIdUsedByOtherUser" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsPersistentIdUsedByOtherUser">IsPersistentIdUsedByOtherUser</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+PersistentIdUsedByOtherUser</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPersistentIdUsedByOtherUser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_IsSetProfileDisallowed.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.IsSetProfileDisallowed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L133">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_IsSetProfileDisallowed_" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsSetProfileDisallowed*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_IsSetProfileDisallowed" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsSetProfileDisallowed">IsSetProfileDisallowed</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is SetProfileDisallowed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSetProfileDisallowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_IsUserNotFound.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.IsUserNotFound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L289">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_IsUserNotFound_" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsUserNotFound*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_IsUserNotFound" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsUserNotFound">IsUserNotFound</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is UserNotFound</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUserNotFound { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError_IsUserNotInTeam.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError.IsUserNotInTeam%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L267">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Team_MembersSetProfileError_IsUserNotInTeam_" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsUserNotInTeam*"></a>
+  <h4 id="Dropbox_Api_Team_MembersSetProfileError_IsUserNotInTeam" data-uid="Dropbox.Api.Team.MembersSetProfileError.IsUserNotInTeam">IsUserNotInTeam</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is UserNotInTeam</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUserNotInTeam { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Team_MembersSetProfileError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Team.MembersSetProfileError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileError.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

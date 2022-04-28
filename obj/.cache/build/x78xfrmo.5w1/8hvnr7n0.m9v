@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DropboxOAuth2Helper
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DropboxOAuth2Helper
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.DropboxOAuth2Helper">
+  
+  
+  <h1 id="Dropbox_Api_DropboxOAuth2Helper" data-uid="Dropbox.Api.DropboxOAuth2Helper" class="text-break">Class DropboxOAuth2Helper
+  </h1>
+  <div class="markdown level0 summary"><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Contains methods that make authorizing with Dropbox easier.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DropboxOAuth2Helper</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.html">Dropbox.Api</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_DropboxOAuth2Helper_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class DropboxOAuth2Helper</code></pre>
+  </div>
+  <h5 id="Dropbox_Api_DropboxOAuth2Helper_examples"><strong>Examples</strong></h5>
+  <p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="2" sourceendlinenumber="27"><p>
+This shows an example of how to use the token flow. This is part of a Windows Console or WPF app.
+</p>
+<p>
+The <code>GetAccessToken()</code> method calls <a class="xref" href="Dropbox.Api.DropboxOAuth2Helper.html#Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri_Dropbox_Api_OAuthResponseType_System_String_System_String_System_String_System_Boolean_System_Boolean_System_String_System_Boolean_Dropbox_Api_TokenAccessType_System_String___Dropbox_Api_IncludeGrantedScopes_System_String_">GetAuthorizeUri(OAuthResponseType, String, String, String, Boolean, Boolean, String, Boolean, TokenAccessType, String[], IncludeGrantedScopes, String)</a> to create the URI with response type
+set to <a class="xref" href="Dropbox.Api.OAuthResponseType.html#Dropbox_Api_OAuthResponseType_Token">Token</a> for token flow.
+</p>
+<p>
+<span class="xref">System.Guid.NewGuid</span> is called to generate a random string to use as the state argument, this value can also be used to
+store application context and prevent cross-site request forgery.
+</p>
+<p>
+A <span class="xref">System.Net.HttpListener</span> is created to listen to the <code>RedirectUri</code> which will later receive redirect callback from
+the server. <span class="xref">System.Diagnostics.Process.Start</span> is called to launch a native browser and navigate user to the authorize
+URI. The <code>RedirectUri</code> needs to be registered at <a href="https://www.dropbox.com/developers/apps">App Console</a>. It&apos;s
+common to use value like <code>http://127.0.0.1:{some_avaialble_port}</code>.
+</p>
+<p>
+After user successfully authorizes the request, <code>HandleOAuth2Redirect</code> receives the redirect callback which contains state
+and access token as URL fragment. Since the server cannot receive URL fragment directly, it calls <code>RespondPageWithJSRedirect</code>
+to respond with a HTML page which runs JS code and sends URL fragment as query string parameter to a separate <code>JSRedirect</code> endpoint.
+</p>
+<p>
+<code>HandleJSRedirect</code> is called to handle redirect from JS code and processes OAuth response from query string.
+This returns an <a class="xref" href="Dropbox.Api.OAuth2Response.html">OAuth2Response</a> containing the access token that will be passed to the <a class="xref" href="Dropbox.Api.DropboxClient.html">DropboxClient</a> constructor.
+</p></p>
+<pre><code>private async Task HandleOAuth2Redirect(HttpListener http)
+{
+    var context = await http.GetContextAsync();
+
+    // We only care about request to RedirectUri endpoint.
+    while (context.Request.Url.AbsolutePath != RedirectUri.AbsolutePath)
+    {
+        context = await http.GetContextAsync();
+    }
+
+    // Respond with a HTML page which runs JS to send URl fragment.
+    RespondPageWithJSRedirect();
+}
+
+
+private async Task&lt;OAuth2Response> HandleJSRedirect(HttpListener http)
+{
+    var context = await http.GetContextAsync();
+
+    // We only care about request to TokenRedirectUri endpoint.
+    while (context.Request.Url.AbsolutePath != JSRedirectUri.AbsolutePath)
+    {
+        context = await http.GetContextAsync();
+    }
+
+    var redirectUri = new Uri(context.Request.QueryString[&quot;url_with_fragment&quot;]);
+
+    var result = DropboxOAuth2Helper.ParseTokenFragment(redirectUri);
+
+    return result;
+}
+
+private async Task GetAccessToken() {
+    var state = Guid.NewGuid().ToString(&quot;N&quot;);
+    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Token, ApiKey, new Uri(RedirectUri), state: state);
+
+    var http = new HttpListener();
+    http.Prefixes.Add(RedirectUri);
+    http.Start();
+
+    System.Diagnostics.Process.Start(authorizeUri.ToString());
+
+    // Handle OAuth redirect and send URL fragment to local server using JS.
+    await HandleOAuth2Redirect(http);
+
+    // Handle redirect from JS and process OAuth response.
+    var result = await HandleJSRedirect(http);
+
+    if (result.State != state)
+    {
+        // The state in the response doesn&apos;t match the state in the request.
+        return null;
+    }
+
+    Settings.Default.AccessToken = result.AccessToken;
+}</code></pre>
+<p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="84" sourceendlinenumber="101"><p>
+This shows an example of how to use the code flow. This is part of a controller class on an ASP.Net MVC website.
+</p>
+<p>
+The <code>Connect()</code> method calls <a class="xref" href="Dropbox.Api.DropboxOAuth2Helper.html#Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri_Dropbox_Api_OAuthResponseType_System_String_System_String_System_String_System_Boolean_System_Boolean_System_String_System_Boolean_Dropbox_Api_TokenAccessType_System_String___Dropbox_Api_IncludeGrantedScopes_System_String_">GetAuthorizeUri(OAuthResponseType, String, String, String, Boolean, Boolean, String, Boolean, TokenAccessType, String[], IncludeGrantedScopes, String)</a> to create the URI that the browser component
+navigate to; the response type is set to <a class="xref" href="Dropbox.Api.OAuthResponseType.html#Dropbox_Api_OAuthResponseType_Code">Code</a> to create a URI for the code flow.
+</p>
+<p>
+<span class="xref">System.Guid.NewGuid</span> is called to generate a random string to use as the state argument, this value is stored
+on a field in the web app&apos;s user database associated with the current user, this helps prevent cross-site request forgery.
+</p>
+<p>
+The <code>AuthAsync</code> method handles the route represented by the <code>RedirectUri</code>. The ASP.Net infrastructure has already 
+parsed the query string and extracted the <code>code</code> and <code>state</code> arguments. After validating that the <code>state</code>
+matches the value stored in the user record in the <code>Connect</code> method, authorization is completed by calling
+<a class="xref" href="Dropbox.Api.DropboxOAuth2Helper.html#Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync_System_String_System_String_System_String_System_String_System_Net_Http_HttpClient_System_String_">ProcessCodeFlowAsync(String, String, String, String, HttpClient, String)</a>. This returns an <a class="xref" href="Dropbox.Api.OAuth2Response.html">OAuth2Response</a> containing the access token
+that will be passed to the <a class="xref" href="Dropbox.Api.DropboxClient.html">DropboxClient</a> constructor.
+</p></p>
+<pre><code>// GET: /Home/Connect
+public ActionResult Connect()
+{
+    var user = this.store.CurrentUser();
+    user.ConnectState = Guid.NewGuid().ToString(&quot;N&quot;);
+    this.store.SaveChanges();
+
+    var redirect = DropboxOAuth2Helper.GetAuthorizeUri(OauthResponseType.Code, AppKey, RedirectUri, user.ConnectState);
+    return Redirect(redirect.ToString());
+}
+
+// GET: /Home/Auth
+public async Task&lt;ActionResult> AuthAsync(string code, string state)
+{
+    var user = this.store.CurrentUser();
+
+    if (user.ConnectState != state)
+    {
+        this.Flash(&quot;There was an error connecting to Dropbox.&quot;);
+        return this.RedirectToAction(&quot;Index&quot;);
+    }
+
+    OAuth2Response response = await DropboxOAuth2Helper.ProcessCodeFlowAsync(code, AppKey, AppSecret, RedirectUri);
+
+    user.DropboxAccessToken = response.AccessToken;
+    await this.store.SaveChangesAsync();
+
+    this.Flash(&quot;This account has been connected to Dropbox.&quot;);
+    return this.RedirectToAction(&quot;Profile&quot;);
+}</code></pre>
+
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_DropboxOAuth2Helper_PKCEVerifierLength.md&amp;value=---%0Auid%3A%20Dropbox.Api.DropboxOAuth2Helper.PKCEVerifierLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs/#L224">View Source</a>
+  </span>
+  <h4 id="Dropbox_Api_DropboxOAuth2Helper_PKCEVerifierLength" data-uid="Dropbox.Api.DropboxOAuth2Helper.PKCEVerifierLength">PKCEVerifierLength</h4>
+  <div class="markdown level1 summary"><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Length of Code Verifier for PKCE to be used in OAuth Flow</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int PKCEVerifierLength</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_DropboxOAuth2Helper_GeneratePKCECodeChallenge_System_String_.md&amp;value=---%0Auid%3A%20Dropbox.Api.DropboxOAuth2Helper.GeneratePKCECodeChallenge(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs/#L420">View Source</a>
+  </span>
+  <a id="Dropbox_Api_DropboxOAuth2Helper_GeneratePKCECodeChallenge_" data-uid="Dropbox.Api.DropboxOAuth2Helper.GeneratePKCECodeChallenge*"></a>
+  <h4 id="Dropbox_Api_DropboxOAuth2Helper_GeneratePKCECodeChallenge_System_String_" data-uid="Dropbox.Api.DropboxOAuth2Helper.GeneratePKCECodeChallenge(System.String)">GeneratePKCECodeChallenge(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GeneratePKCECodeChallenge(string codeVerifier)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">codeVerifier</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_DropboxOAuth2Helper_GeneratePKCECodeVerifier.md&amp;value=---%0Auid%3A%20Dropbox.Api.DropboxOAuth2Helper.GeneratePKCECodeVerifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs/#L404">View Source</a>
+  </span>
+  <a id="Dropbox_Api_DropboxOAuth2Helper_GeneratePKCECodeVerifier_" data-uid="Dropbox.Api.DropboxOAuth2Helper.GeneratePKCECodeVerifier*"></a>
+  <h4 id="Dropbox_Api_DropboxOAuth2Helper_GeneratePKCECodeVerifier" data-uid="Dropbox.Api.DropboxOAuth2Helper.GeneratePKCECodeVerifier">GeneratePKCECodeVerifier()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GeneratePKCECodeVerifier()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri_Dropbox_Api_OAuthResponseType_System_String_System_String_System_String_System_Boolean_System_Boolean_System_String_System_Boolean_Dropbox_Api_TokenAccessType_System_String___Dropbox_Api_IncludeGrantedScopes_System_String_.md&amp;value=---%0Auid%3A%20Dropbox.Api.DropboxOAuth2Helper.GetAuthorizeUri(Dropbox.Api.OAuthResponseType%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%2CSystem.String%2CSystem.Boolean%2CDropbox.Api.TokenAccessType%2CSystem.String%5B%5D%2CDropbox.Api.IncludeGrantedScopes%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs/#L260">View Source</a>
+  </span>
+  <a id="Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri_" data-uid="Dropbox.Api.DropboxOAuth2Helper.GetAuthorizeUri*"></a>
+  <h4 id="Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri_Dropbox_Api_OAuthResponseType_System_String_System_String_System_String_System_Boolean_System_Boolean_System_String_System_Boolean_Dropbox_Api_TokenAccessType_System_String___Dropbox_Api_IncludeGrantedScopes_System_String_" data-uid="Dropbox.Api.DropboxOAuth2Helper.GetAuthorizeUri(Dropbox.Api.OAuthResponseType,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String,System.Boolean,Dropbox.Api.TokenAccessType,System.String[],Dropbox.Api.IncludeGrantedScopes,System.String)">GetAuthorizeUri(OAuthResponseType, String, String, String, Boolean, Boolean, String, Boolean, TokenAccessType, String[], IncludeGrantedScopes, String)</h4>
+  <div class="markdown level1 summary"><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets the URI used to start the OAuth2.0 authorization flow.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, string redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false, TokenAccessType tokenAccessType = TokenAccessType.Legacy, string[] scopeList = null, IncludeGrantedScopes includeGrantedScopes = IncludeGrantedScopes.None, string codeChallenge = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.OAuthResponseType.html">OAuthResponseType</a></td>
+        <td><span class="parametername">oauthResponseType</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The grant type requested, either <code>Token</code> or <code>Code</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">clientId</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The apps key, found in the
+<a href="https://www.dropbox.com/developers/apps">App Console</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">redirectUri</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="5">Where to redirect the user after authorization has completed. This must be the exact URI
+registered in the <a href="https://www.dropbox.com/developers/apps">App Console</a>; even <code>localhost</code>
+must be listed if it is used for testing. A redirect URI is required for a token flow, but optional for code. 
+If the redirect URI is omitted, the code will be presented directly to the user and they will be invited to enter
+the information in your app.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Up to 500 bytes of arbitrary data that will be passed back to <code data-dev-comment-type="paramref" class="paramref">redirectUri</code>.
+This parameter should be used to protect against cross-site request forgery (CSRF).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forceReapprove</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="4">Whether or not to force the user to approve the app again if they&apos;ve already done so.
+If <code>false</code> (default), a user who has already approved the application may be automatically redirected to
+<code data-dev-comment-type="paramref" class="paramref">redirectUri</code>If <code>true</code>, the user will not be automatically redirected and will have to approve
+the app again.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disableSignup</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="3">When <code>true</code> (default is <code>false</code>) users will not be able to sign up for a
+Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
+iOS app in the App Store. This is only intended for use when necessary for compliance with App Store policies.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">requireRole</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="4">If this parameter is specified, the user will be asked to authorize with a particular
+type of Dropbox account, either work for a team account or personal for a personal account. Your app should still
+verify the type of Dropbox account after authorization since the user could modify or remove the require_role
+parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forceReauthentication</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="4">If <code>true</code>, users will be signed out if they are currently signed in.
+This will make sure the user is brought to a page where they can create a new account or sign in to another account.
+This should only be used when there is a definite reason to believe that the user needs to sign in to a new or
+different account.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TokenAccessType.html">TokenAccessType</a></td>
+        <td><span class="parametername">tokenAccessType</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Determines the type of token to request.  See <a class="xref" href="Dropbox.Api.TokenAccessType.html">TokenAccessType</a> 
+for information on specific types available.  If none is specified, this will use the legacy type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">scopeList</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">list of scopes to request in base oauth flow.  If left blank, will default to all scopes for app</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.IncludeGrantedScopes.html">IncludeGrantedScopes</a></td>
+        <td><span class="parametername">includeGrantedScopes</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">which scopes to include from previous grants. Note: if this user has never linked the app, include_granted_scopes must be None</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">codeChallenge</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If using PKCE, please us the PKCEOAuthFlow object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The uri of a web page which must be displayed to the user in order to authorize the app.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri_Dropbox_Api_OAuthResponseType_System_String_System_Uri_System_String_System_Boolean_System_Boolean_System_String_System_Boolean_Dropbox_Api_TokenAccessType_System_String___Dropbox_Api_IncludeGrantedScopes_System_String_.md&amp;value=---%0Auid%3A%20Dropbox.Api.DropboxOAuth2Helper.GetAuthorizeUri(Dropbox.Api.OAuthResponseType%2CSystem.String%2CSystem.Uri%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%2CSystem.String%2CSystem.Boolean%2CDropbox.Api.TokenAccessType%2CSystem.String%5B%5D%2CDropbox.Api.IncludeGrantedScopes%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs/#L301">View Source</a>
+  </span>
+  <a id="Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri_" data-uid="Dropbox.Api.DropboxOAuth2Helper.GetAuthorizeUri*"></a>
+  <h4 id="Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri_Dropbox_Api_OAuthResponseType_System_String_System_Uri_System_String_System_Boolean_System_Boolean_System_String_System_Boolean_Dropbox_Api_TokenAccessType_System_String___Dropbox_Api_IncludeGrantedScopes_System_String_" data-uid="Dropbox.Api.DropboxOAuth2Helper.GetAuthorizeUri(Dropbox.Api.OAuthResponseType,System.String,System.Uri,System.String,System.Boolean,System.Boolean,System.String,System.Boolean,Dropbox.Api.TokenAccessType,System.String[],Dropbox.Api.IncludeGrantedScopes,System.String)">GetAuthorizeUri(OAuthResponseType, String, Uri, String, Boolean, Boolean, String, Boolean, TokenAccessType, String[], IncludeGrantedScopes, String)</h4>
+  <div class="markdown level1 summary"><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets the URI used to start the OAuth2.0 authorization flow.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Uri GetAuthorizeUri(OAuthResponseType oauthResponseType, string clientId, Uri redirectUri = null, string state = null, bool forceReapprove = false, bool disableSignup = false, string requireRole = null, bool forceReauthentication = false, TokenAccessType tokenAccessType = TokenAccessType.Legacy, string[] scopeList = null, IncludeGrantedScopes includeGrantedScopes = IncludeGrantedScopes.None, string codeChallenge = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.OAuthResponseType.html">OAuthResponseType</a></td>
+        <td><span class="parametername">oauthResponseType</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The grant type requested, either <code>Token</code> or <code>Code</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">clientId</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The apps key, found in the
+<a href="https://www.dropbox.com/developers/apps">App Console</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><span class="parametername">redirectUri</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="5">Where to redirect the user after authorization has completed. This must be the exact URI
+registered in the <a href="https://www.dropbox.com/developers/apps">App Console</a>; even <code>localhost</code>
+must be listed if it is used for testing. A redirect URI is required for a token flow, but optional for code. 
+If the redirect URI is omitted, the code will be presented directly to the user and they will be invited to enter
+the information in your app.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Up to 500 bytes of arbitrary data that will be passed back to <code data-dev-comment-type="paramref" class="paramref">redirectUri</code>.
+This parameter should be used to protect against cross-site request forgery (CSRF).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forceReapprove</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="4">Whether or not to force the user to approve the app again if they&apos;ve already done so.
+If <code>false</code> (default), a user who has already approved the application may be automatically redirected to
+<code data-dev-comment-type="paramref" class="paramref">redirectUri</code>If <code>true</code>, the user will not be automatically redirected and will have to approve
+the app again.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disableSignup</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="3">When <code>true</code> (default is <code>false</code>) users will not be able to sign up for a
+Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
+iOS app in the App Store. This is only intended for use when necessary for compliance with App Store policies.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">requireRole</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="4">If this parameter is specified, the user will be asked to authorize with a particular
+type of Dropbox account, either work for a team account or personal for a personal account. Your app should still
+verify the type of Dropbox account after authorization since the user could modify or remove the require_role
+parameter.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forceReauthentication</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="4">If <code>true</code>, users will be signed out if they are currently signed in.
+This will make sure the user is brought to a page where they can create a new account or sign in to another account.
+This should only be used when there is a definite reason to believe that the user needs to sign in to a new or
+different account.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TokenAccessType.html">TokenAccessType</a></td>
+        <td><span class="parametername">tokenAccessType</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="2">Determines the type of token to request.  See <a class="xref" href="Dropbox.Api.TokenAccessType.html">TokenAccessType</a> 
+for information on specific types available.  If none is specified, this will use the legacy type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">scopeList</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">list of scopes to request in base oauth flow.  If left blank, will default to all scopes for app</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.IncludeGrantedScopes.html">IncludeGrantedScopes</a></td>
+        <td><span class="parametername">includeGrantedScopes</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">which scopes to include from previous grants. Note: if this user has never linked the app, include_granted_scopes must be None</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">codeChallenge</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">If using PKCE, please us the PKCEOAuthFlow object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The uri of a web page which must be displayed to the user in order to authorize the app.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Dropbox.Api.DropboxOAuth2Helper.GetAuthorizeUri(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs/#L395">View Source</a>
+  </span>
+  <a id="Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri_" data-uid="Dropbox.Api.DropboxOAuth2Helper.GetAuthorizeUri*"></a>
+  <h4 id="Dropbox_Api_DropboxOAuth2Helper_GetAuthorizeUri_System_String_System_Boolean_" data-uid="Dropbox.Api.DropboxOAuth2Helper.GetAuthorizeUri(System.String,System.Boolean)">GetAuthorizeUri(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Gets the URI used to start the OAuth2.0 authorization flow which doesn&apos;t require a redirect URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Uri GetAuthorizeUri(string clientId, bool disableSignup = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">clientId</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The apps key, found in the
+<a href="https://www.dropbox.com/developers/apps">App Console</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disableSignup</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="3">When <code>true</code> (default is <code>false</code>) users will not be able to sign up for a
+Dropbox account via the authorization page. Instead, the authorization page will show a link to the Dropbox
+iOS app in the App Store. This is only intended for use when necessary for compliance with App Store policies.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The uri of a web page which must be displayed to the user in order to authorize the app.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_DropboxOAuth2Helper_ParseTokenFragment_System_Uri_.md&amp;value=---%0Auid%3A%20Dropbox.Api.DropboxOAuth2Helper.ParseTokenFragment(System.Uri)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs/#L438">View Source</a>
+  </span>
+  <a id="Dropbox_Api_DropboxOAuth2Helper_ParseTokenFragment_" data-uid="Dropbox.Api.DropboxOAuth2Helper.ParseTokenFragment*"></a>
+  <h4 id="Dropbox_Api_DropboxOAuth2Helper_ParseTokenFragment_System_Uri_" data-uid="Dropbox.Api.DropboxOAuth2Helper.ParseTokenFragment(System.Uri)">ParseTokenFragment(Uri)</h4>
+  <div class="markdown level1 summary"><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="2" sourceendlinenumber="3">Parses the token fragment. When using the OAuth 2.0 token or implicit grant flow, the 
+user will be redirected to a URI with a fragment containing the authorization token.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static OAuth2Response ParseTokenFragment(Uri redirectedUri)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><span class="parametername">redirectedUri</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The redirected URI.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.OAuth2Response.html">OAuth2Response</a></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The authorization response, containing the access token and uid of the authorized user</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync_System_String_System_String_System_String_System_String_System_Net_Http_HttpClient_System_String_.md&amp;value=---%0Auid%3A%20Dropbox.Api.DropboxOAuth2Helper.ProcessCodeFlowAsync(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Net.Http.HttpClient%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs/#L500">View Source</a>
+  </span>
+  <a id="Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync_" data-uid="Dropbox.Api.DropboxOAuth2Helper.ProcessCodeFlowAsync*"></a>
+  <h4 id="Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync_System_String_System_String_System_String_System_String_System_Net_Http_HttpClient_System_String_" data-uid="Dropbox.Api.DropboxOAuth2Helper.ProcessCodeFlowAsync(System.String,System.String,System.String,System.String,System.Net.Http.HttpClient,System.String)">ProcessCodeFlowAsync(String, String, String, String, HttpClient, String)</h4>
+  <div class="markdown level1 summary"><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Processes the second half of the OAuth 2.0 code flow.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static async Task&lt;OAuth2Response&gt; ProcessCodeFlowAsync(string code, string appKey, string appSecret = null, string redirectUri = null, HttpClient client = null, string codeVerifier = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">code</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The code acquired in the query parameters of the redirect from the initial authorize url.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">appKey</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The application key, found in the
+<a href="https://www.dropbox.com/developers/apps">App Console</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">appSecret</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The application secret, found in the 
+<a href="https://www.dropbox.com/developers/apps">App Console</a> This is optional if using PKCE.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">redirectUri</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="3">The redirect URI that was provided in the initial authorize URI,
+this is only used to validate that it matches the original request, it is not used to redirect
+again.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Http.HttpClient</span></td>
+        <td><span class="parametername">client</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">An optional http client instance used to make requests.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">codeVerifier</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The code verifier for PKCE flow.  If using PKCE, please us the PKCEOauthFlow object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.OAuth2Response.html">OAuth2Response</a>&gt;</td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The authorization response, containing the access token and uid of the authorized user</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync_System_Uri_System_String_System_String_System_String_System_String_System_Net_Http_HttpClient_System_String_.md&amp;value=---%0Auid%3A%20Dropbox.Api.DropboxOAuth2Helper.ProcessCodeFlowAsync(System.Uri%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Net.Http.HttpClient%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs/#L611">View Source</a>
+  </span>
+  <a id="Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync_" data-uid="Dropbox.Api.DropboxOAuth2Helper.ProcessCodeFlowAsync*"></a>
+  <h4 id="Dropbox_Api_DropboxOAuth2Helper_ProcessCodeFlowAsync_System_Uri_System_String_System_String_System_String_System_String_System_Net_Http_HttpClient_System_String_" data-uid="Dropbox.Api.DropboxOAuth2Helper.ProcessCodeFlowAsync(System.Uri,System.String,System.String,System.String,System.String,System.Net.Http.HttpClient,System.String)">ProcessCodeFlowAsync(Uri, String, String, String, String, HttpClient, String)</h4>
+  <div class="markdown level1 summary"><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Processes the second half of the OAuth 2.0 code flow.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;OAuth2Response&gt; ProcessCodeFlowAsync(Uri responseUri, string appKey, string appSecret, string redirectUri = null, string state = null, HttpClient client = null, string codeVerifier = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Uri</span></td>
+        <td><span class="parametername">responseUri</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The URI to which the user was redirected after the initial authorization request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">appKey</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The application key, found in the
+<a href="https://www.dropbox.com/developers/apps">App Console</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">appSecret</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="2">The application secret, found in the 
+<a href="https://www.dropbox.com/developers/apps">App Console</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">redirectUri</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="3">The redirect URI that was provided in the initial authorize URI,
+this is only used to validate that it matches the original request, it is not used to redirect
+again.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">state</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The state parameter (if any) that matches that used in the initial authorize URI.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.Http.HttpClient</span></td>
+        <td><span class="parametername">client</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">An optional http client instance used to make requests.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">codeVerifier</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The code verifier for PKCE flow.  If using PKCE, please us the PKCEOauthFlow object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Dropbox.Api.OAuth2Response.html">OAuth2Response</a>&gt;</td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.DropboxOAuth2Helper.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The authorization response, containing the access token and uid of the authorized user</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_DropboxOAuth2Helper.md&amp;value=---%0Auid%3A%20Dropbox.Api.DropboxOAuth2Helper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs/#L219" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

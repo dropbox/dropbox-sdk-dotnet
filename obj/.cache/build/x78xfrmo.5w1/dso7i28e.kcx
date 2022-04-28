@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RelocationBatchError.CantMoveIntoVault
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RelocationBatchError.CantMoveIntoVault
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Files.RelocationBatchError.CantMoveIntoVault">
+  
+  
+  <h1 id="Dropbox_Api_Files_RelocationBatchError_CantMoveIntoVault" data-uid="Dropbox.Api.Files.RelocationBatchError.CantMoveIntoVault" class="text-break">Class RelocationBatchError.CantMoveIntoVault
+  </h1>
+  <div class="markdown level0 summary"><p>Some content cannot be moved into Vault under certain circumstances, see
+detailed error.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html">RelocationBatchError</a></div>
+    <div class="level2"><span class="xref">RelocationBatchError.CantMoveIntoVault</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsTooManyWriteOperations">RelocationBatchError.IsTooManyWriteOperations</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsTooManyWriteOperations">RelocationBatchError.AsTooManyWriteOperations</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsFromLookup">RelocationBatchError.IsFromLookup</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsFromLookup">RelocationBatchError.AsFromLookup</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsFromWrite">RelocationBatchError.IsFromWrite</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsFromWrite">RelocationBatchError.AsFromWrite</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsTo">RelocationBatchError.IsTo</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsTo">RelocationBatchError.AsTo</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsCantCopySharedFolder">RelocationBatchError.IsCantCopySharedFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsCantCopySharedFolder">RelocationBatchError.AsCantCopySharedFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsCantNestSharedFolder">RelocationBatchError.IsCantNestSharedFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsCantNestSharedFolder">RelocationBatchError.AsCantNestSharedFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsCantMoveFolderIntoItself">RelocationBatchError.IsCantMoveFolderIntoItself</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsCantMoveFolderIntoItself">RelocationBatchError.AsCantMoveFolderIntoItself</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsTooManyFiles">RelocationBatchError.IsTooManyFiles</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsTooManyFiles">RelocationBatchError.AsTooManyFiles</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsDuplicatedOrNestedPaths">RelocationBatchError.IsDuplicatedOrNestedPaths</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsDuplicatedOrNestedPaths">RelocationBatchError.AsDuplicatedOrNestedPaths</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsCantTransferOwnership">RelocationBatchError.IsCantTransferOwnership</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsCantTransferOwnership">RelocationBatchError.AsCantTransferOwnership</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsInsufficientQuota">RelocationBatchError.IsInsufficientQuota</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsInsufficientQuota">RelocationBatchError.AsInsufficientQuota</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsInternalError">RelocationBatchError.IsInternalError</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsInternalError">RelocationBatchError.AsInternalError</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsCantMoveSharedFolder">RelocationBatchError.IsCantMoveSharedFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsCantMoveSharedFolder">RelocationBatchError.AsCantMoveSharedFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsCantMoveIntoVault">RelocationBatchError.IsCantMoveIntoVault</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsCantMoveIntoVault">RelocationBatchError.AsCantMoveIntoVault</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_IsOther">RelocationBatchError.IsOther</a>
+    </div>
+    <div>
+      <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.html#Dropbox_Api_Files_RelocationBatchError_AsOther">RelocationBatchError.AsOther</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Files.html">Dropbox.Api.Files</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Files_RelocationBatchError_CantMoveIntoVault_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class CantMoveIntoVault : RelocationBatchError</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_RelocationBatchError_CantMoveIntoVault__ctor_Dropbox_Api_Files_MoveIntoVaultError_.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.RelocationBatchError.CantMoveIntoVault.%23ctor(Dropbox.Api.Files.MoveIntoVaultError)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchError.cs/#L1572">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_RelocationBatchError_CantMoveIntoVault__ctor_" data-uid="Dropbox.Api.Files.RelocationBatchError.CantMoveIntoVault.#ctor*"></a>
+  <h4 id="Dropbox_Api_Files_RelocationBatchError_CantMoveIntoVault__ctor_Dropbox_Api_Files_MoveIntoVaultError_" data-uid="Dropbox.Api.Files.RelocationBatchError.CantMoveIntoVault.#ctor(Dropbox.Api.Files.MoveIntoVaultError)">CantMoveIntoVault(MoveIntoVaultError)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Files.RelocationBatchError.CantMoveIntoVault.html">RelocationBatchError.CantMoveIntoVault</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CantMoveIntoVault(MoveIntoVaultError value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.MoveIntoVaultError.html">MoveIntoVaultError</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p sourcefile="gh-pages/obj/api/Dropbox.Api.Files.RelocationBatchError.CantMoveIntoVault.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The value</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_RelocationBatchError_CantMoveIntoVault_Value.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.RelocationBatchError.CantMoveIntoVault.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchError.cs/#L1587">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_RelocationBatchError_CantMoveIntoVault_Value_" data-uid="Dropbox.Api.Files.RelocationBatchError.CantMoveIntoVault.Value*"></a>
+  <h4 id="Dropbox_Api_Files_RelocationBatchError_CantMoveIntoVault_Value" data-uid="Dropbox.Api.Files.RelocationBatchError.CantMoveIntoVault.Value">Value</h4>
+  <div class="markdown level1 summary"><p>Gets the value of this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MoveIntoVaultError Value { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.MoveIntoVaultError.html">MoveIntoVaultError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_RelocationBatchError_CantMoveIntoVault.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.RelocationBatchError.CantMoveIntoVault%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchError.cs/#L1553" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

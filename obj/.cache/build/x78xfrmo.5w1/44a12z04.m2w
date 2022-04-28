@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GetMetadataArg
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GetMetadataArg
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Files.GetMetadataArg">
+  
+  
+  <h1 id="Dropbox_Api_Files_GetMetadataArg" data-uid="Dropbox.Api.Files.GetMetadataArg" class="text-break">Class GetMetadataArg
+  </h1>
+  <div class="markdown level0 summary"><p>The get metadata arg object</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">GetMetadataArg</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.AlphaGetMetadataArg.html">AlphaGetMetadataArg</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Files.html">Dropbox.Api.Files</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Files_GetMetadataArg_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GetMetadataArg</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_GetMetadataArg__ctor_System_String_System_Boolean_System_Boolean_System_Boolean_Dropbox_Api_FileProperties_TemplateFilterBase_.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.GetMetadataArg.%23ctor(System.String%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CDropbox.Api.FileProperties.TemplateFilterBase)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetMetadataArg.cs/#L47">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_GetMetadataArg__ctor_" data-uid="Dropbox.Api.Files.GetMetadataArg.#ctor*"></a>
+  <h4 id="Dropbox_Api_Files_GetMetadataArg__ctor_System_String_System_Boolean_System_Boolean_System_Boolean_Dropbox_Api_FileProperties_TemplateFilterBase_" data-uid="Dropbox.Api.Files.GetMetadataArg.#ctor(System.String,System.Boolean,System.Boolean,System.Boolean,Dropbox.Api.FileProperties.TemplateFilterBase)">GetMetadataArg(String, Boolean, Boolean, Boolean, TemplateFilterBase)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Files.GetMetadataArg.html">GetMetadataArg</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GetMetadataArg(string path, bool includeMediaInfo = false, bool includeDeleted = false, bool includeHasExplicitSharedMembers = false, TemplateFilterBase includePropertyGroups = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">path</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Files.GetMetadataArg.yml" sourcestartlinenumber="1" sourceendlinenumber="1">The path of a file or folder on Dropbox.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">includeMediaInfo</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Files.GetMetadataArg.yml" sourcestartlinenumber="1" sourceendlinenumber="2">If true, <a class="xref" href="Dropbox.Api.Files.FileMetadata.html#Dropbox_Api_Files_FileMetadata_MediaInfo">MediaInfo</a> is set for photo and
+video.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">includeDeleted</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Files.GetMetadataArg.yml" sourcestartlinenumber="1" sourceendlinenumber="2">If true, <a class="xref" href="Dropbox.Api.Files.DeletedMetadata.html">DeletedMetadata</a> will be
+returned for deleted file or folder, otherwise <a class="xref" href="Dropbox.Api.Files.LookupError.NotFound.html">LookupError.NotFound</a> will be returned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">includeHasExplicitSharedMembers</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Files.GetMetadataArg.yml" sourcestartlinenumber="1" sourceendlinenumber="3">If true, the results will include a
+flag for each file indicating whether or not  that file has any explicit
+members.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileProperties.TemplateFilterBase.html">TemplateFilterBase</a></td>
+        <td><span class="parametername">includePropertyGroups</span></td>
+        <td><p sourcefile="obj/api/Dropbox.Api.Files.GetMetadataArg.yml" sourcestartlinenumber="1" sourceendlinenumber="2">If set to a valid list of template IDs, <a class="xref" href="Dropbox.Api.Files.FileMetadata.html#Dropbox_Api_Files_FileMetadata_PropertyGroups">PropertyGroups</a> is set if there exists
+property data associated with the file and each of the listed templates.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_GetMetadataArg_IncludeDeleted.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.GetMetadataArg.IncludeDeleted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetMetadataArg.cs/#L98">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_GetMetadataArg_IncludeDeleted_" data-uid="Dropbox.Api.Files.GetMetadataArg.IncludeDeleted*"></a>
+  <h4 id="Dropbox_Api_Files_GetMetadataArg_IncludeDeleted" data-uid="Dropbox.Api.Files.GetMetadataArg.IncludeDeleted">IncludeDeleted</h4>
+  <div class="markdown level1 summary"><p>If true, <a class="xref" href="Dropbox.Api.Files.DeletedMetadata.html">DeletedMetadata</a> will be returned for deleted file or
+folder, otherwise <a class="xref" href="Dropbox.Api.Files.LookupError.NotFound.html">LookupError.NotFound</a> will be
+returned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IncludeDeleted { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_GetMetadataArg_IncludeHasExplicitSharedMembers.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.GetMetadataArg.IncludeHasExplicitSharedMembers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetMetadataArg.cs/#L104">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_GetMetadataArg_IncludeHasExplicitSharedMembers_" data-uid="Dropbox.Api.Files.GetMetadataArg.IncludeHasExplicitSharedMembers*"></a>
+  <h4 id="Dropbox_Api_Files_GetMetadataArg_IncludeHasExplicitSharedMembers" data-uid="Dropbox.Api.Files.GetMetadataArg.IncludeHasExplicitSharedMembers">IncludeHasExplicitSharedMembers</h4>
+  <div class="markdown level1 summary"><p>If true, the results will include a flag for each file indicating whether or
+not  that file has any explicit members.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IncludeHasExplicitSharedMembers { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_GetMetadataArg_IncludeMediaInfo.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.GetMetadataArg.IncludeMediaInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetMetadataArg.cs/#L91">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_GetMetadataArg_IncludeMediaInfo_" data-uid="Dropbox.Api.Files.GetMetadataArg.IncludeMediaInfo*"></a>
+  <h4 id="Dropbox_Api_Files_GetMetadataArg_IncludeMediaInfo" data-uid="Dropbox.Api.Files.GetMetadataArg.IncludeMediaInfo">IncludeMediaInfo</h4>
+  <div class="markdown level1 summary"><p>If true, <a class="xref" href="Dropbox.Api.Files.FileMetadata.html#Dropbox_Api_Files_FileMetadata_MediaInfo">MediaInfo</a> is set for
+photo and video.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IncludeMediaInfo { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_GetMetadataArg_IncludePropertyGroups.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.GetMetadataArg.IncludePropertyGroups%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetMetadataArg.cs/#L111">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_GetMetadataArg_IncludePropertyGroups_" data-uid="Dropbox.Api.Files.GetMetadataArg.IncludePropertyGroups*"></a>
+  <h4 id="Dropbox_Api_Files_GetMetadataArg_IncludePropertyGroups" data-uid="Dropbox.Api.Files.GetMetadataArg.IncludePropertyGroups">IncludePropertyGroups</h4>
+  <div class="markdown level1 summary"><p>If set to a valid list of template IDs, <a class="xref" href="Dropbox.Api.Files.FileMetadata.html#Dropbox_Api_Files_FileMetadata_PropertyGroups">PropertyGroups</a> is set if there exists
+property data associated with the file and each of the listed templates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TemplateFilterBase IncludePropertyGroups { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.FileProperties.TemplateFilterBase.html">TemplateFilterBase</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_GetMetadataArg_Path.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.GetMetadataArg.Path%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetMetadataArg.cs/#L85">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_GetMetadataArg_Path_" data-uid="Dropbox.Api.Files.GetMetadataArg.Path*"></a>
+  <h4 id="Dropbox_Api_Files_GetMetadataArg_Path" data-uid="Dropbox.Api.Files.GetMetadataArg.Path">Path</h4>
+  <div class="markdown level1 summary"><p>The path of a file or folder on Dropbox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Path { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Dropbox.Api.Files.AlphaGetMetadataArg.html">AlphaGetMetadataArg</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_GetMetadataArg.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.GetMetadataArg%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetMetadataArg.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

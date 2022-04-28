@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Dropbox.Api.Async
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Dropbox.Api.Async
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Async">
+  
+  <h1 id="Dropbox_Api_Async" data-uid="Dropbox.Api.Async" class="text-break">Namespace Dropbox.Api.Async
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Dropbox.Api.Async.LaunchEmptyResult.html">LaunchEmptyResult</a></h4>
+      <section><p>Result returned by methods that may either launch an asynchronous job or complete
+synchronously. Upon synchronous completion of the job, no additional information is
+returned.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Async.LaunchEmptyResult.AsyncJobId.html">LaunchEmptyResult.AsyncJobId</a></h4>
+      <section><p>This response indicates that the processing is asynchronous. The string is an
+id that can be used to obtain the status of the asynchronous job.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Async.LaunchEmptyResult.Complete.html">LaunchEmptyResult.Complete</a></h4>
+      <section><p>The job finished synchronously and successfully.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Async.LaunchResultBase.html">LaunchResultBase</a></h4>
+      <section><p>Result returned by methods that launch an asynchronous job.</p>
+<p>A method who may either launch an asynchronous job, or complete the request
+synchronously, can use this union by extending it, and adding a &apos;complete&apos; field with
+the type of the synchronous response.</p>
+<p>See <a class="xref" href="Dropbox.Api.Async.LaunchEmptyResult.html">LaunchEmptyResult</a> for an example.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Async.LaunchResultBase.AsyncJobId.html">LaunchResultBase.AsyncJobId</a></h4>
+      <section><p>This response indicates that the processing is asynchronous. The string is an
+id that can be used to obtain the status of the asynchronous job.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Async.PollArg.html">PollArg</a></h4>
+      <section><p>Arguments for methods that poll the status of an asynchronous job.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Async.PollEmptyResult.html">PollEmptyResult</a></h4>
+      <section><p>Result returned by methods that poll for the status of an asynchronous job. Upon
+completion of the job, no additional information is returned.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Async.PollEmptyResult.Complete.html">PollEmptyResult.Complete</a></h4>
+      <section><p>The asynchronous job has completed successfully.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Async.PollEmptyResult.InProgress.html">PollEmptyResult.InProgress</a></h4>
+      <section><p>The asynchronous job is still in progress.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Async.PollError.html">PollError</a></h4>
+      <section><p>Error returned by methods for polling the status of asynchronous job.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Async.PollError.InternalError.html">PollError.InternalError</a></h4>
+      <section><p>Something went wrong with the job on Dropbox&apos;s end. You&apos;ll need to verify
+that the action you were taking succeeded, and if not, try again. This should
+happen very rarely.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Async.PollError.InvalidAsyncJobId.html">PollError.InvalidAsyncJobId</a></h4>
+      <section><p>The job ID is invalid.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Async.PollError.Other.html">PollError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Async.PollResultBase.html">PollResultBase</a></h4>
+      <section><p>Result returned by methods that poll for the status of an asynchronous job.
+Unions that extend this union should add a &apos;complete&apos; field with a type of the
+information returned upon job completion.</p>
+<p>See <a class="xref" href="Dropbox.Api.Async.PollEmptyResult.html">PollEmptyResult</a> for an example.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Async.PollResultBase.InProgress.html">PollResultBase.InProgress</a></h4>
+      <section><p>The asynchronous job is still in progress.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

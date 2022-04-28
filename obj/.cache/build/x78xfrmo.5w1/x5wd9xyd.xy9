@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PaperCreateError
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PaperCreateError
+   ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dropbox.Api.Files.PaperCreateError">
+  
+  
+  <h1 id="Dropbox_Api_Files_PaperCreateError" data-uid="Dropbox.Api.Files.PaperCreateError" class="text-break">Class PaperCreateError
+  </h1>
+  <div class="markdown level0 summary"><p>The paper create error object</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PaperCreateError</span></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.PaperCreateError.ContentMalformed.html">PaperCreateError.ContentMalformed</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.PaperCreateError.DocLengthExceeded.html">PaperCreateError.DocLengthExceeded</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.PaperCreateError.EmailUnverified.html">PaperCreateError.EmailUnverified</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.PaperCreateError.ImageSizeExceeded.html">PaperCreateError.ImageSizeExceeded</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.PaperCreateError.InsufficientPermissions.html">PaperCreateError.InsufficientPermissions</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.PaperCreateError.InvalidFileExtension.html">PaperCreateError.InvalidFileExtension</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.PaperCreateError.InvalidPath.html">PaperCreateError.InvalidPath</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.PaperCreateError.Other.html">PaperCreateError.Other</a></div>
+      <div class="level2"><a class="xref" href="Dropbox.Api.Files.PaperCreateError.PaperDisabled.html">PaperCreateError.PaperDisabled</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.Api.Files.html">Dropbox.Api.Files</a></h6>
+  <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
+  <h5 id="Dropbox_Api_Files_PaperCreateError_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PaperCreateError</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError__ctor.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L34">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError__ctor_" data-uid="Dropbox.Api.Files.PaperCreateError.#ctor*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError__ctor" data-uid="Dropbox.Api.Files.PaperCreateError.#ctor">PaperCreateError()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Files.PaperCreateError.html">PaperCreateError</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaperCreateError()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_AsContentMalformed.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.AsContentMalformed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L163">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_AsContentMalformed_" data-uid="Dropbox.Api.Files.PaperCreateError.AsContentMalformed*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_AsContentMalformed" data-uid="Dropbox.Api.Files.PaperCreateError.AsContentMalformed">AsContentMalformed</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a ContentMalformed, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaperCreateError.ContentMalformed AsContentMalformed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.PaperCreateError.ContentMalformed.html">PaperCreateError.ContentMalformed</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_AsDocLengthExceeded.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.AsDocLengthExceeded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L185">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_AsDocLengthExceeded_" data-uid="Dropbox.Api.Files.PaperCreateError.AsDocLengthExceeded*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_AsDocLengthExceeded" data-uid="Dropbox.Api.Files.PaperCreateError.AsDocLengthExceeded">AsDocLengthExceeded</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a DocLengthExceeded, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaperCreateError.DocLengthExceeded AsDocLengthExceeded { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.PaperCreateError.DocLengthExceeded.html">PaperCreateError.DocLengthExceeded</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_AsEmailUnverified.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.AsEmailUnverified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L74">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_AsEmailUnverified_" data-uid="Dropbox.Api.Files.PaperCreateError.AsEmailUnverified*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_AsEmailUnverified" data-uid="Dropbox.Api.Files.PaperCreateError.AsEmailUnverified">AsEmailUnverified</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a EmailUnverified, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaperCreateError.EmailUnverified AsEmailUnverified { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.PaperCreateError.EmailUnverified.html">PaperCreateError.EmailUnverified</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_AsImageSizeExceeded.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.AsImageSizeExceeded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L207">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_AsImageSizeExceeded_" data-uid="Dropbox.Api.Files.PaperCreateError.AsImageSizeExceeded*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_AsImageSizeExceeded" data-uid="Dropbox.Api.Files.PaperCreateError.AsImageSizeExceeded">AsImageSizeExceeded</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a ImageSizeExceeded, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaperCreateError.ImageSizeExceeded AsImageSizeExceeded { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.PaperCreateError.ImageSizeExceeded.html">PaperCreateError.ImageSizeExceeded</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_AsInsufficientPermissions.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.AsInsufficientPermissions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L141">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_AsInsufficientPermissions_" data-uid="Dropbox.Api.Files.PaperCreateError.AsInsufficientPermissions*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_AsInsufficientPermissions" data-uid="Dropbox.Api.Files.PaperCreateError.AsInsufficientPermissions">AsInsufficientPermissions</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InsufficientPermissions, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaperCreateError.InsufficientPermissions AsInsufficientPermissions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.PaperCreateError.InsufficientPermissions.html">PaperCreateError.InsufficientPermissions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_AsInvalidFileExtension.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.AsInvalidFileExtension%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L96">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_AsInvalidFileExtension_" data-uid="Dropbox.Api.Files.PaperCreateError.AsInvalidFileExtension*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_AsInvalidFileExtension" data-uid="Dropbox.Api.Files.PaperCreateError.AsInvalidFileExtension">AsInvalidFileExtension</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InvalidFileExtension, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaperCreateError.InvalidFileExtension AsInvalidFileExtension { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.PaperCreateError.InvalidFileExtension.html">PaperCreateError.InvalidFileExtension</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_AsInvalidPath.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.AsInvalidPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L52">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_AsInvalidPath_" data-uid="Dropbox.Api.Files.PaperCreateError.AsInvalidPath*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_AsInvalidPath" data-uid="Dropbox.Api.Files.PaperCreateError.AsInvalidPath">AsInvalidPath</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a InvalidPath, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaperCreateError.InvalidPath AsInvalidPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.PaperCreateError.InvalidPath.html">PaperCreateError.InvalidPath</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_AsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.AsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L229">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_AsOther_" data-uid="Dropbox.Api.Files.PaperCreateError.AsOther*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_AsOther" data-uid="Dropbox.Api.Files.PaperCreateError.AsOther">AsOther</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a Other, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaperCreateError.Other AsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.PaperCreateError.Other.html">PaperCreateError.Other</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_AsPaperDisabled.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.AsPaperDisabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L118">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_AsPaperDisabled_" data-uid="Dropbox.Api.Files.PaperCreateError.AsPaperDisabled*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_AsPaperDisabled" data-uid="Dropbox.Api.Files.PaperCreateError.AsPaperDisabled">AsPaperDisabled</h4>
+  <div class="markdown level1 summary"><p>Gets this instance as a PaperDisabled, or <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaperCreateError.PaperDisabled AsPaperDisabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Files.PaperCreateError.PaperDisabled.html">PaperCreateError.PaperDisabled</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_IsContentMalformed.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.IsContentMalformed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L152">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_IsContentMalformed_" data-uid="Dropbox.Api.Files.PaperCreateError.IsContentMalformed*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_IsContentMalformed" data-uid="Dropbox.Api.Files.PaperCreateError.IsContentMalformed">IsContentMalformed</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is ContentMalformed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsContentMalformed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_IsDocLengthExceeded.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.IsDocLengthExceeded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L174">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_IsDocLengthExceeded_" data-uid="Dropbox.Api.Files.PaperCreateError.IsDocLengthExceeded*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_IsDocLengthExceeded" data-uid="Dropbox.Api.Files.PaperCreateError.IsDocLengthExceeded">IsDocLengthExceeded</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is DocLengthExceeded</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDocLengthExceeded { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_IsEmailUnverified.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.IsEmailUnverified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L63">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_IsEmailUnverified_" data-uid="Dropbox.Api.Files.PaperCreateError.IsEmailUnverified*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_IsEmailUnverified" data-uid="Dropbox.Api.Files.PaperCreateError.IsEmailUnverified">IsEmailUnverified</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is EmailUnverified</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEmailUnverified { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_IsImageSizeExceeded.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.IsImageSizeExceeded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L196">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_IsImageSizeExceeded_" data-uid="Dropbox.Api.Files.PaperCreateError.IsImageSizeExceeded*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_IsImageSizeExceeded" data-uid="Dropbox.Api.Files.PaperCreateError.IsImageSizeExceeded">IsImageSizeExceeded</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is ImageSizeExceeded</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsImageSizeExceeded { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_IsInsufficientPermissions.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.IsInsufficientPermissions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L130">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_IsInsufficientPermissions_" data-uid="Dropbox.Api.Files.PaperCreateError.IsInsufficientPermissions*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_IsInsufficientPermissions" data-uid="Dropbox.Api.Files.PaperCreateError.IsInsufficientPermissions">IsInsufficientPermissions</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is
+InsufficientPermissions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInsufficientPermissions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_IsInvalidFileExtension.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.IsInvalidFileExtension%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L85">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_IsInvalidFileExtension_" data-uid="Dropbox.Api.Files.PaperCreateError.IsInvalidFileExtension*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_IsInvalidFileExtension" data-uid="Dropbox.Api.Files.PaperCreateError.IsInvalidFileExtension">IsInvalidFileExtension</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InvalidFileExtension</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInvalidFileExtension { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_IsInvalidPath.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.IsInvalidPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L41">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_IsInvalidPath_" data-uid="Dropbox.Api.Files.PaperCreateError.IsInvalidPath*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_IsInvalidPath" data-uid="Dropbox.Api.Files.PaperCreateError.IsInvalidPath">IsInvalidPath</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is InvalidPath</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInvalidPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_IsOther.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.IsOther%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L218">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_IsOther_" data-uid="Dropbox.Api.Files.PaperCreateError.IsOther*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_IsOther" data-uid="Dropbox.Api.Files.PaperCreateError.IsOther">IsOther</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is Other</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOther { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError_IsPaperDisabled.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError.IsPaperDisabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L107">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Files_PaperCreateError_IsPaperDisabled_" data-uid="Dropbox.Api.Files.PaperCreateError.IsPaperDisabled*"></a>
+  <h4 id="Dropbox_Api_Files_PaperCreateError_IsPaperDisabled" data-uid="Dropbox.Api.Files.PaperCreateError.IsPaperDisabled">IsPaperDisabled</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is PaperDisabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPaperDisabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/new/doc_fx_integration/apiSpec/new?filename=Dropbox_Api_Files_PaperCreateError.md&amp;value=---%0Auid%3A%20Dropbox.Api.Files.PaperCreateError%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateError.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

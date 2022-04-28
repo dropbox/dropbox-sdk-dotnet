@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Contributing to the Dropbox SDK for DotNet </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Contributing to the Dropbox SDK for DotNet ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="contributing-to-the-dropbox-sdk-for-dotnet" sourcefile="CONTRIBUTING.md" sourcestartlinenumber="1" sourceendlinenumber="1">Contributing to the Dropbox SDK for DotNet</h1>
+
+<p sourcefile="CONTRIBUTING.md" sourcestartlinenumber="2" sourceendlinenumber="2">We value and rely on the feedback from our community. This comes in the form of bug reports, feature requests, and general guidance. We welcome your issues and pull requests and try our hardest to be timely in both response and resolution. Please read through this document before submitting issues or pull requests to ensure we have the necessary information to help you resolve your issue.</p>
+<h2 id="filing-bug-reports" sourcefile="CONTRIBUTING.md" sourcestartlinenumber="4" sourceendlinenumber="4">Filing Bug Reports</h2>
+<p sourcefile="CONTRIBUTING.md" sourcestartlinenumber="5" sourceendlinenumber="5">You can file a bug report on the <a href="https://github.com/dropbox/dropbox-sdk-dotnet/issues" data-raw-source="[GitHub Issues][issues]" sourcefile="CONTRIBUTING.md" sourcestartlinenumber="5" sourceendlinenumber="5">GitHub Issues</a> page.</p>
+<ol sourcefile="CONTRIBUTING.md" sourcestartlinenumber="7" sourceendlinenumber="11">
+<li sourcefile="CONTRIBUTING.md" sourcestartlinenumber="7" sourceendlinenumber="7"><p sourcefile="CONTRIBUTING.md" sourcestartlinenumber="7" sourceendlinenumber="7">Search through existing issues to ensure that your issue has not been reported. If it is a common issue, there is likely already an issue.</p>
+</li>
+<li sourcefile="CONTRIBUTING.md" sourcestartlinenumber="9" sourceendlinenumber="9"><p sourcefile="CONTRIBUTING.md" sourcestartlinenumber="9" sourceendlinenumber="9">Please ensure you are using the latest version of the SDK. While this may be a valid issue, we only will fix bugs affecting the latest version and your bug may have been fixed in a newer version.</p>
+</li>
+<li sourcefile="CONTRIBUTING.md" sourcestartlinenumber="11" sourceendlinenumber="11"><p sourcefile="CONTRIBUTING.md" sourcestartlinenumber="11" sourceendlinenumber="11">Provide as much information as you can regarding the language version, SDK version, and any other relevant information about your environment so we can help resolve the issue as quickly as possible.</p>
+</li>
+</ol>
+<h2 id="submitting-pull-requests" sourcefile="CONTRIBUTING.md" sourcestartlinenumber="13" sourceendlinenumber="13">Submitting Pull Requests</h2>
+<p sourcefile="CONTRIBUTING.md" sourcestartlinenumber="15" sourceendlinenumber="15">We are more than happy to recieve pull requests helping us improve the state of our SDK. You can open a new pull request on the <a href="https://github.com/dropbox/dropbox-sdk-dotnet/pulls" data-raw-source="[GitHub Pull Requests][pr]" sourcefile="CONTRIBUTING.md" sourcestartlinenumber="15" sourceendlinenumber="15">GitHub Pull Requests</a> page.</p>
+<ol sourcefile="CONTRIBUTING.md" sourcestartlinenumber="17" sourceendlinenumber="19">
+<li sourcefile="CONTRIBUTING.md" sourcestartlinenumber="17" sourceendlinenumber="17"><p sourcefile="CONTRIBUTING.md" sourcestartlinenumber="17" sourceendlinenumber="17">Please ensure that you have read the <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/LICENSE" data-raw-source="[License][license]" sourcefile="CONTRIBUTING.md" sourcestartlinenumber="17" sourceendlinenumber="17">License</a>, <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/CODE_OF_CONDUCT.md" data-raw-source="[Code of Conduct][coc]" sourcefile="CONTRIBUTING.md" sourcestartlinenumber="17" sourceendlinenumber="17">Code of Conduct</a> and have signed the <a href="https://opensource.dropbox.com/cla/" data-raw-source="[Contributing License Agreement (CLA)][cla]" sourcefile="CONTRIBUTING.md" sourcestartlinenumber="17" sourceendlinenumber="17">Contributing License Agreement (CLA)</a>.</p>
+</li>
+<li sourcefile="CONTRIBUTING.md" sourcestartlinenumber="19" sourceendlinenumber="19"><p sourcefile="CONTRIBUTING.md" sourcestartlinenumber="19" sourceendlinenumber="19">Please add tests confirming the new functionality works. Pull requests will not be merged without passing continuous integration tests unless the pull requests aims to fix existing issues with these tests.</p>
+</li>
+</ol>
+<h2 id="updating-generated-code" sourcefile="CONTRIBUTING.md" sourcestartlinenumber="21" sourceendlinenumber="21">Updating Generated Code</h2>
+<p sourcefile="CONTRIBUTING.md" sourcestartlinenumber="23" sourceendlinenumber="23">Generated code can be updated by running the following code:</p>
+<pre sourcefile="CONTRIBUTING.md" sourcestartlinenumber="25" sourceendlinenumber="32"><code>$ git submodule init
+$ git submodule update --remote --recursive
+$ cd stone
+$ python setup.py install
+$ cd ..
+$ python generate.py
+</code></pre><p sourcefile="CONTRIBUTING.md" sourcestartlinenumber="34" sourceendlinenumber="34">Note: the <code>buildall.ps1</code> file also will update generated code so unless you are looking to explicitely test something new, this step is generally unnecessary</p>
+<h2 id="testing-the-code" sourcefile="CONTRIBUTING.md" sourcestartlinenumber="36" sourceendlinenumber="36">Testing the Code</h2>
+<p sourcefile="CONTRIBUTING.md" sourcestartlinenumber="38" sourceendlinenumber="38">Tests live under the Dropbox.Api.Tests Project.  Please fill in the dropbox.runsettings file with test tokens in order to successfully make calls to the Dropbox servers.</p>
+<p sourcefile="CONTRIBUTING.md" sourcestartlinenumber="40" sourceendlinenumber="40">The tests are run as a part of the build script we use, this can be run the following way: </p>
+<pre sourcefile="CONTRIBUTING.md" sourcestartlinenumber="42" sourceendlinenumber="44"><code>powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings &lt;PATH_TO_TEST_SETTINGS&gt; 
+</code></pre><p sourcefile="CONTRIBUTING.md" sourcestartlinenumber="46" sourceendlinenumber="46">Where test settings is the <code>dropbox.runsettings</code> file mentioned above.</p>
+<p sourcefile="CONTRIBUTING.md" sourcestartlinenumber="48" sourceendlinenumber="48">If you need to test the documentation, you can add the <code>-doc</code> flag to the build command to also generate that.</p>
+<pre sourcefile="CONTRIBUTING.md" sourcestartlinenumber="50" sourceendlinenumber="52"><code>powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings &lt;PATH_TO_TEST_SETTINGS&gt; -doc
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/CONTRIBUTING.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
