@@ -24,6 +24,8 @@ jobs:
         run: dotnet restore dropbox-sdk-dotnet/Dropbox.Api
       - name: Copy for index
         run: cp README.md gh-pages/index.md
+      - name: Install Mono Dependencies
+        run: sudo apt-get install mono-runtime mono-devel msbuild
       - uses: nikeee/docfx-action@v1.0.0
         name: Build Documentation YAML
         with:
