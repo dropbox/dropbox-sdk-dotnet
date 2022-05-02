@@ -34,6 +34,7 @@ jobs:
         name: Build Documentation HTML
         with:
           args: ./gh-pages/docfx-html.json
+        timeout-minutes: 120
       - name: Push Documentation
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
