@@ -30,6 +30,10 @@ jobs:
         name: Build Documentation YAML
         with:
           args: ./gh-pages/docfx.json
+      - uses: nikeee/docfx-action@v1.0.0
+        name: Build Documentation HTML
+        with:
+          args: ./gh-pages/docfx-html.json
       - name: Push Documentation
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
