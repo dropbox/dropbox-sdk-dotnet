@@ -19,5 +19,26 @@
             "TargetFramework": "net45"
         }
       }
-    ]
+    ],
+    "build": {
+      "content": [
+        {
+          "files": [
+            "obj/api/**.yml"
+          ]
+        },
+        {
+          "files": [
+            "*.md", "toc.yml"
+          ],
+          "exclude": [
+            "_site/**"
+          ]
+        }
+      ],
+      "dest": "_site",
+      "template": [
+        "default"
+      ]
+  }
 }
