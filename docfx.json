@@ -1,0 +1,43 @@
+{
+    "metadata": [
+      {
+        "src": [
+          {
+            "files": [
+              "dropbox-sdk-dotnet/Dropbox.Api/**.csproj"
+            ],
+            "exclude": [
+              "**/obj/**",
+              "**/bin/**",
+              "gh-pages/**"
+            ]
+          }
+        ],
+        "dest": "obj/api",
+        "properties": {
+            "TargetFramework": "net45"
+        }
+      }
+    ],
+    "build": {
+      "content": [
+        {
+          "files": [
+            "obj/api/**.yml"
+          ]
+        },
+        {
+          "files": [
+            "*.md", "toc.yml"
+          ],
+          "exclude": [
+            "gh-pages/**"
+          ]
+        }
+      ],
+      "dest": "gh-pages",
+      "template": [
+        "default"
+      ]
+  }
+}
