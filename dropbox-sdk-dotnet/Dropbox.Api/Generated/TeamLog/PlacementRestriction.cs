@@ -146,6 +146,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is UsS3Only</para>
+        /// </summary>
+        public bool IsUsS3Only
+        {
+            get
+            {
+                return this is UsS3Only;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UsS3Only, or <c>null</c>.</para>
+        /// </summary>
+        public UsS3Only AsUsS3Only
+        {
+            get
+            {
+                return this as UsS3Only;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -211,6 +233,12 @@ namespace Dropbox.Api.TeamLog
                     UkOnly.Encoder.EncodeFields((UkOnly)value, writer);
                     return;
                 }
+                if (value is UsS3Only)
+                {
+                    WriteProperty(".tag", "us_s3_only", writer, enc.StringEncoder.Instance);
+                    UsS3Only.Encoder.EncodeFields((UsS3Only)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -259,6 +287,8 @@ namespace Dropbox.Api.TeamLog
                         return None.Decoder.DecodeFields(reader);
                     case "uk_only":
                         return UkOnly.Decoder.DecodeFields(reader);
+                    case "us_s3_only":
+                        return UsS3Only.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -606,6 +636,75 @@ namespace Dropbox.Api.TeamLog
                 protected override UkOnly Create()
                 {
                     return UkOnly.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The us s3 only object</para>
+        /// </summary>
+        public sealed class UsS3Only : PlacementRestriction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UsS3Only> Encoder = new UsS3OnlyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UsS3Only> Decoder = new UsS3OnlyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UsS3Only" /> class.</para>
+            /// </summary>
+            private UsS3Only()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UsS3Only</para>
+            /// </summary>
+            public static readonly UsS3Only Instance = new UsS3Only();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UsS3Only" />.</para>
+            /// </summary>
+            private class UsS3OnlyEncoder : enc.StructEncoder<UsS3Only>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UsS3Only value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UsS3Only" />.</para>
+            /// </summary>
+            private class UsS3OnlyDecoder : enc.StructDecoder<UsS3Only>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UsS3Only" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UsS3Only Create()
+                {
+                    return UsS3Only.Instance;
                 }
 
             }

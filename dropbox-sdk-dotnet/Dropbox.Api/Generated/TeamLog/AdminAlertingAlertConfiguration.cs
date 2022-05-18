@@ -35,13 +35,19 @@ namespace Dropbox.Api.TeamLog
         /// <param name="alertState">Alert state.</param>
         /// <param name="sensitivityLevel">Sensitivity level.</param>
         /// <param name="recipientsSettings">Recipient settings.</param>
+        /// <param name="text">Text.</param>
+        /// <param name="excludedFileExtensions">Excluded file extensions.</param>
         public AdminAlertingAlertConfiguration(AdminAlertingAlertStatePolicy alertState = null,
                                                AdminAlertingAlertSensitivity sensitivityLevel = null,
-                                               RecipientsConfiguration recipientsSettings = null)
+                                               RecipientsConfiguration recipientsSettings = null,
+                                               string text = null,
+                                               string excludedFileExtensions = null)
         {
             this.AlertState = alertState;
             this.SensitivityLevel = sensitivityLevel;
             this.RecipientsSettings = recipientsSettings;
+            this.Text = text;
+            this.ExcludedFileExtensions = excludedFileExtensions;
         }
 
         /// <summary>
@@ -70,6 +76,16 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public RecipientsConfiguration RecipientsSettings { get; protected set; }
 
+        /// <summary>
+        /// <para>Text.</para>
+        /// </summary>
+        public string Text { get; protected set; }
+
+        /// <summary>
+        /// <para>Excluded file extensions.</para>
+        /// </summary>
+        public string ExcludedFileExtensions { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -95,6 +111,14 @@ namespace Dropbox.Api.TeamLog
                 if (value.RecipientsSettings != null)
                 {
                     WriteProperty("recipients_settings", value.RecipientsSettings, writer, global::Dropbox.Api.TeamLog.RecipientsConfiguration.Encoder);
+                }
+                if (value.Text != null)
+                {
+                    WriteProperty("text", value.Text, writer, enc.StringEncoder.Instance);
+                }
+                if (value.ExcludedFileExtensions != null)
+                {
+                    WriteProperty("excluded_file_extensions", value.ExcludedFileExtensions, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -137,6 +161,12 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "recipients_settings":
                         value.RecipientsSettings = global::Dropbox.Api.TeamLog.RecipientsConfiguration.Decoder.Decode(reader);
+                        break;
+                    case "text":
+                        value.Text = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "excluded_file_extensions":
+                        value.ExcludedFileExtensions = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();
