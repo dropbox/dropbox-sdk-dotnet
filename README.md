@@ -6,7 +6,7 @@
 
 The offical Dropbox SDK for DotNet.
 
-Documentation can be found on [Github Pages][documentation]
+Documentation can be found on [GitHub Pages][documentation]
 
 ## Installation
 
@@ -47,7 +47,7 @@ This SDK is distributed under the MIT license, please see [LICENSE][license] for
 
 [logo]: https://cfl.dropboxstatic.com/static/images/sdk/dotnet_banner.png
 [repo]: https://github.com/dropbox/dropbox-sdk-dotnet
-[documentation]: http://dropbox.github.io/dropbox-sdk-dotnet/html/R_Project_DotNetApiDocumentation.htm
+[documentation]: https://dropbox.github.io/dropbox-sdk-dotnet/
 [examples]: https://github.com/dropbox/dropbox-sdk-dotnet/tree/main/dropbox-sdk-dotnet/Examples
 [license]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/LICENSE
 [contributing]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/CONTRIBUTING.md
