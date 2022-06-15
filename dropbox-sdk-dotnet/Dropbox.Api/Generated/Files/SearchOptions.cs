@@ -41,13 +41,15 @@ namespace Dropbox.Api.Files
         /// Only supported for active file search.</param>
         /// <param name="fileCategories">Restricts search to only the file categories
         /// specified. Only supported for active file search.</param>
+        /// <param name="accountId">Restricts results to the given account id.</param>
         public SearchOptions(string path = null,
                              ulong maxResults = 100,
                              SearchOrderBy orderBy = null,
                              FileStatus fileStatus = null,
                              bool filenameOnly = false,
                              col.IEnumerable<string> fileExtensions = null,
-                             col.IEnumerable<FileCategory> fileCategories = null)
+                             col.IEnumerable<FileCategory> fileCategories = null,
+                             string accountId = null)
         {
             if (path != null)
             {
@@ -74,6 +76,18 @@ namespace Dropbox.Api.Files
 
             var fileCategoriesList = enc.Util.ToList(fileCategories);
 
+            if (accountId != null)
+            {
+                if (accountId.Length < 40)
+                {
+                    throw new sys.ArgumentOutOfRangeException("accountId", "Length should be at least 40");
+                }
+                if (accountId.Length > 40)
+                {
+                    throw new sys.ArgumentOutOfRangeException("accountId", "Length should be at most 40");
+                }
+            }
+
             this.Path = path;
             this.MaxResults = maxResults;
             this.OrderBy = orderBy;
@@ -81,6 +95,7 @@ namespace Dropbox.Api.Files
             this.FilenameOnly = filenameOnly;
             this.FileExtensions = fileExtensionsList;
             this.FileCategories = fileCategoriesList;
+            this.AccountId = accountId;
         }
 
         /// <summary>
@@ -135,6 +150,11 @@ namespace Dropbox.Api.Files
         /// </summary>
         public col.IList<FileCategory> FileCategories { get; protected set; }
 
+        /// <summary>
+        /// <para>Restricts results to the given account id.</para>
+        /// </summary>
+        public string AccountId { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -167,6 +187,10 @@ namespace Dropbox.Api.Files
                 if (value.FileCategories.Count > 0)
                 {
                     WriteListProperty("file_categories", value.FileCategories, writer, global::Dropbox.Api.Files.FileCategory.Encoder);
+                }
+                if (value.AccountId != null)
+                {
+                    WriteProperty("account_id", value.AccountId, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -220,6 +244,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "file_categories":
                         value.FileCategories = ReadList<FileCategory>(reader, global::Dropbox.Api.Files.FileCategory.Decoder);
+                        break;
+                    case "account_id":
+                        value.AccountId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

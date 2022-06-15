@@ -7596,6 +7596,11 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>This route starts batch of upload_sessions. Please refer to
         /// `upload_session/start` usage.</para>
+        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
+        /// Business teams with a limit on the number of data transport calls allowed per
+        /// month. For more information, see the <a
+        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
+        /// transport limit page</a>.</para>
         /// </summary>
         /// <param name="uploadSessionStartBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -7624,6 +7629,11 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>This route starts batch of upload_sessions. Please refer to
         /// `upload_session/start` usage.</para>
+        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
+        /// Business teams with a limit on the number of data transport calls allowed per
+        /// month. For more information, see the <a
+        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
+        /// transport limit page</a>.</para>
         /// </summary>
         /// <param name="numSessions">The number of upload sessions to start.</param>
         /// <param name="sessionType">Type of upload session you want to start. If not
