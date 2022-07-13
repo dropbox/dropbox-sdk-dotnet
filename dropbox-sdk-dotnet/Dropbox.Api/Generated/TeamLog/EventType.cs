@@ -8025,6 +8025,29 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// AdminEmailRemindersChanged</para>
+        /// </summary>
+        public bool IsAdminEmailRemindersChanged
+        {
+            get
+            {
+                return this is AdminEmailRemindersChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AdminEmailRemindersChanged, or <c>null</c>.</para>
+        /// </summary>
+        public AdminEmailRemindersChanged AsAdminEmailRemindersChanged
+        {
+            get
+            {
+                return this as AdminEmailRemindersChanged;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is AllowDownloadDisabled</para>
         /// </summary>
         public bool IsAllowDownloadDisabled
@@ -13141,6 +13164,12 @@ namespace Dropbox.Api.TeamLog
                     AccountCaptureChangePolicy.Encoder.EncodeFields((AccountCaptureChangePolicy)value, writer);
                     return;
                 }
+                if (value is AdminEmailRemindersChanged)
+                {
+                    WriteProperty(".tag", "admin_email_reminders_changed", writer, enc.StringEncoder.Instance);
+                    AdminEmailRemindersChanged.Encoder.EncodeFields((AdminEmailRemindersChanged)value, writer);
+                    return;
+                }
                 if (value is AllowDownloadDisabled)
                 {
                     WriteProperty(".tag", "allow_download_disabled", writer, enc.StringEncoder.Instance);
@@ -14653,6 +14682,8 @@ namespace Dropbox.Api.TeamLog
                         return TeamSelectiveSyncSettingsChanged.Decoder.DecodeFields(reader);
                     case "account_capture_change_policy":
                         return AccountCaptureChangePolicy.Decoder.DecodeFields(reader);
+                    case "admin_email_reminders_changed":
+                        return AdminEmailRemindersChanged.Decoder.DecodeFields(reader);
                     case "allow_download_disabled":
                         return AllowDownloadDisabled.Decoder.DecodeFields(reader);
                     case "allow_download_enabled":
@@ -46625,6 +46656,97 @@ namespace Dropbox.Api.TeamLog
                 public override AccountCaptureChangePolicy DecodeFields(enc.IJsonReader reader)
                 {
                     return new AccountCaptureChangePolicy(global::Dropbox.Api.TeamLog.AccountCaptureChangePolicyType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed admin email reminder policy for team requests to
+        /// join</para>
+        /// </summary>
+        public sealed class AdminEmailRemindersChanged : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AdminEmailRemindersChanged> Encoder = new AdminEmailRemindersChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AdminEmailRemindersChanged> Decoder = new AdminEmailRemindersChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AdminEmailRemindersChanged"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public AdminEmailRemindersChanged(AdminEmailRemindersChangedType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AdminEmailRemindersChanged"
+            /// /> class.</para>
+            /// </summary>
+            private AdminEmailRemindersChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public AdminEmailRemindersChangedType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AdminEmailRemindersChanged" />.</para>
+            /// </summary>
+            private class AdminEmailRemindersChangedEncoder : enc.StructEncoder<AdminEmailRemindersChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AdminEmailRemindersChanged value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("admin_email_reminders_changed", value.Value, writer, global::Dropbox.Api.TeamLog.AdminEmailRemindersChangedType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AdminEmailRemindersChanged" />.</para>
+            /// </summary>
+            private class AdminEmailRemindersChangedDecoder : enc.StructDecoder<AdminEmailRemindersChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AdminEmailRemindersChanged"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AdminEmailRemindersChanged Create()
+                {
+                    return new AdminEmailRemindersChanged();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override AdminEmailRemindersChanged DecodeFields(enc.IJsonReader reader)
+                {
+                    return new AdminEmailRemindersChanged(global::Dropbox.Api.TeamLog.AdminEmailRemindersChangedType.Decoder.DecodeFields(reader));
                 }
             }
 

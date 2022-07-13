@@ -34,8 +34,14 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         /// <param name="member">One of specified input members.</param>
         /// <param name="result">The outcome of the action on this member.</param>
+        /// <param name="sckeySha1">The SHA-1 encrypted shared content key.</param>
+        /// <param name="invitationSignature">The sharing sender-recipient invitation
+        /// signatures for the input member_id. A member_id can be a group and thus have
+        /// multiple users and multiple invitation signatures.</param>
         public FileMemberActionResult(MemberSelector member,
-                                      FileMemberActionIndividualResult result)
+                                      FileMemberActionIndividualResult result,
+                                      string sckeySha1 = null,
+                                      col.IEnumerable<string> invitationSignature = null)
         {
             if (member == null)
             {
@@ -47,8 +53,12 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentNullException("result");
             }
 
+            var invitationSignatureList = enc.Util.ToList(invitationSignature);
+
             this.Member = member;
             this.Result = result;
+            this.SckeySha1 = sckeySha1;
+            this.InvitationSignature = invitationSignatureList;
         }
 
         /// <summary>
@@ -72,6 +82,18 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public FileMemberActionIndividualResult Result { get; protected set; }
 
+        /// <summary>
+        /// <para>The SHA-1 encrypted shared content key.</para>
+        /// </summary>
+        public string SckeySha1 { get; protected set; }
+
+        /// <summary>
+        /// <para>The sharing sender-recipient invitation signatures for the input member_id. A
+        /// member_id can be a group and thus have multiple users and multiple invitation
+        /// signatures.</para>
+        /// </summary>
+        public col.IList<string> InvitationSignature { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -88,6 +110,14 @@ namespace Dropbox.Api.Sharing
             {
                 WriteProperty("member", value.Member, writer, global::Dropbox.Api.Sharing.MemberSelector.Encoder);
                 WriteProperty("result", value.Result, writer, global::Dropbox.Api.Sharing.FileMemberActionIndividualResult.Encoder);
+                if (value.SckeySha1 != null)
+                {
+                    WriteProperty("sckey_sha1", value.SckeySha1, writer, enc.StringEncoder.Instance);
+                }
+                if (value.InvitationSignature.Count > 0)
+                {
+                    WriteListProperty("invitation_signature", value.InvitationSignature, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -126,6 +156,12 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "result":
                         value.Result = global::Dropbox.Api.Sharing.FileMemberActionIndividualResult.Decoder.Decode(reader);
+                        break;
+                    case "sckey_sha1":
+                        value.SckeySha1 = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "invitation_signature":
+                        value.InvitationSignature = ReadList<string>(reader, enc.StringDecoder.Instance);
                         break;
                     default:
                         reader.Skip();
