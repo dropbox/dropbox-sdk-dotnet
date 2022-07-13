@@ -153,6 +153,18 @@
                 namespace.</para>
             </summary>
         </member>
+        <member name="N:Dropbox.Api.Openid">
+            <summary>
+                <para>Contains the types used by the routes declared in <see
+                cref="T:Dropbox.Api.Openid.Routes.OpenidRoutes" />.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Openid.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.Openid" />
+                namespace.</para>
+            </summary>
+        </member>
         <member name="N:Dropbox.Api.Paper">
             <summary>
                 <para>This namespace contains endpoints and data types for managing docs and

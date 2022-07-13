@@ -37,6 +37,10 @@ namespace Dropbox.Api.Check
             {
                 throw new sys.ArgumentNullException("query");
             }
+            if (query.Length > 500)
+            {
+                throw new sys.ArgumentOutOfRangeException("query", "Length should be at most 500");
+            }
 
             this.Query = query;
         }
