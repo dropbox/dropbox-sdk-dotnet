@@ -31,7 +31,7 @@ namespace Dropbox.Api.Openid
         /// <para>Initializes a new instance of the <see cref="UserInfoError" /> class.</para>
         /// </summary>
         /// <param name="err">The err</param>
-        /// <param name="errorMessage">The error message</param>
+        /// <param name="errorMessage">Brief explanation of the error.</param>
         public UserInfoError(ErrUnion err = null,
                              string errorMessage = "")
         {
@@ -61,7 +61,7 @@ namespace Dropbox.Api.Openid
         public ErrUnion Err { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the error message of the user info error</para>
+        /// <para>Brief explanation of the error.</para>
         /// </summary>
         public string ErrorMessage { get; protected set; }
 

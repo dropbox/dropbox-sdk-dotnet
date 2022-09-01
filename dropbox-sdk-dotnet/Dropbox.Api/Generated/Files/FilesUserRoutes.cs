@@ -6174,7 +6174,8 @@ namespace Dropbox.Api.Files.Routes
         /// item.</para>
         /// </summary>
         /// <param name="path">Path to the item to be tagged.</param>
-        /// <param name="tagText">The value of the tag to add.</param>
+        /// <param name="tagText">The value of the tag to add. Will be automatically converted
+        /// to lowercase letters.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="AddTagError"/>.</exception>
@@ -6191,7 +6192,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the tags add route.</para>
         /// </summary>
         /// <param name="path">Path to the item to be tagged.</param>
-        /// <param name="tagText">The value of the tag to add.</param>
+        /// <param name="tagText">The value of the tag to add. Will be automatically converted
+        /// to lowercase letters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -6340,7 +6342,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Remove a tag from an item.</para>
         /// </summary>
         /// <param name="path">Path to the item to tag.</param>
-        /// <param name="tagText">The tag to remove.</param>
+        /// <param name="tagText">The tag to remove. Will be automatically converted to
+        /// lowercase letters.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
@@ -6358,7 +6361,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the tags remove route.</para>
         /// </summary>
         /// <param name="path">Path to the item to tag.</param>
-        /// <param name="tagText">The tag to remove.</param>
+        /// <param name="tagText">The tag to remove. Will be automatically converted to
+        /// lowercase letters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
