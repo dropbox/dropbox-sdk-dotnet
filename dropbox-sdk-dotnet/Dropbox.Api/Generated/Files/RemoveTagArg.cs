@@ -31,7 +31,8 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="RemoveTagArg" /> class.</para>
         /// </summary>
         /// <param name="path">Path to the item to tag.</param>
-        /// <param name="tagText">The tag to remove.</param>
+        /// <param name="tagText">The tag to remove. Will be automatically converted to
+        /// lowercase letters.</param>
         public RemoveTagArg(string path,
                             string tagText)
         {
@@ -81,7 +82,8 @@ namespace Dropbox.Api.Files
         public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>The tag to remove.</para>
+        /// <para>The tag to remove. Will be automatically converted to lowercase
+        /// letters.</para>
         /// </summary>
         public string TagText { get; protected set; }
 

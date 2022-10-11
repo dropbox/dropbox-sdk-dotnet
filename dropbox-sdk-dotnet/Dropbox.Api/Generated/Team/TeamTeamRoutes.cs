@@ -7395,6 +7395,402 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
+        /// <para>Endpoint adds Approve List entries. Changes are effective immediately.
+        /// Changes are committed in transaction. In case of single validation error - all
+        /// entries are rejected. Valid domains (RFC-1034/5) and emails (RFC-5322/822) are
+        /// accepted. Added entries cannot overflow limit of 10000 entries per team. Maximum
+        /// 100 entries per call is allowed.</para>
+        /// </summary>
+        /// <param name="sharingAllowlistAddArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SharingAllowlistAddError"/>.</exception>
+        public t.Task<SharingAllowlistAddResponse> SharingAllowlistAddAsync(SharingAllowlistAddArgs sharingAllowlistAddArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<SharingAllowlistAddArgs, SharingAllowlistAddResponse, SharingAllowlistAddError>(sharingAllowlistAddArgs, "api", "/team/sharing_allowlist/add", "team", global::Dropbox.Api.Team.SharingAllowlistAddArgs.Encoder, global::Dropbox.Api.Team.SharingAllowlistAddResponse.Decoder, global::Dropbox.Api.Team.SharingAllowlistAddError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the sharing allowlist add route.</para>
+        /// </summary>
+        /// <param name="sharingAllowlistAddArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSharingAllowlistAdd(SharingAllowlistAddArgs sharingAllowlistAddArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.SharingAllowlistAddAsync(sharingAllowlistAddArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Endpoint adds Approve List entries. Changes are effective immediately.
+        /// Changes are committed in transaction. In case of single validation error - all
+        /// entries are rejected. Valid domains (RFC-1034/5) and emails (RFC-5322/822) are
+        /// accepted. Added entries cannot overflow limit of 10000 entries per team. Maximum
+        /// 100 entries per call is allowed.</para>
+        /// </summary>
+        /// <param name="domains">List of domains represented by valid string representation
+        /// (RFC-1034/5).</param>
+        /// <param name="emails">List of emails represented by valid string representation
+        /// (RFC-5322/822).</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SharingAllowlistAddError"/>.</exception>
+        public t.Task<SharingAllowlistAddResponse> SharingAllowlistAddAsync(col.IEnumerable<string> domains = null,
+                                                                            col.IEnumerable<string> emails = null)
+        {
+            var sharingAllowlistAddArgs = new SharingAllowlistAddArgs(domains,
+                                                                      emails);
+
+            return this.SharingAllowlistAddAsync(sharingAllowlistAddArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the sharing allowlist add route.</para>
+        /// </summary>
+        /// <param name="domains">List of domains represented by valid string representation
+        /// (RFC-1034/5).</param>
+        /// <param name="emails">List of emails represented by valid string representation
+        /// (RFC-5322/822).</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSharingAllowlistAdd(col.IEnumerable<string> domains = null,
+                                                         col.IEnumerable<string> emails = null,
+                                                         sys.AsyncCallback callback = null,
+                                                         object callbackState = null)
+        {
+            var sharingAllowlistAddArgs = new SharingAllowlistAddArgs(domains,
+                                                                      emails);
+
+            return this.BeginSharingAllowlistAdd(sharingAllowlistAddArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the sharing allowlist add route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SharingAllowlistAddError"/>.</exception>
+        public SharingAllowlistAddResponse EndSharingAllowlistAdd(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<SharingAllowlistAddResponse>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Lists Approve List entries for given team, from newest to oldest, returning
+        /// up to `limit` entries at a time. If there are more than `limit` entries associated
+        /// with the current team, more can be fetched by passing the returned `cursor` to <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.SharingAllowlistListContinueAsync"
+        /// />.</para>
+        /// </summary>
+        /// <param name="sharingAllowlistListArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SharingAllowlistListError"/>.</exception>
+        public t.Task<SharingAllowlistListResponse> SharingAllowlistListAsync(SharingAllowlistListArg sharingAllowlistListArg)
+        {
+            return this.Transport.SendRpcRequestAsync<SharingAllowlistListArg, SharingAllowlistListResponse, SharingAllowlistListError>(sharingAllowlistListArg, "api", "/team/sharing_allowlist/list", "team", global::Dropbox.Api.Team.SharingAllowlistListArg.Encoder, global::Dropbox.Api.Team.SharingAllowlistListResponse.Decoder, global::Dropbox.Api.Team.SharingAllowlistListError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the sharing allowlist list route.</para>
+        /// </summary>
+        /// <param name="sharingAllowlistListArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSharingAllowlistList(SharingAllowlistListArg sharingAllowlistListArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.SharingAllowlistListAsync(sharingAllowlistListArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Lists Approve List entries for given team, from newest to oldest, returning
+        /// up to `limit` entries at a time. If there are more than `limit` entries associated
+        /// with the current team, more can be fetched by passing the returned `cursor` to <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.SharingAllowlistListContinueAsync"
+        /// />.</para>
+        /// </summary>
+        /// <param name="limit">The number of entries to fetch at one time.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SharingAllowlistListError"/>.</exception>
+        public t.Task<SharingAllowlistListResponse> SharingAllowlistListAsync(uint limit = 1000)
+        {
+            var sharingAllowlistListArg = new SharingAllowlistListArg(limit);
+
+            return this.SharingAllowlistListAsync(sharingAllowlistListArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the sharing allowlist list route.</para>
+        /// </summary>
+        /// <param name="limit">The number of entries to fetch at one time.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSharingAllowlistList(uint limit = 1000,
+                                                          sys.AsyncCallback callback = null,
+                                                          object callbackState = null)
+        {
+            var sharingAllowlistListArg = new SharingAllowlistListArg(limit);
+
+            return this.BeginSharingAllowlistList(sharingAllowlistListArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the sharing allowlist list route
+        /// to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SharingAllowlistListError"/>.</exception>
+        public SharingAllowlistListResponse EndSharingAllowlistList(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<SharingAllowlistListResponse>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Lists entries associated with given team, starting from a the cursor. See
+        /// <see cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.SharingAllowlistListAsync"
+        /// />.</para>
+        /// </summary>
+        /// <param name="sharingAllowlistListContinueArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SharingAllowlistListContinueError"/>.</exception>
+        public t.Task<SharingAllowlistListResponse> SharingAllowlistListContinueAsync(SharingAllowlistListContinueArg sharingAllowlistListContinueArg)
+        {
+            return this.Transport.SendRpcRequestAsync<SharingAllowlistListContinueArg, SharingAllowlistListResponse, SharingAllowlistListContinueError>(sharingAllowlistListContinueArg, "api", "/team/sharing_allowlist/list/continue", "team", global::Dropbox.Api.Team.SharingAllowlistListContinueArg.Encoder, global::Dropbox.Api.Team.SharingAllowlistListResponse.Decoder, global::Dropbox.Api.Team.SharingAllowlistListContinueError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the sharing allowlist list continue
+        /// route.</para>
+        /// </summary>
+        /// <param name="sharingAllowlistListContinueArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSharingAllowlistListContinue(SharingAllowlistListContinueArg sharingAllowlistListContinueArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.SharingAllowlistListContinueAsync(sharingAllowlistListContinueArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Lists entries associated with given team, starting from a the cursor. See
+        /// <see cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.SharingAllowlistListAsync"
+        /// />.</para>
+        /// </summary>
+        /// <param name="cursor">The cursor returned from a previous call to <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.SharingAllowlistListAsync" /> or <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.SharingAllowlistListContinueAsync"
+        /// />.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SharingAllowlistListContinueError"/>.</exception>
+        public t.Task<SharingAllowlistListResponse> SharingAllowlistListContinueAsync(string cursor)
+        {
+            var sharingAllowlistListContinueArg = new SharingAllowlistListContinueArg(cursor);
+
+            return this.SharingAllowlistListContinueAsync(sharingAllowlistListContinueArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the sharing allowlist list continue
+        /// route.</para>
+        /// </summary>
+        /// <param name="cursor">The cursor returned from a previous call to <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.SharingAllowlistListAsync" /> or <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.SharingAllowlistListContinueAsync"
+        /// />.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSharingAllowlistListContinue(string cursor,
+                                                                  sys.AsyncCallback callback,
+                                                                  object callbackState = null)
+        {
+            var sharingAllowlistListContinueArg = new SharingAllowlistListContinueArg(cursor);
+
+            return this.BeginSharingAllowlistListContinue(sharingAllowlistListContinueArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the sharing allowlist list
+        /// continue route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SharingAllowlistListContinueError"/>.</exception>
+        public SharingAllowlistListResponse EndSharingAllowlistListContinue(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<SharingAllowlistListResponse>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Endpoint removes Approve List entries. Changes are effective immediately.
+        /// Changes are committed in transaction. In case of single validation error - all
+        /// entries are rejected. Valid domains (RFC-1034/5) and emails (RFC-5322/822) are
+        /// accepted. Entries being removed have to be present on the list. Maximum 1000
+        /// entries per call is allowed.</para>
+        /// </summary>
+        /// <param name="sharingAllowlistRemoveArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SharingAllowlistRemoveError"/>.</exception>
+        public t.Task<SharingAllowlistRemoveResponse> SharingAllowlistRemoveAsync(SharingAllowlistRemoveArgs sharingAllowlistRemoveArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<SharingAllowlistRemoveArgs, SharingAllowlistRemoveResponse, SharingAllowlistRemoveError>(sharingAllowlistRemoveArgs, "api", "/team/sharing_allowlist/remove", "team", global::Dropbox.Api.Team.SharingAllowlistRemoveArgs.Encoder, global::Dropbox.Api.Team.SharingAllowlistRemoveResponse.Decoder, global::Dropbox.Api.Team.SharingAllowlistRemoveError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the sharing allowlist remove route.</para>
+        /// </summary>
+        /// <param name="sharingAllowlistRemoveArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSharingAllowlistRemove(SharingAllowlistRemoveArgs sharingAllowlistRemoveArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.SharingAllowlistRemoveAsync(sharingAllowlistRemoveArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Endpoint removes Approve List entries. Changes are effective immediately.
+        /// Changes are committed in transaction. In case of single validation error - all
+        /// entries are rejected. Valid domains (RFC-1034/5) and emails (RFC-5322/822) are
+        /// accepted. Entries being removed have to be present on the list. Maximum 1000
+        /// entries per call is allowed.</para>
+        /// </summary>
+        /// <param name="domains">List of domains represented by valid string representation
+        /// (RFC-1034/5).</param>
+        /// <param name="emails">List of emails represented by valid string representation
+        /// (RFC-5322/822).</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SharingAllowlistRemoveError"/>.</exception>
+        public t.Task<SharingAllowlistRemoveResponse> SharingAllowlistRemoveAsync(col.IEnumerable<string> domains = null,
+                                                                                  col.IEnumerable<string> emails = null)
+        {
+            var sharingAllowlistRemoveArgs = new SharingAllowlistRemoveArgs(domains,
+                                                                            emails);
+
+            return this.SharingAllowlistRemoveAsync(sharingAllowlistRemoveArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the sharing allowlist remove route.</para>
+        /// </summary>
+        /// <param name="domains">List of domains represented by valid string representation
+        /// (RFC-1034/5).</param>
+        /// <param name="emails">List of emails represented by valid string representation
+        /// (RFC-5322/822).</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginSharingAllowlistRemove(col.IEnumerable<string> domains = null,
+                                                            col.IEnumerable<string> emails = null,
+                                                            sys.AsyncCallback callback = null,
+                                                            object callbackState = null)
+        {
+            var sharingAllowlistRemoveArgs = new SharingAllowlistRemoveArgs(domains,
+                                                                            emails);
+
+            return this.BeginSharingAllowlistRemove(sharingAllowlistRemoveArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the sharing allowlist remove route
+        /// to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="SharingAllowlistRemoveError"/>.</exception>
+        public SharingAllowlistRemoveResponse EndSharingAllowlistRemove(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<SharingAllowlistRemoveResponse>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Sets an archived team folder's status to active.</para>
         /// <para>Permission : Team member file access.</para>
         /// </summary>

@@ -30,12 +30,13 @@ namespace Dropbox.Api.Openid
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="UserInfoResult" /> class.</para>
         /// </summary>
-        /// <param name="familyName">The family name</param>
-        /// <param name="givenName">The given name</param>
-        /// <param name="email">The email</param>
-        /// <param name="emailVerified">The email verified</param>
-        /// <param name="iss">The iss</param>
-        /// <param name="sub">The sub</param>
+        /// <param name="familyName">Last name of user.</param>
+        /// <param name="givenName">First name of user.</param>
+        /// <param name="email">Email address of user.</param>
+        /// <param name="emailVerified">If user is email verified.</param>
+        /// <param name="iss">Issuer of token (in this case Dropbox).</param>
+        /// <param name="sub">An identifier for the user. This is the Dropbox account_id, a
+        /// string value such as dbid:AAH4f99T0taONIb-OurWxbNQ6ywGRopQngc.</param>
         public UserInfoResult(string familyName = null,
                               string givenName = null,
                               string email = null,
@@ -74,32 +75,33 @@ namespace Dropbox.Api.Openid
         }
 
         /// <summary>
-        /// <para>Gets the family name of the user info result</para>
+        /// <para>Last name of user.</para>
         /// </summary>
         public string FamilyName { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the given name of the user info result</para>
+        /// <para>First name of user.</para>
         /// </summary>
         public string GivenName { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the email of the user info result</para>
+        /// <para>Email address of user.</para>
         /// </summary>
         public string Email { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the email verified of the user info result</para>
+        /// <para>If user is email verified.</para>
         /// </summary>
         public bool? EmailVerified { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the iss of the user info result</para>
+        /// <para>Issuer of token (in this case Dropbox).</para>
         /// </summary>
         public string Iss { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the sub of the user info result</para>
+        /// <para>An identifier for the user. This is the Dropbox account_id, a string value
+        /// such as dbid:AAH4f99T0taONIb-OurWxbNQ6ywGRopQngc.</para>
         /// </summary>
         public string Sub { get; protected set; }
 

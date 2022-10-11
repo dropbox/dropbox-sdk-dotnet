@@ -11,30 +11,30 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed admin reminder settings for requests to join the team.</para>
+    /// <para>Changed File Provider Migration policy for team.</para>
     /// </summary>
-    public class AdminEmailRemindersChangedDetails
+    public class FileProviderMigrationPolicyChangedDetails
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<AdminEmailRemindersChangedDetails> Encoder = new AdminEmailRemindersChangedDetailsEncoder();
+        internal static enc.StructEncoder<FileProviderMigrationPolicyChangedDetails> Encoder = new FileProviderMigrationPolicyChangedDetailsEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<AdminEmailRemindersChangedDetails> Decoder = new AdminEmailRemindersChangedDetailsDecoder();
+        internal static enc.StructDecoder<FileProviderMigrationPolicyChangedDetails> Decoder = new FileProviderMigrationPolicyChangedDetailsDecoder();
 
         /// <summary>
         /// <para>Initializes a new instance of the <see
-        /// cref="AdminEmailRemindersChangedDetails" /> class.</para>
+        /// cref="FileProviderMigrationPolicyChangedDetails" /> class.</para>
         /// </summary>
         /// <param name="newValue">To.</param>
         /// <param name="previousValue">From.</param>
-        public AdminEmailRemindersChangedDetails(AdminEmailRemindersPolicy newValue,
-                                                 AdminEmailRemindersPolicy previousValue)
+        public FileProviderMigrationPolicyChangedDetails(global::Dropbox.Api.TeamPolicies.FileProviderMigrationPolicyState newValue,
+                                                         global::Dropbox.Api.TeamPolicies.FileProviderMigrationPolicyState previousValue)
         {
             if (newValue == null)
             {
@@ -52,41 +52,41 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Initializes a new instance of the <see
-        /// cref="AdminEmailRemindersChangedDetails" /> class.</para>
+        /// cref="FileProviderMigrationPolicyChangedDetails" /> class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
-        public AdminEmailRemindersChangedDetails()
+        public FileProviderMigrationPolicyChangedDetails()
         {
         }
 
         /// <summary>
         /// <para>To.</para>
         /// </summary>
-        public AdminEmailRemindersPolicy NewValue { get; protected set; }
+        public global::Dropbox.Api.TeamPolicies.FileProviderMigrationPolicyState NewValue { get; protected set; }
 
         /// <summary>
         /// <para>From.</para>
         /// </summary>
-        public AdminEmailRemindersPolicy PreviousValue { get; protected set; }
+        public global::Dropbox.Api.TeamPolicies.FileProviderMigrationPolicyState PreviousValue { get; protected set; }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="AdminEmailRemindersChangedDetails" />.</para>
+        /// <para>Encoder for  <see cref="FileProviderMigrationPolicyChangedDetails" />.</para>
         /// </summary>
-        private class AdminEmailRemindersChangedDetailsEncoder : enc.StructEncoder<AdminEmailRemindersChangedDetails>
+        private class FileProviderMigrationPolicyChangedDetailsEncoder : enc.StructEncoder<FileProviderMigrationPolicyChangedDetails>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(AdminEmailRemindersChangedDetails value, enc.IJsonWriter writer)
+            public override void EncodeFields(FileProviderMigrationPolicyChangedDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.AdminEmailRemindersPolicy.Encoder);
-                WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.AdminEmailRemindersPolicy.Encoder);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamPolicies.FileProviderMigrationPolicyState.Encoder);
+                WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamPolicies.FileProviderMigrationPolicyState.Encoder);
             }
         }
 
@@ -96,18 +96,18 @@ namespace Dropbox.Api.TeamLog
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="AdminEmailRemindersChangedDetails" />.</para>
+        /// <para>Decoder for  <see cref="FileProviderMigrationPolicyChangedDetails" />.</para>
         /// </summary>
-        private class AdminEmailRemindersChangedDetailsDecoder : enc.StructDecoder<AdminEmailRemindersChangedDetails>
+        private class FileProviderMigrationPolicyChangedDetailsDecoder : enc.StructDecoder<FileProviderMigrationPolicyChangedDetails>
         {
             /// <summary>
             /// <para>Create a new instance of type <see
-            /// cref="AdminEmailRemindersChangedDetails" />.</para>
+            /// cref="FileProviderMigrationPolicyChangedDetails" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override AdminEmailRemindersChangedDetails Create()
+            protected override FileProviderMigrationPolicyChangedDetails Create()
             {
-                return new AdminEmailRemindersChangedDetails();
+                return new FileProviderMigrationPolicyChangedDetails();
             }
 
             /// <summary>
@@ -116,15 +116,15 @@ namespace Dropbox.Api.TeamLog
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(AdminEmailRemindersChangedDetails value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(FileProviderMigrationPolicyChangedDetails value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.AdminEmailRemindersPolicy.Decoder.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.TeamPolicies.FileProviderMigrationPolicyState.Decoder.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.AdminEmailRemindersPolicy.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.TeamPolicies.FileProviderMigrationPolicyState.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

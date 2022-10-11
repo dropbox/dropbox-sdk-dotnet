@@ -8677,6 +8677,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// FileProviderMigrationPolicyChanged</para>
+        /// </summary>
+        public bool IsFileProviderMigrationPolicyChanged
+        {
+            get
+            {
+                return this is FileProviderMigrationPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FileProviderMigrationPolicyChanged, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public FileProviderMigrationPolicyChanged AsFileProviderMigrationPolicyChanged
+        {
+            get
+            {
+                return this as FileProviderMigrationPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// FileRequestsChangePolicy</para>
         /// </summary>
         public bool IsFileRequestsChangePolicy
@@ -13332,6 +13356,12 @@ namespace Dropbox.Api.TeamLog
                     FileLockingPolicyChanged.Encoder.EncodeFields((FileLockingPolicyChanged)value, writer);
                     return;
                 }
+                if (value is FileProviderMigrationPolicyChanged)
+                {
+                    WriteProperty(".tag", "file_provider_migration_policy_changed", writer, enc.StringEncoder.Instance);
+                    FileProviderMigrationPolicyChanged.Encoder.EncodeFields((FileProviderMigrationPolicyChanged)value, writer);
+                    return;
+                }
                 if (value is FileRequestsChangePolicy)
                 {
                     WriteProperty(".tag", "file_requests_change_policy", writer, enc.StringEncoder.Instance);
@@ -14738,6 +14768,8 @@ namespace Dropbox.Api.TeamLog
                         return FileCommentsChangePolicy.Decoder.DecodeFields(reader);
                     case "file_locking_policy_changed":
                         return FileLockingPolicyChanged.Decoder.DecodeFields(reader);
+                    case "file_provider_migration_policy_changed":
+                        return FileProviderMigrationPolicyChanged.Decoder.DecodeFields(reader);
                     case "file_requests_change_policy":
                         return FileRequestsChangePolicy.Decoder.DecodeFields(reader);
                     case "file_requests_emails_enabled":
@@ -39974,8 +40006,8 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>(team_policies) Changed admin email reminder policy for team requests to
-        /// join</para>
+        /// <para>(team_policies) Changed admin reminder settings for requests to join the
+        /// team</para>
         /// </summary>
         public sealed class AdminEmailRemindersChanged : EventTypeArg
         {
@@ -41960,6 +41992,77 @@ namespace Dropbox.Api.TeamLog
                 protected override FileLockingPolicyChanged Create()
                 {
                     return FileLockingPolicyChanged.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed File Provider Migration policy for team</para>
+        /// </summary>
+        public sealed class FileProviderMigrationPolicyChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FileProviderMigrationPolicyChanged> Encoder = new FileProviderMigrationPolicyChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FileProviderMigrationPolicyChanged> Decoder = new FileProviderMigrationPolicyChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="FileProviderMigrationPolicyChanged" /> class.</para>
+            /// </summary>
+            private FileProviderMigrationPolicyChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FileProviderMigrationPolicyChanged</para>
+            /// </summary>
+            public static readonly FileProviderMigrationPolicyChanged Instance = new FileProviderMigrationPolicyChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FileProviderMigrationPolicyChanged" />.</para>
+            /// </summary>
+            private class FileProviderMigrationPolicyChangedEncoder : enc.StructEncoder<FileProviderMigrationPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FileProviderMigrationPolicyChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FileProviderMigrationPolicyChanged" />.</para>
+            /// </summary>
+            private class FileProviderMigrationPolicyChangedDecoder : enc.StructDecoder<FileProviderMigrationPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="FileProviderMigrationPolicyChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FileProviderMigrationPolicyChanged Create()
+                {
+                    return FileProviderMigrationPolicyChanged.Instance;
                 }
 
             }

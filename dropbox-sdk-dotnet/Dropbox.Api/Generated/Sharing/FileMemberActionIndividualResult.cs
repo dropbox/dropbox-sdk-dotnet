@@ -151,8 +151,11 @@ namespace Dropbox.Api.Sharing
         #endregion
 
         /// <summary>
-        /// <para>Member was successfully removed from this file. If AccessLevel is given, the
-        /// member still has access via a parent shared folder.</para>
+        /// <para>Part of the response for both add_file_member and remove_file_member_v1
+        /// (deprecated). For add_file_member, indicates giving access was successful and at
+        /// what AccessLevel. For remove_file_member_v1, indicates member was successfully
+        /// removed from the file. If AccessLevel is given, the member still has access via a
+        /// parent shared folder.</para>
         /// </summary>
         public sealed class Success : FileMemberActionIndividualResult
         {
