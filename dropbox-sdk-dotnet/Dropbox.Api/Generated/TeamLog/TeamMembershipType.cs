@@ -80,6 +80,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Guest</para>
+        /// </summary>
+        public bool IsGuest
+        {
+            get
+            {
+                return this is Guest;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Guest, or <c>null</c>.</para>
+        /// </summary>
+        public Guest AsGuest
+        {
+            get
+            {
+                return this as Guest;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +149,12 @@ namespace Dropbox.Api.TeamLog
                     Full.Encoder.EncodeFields((Full)value, writer);
                     return;
                 }
+                if (value is Guest)
+                {
+                    WriteProperty(".tag", "guest", writer, enc.StringEncoder.Instance);
+                    Guest.Encoder.EncodeFields((Guest)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -169,6 +197,8 @@ namespace Dropbox.Api.TeamLog
                         return Free.Decoder.DecodeFields(reader);
                     case "full":
                         return Full.Decoder.DecodeFields(reader);
+                    case "guest":
+                        return Guest.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -308,6 +338,75 @@ namespace Dropbox.Api.TeamLog
                 protected override Full Create()
                 {
                     return Full.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The guest object</para>
+        /// </summary>
+        public sealed class Guest : TeamMembershipType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Guest> Encoder = new GuestEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Guest> Decoder = new GuestDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Guest" /> class.</para>
+            /// </summary>
+            private Guest()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Guest</para>
+            /// </summary>
+            public static readonly Guest Instance = new Guest();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Guest" />.</para>
+            /// </summary>
+            private class GuestEncoder : enc.StructEncoder<Guest>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Guest value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Guest" />.</para>
+            /// </summary>
+            private class GuestDecoder : enc.StructDecoder<Guest>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Guest" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Guest Create()
+                {
+                    return Guest.Instance;
                 }
 
             }

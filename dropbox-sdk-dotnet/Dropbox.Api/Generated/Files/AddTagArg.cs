@@ -31,7 +31,8 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="AddTagArg" /> class.</para>
         /// </summary>
         /// <param name="path">Path to the item to be tagged.</param>
-        /// <param name="tagText">The value of the tag to add.</param>
+        /// <param name="tagText">The value of the tag to add. Will be automatically converted
+        /// to lowercase letters.</param>
         public AddTagArg(string path,
                          string tagText)
         {
@@ -81,7 +82,8 @@ namespace Dropbox.Api.Files
         public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>The value of the tag to add.</para>
+        /// <para>The value of the tag to add. Will be automatically converted to lowercase
+        /// letters.</para>
         /// </summary>
         public string TagText { get; protected set; }
 

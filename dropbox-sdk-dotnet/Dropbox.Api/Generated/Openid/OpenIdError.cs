@@ -11,48 +11,48 @@ namespace Dropbox.Api.Openid
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The user info error object</para>
+    /// <para>The open id error object</para>
     /// </summary>
-    public class UserInfoError
+    public class OpenIdError
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<UserInfoError> Encoder = new UserInfoErrorEncoder();
+        internal static enc.StructEncoder<OpenIdError> Encoder = new OpenIdErrorEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<UserInfoError> Decoder = new UserInfoErrorDecoder();
+        internal static enc.StructDecoder<OpenIdError> Decoder = new OpenIdErrorDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="UserInfoError" /> class.</para>
+        /// <para>Initializes a new instance of the <see cref="OpenIdError" /> class.</para>
         /// </summary>
-        public UserInfoError()
+        public OpenIdError()
         {
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is OpenidError</para>
+        /// <para>Gets a value indicating whether this instance is IncorrectOpenidScopes</para>
         /// </summary>
-        public bool IsOpenidError
+        public bool IsIncorrectOpenidScopes
         {
             get
             {
-                return this is OpenidError;
+                return this is IncorrectOpenidScopes;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a OpenidError, or <c>null</c>.</para>
+        /// <para>Gets this instance as a IncorrectOpenidScopes, or <c>null</c>.</para>
         /// </summary>
-        public OpenidError AsOpenidError
+        public IncorrectOpenidScopes AsIncorrectOpenidScopes
         {
             get
             {
-                return this as OpenidError;
+                return this as IncorrectOpenidScopes;
             }
         }
 
@@ -81,21 +81,21 @@ namespace Dropbox.Api.Openid
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="UserInfoError" />.</para>
+        /// <para>Encoder for  <see cref="OpenIdError" />.</para>
         /// </summary>
-        private class UserInfoErrorEncoder : enc.StructEncoder<UserInfoError>
+        private class OpenIdErrorEncoder : enc.StructEncoder<OpenIdError>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(UserInfoError value, enc.IJsonWriter writer)
+            public override void EncodeFields(OpenIdError value, enc.IJsonWriter writer)
             {
-                if (value is OpenidError)
+                if (value is IncorrectOpenidScopes)
                 {
-                    WriteProperty(".tag", "openid_error", writer, enc.StringEncoder.Instance);
-                    OpenidError.Encoder.EncodeFields((OpenidError)value, writer);
+                    WriteProperty(".tag", "incorrect_openid_scopes", writer, enc.StringEncoder.Instance);
+                    IncorrectOpenidScopes.Encoder.EncodeFields((IncorrectOpenidScopes)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -113,17 +113,17 @@ namespace Dropbox.Api.Openid
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="UserInfoError" />.</para>
+        /// <para>Decoder for  <see cref="OpenIdError" />.</para>
         /// </summary>
-        private class UserInfoErrorDecoder : enc.UnionDecoder<UserInfoError>
+        private class OpenIdErrorDecoder : enc.UnionDecoder<OpenIdError>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="UserInfoError" />.</para>
+            /// <para>Create a new instance of type <see cref="OpenIdError" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override UserInfoError Create()
+            protected override OpenIdError Create()
             {
-                return new UserInfoError();
+                return new OpenIdError();
             }
 
             /// <summary>
@@ -132,12 +132,12 @@ namespace Dropbox.Api.Openid
             /// <param name="tag">The tag.</param>
             /// <param name="reader">The json reader.</param>
             /// <returns>The decoded object.</returns>
-            protected override UserInfoError Decode(string tag, enc.IJsonReader reader)
+            protected override OpenIdError Decode(string tag, enc.IJsonReader reader)
             {
                 switch (tag)
                 {
-                    case "openid_error":
-                        return OpenidError.Decoder.DecodeFields(reader);
+                    case "incorrect_openid_scopes":
+                        return IncorrectOpenidScopes.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -147,59 +147,49 @@ namespace Dropbox.Api.Openid
         #endregion
 
         /// <summary>
-        /// <para>The openid error object</para>
+        /// <para>Missing openid claims for the associated access token.</para>
         /// </summary>
-        public sealed class OpenidError : UserInfoError
+        public sealed class IncorrectOpenidScopes : OpenIdError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<OpenidError> Encoder = new OpenidErrorEncoder();
+            internal static enc.StructEncoder<IncorrectOpenidScopes> Encoder = new IncorrectOpenidScopesEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<OpenidError> Decoder = new OpenidErrorDecoder();
+            internal static enc.StructDecoder<IncorrectOpenidScopes> Decoder = new IncorrectOpenidScopesDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="OpenidError" />
+            /// <para>Initializes a new instance of the <see cref="IncorrectOpenidScopes" />
             /// class.</para>
             /// </summary>
-            /// <param name="value">The value</param>
-            public OpenidError(OpenIdError value)
-            {
-                this.Value = value;
-            }
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="OpenidError" />
-            /// class.</para>
-            /// </summary>
-            private OpenidError()
+            private IncorrectOpenidScopes()
             {
             }
 
             /// <summary>
-            /// <para>Gets the value of this instance.</para>
+            /// <para>A singleton instance of IncorrectOpenidScopes</para>
             /// </summary>
-            public OpenIdError Value { get; private set; }
+            public static readonly IncorrectOpenidScopes Instance = new IncorrectOpenidScopes();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="OpenidError" />.</para>
+            /// <para>Encoder for  <see cref="IncorrectOpenidScopes" />.</para>
             /// </summary>
-            private class OpenidErrorEncoder : enc.StructEncoder<OpenidError>
+            private class IncorrectOpenidScopesEncoder : enc.StructEncoder<IncorrectOpenidScopes>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(OpenidError value, enc.IJsonWriter writer)
+                public override void EncodeFields(IncorrectOpenidScopes value, enc.IJsonWriter writer)
                 {
-                    WriteProperty("openid_error", value.Value, writer, global::Dropbox.Api.Openid.OpenIdError.Encoder);
                 }
             }
 
@@ -208,37 +198,20 @@ namespace Dropbox.Api.Openid
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="OpenidError" />.</para>
+            /// <para>Decoder for  <see cref="IncorrectOpenidScopes" />.</para>
             /// </summary>
-            private class OpenidErrorDecoder : enc.StructDecoder<OpenidError>
+            private class IncorrectOpenidScopesDecoder : enc.StructDecoder<IncorrectOpenidScopes>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="OpenidError" />.</para>
+                /// <para>Create a new instance of type <see cref="IncorrectOpenidScopes"
+                /// />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override OpenidError Create()
+                protected override IncorrectOpenidScopes Create()
                 {
-                    return new OpenidError();
+                    return IncorrectOpenidScopes.Instance;
                 }
 
-                /// <summary>
-                /// <para>Set given field.</para>
-                /// </summary>
-                /// <param name="value">The field value.</param>
-                /// <param name="fieldName">The field name.</param>
-                /// <param name="reader">The json reader.</param>
-                protected override void SetField(OpenidError value, string fieldName, enc.IJsonReader reader)
-                {
-                    switch (fieldName)
-                    {
-                        case "openid_error":
-                            value.Value = global::Dropbox.Api.Openid.OpenIdError.Decoder.Decode(reader);
-                            break;
-                        default:
-                            reader.Skip();
-                            break;
-                    }
-                }
             }
 
             #endregion
@@ -247,7 +220,7 @@ namespace Dropbox.Api.Openid
         /// <summary>
         /// <para>The other object</para>
         /// </summary>
-        public sealed class Other : UserInfoError
+        public sealed class Other : OpenIdError
         {
             #pragma warning disable 108
 

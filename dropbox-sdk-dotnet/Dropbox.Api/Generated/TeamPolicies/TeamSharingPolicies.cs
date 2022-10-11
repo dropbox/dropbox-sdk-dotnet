@@ -38,9 +38,11 @@ namespace Dropbox.Api.TeamPolicies
         /// join.</param>
         /// <param name="sharedLinkCreatePolicy">Who can view shared links owned by team
         /// members.</param>
+        /// <param name="groupCreationPolicy">Who can create groups.</param>
         public TeamSharingPolicies(SharedFolderMemberPolicy sharedFolderMemberPolicy,
                                    SharedFolderJoinPolicy sharedFolderJoinPolicy,
-                                   SharedLinkCreatePolicy sharedLinkCreatePolicy)
+                                   SharedLinkCreatePolicy sharedLinkCreatePolicy,
+                                   GroupCreation groupCreationPolicy)
         {
             if (sharedFolderMemberPolicy == null)
             {
@@ -57,9 +59,15 @@ namespace Dropbox.Api.TeamPolicies
                 throw new sys.ArgumentNullException("sharedLinkCreatePolicy");
             }
 
+            if (groupCreationPolicy == null)
+            {
+                throw new sys.ArgumentNullException("groupCreationPolicy");
+            }
+
             this.SharedFolderMemberPolicy = sharedFolderMemberPolicy;
             this.SharedFolderJoinPolicy = sharedFolderJoinPolicy;
             this.SharedLinkCreatePolicy = sharedLinkCreatePolicy;
+            this.GroupCreationPolicy = groupCreationPolicy;
         }
 
         /// <summary>
@@ -88,6 +96,11 @@ namespace Dropbox.Api.TeamPolicies
         /// </summary>
         public SharedLinkCreatePolicy SharedLinkCreatePolicy { get; protected set; }
 
+        /// <summary>
+        /// <para>Who can create groups.</para>
+        /// </summary>
+        public GroupCreation GroupCreationPolicy { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -105,6 +118,7 @@ namespace Dropbox.Api.TeamPolicies
                 WriteProperty("shared_folder_member_policy", value.SharedFolderMemberPolicy, writer, global::Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy.Encoder);
                 WriteProperty("shared_folder_join_policy", value.SharedFolderJoinPolicy, writer, global::Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Encoder);
                 WriteProperty("shared_link_create_policy", value.SharedLinkCreatePolicy, writer, global::Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.Encoder);
+                WriteProperty("group_creation_policy", value.GroupCreationPolicy, writer, global::Dropbox.Api.TeamPolicies.GroupCreation.Encoder);
             }
         }
 
@@ -145,6 +159,9 @@ namespace Dropbox.Api.TeamPolicies
                         break;
                     case "shared_link_create_policy":
                         value.SharedLinkCreatePolicy = global::Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.Decoder.Decode(reader);
+                        break;
+                    case "group_creation_policy":
+                        value.GroupCreationPolicy = global::Dropbox.Api.TeamPolicies.GroupCreation.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();
