@@ -47,7 +47,7 @@ This SDK is distributed under the MIT license, please see [LICENSE][license] for
 
 [logo]: https://cfl.dropboxstatic.com/static/images/sdk/dotnet_banner.png
 [repo]: https://github.com/dropbox/dropbox-sdk-dotnet
-[documentation]: https://dropbox.github.io/dropbox-sdk-dotnet/
+[documentation]: https://dropbox.github.io/dropbox-sdk-dotnet/gh-pages/obj/api/Dropbox.Api.html
 [examples]: https://github.com/dropbox/dropbox-sdk-dotnet/tree/main/dropbox-sdk-dotnet/Examples
 [license]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/LICENSE
 [contributing]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/CONTRIBUTING.md
