@@ -37,11 +37,13 @@ namespace Dropbox.Api.Team
         /// team.</param>
         /// <param name="numProvisionedUsers">The number of accounts that have been invited or
         /// are already active members of the team.</param>
+        /// <param name="numUsedLicenses">The number of licenses used on the team.</param>
         /// <param name="policies">The policies</param>
         public TeamGetInfoResult(string name,
                                  string teamId,
                                  uint numLicensedUsers,
                                  uint numProvisionedUsers,
+                                 uint numUsedLicenses,
                                  global::Dropbox.Api.TeamPolicies.TeamMemberPolicies policies)
         {
             if (name == null)
@@ -63,6 +65,7 @@ namespace Dropbox.Api.Team
             this.TeamId = teamId;
             this.NumLicensedUsers = numLicensedUsers;
             this.NumProvisionedUsers = numProvisionedUsers;
+            this.NumUsedLicenses = numUsedLicenses;
             this.Policies = policies;
         }
 
@@ -99,6 +102,11 @@ namespace Dropbox.Api.Team
         public uint NumProvisionedUsers { get; protected set; }
 
         /// <summary>
+        /// <para>The number of licenses used on the team.</para>
+        /// </summary>
+        public uint NumUsedLicenses { get; protected set; }
+
+        /// <summary>
         /// <para>Gets the policies of the team get info result</para>
         /// </summary>
         public global::Dropbox.Api.TeamPolicies.TeamMemberPolicies Policies { get; protected set; }
@@ -121,6 +129,7 @@ namespace Dropbox.Api.Team
                 WriteProperty("team_id", value.TeamId, writer, enc.StringEncoder.Instance);
                 WriteProperty("num_licensed_users", value.NumLicensedUsers, writer, enc.UInt32Encoder.Instance);
                 WriteProperty("num_provisioned_users", value.NumProvisionedUsers, writer, enc.UInt32Encoder.Instance);
+                WriteProperty("num_used_licenses", value.NumUsedLicenses, writer, enc.UInt32Encoder.Instance);
                 WriteProperty("policies", value.Policies, writer, global::Dropbox.Api.TeamPolicies.TeamMemberPolicies.Encoder);
             }
         }
@@ -165,6 +174,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "num_provisioned_users":
                         value.NumProvisionedUsers = enc.UInt32Decoder.Instance.Decode(reader);
+                        break;
+                    case "num_used_licenses":
+                        value.NumUsedLicenses = enc.UInt32Decoder.Instance.Decode(reader);
                         break;
                     case "policies":
                         value.Policies = global::Dropbox.Api.TeamPolicies.TeamMemberPolicies.Decoder.Decode(reader);

@@ -8793,6 +8793,30 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// FolderLinkRestrictionPolicyChanged</para>
+        /// </summary>
+        public bool IsFolderLinkRestrictionPolicyChanged
+        {
+            get
+            {
+                return this is FolderLinkRestrictionPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FolderLinkRestrictionPolicyChanged, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public FolderLinkRestrictionPolicyChanged AsFolderLinkRestrictionPolicyChanged
+        {
+            get
+            {
+                return this as FolderLinkRestrictionPolicyChanged;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is GoogleSsoChangePolicy</para>
         /// </summary>
         public bool IsGoogleSsoChangePolicy
@@ -13386,6 +13410,12 @@ namespace Dropbox.Api.TeamLog
                     FileTransfersPolicyChanged.Encoder.EncodeFields((FileTransfersPolicyChanged)value, writer);
                     return;
                 }
+                if (value is FolderLinkRestrictionPolicyChanged)
+                {
+                    WriteProperty(".tag", "folder_link_restriction_policy_changed", writer, enc.StringEncoder.Instance);
+                    FolderLinkRestrictionPolicyChanged.Encoder.EncodeFields((FolderLinkRestrictionPolicyChanged)value, writer);
+                    return;
+                }
                 if (value is GoogleSsoChangePolicy)
                 {
                     WriteProperty(".tag", "google_sso_change_policy", writer, enc.StringEncoder.Instance);
@@ -14778,6 +14808,8 @@ namespace Dropbox.Api.TeamLog
                         return FileRequestsEmailsRestrictedToTeamOnly.Decoder.DecodeFields(reader);
                     case "file_transfers_policy_changed":
                         return FileTransfersPolicyChanged.Decoder.DecodeFields(reader);
+                    case "folder_link_restriction_policy_changed":
+                        return FolderLinkRestrictionPolicyChanged.Decoder.DecodeFields(reader);
                     case "google_sso_change_policy":
                         return GoogleSsoChangePolicy.Decoder.DecodeFields(reader);
                     case "group_user_management_change_policy":
@@ -42351,6 +42383,77 @@ namespace Dropbox.Api.TeamLog
                 protected override FileTransfersPolicyChanged Create()
                 {
                     return FileTransfersPolicyChanged.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed folder link restrictions policy for team</para>
+        /// </summary>
+        public sealed class FolderLinkRestrictionPolicyChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FolderLinkRestrictionPolicyChanged> Encoder = new FolderLinkRestrictionPolicyChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FolderLinkRestrictionPolicyChanged> Decoder = new FolderLinkRestrictionPolicyChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="FolderLinkRestrictionPolicyChanged" /> class.</para>
+            /// </summary>
+            private FolderLinkRestrictionPolicyChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FolderLinkRestrictionPolicyChanged</para>
+            /// </summary>
+            public static readonly FolderLinkRestrictionPolicyChanged Instance = new FolderLinkRestrictionPolicyChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FolderLinkRestrictionPolicyChanged" />.</para>
+            /// </summary>
+            private class FolderLinkRestrictionPolicyChangedEncoder : enc.StructEncoder<FolderLinkRestrictionPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FolderLinkRestrictionPolicyChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FolderLinkRestrictionPolicyChanged" />.</para>
+            /// </summary>
+            private class FolderLinkRestrictionPolicyChangedDecoder : enc.StructDecoder<FolderLinkRestrictionPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="FolderLinkRestrictionPolicyChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FolderLinkRestrictionPolicyChanged Create()
+                {
+                    return FolderLinkRestrictionPolicyChanged.Instance;
                 }
 
             }
