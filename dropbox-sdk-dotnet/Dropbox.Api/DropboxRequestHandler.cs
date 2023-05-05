@@ -272,7 +272,7 @@ namespace Dropbox.Api
 
             var bodyContent = new FormUrlEncodedContent(parameters);
 
-            var response = await this.defaultHttpClient.PostAsync(url, bodyContent).ConfigureAwait(false);
+            var response = await this.GetHttpClient(HostType.Api).PostAsync(url, bodyContent).ConfigureAwait(false);
 
             // if response is an invalid grant, we want to throw this exception rather than the one thrown in
             // response.EnsureSuccessStatusCode();
