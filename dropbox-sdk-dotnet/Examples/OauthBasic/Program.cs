@@ -13,10 +13,10 @@ namespace OauthTest
     partial class Program
     {
         // Add an ApiKey (from https://www.dropbox.com/developers/apps) here
-        private const string ApiKey = "XXXXXXXXXXXXXXX";
+        private const string ApiKey = "XXXXXXXXXXXXXXXX";
 
         // Add an ApiSecret (from https://www.dropbox.com/developers/apps) here
-        private const string ApiSecret = "XXXXXXXXXXXXXXX";
+        private const string ApiSecret = "XXXXXXXXXXXXXXXX";
 
         // This loopback host is for demo purpose. If this port is not
         // available on your machine you need to update this URL with an unused port.
@@ -70,7 +70,7 @@ namespace OauthTest
 
             // Specify socket level timeout which decides maximum waiting time when no bytes are
             // received by the socket.
-            var httpClient = new HttpClient(new WebRequestHandler { ReadWriteTimeout = 10 * 1000 })
+            var httpClient = new HttpClient(new HttpClientHandler())
             {
                 // Specify request level timeout which decides maximum time that can be spent on
                 // download/upload files.
@@ -84,7 +84,30 @@ namespace OauthTest
                     HttpClient = httpClient
                 };
 
-                var client = new DropboxClient(Settings.Default.AccessToken, Settings.Default.RefreshToken, ApiKey, ApiSecret, config);
+                string apiKey = Settings.Default.ApiKey;
+                while (string.IsNullOrWhiteSpace(apiKey))
+                {
+                    Console.WriteLine("Create a Dropbox App at https://www.dropbox.com/developers/apps.");
+                    Console.Write("Enter the API Key (or 'Quit' to exit): ");
+                    apiKey = Console.ReadLine();
+                    if (apiKey.ToLower() == "quit")
+                    {
+                        Console.WriteLine("The API Key is required to connect to Dropbox.");
+                        apiKey = "";
+                        break;
+                    }
+                    else
+                    {
+                        Settings.Default.ApiKey = apiKey;
+                    }
+                }
+
+                var accessToken = Settings.Default.AccessToken;
+
+                if (string.IsNullOrEmpty(accessToken) && !string.IsNullOrWhiteSpace(apiKey))
+
+
+                    var client = new DropboxClient(Settings.Default.AccessToken, Settings.Default.RefreshToken, ApiKey, ApiSecret, config);
 
                 // This call should succeed since the correct scope has been acquired
                 await GetCurrentAccount(client);

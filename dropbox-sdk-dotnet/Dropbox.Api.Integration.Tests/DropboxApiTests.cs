@@ -82,10 +82,11 @@ namespace Dropbox.Api.Tests
 
             userRefreshToken = config["userRefreshToken"];
             userAccessToken = config["userAccessToken"];
+            userAccessToken = "";
             client = new DropboxClient(userAccessToken);
 
             var teamToken = config["teamAccessToken"];
-            teamClient = new DropboxTeamClient(teamToken);
+            //teamClient = new DropboxTeamClient(teamToken);
 
             appClient = new DropboxAppClient(appKey, appSecret);
         }
@@ -116,7 +117,7 @@ namespace Dropbox.Api.Tests
         [TestCleanup]
         public void Cleanup()
         {
-            var result = client.Files.ListFolderAsync(TestingPath).Result;
+            var result = client?.Files.ListFolderAsync(TestingPath).Result;
 
             foreach (var entry in result.Entries)
             {
