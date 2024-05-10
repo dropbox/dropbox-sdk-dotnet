@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - name: Add .Net 3.5 Framework
+      - name: Add .Net 5 Framework
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '5.x'
@@ -38,7 +38,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - name: Add .Net 3.5 Framework
+      - name: Add .Net 5 Framework
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '5.x'
@@ -74,7 +74,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - name: Add .Net 3.5 Framework
+      - name: Add .Net 5 Framework
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '5.x'
