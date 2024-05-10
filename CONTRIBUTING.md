@@ -49,19 +49,9 @@ You can use [dotnet-format](https://github.com/dotnet/format) to lint from the c
 
 ```sh
 # Install a recent dotnet-format build
-dotnet tool install -g dotnet-format --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
+dotnet tool install -g dotnet-format --version "5.*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
 # Optionally omit `--check` to auto-fix lint issues
 dotnet format --check --fix-whitespace --fix-style info --fix-analyzers info dropbox-sdk-dotnet/
-```
-
-### Updating Generated Code
-
-Install PowerShell and execute `./scripts/generate_stone.ps1` to regenerate Stone types.
-
-```sh
-git submodule init
-git submodule update --remote --recursive
-./scripts/generate_stone.ps1
 ```
 
 ### Cutting New Versions (for Dropboxers)
