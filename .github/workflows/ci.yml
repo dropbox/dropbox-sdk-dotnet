@@ -15,6 +15,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
+      - name: Add .Net 3.5 Framework
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '5.x'
       - name: Run Unit Tests
         # We don't have a good cross-platform way of splitting long lines
         run: |
@@ -34,6 +38,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
+      - name: Add .Net 3.5 Framework
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '5.x'
       - name: Test Legacy User
         env:
           DROPBOX_INTEGRATION_appKey: ${{ secrets.LEGACY_APP_KEY }}
@@ -66,6 +74,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
+      - name: Add .Net 3.5 Framework
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '5.x'
       - name: Run Linter
         run: |
           # Install latest dotnet-format
