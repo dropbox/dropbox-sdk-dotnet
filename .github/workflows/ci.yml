@@ -82,5 +82,7 @@ jobs:
         run: |
           # Install latest dotnet-format
           dotnet tool install -g dotnet-format --version "5.*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
+          dotnet format --version
+          dotnet --version
           dotnet restore dropbox-sdk-dotnet/
           dotnet format --check --fix-whitespace --fix-style warn --fix-analyzers warn dropbox-sdk-dotnet/
