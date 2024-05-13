@@ -24,7 +24,7 @@ jobs:
         run: |
           dotnet test dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests --collect:"XPlat Code Coverage" -- 'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
       - name: Publish Coverage
-        uses: codecov/codecov-action@v1.3.2
+        uses: codecov/codecov-action@v4
         if: matrix.os == 'ubuntu-latest'
         with:
           flags: unit
@@ -61,7 +61,7 @@ jobs:
         run: |
           dotnet test dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests --collect:"XPlat Code Coverage" -- 'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
       - name: Publish Coverage
-        uses: codecov/codecov-action@v1.3.2
+        uses: codecov/codecov-action@v4
         if: matrix.os == 'ubuntu-latest'
         with:
           flags: integration
