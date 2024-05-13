@@ -23,13 +23,13 @@ jobs:
         # We don't have a good cross-platform way of splitting long lines
         run: |
           dotnet test dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests --collect:"XPlat Code Coverage" -- 'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
-      - name: Publish Coverage
-        uses: codecov/codecov-action@v4
-        if: matrix.os == 'ubuntu-latest'
-        with:
-          flags: unit
-          fail_ci_if_error: true
-          directory: dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests/TestResults/
+      #- name: Publish Coverage
+      #  uses: codecov/codecov-action@v4
+      #  if: matrix.os == 'ubuntu-latest'
+      #  with:
+      #    flags: unit
+      #    fail_ci_if_error: true
+      #    directory: dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests/TestResults/
   IntegrationTests:
     strategy:
       matrix:
@@ -60,13 +60,13 @@ jobs:
           DROPBOX_INTEGRATION_teamAccessToken: ${{ secrets.TEAM_APP_ACCESS_TOKEN }}
         run: |
           dotnet test dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests --collect:"XPlat Code Coverage" -- 'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
-      - name: Publish Coverage
-        uses: codecov/codecov-action@v4
-        if: matrix.os == 'ubuntu-latest'
-        with:
-          flags: integration
-          fail_ci_if_error: true
-          directory: dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests/TestResults/
+      #- name: Publish Coverage
+      #  uses: codecov/codecov-action@v4
+      #  if: matrix.os == 'ubuntu-latest'
+      #  with:
+      #    flags: integration
+      #    fail_ci_if_error: true
+      #    directory: dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests/TestResults/
   Linter:
     strategy:
       matrix:
