@@ -81,6 +81,7 @@ jobs:
       - name: Run Linter
         run: |
           # Install latest dotnet-format
+          dotnet tool list
           dotnet tool uninstall dotnet-format -g
           dotnet tool install -g dotnet-format --version "5.*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
           dotnet format --version
