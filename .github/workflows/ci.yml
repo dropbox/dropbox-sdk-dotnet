@@ -85,5 +85,5 @@ jobs:
           dotnet tool list --global
           dotnet tool install -g dotnet-format --version "5.*" --allow-downgrade --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
           dotnet tool list --global
-          dotnet format --version
-          dotnet format --check --fix-whitespace --fix-style warn --fix-analyzers warn dropbox-sdk-dotnet/
+          dotnet-format --version
+          dotnet-format --check --fix-whitespace --fix-style warn --fix-analyzers warn dropbox-sdk-dotnet/
