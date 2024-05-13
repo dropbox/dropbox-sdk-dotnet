@@ -83,7 +83,7 @@ jobs:
           # Install latest dotnet-format
           dotnet restore dropbox-sdk-dotnet/
           dotnet tool list
-          dotnet tool uninstall dotnet-format -g
-          dotnet tool install -g dotnet-format --version "5.*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
+          dotnet tool install -g dotnet-format --version "5.*" --allow-downgrade --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json -v diag
+          dotnet tool list
           dotnet format --version
           dotnet format --check --fix-whitespace --fix-style warn --fix-analyzers warn dropbox-sdk-dotnet/
