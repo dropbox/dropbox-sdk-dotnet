@@ -81,9 +81,8 @@ jobs:
       - name: Run Linter
         run: |
           # Install latest dotnet-format
-          dotnet tool install dotnet-format --version "5.*" --local --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
+          dotnet tool uninstall dotnet-format -g
+          dotnet tool install -g dotnet-format --version "5.*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
           dotnet format --version
-          dotnet --version
-          dotnet --info
           dotnet restore dropbox-sdk-dotnet/
           dotnet format --check --fix-whitespace --fix-style warn --fix-analyzers warn dropbox-sdk-dotnet/
