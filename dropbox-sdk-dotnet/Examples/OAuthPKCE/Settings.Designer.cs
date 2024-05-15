@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OauthPKCE {
+namespace OAuthPKCE {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.6.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -22,16 +22,31 @@ namespace OauthPKCE {
                 return defaultInstance;
             }
         }
-        
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ApiKey
+        {
+            get
+            {
+                return ((string)(this[nameof(ApiKey)]));
+            }
+            set
+            {
+                this[nameof(ApiKey)] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string RefreshToken {
             get {
-                return ((string)(this["RefreshToken"]));
+                return ((string)this[nameof(RefreshToken)]);
             }
             set {
-                this["RefreshToken"] = value;
+                this[nameof(RefreshToken)] = value;
             }
         }
         
@@ -40,10 +55,10 @@ namespace OauthPKCE {
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string AccessToken {
             get {
-                return ((string)(this["AccessToken"]));
+                return ((string)(this[nameof(AccessToken)]));
             }
             set {
-                this["AccessToken"] = value;
+                this[nameof(AccessToken)] = value;
             }
         }
         
