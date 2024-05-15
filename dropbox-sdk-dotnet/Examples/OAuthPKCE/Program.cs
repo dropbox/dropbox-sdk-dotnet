@@ -56,8 +56,6 @@ namespace OauthPKCE
 
         private async Task<int> Run()
         {
-            DropboxCertHelper.InitializeCertPinning();
-
             var uid = await this.AcquireAccessToken(null, IncludeGrantedScopes.None);
             if (string.IsNullOrEmpty(uid))
             {
