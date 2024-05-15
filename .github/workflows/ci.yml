@@ -11,29 +11,38 @@ jobs:
   UnitTests:
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [macos-13, ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
+      - name: Add .Net 5 Framework
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '5.x'
       - name: Run Unit Tests
         # We don't have a good cross-platform way of splitting long lines
         run: |
           dotnet test dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests --collect:"XPlat Code Coverage" -- 'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
       - name: Publish Coverage
-        uses: codecov/codecov-action@v1.3.2
+        uses: codecov/codecov-action@v4
         if: matrix.os == 'ubuntu-latest'
         with:
           flags: unit
+          token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
           directory: dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests/TestResults/
   IntegrationTests:
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [macos-13, ubuntu-latest, windows-latest]
       max-parallel: 1
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
+      - name: Add .Net 5 Framework
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '5.x'
       - name: Test Legacy User
         env:
           DROPBOX_INTEGRATION_appKey: ${{ secrets.LEGACY_APP_KEY }}
@@ -53,22 +62,27 @@ jobs:
         run: |
           dotnet test dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests --collect:"XPlat Code Coverage" -- 'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
       - name: Publish Coverage
-        uses: codecov/codecov-action@v1.3.2
+        uses: codecov/codecov-action@v4
         if: matrix.os == 'ubuntu-latest'
         with:
           flags: integration
+          token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
           directory: dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests/TestResults/
   Linter:
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [macos-13, ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
+      - name: Add .Net 5 Framework
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '5.x'
       - name: Run Linter
         run: |
           # Install latest dotnet-format
-          dotnet tool install -g dotnet-format --version 6.0.241801 --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
+          dotnet tool install -g dotnet-format --version "5.*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
           dotnet restore dropbox-sdk-dotnet/
-          dotnet format --check --fix-whitespace --fix-style warn --fix-analyzers warn dropbox-sdk-dotnet/
+          dotnet-format --check --fix-whitespace --fix-style warn --fix-analyzers warn dropbox-sdk-dotnet/

@@ -500,7 +500,7 @@ namespace SimpleTest
 
                             if (idx == numChunks - 1)
                             {
-                                await client.Files.UploadSessionFinishAsync(cursor:cursor, commit:new CommitInfo(folder + "/" + fileName), body:memStream);
+                                await client.Files.UploadSessionFinishAsync(cursor: cursor, commit: new CommitInfo(folder + "/" + fileName), body: memStream);
                             }
 
                             else
