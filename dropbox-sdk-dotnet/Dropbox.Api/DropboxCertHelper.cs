@@ -42,7 +42,7 @@ namespace Dropbox.Api
         /// Determines whether the specified public key string is a known root certificate public key.
         /// </summary>
         /// <param name="publicKeyString">The public key string.</param>
-        /// <returns><c>true</c></returns>
+        /// <returns><c>true</c>.</returns>
         [Obsolete("Certificate check is no longer performed via IsKnownRootCertPublicKey")]
         public static bool IsKnownRootCertPublicKey(string publicKeyString)
         {
@@ -54,7 +54,7 @@ namespace Dropbox.Api
         /// Determines whether the specified public key is a known root certificate public key.
         /// </summary>
         /// <param name="publicKey">The public key.</param>
-        /// <returns><c>true</c></returns>
+        /// <returns><c>true</c>.</returns>
         [Obsolete("Certificate check is no longer performed via IsKnownRootCertPublicKey")]
         public static bool IsKnownRootCertPublicKey(byte[] publicKey)
         {
