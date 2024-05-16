@@ -38,7 +38,7 @@ namespace Dropbox.Api
     public static class DropboxCertHelper
     {
         /// <summary>
-        /// Deprecated: always returns true
+        /// Deprecated: always returns true.
         /// Determines whether the specified public key string is a known root certificate public key.
         /// </summary>
         /// <param name="publicKeyString">The public key string.</param>
@@ -50,7 +50,7 @@ namespace Dropbox.Api
         }
 
         /// <summary>
-        /// Deprecated: always returns true
+        /// Deprecated: always returns true.
         /// Determines whether the specified public key is a known root certificate public key.
         /// </summary>
         /// <param name="publicKey">The public key.</param>
@@ -65,7 +65,7 @@ namespace Dropbox.Api
 #elif PORTABLE40
 #else
         /// <summary>
-        /// Deprecated: does nothing
+        /// Deprecated: does nothing.
         /// Initializes ssl certificate pinning.
         /// </summary>
         [Obsolete("Certificate pinning is no longer performed via InitializeCertPinning")]
