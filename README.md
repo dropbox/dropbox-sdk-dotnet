@@ -35,6 +35,11 @@ We provide [Examples][examples] to help get you started with a lot of the basic 
     - [Simple Business Dashboard](https://github.com/dropbox/dropbox-sdk-dotnet/tree/main/dropbox-sdk-dotnet/Examples/SimpleBusinessDashboard) - This is a demo of a business dashboard
     - [Universal Demo](https://github.com/dropbox/dropbox-sdk-dotnet/tree/main/dropbox-sdk-dotnet/Examples/UniversalDemo/UniversalDemo) - This is an example of how to use the SDK across multiple platforms
 
+### Certificate pinning
+
+If certificate pinning is desired when using the Dropbox SDK to validate that the right Dropbox servers are being hit, see [Microsoft's docuemntation](https://learn.microsoft.com/en-us/dotnet/api/system.net.servicepointmanager.servercertificatevalidationcallback?view=net-8.0) on how to perform this validation.
+The Dropbox certificates can be found here.
+
 ## Getting Help
 
 If you find a bug, please see [CONTRIBUTING.md][contributing] for information on how to report it.
