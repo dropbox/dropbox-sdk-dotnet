@@ -59,8 +59,6 @@ namespace OauthTest
 
         private async Task<int> Run()
         {
-            DropboxCertHelper.InitializeCertPinning();
-
             string[] scopeList = new string[3] { "files.metadata.read", "files.content.read", "account_info.read" };
             var uid = await this.AcquireAccessToken(scopeList, IncludeGrantedScopes.None);
             if (string.IsNullOrEmpty(uid))

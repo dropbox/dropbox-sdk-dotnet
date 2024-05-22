@@ -59,8 +59,6 @@ namespace SimpleTest
 
         private async Task<int> Run()
         {
-            DropboxCertHelper.InitializeCertPinning();
-
             var accessToken = await this.GetAccessToken();
             if (string.IsNullOrEmpty(accessToken))
             {
