@@ -1,0 +1,50 @@
+name: Documentation
+on:
+  pull_request:
+  release:
+    types: [created]
+
+jobs:
+  Documentation:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.0.2
+      - name: Build SDK
+        run: |
+          dotnet build dropbox-sdk-dotnet/Dropbox.Api
+      - name: Build Documentation
+        run: |
+          dotnet restore doc/StoneDocs.shfbproj
+          msbuild doc/StoneDocs.shfbproj # WinForms refuse to work with .NET 5.0
+          tar -czf doc/Help.tar.gz -C doc/Help .
+      - name: Upload Documentation
+        uses: actions/upload-artifact@v2
+        with:
+          name: documentation.tar.gz
+          path: doc/Help.tar.gz
+          retention-days: 1
+      - name: Get Release Information
+        id: get_release
+        uses: bruceadams/get-release@v1.2.2
+        if: github.event_name == 'release'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Attach Documentation to Relase
+        uses: actions/upload-release-asset@v1.0.2
+        if: github.event_name == 'release'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.get_release.outputs.upload_url }}
+          asset_path: doc/Help.tar.gz
+          asset_name: documentation.tar.gz
+          asset_content_type: application/gzip
+      - name: Push Documentation
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        if: github.event_name == 'release'
+        with:
+          ACCESS_TOKEN: ${{ secrets.GH_PAGES_PUBLISH_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: doc/Help # The folder the action should deploy.
