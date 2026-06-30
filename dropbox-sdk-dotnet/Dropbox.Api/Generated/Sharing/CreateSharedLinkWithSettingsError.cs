@@ -146,6 +146,50 @@ namespace Dropbox.Api.Sharing
             }
         }
 
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is BannedMember</para>
+        /// </summary>
+        public bool IsBannedMember
+        {
+            get
+            {
+                return this is BannedMember;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a BannedMember, or <c>null</c>.</para>
+        /// </summary>
+        public BannedMember AsBannedMember
+        {
+            get
+            {
+                return this as BannedMember;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is TooManySharedFolders</para>
+        /// </summary>
+        public bool IsTooManySharedFolders
+        {
+            get
+            {
+                return this is TooManySharedFolders;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TooManySharedFolders, or <c>null</c>.</para>
+        /// </summary>
+        public TooManySharedFolders AsTooManySharedFolders
+        {
+            get
+            {
+                return this as TooManySharedFolders;
+            }
+        }
+
         #region Encoder class
 
         /// <summary>
@@ -188,6 +232,18 @@ namespace Dropbox.Api.Sharing
                 {
                     WriteProperty(".tag", "access_denied", writer, enc.StringEncoder.Instance);
                     AccessDenied.Encoder.EncodeFields((AccessDenied)value, writer);
+                    return;
+                }
+                if (value is BannedMember)
+                {
+                    WriteProperty(".tag", "banned_member", writer, enc.StringEncoder.Instance);
+                    BannedMember.Encoder.EncodeFields((BannedMember)value, writer);
+                    return;
+                }
+                if (value is TooManySharedFolders)
+                {
+                    WriteProperty(".tag", "too_many_shared_folders", writer, enc.StringEncoder.Instance);
+                    TooManySharedFolders.Encoder.EncodeFields((TooManySharedFolders)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -233,6 +289,10 @@ namespace Dropbox.Api.Sharing
                         return SettingsError.Decoder.DecodeFields(reader);
                     case "access_denied":
                         return AccessDenied.Decoder.DecodeFields(reader);
+                    case "banned_member":
+                        return BannedMember.Decoder.DecodeFields(reader);
+                    case "too_many_shared_folders":
+                        return TooManySharedFolders.Decoder.DecodeFields(reader);
                     default:
                         throw new sys.InvalidOperationException();
                 }
@@ -412,7 +472,9 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>The shared link already exists. You can call <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" /> to get
-        /// the  existing link, or use the provided metadata if it is returned.</para>
+        /// the existing link, or use the provided metadata if it is returned. Existing link
+        /// metadata will not be returned if custom settings were specified in the request that
+        /// could make the existing link incompatible with the requested settings.</para>
         /// </summary>
         public sealed class SharedLinkAlreadyExists : CreateSharedLinkWithSettingsError
         {
@@ -613,7 +675,7 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>The user is not allowed to create a shared link to the specified file. For
-        /// example, this can occur if the file is restricted or if the user's links are  <a
+        /// example, this can occur if the file is restricted or if the user's links are <a
         /// href="https://help.dropbox.com/files-folders/share/banned-links">banned</a>.</para>
         /// </summary>
         public sealed class AccessDenied : CreateSharedLinkWithSettingsError
@@ -676,6 +738,150 @@ namespace Dropbox.Api.Sharing
                 protected override AccessDenied Create()
                 {
                     return AccessDenied.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The current user has been <a
+        /// href="https://help.dropbox.com/files-folders/share/banned-links">banned</a> for
+        /// abuse reasons.</para>
+        /// </summary>
+        public sealed class BannedMember : CreateSharedLinkWithSettingsError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<BannedMember> Encoder = new BannedMemberEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<BannedMember> Decoder = new BannedMemberDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="BannedMember" />
+            /// class.</para>
+            /// </summary>
+            private BannedMember()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of BannedMember</para>
+            /// </summary>
+            public static readonly BannedMember Instance = new BannedMember();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="BannedMember" />.</para>
+            /// </summary>
+            private class BannedMemberEncoder : enc.StructEncoder<BannedMember>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(BannedMember value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="BannedMember" />.</para>
+            /// </summary>
+            private class BannedMemberDecoder : enc.StructDecoder<BannedMember>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="BannedMember" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override BannedMember Create()
+                {
+                    return BannedMember.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Your Dropbox folder will have too many shared folders after the operation.
+        /// https://help.dropbox.com/share/shared-folder-faq#Is-there-a-limit-to-the-number-of-shared-folders-I-can-create</para>
+        /// </summary>
+        public sealed class TooManySharedFolders : CreateSharedLinkWithSettingsError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TooManySharedFolders> Encoder = new TooManySharedFoldersEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TooManySharedFolders> Decoder = new TooManySharedFoldersDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TooManySharedFolders" />
+            /// class.</para>
+            /// </summary>
+            private TooManySharedFolders()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TooManySharedFolders</para>
+            /// </summary>
+            public static readonly TooManySharedFolders Instance = new TooManySharedFolders();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TooManySharedFolders" />.</para>
+            /// </summary>
+            private class TooManySharedFoldersEncoder : enc.StructEncoder<TooManySharedFolders>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TooManySharedFolders value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TooManySharedFolders" />.</para>
+            /// </summary>
+            private class TooManySharedFoldersDecoder : enc.StructDecoder<TooManySharedFolders>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TooManySharedFolders"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TooManySharedFolders Create()
+                {
+                    return TooManySharedFolders.Instance;
                 }
 
             }

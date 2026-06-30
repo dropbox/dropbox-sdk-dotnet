@@ -101,6 +101,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Dash</para>
+        /// </summary>
+        public bool IsDash
+        {
+            get
+            {
+                return this is Dash;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Dash, or <c>null</c>.</para>
+        /// </summary>
+        public Dash AsDash
+        {
+            get
+            {
+                return this as Dash;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is DataGovernance</para>
         /// </summary>
         public bool IsDataGovernance
@@ -163,6 +185,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Domains;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Encryption</para>
+        /// </summary>
+        public bool IsEncryption
+        {
+            get
+            {
+                return this is Encryption;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Encryption, or <c>null</c>.</para>
+        /// </summary>
+        public Encryption AsEncryption
+        {
+            get
+            {
+                return this as Encryption;
             }
         }
 
@@ -321,6 +365,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Protect</para>
+        /// </summary>
+        public bool IsProtect
+        {
+            get
+            {
+                return this is Protect;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Protect, or <c>null</c>.</para>
+        /// </summary>
+        public Protect AsProtect
+        {
+            get
+            {
+                return this as Protect;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Reports</para>
         /// </summary>
         public bool IsReports
@@ -383,6 +449,28 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as Showcase;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Signatures</para>
+        /// </summary>
+        public bool IsSignatures
+        {
+            get
+            {
+                return this is Signatures;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Signatures, or <c>null</c>.</para>
+        /// </summary>
+        public Signatures AsSignatures
+        {
+            get
+            {
+                return this as Signatures;
             }
         }
 
@@ -572,6 +660,12 @@ namespace Dropbox.Api.TeamLog
                     Comments.Encoder.EncodeFields((Comments)value, writer);
                     return;
                 }
+                if (value is Dash)
+                {
+                    WriteProperty(".tag", "dash", writer, enc.StringEncoder.Instance);
+                    Dash.Encoder.EncodeFields((Dash)value, writer);
+                    return;
+                }
                 if (value is DataGovernance)
                 {
                     WriteProperty(".tag", "data_governance", writer, enc.StringEncoder.Instance);
@@ -588,6 +682,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "domains", writer, enc.StringEncoder.Instance);
                     Domains.Encoder.EncodeFields((Domains)value, writer);
+                    return;
+                }
+                if (value is Encryption)
+                {
+                    WriteProperty(".tag", "encryption", writer, enc.StringEncoder.Instance);
+                    Encryption.Encoder.EncodeFields((Encryption)value, writer);
                     return;
                 }
                 if (value is FileOperations)
@@ -632,6 +732,12 @@ namespace Dropbox.Api.TeamLog
                     Passwords.Encoder.EncodeFields((Passwords)value, writer);
                     return;
                 }
+                if (value is Protect)
+                {
+                    WriteProperty(".tag", "protect", writer, enc.StringEncoder.Instance);
+                    Protect.Encoder.EncodeFields((Protect)value, writer);
+                    return;
+                }
                 if (value is Reports)
                 {
                     WriteProperty(".tag", "reports", writer, enc.StringEncoder.Instance);
@@ -648,6 +754,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "showcase", writer, enc.StringEncoder.Instance);
                     Showcase.Encoder.EncodeFields((Showcase)value, writer);
+                    return;
+                }
+                if (value is Signatures)
+                {
+                    WriteProperty(".tag", "signatures", writer, enc.StringEncoder.Instance);
+                    Signatures.Encoder.EncodeFields((Signatures)value, writer);
                     return;
                 }
                 if (value is Sso)
@@ -730,12 +842,16 @@ namespace Dropbox.Api.TeamLog
                         return Apps.Decoder.DecodeFields(reader);
                     case "comments":
                         return Comments.Decoder.DecodeFields(reader);
+                    case "dash":
+                        return Dash.Decoder.DecodeFields(reader);
                     case "data_governance":
                         return DataGovernance.Decoder.DecodeFields(reader);
                     case "devices":
                         return Devices.Decoder.DecodeFields(reader);
                     case "domains":
                         return Domains.Decoder.DecodeFields(reader);
+                    case "encryption":
+                        return Encryption.Decoder.DecodeFields(reader);
                     case "file_operations":
                         return FileOperations.Decoder.DecodeFields(reader);
                     case "file_requests":
@@ -750,12 +866,16 @@ namespace Dropbox.Api.TeamLog
                         return Paper.Decoder.DecodeFields(reader);
                     case "passwords":
                         return Passwords.Decoder.DecodeFields(reader);
+                    case "protect":
+                        return Protect.Decoder.DecodeFields(reader);
                     case "reports":
                         return Reports.Decoder.DecodeFields(reader);
                     case "sharing":
                         return Sharing.Decoder.DecodeFields(reader);
                     case "showcase":
                         return Showcase.Decoder.DecodeFields(reader);
+                    case "signatures":
+                        return Signatures.Decoder.DecodeFields(reader);
                     case "sso":
                         return Sso.Decoder.DecodeFields(reader);
                     case "team_folders":
@@ -985,6 +1105,75 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Events that apply to Dropbox Dash</para>
+        /// </summary>
+        public sealed class Dash : EventCategory
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Dash> Encoder = new DashEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Dash> Decoder = new DashDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Dash" /> class.</para>
+            /// </summary>
+            private Dash()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Dash</para>
+            /// </summary>
+            public static readonly Dash Instance = new Dash();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Dash" />.</para>
+            /// </summary>
+            private class DashEncoder : enc.StructEncoder<Dash>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Dash value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Dash" />.</para>
+            /// </summary>
+            private class DashDecoder : enc.StructDecoder<Dash>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Dash" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Dash Create()
+                {
+                    return Dash.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>Events that involve data governance actions</para>
         /// </summary>
         public sealed class DataGovernance : EventCategory
@@ -1187,6 +1376,75 @@ namespace Dropbox.Api.TeamLog
                 protected override Domains Create()
                 {
                     return Domains.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Events that involve encryption.</para>
+        /// </summary>
+        public sealed class Encryption : EventCategory
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Encryption> Encoder = new EncryptionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Encryption> Decoder = new EncryptionDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Encryption" /> class.</para>
+            /// </summary>
+            private Encryption()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Encryption</para>
+            /// </summary>
+            public static readonly Encryption Instance = new Encryption();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Encryption" />.</para>
+            /// </summary>
+            private class EncryptionEncoder : enc.StructEncoder<Encryption>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Encryption value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Encryption" />.</para>
+            /// </summary>
+            private class EncryptionDecoder : enc.StructDecoder<Encryption>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Encryption" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Encryption Create()
+                {
+                    return Encryption.Instance;
                 }
 
             }
@@ -1681,6 +1939,75 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Events that apply to Dropbox Protect</para>
+        /// </summary>
+        public sealed class Protect : EventCategory
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Protect> Encoder = new ProtectEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Protect> Decoder = new ProtectDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Protect" /> class.</para>
+            /// </summary>
+            private Protect()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Protect</para>
+            /// </summary>
+            public static readonly Protect Instance = new Protect();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Protect" />.</para>
+            /// </summary>
+            private class ProtectEncoder : enc.StructEncoder<Protect>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Protect value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Protect" />.</para>
+            /// </summary>
+            private class ProtectDecoder : enc.StructDecoder<Protect>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Protect" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Protect Create()
+                {
+                    return Protect.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>Events that concern generation of admin reports, including team activity and
         /// device usage.</para>
         /// </summary>
@@ -1881,6 +2208,75 @@ namespace Dropbox.Api.TeamLog
                 protected override Showcase Create()
                 {
                     return Showcase.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Events that apply to Dropbox Sign</para>
+        /// </summary>
+        public sealed class Signatures : EventCategory
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Signatures> Encoder = new SignaturesEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Signatures> Decoder = new SignaturesDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Signatures" /> class.</para>
+            /// </summary>
+            private Signatures()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Signatures</para>
+            /// </summary>
+            public static readonly Signatures Instance = new Signatures();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Signatures" />.</para>
+            /// </summary>
+            private class SignaturesEncoder : enc.StructEncoder<Signatures>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Signatures value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Signatures" />.</para>
+            /// </summary>
+            private class SignaturesDecoder : enc.StructDecoder<Signatures>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Signatures" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Signatures Create()
+                {
+                    return Signatures.Instance;
                 }
 
             }

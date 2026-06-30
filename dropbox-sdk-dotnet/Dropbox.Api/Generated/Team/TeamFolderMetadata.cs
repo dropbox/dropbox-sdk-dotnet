@@ -39,12 +39,15 @@ namespace Dropbox.Api.Team
         /// <param name="syncSetting">The sync setting applied to this team folder.</param>
         /// <param name="contentSyncSettings">Sync settings applied to contents of this team
         /// folder.</param>
+        /// <param name="quotaLimit">The quota limit in bytes for this team folder namespace
+        /// tree.</param>
         public TeamFolderMetadata(string teamFolderId,
                                   string name,
                                   TeamFolderStatus status,
                                   bool isTeamSharedDropbox,
                                   global::Dropbox.Api.Files.SyncSetting syncSetting,
-                                  col.IEnumerable<global::Dropbox.Api.Files.ContentSyncSetting> contentSyncSettings)
+                                  col.IEnumerable<global::Dropbox.Api.Files.ContentSyncSetting> contentSyncSettings,
+                                  long quotaLimit = 0)
         {
             if (teamFolderId == null)
             {
@@ -83,6 +86,7 @@ namespace Dropbox.Api.Team
             this.IsTeamSharedDropbox = isTeamSharedDropbox;
             this.SyncSetting = syncSetting;
             this.ContentSyncSettings = contentSyncSettingsList;
+            this.QuotaLimit = quotaLimit;
         }
 
         /// <summary>
@@ -94,6 +98,7 @@ namespace Dropbox.Api.Team
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public TeamFolderMetadata()
         {
+            this.QuotaLimit = 0;
         }
 
         /// <summary>
@@ -126,6 +131,11 @@ namespace Dropbox.Api.Team
         /// </summary>
         public col.IList<global::Dropbox.Api.Files.ContentSyncSetting> ContentSyncSettings { get; protected set; }
 
+        /// <summary>
+        /// <para>The quota limit in bytes for this team folder namespace tree.</para>
+        /// </summary>
+        public long QuotaLimit { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -146,6 +156,7 @@ namespace Dropbox.Api.Team
                 WriteProperty("is_team_shared_dropbox", value.IsTeamSharedDropbox, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("sync_setting", value.SyncSetting, writer, global::Dropbox.Api.Files.SyncSetting.Encoder);
                 WriteListProperty("content_sync_settings", value.ContentSyncSettings, writer, global::Dropbox.Api.Files.ContentSyncSetting.Encoder);
+                WriteProperty("quota_limit", value.QuotaLimit, writer, enc.Int64Encoder.Instance);
             }
         }
 
@@ -195,6 +206,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "content_sync_settings":
                         value.ContentSyncSettings = ReadList<global::Dropbox.Api.Files.ContentSyncSetting>(reader, global::Dropbox.Api.Files.ContentSyncSetting.Decoder);
+                        break;
+                    case "quota_limit":
+                        value.QuotaLimit = enc.Int64Decoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

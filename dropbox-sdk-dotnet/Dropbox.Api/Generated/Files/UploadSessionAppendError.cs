@@ -36,28 +36,6 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is ContentHashMismatch</para>
-        /// </summary>
-        public bool IsContentHashMismatch
-        {
-            get
-            {
-                return this is ContentHashMismatch;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a ContentHashMismatch, or <c>null</c>.</para>
-        /// </summary>
-        public ContentHashMismatch AsContentHashMismatch
-        {
-            get
-            {
-                return this as ContentHashMismatch;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is NotFound</para>
         /// </summary>
         public bool IsNotFound
@@ -120,28 +98,6 @@ namespace Dropbox.Api.Files
             get
             {
                 return this as Closed;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is NotClosed</para>
-        /// </summary>
-        public bool IsNotClosed
-        {
-            get
-            {
-                return this is NotClosed;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a NotClosed, or <c>null</c>.</para>
-        /// </summary>
-        public NotClosed AsNotClosed
-        {
-            get
-            {
-                return this as NotClosed;
             }
         }
 
@@ -238,6 +194,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is ContentHashMismatch</para>
+        /// </summary>
+        public bool IsContentHashMismatch
+        {
+            get
+            {
+                return this is ContentHashMismatch;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ContentHashMismatch, or <c>null</c>.</para>
+        /// </summary>
+        public ContentHashMismatch AsContentHashMismatch
+        {
+            get
+            {
+                return this as ContentHashMismatch;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -273,12 +251,6 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(UploadSessionAppendError value, enc.IJsonWriter writer)
             {
-                if (value is ContentHashMismatch)
-                {
-                    WriteProperty(".tag", "content_hash_mismatch", writer, enc.StringEncoder.Instance);
-                    ContentHashMismatch.Encoder.EncodeFields((ContentHashMismatch)value, writer);
-                    return;
-                }
                 if (value is NotFound)
                 {
                     WriteProperty(".tag", "not_found", writer, enc.StringEncoder.Instance);
@@ -295,12 +267,6 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty(".tag", "closed", writer, enc.StringEncoder.Instance);
                     Closed.Encoder.EncodeFields((Closed)value, writer);
-                    return;
-                }
-                if (value is NotClosed)
-                {
-                    WriteProperty(".tag", "not_closed", writer, enc.StringEncoder.Instance);
-                    NotClosed.Encoder.EncodeFields((NotClosed)value, writer);
                     return;
                 }
                 if (value is TooLarge)
@@ -325,6 +291,12 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty(".tag", "payload_too_large", writer, enc.StringEncoder.Instance);
                     PayloadTooLarge.Encoder.EncodeFields((PayloadTooLarge)value, writer);
+                    return;
+                }
+                if (value is ContentHashMismatch)
+                {
+                    WriteProperty(".tag", "content_hash_mismatch", writer, enc.StringEncoder.Instance);
+                    ContentHashMismatch.Encoder.EncodeFields((ContentHashMismatch)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -366,16 +338,12 @@ namespace Dropbox.Api.Files
             {
                 switch (tag)
                 {
-                    case "content_hash_mismatch":
-                        return ContentHashMismatch.Decoder.DecodeFields(reader);
                     case "not_found":
                         return NotFound.Decoder.DecodeFields(reader);
                     case "incorrect_offset":
                         return IncorrectOffset.Decoder.DecodeFields(reader);
                     case "closed":
                         return Closed.Decoder.DecodeFields(reader);
-                    case "not_closed":
-                        return NotClosed.Decoder.DecodeFields(reader);
                     case "too_large":
                         return TooLarge.Decoder.DecodeFields(reader);
                     case "concurrent_session_invalid_offset":
@@ -384,87 +352,15 @@ namespace Dropbox.Api.Files
                         return ConcurrentSessionInvalidDataSize.Decoder.DecodeFields(reader);
                     case "payload_too_large":
                         return PayloadTooLarge.Decoder.DecodeFields(reader);
-                    case "other":
-                        return Other.Decoder.DecodeFields(reader);
+                    case "content_hash_mismatch":
+                        return ContentHashMismatch.Decoder.DecodeFields(reader);
                     default:
-                        throw new sys.InvalidOperationException();
+                        return Other.Decoder.DecodeFields(reader);
                 }
             }
         }
 
         #endregion
-
-        /// <summary>
-        /// <para>The content received by the Dropbox server in this call does not match the
-        /// provided content hash.</para>
-        /// </summary>
-        public sealed class ContentHashMismatch : UploadSessionAppendError
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<ContentHashMismatch> Encoder = new ContentHashMismatchEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<ContentHashMismatch> Decoder = new ContentHashMismatchDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="ContentHashMismatch" />
-            /// class.</para>
-            /// </summary>
-            private ContentHashMismatch()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of ContentHashMismatch</para>
-            /// </summary>
-            public static readonly ContentHashMismatch Instance = new ContentHashMismatch();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="ContentHashMismatch" />.</para>
-            /// </summary>
-            private class ContentHashMismatchEncoder : enc.StructEncoder<ContentHashMismatch>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(ContentHashMismatch value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="ContentHashMismatch" />.</para>
-            /// </summary>
-            private class ContentHashMismatchDecoder : enc.StructDecoder<ContentHashMismatch>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="ContentHashMismatch"
-                /// />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override ContentHashMismatch Create()
-                {
-                    return ContentHashMismatch.Instance;
-                }
-
-            }
-
-            #endregion
-        }
 
         /// <summary>
         /// <para>The upload session ID was not found or has expired. Upload sessions are valid
@@ -699,77 +595,9 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The session must be closed before calling upload_session/finish_batch.</para>
-        /// </summary>
-        public sealed class NotClosed : UploadSessionAppendError
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<NotClosed> Encoder = new NotClosedEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<NotClosed> Decoder = new NotClosedDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="NotClosed" /> class.</para>
-            /// </summary>
-            private NotClosed()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of NotClosed</para>
-            /// </summary>
-            public static readonly NotClosed Instance = new NotClosed();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="NotClosed" />.</para>
-            /// </summary>
-            private class NotClosedEncoder : enc.StructEncoder<NotClosed>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(NotClosed value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="NotClosed" />.</para>
-            /// </summary>
-            private class NotClosedDecoder : enc.StructDecoder<NotClosed>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="NotClosed" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override NotClosed Create()
-                {
-                    return NotClosed.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
         /// <para>You can not append to the upload session because the size of a file should
-        /// not reach the max file size limit (i.e. 350GB).</para>
+        /// not exceed the max file size limit (i.e. 2^41 - 2^22 or 2,199,019,061,248
+        /// bytes).</para>
         /// </summary>
         public sealed class TooLarge : UploadSessionAppendError
         {
@@ -838,8 +666,8 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>For concurrent upload sessions, offset needs to be multiple of 4194304
-        /// bytes.</para>
+        /// <para>For concurrent upload sessions, offset needs to be multiple of 2^22
+        /// (4,194,304) bytes.</para>
         /// </summary>
         public sealed class ConcurrentSessionInvalidOffset : UploadSessionAppendError
         {
@@ -910,8 +738,8 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>For concurrent upload sessions, only chunks with size multiple of 4194304
-        /// bytes can be uploaded.</para>
+        /// <para>For concurrent upload sessions, only chunks with size multiple of 2^22
+        /// (4,194,304) bytes can be uploaded.</para>
         /// </summary>
         public sealed class ConcurrentSessionInvalidDataSize : UploadSessionAppendError
         {
@@ -982,7 +810,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The request payload must be at most 150 MB.</para>
+        /// <para>The request payload must be at most 150 MiB.</para>
         /// </summary>
         public sealed class PayloadTooLarge : UploadSessionAppendError
         {
@@ -1044,6 +872,78 @@ namespace Dropbox.Api.Files
                 protected override PayloadTooLarge Create()
                 {
                     return PayloadTooLarge.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The content received by the Dropbox server in this call does not match the
+        /// provided content hash.</para>
+        /// </summary>
+        public sealed class ContentHashMismatch : UploadSessionAppendError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ContentHashMismatch> Encoder = new ContentHashMismatchEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ContentHashMismatch> Decoder = new ContentHashMismatchDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ContentHashMismatch" />
+            /// class.</para>
+            /// </summary>
+            private ContentHashMismatch()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ContentHashMismatch</para>
+            /// </summary>
+            public static readonly ContentHashMismatch Instance = new ContentHashMismatch();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ContentHashMismatch" />.</para>
+            /// </summary>
+            private class ContentHashMismatchEncoder : enc.StructEncoder<ContentHashMismatch>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ContentHashMismatch value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ContentHashMismatch" />.</para>
+            /// </summary>
+            private class ContentHashMismatchDecoder : enc.StructDecoder<ContentHashMismatch>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ContentHashMismatch"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ContentHashMismatch Create()
+                {
+                    return ContentHashMismatch.Instance;
                 }
 
             }

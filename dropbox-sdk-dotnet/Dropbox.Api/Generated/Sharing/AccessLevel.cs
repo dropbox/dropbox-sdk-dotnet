@@ -145,6 +145,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is NoAccess</para>
+        /// </summary>
+        public bool IsNoAccess
+        {
+            get
+            {
+                return this is NoAccess;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a NoAccess, or <c>null</c>.</para>
+        /// </summary>
+        public NoAccess AsNoAccess
+        {
+            get
+            {
+                return this as NoAccess;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -210,6 +232,12 @@ namespace Dropbox.Api.Sharing
                     Traverse.Encoder.EncodeFields((Traverse)value, writer);
                     return;
                 }
+                if (value is NoAccess)
+                {
+                    WriteProperty(".tag", "no_access", writer, enc.StringEncoder.Instance);
+                    NoAccess.Encoder.EncodeFields((NoAccess)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -258,6 +286,8 @@ namespace Dropbox.Api.Sharing
                         return ViewerNoComment.Decoder.DecodeFields(reader);
                     case "traverse":
                         return Traverse.Decoder.DecodeFields(reader);
+                    case "no_access":
+                        return NoAccess.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -610,6 +640,78 @@ namespace Dropbox.Api.Sharing
                 protected override Traverse Create()
                 {
                     return Traverse.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>If there is a Righteous Link on the folder which grants access and the user
+        /// has visited such link, they are allowed to perform certain action (i.e. add
+        /// themselves to the folder) via the link access even though the user themselves are
+        /// not a member on the shared folder yet.</para>
+        /// </summary>
+        public sealed class NoAccess : AccessLevel
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NoAccess> Encoder = new NoAccessEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NoAccess> Decoder = new NoAccessDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NoAccess" /> class.</para>
+            /// </summary>
+            private NoAccess()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of NoAccess</para>
+            /// </summary>
+            public static readonly NoAccess Instance = new NoAccess();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="NoAccess" />.</para>
+            /// </summary>
+            private class NoAccessEncoder : enc.StructEncoder<NoAccess>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NoAccess value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="NoAccess" />.</para>
+            /// </summary>
+            private class NoAccessDecoder : enc.StructDecoder<NoAccess>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NoAccess" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NoAccess Create()
+                {
+                    return NoAccess.Instance;
                 }
 
             }

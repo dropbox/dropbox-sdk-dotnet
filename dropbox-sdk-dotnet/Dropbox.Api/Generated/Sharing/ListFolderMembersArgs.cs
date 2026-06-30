@@ -32,16 +32,21 @@ namespace Dropbox.Api.Sharing
         /// <para>Initializes a new instance of the <see cref="ListFolderMembersArgs" />
         /// class.</para>
         /// </summary>
-        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="sharedFolderId">The ID for the shared folder. When path is provided,
+        /// the folder ID will be extracted from the path instead.</param>
         /// <param name="actions">This is a list indicating whether each returned member will
         /// include a boolean value <see cref="Dropbox.Api.Sharing.MemberPermission.Allow" />
         /// that describes whether the current user can perform the MemberAction on the
         /// member.</param>
         /// <param name="limit">The maximum number of results that include members, groups and
         /// invitees to return per request.</param>
+        /// <param name="path">Optional path to get inherited members. When omitted, uses
+        /// shared_folder_id to return direct members. When provided, extracts folder ID from
+        /// this path and returns users who have access through parent shared folder.</param>
         public ListFolderMembersArgs(string sharedFolderId,
                                      col.IEnumerable<MemberAction> actions = null,
-                                     uint limit = 1000)
+                                     uint limit = 1000,
+                                     string path = null)
             : base(actions, limit)
         {
             if (sharedFolderId == null)
@@ -54,6 +59,7 @@ namespace Dropbox.Api.Sharing
             }
 
             this.SharedFolderId = sharedFolderId;
+            this.Path = path;
         }
 
         /// <summary>
@@ -68,9 +74,17 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The ID for the shared folder.</para>
+        /// <para>The ID for the shared folder. When path is provided, the folder ID will be
+        /// extracted from the path instead.</para>
         /// </summary>
         public string SharedFolderId { get; protected set; }
+
+        /// <summary>
+        /// <para>Optional path to get inherited members. When omitted, uses shared_folder_id
+        /// to return direct members. When provided, extracts folder ID from this path and
+        /// returns users who have access through parent shared folder.</para>
+        /// </summary>
+        public string Path { get; protected set; }
 
         #region Encoder class
 
@@ -92,6 +106,10 @@ namespace Dropbox.Api.Sharing
                     WriteListProperty("actions", value.Actions, writer, global::Dropbox.Api.Sharing.MemberAction.Encoder);
                 }
                 WriteProperty("limit", value.Limit, writer, enc.UInt32Encoder.Instance);
+                if (value.Path != null)
+                {
+                    WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -133,6 +151,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "limit":
                         value.Limit = enc.UInt32Decoder.Instance.Decode(reader);
+                        break;
+                    case "path":
+                        value.Path = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -220,8 +220,8 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>User does not have access to the shared quota and team admins have restricted
-        /// administrative control.</para>
+        /// <para>Field is deprecated. User does not have access to the shared quota and team
+        /// admins have restricted administrative control.</para>
         /// </summary>
         public sealed class Limited : TeamMembershipType
         {

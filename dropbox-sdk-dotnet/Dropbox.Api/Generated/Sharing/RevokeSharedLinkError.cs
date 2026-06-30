@@ -125,6 +125,29 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// UnsupportedParameterField</para>
+        /// </summary>
+        public bool IsUnsupportedParameterField
+        {
+            get
+            {
+                return this is UnsupportedParameterField;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UnsupportedParameterField, or <c>null</c>.</para>
+        /// </summary>
+        public UnsupportedParameterField AsUnsupportedParameterField
+        {
+            get
+            {
+                return this as UnsupportedParameterField;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -184,6 +207,12 @@ namespace Dropbox.Api.Sharing
                     UnsupportedLinkType.Encoder.EncodeFields((UnsupportedLinkType)value, writer);
                     return;
                 }
+                if (value is UnsupportedParameterField)
+                {
+                    WriteProperty(".tag", "unsupported_parameter_field", writer, enc.StringEncoder.Instance);
+                    UnsupportedParameterField.Encoder.EncodeFields((UnsupportedParameterField)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -231,6 +260,8 @@ namespace Dropbox.Api.Sharing
                         return SharedLinkAccessDenied.Decoder.DecodeFields(reader);
                     case "unsupported_link_type":
                         return UnsupportedLinkType.Decoder.DecodeFields(reader);
+                    case "unsupported_parameter_field":
+                        return UnsupportedParameterField.Decoder.DecodeFields(reader);
                     case "other":
                         return Other.Decoder.DecodeFields(reader);
                     default:
@@ -519,6 +550,78 @@ namespace Dropbox.Api.Sharing
                 protected override UnsupportedLinkType Create()
                 {
                     return UnsupportedLinkType.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Private shared links do not support `path` or `link_password` parameter
+        /// fields.</para>
+        /// </summary>
+        public sealed class UnsupportedParameterField : RevokeSharedLinkError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UnsupportedParameterField> Encoder = new UnsupportedParameterFieldEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UnsupportedParameterField> Decoder = new UnsupportedParameterFieldDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UnsupportedParameterField"
+            /// /> class.</para>
+            /// </summary>
+            private UnsupportedParameterField()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UnsupportedParameterField</para>
+            /// </summary>
+            public static readonly UnsupportedParameterField Instance = new UnsupportedParameterField();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UnsupportedParameterField" />.</para>
+            /// </summary>
+            private class UnsupportedParameterFieldEncoder : enc.StructEncoder<UnsupportedParameterField>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UnsupportedParameterField value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UnsupportedParameterField" />.</para>
+            /// </summary>
+            private class UnsupportedParameterFieldDecoder : enc.StructDecoder<UnsupportedParameterField>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UnsupportedParameterField"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UnsupportedParameterField Create()
+                {
+                    return UnsupportedParameterField.Instance;
                 }
 
             }

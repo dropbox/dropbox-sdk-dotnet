@@ -872,7 +872,8 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>A transient error occurred. Please try again later.</para>
+        /// <para>Field is deprecated. A transient error occurred. Please try again
+        /// later.</para>
         /// </summary>
         public sealed class TransientError : AddSecondaryEmailResult
         {

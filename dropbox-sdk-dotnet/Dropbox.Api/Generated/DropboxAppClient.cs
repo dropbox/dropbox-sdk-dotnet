@@ -10,6 +10,7 @@ namespace Dropbox.Api
     using Dropbox.Api.Auth.Routes;
     using Dropbox.Api.Check.Routes;
     using Dropbox.Api.Files.Routes;
+    using Dropbox.Api.Riviera.Routes;
     using Dropbox.Api.Sharing.Routes;
 
     public sealed partial class DropboxAppClient
@@ -30,6 +31,11 @@ namespace Dropbox.Api
         public FilesAppRoutes Files { get; private set; }
 
         /// <summary>
+        /// <para>Gets the Riviera routes.</para>
+        /// </summary>
+        public RivieraAppRoutes Riviera { get; private set; }
+
+        /// <summary>
         /// <para>Gets the Sharing routes.</para>
         /// </summary>
         public SharingAppRoutes Sharing { get; private set; }
@@ -43,6 +49,7 @@ namespace Dropbox.Api
             this.Auth = new AuthAppRoutes(transport);
             this.Check = new CheckAppRoutes(transport);
             this.Files = new FilesAppRoutes(transport);
+            this.Riviera = new RivieraAppRoutes(transport);
             this.Sharing = new SharingAppRoutes(transport);
         }
     }

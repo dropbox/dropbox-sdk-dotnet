@@ -33,8 +33,8 @@ namespace Dropbox.Api.FileProperties.Routes
         /// <summary>
         /// <para>Add a template associated with a team. See <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesAddAsync"
-        /// /> to add properties to a file or folder.</para>
-        /// <para>Note: this endpoint will create team-owned templates.</para>
+        /// /> to add properties to a file or folder. Note: this endpoint will create
+        /// team-owned templates.</para>
         /// </summary>
         /// <param name="addTemplateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -66,8 +66,8 @@ namespace Dropbox.Api.FileProperties.Routes
         /// <summary>
         /// <para>Add a template associated with a team. See <see
         /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesAddAsync"
-        /// /> to add properties to a file or folder.</para>
-        /// <para>Note: this endpoint will create team-owned templates.</para>
+        /// /> to add properties to a file or folder. Note: this endpoint will create
+        /// team-owned templates.</para>
         /// </summary>
         /// <param name="name">Display name for the template. Template names can be up to 256
         /// bytes.</param>

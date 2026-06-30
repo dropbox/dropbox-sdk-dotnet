@@ -35,7 +35,7 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="returnMembers">Whether to return the list of members in the group.
-        /// Note that the default value will cause all the group members  to be returned in the
+        /// Note that the default value will cause all the group members to be returned in the
         /// response. This may take a long time for large groups.</param>
         public IncludeMembersArg(bool returnMembers = true)
         {
@@ -55,8 +55,8 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Whether to return the list of members in the group.  Note that the default
-        /// value will cause all the group members  to be returned in the response. This may
+        /// <para>Whether to return the list of members in the group. Note that the default
+        /// value will cause all the group members to be returned in the response. This may
         /// take a long time for large groups.</para>
         /// </summary>
         public bool ReturnMembers { get; protected set; }

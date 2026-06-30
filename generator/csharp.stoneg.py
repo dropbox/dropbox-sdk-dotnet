@@ -1,5 +1,4 @@
 import argparse
-import imp
 import os
 
 from csharp import _CSharpGenerator

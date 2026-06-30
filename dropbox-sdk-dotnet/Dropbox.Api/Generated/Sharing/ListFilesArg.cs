@@ -34,9 +34,9 @@ namespace Dropbox.Api.Sharing
         /// <param name="limit">Number of files to return max per query. Defaults to 100 if no
         /// limit is specified.</param>
         /// <param name="actions">A list of `FileAction`s corresponding to `FilePermission`s
-        /// that should appear in the  response's <see
+        /// that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the file.</param>
+        /// actions the authenticated user can perform on the file.</param>
         public ListFilesArg(uint limit = 100,
                             col.IEnumerable<FileAction> actions = null)
         {
@@ -74,9 +74,8 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>A list of `FileAction`s corresponding to `FilePermission`s that should appear
-        /// in the  response's <see cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions"
-        /// /> field describing the actions the  authenticated user can perform on the
-        /// file.</para>
+        /// in the response's <see cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" />
+        /// field describing the actions the authenticated user can perform on the file.</para>
         /// </summary>
         public col.IList<FileAction> Actions { get; protected set; }
 

@@ -209,7 +209,7 @@ namespace Dropbox.Api.TeamPolicies
         #endregion
 
         /// <summary>
-        /// <para>User passwords will adhere to the minimal password strength policy.</para>
+        /// <para>User passwords will not adhere to a password strength policy.</para>
         /// </summary>
         public sealed class MinimalRequirements : PasswordStrengthPolicy
         {
@@ -280,7 +280,9 @@ namespace Dropbox.Api.TeamPolicies
         }
 
         /// <summary>
-        /// <para>User passwords will adhere to the moderate password strength policy.</para>
+        /// <para>User passwords will adhere to the strong password strength policy. Note that
+        /// product surfaces refer to this as the strong policy but the value must be kept as
+        /// is for backwards compatability.</para>
         /// </summary>
         public sealed class ModeratePassword : PasswordStrengthPolicy
         {
@@ -350,8 +352,9 @@ namespace Dropbox.Api.TeamPolicies
         }
 
         /// <summary>
-        /// <para>User passwords will adhere to the very strong password strength
-        /// policy.</para>
+        /// <para>User passwords will adhere to the very strong password strength policy. Note
+        /// that product surfaces refer to this as the very strong policy but the value must be
+        /// kept as is for backwards compatability.</para>
         /// </summary>
         public sealed class StrongPassword : PasswordStrengthPolicy
         {

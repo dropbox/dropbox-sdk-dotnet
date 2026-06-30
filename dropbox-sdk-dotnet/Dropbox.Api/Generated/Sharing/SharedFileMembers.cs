@@ -11,8 +11,7 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Shared file user, group, and invitee membership.</para>
-    /// <para>Used for the results of <see
+    /// <para>Shared file user, group, and invitee membership. Used for the results of <see
     /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync" /> and <see
     /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync" />,
     /// and used as part of the results for <see

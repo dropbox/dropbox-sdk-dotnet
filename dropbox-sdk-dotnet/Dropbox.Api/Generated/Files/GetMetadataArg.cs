@@ -39,7 +39,7 @@ namespace Dropbox.Api.Files
         /// returned for deleted file or folder, otherwise <see
         /// cref="Dropbox.Api.Files.LookupError.NotFound" /> will be returned.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
-        /// flag for each file indicating whether or not  that file has any explicit
+        /// flag for each file indicating whether or not that file has any explicit
         /// members.</param>
         /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
@@ -54,9 +54,9 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("path");
             }
-            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*|id:.*)|(rev:[0-9a-f]{9,})|(ns:[0-9]+(/.*)?))\z"))
+            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*|id:.*)|(rev:[0-9a-f]{9,})|(ns:[0-9]+(/(.|[\r\n])*)?))\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*|id:.*)|(rev:[0-9a-f]{9,})|(ns:[0-9]+(/.*)?))\z'");
+                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*|id:.*)|(rev:[0-9a-f]{9,})|(ns:[0-9]+(/(.|[\r\n])*)?))\z'");
             }
 
             this.Path = path;
@@ -99,7 +99,7 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>If true, the results will include a flag for each file indicating whether or
-        /// not  that file has any explicit members.</para>
+        /// not that file has any explicit members.</para>
         /// </summary>
         public bool IncludeHasExplicitSharedMembers { get; protected set; }
 

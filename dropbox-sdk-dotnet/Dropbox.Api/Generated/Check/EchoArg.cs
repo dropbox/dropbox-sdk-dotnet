@@ -11,7 +11,7 @@ namespace Dropbox.Api.Check
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>EchoArg contains the arguments to be sent to the Dropbox servers.</para>
+    /// <para>Contains the arguments to be sent to the Dropbox servers.</para>
     /// </summary>
     public class EchoArg
     {

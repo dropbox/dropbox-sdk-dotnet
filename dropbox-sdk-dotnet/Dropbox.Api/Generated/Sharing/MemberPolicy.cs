@@ -80,6 +80,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TeamAndApproved</para>
+        /// </summary>
+        public bool IsTeamAndApproved
+        {
+            get
+            {
+                return this is TeamAndApproved;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamAndApproved, or <c>null</c>.</para>
+        /// </summary>
+        public TeamAndApproved AsTeamAndApproved
+        {
+            get
+            {
+                return this as TeamAndApproved;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +149,12 @@ namespace Dropbox.Api.Sharing
                     Anyone.Encoder.EncodeFields((Anyone)value, writer);
                     return;
                 }
+                if (value is TeamAndApproved)
+                {
+                    WriteProperty(".tag", "team_and_approved", writer, enc.StringEncoder.Instance);
+                    TeamAndApproved.Encoder.EncodeFields((TeamAndApproved)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -169,6 +197,8 @@ namespace Dropbox.Api.Sharing
                         return Team.Decoder.DecodeFields(reader);
                     case "anyone":
                         return Anyone.Decoder.DecodeFields(reader);
+                    case "team_and_approved":
+                        return TeamAndApproved.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -308,6 +338,76 @@ namespace Dropbox.Api.Sharing
                 protected override Anyone Create()
                 {
                     return Anyone.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Only a teammate and approved people can become a member.</para>
+        /// </summary>
+        public sealed class TeamAndApproved : MemberPolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamAndApproved> Encoder = new TeamAndApprovedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamAndApproved> Decoder = new TeamAndApprovedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamAndApproved" />
+            /// class.</para>
+            /// </summary>
+            private TeamAndApproved()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TeamAndApproved</para>
+            /// </summary>
+            public static readonly TeamAndApproved Instance = new TeamAndApproved();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamAndApproved" />.</para>
+            /// </summary>
+            private class TeamAndApprovedEncoder : enc.StructEncoder<TeamAndApproved>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamAndApproved value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamAndApproved" />.</para>
+            /// </summary>
+            private class TeamAndApprovedDecoder : enc.StructDecoder<TeamAndApproved>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamAndApproved" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamAndApproved Create()
+                {
+                    return TeamAndApproved.Instance;
                 }
 
             }

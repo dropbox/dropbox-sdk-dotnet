@@ -35,7 +35,7 @@ namespace Dropbox.Api.Team
         /// <param name="group">Group to which users will be added.</param>
         /// <param name="members">List of users to be added to the group.</param>
         /// <param name="returnMembers">Whether to return the list of members in the group.
-        /// Note that the default value will cause all the group members  to be returned in the
+        /// Note that the default value will cause all the group members to be returned in the
         /// response. This may take a long time for large groups.</param>
         public GroupMembersAddArg(GroupSelector @group,
                                   col.IEnumerable<MemberAccess> members,

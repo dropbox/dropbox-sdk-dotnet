@@ -42,11 +42,14 @@ namespace Dropbox.Api.FileRequests
         /// request is closed, it will not accept any file submissions, but it can be opened
         /// later.</param>
         /// <param name="description">A description of the file request.</param>
+        /// <param name="videoProjectId">If this request was created from video project, its
+        /// id.</param>
         public CreateFileRequestArgs(string title,
                                      string destination,
                                      FileRequestDeadline deadline = null,
                                      bool open = true,
-                                     string description = null)
+                                     string description = null,
+                                     string videoProjectId = null)
         {
             if (title == null)
             {
@@ -71,6 +74,7 @@ namespace Dropbox.Api.FileRequests
             this.Deadline = deadline;
             this.Open = open;
             this.Description = description;
+            this.VideoProjectId = videoProjectId;
         }
 
         /// <summary>
@@ -114,6 +118,11 @@ namespace Dropbox.Api.FileRequests
         /// </summary>
         public string Description { get; protected set; }
 
+        /// <summary>
+        /// <para>If this request was created from video project, its id.</para>
+        /// </summary>
+        public string VideoProjectId { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -138,6 +147,10 @@ namespace Dropbox.Api.FileRequests
                 if (value.Description != null)
                 {
                     WriteProperty("description", value.Description, writer, enc.StringEncoder.Instance);
+                }
+                if (value.VideoProjectId != null)
+                {
+                    WriteProperty("video_project_id", value.VideoProjectId, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -186,6 +199,9 @@ namespace Dropbox.Api.FileRequests
                         break;
                     case "description":
                         value.Description = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "video_project_id":
+                        value.VideoProjectId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -1464,7 +1464,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Invalid shared folder error will be returned as an access_error.</para>
+        /// <para>Field is deprecated. Invalid shared folder error will be returned as an
+        /// access_error.</para>
         /// </summary>
         public sealed class InvalidSharedFolder : AddFolderMemberError
         {

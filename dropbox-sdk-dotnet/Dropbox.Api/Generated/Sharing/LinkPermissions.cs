@@ -48,10 +48,10 @@ namespace Dropbox.Api.Sharing
         /// <param name="canDisallowDownload">Whether the user can disallow downloads via the
         /// link. This refers to the ability to impose a no-download restriction on the
         /// link.</param>
-        /// <param name="allowComments">Whether comments are enabled for the linked file. This
-        /// takes the team commenting policy into account.</param>
-        /// <param name="teamRestrictsComments">Whether the team has disabled commenting
-        /// globally.</param>
+        /// <param name="allowComments">Field is deprecated. Whether comments are enabled for
+        /// the linked file. This takes the team commenting policy into account.</param>
+        /// <param name="teamRestrictsComments">Field is deprecated. Whether the team has
+        /// disabled commenting globally.</param>
         /// <param name="resolvedVisibility">The current visibility of the link after
         /// considering the shared links policies of the the team (in case the link's owner is
         /// part of a team) and the shared folder (in case the linked file is part of a shared
@@ -85,6 +85,23 @@ namespace Dropbox.Api.Sharing
         /// view the link.</param>
         /// <param name="canUseExtendedSharingControls">Whether the user can use extended
         /// sharing controls, based on their account type.</param>
+        /// <param name="canSync">Whether a user can save the content to their Dropbox
+        /// account.</param>
+        /// <param name="canRequestAccess">Whether the user can request access to the
+        /// content.</param>
+        /// <param name="enforceSharedLinkPasswordPolicy">Whether the updated externally
+        /// available shared link must have password set. Not provided if the link is not team
+        /// owned.</param>
+        /// <param name="daysToExpirePolicy">Existing owning team's policy for default number
+        /// of days from today to link's expiration. Not provided if the link is not team
+        /// owned.</param>
+        /// <param name="changeSharedLinkExpirationPolicy">When owning team's policy <paramref
+        /// name="changeSharedLinkExpirationPolicy" /> is <see
+        /// cref="Dropbox.Api.Sharing.ChangeLinkExpirationPolicy.NotAllowed" />, the updated
+        /// externally available shared link expiration value cannot be less strict than
+        /// <paramref name="daysToExpirePolicy" />. In this case <paramref
+        /// name="daysToExpirePolicy" /> is expected to be different from `none`. Not provided
+        /// if the link is not team owned.</param>
         public LinkPermissions(bool canRevoke,
                                col.IEnumerable<VisibilityPolicy> visibilityPolicies,
                                bool canSetExpiry,
@@ -103,7 +120,12 @@ namespace Dropbox.Api.Sharing
                                bool? canSetPassword = null,
                                bool? canRemovePassword = null,
                                bool? requirePassword = null,
-                               bool? canUseExtendedSharingControls = null)
+                               bool? canUseExtendedSharingControls = null,
+                               bool? canSync = null,
+                               bool? canRequestAccess = null,
+                               global::Dropbox.Api.TeamPolicies.EnforceLinkPasswordPolicy enforceSharedLinkPasswordPolicy = null,
+                               global::Dropbox.Api.TeamPolicies.DefaultLinkExpirationDaysPolicy daysToExpirePolicy = null,
+                               ChangeLinkExpirationPolicy changeSharedLinkExpirationPolicy = null)
         {
             var visibilityPoliciesList = enc.Util.ToList(visibilityPolicies);
 
@@ -133,6 +155,11 @@ namespace Dropbox.Api.Sharing
             this.CanRemovePassword = canRemovePassword;
             this.RequirePassword = requirePassword;
             this.CanUseExtendedSharingControls = canUseExtendedSharingControls;
+            this.CanSync = canSync;
+            this.CanRequestAccess = canRequestAccess;
+            this.EnforceSharedLinkPasswordPolicy = enforceSharedLinkPasswordPolicy;
+            this.DaysToExpirePolicy = daysToExpirePolicy;
+            this.ChangeSharedLinkExpirationPolicy = changeSharedLinkExpirationPolicy;
         }
 
         /// <summary>
@@ -186,13 +213,14 @@ namespace Dropbox.Api.Sharing
         public bool CanDisallowDownload { get; protected set; }
 
         /// <summary>
-        /// <para>Whether comments are enabled for the linked file. This takes the team
-        /// commenting policy into account.</para>
+        /// <para>Field is deprecated. Whether comments are enabled for the linked file. This
+        /// takes the team commenting policy into account.</para>
         /// </summary>
         public bool AllowComments { get; protected set; }
 
         /// <summary>
-        /// <para>Whether the team has disabled commenting globally.</para>
+        /// <para>Field is deprecated. Whether the team has disabled commenting
+        /// globally.</para>
         /// </summary>
         public bool TeamRestrictsComments { get; protected set; }
 
@@ -265,6 +293,38 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public bool? CanUseExtendedSharingControls { get; protected set; }
 
+        /// <summary>
+        /// <para>Whether a user can save the content to their Dropbox account.</para>
+        /// </summary>
+        public bool? CanSync { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the user can request access to the content.</para>
+        /// </summary>
+        public bool? CanRequestAccess { get; protected set; }
+
+        /// <summary>
+        /// <para>Whether the updated externally available shared link must have password set.
+        /// Not provided if the link is not team owned.</para>
+        /// </summary>
+        public global::Dropbox.Api.TeamPolicies.EnforceLinkPasswordPolicy EnforceSharedLinkPasswordPolicy { get; protected set; }
+
+        /// <summary>
+        /// <para>Existing owning team's policy for default number of days from today to link's
+        /// expiration. Not provided if the link is not team owned.</para>
+        /// </summary>
+        public global::Dropbox.Api.TeamPolicies.DefaultLinkExpirationDaysPolicy DaysToExpirePolicy { get; protected set; }
+
+        /// <summary>
+        /// <para>When owning team's policy <see cref="ChangeSharedLinkExpirationPolicy" /> is
+        /// <see cref="Dropbox.Api.Sharing.ChangeLinkExpirationPolicy.NotAllowed" />, the
+        /// updated externally available shared link expiration value cannot be less strict
+        /// than <see cref="DaysToExpirePolicy" />. In this case <see cref="DaysToExpirePolicy"
+        /// /> is expected to be different from `none`. Not provided if the link is not team
+        /// owned.</para>
+        /// </summary>
+        public ChangeLinkExpirationPolicy ChangeSharedLinkExpirationPolicy { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -327,6 +387,26 @@ namespace Dropbox.Api.Sharing
                 if (value.CanUseExtendedSharingControls != null)
                 {
                     WriteProperty("can_use_extended_sharing_controls", value.CanUseExtendedSharingControls.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.CanSync != null)
+                {
+                    WriteProperty("can_sync", value.CanSync.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.CanRequestAccess != null)
+                {
+                    WriteProperty("can_request_access", value.CanRequestAccess.Value, writer, enc.BooleanEncoder.Instance);
+                }
+                if (value.EnforceSharedLinkPasswordPolicy != null)
+                {
+                    WriteProperty("enforce_shared_link_password_policy", value.EnforceSharedLinkPasswordPolicy, writer, global::Dropbox.Api.TeamPolicies.EnforceLinkPasswordPolicy.Encoder);
+                }
+                if (value.DaysToExpirePolicy != null)
+                {
+                    WriteProperty("days_to_expire_policy", value.DaysToExpirePolicy, writer, global::Dropbox.Api.TeamPolicies.DefaultLinkExpirationDaysPolicy.Encoder);
+                }
+                if (value.ChangeSharedLinkExpirationPolicy != null)
+                {
+                    WriteProperty("change_shared_link_expiration_policy", value.ChangeSharedLinkExpirationPolicy, writer, global::Dropbox.Api.Sharing.ChangeLinkExpirationPolicy.Encoder);
                 }
             }
         }
@@ -416,6 +496,21 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "can_use_extended_sharing_controls":
                         value.CanUseExtendedSharingControls = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "can_sync":
+                        value.CanSync = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "can_request_access":
+                        value.CanRequestAccess = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "enforce_shared_link_password_policy":
+                        value.EnforceSharedLinkPasswordPolicy = global::Dropbox.Api.TeamPolicies.EnforceLinkPasswordPolicy.Decoder.Decode(reader);
+                        break;
+                    case "days_to_expire_policy":
+                        value.DaysToExpirePolicy = global::Dropbox.Api.TeamPolicies.DefaultLinkExpirationDaysPolicy.Decoder.Decode(reader);
+                        break;
+                    case "change_shared_link_expiration_policy":
+                        value.ChangeSharedLinkExpirationPolicy = global::Dropbox.Api.Sharing.ChangeLinkExpirationPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

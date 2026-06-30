@@ -250,11 +250,11 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Cursors are intended to be used quickly. Individual cursor values are
-        /// normally valid for days, but in rare cases may be reset sooner.</para>
-        /// <para>Cursor reset errors should be handled by fetching a new cursor from <see
-        /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync" />.</para>
-        /// <para>The associated value is the approximate timestamp of the most recent event
-        /// returned by the cursor. This should be used as a resumption point when calling <see
+        /// normally valid for days, but in rare cases may be reset sooner. Cursor reset errors
+        /// should be handled by fetching a new cursor from <see
+        /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync" />. The
+        /// associated value is the approximate timestamp of the most recent event returned by
+        /// the cursor. This should be used as a resumption point when calling <see
         /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync" /> to obtain a
         /// new cursor.</para>
         /// </summary>

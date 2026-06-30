@@ -11,8 +11,8 @@ namespace Dropbox.Api.Paper
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The sharing policy of a Paper folder.</para>
-    /// <para>The sharing policy of subfolders is inherited from the root folder.</para>
+    /// <para>The sharing policy of a Paper folder. The sharing policy of subfolders is
+    /// inherited from the root folder.</para>
     /// </summary>
     public class FolderSharingPolicyType
     {

@@ -13,8 +13,8 @@ namespace Dropbox.Api.Async
     /// <summary>
     /// <para>Result returned by methods that poll for the status of an asynchronous job.
     /// Unions that extend this union should add a 'complete' field with a type of the
-    /// information returned upon job completion.</para>
-    /// <para>See <see cref="PollEmptyResult" /> for an example.</para>
+    /// information returned upon job completion. See <see cref="PollEmptyResult" /> for an
+    /// example</para>
     /// </summary>
     public class PollResultBase
     {

@@ -72,7 +72,7 @@ namespace Dropbox.Api.FileProperties.Routes
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="propertyGroups">The property groups which are to be added to a Dropbox
-        /// file. No two groups in the input should  refer to the same template.</param>
+        /// file. No two groups in the input should refer to the same template.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
@@ -91,7 +91,7 @@ namespace Dropbox.Api.FileProperties.Routes
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="propertyGroups">The property groups which are to be added to a Dropbox
-        /// file. No two groups in the input should  refer to the same template.</param>
+        /// file. No two groups in the input should refer to the same template.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -174,7 +174,7 @@ namespace Dropbox.Api.FileProperties.Routes
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="propertyGroups">The property groups "snapshot" updates to force apply.
-        /// No two groups in the input should  refer to the same template.</param>
+        /// No two groups in the input should refer to the same template.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
@@ -193,7 +193,7 @@ namespace Dropbox.Api.FileProperties.Routes
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="propertyGroups">The property groups "snapshot" updates to force apply.
-        /// No two groups in the input should  refer to the same template.</param>
+        /// No two groups in the input should refer to the same template.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send

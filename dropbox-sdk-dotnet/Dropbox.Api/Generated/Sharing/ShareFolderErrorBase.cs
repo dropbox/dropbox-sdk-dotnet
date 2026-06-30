@@ -409,7 +409,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Team policy is more restrictive than <see
+        /// <para>Team policy or group sharing settings are more restrictive than <see
         /// cref="Dropbox.Api.Sharing.ShareFolderArg.MemberPolicy" />.</para>
         /// </summary>
         public sealed class TeamPolicyDisallowsMemberPolicy : ShareFolderErrorBase

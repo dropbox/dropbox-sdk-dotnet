@@ -45,8 +45,8 @@ namespace Dropbox.Api.Sharing
         /// field of `LinkPermissions.</param>
         /// <param name="access">Requested access level you want the audience to gain from this
         /// link. Note, modifying access level for an existing link is not supported.</param>
-        /// <param name="requestedVisibility">Use <paramref name="audience" /> instead.  The
-        /// requested access for this shared link.</param>
+        /// <param name="requestedVisibility">Field is deprecated. Use <paramref
+        /// name="audience" /> instead.  The requested access for this shared link.</param>
         /// <param name="allowDownload">Boolean flag to allow or not download capabilities for
         /// shared links.</param>
         public SharedLinkSettings(bool? requirePassword = null,
@@ -109,8 +109,8 @@ namespace Dropbox.Api.Sharing
         public RequestedLinkAccessLevel Access { get; protected set; }
 
         /// <summary>
-        /// <para>Use <see cref="Audience" /> instead.  The requested access for this shared
-        /// link.</para>
+        /// <para>Field is deprecated. Use <see cref="Audience" /> instead.  The requested
+        /// access for this shared link.</para>
         /// </summary>
         public RequestedVisibility RequestedVisibility { get; protected set; }
 

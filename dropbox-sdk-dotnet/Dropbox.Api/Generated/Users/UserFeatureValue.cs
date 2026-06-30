@@ -80,6 +80,50 @@ namespace Dropbox.Api.Users
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TeamSharedDropbox</para>
+        /// </summary>
+        public bool IsTeamSharedDropbox
+        {
+            get
+            {
+                return this is TeamSharedDropbox;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamSharedDropbox, or <c>null</c>.</para>
+        /// </summary>
+        public TeamSharedDropbox AsTeamSharedDropbox
+        {
+            get
+            {
+                return this as TeamSharedDropbox;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is DistinctMemberHome</para>
+        /// </summary>
+        public bool IsDistinctMemberHome
+        {
+            get
+            {
+                return this is DistinctMemberHome;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DistinctMemberHome, or <c>null</c>.</para>
+        /// </summary>
+        public DistinctMemberHome AsDistinctMemberHome
+        {
+            get
+            {
+                return this as DistinctMemberHome;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +171,18 @@ namespace Dropbox.Api.Users
                     FileLocking.Encoder.EncodeFields((FileLocking)value, writer);
                     return;
                 }
+                if (value is TeamSharedDropbox)
+                {
+                    WriteProperty(".tag", "team_shared_dropbox", writer, enc.StringEncoder.Instance);
+                    TeamSharedDropbox.Encoder.EncodeFields((TeamSharedDropbox)value, writer);
+                    return;
+                }
+                if (value is DistinctMemberHome)
+                {
+                    WriteProperty(".tag", "distinct_member_home", writer, enc.StringEncoder.Instance);
+                    DistinctMemberHome.Encoder.EncodeFields((DistinctMemberHome)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -169,6 +225,10 @@ namespace Dropbox.Api.Users
                         return PaperAsFiles.Decoder.DecodeFields(reader);
                     case "file_locking":
                         return FileLocking.Decoder.DecodeFields(reader);
+                    case "team_shared_dropbox":
+                        return TeamSharedDropbox.Decoder.DecodeFields(reader);
+                    case "distinct_member_home":
+                        return DistinctMemberHome.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -362,6 +422,204 @@ namespace Dropbox.Api.Users
                     {
                         case "file_locking":
                             value.Value = global::Dropbox.Api.Users.FileLockingValue.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team shared dropbox object</para>
+        /// </summary>
+        public sealed class TeamSharedDropbox : UserFeatureValue
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamSharedDropbox> Encoder = new TeamSharedDropboxEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamSharedDropbox> Decoder = new TeamSharedDropboxDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamSharedDropbox" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamSharedDropbox(TeamSharedDropboxValue value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamSharedDropbox" />
+            /// class.</para>
+            /// </summary>
+            private TeamSharedDropbox()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public TeamSharedDropboxValue Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamSharedDropbox" />.</para>
+            /// </summary>
+            private class TeamSharedDropboxEncoder : enc.StructEncoder<TeamSharedDropbox>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamSharedDropbox value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_shared_dropbox", value.Value, writer, global::Dropbox.Api.Users.TeamSharedDropboxValue.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamSharedDropbox" />.</para>
+            /// </summary>
+            private class TeamSharedDropboxDecoder : enc.StructDecoder<TeamSharedDropbox>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamSharedDropbox"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamSharedDropbox Create()
+                {
+                    return new TeamSharedDropbox();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(TeamSharedDropbox value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "team_shared_dropbox":
+                            value.Value = global::Dropbox.Api.Users.TeamSharedDropboxValue.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The distinct member home object</para>
+        /// </summary>
+        public sealed class DistinctMemberHome : UserFeatureValue
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DistinctMemberHome> Encoder = new DistinctMemberHomeEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DistinctMemberHome> Decoder = new DistinctMemberHomeDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DistinctMemberHome" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DistinctMemberHome(DistinctMemberHomeValue value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DistinctMemberHome" />
+            /// class.</para>
+            /// </summary>
+            private DistinctMemberHome()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public DistinctMemberHomeValue Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DistinctMemberHome" />.</para>
+            /// </summary>
+            private class DistinctMemberHomeEncoder : enc.StructEncoder<DistinctMemberHome>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DistinctMemberHome value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("distinct_member_home", value.Value, writer, global::Dropbox.Api.Users.DistinctMemberHomeValue.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DistinctMemberHome" />.</para>
+            /// </summary>
+            private class DistinctMemberHomeDecoder : enc.StructDecoder<DistinctMemberHome>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DistinctMemberHome"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DistinctMemberHome Create()
+                {
+                    return new DistinctMemberHome();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(DistinctMemberHome value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "distinct_member_home":
+                            value.Value = global::Dropbox.Api.Users.DistinctMemberHomeValue.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

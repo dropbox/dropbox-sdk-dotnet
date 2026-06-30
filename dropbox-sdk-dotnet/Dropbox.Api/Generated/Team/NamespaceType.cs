@@ -123,6 +123,28 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TeamMemberRoot</para>
+        /// </summary>
+        public bool IsTeamMemberRoot
+        {
+            get
+            {
+                return this is TeamMemberRoot;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamMemberRoot, or <c>null</c>.</para>
+        /// </summary>
+        public TeamMemberRoot AsTeamMemberRoot
+        {
+            get
+            {
+                return this as TeamMemberRoot;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -182,6 +204,12 @@ namespace Dropbox.Api.Team
                     TeamMemberFolder.Encoder.EncodeFields((TeamMemberFolder)value, writer);
                     return;
                 }
+                if (value is TeamMemberRoot)
+                {
+                    WriteProperty(".tag", "team_member_root", writer, enc.StringEncoder.Instance);
+                    TeamMemberRoot.Encoder.EncodeFields((TeamMemberRoot)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -228,6 +256,8 @@ namespace Dropbox.Api.Team
                         return TeamFolder.Decoder.DecodeFields(reader);
                     case "team_member_folder":
                         return TeamMemberFolder.Decoder.DecodeFields(reader);
+                    case "team_member_root":
+                        return TeamMemberRoot.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -507,6 +537,76 @@ namespace Dropbox.Api.Team
                 protected override TeamMemberFolder Create()
                 {
                     return TeamMemberFolder.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Team member's root folder.</para>
+        /// </summary>
+        public sealed class TeamMemberRoot : NamespaceType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamMemberRoot> Encoder = new TeamMemberRootEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamMemberRoot> Decoder = new TeamMemberRootDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamMemberRoot" />
+            /// class.</para>
+            /// </summary>
+            private TeamMemberRoot()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TeamMemberRoot</para>
+            /// </summary>
+            public static readonly TeamMemberRoot Instance = new TeamMemberRoot();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamMemberRoot" />.</para>
+            /// </summary>
+            private class TeamMemberRootEncoder : enc.StructEncoder<TeamMemberRoot>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamMemberRoot value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamMemberRoot" />.</para>
+            /// </summary>
+            private class TeamMemberRootDecoder : enc.StructDecoder<TeamMemberRoot>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamMemberRoot" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamMemberRoot Create()
+                {
+                    return TeamMemberRoot.Instance;
                 }
 
             }

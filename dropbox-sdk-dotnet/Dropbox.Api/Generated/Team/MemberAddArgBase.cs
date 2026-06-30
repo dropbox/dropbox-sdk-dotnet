@@ -67,9 +67,9 @@ namespace Dropbox.Api.Team
 
             if (memberGivenName != null)
             {
-                if (memberGivenName.Length > 100)
+                if (memberGivenName.Length > 50)
                 {
-                    throw new sys.ArgumentOutOfRangeException("memberGivenName", "Length should be at most 100");
+                    throw new sys.ArgumentOutOfRangeException("memberGivenName", "Length should be at most 50");
                 }
                 if (!re.Regex.IsMatch(memberGivenName, @"\A(?:[^/:?*<>""|]*)\z"))
                 {
@@ -79,9 +79,9 @@ namespace Dropbox.Api.Team
 
             if (memberSurname != null)
             {
-                if (memberSurname.Length > 100)
+                if (memberSurname.Length > 50)
                 {
-                    throw new sys.ArgumentOutOfRangeException("memberSurname", "Length should be at most 100");
+                    throw new sys.ArgumentOutOfRangeException("memberSurname", "Length should be at most 50");
                 }
                 if (!re.Regex.IsMatch(memberSurname, @"\A(?:[^/:?*<>""|]*)\z"))
                 {

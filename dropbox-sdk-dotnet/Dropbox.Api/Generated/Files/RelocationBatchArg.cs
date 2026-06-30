@@ -36,7 +36,8 @@ namespace Dropbox.Api.Files
         /// cref="RelocationPath" />.</param>
         /// <param name="autorename">If there's a conflict with any file, have the Dropbox
         /// server try to autorename that file to avoid the conflict.</param>
-        /// <param name="allowSharedFolder">This flag has no effect.</param>
+        /// <param name="allowSharedFolder">Field is deprecated. This flag has no
+        /// effect.</param>
         /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
         /// in an ownership transfer for the content being moved. This does not apply to
         /// copies.</param>
@@ -64,7 +65,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>This flag has no effect.</para>
+        /// <para>Field is deprecated. This flag has no effect.</para>
         /// </summary>
         public bool AllowSharedFolder { get; protected set; }
 

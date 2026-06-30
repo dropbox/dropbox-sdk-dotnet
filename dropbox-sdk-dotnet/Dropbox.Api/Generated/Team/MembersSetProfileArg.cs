@@ -12,9 +12,8 @@ namespace Dropbox.Api.Team
 
     /// <summary>
     /// <para>Exactly one of team_member_id, email, or external_id must be provided to identify
-    /// the user account.</para>
-    /// <para>At least one of new_email, new_external_id, new_given_name, and/or new_surname
-    /// must be provided.</para>
+    /// the user account. At least one of new_email, new_external_id, new_given_name, and/or
+    /// new_surname must be provided.</para>
     /// </summary>
     public class MembersSetProfileArg
     {
@@ -78,9 +77,9 @@ namespace Dropbox.Api.Team
 
             if (newGivenName != null)
             {
-                if (newGivenName.Length > 100)
+                if (newGivenName.Length > 50)
                 {
-                    throw new sys.ArgumentOutOfRangeException("newGivenName", "Length should be at most 100");
+                    throw new sys.ArgumentOutOfRangeException("newGivenName", "Length should be at most 50");
                 }
                 if (!re.Regex.IsMatch(newGivenName, @"\A(?:[^/:?*<>""|]*)\z"))
                 {
@@ -90,9 +89,9 @@ namespace Dropbox.Api.Team
 
             if (newSurname != null)
             {
-                if (newSurname.Length > 100)
+                if (newSurname.Length > 50)
                 {
-                    throw new sys.ArgumentOutOfRangeException("newSurname", "Length should be at most 100");
+                    throw new sys.ArgumentOutOfRangeException("newSurname", "Length should be at most 50");
                 }
                 if (!re.Regex.IsMatch(newSurname, @"\A(?:[^/:?*<>""|]*)\z"))
                 {

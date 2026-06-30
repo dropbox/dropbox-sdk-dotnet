@@ -37,9 +37,8 @@ namespace Dropbox.Api.Sharing
         /// access type from parent folder, and acquired access type from this folder.</param>
         /// <param name="permissions">The permissions that requesting user has on this member.
         /// The set of permissions corresponds to the MemberActions in the request.</param>
-        /// <param name="initials">Never set.</param>
-        /// <param name="isInherited">True if the member has access from a parent
-        /// folder.</param>
+        /// <param name="initials">Field is deprecated. Never set.</param>
+        /// <param name="isInherited">True if the member has access on a parent folder.</param>
         public MembershipInfo(AccessLevel accessType,
                               col.IEnumerable<MemberPermission> permissions = null,
                               string initials = null,
@@ -82,12 +81,12 @@ namespace Dropbox.Api.Sharing
         public col.IList<MemberPermission> Permissions { get; protected set; }
 
         /// <summary>
-        /// <para>Never set.</para>
+        /// <para>Field is deprecated. Never set.</para>
         /// </summary>
         public string Initials { get; protected set; }
 
         /// <summary>
-        /// <para>True if the member has access from a parent folder.</para>
+        /// <para>True if the member has access on a parent folder.</para>
         /// </summary>
         public bool IsInherited { get; protected set; }
 

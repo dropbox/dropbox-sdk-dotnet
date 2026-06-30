@@ -32,7 +32,7 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="path">The path to share.</param>
-        /// <param name="shortUrl">The short url</param>
+        /// <param name="shortUrl">Field is deprecated. None</param>
         /// <param name="pendingUpload">If it's okay to share a path that does not yet exist,
         /// set this to either <see cref="Dropbox.Api.Sharing.PendingUploadMode.File" /> or
         /// <see cref="Dropbox.Api.Sharing.PendingUploadMode.Folder" /> to indicate whether to
@@ -69,7 +69,7 @@ namespace Dropbox.Api.Sharing
         public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the short url of the create shared link arg</para>
+        /// <para>Field is deprecated. None</para>
         /// </summary>
         public bool ShortUrl { get; protected set; }
 

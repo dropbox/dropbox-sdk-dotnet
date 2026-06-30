@@ -102,6 +102,28 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Inactive</para>
+        /// </summary>
+        public bool IsInactive
+        {
+            get
+            {
+                return this is Inactive;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Inactive, or <c>null</c>.</para>
+        /// </summary>
+        public Inactive AsInactive
+        {
+            get
+            {
+                return this as Inactive;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -155,6 +177,12 @@ namespace Dropbox.Api.Team
                     ArchiveInProgress.Encoder.EncodeFields((ArchiveInProgress)value, writer);
                     return;
                 }
+                if (value is Inactive)
+                {
+                    WriteProperty(".tag", "inactive", writer, enc.StringEncoder.Instance);
+                    Inactive.Encoder.EncodeFields((Inactive)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -199,6 +227,8 @@ namespace Dropbox.Api.Team
                         return Archived.Decoder.DecodeFields(reader);
                     case "archive_in_progress":
                         return ArchiveInProgress.Decoder.DecodeFields(reader);
+                    case "inactive":
+                        return Inactive.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -277,7 +307,8 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>The team folder is not accessible outside of the team folder manager.</para>
+        /// <para>The team folder is archived and is not accessible outside of the team folder
+        /// manager.</para>
         /// </summary>
         public sealed class Archived : TeamFolderStatus
         {
@@ -346,7 +377,8 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>The team folder is not accessible outside of the team folder manager.</para>
+        /// <para>The team folder is in the process of being archived and is not accessible
+        /// outside of the team folder manager.</para>
         /// </summary>
         public sealed class ArchiveInProgress : TeamFolderStatus
         {
@@ -409,6 +441,75 @@ namespace Dropbox.Api.Team
                 protected override ArchiveInProgress Create()
                 {
                     return ArchiveInProgress.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team folder is unmounted and can be restored.</para>
+        /// </summary>
+        public sealed class Inactive : TeamFolderStatus
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Inactive> Encoder = new InactiveEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Inactive> Decoder = new InactiveDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Inactive" /> class.</para>
+            /// </summary>
+            private Inactive()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Inactive</para>
+            /// </summary>
+            public static readonly Inactive Instance = new Inactive();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Inactive" />.</para>
+            /// </summary>
+            private class InactiveEncoder : enc.StructEncoder<Inactive>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Inactive value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Inactive" />.</para>
+            /// </summary>
+            private class InactiveDecoder : enc.StructDecoder<Inactive>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Inactive" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Inactive Create()
+                {
+                    return Inactive.Instance;
                 }
 
             }

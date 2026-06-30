@@ -13,8 +13,12 @@ namespace Dropbox.Api.TeamLog
     /// <summary>
     /// <para>User's name logged information</para>
     /// </summary>
+    /// <seealso cref="AddonAssignedDetails" />
+    /// <seealso cref="AddonRemovedDetails" />
     /// <seealso cref="MemberAddNameDetails" />
     /// <seealso cref="MemberChangeNameDetails" />
+    /// <seealso cref="ProductAssignedToMemberDetails" />
+    /// <seealso cref="ProductRemovedFromMemberDetails" />
     public class UserNameLogInfo
     {
         #pragma warning disable 108

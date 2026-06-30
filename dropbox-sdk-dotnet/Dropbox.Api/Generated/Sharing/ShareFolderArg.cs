@@ -31,8 +31,8 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ShareFolderArg" /> class.</para>
         /// </summary>
-        /// <param name="path">The path to the folder to share. If it does not exist, then a
-        /// new one is created.</param>
+        /// <param name="path">The path or the file id to the folder to share. If it does not
+        /// exist, then a new one is created.</param>
         /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
         /// folder.</param>
         /// <param name="forceAsync">Whether to force the share to happen
@@ -47,9 +47,9 @@ namespace Dropbox.Api.Sharing
         /// <param name="accessInheritance">The access inheritance settings for the
         /// folder.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
-        /// `FolderPermission`s that should appear in the  response's <see
+        /// `FolderPermission`s that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the folder.</param>
+        /// actions the authenticated user can perform on the folder.</param>
         /// <param name="linkSettings">Settings on the link for this folder.</param>
         public ShareFolderArg(string path,
                               AclUpdatePolicy aclUpdatePolicy = null,
@@ -80,9 +80,9 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>A list of `FolderAction`s corresponding to `FolderPermission`s that should
-        /// appear in the  response's <see
+        /// appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the folder.</para>
+        /// actions the authenticated user can perform on the folder.</para>
         /// </summary>
         public col.IList<FolderAction> Actions { get; protected set; }
 

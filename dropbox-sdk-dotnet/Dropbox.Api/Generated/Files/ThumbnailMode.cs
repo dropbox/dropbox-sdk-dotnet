@@ -100,6 +100,28 @@ namespace Dropbox.Api.Files
             }
         }
 
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Original</para>
+        /// </summary>
+        public bool IsOriginal
+        {
+            get
+            {
+                return this is Original;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Original, or <c>null</c>.</para>
+        /// </summary>
+        public Original AsOriginal
+        {
+            get
+            {
+                return this as Original;
+            }
+        }
+
         #region Encoder class
 
         /// <summary>
@@ -130,6 +152,12 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty(".tag", "fitone_bestfit", writer, enc.StringEncoder.Instance);
                     FitoneBestfit.Encoder.EncodeFields((FitoneBestfit)value, writer);
+                    return;
+                }
+                if (value is Original)
+                {
+                    WriteProperty(".tag", "original", writer, enc.StringEncoder.Instance);
+                    Original.Encoder.EncodeFields((Original)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -170,6 +198,8 @@ namespace Dropbox.Api.Files
                         return Bestfit.Decoder.DecodeFields(reader);
                     case "fitone_bestfit":
                         return FitoneBestfit.Decoder.DecodeFields(reader);
+                    case "original":
+                        return Original.Decoder.DecodeFields(reader);
                     default:
                         throw new sys.InvalidOperationException();
                 }
@@ -380,6 +410,75 @@ namespace Dropbox.Api.Files
                 protected override FitoneBestfit Create()
                 {
                     return FitoneBestfit.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Don't resize the image at all.</para>
+        /// </summary>
+        public sealed class Original : ThumbnailMode
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Original> Encoder = new OriginalEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Original> Decoder = new OriginalDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Original" /> class.</para>
+            /// </summary>
+            private Original()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Original</para>
+            /// </summary>
+            public static readonly Original Instance = new Original();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Original" />.</para>
+            /// </summary>
+            private class OriginalEncoder : enc.StructEncoder<Original>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Original value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Original" />.</para>
+            /// </summary>
+            private class OriginalDecoder : enc.StructDecoder<Original>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Original" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Original Create()
+                {
+                    return Original.Instance;
                 }
 
             }

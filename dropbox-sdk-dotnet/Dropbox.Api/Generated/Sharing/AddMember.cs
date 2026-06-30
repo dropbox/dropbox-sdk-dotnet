@@ -43,10 +43,6 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentNullException("member");
             }
 
-            if (accessLevel == null)
-            {
-                accessLevel = global::Dropbox.Api.Sharing.AccessLevel.Viewer.Instance;
-            }
             this.Member = member;
             this.AccessLevel = accessLevel;
         }
@@ -59,7 +55,6 @@ namespace Dropbox.Api.Sharing
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public AddMember()
         {
-            this.AccessLevel = global::Dropbox.Api.Sharing.AccessLevel.Viewer.Instance;
         }
 
         /// <summary>
@@ -88,7 +83,10 @@ namespace Dropbox.Api.Sharing
             public override void EncodeFields(AddMember value, enc.IJsonWriter writer)
             {
                 WriteProperty("member", value.Member, writer, global::Dropbox.Api.Sharing.MemberSelector.Encoder);
-                WriteProperty("access_level", value.AccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
+                if (value.AccessLevel != null)
+                {
+                    WriteProperty("access_level", value.AccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
+                }
             }
         }
 

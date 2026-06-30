@@ -42,10 +42,13 @@ namespace Dropbox.Api.TeamPolicies
         /// this team.</param>
         /// <param name="suggestMembersPolicy">The team policy on if teammembers are allowed to
         /// suggest users for admins to invite to the team.</param>
+        /// <param name="topLevelContentPolicy">Policy for deciding whether members can edit
+        /// team folders at the top level of the team space.</param>
         public TeamMemberPolicies(TeamSharingPolicies sharing,
                                   EmmState emmState,
                                   OfficeAddInPolicy officeAddin,
-                                  SuggestMembersPolicy suggestMembersPolicy)
+                                  SuggestMembersPolicy suggestMembersPolicy,
+                                  TopLevelContentPolicy topLevelContentPolicy)
         {
             if (sharing == null)
             {
@@ -67,10 +70,16 @@ namespace Dropbox.Api.TeamPolicies
                 throw new sys.ArgumentNullException("suggestMembersPolicy");
             }
 
+            if (topLevelContentPolicy == null)
+            {
+                throw new sys.ArgumentNullException("topLevelContentPolicy");
+            }
+
             this.Sharing = sharing;
             this.EmmState = emmState;
             this.OfficeAddin = officeAddin;
             this.SuggestMembersPolicy = suggestMembersPolicy;
+            this.TopLevelContentPolicy = topLevelContentPolicy;
         }
 
         /// <summary>
@@ -109,6 +118,12 @@ namespace Dropbox.Api.TeamPolicies
         /// </summary>
         public SuggestMembersPolicy SuggestMembersPolicy { get; protected set; }
 
+        /// <summary>
+        /// <para>Policy for deciding whether members can edit team folders at the top level of
+        /// the team space.</para>
+        /// </summary>
+        public TopLevelContentPolicy TopLevelContentPolicy { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -127,6 +142,7 @@ namespace Dropbox.Api.TeamPolicies
                 WriteProperty("emm_state", value.EmmState, writer, global::Dropbox.Api.TeamPolicies.EmmState.Encoder);
                 WriteProperty("office_addin", value.OfficeAddin, writer, global::Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Encoder);
                 WriteProperty("suggest_members_policy", value.SuggestMembersPolicy, writer, global::Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Encoder);
+                WriteProperty("top_level_content_policy", value.TopLevelContentPolicy, writer, global::Dropbox.Api.TeamPolicies.TopLevelContentPolicy.Encoder);
             }
         }
 
@@ -170,6 +186,9 @@ namespace Dropbox.Api.TeamPolicies
                         break;
                     case "suggest_members_policy":
                         value.SuggestMembersPolicy = global::Dropbox.Api.TeamPolicies.SuggestMembersPolicy.Decoder.Decode(reader);
+                        break;
+                    case "top_level_content_policy":
+                        value.TopLevelContentPolicy = global::Dropbox.Api.TeamPolicies.TopLevelContentPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

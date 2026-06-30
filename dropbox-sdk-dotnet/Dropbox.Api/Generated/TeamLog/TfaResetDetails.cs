@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Reset two-step verification for team member.</para>
+    /// <para>Reset two-factor authentication for team member.</para>
     /// </summary>
     public class TfaResetDetails
     {

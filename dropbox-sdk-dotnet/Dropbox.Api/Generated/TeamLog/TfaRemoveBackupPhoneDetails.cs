@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Removed backup phone for two-step verification.</para>
+    /// <para>Removed backup phone for two-factor authentication.</para>
     /// </summary>
     public class TfaRemoveBackupPhoneDetails
     {

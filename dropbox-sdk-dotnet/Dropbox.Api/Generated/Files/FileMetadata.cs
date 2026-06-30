@@ -59,7 +59,7 @@ namespace Dropbox.Api.Files
         /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. This
         /// field will be null if the file or folder is not mounted.</param>
-        /// <param name="parentSharedFolderId">Please use <see
+        /// <param name="parentSharedFolderId">Field is deprecated. Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
         /// <param name="previewUrl">The preview URL of the file.</param>
@@ -81,19 +81,21 @@ namespace Dropbox.Api.Files
         /// <param name="propertyGroups">Additional information if the file has custom
         /// properties with the property template specified.</param>
         /// <param name="hasExplicitSharedMembers">This flag will only be present if
-        /// include_has_explicit_shared_members  is true in <see
+        /// include_has_explicit_shared_members is true in <see
         /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetMetadataAsync" />. If this  flag
-        /// is present, it will be true if this file has any explicit shared  members. This is
-        /// different from sharing_info in that this could be true  in the case where a file
-        /// has explicit members but is not contained within  a shared folder.</param>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetMetadataAsync" />. If this flag
+        /// is present, it will be true if this file has any explicit shared members. This is
+        /// different from sharing_info in that this could be true in the case where a file has
+        /// explicit members but is not contained within a shared folder.</param>
         /// <param name="contentHash">A hash of the file content. This field can be used to
         /// verify data integrity. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         /// <param name="fileLockInfo">If present, the metadata associated with the file's
         /// current lock.</param>
+        /// <param name="isRestorable">If present, indicates whether this file revision can be
+        /// restored.</param>
         public FileMetadata(string name,
                             string id,
                             sys.DateTime clientModified,
@@ -112,7 +114,8 @@ namespace Dropbox.Api.Files
                             col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                             bool? hasExplicitSharedMembers = null,
                             string contentHash = null,
-                            FileLockMetadata fileLockInfo = null)
+                            FileLockMetadata fileLockInfo = null,
+                            bool? isRestorable = null)
             : base(name, pathLower, pathDisplay, parentSharedFolderId, previewUrl)
         {
             if (id == null)
@@ -165,6 +168,7 @@ namespace Dropbox.Api.Files
             this.HasExplicitSharedMembers = hasExplicitSharedMembers;
             this.ContentHash = contentHash;
             this.FileLockInfo = fileLockInfo;
+            this.IsRestorable = isRestorable;
         }
 
         /// <summary>
@@ -250,13 +254,13 @@ namespace Dropbox.Api.Files
         public col.IList<global::Dropbox.Api.FileProperties.PropertyGroup> PropertyGroups { get; protected set; }
 
         /// <summary>
-        /// <para>This flag will only be present if include_has_explicit_shared_members  is
-        /// true in <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
+        /// <para>This flag will only be present if include_has_explicit_shared_members is true
+        /// in <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetMetadataAsync" />. If this  flag
-        /// is present, it will be true if this file has any explicit shared  members. This is
-        /// different from sharing_info in that this could be true  in the case where a file
-        /// has explicit members but is not contained within  a shared folder.</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetMetadataAsync" />. If this flag
+        /// is present, it will be true if this file has any explicit shared members. This is
+        /// different from sharing_info in that this could be true in the case where a file has
+        /// explicit members but is not contained within a shared folder.</para>
         /// </summary>
         public bool? HasExplicitSharedMembers { get; protected set; }
 
@@ -272,6 +276,11 @@ namespace Dropbox.Api.Files
         /// <para>If present, the metadata associated with the file's current lock.</para>
         /// </summary>
         public FileLockMetadata FileLockInfo { get; protected set; }
+
+        /// <summary>
+        /// <para>If present, indicates whether this file revision can be restored.</para>
+        /// </summary>
+        public bool? IsRestorable { get; protected set; }
 
         #region Encoder class
 
@@ -341,6 +350,10 @@ namespace Dropbox.Api.Files
                 if (value.FileLockInfo != null)
                 {
                     WriteProperty("file_lock_info", value.FileLockInfo, writer, global::Dropbox.Api.Files.FileLockMetadata.Encoder);
+                }
+                if (value.IsRestorable != null)
+                {
+                    WriteProperty("is_restorable", value.IsRestorable.Value, writer, enc.BooleanEncoder.Instance);
                 }
             }
         }
@@ -430,6 +443,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "file_lock_info":
                         value.FileLockInfo = global::Dropbox.Api.Files.FileLockMetadata.Decoder.Decode(reader);
+                        break;
+                    case "is_restorable":
+                        value.IsRestorable = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

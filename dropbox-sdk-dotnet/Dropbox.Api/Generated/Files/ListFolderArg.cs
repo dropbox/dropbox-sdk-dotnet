@@ -33,14 +33,19 @@ namespace Dropbox.Api.Files
         /// <param name="path">A unique identifier for the file.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
-        /// subfolders.</param>
-        /// <param name="includeMediaInfo">If true, <see
+        /// subfolders. In some cases, setting <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>true</c> may lead to
+        /// performance issues or errors, especially when traversing folder structures with a
+        /// large number of items. A workaround for such cases is to set <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>false</c> and traverse
+        /// subfolders one at a time.</param>
+        /// <param name="includeMediaInfo">Field is deprecated. If true, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. This
         /// parameter will no longer have an effect starting December 2, 2019.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
-        /// flag for each file indicating whether or not  that file has any explicit
+        /// flag for each file indicating whether or not that file has any explicit
         /// members.</param>
         /// <param name="includeMountedFolders">If true, the results will include entries under
         /// mounted folders which includes app folder, shared folder and team folder.</param>
@@ -56,6 +61,8 @@ namespace Dropbox.Api.Files
         /// property data associated with the file and each of the listed templates.</param>
         /// <param name="includeNonDownloadableFiles">If true, include files that are not
         /// downloadable, i.e. Google Docs.</param>
+        /// <param name="includeRestorableInfo">If true, each returned deleted entry will
+        /// include whether that entry can be restored.</param>
         public ListFolderArg(string path,
                              bool recursive = false,
                              bool includeMediaInfo = false,
@@ -65,15 +72,16 @@ namespace Dropbox.Api.Files
                              uint? limit = null,
                              SharedLink sharedLink = null,
                              global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
-                             bool includeNonDownloadableFiles = true)
+                             bool includeNonDownloadableFiles = true,
+                             bool includeRestorableInfo = false)
         {
             if (path == null)
             {
                 throw new sys.ArgumentNullException("path");
             }
-            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*)?|id:.*|(ns:[0-9]+(/.*)?))\z"))
+            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*)?|id:.*|(ns:[0-9]+(/(.|[\r\n])*)?))\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*)?|id:.*|(ns:[0-9]+(/.*)?))\z'");
+                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*)?|id:.*|(ns:[0-9]+(/(.|[\r\n])*)?))\z'");
             }
 
             if (limit != null)
@@ -98,6 +106,7 @@ namespace Dropbox.Api.Files
             this.SharedLink = sharedLink;
             this.IncludePropertyGroups = includePropertyGroups;
             this.IncludeNonDownloadableFiles = includeNonDownloadableFiles;
+            this.IncludeRestorableInfo = includeRestorableInfo;
         }
 
         /// <summary>
@@ -114,6 +123,7 @@ namespace Dropbox.Api.Files
             this.IncludeHasExplicitSharedMembers = false;
             this.IncludeMountedFolders = true;
             this.IncludeNonDownloadableFiles = true;
+            this.IncludeRestorableInfo = false;
         }
 
         /// <summary>
@@ -123,14 +133,19 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>If true, the list folder operation will be applied recursively to all
-        /// subfolders and the response will contain contents of all subfolders.</para>
+        /// subfolders and the response will contain contents of all subfolders. In some cases,
+        /// setting <see cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>true</c> may
+        /// lead to performance issues or errors, especially when traversing folder structures
+        /// with a large number of items. A workaround for such cases is to set <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>false</c> and traverse
+        /// subfolders one at a time.</para>
         /// </summary>
         public bool Recursive { get; protected set; }
 
         /// <summary>
-        /// <para>If true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for
-        /// photo and video. This parameter will no longer have an effect starting December 2,
-        /// 2019.</para>
+        /// <para>Field is deprecated. If true, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. This
+        /// parameter will no longer have an effect starting December 2, 2019.</para>
         /// </summary>
         public bool IncludeMediaInfo { get; protected set; }
 
@@ -142,7 +157,7 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>If true, the results will include a flag for each file indicating whether or
-        /// not  that file has any explicit members.</para>
+        /// not that file has any explicit members.</para>
         /// </summary>
         public bool IncludeHasExplicitSharedMembers { get; protected set; }
 
@@ -179,6 +194,12 @@ namespace Dropbox.Api.Files
         /// </summary>
         public bool IncludeNonDownloadableFiles { get; protected set; }
 
+        /// <summary>
+        /// <para>If true, each returned deleted entry will include whether that entry can be
+        /// restored.</para>
+        /// </summary>
+        public bool IncludeRestorableInfo { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -212,6 +233,7 @@ namespace Dropbox.Api.Files
                     WriteProperty("include_property_groups", value.IncludePropertyGroups, writer, global::Dropbox.Api.FileProperties.TemplateFilterBase.Encoder);
                 }
                 WriteProperty("include_non_downloadable_files", value.IncludeNonDownloadableFiles, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("include_restorable_info", value.IncludeRestorableInfo, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -273,6 +295,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "include_non_downloadable_files":
                         value.IncludeNonDownloadableFiles = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "include_restorable_info":
+                        value.IncludeRestorableInfo = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -38,10 +38,12 @@ namespace Dropbox.Api.Sharing
         /// notifications of their invite.</param>
         /// <param name="customMessage">Optional message to display to added members in their
         /// invitation.</param>
+        /// <param name="fpSealedResult">The FingerprintJS Sealed Client Result value</param>
         public AddFolderMemberArg(string sharedFolderId,
                                   col.IEnumerable<AddMember> members,
                                   bool quiet = false,
-                                  string customMessage = null)
+                                  string customMessage = null,
+                                  string fpSealedResult = null)
         {
             if (sharedFolderId == null)
             {
@@ -71,6 +73,7 @@ namespace Dropbox.Api.Sharing
             this.Members = membersList;
             this.Quiet = quiet;
             this.CustomMessage = customMessage;
+            this.FpSealedResult = fpSealedResult;
         }
 
         /// <summary>
@@ -107,6 +110,11 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public string CustomMessage { get; protected set; }
 
+        /// <summary>
+        /// <para>The FingerprintJS Sealed Client Result value</para>
+        /// </summary>
+        public string FpSealedResult { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -127,6 +135,10 @@ namespace Dropbox.Api.Sharing
                 if (value.CustomMessage != null)
                 {
                     WriteProperty("custom_message", value.CustomMessage, writer, enc.StringEncoder.Instance);
+                }
+                if (value.FpSealedResult != null)
+                {
+                    WriteProperty("fp_sealed_result", value.FpSealedResult, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -171,6 +183,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "custom_message":
                         value.CustomMessage = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "fp_sealed_result":
+                        value.FpSealedResult = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

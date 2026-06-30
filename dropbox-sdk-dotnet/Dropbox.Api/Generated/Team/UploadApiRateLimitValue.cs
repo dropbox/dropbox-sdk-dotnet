@@ -180,7 +180,7 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>This team has unlimited upload API quota. So far both server version account
-        /// and legacy  account type have unlimited monthly upload api quota.</para>
+        /// and legacy account type have unlimited monthly upload api quota.</para>
         /// </summary>
         public sealed class Unlimited : UploadApiRateLimitValue
         {

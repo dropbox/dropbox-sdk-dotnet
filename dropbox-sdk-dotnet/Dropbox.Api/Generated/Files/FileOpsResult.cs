@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The file ops result object</para>
+    /// <para>Result for File Operations</para>
     /// </summary>
     /// <seealso cref="CreateFolderBatchResult" />
     /// <seealso cref="CreateFolderResult" />

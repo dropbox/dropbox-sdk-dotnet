@@ -32,8 +32,8 @@ namespace Dropbox.Api.Sharing
         /// <para>Initializes a new instance of the <see cref="ShareFolderArgBase" />
         /// class.</para>
         /// </summary>
-        /// <param name="path">The path to the folder to share. If it does not exist, then a
-        /// new one is created.</param>
+        /// <param name="path">The path or the file id to the folder to share. If it does not
+        /// exist, then a new one is created.</param>
         /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
         /// folder.</param>
         /// <param name="forceAsync">Whether to force the share to happen
@@ -59,9 +59,9 @@ namespace Dropbox.Api.Sharing
             {
                 throw new sys.ArgumentNullException("path");
             }
-            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z"))
+            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/(.|[\r\n])*)?)|(id:.*))\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/.*)?))\z'");
+                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*)|(ns:[0-9]+(/(.|[\r\n])*)?)|(id:.*))\z'");
             }
 
             if (accessInheritance == null)
@@ -91,8 +91,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The path to the folder to share. If it does not exist, then a new one is
-        /// created.</para>
+        /// <para>The path or the file id to the folder to share. If it does not exist, then a
+        /// new one is created.</para>
         /// </summary>
         public string Path { get; protected set; }
 

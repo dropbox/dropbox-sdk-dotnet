@@ -168,6 +168,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is MustAutomount</para>
+        /// </summary>
+        public bool IsMustAutomount
+        {
+            get
+            {
+                return this is MustAutomount;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MustAutomount, or <c>null</c>.</para>
+        /// </summary>
+        public MustAutomount AsMustAutomount
+        {
+            get
+            {
+                return this as MustAutomount;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -239,6 +261,12 @@ namespace Dropbox.Api.Sharing
                     NotMountable.Encoder.EncodeFields((NotMountable)value, writer);
                     return;
                 }
+                if (value is MustAutomount)
+                {
+                    WriteProperty(".tag", "must_automount", writer, enc.StringEncoder.Instance);
+                    MustAutomount.Encoder.EncodeFields((MustAutomount)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -289,6 +317,8 @@ namespace Dropbox.Api.Sharing
                         return NoPermission.Decoder.DecodeFields(reader);
                     case "not_mountable":
                         return NotMountable.Decoder.DecodeFields(reader);
+                    case "must_automount":
+                        return MustAutomount.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -762,6 +792,77 @@ namespace Dropbox.Api.Sharing
                 protected override NotMountable Create()
                 {
                     return NotMountable.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The shared folder is not mountable by directly call APIs, instead the
+        /// automounter is responsible for mounting it.</para>
+        /// </summary>
+        public sealed class MustAutomount : MountFolderError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MustAutomount> Encoder = new MustAutomountEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MustAutomount> Decoder = new MustAutomountDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MustAutomount" />
+            /// class.</para>
+            /// </summary>
+            private MustAutomount()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MustAutomount</para>
+            /// </summary>
+            public static readonly MustAutomount Instance = new MustAutomount();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MustAutomount" />.</para>
+            /// </summary>
+            private class MustAutomountEncoder : enc.StructEncoder<MustAutomount>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MustAutomount value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MustAutomount" />.</para>
+            /// </summary>
+            private class MustAutomountDecoder : enc.StructDecoder<MustAutomount>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MustAutomount" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MustAutomount Create()
+                {
+                    return MustAutomount.Instance;
                 }
 
             }

@@ -40,14 +40,14 @@ namespace Dropbox.Api.Files
         /// returned for deleted file or folder, otherwise <see
         /// cref="Dropbox.Api.Files.LookupError.NotFound" /> will be returned.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
-        /// flag for each file indicating whether or not  that file has any explicit
+        /// flag for each file indicating whether or not that file has any explicit
         /// members.</param>
         /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
         /// property data associated with the file and each of the listed templates.</param>
-        /// <param name="includePropertyTemplates">If set to a valid list of template IDs, <see
-        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set for files with
-        /// custom properties.</param>
+        /// <param name="includePropertyTemplates">Field is deprecated. If set to a valid list
+        /// of template IDs, <see cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is
+        /// set for files with custom properties.</param>
         public AlphaGetMetadataArg(string path,
                                    bool includeMediaInfo = false,
                                    bool includeDeleted = false,
@@ -73,7 +73,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>If set to a valid list of template IDs, <see
+        /// <para>Field is deprecated. If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set for files with
         /// custom properties.</para>
         /// </summary>

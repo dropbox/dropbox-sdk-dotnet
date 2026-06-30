@@ -34,13 +34,18 @@ namespace Dropbox.Api.Common
         /// </summary>
         /// <param name="rootNamespaceId">The namespace ID for user's root namespace. It will
         /// be the namespace ID of the shared team root if the user is member of a team with a
-        /// separate team root. Otherwise it will be same as <see
+        /// separate team root, or the user root if user is member of a team with separate
+        /// distinct roots for users. Otherwise it will be the same as <see
         /// cref="Dropbox.Api.Common.RootInfo.HomeNamespaceId" />.</param>
         /// <param name="homeNamespaceId">The namespace ID for user's home namespace.</param>
+        /// <param name="homePath">The path for user's home directory under the distinct user
+        /// root.</param>
         public UserRootInfo(string rootNamespaceId,
-                            string homeNamespaceId)
+                            string homeNamespaceId,
+                            string homePath = null)
             : base(rootNamespaceId, homeNamespaceId)
         {
+            this.HomePath = homePath;
         }
 
         /// <summary>
@@ -52,6 +57,11 @@ namespace Dropbox.Api.Common
         public UserRootInfo()
         {
         }
+
+        /// <summary>
+        /// <para>The path for user's home directory under the distinct user root.</para>
+        /// </summary>
+        public string HomePath { get; protected set; }
 
         #region Encoder class
 
@@ -69,6 +79,10 @@ namespace Dropbox.Api.Common
             {
                 WriteProperty("root_namespace_id", value.RootNamespaceId, writer, enc.StringEncoder.Instance);
                 WriteProperty("home_namespace_id", value.HomeNamespaceId, writer, enc.StringEncoder.Instance);
+                if (value.HomePath != null)
+                {
+                    WriteProperty("home_path", value.HomePath, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -106,6 +120,9 @@ namespace Dropbox.Api.Common
                         break;
                     case "home_namespace_id":
                         value.HomeNamespaceId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "home_path":
+                        value.HomePath = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

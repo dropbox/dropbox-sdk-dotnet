@@ -39,10 +39,22 @@ namespace Dropbox.Api.TeamPolicies
         /// <param name="sharedLinkCreatePolicy">Who can view shared links owned by team
         /// members.</param>
         /// <param name="groupCreationPolicy">Who can create groups.</param>
+        /// <param name="sharedFolderLinkRestrictionPolicy">Who can view links to content in
+        /// shared folders.</param>
+        /// <param name="enforceLinkPasswordPolicy">If passwords are required for new links
+        /// shared outside the team.</param>
+        /// <param name="defaultLinkExpirationDaysPolicy">Default expiration date for new links
+        /// shared outside the team.</param>
+        /// <param name="sharedLinkDefaultPermissionsPolicy">Default access level for new links
+        /// shared by team members.</param>
         public TeamSharingPolicies(SharedFolderMemberPolicy sharedFolderMemberPolicy,
                                    SharedFolderJoinPolicy sharedFolderJoinPolicy,
                                    SharedLinkCreatePolicy sharedLinkCreatePolicy,
-                                   GroupCreation groupCreationPolicy)
+                                   GroupCreation groupCreationPolicy,
+                                   SharedFolderBlanketLinkRestrictionPolicy sharedFolderLinkRestrictionPolicy,
+                                   EnforceLinkPasswordPolicy enforceLinkPasswordPolicy,
+                                   DefaultLinkExpirationDaysPolicy defaultLinkExpirationDaysPolicy,
+                                   SharedLinkDefaultPermissionsPolicy sharedLinkDefaultPermissionsPolicy)
         {
             if (sharedFolderMemberPolicy == null)
             {
@@ -64,10 +76,34 @@ namespace Dropbox.Api.TeamPolicies
                 throw new sys.ArgumentNullException("groupCreationPolicy");
             }
 
+            if (sharedFolderLinkRestrictionPolicy == null)
+            {
+                throw new sys.ArgumentNullException("sharedFolderLinkRestrictionPolicy");
+            }
+
+            if (enforceLinkPasswordPolicy == null)
+            {
+                throw new sys.ArgumentNullException("enforceLinkPasswordPolicy");
+            }
+
+            if (defaultLinkExpirationDaysPolicy == null)
+            {
+                throw new sys.ArgumentNullException("defaultLinkExpirationDaysPolicy");
+            }
+
+            if (sharedLinkDefaultPermissionsPolicy == null)
+            {
+                throw new sys.ArgumentNullException("sharedLinkDefaultPermissionsPolicy");
+            }
+
             this.SharedFolderMemberPolicy = sharedFolderMemberPolicy;
             this.SharedFolderJoinPolicy = sharedFolderJoinPolicy;
             this.SharedLinkCreatePolicy = sharedLinkCreatePolicy;
             this.GroupCreationPolicy = groupCreationPolicy;
+            this.SharedFolderLinkRestrictionPolicy = sharedFolderLinkRestrictionPolicy;
+            this.EnforceLinkPasswordPolicy = enforceLinkPasswordPolicy;
+            this.DefaultLinkExpirationDaysPolicy = defaultLinkExpirationDaysPolicy;
+            this.SharedLinkDefaultPermissionsPolicy = sharedLinkDefaultPermissionsPolicy;
         }
 
         /// <summary>
@@ -101,6 +137,26 @@ namespace Dropbox.Api.TeamPolicies
         /// </summary>
         public GroupCreation GroupCreationPolicy { get; protected set; }
 
+        /// <summary>
+        /// <para>Who can view links to content in shared folders.</para>
+        /// </summary>
+        public SharedFolderBlanketLinkRestrictionPolicy SharedFolderLinkRestrictionPolicy { get; protected set; }
+
+        /// <summary>
+        /// <para>If passwords are required for new links shared outside the team.</para>
+        /// </summary>
+        public EnforceLinkPasswordPolicy EnforceLinkPasswordPolicy { get; protected set; }
+
+        /// <summary>
+        /// <para>Default expiration date for new links shared outside the team.</para>
+        /// </summary>
+        public DefaultLinkExpirationDaysPolicy DefaultLinkExpirationDaysPolicy { get; protected set; }
+
+        /// <summary>
+        /// <para>Default access level for new links shared by team members.</para>
+        /// </summary>
+        public SharedLinkDefaultPermissionsPolicy SharedLinkDefaultPermissionsPolicy { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -119,6 +175,10 @@ namespace Dropbox.Api.TeamPolicies
                 WriteProperty("shared_folder_join_policy", value.SharedFolderJoinPolicy, writer, global::Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Encoder);
                 WriteProperty("shared_link_create_policy", value.SharedLinkCreatePolicy, writer, global::Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.Encoder);
                 WriteProperty("group_creation_policy", value.GroupCreationPolicy, writer, global::Dropbox.Api.TeamPolicies.GroupCreation.Encoder);
+                WriteProperty("shared_folder_link_restriction_policy", value.SharedFolderLinkRestrictionPolicy, writer, global::Dropbox.Api.TeamPolicies.SharedFolderBlanketLinkRestrictionPolicy.Encoder);
+                WriteProperty("enforce_link_password_policy", value.EnforceLinkPasswordPolicy, writer, global::Dropbox.Api.TeamPolicies.EnforceLinkPasswordPolicy.Encoder);
+                WriteProperty("default_link_expiration_days_policy", value.DefaultLinkExpirationDaysPolicy, writer, global::Dropbox.Api.TeamPolicies.DefaultLinkExpirationDaysPolicy.Encoder);
+                WriteProperty("shared_link_default_permissions_policy", value.SharedLinkDefaultPermissionsPolicy, writer, global::Dropbox.Api.TeamPolicies.SharedLinkDefaultPermissionsPolicy.Encoder);
             }
         }
 
@@ -162,6 +222,18 @@ namespace Dropbox.Api.TeamPolicies
                         break;
                     case "group_creation_policy":
                         value.GroupCreationPolicy = global::Dropbox.Api.TeamPolicies.GroupCreation.Decoder.Decode(reader);
+                        break;
+                    case "shared_folder_link_restriction_policy":
+                        value.SharedFolderLinkRestrictionPolicy = global::Dropbox.Api.TeamPolicies.SharedFolderBlanketLinkRestrictionPolicy.Decoder.Decode(reader);
+                        break;
+                    case "enforce_link_password_policy":
+                        value.EnforceLinkPasswordPolicy = global::Dropbox.Api.TeamPolicies.EnforceLinkPasswordPolicy.Decoder.Decode(reader);
+                        break;
+                    case "default_link_expiration_days_policy":
+                        value.DefaultLinkExpirationDaysPolicy = global::Dropbox.Api.TeamPolicies.DefaultLinkExpirationDaysPolicy.Decoder.Decode(reader);
+                        break;
+                    case "shared_link_default_permissions_policy":
+                        value.SharedLinkDefaultPermissionsPolicy = global::Dropbox.Api.TeamPolicies.SharedLinkDefaultPermissionsPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

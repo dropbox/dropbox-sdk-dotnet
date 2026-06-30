@@ -54,7 +54,7 @@ namespace Dropbox.Api.Files
         /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. This
         /// field will be null if the file or folder is not mounted.</param>
-        /// <param name="parentSharedFolderId">Please use <see
+        /// <param name="parentSharedFolderId">Field is deprecated. Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
         /// <param name="previewUrl">The preview URL of the file.</param>
@@ -185,9 +185,9 @@ namespace Dropbox.Api.Files
         public string PathDisplay { get; protected set; }
 
         /// <summary>
-        /// <para>Please use <see cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId"
-        /// /> or <see cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" />
-        /// instead.</para>
+        /// <para>Field is deprecated. Please use <see
+        /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
+        /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</para>
         /// </summary>
         public string ParentSharedFolderId { get; protected set; }
 

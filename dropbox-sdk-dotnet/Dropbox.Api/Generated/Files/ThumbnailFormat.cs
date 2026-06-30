@@ -79,6 +79,28 @@ namespace Dropbox.Api.Files
             }
         }
 
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Webp</para>
+        /// </summary>
+        public bool IsWebp
+        {
+            get
+            {
+                return this is Webp;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Webp, or <c>null</c>.</para>
+        /// </summary>
+        public Webp AsWebp
+        {
+            get
+            {
+                return this as Webp;
+            }
+        }
+
         #region Encoder class
 
         /// <summary>
@@ -103,6 +125,12 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty(".tag", "png", writer, enc.StringEncoder.Instance);
                     Png.Encoder.EncodeFields((Png)value, writer);
+                    return;
+                }
+                if (value is Webp)
+                {
+                    WriteProperty(".tag", "webp", writer, enc.StringEncoder.Instance);
+                    Webp.Encoder.EncodeFields((Webp)value, writer);
                     return;
                 }
                 throw new sys.InvalidOperationException();
@@ -141,6 +169,8 @@ namespace Dropbox.Api.Files
                         return Jpeg.Decoder.DecodeFields(reader);
                     case "png":
                         return Png.Decoder.DecodeFields(reader);
+                    case "webp":
+                        return Webp.Decoder.DecodeFields(reader);
                     default:
                         throw new sys.InvalidOperationException();
                 }
@@ -280,6 +310,75 @@ namespace Dropbox.Api.Files
                 protected override Png Create()
                 {
                     return Png.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The webp object</para>
+        /// </summary>
+        public sealed class Webp : ThumbnailFormat
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Webp> Encoder = new WebpEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Webp> Decoder = new WebpDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Webp" /> class.</para>
+            /// </summary>
+            private Webp()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Webp</para>
+            /// </summary>
+            public static readonly Webp Instance = new Webp();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Webp" />.</para>
+            /// </summary>
+            private class WebpEncoder : enc.StructEncoder<Webp>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Webp value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Webp" />.</para>
+            /// </summary>
+            private class WebpDecoder : enc.StructDecoder<Webp>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Webp" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Webp Create()
+                {
+                    return Webp.Instance;
                 }
 
             }

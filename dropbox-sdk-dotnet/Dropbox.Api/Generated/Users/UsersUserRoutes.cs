@@ -207,7 +207,7 @@ namespace Dropbox.Api.Users.Routes
         }
 
         /// <summary>
-        /// <para>Get information about multiple user accounts.  At most 300 accounts may be
+        /// <para>Get information about multiple user accounts. At most 300 accounts may be
         /// queried per request.</para>
         /// </summary>
         /// <param name="getAccountBatchArg">The request parameters</param>
@@ -238,7 +238,7 @@ namespace Dropbox.Api.Users.Routes
         }
 
         /// <summary>
-        /// <para>Get information about multiple user accounts.  At most 300 accounts may be
+        /// <para>Get information about multiple user accounts. At most 300 accounts may be
         /// queried per request.</para>
         /// </summary>
         /// <param name="accountIds">List of user account identifiers.  Should not contain any

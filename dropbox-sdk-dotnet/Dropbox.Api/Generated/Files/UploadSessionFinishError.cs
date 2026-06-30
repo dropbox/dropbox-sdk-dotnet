@@ -262,6 +262,29 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// EncryptionNotSupported</para>
+        /// </summary>
+        public bool IsEncryptionNotSupported
+        {
+            get
+            {
+                return this is EncryptionNotSupported;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EncryptionNotSupported, or <c>null</c>.</para>
+        /// </summary>
+        public EncryptionNotSupported AsEncryptionNotSupported
+        {
+            get
+            {
+                return this as EncryptionNotSupported;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -357,6 +380,12 @@ namespace Dropbox.Api.Files
                     ContentHashMismatch.Encoder.EncodeFields((ContentHashMismatch)value, writer);
                     return;
                 }
+                if (value is EncryptionNotSupported)
+                {
+                    WriteProperty(".tag", "encryption_not_supported", writer, enc.StringEncoder.Instance);
+                    EncryptionNotSupported.Encoder.EncodeFields((EncryptionNotSupported)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -416,6 +445,8 @@ namespace Dropbox.Api.Files
                         return PayloadTooLarge.Decoder.DecodeFields(reader);
                     case "content_hash_mismatch":
                         return ContentHashMismatch.Decoder.DecodeFields(reader);
+                    case "encryption_not_supported":
+                        return EncryptionNotSupported.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -720,9 +751,9 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The batch request commits files into too many different shared folders.
-        /// Please limit your batch request to files contained in a single shared
-        /// folder.</para>
+        /// <para>Field is deprecated. The batch request commits files into too many different
+        /// shared folders. Please limit your batch request to files contained in a single
+        /// shared folder.</para>
         /// </summary>
         public sealed class TooManySharedFolderTargets : UploadSessionFinishError
         {
@@ -1079,7 +1110,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The request payload must be at most 150 MB.</para>
+        /// <para>The request payload must be at most 150 MiB.</para>
         /// </summary>
         public sealed class PayloadTooLarge : UploadSessionFinishError
         {
@@ -1213,6 +1244,78 @@ namespace Dropbox.Api.Files
                 protected override ContentHashMismatch Create()
                 {
                     return ContentHashMismatch.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The file is required to be encrypted, which is not supported in our public
+        /// API.</para>
+        /// </summary>
+        public sealed class EncryptionNotSupported : UploadSessionFinishError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EncryptionNotSupported> Encoder = new EncryptionNotSupportedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EncryptionNotSupported> Decoder = new EncryptionNotSupportedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="EncryptionNotSupported" />
+            /// class.</para>
+            /// </summary>
+            private EncryptionNotSupported()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of EncryptionNotSupported</para>
+            /// </summary>
+            public static readonly EncryptionNotSupported Instance = new EncryptionNotSupported();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EncryptionNotSupported" />.</para>
+            /// </summary>
+            private class EncryptionNotSupportedEncoder : enc.StructEncoder<EncryptionNotSupported>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EncryptionNotSupported value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EncryptionNotSupported" />.</para>
+            /// </summary>
+            private class EncryptionNotSupportedDecoder : enc.StructDecoder<EncryptionNotSupported>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="EncryptionNotSupported"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EncryptionNotSupported Create()
+                {
+                    return EncryptionNotSupported.Instance;
                 }
 
             }

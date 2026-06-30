@@ -46,17 +46,21 @@ namespace Dropbox.Api.Files
         /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. This
         /// field will be null if the file or folder is not mounted.</param>
-        /// <param name="parentSharedFolderId">Please use <see
+        /// <param name="parentSharedFolderId">Field is deprecated. Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
         /// <param name="previewUrl">The preview URL of the file.</param>
+        /// <param name="isRestorable">If present, indicates whether this deleted entry can be
+        /// restored.</param>
         public DeletedMetadata(string name,
                                string pathLower = null,
                                string pathDisplay = null,
                                string parentSharedFolderId = null,
-                               string previewUrl = null)
+                               string previewUrl = null,
+                               bool? isRestorable = null)
             : base(name, pathLower, pathDisplay, parentSharedFolderId, previewUrl)
         {
+            this.IsRestorable = isRestorable;
         }
 
         /// <summary>
@@ -69,6 +73,11 @@ namespace Dropbox.Api.Files
         public DeletedMetadata()
         {
         }
+
+        /// <summary>
+        /// <para>If present, indicates whether this deleted entry can be restored.</para>
+        /// </summary>
+        public bool? IsRestorable { get; protected set; }
 
         #region Encoder class
 
@@ -100,6 +109,10 @@ namespace Dropbox.Api.Files
                 if (value.PreviewUrl != null)
                 {
                     WriteProperty("preview_url", value.PreviewUrl, writer, enc.StringEncoder.Instance);
+                }
+                if (value.IsRestorable != null)
+                {
+                    WriteProperty("is_restorable", value.IsRestorable.Value, writer, enc.BooleanEncoder.Instance);
                 }
             }
         }
@@ -147,6 +160,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "preview_url":
                         value.PreviewUrl = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "is_restorable":
+                        value.IsRestorable = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -14,6 +14,7 @@ namespace Dropbox.Api.Files
     /// <para>The upload session cursor object</para>
     /// </summary>
     /// <seealso cref="UploadSessionAppendArg" />
+    /// <seealso cref="UploadSessionAppendBatchArgEntry" />
     /// <seealso cref="UploadSessionFinishArg" />
     public class UploadSessionCursor
     {

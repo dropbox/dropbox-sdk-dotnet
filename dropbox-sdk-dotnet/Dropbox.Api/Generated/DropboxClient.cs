@@ -16,6 +16,7 @@ namespace Dropbox.Api
     using Dropbox.Api.Files.Routes;
     using Dropbox.Api.Openid.Routes;
     using Dropbox.Api.Paper.Routes;
+    using Dropbox.Api.Riviera.Routes;
     using Dropbox.Api.Sharing.Routes;
     using Dropbox.Api.Users.Routes;
 
@@ -67,6 +68,11 @@ namespace Dropbox.Api
         public PaperUserRoutes Paper { get; private set; }
 
         /// <summary>
+        /// <para>Gets the Riviera routes.</para>
+        /// </summary>
+        public RivieraUserRoutes Riviera { get; private set; }
+
+        /// <summary>
         /// <para>Gets the Sharing routes.</para>
         /// </summary>
         public SharingUserRoutes Sharing { get; private set; }
@@ -91,6 +97,7 @@ namespace Dropbox.Api
             this.Files = new FilesUserRoutes(transport);
             this.Openid = new OpenidUserRoutes(transport);
             this.Paper = new PaperUserRoutes(transport);
+            this.Riviera = new RivieraUserRoutes(transport);
             this.Sharing = new SharingUserRoutes(transport);
             this.Users = new UsersUserRoutes(transport);
         }

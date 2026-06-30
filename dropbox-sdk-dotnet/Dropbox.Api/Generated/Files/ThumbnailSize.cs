@@ -232,6 +232,28 @@ namespace Dropbox.Api.Files
             }
         }
 
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is W3200h2400</para>
+        /// </summary>
+        public bool IsW3200h2400
+        {
+            get
+            {
+                return this is W3200h2400;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a W3200h2400, or <c>null</c>.</para>
+        /// </summary>
+        public W3200h2400 AsW3200h2400
+        {
+            get
+            {
+                return this as W3200h2400;
+            }
+        }
+
         #region Encoder class
 
         /// <summary>
@@ -300,6 +322,12 @@ namespace Dropbox.Api.Files
                     W2048h1536.Encoder.EncodeFields((W2048h1536)value, writer);
                     return;
                 }
+                if (value is W3200h2400)
+                {
+                    WriteProperty(".tag", "w3200h2400", writer, enc.StringEncoder.Instance);
+                    W3200h2400.Encoder.EncodeFields((W3200h2400)value, writer);
+                    return;
+                }
                 throw new sys.InvalidOperationException();
             }
         }
@@ -350,6 +378,8 @@ namespace Dropbox.Api.Files
                         return W1024h768.Decoder.DecodeFields(reader);
                     case "w2048h1536":
                         return W2048h1536.Decoder.DecodeFields(reader);
+                    case "w3200h2400":
+                        return W3200h2400.Decoder.DecodeFields(reader);
                     default:
                         throw new sys.InvalidOperationException();
                 }
@@ -972,6 +1002,75 @@ namespace Dropbox.Api.Files
                 protected override W2048h1536 Create()
                 {
                     return W2048h1536.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>3200 by 2400 px.</para>
+        /// </summary>
+        public sealed class W3200h2400 : ThumbnailSize
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<W3200h2400> Encoder = new W3200h2400Encoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<W3200h2400> Decoder = new W3200h2400Decoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="W3200h2400" /> class.</para>
+            /// </summary>
+            private W3200h2400()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of W3200h2400</para>
+            /// </summary>
+            public static readonly W3200h2400 Instance = new W3200h2400();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="W3200h2400" />.</para>
+            /// </summary>
+            private class W3200h2400Encoder : enc.StructEncoder<W3200h2400>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(W3200h2400 value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="W3200h2400" />.</para>
+            /// </summary>
+            private class W3200h2400Decoder : enc.StructDecoder<W3200h2400>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="W3200h2400" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override W3200h2400 Create()
+                {
+                    return W3200h2400.Instance;
                 }
 
             }

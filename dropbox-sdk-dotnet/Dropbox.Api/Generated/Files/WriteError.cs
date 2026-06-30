@@ -212,6 +212,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is AccessRestricted</para>
+        /// </summary>
+        public bool IsAccessRestricted
+        {
+            get
+            {
+                return this is AccessRestricted;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AccessRestricted, or <c>null</c>.</para>
+        /// </summary>
+        public AccessRestricted AsAccessRestricted
+        {
+            get
+            {
+                return this as AccessRestricted;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -295,6 +317,12 @@ namespace Dropbox.Api.Files
                     TooManyWriteOperations.Encoder.EncodeFields((TooManyWriteOperations)value, writer);
                     return;
                 }
+                if (value is AccessRestricted)
+                {
+                    WriteProperty(".tag", "access_restricted", writer, enc.StringEncoder.Instance);
+                    AccessRestricted.Encoder.EncodeFields((AccessRestricted)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -349,6 +377,8 @@ namespace Dropbox.Api.Files
                         return OperationSuppressed.Decoder.DecodeFields(reader);
                     case "too_many_write_operations":
                         return TooManyWriteOperations.Decoder.DecodeFields(reader);
+                    case "access_restricted":
+                        return AccessRestricted.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -976,6 +1006,77 @@ namespace Dropbox.Api.Files
                 protected override TooManyWriteOperations Create()
                 {
                     return TooManyWriteOperations.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user doesn't have permission to perform the action due to restrictions
+        /// set by a team administrator</para>
+        /// </summary>
+        public sealed class AccessRestricted : WriteError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AccessRestricted> Encoder = new AccessRestrictedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AccessRestricted> Decoder = new AccessRestrictedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AccessRestricted" />
+            /// class.</para>
+            /// </summary>
+            private AccessRestricted()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of AccessRestricted</para>
+            /// </summary>
+            public static readonly AccessRestricted Instance = new AccessRestricted();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AccessRestricted" />.</para>
+            /// </summary>
+            private class AccessRestrictedEncoder : enc.StructEncoder<AccessRestricted>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AccessRestricted value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AccessRestricted" />.</para>
+            /// </summary>
+            private class AccessRestrictedDecoder : enc.StructDecoder<AccessRestricted>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AccessRestricted" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AccessRestricted Create()
+                {
+                    return AccessRestricted.Instance;
                 }
 
             }

@@ -209,7 +209,7 @@ namespace Dropbox.Api.TeamLog
         #endregion
 
         /// <summary>
-        /// <para>The name of the team.</para>
+        /// <para>The name of the team</para>
         /// </summary>
         public sealed class ConnectedTeamName : FederationStatusChangeAdditionalInfo
         {
@@ -299,7 +299,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>The email to which the request was sent.</para>
+        /// <para>The email to which the request was sent</para>
         /// </summary>
         public sealed class NonTrustedTeamDetails : FederationStatusChangeAdditionalInfo
         {
@@ -389,7 +389,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>The name of the organization.</para>
+        /// <para>The name of the organization</para>
         /// </summary>
         public sealed class OrganizationName : FederationStatusChangeAdditionalInfo
         {

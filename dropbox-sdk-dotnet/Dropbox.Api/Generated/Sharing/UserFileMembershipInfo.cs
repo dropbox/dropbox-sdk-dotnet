@@ -38,9 +38,8 @@ namespace Dropbox.Api.Sharing
         /// <param name="user">The account information for the membership user.</param>
         /// <param name="permissions">The permissions that requesting user has on this member.
         /// The set of permissions corresponds to the MemberActions in the request.</param>
-        /// <param name="initials">Never set.</param>
-        /// <param name="isInherited">True if the member has access from a parent
-        /// folder.</param>
+        /// <param name="initials">Field is deprecated. Never set.</param>
+        /// <param name="isInherited">True if the member has access on a parent folder.</param>
         /// <param name="timeLastSeen">The UTC timestamp of when the user has last seen the
         /// content. Only populated if the user has seen the content and the caller has a plan
         /// that includes viewer history.</param>

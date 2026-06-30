@@ -101,6 +101,51 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DeprecatedFreemiumTeamMember</para>
+        /// </summary>
+        public bool IsDeprecatedFreemiumTeamMember
+        {
+            get
+            {
+                return this is DeprecatedFreemiumTeamMember;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DeprecatedFreemiumTeamMember, or <c>null</c>.</para>
+        /// </summary>
+        public DeprecatedFreemiumTeamMember AsDeprecatedFreemiumTeamMember
+        {
+            get
+            {
+                return this as DeprecatedFreemiumTeamMember;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is FreemiumTeamCreator</para>
+        /// </summary>
+        public bool IsFreemiumTeamCreator
+        {
+            get
+            {
+                return this is FreemiumTeamCreator;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FreemiumTeamCreator, or <c>null</c>.</para>
+        /// </summary>
+        public FreemiumTeamCreator AsFreemiumTeamCreator
+        {
+            get
+            {
+                return this as FreemiumTeamCreator;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is LimitedAdmin</para>
         /// </summary>
         public bool IsLimitedAdmin
@@ -308,6 +353,18 @@ namespace Dropbox.Api.TeamLog
                     ContentAdmin.Encoder.EncodeFields((ContentAdmin)value, writer);
                     return;
                 }
+                if (value is DeprecatedFreemiumTeamMember)
+                {
+                    WriteProperty(".tag", "deprecated_freemium_team_member", writer, enc.StringEncoder.Instance);
+                    DeprecatedFreemiumTeamMember.Encoder.EncodeFields((DeprecatedFreemiumTeamMember)value, writer);
+                    return;
+                }
+                if (value is FreemiumTeamCreator)
+                {
+                    WriteProperty(".tag", "freemium_team_creator", writer, enc.StringEncoder.Instance);
+                    FreemiumTeamCreator.Encoder.EncodeFields((FreemiumTeamCreator)value, writer);
+                    return;
+                }
                 if (value is LimitedAdmin)
                 {
                     WriteProperty(".tag", "limited_admin", writer, enc.StringEncoder.Instance);
@@ -394,6 +451,10 @@ namespace Dropbox.Api.TeamLog
                         return ComplianceAdmin.Decoder.DecodeFields(reader);
                     case "content_admin":
                         return ContentAdmin.Decoder.DecodeFields(reader);
+                    case "deprecated_freemium_team_member":
+                        return DeprecatedFreemiumTeamMember.Decoder.DecodeFields(reader);
+                    case "freemium_team_creator":
+                        return FreemiumTeamCreator.Decoder.DecodeFields(reader);
                     case "limited_admin":
                         return LimitedAdmin.Decoder.DecodeFields(reader);
                     case "member_only":
@@ -619,6 +680,148 @@ namespace Dropbox.Api.TeamLog
                 protected override ContentAdmin Create()
                 {
                     return ContentAdmin.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The deprecated freemium team member object</para>
+        /// </summary>
+        public sealed class DeprecatedFreemiumTeamMember : AdminRole
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DeprecatedFreemiumTeamMember> Encoder = new DeprecatedFreemiumTeamMemberEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DeprecatedFreemiumTeamMember> Decoder = new DeprecatedFreemiumTeamMemberDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DeprecatedFreemiumTeamMember" /> class.</para>
+            /// </summary>
+            private DeprecatedFreemiumTeamMember()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of DeprecatedFreemiumTeamMember</para>
+            /// </summary>
+            public static readonly DeprecatedFreemiumTeamMember Instance = new DeprecatedFreemiumTeamMember();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DeprecatedFreemiumTeamMember" />.</para>
+            /// </summary>
+            private class DeprecatedFreemiumTeamMemberEncoder : enc.StructEncoder<DeprecatedFreemiumTeamMember>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DeprecatedFreemiumTeamMember value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DeprecatedFreemiumTeamMember" />.</para>
+            /// </summary>
+            private class DeprecatedFreemiumTeamMemberDecoder : enc.StructDecoder<DeprecatedFreemiumTeamMember>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DeprecatedFreemiumTeamMember" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DeprecatedFreemiumTeamMember Create()
+                {
+                    return DeprecatedFreemiumTeamMember.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The freemium team creator object</para>
+        /// </summary>
+        public sealed class FreemiumTeamCreator : AdminRole
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FreemiumTeamCreator> Encoder = new FreemiumTeamCreatorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FreemiumTeamCreator> Decoder = new FreemiumTeamCreatorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FreemiumTeamCreator" />
+            /// class.</para>
+            /// </summary>
+            private FreemiumTeamCreator()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FreemiumTeamCreator</para>
+            /// </summary>
+            public static readonly FreemiumTeamCreator Instance = new FreemiumTeamCreator();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FreemiumTeamCreator" />.</para>
+            /// </summary>
+            private class FreemiumTeamCreatorEncoder : enc.StructEncoder<FreemiumTeamCreator>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FreemiumTeamCreator value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FreemiumTeamCreator" />.</para>
+            /// </summary>
+            private class FreemiumTeamCreatorDecoder : enc.StructDecoder<FreemiumTeamCreator>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FreemiumTeamCreator"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FreemiumTeamCreator Create()
+                {
+                    return FreemiumTeamCreator.Instance;
                 }
 
             }

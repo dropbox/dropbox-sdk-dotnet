@@ -124,6 +124,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Metadata</para>
+        /// </summary>
+        public bool IsMetadata
+        {
+            get
+            {
+                return this is Metadata;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Metadata, or <c>null</c>.</para>
+        /// </summary>
+        public Metadata AsMetadata
+        {
+            get
+            {
+                return this as Metadata;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -183,6 +205,12 @@ namespace Dropbox.Api.Files
                     ImageContent.Encoder.EncodeFields((ImageContent)value, writer);
                     return;
                 }
+                if (value is Metadata)
+                {
+                    WriteProperty(".tag", "metadata", writer, enc.StringEncoder.Instance);
+                    Metadata.Encoder.EncodeFields((Metadata)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -229,6 +257,8 @@ namespace Dropbox.Api.Files
                         return FilenameAndContent.Decoder.DecodeFields(reader);
                     case "image_content":
                         return ImageContent.Decoder.DecodeFields(reader);
+                    case "metadata":
+                        return Metadata.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -510,6 +540,75 @@ namespace Dropbox.Api.Files
                 protected override ImageContent Create()
                 {
                     return ImageContent.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>This item was matched based on its metadata.</para>
+        /// </summary>
+        public sealed class Metadata : SearchMatchTypeV2
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Metadata> Encoder = new MetadataEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Metadata> Decoder = new MetadataDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Metadata" /> class.</para>
+            /// </summary>
+            private Metadata()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Metadata</para>
+            /// </summary>
+            public static readonly Metadata Instance = new Metadata();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Metadata" />.</para>
+            /// </summary>
+            private class MetadataEncoder : enc.StructEncoder<Metadata>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Metadata value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Metadata" />.</para>
+            /// </summary>
+            private class MetadataDecoder : enc.StructDecoder<Metadata>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Metadata" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Metadata Create()
+                {
+                    return Metadata.Instance;
                 }
 
             }

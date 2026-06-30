@@ -11,7 +11,7 @@ namespace Dropbox.Api.FileProperties
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The property group update object</para>
+    /// <para>Property routes</para>
     /// </summary>
     public class PropertyGroupUpdate
     {
@@ -33,8 +33,8 @@ namespace Dropbox.Api.FileProperties
         /// </summary>
         /// <param name="templateId">A unique identifier for a property template.</param>
         /// <param name="addOrUpdateFields">Property fields to update. If the property field
-        /// already exists, it is updated. If the property field doesn't exist, the property
-        /// group is added.</param>
+        /// already exists, it is updated. If the property field doesn't exist, it will be
+        /// created as long as the property group already exists.</param>
         /// <param name="removeFields">Property fields to remove (by name), provided they
         /// exist.</param>
         public PropertyGroupUpdate(string templateId,
@@ -81,7 +81,8 @@ namespace Dropbox.Api.FileProperties
 
         /// <summary>
         /// <para>Property fields to update. If the property field already exists, it is
-        /// updated. If the property field doesn't exist, the property group is added.</para>
+        /// updated. If the property field doesn't exist, it will be created as long as the
+        /// property group already exists.</para>
         /// </summary>
         public col.IList<PropertyField> AddOrUpdateFields { get; protected set; }
 

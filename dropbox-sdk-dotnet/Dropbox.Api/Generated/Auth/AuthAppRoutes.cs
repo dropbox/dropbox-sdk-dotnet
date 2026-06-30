@@ -39,6 +39,7 @@ namespace Dropbox.Api.Auth.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TokenFromOAuth1Error"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<TokenFromOAuth1Result> TokenFromOauth1Async(TokenFromOAuth1Arg tokenFromOAuth1Arg)
         {
             return this.Transport.SendRpcRequestAsync<TokenFromOAuth1Arg, TokenFromOAuth1Result, TokenFromOAuth1Error>(tokenFromOAuth1Arg, "api", "/auth/token/from_oauth1", "app", global::Dropbox.Api.Auth.TokenFromOAuth1Arg.Encoder, global::Dropbox.Api.Auth.TokenFromOAuth1Result.Decoder, global::Dropbox.Api.Auth.TokenFromOAuth1Error.Decoder);
@@ -53,6 +54,7 @@ namespace Dropbox.Api.Auth.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginTokenFromOauth1(TokenFromOAuth1Arg tokenFromOAuth1Arg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.TokenFromOauth1Async(tokenFromOAuth1Arg);
@@ -72,6 +74,7 @@ namespace Dropbox.Api.Auth.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TokenFromOAuth1Error"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<TokenFromOAuth1Result> TokenFromOauth1Async(string oauth1Token,
                                                                   string oauth1TokenSecret)
         {
@@ -92,6 +95,7 @@ namespace Dropbox.Api.Auth.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginTokenFromOauth1(string oauth1Token,
                                                      string oauth1TokenSecret,
                                                      sys.AsyncCallback callback,
@@ -113,6 +117,7 @@ namespace Dropbox.Api.Auth.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TokenFromOAuth1Error"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public TokenFromOAuth1Result EndTokenFromOauth1(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<TokenFromOAuth1Result>;

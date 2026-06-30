@@ -31,14 +31,12 @@ namespace Dropbox.Api.Paper.Routes
         internal enc.ITransport Transport { get; private set; }
 
         /// <summary>
-        /// <para>Marks the given Paper doc as archived.</para>
-        /// <para>This action can be performed or undone by anyone with edit permissions to the
-        /// doc.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>This endpoint will be retired in September 2020. Refer to the <a
+        /// <para>Marks the given Paper doc as archived. This action can be performed or undone
+        /// by anyone with edit permissions to the doc. Note that this endpoint will continue
+        /// to work for content created by users on the older version of Paper. To check which
+        /// version of Paper a user is on, use /users/features/get_values. If the
+        /// paper_as_files feature is enabled, then the user is running the new version of
+        /// Paper. This endpoint will be retired in September 2020. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for more information.</para>
         /// </summary>
@@ -71,14 +69,12 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
-        /// <para>Marks the given Paper doc as archived.</para>
-        /// <para>This action can be performed or undone by anyone with edit permissions to the
-        /// doc.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>This endpoint will be retired in September 2020. Refer to the <a
+        /// <para>Marks the given Paper doc as archived. This action can be performed or undone
+        /// by anyone with edit permissions to the doc. Note that this endpoint will continue
+        /// to work for content created by users on the older version of Paper. To check which
+        /// version of Paper a user is on, use /users/features/get_values. If the
+        /// paper_as_files feature is enabled, then the user is running the new version of
+        /// Paper. This endpoint will be retired in September 2020. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for more information.</para>
         /// </summary>
@@ -134,12 +130,11 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
-        /// <para>Creates a new Paper doc with the provided content.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>This endpoint will be retired in September 2020. Refer to the <a
+        /// <para>Creates a new Paper doc with the provided content. Note that this endpoint
+        /// will continue to work for content created by users on the older version of Paper.
+        /// To check which version of Paper a user is on, use /users/features/get_values. If
+        /// the paper_as_files feature is enabled, then the user is running the new version of
+        /// Paper. This endpoint will be retired in September 2020. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for more information.</para>
         /// </summary>
@@ -175,12 +170,11 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
-        /// <para>Creates a new Paper doc with the provided content.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>This endpoint will be retired in September 2020. Refer to the <a
+        /// <para>Creates a new Paper doc with the provided content. Note that this endpoint
+        /// will continue to work for content created by users on the older version of Paper.
+        /// To check which version of Paper a user is on, use /users/features/get_values. If
+        /// the paper_as_files feature is enabled, then the user is running the new version of
+        /// Paper. This endpoint will be retired in September 2020. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for more information.</para>
         /// </summary>
@@ -254,12 +248,11 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
-        /// <para>Exports and downloads Paper doc either as HTML or markdown.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// <para>Exports and downloads Paper doc either as HTML or markdown. Note that this
+        /// endpoint will continue to work for content created by users on the older version of
+        /// Paper. To check which version of Paper a user is on, use
         /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -293,17 +286,20 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
-        /// <para>Exports and downloads Paper doc either as HTML or markdown.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// <para>Exports and downloads Paper doc either as HTML or markdown. Note that this
+        /// endpoint will continue to work for content created by users on the older version of
+        /// Paper. To check which version of Paper a user is on, use
         /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="exportFormat">The export format</param>
+        /// <param name="includeComments">When true, export includes comment threads (e.g.
+        /// markdown footnotes). When false or omitted, body only. Other formats may adopt this
+        /// later; currently only markdown uses it. Plain bool (not optional): protoc-gen-godbx
+        /// does not support proto3 optional yet.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -311,10 +307,12 @@ namespace Dropbox.Api.Paper.Routes
         /// cref="DocLookupError"/>.</exception>
         [sys.Obsolete("This function is deprecated")]
         public t.Task<enc.IDownloadResponse<PaperDocExportResult>> DocsDownloadAsync(string docId,
-                                                                                     ExportFormat exportFormat)
+                                                                                     ExportFormat exportFormat,
+                                                                                     bool includeComments = false)
         {
             var paperDocExport = new PaperDocExport(docId,
-                                                    exportFormat);
+                                                    exportFormat,
+                                                    includeComments);
 
             return this.DocsDownloadAsync(paperDocExport);
         }
@@ -324,6 +322,10 @@ namespace Dropbox.Api.Paper.Routes
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="exportFormat">The export format</param>
+        /// <param name="includeComments">When true, export includes comment threads (e.g.
+        /// markdown footnotes). When false or omitted, body only. Other formats may adopt this
+        /// later; currently only markdown uses it. Plain bool (not optional): protoc-gen-godbx
+        /// does not support proto3 optional yet.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -332,11 +334,13 @@ namespace Dropbox.Api.Paper.Routes
         [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDocsDownload(string docId,
                                                   ExportFormat exportFormat,
-                                                  sys.AsyncCallback callback,
+                                                  bool includeComments = false,
+                                                  sys.AsyncCallback callback = null,
                                                   object callbackState = null)
         {
             var paperDocExport = new PaperDocExport(docId,
-                                                    exportFormat);
+                                                    exportFormat,
+                                                    includeComments);
 
             return this.BeginDocsDownload(paperDocExport, callback, callbackState);
         }
@@ -367,12 +371,10 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>Lists the users who are explicitly invited to the Paper folder in which the
         /// Paper doc is contained. For private folders all users (including owner) shared on
         /// the folder are listed and for team folders all non-team users shared on the folder
-        /// are returned.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// are returned. Note that this endpoint will continue to work for content created by
+        /// users on the older version of Paper. To check which version of Paper a user is on,
+        /// use /users/features/get_values. If the paper_as_files feature is enabled, then the
+        /// user is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -409,12 +411,10 @@ namespace Dropbox.Api.Paper.Routes
         /// <para>Lists the users who are explicitly invited to the Paper folder in which the
         /// Paper doc is contained. For private folders all users (including owner) shared on
         /// the folder are listed and for team folders all non-team users shared on the folder
-        /// are returned.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// are returned. Note that this endpoint will continue to work for content created by
+        /// users on the older version of Paper. To check which version of Paper a user is on,
+        /// use /users/features/get_values. If the paper_as_files feature is enabled, then the
+        /// user is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -486,12 +486,11 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListAsync" />, use
-        /// this to paginate through all users on the Paper folder.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// this to paginate through all users on the Paper folder. Note that this endpoint
+        /// will continue to work for content created by users on the older version of Paper.
+        /// To check which version of Paper a user is on, use /users/features/get_values. If
+        /// the paper_as_files feature is enabled, then the user is running the new version of
+        /// Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -528,12 +527,11 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListAsync" />, use
-        /// this to paginate through all users on the Paper folder.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// this to paginate through all users on the Paper folder. Note that this endpoint
+        /// will continue to work for content created by users on the older version of Paper.
+        /// To check which version of Paper a user is on, use /users/features/get_values. If
+        /// the paper_as_files feature is enabled, then the user is running the new version of
+        /// Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -606,19 +604,15 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
-        /// <para>Retrieves folder information for the given Paper doc. This includes:</para>
-        /// <para>  - folder sharing policy; permissions for subfolders are set by the
-        /// top-level folder.</para>
-        /// <para>  - full 'filepath', i.e. the list of folders (both folderId and folderName)
-        /// from     the root folder to the folder directly containing the Paper doc.</para>
-        /// <para></para>
-        /// <para>If the Paper doc is not in any folder (aka unfiled) the response will be
-        /// empty.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// <para>Retrieves folder information for the given Paper doc. This includes: - folder
+        /// sharing policy; permissions for subfolders are set by the top-level folder. - full
+        /// 'filepath', i.e. the list of folders (both folderId and folderName) from the root
+        /// folder to the folder directly containing the Paper doc. If the Paper doc is not in
+        /// any folder (aka unfiled) the response will be empty. Note that this endpoint will
+        /// continue to work for content created by users on the older version of Paper. To
+        /// check which version of Paper a user is on, use /users/features/get_values. If the
+        /// paper_as_files feature is enabled, then the user is running the new version of
+        /// Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -652,19 +646,15 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
-        /// <para>Retrieves folder information for the given Paper doc. This includes:</para>
-        /// <para>  - folder sharing policy; permissions for subfolders are set by the
-        /// top-level folder.</para>
-        /// <para>  - full 'filepath', i.e. the list of folders (both folderId and folderName)
-        /// from     the root folder to the folder directly containing the Paper doc.</para>
-        /// <para></para>
-        /// <para>If the Paper doc is not in any folder (aka unfiled) the response will be
-        /// empty.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// <para>Retrieves folder information for the given Paper doc. This includes: - folder
+        /// sharing policy; permissions for subfolders are set by the top-level folder. - full
+        /// 'filepath', i.e. the list of folders (both folderId and folderName) from the root
+        /// folder to the folder directly containing the Paper doc. If the Paper doc is not in
+        /// any folder (aka unfiled) the response will be empty. Note that this endpoint will
+        /// continue to work for content created by users on the older version of Paper. To
+        /// check which version of Paper a user is on, use /users/features/get_values. If the
+        /// paper_as_files feature is enabled, then the user is running the new version of
+        /// Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -724,14 +714,104 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
+        /// <para>Returns metadata for a Paper doc or Cloud Doc.</para>
+        /// </summary>
+        /// <param name="getDocMetadataArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DocLookupError"/>.</exception>
+        public t.Task<PaperDocGetMetadataResult> DocsGetMetadataAsync(GetDocMetadataArg getDocMetadataArg)
+        {
+            return this.Transport.SendRpcRequestAsync<GetDocMetadataArg, PaperDocGetMetadataResult, DocLookupError>(getDocMetadataArg, "api", "/paper/docs/get_metadata", "user", global::Dropbox.Api.Paper.GetDocMetadataArg.Encoder, global::Dropbox.Api.Paper.PaperDocGetMetadataResult.Decoder, global::Dropbox.Api.Paper.DocLookupError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the docs get metadata route.</para>
+        /// </summary>
+        /// <param name="getDocMetadataArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDocsGetMetadata(GetDocMetadataArg getDocMetadataArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.DocsGetMetadataAsync(getDocMetadataArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns metadata for a Paper doc or Cloud Doc.</para>
+        /// </summary>
+        /// <param name="docId">Legacy Paper doc identifier.</param>
+        /// <param name="fileId">Dropbox file ID for Cloud Docs (post-PiFS migration).</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DocLookupError"/>.</exception>
+        public t.Task<PaperDocGetMetadataResult> DocsGetMetadataAsync(string docId = null,
+                                                                      string fileId = null)
+        {
+            var getDocMetadataArg = new GetDocMetadataArg(docId,
+                                                          fileId);
+
+            return this.DocsGetMetadataAsync(getDocMetadataArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the docs get metadata route.</para>
+        /// </summary>
+        /// <param name="docId">Legacy Paper doc identifier.</param>
+        /// <param name="fileId">Dropbox file ID for Cloud Docs (post-PiFS migration).</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDocsGetMetadata(string docId = null,
+                                                     string fileId = null,
+                                                     sys.AsyncCallback callback = null,
+                                                     object callbackState = null)
+        {
+            var getDocMetadataArg = new GetDocMetadataArg(docId,
+                                                          fileId);
+
+            return this.BeginDocsGetMetadata(getDocMetadataArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the docs get metadata route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DocLookupError"/>.</exception>
+        public PaperDocGetMetadataResult EndDocsGetMetadata(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<PaperDocGetMetadataResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Return the list of all Paper docs according to the argument specifications.
         /// To iterate over through the full pagination, pass the cursor to <see
-        /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync" />.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync" />. Note that
+        /// this endpoint will continue to work for content created by users on the older
+        /// version of Paper. To check which version of Paper a user is on, use
         /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -764,12 +844,11 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Return the list of all Paper docs according to the argument specifications.
         /// To iterate over through the full pagination, pass the cursor to <see
-        /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync" />.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync" />. Note that
+        /// this endpoint will continue to work for content created by users on the older
+        /// version of Paper. To check which version of Paper a user is on, use
         /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -782,18 +861,22 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="limit">Size limit per batch. The maximum number of docs that can be
         /// retrieved per batch is 1000. Higher value results in invalid arguments
         /// error.</param>
+        /// <param name="stopAtDate">Do not return results beyond this date. Behavior depends
+        /// on sort order.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         [sys.Obsolete("This function is deprecated")]
         public t.Task<ListPaperDocsResponse> DocsListAsync(ListPaperDocsFilterBy filterBy = null,
                                                            ListPaperDocsSortBy sortBy = null,
                                                            ListPaperDocsSortOrder sortOrder = null,
-                                                           int limit = 1000)
+                                                           int limit = 1000,
+                                                           sys.DateTime? stopAtDate = null)
         {
             var listPaperDocsArgs = new ListPaperDocsArgs(filterBy,
                                                           sortBy,
                                                           sortOrder,
-                                                          limit);
+                                                          limit,
+                                                          stopAtDate);
 
             return this.DocsListAsync(listPaperDocsArgs);
         }
@@ -810,6 +893,8 @@ namespace Dropbox.Api.Paper.Routes
         /// <param name="limit">Size limit per batch. The maximum number of docs that can be
         /// retrieved per batch is 1000. Higher value results in invalid arguments
         /// error.</param>
+        /// <param name="stopAtDate">Do not return results beyond this date. Behavior depends
+        /// on sort order.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -820,13 +905,15 @@ namespace Dropbox.Api.Paper.Routes
                                               ListPaperDocsSortBy sortBy = null,
                                               ListPaperDocsSortOrder sortOrder = null,
                                               int limit = 1000,
+                                              sys.DateTime? stopAtDate = null,
                                               sys.AsyncCallback callback = null,
                                               object callbackState = null)
         {
             var listPaperDocsArgs = new ListPaperDocsArgs(filterBy,
                                                           sortBy,
                                                           sortOrder,
-                                                          limit);
+                                                          limit,
+                                                          stopAtDate);
 
             return this.BeginDocsList(listPaperDocsArgs, callback, callbackState);
         }
@@ -853,12 +940,10 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync" />, use this to
-        /// paginate through all Paper doc.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// paginate through all Paper doc. Note that this endpoint will continue to work for
+        /// content created by users on the older version of Paper. To check which version of
+        /// Paper a user is on, use /users/features/get_values. If the paper_as_files feature
+        /// is enabled, then the user is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -894,12 +979,10 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync" />, use this to
-        /// paginate through all Paper doc.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// paginate through all Paper doc. Note that this endpoint will continue to work for
+        /// content created by users on the older version of Paper. To check which version of
+        /// Paper a user is on, use /users/features/get_values. If the paper_as_files feature
+        /// is enabled, then the user is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -966,13 +1049,11 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Permanently deletes the given Paper doc. This operation is final as the doc
-        /// cannot be recovered.</para>
-        /// <para>This action can be performed only by the doc owner.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// cannot be recovered. This action can be performed only by the doc owner. Note that
+        /// this endpoint will continue to work for content created by users on the older
+        /// version of Paper. To check which version of Paper a user is on, use
         /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1006,13 +1087,11 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Permanently deletes the given Paper doc. This operation is final as the doc
-        /// cannot be recovered.</para>
-        /// <para>This action can be performed only by the doc owner.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// cannot be recovered. This action can be performed only by the doc owner. Note that
+        /// this endpoint will continue to work for content created by users on the older
+        /// version of Paper. To check which version of Paper a user is on, use
         /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1068,12 +1147,11 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
-        /// <para>Gets the default sharing policy for the given Paper doc.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// <para>Gets the default sharing policy for the given Paper doc. Note that this
+        /// endpoint will continue to work for content created by users on the older version of
+        /// Paper. To check which version of Paper a user is on, use
         /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1107,12 +1185,11 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
-        /// <para>Gets the default sharing policy for the given Paper doc.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// <para>Gets the default sharing policy for the given Paper doc. Note that this
+        /// endpoint will continue to work for content created by users on the older version of
+        /// Paper. To check which version of Paper a user is on, use
         /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1174,14 +1251,12 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Sets the default sharing policy for the given Paper doc. The default
         /// 'team_sharing_policy' can be changed only by teams, omit this field for personal
-        /// accounts.</para>
-        /// <para>The 'public_sharing_policy' policy can't be set to the value 'disabled'
-        /// because this setting can be changed only via the team admin console.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// accounts. The 'public_sharing_policy' policy can't be set to the value 'disabled'
+        /// because this setting can be changed only via the team admin console. Note that this
+        /// endpoint will continue to work for content created by users on the older version of
+        /// Paper. To check which version of Paper a user is on, use
         /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1216,14 +1291,12 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Sets the default sharing policy for the given Paper doc. The default
         /// 'team_sharing_policy' can be changed only by teams, omit this field for personal
-        /// accounts.</para>
-        /// <para>The 'public_sharing_policy' policy can't be set to the value 'disabled'
-        /// because this setting can be changed only via the team admin console.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// accounts. The 'public_sharing_policy' policy can't be set to the value 'disabled'
+        /// because this setting can be changed only via the team admin console. Note that this
+        /// endpoint will continue to work for content created by users on the older version of
+        /// Paper. To check which version of Paper a user is on, use
         /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1287,12 +1360,12 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
-        /// <para>Updates an existing Paper doc with the provided content.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// <para>Updates an existing Paper doc with the provided content. Note that this
+        /// endpoint will continue to work for content created by users on the older version of
+        /// Paper. To check which version of Paper a user is on, use
         /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>This endpoint will be retired in September 2020. Refer to the <a
+        /// is running the new version of Paper. This endpoint will be retired in September
+        /// 2020. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for more information.</para>
         /// </summary>
@@ -1328,12 +1401,12 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
-        /// <para>Updates an existing Paper doc with the provided content.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// <para>Updates an existing Paper doc with the provided content. Note that this
+        /// endpoint will continue to work for content created by users on the older version of
+        /// Paper. To check which version of Paper a user is on, use
         /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>This endpoint will be retired in September 2020. Refer to the <a
+        /// is running the new version of Paper. This endpoint will be retired in September
+        /// 2020. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for more information.</para>
         /// </summary>
@@ -1420,13 +1493,11 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Allows an owner or editor to add users to a Paper doc or change their
-        /// permissions using their email address or Dropbox account ID.</para>
-        /// <para>The doc owner's permissions cannot be changed.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// permissions using their email address or Dropbox account ID. The doc owner's
+        /// permissions cannot be changed. Note that this endpoint will continue to work for
+        /// content created by users on the older version of Paper. To check which version of
+        /// Paper a user is on, use /users/features/get_values. If the paper_as_files feature
+        /// is enabled, then the user is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1461,13 +1532,11 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Allows an owner or editor to add users to a Paper doc or change their
-        /// permissions using their email address or Dropbox account ID.</para>
-        /// <para>The doc owner's permissions cannot be changed.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// permissions using their email address or Dropbox account ID. The doc owner's
+        /// permissions cannot be changed. Note that this endpoint will continue to work for
+        /// content created by users on the older version of Paper. To check which version of
+        /// Paper a user is on, use /users/features/get_values. If the paper_as_files feature
+        /// is enabled, then the user is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1553,14 +1622,12 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Lists all users who visited the Paper doc or users with explicit access. This
         /// call excludes users who have been removed. The list is sorted by the date of the
-        /// visit or the share date.</para>
-        /// <para>The list will include both users, the explicitly shared ones as well as those
-        /// who came in using the Paper url link.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// visit or the share date. The list will include both users, the explicitly shared
+        /// ones as well as those who came in using the Paper url link. Note that this endpoint
+        /// will continue to work for content created by users on the older version of Paper.
+        /// To check which version of Paper a user is on, use /users/features/get_values. If
+        /// the paper_as_files feature is enabled, then the user is running the new version of
+        /// Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1596,14 +1663,12 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Lists all users who visited the Paper doc or users with explicit access. This
         /// call excludes users who have been removed. The list is sorted by the date of the
-        /// visit or the share date.</para>
-        /// <para>The list will include both users, the explicitly shared ones as well as those
-        /// who came in using the Paper url link.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// visit or the share date. The list will include both users, the explicitly shared
+        /// ones as well as those who came in using the Paper url link. Note that this endpoint
+        /// will continue to work for content created by users on the older version of Paper.
+        /// To check which version of Paper a user is on, use /users/features/get_values. If
+        /// the paper_as_files feature is enabled, then the user is running the new version of
+        /// Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1683,12 +1748,11 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsUsersListAsync" />, use this to
-        /// paginate through all users on the Paper doc.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// paginate through all users on the Paper doc. Note that this endpoint will continue
+        /// to work for content created by users on the older version of Paper. To check which
+        /// version of Paper a user is on, use /users/features/get_values. If the
+        /// paper_as_files feature is enabled, then the user is running the new version of
+        /// Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1724,12 +1788,11 @@ namespace Dropbox.Api.Paper.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsUsersListAsync" />, use this to
-        /// paginate through all users on the Paper doc.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// paginate through all users on the Paper doc. Note that this endpoint will continue
+        /// to work for content created by users on the older version of Paper. To check which
+        /// version of Paper a user is on, use /users/features/get_values. If the
+        /// paper_as_files feature is enabled, then the user is running the new version of
+        /// Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1802,13 +1865,11 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Allows an owner or editor to remove users from a Paper doc using their email
-        /// address or Dropbox account ID.</para>
-        /// <para>The doc owner cannot be removed.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// address or Dropbox account ID. The doc owner cannot be removed. Note that this
+        /// endpoint will continue to work for content created by users on the older version of
+        /// Paper. To check which version of Paper a user is on, use
         /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1842,13 +1903,11 @@ namespace Dropbox.Api.Paper.Routes
 
         /// <summary>
         /// <para>Allows an owner or editor to remove users from a Paper doc using their email
-        /// address or Dropbox account ID.</para>
-        /// <para>The doc owner cannot be removed.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
+        /// address or Dropbox account ID. The doc owner cannot be removed. Note that this
+        /// endpoint will continue to work for content created by users on the older version of
+        /// Paper. To check which version of Paper a user is on, use
         /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// is running the new version of Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1912,12 +1971,11 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
-        /// <para>Create a new Paper folder with the provided info.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// <para>Create a new Paper folder with the provided info. Note that this endpoint
+        /// will continue to work for content created by users on the older version of Paper.
+        /// To check which version of Paper a user is on, use /users/features/get_values. If
+        /// the paper_as_files feature is enabled, then the user is running the new version of
+        /// Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>
@@ -1951,12 +2009,11 @@ namespace Dropbox.Api.Paper.Routes
         }
 
         /// <summary>
-        /// <para>Create a new Paper folder with the provided info.</para>
-        /// <para>Note that this endpoint will continue to work for content created by users on
-        /// the older version of Paper. To check which version of Paper a user is on, use
-        /// /users/features/get_values. If the paper_as_files feature is enabled, then the user
-        /// is running the new version of Paper.</para>
-        /// <para>Refer to the <a
+        /// <para>Create a new Paper folder with the provided info. Note that this endpoint
+        /// will continue to work for content created by users on the older version of Paper.
+        /// To check which version of Paper a user is on, use /users/features/get_values. If
+        /// the paper_as_files feature is enabled, then the user is running the new version of
+        /// Paper. Refer to the <a
         /// href="https://www.dropbox.com/lp/developers/reference/paper-migration-guide">Paper
         /// Migration Guide</a> for migration information.</para>
         /// </summary>

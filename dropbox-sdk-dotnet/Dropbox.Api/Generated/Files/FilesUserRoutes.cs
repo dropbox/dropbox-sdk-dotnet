@@ -32,8 +32,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Returns the metadata for a file or folder. This is an alpha endpoint
-        /// compatible with the properties API.</para>
-        /// <para>Note: Metadata for the root folder is unsupported.</para>
+        /// compatible with the properties API. Note: Metadata for the root folder is
+        /// unsupported.</para>
         /// </summary>
         /// <param name="alphaGetMetadataArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -41,7 +41,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="AlphaGetMetadataError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use GetMetadataAsync instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<Metadata> AlphaGetMetadataAsync(AlphaGetMetadataArg alphaGetMetadataArg)
         {
             return this.Transport.SendRpcRequestAsync<AlphaGetMetadataArg, Metadata, AlphaGetMetadataError>(alphaGetMetadataArg, "api", "/files/alpha/get_metadata", "user", global::Dropbox.Api.Files.AlphaGetMetadataArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.AlphaGetMetadataError.Decoder);
@@ -56,7 +56,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginGetMetadata instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginAlphaGetMetadata(AlphaGetMetadataArg alphaGetMetadataArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.AlphaGetMetadataAsync(alphaGetMetadataArg);
@@ -66,8 +66,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Returns the metadata for a file or folder. This is an alpha endpoint
-        /// compatible with the properties API.</para>
-        /// <para>Note: Metadata for the root folder is unsupported.</para>
+        /// compatible with the properties API. Note: Metadata for the root folder is
+        /// unsupported.</para>
         /// </summary>
         /// <param name="path">The path of a file or folder on Dropbox.</param>
         /// <param name="includeMediaInfo">If true, <see
@@ -77,20 +77,20 @@ namespace Dropbox.Api.Files.Routes
         /// returned for deleted file or folder, otherwise <see
         /// cref="Dropbox.Api.Files.LookupError.NotFound" /> will be returned.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
-        /// flag for each file indicating whether or not  that file has any explicit
+        /// flag for each file indicating whether or not that file has any explicit
         /// members.</param>
         /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
         /// property data associated with the file and each of the listed templates.</param>
-        /// <param name="includePropertyTemplates">If set to a valid list of template IDs, <see
-        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set for files with
-        /// custom properties.</param>
+        /// <param name="includePropertyTemplates">Field is deprecated. If set to a valid list
+        /// of template IDs, <see cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is
+        /// set for files with custom properties.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="AlphaGetMetadataError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use GetMetadataAsync instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<Metadata> AlphaGetMetadataAsync(string path,
                                                       bool includeMediaInfo = false,
                                                       bool includeDeleted = false,
@@ -119,20 +119,20 @@ namespace Dropbox.Api.Files.Routes
         /// returned for deleted file or folder, otherwise <see
         /// cref="Dropbox.Api.Files.LookupError.NotFound" /> will be returned.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
-        /// flag for each file indicating whether or not  that file has any explicit
+        /// flag for each file indicating whether or not that file has any explicit
         /// members.</param>
         /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
         /// property data associated with the file and each of the listed templates.</param>
-        /// <param name="includePropertyTemplates">If set to a valid list of template IDs, <see
-        /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set for files with
-        /// custom properties.</param>
+        /// <param name="includePropertyTemplates">Field is deprecated. If set to a valid list
+        /// of template IDs, <see cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is
+        /// set for files with custom properties.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginGetMetadata instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginAlphaGetMetadata(string path,
                                                       bool includeMediaInfo = false,
                                                       bool includeDeleted = false,
@@ -162,7 +162,7 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="AlphaGetMetadataError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndGetMetadata instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public Metadata EndAlphaGetMetadata(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<Metadata>;
@@ -176,9 +176,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Create a new file with the contents provided in the request. Note that the
-        /// behavior of this alpha endpoint is unstable and subject to change.</para>
-        /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
-        /// upload session with <see
+        /// behavior of this alpha endpoint is unstable and subject to change. Do not use this
+        /// to upload a file larger than 150 MiB. Instead, create an upload session with <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />.</para>
         /// </summary>
         /// <param name="uploadArg">The request parameters</param>
@@ -187,7 +186,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use UploadAsync instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<FileMetadata> AlphaUploadAsync(UploadArg uploadArg, io.Stream body)
         {
             return this.Transport.SendUploadRequestAsync<UploadArg, FileMetadata, UploadError>(uploadArg, body, "content", "/files/alpha/upload", "user", global::Dropbox.Api.Files.UploadArg.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.UploadError.Decoder);
@@ -203,7 +202,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginUpload instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginAlphaUpload(UploadArg uploadArg, io.Stream body, sys.AsyncCallback callback, object state = null)
         {
             var task = this.AlphaUploadAsync(uploadArg, body);
@@ -213,9 +212,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Create a new file with the contents provided in the request. Note that the
-        /// behavior of this alpha endpoint is unstable and subject to change.</para>
-        /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
-        /// upload session with <see
+        /// behavior of this alpha endpoint is unstable and subject to change. Do not use this
+        /// to upload a file larger than 150 MiB. Instead, create an upload session with <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to save the file.</param>
@@ -249,7 +247,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use UploadAsync instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<FileMetadata> AlphaUploadAsync(string path,
                                                      WriteMode mode = null,
                                                      bool autorename = false,
@@ -307,7 +305,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginUpload instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginAlphaUpload(string path,
                                                  WriteMode mode = null,
                                                  bool autorename = false,
@@ -341,7 +339,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndUpload instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public FileMetadata EndAlphaUpload(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<FileMetadata>;
@@ -354,8 +352,131 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Copy a file or folder to a different location in the user's Dropbox.</para>
-        /// <para>If the source path is a folder all its contents will be copied.</para>
+        /// <para>Copy a file or folder to a different location in the user's Dropbox. If the
+        /// source path is a folder all its contents will be copied.</para>
+        /// </summary>
+        /// <param name="relocationArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelocationError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<Metadata> CopyAsync(RelocationArg relocationArg)
+        {
+            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/copy", "user", global::Dropbox.Api.Files.RelocationArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.RelocationError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the copy route.</para>
+        /// </summary>
+        /// <param name="relocationArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginCopy(RelocationArg relocationArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.CopyAsync(relocationArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Copy a file or folder to a different location in the user's Dropbox. If the
+        /// source path is a folder all its contents will be copied.</para>
+        /// </summary>
+        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
+        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
+        /// <param name="allowSharedFolder">Field is deprecated. This flag has no
+        /// effect.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the file to avoid the conflict.</param>
+        /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
+        /// in an ownership transfer for the content being moved. This does not apply to
+        /// copies.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelocationError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<Metadata> CopyAsync(string fromPath,
+                                          string toPath,
+                                          bool allowSharedFolder = false,
+                                          bool autorename = false,
+                                          bool allowOwnershipTransfer = false)
+        {
+            var relocationArg = new RelocationArg(fromPath,
+                                                  toPath,
+                                                  allowSharedFolder,
+                                                  autorename,
+                                                  allowOwnershipTransfer);
+
+            return this.CopyAsync(relocationArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the copy route.</para>
+        /// </summary>
+        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
+        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
+        /// <param name="allowSharedFolder">Field is deprecated. This flag has no
+        /// effect.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the file to avoid the conflict.</param>
+        /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
+        /// in an ownership transfer for the content being moved. This does not apply to
+        /// copies.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginCopy(string fromPath,
+                                          string toPath,
+                                          bool allowSharedFolder = false,
+                                          bool autorename = false,
+                                          bool allowOwnershipTransfer = false,
+                                          sys.AsyncCallback callback = null,
+                                          object callbackState = null)
+        {
+            var relocationArg = new RelocationArg(fromPath,
+                                                  toPath,
+                                                  allowSharedFolder,
+                                                  autorename,
+                                                  allowOwnershipTransfer);
+
+            return this.BeginCopy(relocationArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the copy route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelocationError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public Metadata EndCopy(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Metadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Copy a file or folder to a different location in the user's Dropbox. If the
+        /// source path is a folder all its contents will be copied.</para>
         /// </summary>
         /// <param name="relocationArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -385,12 +506,13 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Copy a file or folder to a different location in the user's Dropbox.</para>
-        /// <para>If the source path is a folder all its contents will be copied.</para>
+        /// <para>Copy a file or folder to a different location in the user's Dropbox. If the
+        /// source path is a folder all its contents will be copied.</para>
         /// </summary>
         /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
         /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
-        /// <param name="allowSharedFolder">This flag has no effect.</param>
+        /// <param name="allowSharedFolder">Field is deprecated. This flag has no
+        /// effect.</param>
         /// <param name="autorename">If there's a conflict, have the Dropbox server try to
         /// autorename the file to avoid the conflict.</param>
         /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
@@ -421,7 +543,8 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
         /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
-        /// <param name="allowSharedFolder">This flag has no effect.</param>
+        /// <param name="allowSharedFolder">Field is deprecated. This flag has no
+        /// effect.</param>
         /// <param name="autorename">If there's a conflict, have the Dropbox server try to
         /// autorename the file to avoid the conflict.</param>
         /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
@@ -470,79 +593,79 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Copy a file or folder to a different location in the user's Dropbox.</para>
-        /// <para>If the source path is a folder all its contents will be copied.</para>
+        /// <para>Copy multiple files or folders to different locations at once in the user's
+        /// Dropbox. This route will return job ID immediately and do the async copy job in
+        /// background. Please use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchCheckAsync" /> to check the
+        /// job status.</para>
         /// </summary>
-        /// <param name="relocationArg">The request parameters</param>
+        /// <param name="relocationBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="RelocationError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CopyV2Async instead.")]
-        public t.Task<Metadata> CopyAsync(RelocationArg relocationArg)
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<RelocationBatchLaunch> CopyBatchAsync(RelocationBatchArg relocationBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/copy", "user", global::Dropbox.Api.Files.RelocationArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.RelocationError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RelocationBatchArg, RelocationBatchLaunch, enc.Empty>(relocationBatchArg, "api", "/files/copy_batch", "user", global::Dropbox.Api.Files.RelocationBatchArg.Encoder, global::Dropbox.Api.Files.RelocationBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the copy route.</para>
+        /// <para>Begins an asynchronous send to the copy batch route.</para>
         /// </summary>
-        /// <param name="relocationArg">The request parameters.</param>
+        /// <param name="relocationBatchArg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCopyV2 instead.")]
-        public sys.IAsyncResult BeginCopy(RelocationArg relocationArg, sys.AsyncCallback callback, object state = null)
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginCopyBatch(RelocationBatchArg relocationBatchArg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.CopyAsync(relocationArg);
+            var task = this.CopyBatchAsync(relocationBatchArg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Copy a file or folder to a different location in the user's Dropbox.</para>
-        /// <para>If the source path is a folder all its contents will be copied.</para>
+        /// <para>Copy multiple files or folders to different locations at once in the user's
+        /// Dropbox. This route will return job ID immediately and do the async copy job in
+        /// background. Please use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchCheckAsync" /> to check the
+        /// job status.</para>
         /// </summary>
-        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
-        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
-        /// <param name="allowSharedFolder">This flag has no effect.</param>
-        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
-        /// autorename the file to avoid the conflict.</param>
+        /// <param name="entries">List of entries to be moved or copied. Each entry is <see
+        /// cref="RelocationPath" />.</param>
+        /// <param name="autorename">If there's a conflict with any file, have the Dropbox
+        /// server try to autorename that file to avoid the conflict.</param>
+        /// <param name="allowSharedFolder">Field is deprecated. This flag has no
+        /// effect.</param>
         /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
         /// in an ownership transfer for the content being moved. This does not apply to
         /// copies.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="RelocationError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CopyV2Async instead.")]
-        public t.Task<Metadata> CopyAsync(string fromPath,
-                                          string toPath,
-                                          bool allowSharedFolder = false,
-                                          bool autorename = false,
-                                          bool allowOwnershipTransfer = false)
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<RelocationBatchLaunch> CopyBatchAsync(col.IEnumerable<RelocationPath> entries,
+                                                            bool autorename = false,
+                                                            bool allowSharedFolder = false,
+                                                            bool allowOwnershipTransfer = false)
         {
-            var relocationArg = new RelocationArg(fromPath,
-                                                  toPath,
-                                                  allowSharedFolder,
-                                                  autorename,
-                                                  allowOwnershipTransfer);
+            var relocationBatchArg = new RelocationBatchArg(entries,
+                                                            autorename,
+                                                            allowSharedFolder,
+                                                            allowOwnershipTransfer);
 
-            return this.CopyAsync(relocationArg);
+            return this.CopyBatchAsync(relocationBatchArg);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the copy route.</para>
+        /// <para>Begins an asynchronous send to the copy batch route.</para>
         /// </summary>
-        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
-        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
-        /// <param name="allowSharedFolder">This flag has no effect.</param>
-        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
-        /// autorename the file to avoid the conflict.</param>
+        /// <param name="entries">List of entries to be moved or copied. Each entry is <see
+        /// cref="RelocationPath" />.</param>
+        /// <param name="autorename">If there's a conflict with any file, have the Dropbox
+        /// server try to autorename that file to avoid the conflict.</param>
+        /// <param name="allowSharedFolder">Field is deprecated. This flag has no
+        /// effect.</param>
         /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
         /// in an ownership transfer for the content being moved. This does not apply to
         /// copies.</param>
@@ -551,37 +674,33 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCopyV2 instead.")]
-        public sys.IAsyncResult BeginCopy(string fromPath,
-                                          string toPath,
-                                          bool allowSharedFolder = false,
-                                          bool autorename = false,
-                                          bool allowOwnershipTransfer = false,
-                                          sys.AsyncCallback callback = null,
-                                          object callbackState = null)
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginCopyBatch(col.IEnumerable<RelocationPath> entries,
+                                               bool autorename = false,
+                                               bool allowSharedFolder = false,
+                                               bool allowOwnershipTransfer = false,
+                                               sys.AsyncCallback callback = null,
+                                               object callbackState = null)
         {
-            var relocationArg = new RelocationArg(fromPath,
-                                                  toPath,
-                                                  allowSharedFolder,
-                                                  autorename,
-                                                  allowOwnershipTransfer);
+            var relocationBatchArg = new RelocationBatchArg(entries,
+                                                            autorename,
+                                                            allowSharedFolder,
+                                                            allowOwnershipTransfer);
 
-            return this.BeginCopy(relocationArg, callback, callbackState);
+            return this.BeginCopyBatch(relocationBatchArg, callback, callbackState);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the copy route to complete</para>
+        /// <para>Waits for the pending asynchronous send to the copy batch route to
+        /// complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="RelocationError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndCopyV2 instead.")]
-        public Metadata EndCopy(sys.IAsyncResult asyncResult)
+        [sys.Obsolete("This function is deprecated")]
+        public RelocationBatchLaunch EndCopyBatch(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Metadata>;
+            var task = asyncResult as t.Task<RelocationBatchLaunch>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -592,14 +711,12 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Copy multiple files or folders to different locations at once in the user's
-        /// Dropbox.</para>
-        /// <para>This route will replace <see
+        /// Dropbox. This route will replace <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" />. The main
         /// difference is this route will return status for each entry, while <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" /> raises failure if
-        /// any entry fails.</para>
-        /// <para>This route will either finish synchronously, or return a job ID and do the
-        /// async copy job in background. Please use <see
+        /// any entry fails. This route will either finish synchronously, or return a job ID
+        /// and do the async copy job in background. Please use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchCheckV2Async" /> to check
         /// the job status.</para>
         /// </summary>
@@ -629,14 +746,12 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Copy multiple files or folders to different locations at once in the user's
-        /// Dropbox.</para>
-        /// <para>This route will replace <see
+        /// Dropbox. This route will replace <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" />. The main
         /// difference is this route will return status for each entry, while <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" /> raises failure if
-        /// any entry fails.</para>
-        /// <para>This route will either finish synchronously, or return a job ID and do the
-        /// async copy job in background. Please use <see
+        /// any entry fails. This route will either finish synchronously, or return a job ID
+        /// and do the async copy job in background. Please use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchCheckV2Async" /> to check
         /// the job status.</para>
         /// </summary>
@@ -697,114 +812,93 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Copy multiple files or folders to different locations at once in the user's
-        /// Dropbox.</para>
-        /// <para>This route will return job ID immediately and do the async copy job in
-        /// background. Please use <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchCheckAsync" /> to check the
-        /// job status.</para>
+        /// <para>Returns the status of an asynchronous job for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" />. If success, it
+        /// returns list of results for each entry.</para>
         /// </summary>
-        /// <param name="relocationBatchArg">The request parameters</param>
+        /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        [sys.Obsolete("This function is deprecated, please use CopyBatchV2Async instead.")]
-        public t.Task<RelocationBatchLaunch> CopyBatchAsync(RelocationBatchArg relocationBatchArg)
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<RelocationBatchJobStatus> CopyBatchCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<RelocationBatchArg, RelocationBatchLaunch, enc.Empty>(relocationBatchArg, "api", "/files/copy_batch", "user", global::Dropbox.Api.Files.RelocationBatchArg.Encoder, global::Dropbox.Api.Files.RelocationBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, RelocationBatchJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/files/copy_batch/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Files.RelocationBatchJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the copy batch route.</para>
+        /// <para>Begins an asynchronous send to the copy batch check route.</para>
         /// </summary>
-        /// <param name="relocationBatchArg">The request parameters.</param>
+        /// <param name="pollArg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCopyBatchV2 instead.")]
-        public sys.IAsyncResult BeginCopyBatch(RelocationBatchArg relocationBatchArg, sys.AsyncCallback callback, object state = null)
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginCopyBatchCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.CopyBatchAsync(relocationBatchArg);
+            var task = this.CopyBatchCheckAsync(pollArg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Copy multiple files or folders to different locations at once in the user's
-        /// Dropbox.</para>
-        /// <para>This route will return job ID immediately and do the async copy job in
-        /// background. Please use <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchCheckAsync" /> to check the
-        /// job status.</para>
+        /// <para>Returns the status of an asynchronous job for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" />. If success, it
+        /// returns list of results for each entry.</para>
         /// </summary>
-        /// <param name="entries">List of entries to be moved or copied. Each entry is <see
-        /// cref="RelocationPath" />.</param>
-        /// <param name="autorename">If there's a conflict with any file, have the Dropbox
-        /// server try to autorename that file to avoid the conflict.</param>
-        /// <param name="allowSharedFolder">This flag has no effect.</param>
-        /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
-        /// in an ownership transfer for the content being moved. This does not apply to
-        /// copies.</param>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        [sys.Obsolete("This function is deprecated, please use CopyBatchV2Async instead.")]
-        public t.Task<RelocationBatchLaunch> CopyBatchAsync(col.IEnumerable<RelocationPath> entries,
-                                                            bool autorename = false,
-                                                            bool allowSharedFolder = false,
-                                                            bool allowOwnershipTransfer = false)
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<RelocationBatchJobStatus> CopyBatchCheckAsync(string asyncJobId)
         {
-            var relocationBatchArg = new RelocationBatchArg(entries,
-                                                            autorename,
-                                                            allowSharedFolder,
-                                                            allowOwnershipTransfer);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
-            return this.CopyBatchAsync(relocationBatchArg);
+            return this.CopyBatchCheckAsync(pollArg);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the copy batch route.</para>
+        /// <para>Begins an asynchronous send to the copy batch check route.</para>
         /// </summary>
-        /// <param name="entries">List of entries to be moved or copied. Each entry is <see
-        /// cref="RelocationPath" />.</param>
-        /// <param name="autorename">If there's a conflict with any file, have the Dropbox
-        /// server try to autorename that file to avoid the conflict.</param>
-        /// <param name="allowSharedFolder">This flag has no effect.</param>
-        /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
-        /// in an ownership transfer for the content being moved. This does not apply to
-        /// copies.</param>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCopyBatchV2 instead.")]
-        public sys.IAsyncResult BeginCopyBatch(col.IEnumerable<RelocationPath> entries,
-                                               bool autorename = false,
-                                               bool allowSharedFolder = false,
-                                               bool allowOwnershipTransfer = false,
-                                               sys.AsyncCallback callback = null,
-                                               object callbackState = null)
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginCopyBatchCheck(string asyncJobId,
+                                                    sys.AsyncCallback callback,
+                                                    object callbackState = null)
         {
-            var relocationBatchArg = new RelocationBatchArg(entries,
-                                                            autorename,
-                                                            allowSharedFolder,
-                                                            allowOwnershipTransfer);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
-            return this.BeginCopyBatch(relocationBatchArg, callback, callbackState);
+            return this.BeginCopyBatchCheck(pollArg, callback, callbackState);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the copy batch route to
+        /// <para>Waits for the pending asynchronous send to the copy batch check route to
         /// complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        [sys.Obsolete("This function is deprecated, please use EndCopyBatchV2 instead.")]
-        public RelocationBatchLaunch EndCopyBatch(sys.IAsyncResult asyncResult)
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public RelocationBatchJobStatus EndCopyBatchCheck(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<RelocationBatchLaunch>;
+            var task = asyncResult as t.Task<RelocationBatchJobStatus>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -896,102 +990,6 @@ namespace Dropbox.Api.Files.Routes
         public RelocationBatchV2JobStatus EndCopyBatchCheckV2(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<RelocationBatchV2JobStatus>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Returns the status of an asynchronous job for <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" />. If success, it
-        /// returns list of results for each entry.</para>
-        /// </summary>
-        /// <param name="pollArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CopyBatchCheckV2Async instead.")]
-        public t.Task<RelocationBatchJobStatus> CopyBatchCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
-        {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, RelocationBatchJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/files/copy_batch/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Files.RelocationBatchJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the copy batch check route.</para>
-        /// </summary>
-        /// <param name="pollArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCopyBatchCheckV2 instead.")]
-        public sys.IAsyncResult BeginCopyBatchCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.CopyBatchCheckAsync(pollArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Returns the status of an asynchronous job for <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyBatchAsync" />. If success, it
-        /// returns list of results for each entry.</para>
-        /// </summary>
-        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
-        /// response returned from the method that launched the job.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CopyBatchCheckV2Async instead.")]
-        public t.Task<RelocationBatchJobStatus> CopyBatchCheckAsync(string asyncJobId)
-        {
-            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
-
-            return this.CopyBatchCheckAsync(pollArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the copy batch check route.</para>
-        /// </summary>
-        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
-        /// response returned from the method that launched the job.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCopyBatchCheckV2 instead.")]
-        public sys.IAsyncResult BeginCopyBatchCheck(string asyncJobId,
-                                                    sys.AsyncCallback callback,
-                                                    object callbackState = null)
-        {
-            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
-
-            return this.BeginCopyBatchCheck(pollArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the copy batch check route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndCopyBatchCheckV2 instead.")]
-        public RelocationBatchJobStatus EndCopyBatchCheck(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<RelocationBatchJobStatus>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -1197,6 +1195,104 @@ namespace Dropbox.Api.Files.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateFolderError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<FolderMetadata> CreateFolderAsync(CreateFolderArg createFolderArg)
+        {
+            return this.Transport.SendRpcRequestAsync<CreateFolderArg, FolderMetadata, CreateFolderError>(createFolderArg, "api", "/files/create_folder", "user", global::Dropbox.Api.Files.CreateFolderArg.Encoder, global::Dropbox.Api.Files.FolderMetadata.Decoder, global::Dropbox.Api.Files.CreateFolderError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the create folder route.</para>
+        /// </summary>
+        /// <param name="createFolderArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginCreateFolder(CreateFolderArg createFolderArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.CreateFolderAsync(createFolderArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Create a folder at a given path.</para>
+        /// </summary>
+        /// <param name="path">Path in the user's Dropbox to create.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the folder to avoid the conflict.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="CreateFolderError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<FolderMetadata> CreateFolderAsync(string path,
+                                                        bool autorename = false)
+        {
+            var createFolderArg = new CreateFolderArg(path,
+                                                      autorename);
+
+            return this.CreateFolderAsync(createFolderArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the create folder route.</para>
+        /// </summary>
+        /// <param name="path">Path in the user's Dropbox to create.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the folder to avoid the conflict.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginCreateFolder(string path,
+                                                  bool autorename = false,
+                                                  sys.AsyncCallback callback = null,
+                                                  object callbackState = null)
+        {
+            var createFolderArg = new CreateFolderArg(path,
+                                                      autorename);
+
+            return this.BeginCreateFolder(createFolderArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the create folder route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="CreateFolderError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public FolderMetadata EndCreateFolder(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<FolderMetadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Create a folder at a given path.</para>
+        /// </summary>
+        /// <param name="createFolderArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="CreateFolderError"/>.</exception>
         public t.Task<CreateFolderResult> CreateFolderV2Async(CreateFolderArg createFolderArg)
         {
             return this.Transport.SendRpcRequestAsync<CreateFolderArg, CreateFolderResult, CreateFolderError>(createFolderArg, "api", "/files/create_folder_v2", "user", global::Dropbox.Api.Files.CreateFolderArg.Encoder, global::Dropbox.Api.Files.CreateFolderResult.Decoder, global::Dropbox.Api.Files.CreateFolderError.Decoder);
@@ -1282,110 +1378,11 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Create a folder at a given path.</para>
-        /// </summary>
-        /// <param name="createFolderArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="CreateFolderError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CreateFolderV2Async instead.")]
-        public t.Task<FolderMetadata> CreateFolderAsync(CreateFolderArg createFolderArg)
-        {
-            return this.Transport.SendRpcRequestAsync<CreateFolderArg, FolderMetadata, CreateFolderError>(createFolderArg, "api", "/files/create_folder", "user", global::Dropbox.Api.Files.CreateFolderArg.Encoder, global::Dropbox.Api.Files.FolderMetadata.Decoder, global::Dropbox.Api.Files.CreateFolderError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the create folder route.</para>
-        /// </summary>
-        /// <param name="createFolderArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCreateFolderV2 instead.")]
-        public sys.IAsyncResult BeginCreateFolder(CreateFolderArg createFolderArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.CreateFolderAsync(createFolderArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Create a folder at a given path.</para>
-        /// </summary>
-        /// <param name="path">Path in the user's Dropbox to create.</param>
-        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
-        /// autorename the folder to avoid the conflict.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="CreateFolderError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CreateFolderV2Async instead.")]
-        public t.Task<FolderMetadata> CreateFolderAsync(string path,
-                                                        bool autorename = false)
-        {
-            var createFolderArg = new CreateFolderArg(path,
-                                                      autorename);
-
-            return this.CreateFolderAsync(createFolderArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the create folder route.</para>
-        /// </summary>
-        /// <param name="path">Path in the user's Dropbox to create.</param>
-        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
-        /// autorename the folder to avoid the conflict.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCreateFolderV2 instead.")]
-        public sys.IAsyncResult BeginCreateFolder(string path,
-                                                  bool autorename = false,
-                                                  sys.AsyncCallback callback = null,
-                                                  object callbackState = null)
-        {
-            var createFolderArg = new CreateFolderArg(path,
-                                                      autorename);
-
-            return this.BeginCreateFolder(createFolderArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the create folder route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="CreateFolderError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndCreateFolderV2 instead.")]
-        public FolderMetadata EndCreateFolder(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<FolderMetadata>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Create multiple folders at once.</para>
-        /// <para>This route is asynchronous for large batches, which returns a job ID
-        /// immediately and runs the create folder batch asynchronously. Otherwise, creates the
-        /// folders and returns the result synchronously for smaller inputs. You can force
-        /// asynchronous behaviour by using the <see
-        /// cref="Dropbox.Api.Files.CreateFolderBatchArg.ForceAsync" /> flag.  Use <see
+        /// <para>Create multiple folders at once. This route is asynchronous for large
+        /// batches, which returns a job ID immediately and runs the create folder batch
+        /// asynchronously. Otherwise, creates the folders and returns the result synchronously
+        /// for smaller inputs. You can force asynchronous behaviour by using the
+        /// CreateFolderBatchArg.force_async flag.  Use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CreateFolderBatchCheckAsync" /> to
         /// check the job status.</para>
         /// </summary>
@@ -1414,12 +1411,11 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Create multiple folders at once.</para>
-        /// <para>This route is asynchronous for large batches, which returns a job ID
-        /// immediately and runs the create folder batch asynchronously. Otherwise, creates the
-        /// folders and returns the result synchronously for smaller inputs. You can force
-        /// asynchronous behaviour by using the <see
-        /// cref="Dropbox.Api.Files.CreateFolderBatchArg.ForceAsync" /> flag.  Use <see
+        /// <para>Create multiple folders at once. This route is asynchronous for large
+        /// batches, which returns a job ID immediately and runs the create folder batch
+        /// asynchronously. Otherwise, creates the folders and returns the result synchronously
+        /// for smaller inputs. You can force asynchronous behaviour by using the
+        /// CreateFolderBatchArg.force_async flag.  Use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.CreateFolderBatchCheckAsync" /> to
         /// check the job status.</para>
         /// </summary>
@@ -1579,12 +1575,114 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Delete the file or folder at a given path.</para>
-        /// <para>If the path is a folder, all its contents will be deleted too.</para>
-        /// <para>A successful response indicates that the file or folder was deleted. The
-        /// returned metadata will be the corresponding <see cref="FileMetadata" /> or <see
-        /// cref="FolderMetadata" /> for the item at time of deletion, and not a <see
-        /// cref="DeletedMetadata" /> object.</para>
+        /// <para>Delete the file or folder at a given path. If the path is a folder, all its
+        /// contents will be deleted too. A successful response indicates that the file or
+        /// folder was deleted. The returned metadata will be the corresponding FileMetadata or
+        /// FolderMetadata for the item at time of deletion, and not a DeletedMetadata
+        /// object.</para>
+        /// </summary>
+        /// <param name="deleteArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<Metadata> DeleteAsync(DeleteArg deleteArg)
+        {
+            return this.Transport.SendRpcRequestAsync<DeleteArg, Metadata, DeleteError>(deleteArg, "api", "/files/delete", "user", global::Dropbox.Api.Files.DeleteArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.DeleteError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the delete route.</para>
+        /// </summary>
+        /// <param name="deleteArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginDelete(DeleteArg deleteArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.DeleteAsync(deleteArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Delete the file or folder at a given path. If the path is a folder, all its
+        /// contents will be deleted too. A successful response indicates that the file or
+        /// folder was deleted. The returned metadata will be the corresponding FileMetadata or
+        /// FolderMetadata for the item at time of deletion, and not a DeletedMetadata
+        /// object.</para>
+        /// </summary>
+        /// <param name="path">Path in the user's Dropbox to delete.</param>
+        /// <param name="parentRev">Perform delete if given "rev" matches the existing file's
+        /// latest "rev". This field does not support deleting a folder.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<Metadata> DeleteAsync(string path,
+                                            string parentRev = null)
+        {
+            var deleteArg = new DeleteArg(path,
+                                          parentRev);
+
+            return this.DeleteAsync(deleteArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the delete route.</para>
+        /// </summary>
+        /// <param name="path">Path in the user's Dropbox to delete.</param>
+        /// <param name="parentRev">Perform delete if given "rev" matches the existing file's
+        /// latest "rev". This field does not support deleting a folder.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginDelete(string path,
+                                            string parentRev = null,
+                                            sys.AsyncCallback callback = null,
+                                            object callbackState = null)
+        {
+            var deleteArg = new DeleteArg(path,
+                                          parentRev);
+
+            return this.BeginDelete(deleteArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the delete route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public Metadata EndDelete(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Metadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Delete the file or folder at a given path. If the path is a folder, all its
+        /// contents will be deleted too. A successful response indicates that the file or
+        /// folder was deleted. The returned metadata will be the corresponding FileMetadata or
+        /// FolderMetadata for the item at time of deletion, and not a DeletedMetadata
+        /// object.</para>
         /// </summary>
         /// <param name="deleteArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1613,12 +1711,11 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Delete the file or folder at a given path.</para>
-        /// <para>If the path is a folder, all its contents will be deleted too.</para>
-        /// <para>A successful response indicates that the file or folder was deleted. The
-        /// returned metadata will be the corresponding <see cref="FileMetadata" /> or <see
-        /// cref="FolderMetadata" /> for the item at time of deletion, and not a <see
-        /// cref="DeletedMetadata" /> object.</para>
+        /// <para>Delete the file or folder at a given path. If the path is a folder, all its
+        /// contents will be deleted too. A successful response indicates that the file or
+        /// folder was deleted. The returned metadata will be the corresponding FileMetadata or
+        /// FolderMetadata for the item at time of deletion, and not a DeletedMetadata
+        /// object.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to delete.</param>
         /// <param name="parentRev">Perform delete if given "rev" matches the existing file's
@@ -1679,114 +1776,8 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Delete the file or folder at a given path.</para>
-        /// <para>If the path is a folder, all its contents will be deleted too.</para>
-        /// <para>A successful response indicates that the file or folder was deleted. The
-        /// returned metadata will be the corresponding <see cref="FileMetadata" /> or <see
-        /// cref="FolderMetadata" /> for the item at time of deletion, and not a <see
-        /// cref="DeletedMetadata" /> object.</para>
-        /// </summary>
-        /// <param name="deleteArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use DeleteV2Async instead.")]
-        public t.Task<Metadata> DeleteAsync(DeleteArg deleteArg)
-        {
-            return this.Transport.SendRpcRequestAsync<DeleteArg, Metadata, DeleteError>(deleteArg, "api", "/files/delete", "user", global::Dropbox.Api.Files.DeleteArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.DeleteError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the delete route.</para>
-        /// </summary>
-        /// <param name="deleteArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginDeleteV2 instead.")]
-        public sys.IAsyncResult BeginDelete(DeleteArg deleteArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.DeleteAsync(deleteArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Delete the file or folder at a given path.</para>
-        /// <para>If the path is a folder, all its contents will be deleted too.</para>
-        /// <para>A successful response indicates that the file or folder was deleted. The
-        /// returned metadata will be the corresponding <see cref="FileMetadata" /> or <see
-        /// cref="FolderMetadata" /> for the item at time of deletion, and not a <see
-        /// cref="DeletedMetadata" /> object.</para>
-        /// </summary>
-        /// <param name="path">Path in the user's Dropbox to delete.</param>
-        /// <param name="parentRev">Perform delete if given "rev" matches the existing file's
-        /// latest "rev". This field does not support deleting a folder.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use DeleteV2Async instead.")]
-        public t.Task<Metadata> DeleteAsync(string path,
-                                            string parentRev = null)
-        {
-            var deleteArg = new DeleteArg(path,
-                                          parentRev);
-
-            return this.DeleteAsync(deleteArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the delete route.</para>
-        /// </summary>
-        /// <param name="path">Path in the user's Dropbox to delete.</param>
-        /// <param name="parentRev">Perform delete if given "rev" matches the existing file's
-        /// latest "rev". This field does not support deleting a folder.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginDeleteV2 instead.")]
-        public sys.IAsyncResult BeginDelete(string path,
-                                            string parentRev = null,
-                                            sys.AsyncCallback callback = null,
-                                            object callbackState = null)
-        {
-            var deleteArg = new DeleteArg(path,
-                                          parentRev);
-
-            return this.BeginDelete(deleteArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the delete route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see cref="DeleteError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndDeleteV2 instead.")]
-        public Metadata EndDelete(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<Metadata>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Delete multiple files/folders at once.</para>
-        /// <para>This route is asynchronous, which returns a job ID immediately and runs the
-        /// delete batch asynchronously. Use <see
+        /// <para>Delete multiple files/folders at once. This route is asynchronous, which
+        /// returns a job ID immediately and runs the delete batch asynchronously. Use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.DeleteBatchCheckAsync" /> to check
         /// the job status.</para>
         /// </summary>
@@ -1815,9 +1806,8 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Delete multiple files/folders at once.</para>
-        /// <para>This route is asynchronous, which returns a job ID immediately and runs the
-        /// delete batch asynchronously. Use <see
+        /// <para>Delete multiple files/folders at once. This route is asynchronous, which
+        /// returns a job ID immediately and runs the delete batch asynchronously. Use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.DeleteBatchCheckAsync" /> to check
         /// the job status.</para>
         /// </summary>
@@ -1992,8 +1982,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Download a file from a user's Dropbox.</para>
         /// </summary>
         /// <param name="path">The path of the file to download.</param>
-        /// <param name="rev">Please specify revision in <paramref name="path" />
-        /// instead.</param>
+        /// <param name="rev">Field is deprecated. Please specify revision in <paramref
+        /// name="path" /> instead.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2012,8 +2002,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the download route.</para>
         /// </summary>
         /// <param name="path">The path of the file to download.</param>
-        /// <param name="rev">Please specify revision in <paramref name="path" />
-        /// instead.</param>
+        /// <param name="rev">Field is deprecated. Please specify revision in <paramref
+        /// name="path" /> instead.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -2055,8 +2045,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Download a folder from the user's Dropbox, as a zip file. The folder must be
         /// less than 20 GB in size and any single file within must be less than 4 GB in size.
         /// The resulting zip must have fewer than 10,000 total file and folder entries,
-        /// including the top level folder. The input cannot be a single file.</para>
-        /// <para>Note: this endpoint does not support HTTP range requests.</para>
+        /// including the top level folder. The input cannot be a single file. Note: this
+        /// endpoint does not support HTTP range requests.</para>
         /// </summary>
         /// <param name="downloadZipArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2089,8 +2079,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Download a folder from the user's Dropbox, as a zip file. The folder must be
         /// less than 20 GB in size and any single file within must be less than 4 GB in size.
         /// The resulting zip must have fewer than 10,000 total file and folder entries,
-        /// including the top level folder. The input cannot be a single file.</para>
-        /// <para>Note: this endpoint does not support HTTP range requests.</para>
+        /// including the top level folder. The input cannot be a single file. Note: this
+        /// endpoint does not support HTTP range requests.</para>
         /// </summary>
         /// <param name="path">The path of the folder to download.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2146,9 +2136,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Export a file from a user's Dropbox. This route only supports exporting files
-        /// that cannot be downloaded directly  and whose <see
-        /// cref="Dropbox.Api.Files.ExportResult.FileMetadata" /> has <see
-        /// cref="Dropbox.Api.Files.ExportInfo.ExportAs" /> populated.</para>
+        /// that cannot be downloaded directly and whose ExportResult.file_metadata has
+        /// ExportInfo.export_as populated.</para>
         /// </summary>
         /// <param name="exportArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2178,9 +2167,8 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Export a file from a user's Dropbox. This route only supports exporting files
-        /// that cannot be downloaded directly  and whose <see
-        /// cref="Dropbox.Api.Files.ExportResult.FileMetadata" /> has <see
-        /// cref="Dropbox.Api.Files.ExportInfo.ExportAs" /> populated.</para>
+        /// that cannot be downloaded directly and whose ExportResult.file_metadata has
+        /// ExportInfo.export_as populated.</para>
         /// </summary>
         /// <param name="path">The path of the file to be exported.</param>
         /// <param name="exportFormat">The file format to which the file should be exported.
@@ -2336,8 +2324,8 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Returns the metadata for a file or folder.</para>
-        /// <para>Note: Metadata for the root folder is unsupported.</para>
+        /// <para>Returns the metadata for a file or folder. Note: Metadata for the root folder
+        /// is unsupported.</para>
         /// </summary>
         /// <param name="getMetadataArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2367,8 +2355,8 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Returns the metadata for a file or folder.</para>
-        /// <para>Note: Metadata for the root folder is unsupported.</para>
+        /// <para>Returns the metadata for a file or folder. Note: Metadata for the root folder
+        /// is unsupported.</para>
         /// </summary>
         /// <param name="path">The path of a file or folder on Dropbox.</param>
         /// <param name="includeMediaInfo">If true, <see
@@ -2378,7 +2366,7 @@ namespace Dropbox.Api.Files.Routes
         /// returned for deleted file or folder, otherwise <see
         /// cref="Dropbox.Api.Files.LookupError.NotFound" /> will be returned.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
-        /// flag for each file indicating whether or not  that file has any explicit
+        /// flag for each file indicating whether or not that file has any explicit
         /// members.</param>
         /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
@@ -2414,7 +2402,7 @@ namespace Dropbox.Api.Files.Routes
         /// returned for deleted file or folder, otherwise <see
         /// cref="Dropbox.Api.Files.LookupError.NotFound" /> will be returned.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
-        /// flag for each file indicating whether or not  that file has any explicit
+        /// flag for each file indicating whether or not that file has any explicit
         /// members.</param>
         /// <param name="includePropertyGroups">If set to a valid list of template IDs, <see
         /// cref="Dropbox.Api.Files.FileMetadata.PropertyGroups" /> is set if there exists
@@ -2463,13 +2451,11 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Get a preview for a file.</para>
-        /// <para>Currently, PDF previews are generated for files with the following
-        /// extensions: .ai, .doc, .docm, .docx, .eps, .gdoc, .gslides, .odp, .odt, .pps,
-        /// .ppsm, .ppsx, .ppt, .pptm, .pptx, .rtf.</para>
-        /// <para>HTML previews are generated for files with the following extensions: .csv,
-        /// .ods, .xls, .xlsm, .gsheet, .xlsx.</para>
-        /// <para>Other formats will return an unsupported extension error.</para>
+        /// <para>Get a preview for a file. Currently, PDF previews are generated for files
+        /// with the following extensions: .ai, .doc, .docm, .docx, .eps, .gdoc, .gslides,
+        /// .odp, .odt, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .rtf. HTML previews are
+        /// generated for .csv, .ods, .xls, .xlsm, .gsheet, .xlsx. Other formats will return an
+        /// unsupported extension error.</para>
         /// </summary>
         /// <param name="previewArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2498,17 +2484,15 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Get a preview for a file.</para>
-        /// <para>Currently, PDF previews are generated for files with the following
-        /// extensions: .ai, .doc, .docm, .docx, .eps, .gdoc, .gslides, .odp, .odt, .pps,
-        /// .ppsm, .ppsx, .ppt, .pptm, .pptx, .rtf.</para>
-        /// <para>HTML previews are generated for files with the following extensions: .csv,
-        /// .ods, .xls, .xlsm, .gsheet, .xlsx.</para>
-        /// <para>Other formats will return an unsupported extension error.</para>
+        /// <para>Get a preview for a file. Currently, PDF previews are generated for files
+        /// with the following extensions: .ai, .doc, .docm, .docx, .eps, .gdoc, .gslides,
+        /// .odp, .odt, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .rtf. HTML previews are
+        /// generated for .csv, .ods, .xls, .xlsm, .gsheet, .xlsx. Other formats will return an
+        /// unsupported extension error.</para>
         /// </summary>
         /// <param name="path">The path of the file to preview.</param>
-        /// <param name="rev">Please specify revision in <paramref name="path" />
-        /// instead.</param>
+        /// <param name="rev">Field is deprecated. Please specify revision in <paramref
+        /// name="path" /> instead.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2526,8 +2510,8 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the get preview route.</para>
         /// </summary>
         /// <param name="path">The path of the file to preview.</param>
-        /// <param name="rev">Please specify revision in <paramref name="path" />
-        /// instead.</param>
+        /// <param name="rev">Field is deprecated. Please specify revision in <paramref
+        /// name="path" /> instead.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -2657,48 +2641,30 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Get a one-time use temporary upload link to upload a file to a Dropbox
-        /// location.</para>
-        /// <para></para>
-        /// <para>This endpoint acts as a delayed <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadAsync" />. The returned
-        /// temporary upload link may be used to make a POST request with the data to be
-        /// uploaded. The upload will then be perfomed with the <see cref="CommitInfo" />
-        /// previously provided to <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetTemporaryUploadLinkAsync" /> but
-        /// evaluated only upon consumption. Hence, errors stemming from invalid <see
-        /// cref="CommitInfo" /> with respect to the state of the user's Dropbox will only be
-        /// communicated at consumption time. Additionally, these errors are surfaced as
-        /// generic HTTP 409 Conflict responses, potentially hiding issue details. The maximum
-        /// temporary upload link duration is 4 hours. Upon consumption or expiration, a new
-        /// link will have to be generated. Multiple links may exist for a specific upload path
-        /// at any given time.</para>
-        /// <para></para>
-        /// <para>The POST request on the temporary upload link must have its Content-Type set
-        /// to "application/octet-stream".</para>
-        /// <para></para>
-        /// <para>Example temporary upload link consumption request:</para>
-        /// <para></para>
-        /// <para>curl -X POST https://content.dropboxapi.com/apitul/1/bNi2uIYF51cVBND</para>
-        /// <para>--header "Content-Type: application/octet-stream"</para>
-        /// <para>--data-binary @local_file.txt</para>
-        /// <para></para>
-        /// <para>A successful temporary upload link consumption request returns the content
-        /// hash of the uploaded data in JSON format.</para>
-        /// <para></para>
-        /// <para>Example successful temporary upload link consumption response:</para>
-        /// <para>{"content-hash": "599d71033d700ac892a0e48fa61b125d2f5994"}</para>
-        /// <para></para>
-        /// <para>An unsuccessful temporary upload link consumption request returns any of the
-        /// following status codes:</para>
-        /// <para></para>
-        /// <para>HTTP 400 Bad Request: Content-Type is not one of application/octet-stream and
-        /// text/plain or request is invalid.</para>
-        /// <para>HTTP 409 Conflict: The temporary upload link does not exist or is currently
-        /// unavailable, the upload failed, or another error happened.</para>
-        /// <para>HTTP 410 Gone: The temporary upload link is expired or consumed.</para>
-        /// <para></para>
-        /// <para>Example unsuccessful temporary upload link consumption response:</para>
-        /// <para>Temporary upload link has been recently consumed.</para>
+        /// location.  This endpoint acts as a delayed upload(). The returned temporary upload
+        /// link may be used to make a POST request with the data to be uploaded. The upload
+        /// will then be perfomed with the CommitInfo previously provided to
+        /// getTemporaryUploadLink() but evaluated only upon consumption. Hence, errors
+        /// stemming from invalid CommitInfo with respect to the state of the user's Dropbox
+        /// will only be communicated at consumption time. Additionally, these errors are
+        /// surfaced as generic HTTP 409 Conflict responses, potentially hiding issue details.
+        /// The maximum temporary upload link duration is 4 hours. Upon consumption or
+        /// expiration, a new link will have to be generated. Multiple links may exist for a
+        /// specific upload path at any given time.  The POST request on the temporary upload
+        /// link must have its Content-Type set to "application/octet-stream".  Example
+        /// temporary upload link consumption request:  curl -X POST
+        /// https://content.dropboxapi.com/apitul/1/bNi2uIYF51cVBND --header "Content-Type:
+        /// application/octet-stream" --data-binary @local_file.txt  A successful temporary
+        /// upload link consumption request returns the content hash of the uploaded data in
+        /// JSON format. Example successful temporary upload link consumption response:
+        /// {"content-hash": "599d71033d700ac892a0e48fa61b125d2f5994"}  An unsuccessful
+        /// temporary upload link consumption request returns any of the following status
+        /// codes:  HTTP 400 Bad Request: Content-Type is not one of application/octet-stream
+        /// and text/plain or request is invalid. HTTP 409 Conflict: The temporary upload link
+        /// does not exist or is currently unavailable, the upload failed, or another error
+        /// happened. HTTP 410 Gone: The temporary upload link is expired or consumed. Example
+        /// unsuccessful temporary upload link consumption response: Temporary upload link has
+        /// been recently consumed.</para>
         /// </summary>
         /// <param name="getTemporaryUploadLinkArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2726,55 +2692,37 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Get a one-time use temporary upload link to upload a file to a Dropbox
-        /// location.</para>
-        /// <para></para>
-        /// <para>This endpoint acts as a delayed <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadAsync" />. The returned
-        /// temporary upload link may be used to make a POST request with the data to be
-        /// uploaded. The upload will then be perfomed with the <see cref="CommitInfo" />
-        /// previously provided to <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.GetTemporaryUploadLinkAsync" /> but
-        /// evaluated only upon consumption. Hence, errors stemming from invalid <see
-        /// cref="CommitInfo" /> with respect to the state of the user's Dropbox will only be
-        /// communicated at consumption time. Additionally, these errors are surfaced as
-        /// generic HTTP 409 Conflict responses, potentially hiding issue details. The maximum
-        /// temporary upload link duration is 4 hours. Upon consumption or expiration, a new
-        /// link will have to be generated. Multiple links may exist for a specific upload path
-        /// at any given time.</para>
-        /// <para></para>
-        /// <para>The POST request on the temporary upload link must have its Content-Type set
-        /// to "application/octet-stream".</para>
-        /// <para></para>
-        /// <para>Example temporary upload link consumption request:</para>
-        /// <para></para>
-        /// <para>curl -X POST https://content.dropboxapi.com/apitul/1/bNi2uIYF51cVBND</para>
-        /// <para>--header "Content-Type: application/octet-stream"</para>
-        /// <para>--data-binary @local_file.txt</para>
-        /// <para></para>
-        /// <para>A successful temporary upload link consumption request returns the content
-        /// hash of the uploaded data in JSON format.</para>
-        /// <para></para>
-        /// <para>Example successful temporary upload link consumption response:</para>
-        /// <para>{"content-hash": "599d71033d700ac892a0e48fa61b125d2f5994"}</para>
-        /// <para></para>
-        /// <para>An unsuccessful temporary upload link consumption request returns any of the
-        /// following status codes:</para>
-        /// <para></para>
-        /// <para>HTTP 400 Bad Request: Content-Type is not one of application/octet-stream and
-        /// text/plain or request is invalid.</para>
-        /// <para>HTTP 409 Conflict: The temporary upload link does not exist or is currently
-        /// unavailable, the upload failed, or another error happened.</para>
-        /// <para>HTTP 410 Gone: The temporary upload link is expired or consumed.</para>
-        /// <para></para>
-        /// <para>Example unsuccessful temporary upload link consumption response:</para>
-        /// <para>Temporary upload link has been recently consumed.</para>
+        /// location.  This endpoint acts as a delayed upload(). The returned temporary upload
+        /// link may be used to make a POST request with the data to be uploaded. The upload
+        /// will then be perfomed with the CommitInfo previously provided to
+        /// getTemporaryUploadLink() but evaluated only upon consumption. Hence, errors
+        /// stemming from invalid CommitInfo with respect to the state of the user's Dropbox
+        /// will only be communicated at consumption time. Additionally, these errors are
+        /// surfaced as generic HTTP 409 Conflict responses, potentially hiding issue details.
+        /// The maximum temporary upload link duration is 4 hours. Upon consumption or
+        /// expiration, a new link will have to be generated. Multiple links may exist for a
+        /// specific upload path at any given time.  The POST request on the temporary upload
+        /// link must have its Content-Type set to "application/octet-stream".  Example
+        /// temporary upload link consumption request:  curl -X POST
+        /// https://content.dropboxapi.com/apitul/1/bNi2uIYF51cVBND --header "Content-Type:
+        /// application/octet-stream" --data-binary @local_file.txt  A successful temporary
+        /// upload link consumption request returns the content hash of the uploaded data in
+        /// JSON format. Example successful temporary upload link consumption response:
+        /// {"content-hash": "599d71033d700ac892a0e48fa61b125d2f5994"}  An unsuccessful
+        /// temporary upload link consumption request returns any of the following status
+        /// codes:  HTTP 400 Bad Request: Content-Type is not one of application/octet-stream
+        /// and text/plain or request is invalid. HTTP 409 Conflict: The temporary upload link
+        /// does not exist or is currently unavailable, the upload failed, or another error
+        /// happened. HTTP 410 Gone: The temporary upload link is expired or consumed. Example
+        /// unsuccessful temporary upload link consumption response: Temporary upload link has
+        /// been recently consumed.</para>
         /// </summary>
         /// <param name="commitInfo">Contains the path and other optional modifiers for the
         /// future upload commit. Equivalent to the parameters provided to <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadAsync" />.</param>
-        /// <param name="duration">How long before this link expires, in seconds.  Attempting
-        /// to start an upload with this link longer than this period  of time after link
-        /// creation will result in an error.</param>
+        /// <param name="duration">How long before this link expires, in seconds. Attempting to
+        /// start an upload with this link longer than this period of time after link creation
+        /// will result in an error.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         public t.Task<GetTemporaryUploadLinkResult> GetTemporaryUploadLinkAsync(CommitInfo commitInfo,
@@ -2792,9 +2740,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="commitInfo">Contains the path and other optional modifiers for the
         /// future upload commit. Equivalent to the parameters provided to <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadAsync" />.</param>
-        /// <param name="duration">How long before this link expires, in seconds.  Attempting
-        /// to start an upload with this link longer than this period  of time after link
-        /// creation will result in an error.</param>
+        /// <param name="duration">How long before this link expires, in seconds. Attempting to
+        /// start an upload with this link longer than this period of time after link creation
+        /// will result in an error.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -2830,10 +2778,9 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Get a thumbnail for an image.</para>
-        /// <para>This method currently supports files with the following file extensions: jpg,
-        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
-        /// size won't be converted to a thumbnail.</para>
+        /// <para>Get a thumbnail for an image. This method currently supports files with the
+        /// following file extensions: jpg, jpeg, png, tiff, tif, gif, webp, ppm and bmp.
+        /// Photos that are larger than 20MB in size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="thumbnailArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2863,18 +2810,23 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Get a thumbnail for an image.</para>
-        /// <para>This method currently supports files with the following file extensions: jpg,
-        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
-        /// size won't be converted to a thumbnail.</para>
+        /// <para>Get a thumbnail for an image. This method currently supports files with the
+        /// following file extensions: jpg, jpeg, png, tiff, tif, gif, webp, ppm and bmp.
+        /// Photos that are larger than 20MB in size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="path">The path to the image file you want to thumbnail.</param>
-        /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
-        /// images that are photos, jpeg should be preferred, while png is  better for
-        /// screenshots and digital arts.</param>
+        /// <param name="format">The format for the thumbnail image, jpeg (default), png, or
+        /// webp. For images that are photos, jpeg should be preferred, while png is better for
+        /// screenshots and digital arts, and web for compression.</param>
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
+        /// <param name="quality">Quality of the thumbnail image.</param>
+        /// <param name="excludeMediaInfo">Normally, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
+        /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
+        /// populated. This improves latency for use cases where `media_info` is not
+        /// needed.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2883,12 +2835,16 @@ namespace Dropbox.Api.Files.Routes
         public t.Task<enc.IDownloadResponse<FileMetadata>> GetThumbnailAsync(string path,
                                                                              ThumbnailFormat format = null,
                                                                              ThumbnailSize size = null,
-                                                                             ThumbnailMode mode = null)
+                                                                             ThumbnailMode mode = null,
+                                                                             ThumbnailQuality quality = null,
+                                                                             bool? excludeMediaInfo = null)
         {
             var thumbnailArg = new ThumbnailArg(path,
                                                 format,
                                                 size,
-                                                mode);
+                                                mode,
+                                                quality,
+                                                excludeMediaInfo);
 
             return this.GetThumbnailAsync(thumbnailArg);
         }
@@ -2897,12 +2853,18 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the get thumbnail route.</para>
         /// </summary>
         /// <param name="path">The path to the image file you want to thumbnail.</param>
-        /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
-        /// images that are photos, jpeg should be preferred, while png is  better for
-        /// screenshots and digital arts.</param>
+        /// <param name="format">The format for the thumbnail image, jpeg (default), png, or
+        /// webp. For images that are photos, jpeg should be preferred, while png is better for
+        /// screenshots and digital arts, and web for compression.</param>
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
+        /// <param name="quality">Quality of the thumbnail image.</param>
+        /// <param name="excludeMediaInfo">Normally, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
+        /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
+        /// populated. This improves latency for use cases where `media_info` is not
+        /// needed.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -2912,13 +2874,17 @@ namespace Dropbox.Api.Files.Routes
                                                   ThumbnailFormat format = null,
                                                   ThumbnailSize size = null,
                                                   ThumbnailMode mode = null,
+                                                  ThumbnailQuality quality = null,
+                                                  bool? excludeMediaInfo = null,
                                                   sys.AsyncCallback callback = null,
                                                   object callbackState = null)
         {
             var thumbnailArg = new ThumbnailArg(path,
                                                 format,
                                                 size,
-                                                mode);
+                                                mode,
+                                                quality,
+                                                excludeMediaInfo);
 
             return this.BeginGetThumbnail(thumbnailArg, callback, callbackState);
         }
@@ -2945,10 +2911,9 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Get a thumbnail for an image.</para>
-        /// <para>This method currently supports files with the following file extensions: jpg,
-        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
-        /// size won't be converted to a thumbnail.</para>
+        /// <para>Get a thumbnail for an image. This method currently supports files with the
+        /// following file extensions: jpg, jpeg, png, tiff, tif, gif, webp, ppm and bmp.
+        /// Photos that are larger than 20MB in size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="thumbnailV2Arg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2978,20 +2943,25 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Get a thumbnail for an image.</para>
-        /// <para>This method currently supports files with the following file extensions: jpg,
-        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
-        /// size won't be converted to a thumbnail.</para>
+        /// <para>Get a thumbnail for an image. This method currently supports files with the
+        /// following file extensions: jpg, jpeg, png, tiff, tif, gif, webp, ppm and bmp.
+        /// Photos that are larger than 20MB in size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="resource">Information specifying which file to preview. This could be
         /// a path to a file, a shared link pointing to a file, or a shared link pointing to a
         /// folder, with a relative path.</param>
-        /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
-        /// images that are photos, jpeg should be preferred, while png is  better for
-        /// screenshots and digital arts.</param>
+        /// <param name="format">The format for the thumbnail image, jpeg (default), png, or
+        /// webp. For images that are photos, jpeg should be preferred, while png is better for
+        /// screenshots and digital arts, and web for compression.</param>
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
+        /// <param name="quality">Quality of the thumbnail image.</param>
+        /// <param name="excludeMediaInfo">Normally, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
+        /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
+        /// populated. This improves latency for use cases where `media_info` is not
+        /// needed.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -3000,12 +2970,16 @@ namespace Dropbox.Api.Files.Routes
         public t.Task<enc.IDownloadResponse<PreviewResult>> GetThumbnailV2Async(PathOrLink resource,
                                                                                 ThumbnailFormat format = null,
                                                                                 ThumbnailSize size = null,
-                                                                                ThumbnailMode mode = null)
+                                                                                ThumbnailMode mode = null,
+                                                                                ThumbnailQuality quality = null,
+                                                                                bool? excludeMediaInfo = null)
         {
             var thumbnailV2Arg = new ThumbnailV2Arg(resource,
                                                     format,
                                                     size,
-                                                    mode);
+                                                    mode,
+                                                    quality,
+                                                    excludeMediaInfo);
 
             return this.GetThumbnailV2Async(thumbnailV2Arg);
         }
@@ -3016,12 +2990,18 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="resource">Information specifying which file to preview. This could be
         /// a path to a file, a shared link pointing to a file, or a shared link pointing to a
         /// folder, with a relative path.</param>
-        /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
-        /// images that are photos, jpeg should be preferred, while png is  better for
-        /// screenshots and digital arts.</param>
+        /// <param name="format">The format for the thumbnail image, jpeg (default), png, or
+        /// webp. For images that are photos, jpeg should be preferred, while png is better for
+        /// screenshots and digital arts, and web for compression.</param>
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
+        /// <param name="quality">Quality of the thumbnail image.</param>
+        /// <param name="excludeMediaInfo">Normally, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
+        /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
+        /// populated. This improves latency for use cases where `media_info` is not
+        /// needed.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -3031,13 +3011,17 @@ namespace Dropbox.Api.Files.Routes
                                                     ThumbnailFormat format = null,
                                                     ThumbnailSize size = null,
                                                     ThumbnailMode mode = null,
+                                                    ThumbnailQuality quality = null,
+                                                    bool? excludeMediaInfo = null,
                                                     sys.AsyncCallback callback = null,
                                                     object callbackState = null)
         {
             var thumbnailV2Arg = new ThumbnailV2Arg(resource,
                                                     format,
                                                     size,
-                                                    mode);
+                                                    mode,
+                                                    quality,
+                                                    excludeMediaInfo);
 
             return this.BeginGetThumbnailV2(thumbnailV2Arg, callback, callbackState);
         }
@@ -3065,10 +3049,9 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Get thumbnails for a list of images. We allow up to 25 thumbnails in a single
-        /// batch.</para>
-        /// <para>This method currently supports files with the following file extensions: jpg,
-        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
-        /// size won't be converted to a thumbnail.</para>
+        /// batch. This method currently supports files with the following file extensions:
+        /// jpg, jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB
+        /// in size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="getThumbnailBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3099,10 +3082,9 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Get thumbnails for a list of images. We allow up to 25 thumbnails in a single
-        /// batch.</para>
-        /// <para>This method currently supports files with the following file extensions: jpg,
-        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
-        /// size won't be converted to a thumbnail.</para>
+        /// batch. This method currently supports files with the following file extensions:
+        /// jpg, jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB
+        /// in size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="entries">List of files to get thumbnails.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3158,29 +3140,23 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Starts returning the contents of a folder. If the result's <see
-        /// cref="Dropbox.Api.Files.ListFolderResult.HasMore" /> field is <c>true</c>, call
-        /// <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
+        /// cref="Dropbox.Api.Files.ListFolderResult.HasMore" /> field is true, call <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> with the
-        /// returned <see cref="Dropbox.Api.Files.ListFolderResult.Cursor" /> to retrieve more
-        /// entries.</para>
-        /// <para>If you're using <see cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> set
-        /// to <c>true</c> to keep a local cache of the contents of a Dropbox account, iterate
-        /// through each entry in order and process them as follows to keep your local state in
-        /// sync:</para>
-        /// <para>For each <see cref="FileMetadata" />, store the new entry at the given path
-        /// in your local state. If the required parent folders don't exist yet, create them.
-        /// If there's already something else at the given path, replace it and remove all its
-        /// children.</para>
-        /// <para>For each <see cref="FolderMetadata" />, store the new entry at the given path
-        /// in your local state. If the required parent folders don't exist yet, create them.
-        /// If there's already something else at the given path, replace it but leave the
-        /// children as they are. Check the new entry's <see
-        /// cref="Dropbox.Api.Files.FolderSharingInfo.ReadOnly" /> and set all its children's
-        /// read-only statuses to match.</para>
-        /// <para>For each <see cref="DeletedMetadata" />, if your local state has something at
-        /// the given path, remove it and all its children. If there's nothing at the given
-        /// path, ignore this entry.</para>
-        /// <para>Note: <see cref="Auth.RateLimitError" /> may be returned if multiple <see
+        /// returned ListFolderResult.cursor to retrieve more entries. If you're using
+        /// ListFolderArg.recursive set to true to keep a local cache of the contents of a
+        /// Dropbox account, iterate through each entry in order and process them as follows to
+        /// keep your local state in sync: For each FileMetadata, store the new entry at the
+        /// given path in your local state. If the required parent folders don't exist yet,
+        /// create them. If there's already something else at the given path, replace it and
+        /// remove all its children. For each FolderMetadata, store the new entry at the given
+        /// path in your local state. If the required parent folders don't exist yet, create
+        /// them. If there's already something else at the given path, replace it but leave the
+        /// children as they are. Check the new entry's FolderSharingInfo.read_only and set all
+        /// its children's read-only statuses to match. For each DeletedMetadata, if your local
+        /// state has something at the given path, remove it and all its children. If there's
+        /// nothing at the given path, ignore this entry. Note: auth.RateLimitError may be
+        /// returned if multiple <see
         /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
         /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
@@ -3218,29 +3194,23 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Starts returning the contents of a folder. If the result's <see
-        /// cref="Dropbox.Api.Files.ListFolderResult.HasMore" /> field is <c>true</c>, call
-        /// <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
+        /// cref="Dropbox.Api.Files.ListFolderResult.HasMore" /> field is true, call <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> with the
-        /// returned <see cref="Dropbox.Api.Files.ListFolderResult.Cursor" /> to retrieve more
-        /// entries.</para>
-        /// <para>If you're using <see cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> set
-        /// to <c>true</c> to keep a local cache of the contents of a Dropbox account, iterate
-        /// through each entry in order and process them as follows to keep your local state in
-        /// sync:</para>
-        /// <para>For each <see cref="FileMetadata" />, store the new entry at the given path
-        /// in your local state. If the required parent folders don't exist yet, create them.
-        /// If there's already something else at the given path, replace it and remove all its
-        /// children.</para>
-        /// <para>For each <see cref="FolderMetadata" />, store the new entry at the given path
-        /// in your local state. If the required parent folders don't exist yet, create them.
-        /// If there's already something else at the given path, replace it but leave the
-        /// children as they are. Check the new entry's <see
-        /// cref="Dropbox.Api.Files.FolderSharingInfo.ReadOnly" /> and set all its children's
-        /// read-only statuses to match.</para>
-        /// <para>For each <see cref="DeletedMetadata" />, if your local state has something at
-        /// the given path, remove it and all its children. If there's nothing at the given
-        /// path, ignore this entry.</para>
-        /// <para>Note: <see cref="Auth.RateLimitError" /> may be returned if multiple <see
+        /// returned ListFolderResult.cursor to retrieve more entries. If you're using
+        /// ListFolderArg.recursive set to true to keep a local cache of the contents of a
+        /// Dropbox account, iterate through each entry in order and process them as follows to
+        /// keep your local state in sync: For each FileMetadata, store the new entry at the
+        /// given path in your local state. If the required parent folders don't exist yet,
+        /// create them. If there's already something else at the given path, replace it and
+        /// remove all its children. For each FolderMetadata, store the new entry at the given
+        /// path in your local state. If the required parent folders don't exist yet, create
+        /// them. If there's already something else at the given path, replace it but leave the
+        /// children as they are. Check the new entry's FolderSharingInfo.read_only and set all
+        /// its children's read-only statuses to match. For each DeletedMetadata, if your local
+        /// state has something at the given path, remove it and all its children. If there's
+        /// nothing at the given path, ignore this entry. Note: auth.RateLimitError may be
+        /// returned if multiple <see
         /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
         /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
@@ -3252,14 +3222,19 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="path">A unique identifier for the file.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
-        /// subfolders.</param>
-        /// <param name="includeMediaInfo">If true, <see
+        /// subfolders. In some cases, setting <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>true</c> may lead to
+        /// performance issues or errors, especially when traversing folder structures with a
+        /// large number of items. A workaround for such cases is to set <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>false</c> and traverse
+        /// subfolders one at a time.</param>
+        /// <param name="includeMediaInfo">Field is deprecated. If true, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. This
         /// parameter will no longer have an effect starting December 2, 2019.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
-        /// flag for each file indicating whether or not  that file has any explicit
+        /// flag for each file indicating whether or not that file has any explicit
         /// members.</param>
         /// <param name="includeMountedFolders">If true, the results will include entries under
         /// mounted folders which includes app folder, shared folder and team folder.</param>
@@ -3275,6 +3250,8 @@ namespace Dropbox.Api.Files.Routes
         /// property data associated with the file and each of the listed templates.</param>
         /// <param name="includeNonDownloadableFiles">If true, include files that are not
         /// downloadable, i.e. Google Docs.</param>
+        /// <param name="includeRestorableInfo">If true, each returned deleted entry will
+        /// include whether that entry can be restored.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -3289,7 +3266,8 @@ namespace Dropbox.Api.Files.Routes
                                                         uint? limit = null,
                                                         SharedLink sharedLink = null,
                                                         global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
-                                                        bool includeNonDownloadableFiles = true)
+                                                        bool includeNonDownloadableFiles = true,
+                                                        bool includeRestorableInfo = false)
         {
             var listFolderArg = new ListFolderArg(path,
                                                   recursive,
@@ -3300,7 +3278,8 @@ namespace Dropbox.Api.Files.Routes
                                                   limit,
                                                   sharedLink,
                                                   includePropertyGroups,
-                                                  includeNonDownloadableFiles);
+                                                  includeNonDownloadableFiles,
+                                                  includeRestorableInfo);
 
             return this.ListFolderAsync(listFolderArg);
         }
@@ -3311,14 +3290,19 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="path">A unique identifier for the file.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
-        /// subfolders.</param>
-        /// <param name="includeMediaInfo">If true, <see
+        /// subfolders. In some cases, setting <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>true</c> may lead to
+        /// performance issues or errors, especially when traversing folder structures with a
+        /// large number of items. A workaround for such cases is to set <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>false</c> and traverse
+        /// subfolders one at a time.</param>
+        /// <param name="includeMediaInfo">Field is deprecated. If true, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. This
         /// parameter will no longer have an effect starting December 2, 2019.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
-        /// flag for each file indicating whether or not  that file has any explicit
+        /// flag for each file indicating whether or not that file has any explicit
         /// members.</param>
         /// <param name="includeMountedFolders">If true, the results will include entries under
         /// mounted folders which includes app folder, shared folder and team folder.</param>
@@ -3334,6 +3318,8 @@ namespace Dropbox.Api.Files.Routes
         /// property data associated with the file and each of the listed templates.</param>
         /// <param name="includeNonDownloadableFiles">If true, include files that are not
         /// downloadable, i.e. Google Docs.</param>
+        /// <param name="includeRestorableInfo">If true, each returned deleted entry will
+        /// include whether that entry can be restored.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -3349,6 +3335,7 @@ namespace Dropbox.Api.Files.Routes
                                                 SharedLink sharedLink = null,
                                                 global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
                                                 bool includeNonDownloadableFiles = true,
+                                                bool includeRestorableInfo = false,
                                                 sys.AsyncCallback callback = null,
                                                 object callbackState = null)
         {
@@ -3361,7 +3348,8 @@ namespace Dropbox.Api.Files.Routes
                                                   limit,
                                                   sharedLink,
                                                   includePropertyGroups,
-                                                  includeNonDownloadableFiles);
+                                                  includeNonDownloadableFiles,
+                                                  includeRestorableInfo);
 
             return this.BeginListFolder(listFolderArg, callback, callbackState);
         }
@@ -3541,14 +3529,19 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="path">A unique identifier for the file.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
-        /// subfolders.</param>
-        /// <param name="includeMediaInfo">If true, <see
+        /// subfolders. In some cases, setting <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>true</c> may lead to
+        /// performance issues or errors, especially when traversing folder structures with a
+        /// large number of items. A workaround for such cases is to set <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>false</c> and traverse
+        /// subfolders one at a time.</param>
+        /// <param name="includeMediaInfo">Field is deprecated. If true, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. This
         /// parameter will no longer have an effect starting December 2, 2019.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
-        /// flag for each file indicating whether or not  that file has any explicit
+        /// flag for each file indicating whether or not that file has any explicit
         /// members.</param>
         /// <param name="includeMountedFolders">If true, the results will include entries under
         /// mounted folders which includes app folder, shared folder and team folder.</param>
@@ -3564,6 +3557,8 @@ namespace Dropbox.Api.Files.Routes
         /// property data associated with the file and each of the listed templates.</param>
         /// <param name="includeNonDownloadableFiles">If true, include files that are not
         /// downloadable, i.e. Google Docs.</param>
+        /// <param name="includeRestorableInfo">If true, each returned deleted entry will
+        /// include whether that entry can be restored.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -3578,7 +3573,8 @@ namespace Dropbox.Api.Files.Routes
                                                                                       uint? limit = null,
                                                                                       SharedLink sharedLink = null,
                                                                                       global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
-                                                                                      bool includeNonDownloadableFiles = true)
+                                                                                      bool includeNonDownloadableFiles = true,
+                                                                                      bool includeRestorableInfo = false)
         {
             var listFolderArg = new ListFolderArg(path,
                                                   recursive,
@@ -3589,7 +3585,8 @@ namespace Dropbox.Api.Files.Routes
                                                   limit,
                                                   sharedLink,
                                                   includePropertyGroups,
-                                                  includeNonDownloadableFiles);
+                                                  includeNonDownloadableFiles,
+                                                  includeRestorableInfo);
 
             return this.ListFolderGetLatestCursorAsync(listFolderArg);
         }
@@ -3601,14 +3598,19 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="path">A unique identifier for the file.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
-        /// subfolders.</param>
-        /// <param name="includeMediaInfo">If true, <see
+        /// subfolders. In some cases, setting <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>true</c> may lead to
+        /// performance issues or errors, especially when traversing folder structures with a
+        /// large number of items. A workaround for such cases is to set <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>false</c> and traverse
+        /// subfolders one at a time.</param>
+        /// <param name="includeMediaInfo">Field is deprecated. If true, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. This
         /// parameter will no longer have an effect starting December 2, 2019.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
-        /// flag for each file indicating whether or not  that file has any explicit
+        /// flag for each file indicating whether or not that file has any explicit
         /// members.</param>
         /// <param name="includeMountedFolders">If true, the results will include entries under
         /// mounted folders which includes app folder, shared folder and team folder.</param>
@@ -3624,6 +3626,8 @@ namespace Dropbox.Api.Files.Routes
         /// property data associated with the file and each of the listed templates.</param>
         /// <param name="includeNonDownloadableFiles">If true, include files that are not
         /// downloadable, i.e. Google Docs.</param>
+        /// <param name="includeRestorableInfo">If true, each returned deleted entry will
+        /// include whether that entry can be restored.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -3639,6 +3643,7 @@ namespace Dropbox.Api.Files.Routes
                                                                SharedLink sharedLink = null,
                                                                global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
                                                                bool includeNonDownloadableFiles = true,
+                                                               bool includeRestorableInfo = false,
                                                                sys.AsyncCallback callback = null,
                                                                object callbackState = null)
         {
@@ -3651,7 +3656,8 @@ namespace Dropbox.Api.Files.Routes
                                                   limit,
                                                   sharedLink,
                                                   includePropertyGroups,
-                                                  includeNonDownloadableFiles);
+                                                  includeNonDownloadableFiles,
+                                                  includeRestorableInfo);
 
             return this.BeginListFolderGetLatestCursor(listFolderArg, callback, callbackState);
         }
@@ -3683,10 +3689,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />, this
         /// call gives you a low-latency way to monitor an account for file changes. The
         /// connection will block until there are changes available or a timeout occurs. This
-        /// endpoint is useful mostly for client-side apps. If you're looking for server-side
-        /// notifications, check out our <a
-        /// href="https://www.dropbox.com/developers/reference/webhooks">webhooks
-        /// documentation</a>.</para>
+        /// endpoint is useful mostly for client-side apps.</para>
         /// </summary>
         /// <param name="listFolderLongpollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3721,10 +3724,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />, this
         /// call gives you a low-latency way to monitor an account for file changes. The
         /// connection will block until there are changes available or a timeout occurs. This
-        /// endpoint is useful mostly for client-side apps. If you're looking for server-side
-        /// notifications, check out our <a
-        /// href="https://www.dropbox.com/developers/reference/webhooks">webhooks
-        /// documentation</a>.</para>
+        /// endpoint is useful mostly for client-side apps.</para>
         /// </summary>
         /// <param name="cursor">A cursor as returned by <see
         /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
@@ -3806,13 +3806,11 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Returns revisions for files based on a file path or a file id. The file path
         /// or file id is identified from the latest file entry at the given file path or id.
         /// This end point allows your app to query either by file path or file id by setting
-        /// the mode parameter appropriately.</para>
-        /// <para>In the <see cref="Dropbox.Api.Files.ListRevisionsMode.Path" /> (default)
-        /// mode, all revisions at the same file path as the latest file entry are returned. If
-        /// revisions with the same file id are desired, then mode must be set to <see
-        /// cref="Dropbox.Api.Files.ListRevisionsMode.Id" />. The <see
-        /// cref="Dropbox.Api.Files.ListRevisionsMode.Id" /> mode is useful to retrieve
-        /// revisions for a given file across moves or renames.</para>
+        /// the mode parameter appropriately. In the ListRevisionsMode.path (default) mode, all
+        /// revisions at the same file path as the latest file entry are returned. If revisions
+        /// with the same file id are desired, then mode must be set to ListRevisionsMode.id.
+        /// The ListRevisionsMode.id mode is useful to retrieve revisions for a given file
+        /// across moves or renames.</para>
         /// </summary>
         /// <param name="listRevisionsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3845,18 +3843,22 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Returns revisions for files based on a file path or a file id. The file path
         /// or file id is identified from the latest file entry at the given file path or id.
         /// This end point allows your app to query either by file path or file id by setting
-        /// the mode parameter appropriately.</para>
-        /// <para>In the <see cref="Dropbox.Api.Files.ListRevisionsMode.Path" /> (default)
-        /// mode, all revisions at the same file path as the latest file entry are returned. If
-        /// revisions with the same file id are desired, then mode must be set to <see
-        /// cref="Dropbox.Api.Files.ListRevisionsMode.Id" />. The <see
-        /// cref="Dropbox.Api.Files.ListRevisionsMode.Id" /> mode is useful to retrieve
-        /// revisions for a given file across moves or renames.</para>
+        /// the mode parameter appropriately. In the ListRevisionsMode.path (default) mode, all
+        /// revisions at the same file path as the latest file entry are returned. If revisions
+        /// with the same file id are desired, then mode must be set to ListRevisionsMode.id.
+        /// The ListRevisionsMode.id mode is useful to retrieve revisions for a given file
+        /// across moves or renames.</para>
         /// </summary>
         /// <param name="path">The path to the file you want to see the revisions of.</param>
         /// <param name="mode">Determines the behavior of the API in listing the revisions for
         /// a given file path or id.</param>
         /// <param name="limit">The maximum number of revision entries returned.</param>
+        /// <param name="beforeRev">If set, ListRevisions will only return revisions prior to
+        /// before_rev. Can be set using the last revision from a previous call to
+        /// list_revisions to fetch the next page of revisions. Only supported in path
+        /// mode.</param>
+        /// <param name="includeRestorableInfo">If true, each returned revision will include
+        /// whether that revision can be restored.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -3864,11 +3866,15 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ListRevisionsError"/>.</exception>
         public t.Task<ListRevisionsResult> ListRevisionsAsync(string path,
                                                               ListRevisionsMode mode = null,
-                                                              ulong limit = 10)
+                                                              ulong limit = 10,
+                                                              string beforeRev = null,
+                                                              bool includeRestorableInfo = false)
         {
             var listRevisionsArg = new ListRevisionsArg(path,
                                                         mode,
-                                                        limit);
+                                                        limit,
+                                                        beforeRev,
+                                                        includeRestorableInfo);
 
             return this.ListRevisionsAsync(listRevisionsArg);
         }
@@ -3880,6 +3886,12 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="mode">Determines the behavior of the API in listing the revisions for
         /// a given file path or id.</param>
         /// <param name="limit">The maximum number of revision entries returned.</param>
+        /// <param name="beforeRev">If set, ListRevisions will only return revisions prior to
+        /// before_rev. Can be set using the last revision from a previous call to
+        /// list_revisions to fetch the next page of revisions. Only supported in path
+        /// mode.</param>
+        /// <param name="includeRestorableInfo">If true, each returned revision will include
+        /// whether that revision can be restored.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -3888,12 +3900,16 @@ namespace Dropbox.Api.Files.Routes
         public sys.IAsyncResult BeginListRevisions(string path,
                                                    ListRevisionsMode mode = null,
                                                    ulong limit = 10,
+                                                   string beforeRev = null,
+                                                   bool includeRestorableInfo = false,
                                                    sys.AsyncCallback callback = null,
                                                    object callbackState = null)
         {
             var listRevisionsArg = new ListRevisionsArg(path,
                                                         mode,
-                                                        limit);
+                                                        limit,
+                                                        beforeRev,
+                                                        includeRestorableInfo);
 
             return this.BeginListRevisions(listRevisionsArg, callback, callbackState);
         }
@@ -4013,9 +4029,132 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Move a file or folder to a different location in the user's Dropbox.</para>
-        /// <para>If the source path is a folder all its contents will be moved.</para>
-        /// <para>Note that we do not currently support case-only renaming.</para>
+        /// <para>Move a file or folder to a different location in the user's Dropbox. If the
+        /// source path is a folder all its contents will be moved.</para>
+        /// </summary>
+        /// <param name="relocationArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelocationError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<Metadata> MoveAsync(RelocationArg relocationArg)
+        {
+            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/move", "user", global::Dropbox.Api.Files.RelocationArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.RelocationError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the move route.</para>
+        /// </summary>
+        /// <param name="relocationArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginMove(RelocationArg relocationArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MoveAsync(relocationArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Move a file or folder to a different location in the user's Dropbox. If the
+        /// source path is a folder all its contents will be moved.</para>
+        /// </summary>
+        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
+        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
+        /// <param name="allowSharedFolder">Field is deprecated. This flag has no
+        /// effect.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the file to avoid the conflict.</param>
+        /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
+        /// in an ownership transfer for the content being moved. This does not apply to
+        /// copies.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelocationError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<Metadata> MoveAsync(string fromPath,
+                                          string toPath,
+                                          bool allowSharedFolder = false,
+                                          bool autorename = false,
+                                          bool allowOwnershipTransfer = false)
+        {
+            var relocationArg = new RelocationArg(fromPath,
+                                                  toPath,
+                                                  allowSharedFolder,
+                                                  autorename,
+                                                  allowOwnershipTransfer);
+
+            return this.MoveAsync(relocationArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the move route.</para>
+        /// </summary>
+        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
+        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
+        /// <param name="allowSharedFolder">Field is deprecated. This flag has no
+        /// effect.</param>
+        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
+        /// autorename the file to avoid the conflict.</param>
+        /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
+        /// in an ownership transfer for the content being moved. This does not apply to
+        /// copies.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginMove(string fromPath,
+                                          string toPath,
+                                          bool allowSharedFolder = false,
+                                          bool autorename = false,
+                                          bool allowOwnershipTransfer = false,
+                                          sys.AsyncCallback callback = null,
+                                          object callbackState = null)
+        {
+            var relocationArg = new RelocationArg(fromPath,
+                                                  toPath,
+                                                  allowSharedFolder,
+                                                  autorename,
+                                                  allowOwnershipTransfer);
+
+            return this.BeginMove(relocationArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the move route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelocationError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public Metadata EndMove(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<Metadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Move a file or folder to a different location in the user's Dropbox. If the
+        /// source path is a folder all its contents will be moved. Note that we do not
+        /// currently support case-only renaming.</para>
         /// </summary>
         /// <param name="relocationArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -4045,13 +4184,14 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Move a file or folder to a different location in the user's Dropbox.</para>
-        /// <para>If the source path is a folder all its contents will be moved.</para>
-        /// <para>Note that we do not currently support case-only renaming.</para>
+        /// <para>Move a file or folder to a different location in the user's Dropbox. If the
+        /// source path is a folder all its contents will be moved. Note that we do not
+        /// currently support case-only renaming.</para>
         /// </summary>
         /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
         /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
-        /// <param name="allowSharedFolder">This flag has no effect.</param>
+        /// <param name="allowSharedFolder">Field is deprecated. This flag has no
+        /// effect.</param>
         /// <param name="autorename">If there's a conflict, have the Dropbox server try to
         /// autorename the file to avoid the conflict.</param>
         /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
@@ -4082,7 +4222,8 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
         /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
-        /// <param name="allowSharedFolder">This flag has no effect.</param>
+        /// <param name="allowSharedFolder">Field is deprecated. This flag has no
+        /// effect.</param>
         /// <param name="autorename">If there's a conflict, have the Dropbox server try to
         /// autorename the file to avoid the conflict.</param>
         /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
@@ -4131,79 +4272,79 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Move a file or folder to a different location in the user's Dropbox.</para>
-        /// <para>If the source path is a folder all its contents will be moved.</para>
+        /// <para>Move multiple files or folders to different locations at once in the user's
+        /// Dropbox. This route will return job ID immediately and do the async moving job in
+        /// background. Please use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchCheckAsync" /> to check the
+        /// job status.</para>
         /// </summary>
-        /// <param name="relocationArg">The request parameters</param>
+        /// <param name="relocationBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="RelocationError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use MoveV2Async instead.")]
-        public t.Task<Metadata> MoveAsync(RelocationArg relocationArg)
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<RelocationBatchLaunch> MoveBatchAsync(RelocationBatchArg relocationBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<RelocationArg, Metadata, RelocationError>(relocationArg, "api", "/files/move", "user", global::Dropbox.Api.Files.RelocationArg.Encoder, global::Dropbox.Api.Files.Metadata.Decoder, global::Dropbox.Api.Files.RelocationError.Decoder);
+            return this.Transport.SendRpcRequestAsync<RelocationBatchArg, RelocationBatchLaunch, enc.Empty>(relocationBatchArg, "api", "/files/move_batch", "user", global::Dropbox.Api.Files.RelocationBatchArg.Encoder, global::Dropbox.Api.Files.RelocationBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the move route.</para>
+        /// <para>Begins an asynchronous send to the move batch route.</para>
         /// </summary>
-        /// <param name="relocationArg">The request parameters.</param>
+        /// <param name="relocationBatchArg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginMoveV2 instead.")]
-        public sys.IAsyncResult BeginMove(RelocationArg relocationArg, sys.AsyncCallback callback, object state = null)
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginMoveBatch(RelocationBatchArg relocationBatchArg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.MoveAsync(relocationArg);
+            var task = this.MoveBatchAsync(relocationBatchArg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Move a file or folder to a different location in the user's Dropbox.</para>
-        /// <para>If the source path is a folder all its contents will be moved.</para>
+        /// <para>Move multiple files or folders to different locations at once in the user's
+        /// Dropbox. This route will return job ID immediately and do the async moving job in
+        /// background. Please use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchCheckAsync" /> to check the
+        /// job status.</para>
         /// </summary>
-        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
-        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
-        /// <param name="allowSharedFolder">This flag has no effect.</param>
-        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
-        /// autorename the file to avoid the conflict.</param>
+        /// <param name="entries">List of entries to be moved or copied. Each entry is <see
+        /// cref="RelocationPath" />.</param>
+        /// <param name="autorename">If there's a conflict with any file, have the Dropbox
+        /// server try to autorename that file to avoid the conflict.</param>
+        /// <param name="allowSharedFolder">Field is deprecated. This flag has no
+        /// effect.</param>
         /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
         /// in an ownership transfer for the content being moved. This does not apply to
         /// copies.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="RelocationError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use MoveV2Async instead.")]
-        public t.Task<Metadata> MoveAsync(string fromPath,
-                                          string toPath,
-                                          bool allowSharedFolder = false,
-                                          bool autorename = false,
-                                          bool allowOwnershipTransfer = false)
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<RelocationBatchLaunch> MoveBatchAsync(col.IEnumerable<RelocationPath> entries,
+                                                            bool autorename = false,
+                                                            bool allowSharedFolder = false,
+                                                            bool allowOwnershipTransfer = false)
         {
-            var relocationArg = new RelocationArg(fromPath,
-                                                  toPath,
-                                                  allowSharedFolder,
-                                                  autorename,
-                                                  allowOwnershipTransfer);
+            var relocationBatchArg = new RelocationBatchArg(entries,
+                                                            autorename,
+                                                            allowSharedFolder,
+                                                            allowOwnershipTransfer);
 
-            return this.MoveAsync(relocationArg);
+            return this.MoveBatchAsync(relocationBatchArg);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the move route.</para>
+        /// <para>Begins an asynchronous send to the move batch route.</para>
         /// </summary>
-        /// <param name="fromPath">Path in the user's Dropbox to be copied or moved.</param>
-        /// <param name="toPath">Path in the user's Dropbox that is the destination.</param>
-        /// <param name="allowSharedFolder">This flag has no effect.</param>
-        /// <param name="autorename">If there's a conflict, have the Dropbox server try to
-        /// autorename the file to avoid the conflict.</param>
+        /// <param name="entries">List of entries to be moved or copied. Each entry is <see
+        /// cref="RelocationPath" />.</param>
+        /// <param name="autorename">If there's a conflict with any file, have the Dropbox
+        /// server try to autorename that file to avoid the conflict.</param>
+        /// <param name="allowSharedFolder">Field is deprecated. This flag has no
+        /// effect.</param>
         /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
         /// in an ownership transfer for the content being moved. This does not apply to
         /// copies.</param>
@@ -4212,37 +4353,33 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginMoveV2 instead.")]
-        public sys.IAsyncResult BeginMove(string fromPath,
-                                          string toPath,
-                                          bool allowSharedFolder = false,
-                                          bool autorename = false,
-                                          bool allowOwnershipTransfer = false,
-                                          sys.AsyncCallback callback = null,
-                                          object callbackState = null)
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginMoveBatch(col.IEnumerable<RelocationPath> entries,
+                                               bool autorename = false,
+                                               bool allowSharedFolder = false,
+                                               bool allowOwnershipTransfer = false,
+                                               sys.AsyncCallback callback = null,
+                                               object callbackState = null)
         {
-            var relocationArg = new RelocationArg(fromPath,
-                                                  toPath,
-                                                  allowSharedFolder,
-                                                  autorename,
-                                                  allowOwnershipTransfer);
+            var relocationBatchArg = new RelocationBatchArg(entries,
+                                                            autorename,
+                                                            allowSharedFolder,
+                                                            allowOwnershipTransfer);
 
-            return this.BeginMove(relocationArg, callback, callbackState);
+            return this.BeginMoveBatch(relocationBatchArg, callback, callbackState);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the move route to complete</para>
+        /// <para>Waits for the pending asynchronous send to the move batch route to
+        /// complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="RelocationError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndMoveV2 instead.")]
-        public Metadata EndMove(sys.IAsyncResult asyncResult)
+        [sys.Obsolete("This function is deprecated")]
+        public RelocationBatchLaunch EndMoveBatch(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<Metadata>;
+            var task = asyncResult as t.Task<RelocationBatchLaunch>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -4253,14 +4390,12 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Move multiple files or folders to different locations at once in the user's
-        /// Dropbox. Note that we do not currently support case-only renaming.</para>
-        /// <para>This route will replace <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />. The main
-        /// difference is this route will return status for each entry, while <see
+        /// Dropbox. Note that we do not currently support case-only renaming. This route will
+        /// replace <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />. The
+        /// main difference is this route will return status for each entry, while <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" /> raises failure if
-        /// any entry fails.</para>
-        /// <para>This route will either finish synchronously, or return a job ID and do the
-        /// async move job in background. Please use <see
+        /// any entry fails. This route will either finish synchronously, or return a job ID
+        /// and do the async move job in background. Please use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchCheckV2Async" /> to check
         /// the job status.</para>
         /// </summary>
@@ -4290,14 +4425,12 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Move multiple files or folders to different locations at once in the user's
-        /// Dropbox. Note that we do not currently support case-only renaming.</para>
-        /// <para>This route will replace <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />. The main
-        /// difference is this route will return status for each entry, while <see
+        /// Dropbox. Note that we do not currently support case-only renaming. This route will
+        /// replace <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />. The
+        /// main difference is this route will return status for each entry, while <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" /> raises failure if
-        /// any entry fails.</para>
-        /// <para>This route will either finish synchronously, or return a job ID and do the
-        /// async move job in background. Please use <see
+        /// any entry fails. This route will either finish synchronously, or return a job ID
+        /// and do the async move job in background. Please use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchCheckV2Async" /> to check
         /// the job status.</para>
         /// </summary>
@@ -4368,114 +4501,93 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Move multiple files or folders to different locations at once in the user's
-        /// Dropbox.</para>
-        /// <para>This route will return job ID immediately and do the async moving job in
-        /// background. Please use <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchCheckAsync" /> to check the
-        /// job status.</para>
+        /// <para>Returns the status of an asynchronous job for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />. If success, it
+        /// returns list of results for each entry.</para>
         /// </summary>
-        /// <param name="relocationBatchArg">The request parameters</param>
+        /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        [sys.Obsolete("This function is deprecated, please use MoveBatchV2Async instead.")]
-        public t.Task<RelocationBatchLaunch> MoveBatchAsync(RelocationBatchArg relocationBatchArg)
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<RelocationBatchJobStatus> MoveBatchCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<RelocationBatchArg, RelocationBatchLaunch, enc.Empty>(relocationBatchArg, "api", "/files/move_batch", "user", global::Dropbox.Api.Files.RelocationBatchArg.Encoder, global::Dropbox.Api.Files.RelocationBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, RelocationBatchJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/files/move_batch/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Files.RelocationBatchJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the move batch route.</para>
+        /// <para>Begins an asynchronous send to the move batch check route.</para>
         /// </summary>
-        /// <param name="relocationBatchArg">The request parameters.</param>
+        /// <param name="pollArg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginMoveBatchV2 instead.")]
-        public sys.IAsyncResult BeginMoveBatch(RelocationBatchArg relocationBatchArg, sys.AsyncCallback callback, object state = null)
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginMoveBatchCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.MoveBatchAsync(relocationBatchArg);
+            var task = this.MoveBatchCheckAsync(pollArg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Move multiple files or folders to different locations at once in the user's
-        /// Dropbox.</para>
-        /// <para>This route will return job ID immediately and do the async moving job in
-        /// background. Please use <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchCheckAsync" /> to check the
-        /// job status.</para>
+        /// <para>Returns the status of an asynchronous job for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />. If success, it
+        /// returns list of results for each entry.</para>
         /// </summary>
-        /// <param name="entries">List of entries to be moved or copied. Each entry is <see
-        /// cref="RelocationPath" />.</param>
-        /// <param name="autorename">If there's a conflict with any file, have the Dropbox
-        /// server try to autorename that file to avoid the conflict.</param>
-        /// <param name="allowSharedFolder">This flag has no effect.</param>
-        /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
-        /// in an ownership transfer for the content being moved. This does not apply to
-        /// copies.</param>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        [sys.Obsolete("This function is deprecated, please use MoveBatchV2Async instead.")]
-        public t.Task<RelocationBatchLaunch> MoveBatchAsync(col.IEnumerable<RelocationPath> entries,
-                                                            bool autorename = false,
-                                                            bool allowSharedFolder = false,
-                                                            bool allowOwnershipTransfer = false)
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<RelocationBatchJobStatus> MoveBatchCheckAsync(string asyncJobId)
         {
-            var relocationBatchArg = new RelocationBatchArg(entries,
-                                                            autorename,
-                                                            allowSharedFolder,
-                                                            allowOwnershipTransfer);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
-            return this.MoveBatchAsync(relocationBatchArg);
+            return this.MoveBatchCheckAsync(pollArg);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the move batch route.</para>
+        /// <para>Begins an asynchronous send to the move batch check route.</para>
         /// </summary>
-        /// <param name="entries">List of entries to be moved or copied. Each entry is <see
-        /// cref="RelocationPath" />.</param>
-        /// <param name="autorename">If there's a conflict with any file, have the Dropbox
-        /// server try to autorename that file to avoid the conflict.</param>
-        /// <param name="allowSharedFolder">This flag has no effect.</param>
-        /// <param name="allowOwnershipTransfer">Allow moves by owner even if it would result
-        /// in an ownership transfer for the content being moved. This does not apply to
-        /// copies.</param>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginMoveBatchV2 instead.")]
-        public sys.IAsyncResult BeginMoveBatch(col.IEnumerable<RelocationPath> entries,
-                                               bool autorename = false,
-                                               bool allowSharedFolder = false,
-                                               bool allowOwnershipTransfer = false,
-                                               sys.AsyncCallback callback = null,
-                                               object callbackState = null)
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginMoveBatchCheck(string asyncJobId,
+                                                    sys.AsyncCallback callback,
+                                                    object callbackState = null)
         {
-            var relocationBatchArg = new RelocationBatchArg(entries,
-                                                            autorename,
-                                                            allowSharedFolder,
-                                                            allowOwnershipTransfer);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
-            return this.BeginMoveBatch(relocationBatchArg, callback, callbackState);
+            return this.BeginMoveBatchCheck(pollArg, callback, callbackState);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the move batch route to
+        /// <para>Waits for the pending asynchronous send to the move batch check route to
         /// complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        [sys.Obsolete("This function is deprecated, please use EndMoveBatchV2 instead.")]
-        public RelocationBatchLaunch EndMoveBatch(sys.IAsyncResult asyncResult)
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public RelocationBatchJobStatus EndMoveBatchCheck(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<RelocationBatchLaunch>;
+            var task = asyncResult as t.Task<RelocationBatchJobStatus>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -4567,102 +4679,6 @@ namespace Dropbox.Api.Files.Routes
         public RelocationBatchV2JobStatus EndMoveBatchCheckV2(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<RelocationBatchV2JobStatus>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Returns the status of an asynchronous job for <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />. If success, it
-        /// returns list of results for each entry.</para>
-        /// </summary>
-        /// <param name="pollArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use MoveBatchCheckV2Async instead.")]
-        public t.Task<RelocationBatchJobStatus> MoveBatchCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
-        {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, RelocationBatchJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/files/move_batch/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Files.RelocationBatchJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the move batch check route.</para>
-        /// </summary>
-        /// <param name="pollArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginMoveBatchCheckV2 instead.")]
-        public sys.IAsyncResult BeginMoveBatchCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.MoveBatchCheckAsync(pollArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Returns the status of an asynchronous job for <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.MoveBatchAsync" />. If success, it
-        /// returns list of results for each entry.</para>
-        /// </summary>
-        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
-        /// response returned from the method that launched the job.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use MoveBatchCheckV2Async instead.")]
-        public t.Task<RelocationBatchJobStatus> MoveBatchCheckAsync(string asyncJobId)
-        {
-            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
-
-            return this.MoveBatchCheckAsync(pollArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the move batch check route.</para>
-        /// </summary>
-        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
-        /// response returned from the method that launched the job.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginMoveBatchCheckV2 instead.")]
-        public sys.IAsyncResult BeginMoveBatchCheck(string asyncJobId,
-                                                    sys.AsyncCallback callback,
-                                                    object callbackState = null)
-        {
-            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
-
-            return this.BeginMoveBatchCheck(pollArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the move batch check route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndMoveBatchCheckV2 instead.")]
-        public RelocationBatchJobStatus EndMoveBatchCheck(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<RelocationBatchJobStatus>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -4891,11 +4907,10 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Permanently delete the file or folder at a given path (see
-        /// https://www.dropbox.com/en/help/40).</para>
-        /// <para>If the given file or folder is not yet deleted, this route will first delete
-        /// it. It is possible for this route to successfully delete, then fail to permanently
-        /// delete.</para>
-        /// <para>Note: This endpoint is only available for Dropbox Business apps.</para>
+        /// https://www.dropbox.com/en/help/40). If the given file or folder is not yet
+        /// deleted, this route will first delete it. It is possible for this route to
+        /// successfully delete, then fail to permanently delete. Note: This endpoint is only
+        /// available for Dropbox Business apps.</para>
         /// </summary>
         /// <param name="deleteArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -4924,11 +4939,10 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Permanently delete the file or folder at a given path (see
-        /// https://www.dropbox.com/en/help/40).</para>
-        /// <para>If the given file or folder is not yet deleted, this route will first delete
-        /// it. It is possible for this route to successfully delete, then fail to permanently
-        /// delete.</para>
-        /// <para>Note: This endpoint is only available for Dropbox Business apps.</para>
+        /// https://www.dropbox.com/en/help/40). If the given file or folder is not yet
+        /// deleted, this route will first delete it. It is possible for this route to
+        /// successfully delete, then fail to permanently delete. Note: This endpoint is only
+        /// available for Dropbox Business apps.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to delete.</param>
         /// <param name="parentRev">Perform delete if given "rev" matches the existing file's
@@ -4985,7 +4999,8 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>The properties add route</para>
+        /// <para>Add property groups to a Dropbox file. See templates/add_for_user or
+        /// templates/add_for_team to create new templates.</para>
         /// </summary>
         /// <param name="addPropertiesArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -5016,11 +5031,12 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>The properties add route</para>
+        /// <para>Add property groups to a Dropbox file. See templates/add_for_user or
+        /// templates/add_for_team to create new templates.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="propertyGroups">The property groups which are to be added to a Dropbox
-        /// file. No two groups in the input should  refer to the same template.</param>
+        /// file. No two groups in the input should refer to the same template.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
@@ -5040,7 +5056,7 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="propertyGroups">The property groups which are to be added to a Dropbox
-        /// file. No two groups in the input should  refer to the same template.</param>
+        /// file. No two groups in the input should refer to the same template.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -5078,7 +5094,9 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>The properties overwrite route</para>
+        /// <para>Overwrite property groups associated with a file. This endpoint should be
+        /// used instead of properties/update when property groups are being overwritten rather
+        /// than updated via a "delta".</para>
         /// </summary>
         /// <param name="overwritePropertyGroupArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -5109,11 +5127,13 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>The properties overwrite route</para>
+        /// <para>Overwrite property groups associated with a file. This endpoint should be
+        /// used instead of properties/update when property groups are being overwritten rather
+        /// than updated via a "delta".</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="propertyGroups">The property groups "snapshot" updates to force apply.
-        /// No two groups in the input should  refer to the same template.</param>
+        /// No two groups in the input should refer to the same template.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
@@ -5133,7 +5153,7 @@ namespace Dropbox.Api.Files.Routes
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="propertyGroups">The property groups "snapshot" updates to force apply.
-        /// No two groups in the input should  refer to the same template.</param>
+        /// No two groups in the input should refer to the same template.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -5171,258 +5191,10 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>The properties remove route</para>
-        /// </summary>
-        /// <param name="removePropertiesArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.FileProperties.RemovePropertiesError"/>.</exception>
-        [sys.Obsolete("This function is deprecated")]
-        public t.Task PropertiesRemoveAsync(global::Dropbox.Api.FileProperties.RemovePropertiesArg removePropertiesArg)
-        {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.FileProperties.RemovePropertiesArg, enc.Empty, global::Dropbox.Api.FileProperties.RemovePropertiesError>(removePropertiesArg, "api", "/files/properties/remove", "user", global::Dropbox.Api.FileProperties.RemovePropertiesArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.FileProperties.RemovePropertiesError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the properties remove route.</para>
-        /// </summary>
-        /// <param name="removePropertiesArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated")]
-        public sys.IAsyncResult BeginPropertiesRemove(global::Dropbox.Api.FileProperties.RemovePropertiesArg removePropertiesArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.PropertiesRemoveAsync(removePropertiesArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>The properties remove route</para>
-        /// </summary>
-        /// <param name="path">A unique identifier for the file or folder.</param>
-        /// <param name="propertyTemplateIds">A list of identifiers for a template created by
-        /// <see
-        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
-        /// /> or <see
-        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
-        /// />.</param>
-        /// <returns>The task that represents the asynchronous send operation.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.FileProperties.RemovePropertiesError"/>.</exception>
-        [sys.Obsolete("This function is deprecated")]
-        public t.Task PropertiesRemoveAsync(string path,
-                                            col.IEnumerable<string> propertyTemplateIds)
-        {
-            var removePropertiesArg = new global::Dropbox.Api.FileProperties.RemovePropertiesArg(path,
-                                                                                                 propertyTemplateIds);
-
-            return this.PropertiesRemoveAsync(removePropertiesArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the properties remove route.</para>
-        /// </summary>
-        /// <param name="path">A unique identifier for the file or folder.</param>
-        /// <param name="propertyTemplateIds">A list of identifiers for a template created by
-        /// <see
-        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
-        /// /> or <see
-        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
-        /// />.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated")]
-        public sys.IAsyncResult BeginPropertiesRemove(string path,
-                                                      col.IEnumerable<string> propertyTemplateIds,
-                                                      sys.AsyncCallback callback,
-                                                      object callbackState = null)
-        {
-            var removePropertiesArg = new global::Dropbox.Api.FileProperties.RemovePropertiesArg(path,
-                                                                                                 propertyTemplateIds);
-
-            return this.BeginPropertiesRemove(removePropertiesArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the properties remove route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.FileProperties.RemovePropertiesError"/>.</exception>
-        [sys.Obsolete("This function is deprecated")]
-        public void EndPropertiesRemove(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-        }
-
-        /// <summary>
-        /// <para>The properties template get route</para>
-        /// </summary>
-        /// <param name="getTemplateArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
-        [sys.Obsolete("This function is deprecated")]
-        public t.Task<global::Dropbox.Api.FileProperties.GetTemplateResult> PropertiesTemplateGetAsync(global::Dropbox.Api.FileProperties.GetTemplateArg getTemplateArg)
-        {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.FileProperties.GetTemplateArg, global::Dropbox.Api.FileProperties.GetTemplateResult, global::Dropbox.Api.FileProperties.TemplateError>(getTemplateArg, "api", "/files/properties/template/get", "user", global::Dropbox.Api.FileProperties.GetTemplateArg.Encoder, global::Dropbox.Api.FileProperties.GetTemplateResult.Decoder, global::Dropbox.Api.FileProperties.TemplateError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the properties template get route.</para>
-        /// </summary>
-        /// <param name="getTemplateArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated")]
-        public sys.IAsyncResult BeginPropertiesTemplateGet(global::Dropbox.Api.FileProperties.GetTemplateArg getTemplateArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.PropertiesTemplateGetAsync(getTemplateArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>The properties template get route</para>
-        /// </summary>
-        /// <param name="templateId">An identifier for template added by route  See <see
-        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
-        /// /> or <see
-        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
-        /// />.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
-        [sys.Obsolete("This function is deprecated")]
-        public t.Task<global::Dropbox.Api.FileProperties.GetTemplateResult> PropertiesTemplateGetAsync(string templateId)
-        {
-            var getTemplateArg = new global::Dropbox.Api.FileProperties.GetTemplateArg(templateId);
-
-            return this.PropertiesTemplateGetAsync(getTemplateArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the properties template get route.</para>
-        /// </summary>
-        /// <param name="templateId">An identifier for template added by route  See <see
-        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
-        /// /> or <see
-        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
-        /// />.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated")]
-        public sys.IAsyncResult BeginPropertiesTemplateGet(string templateId,
-                                                           sys.AsyncCallback callback,
-                                                           object callbackState = null)
-        {
-            var getTemplateArg = new global::Dropbox.Api.FileProperties.GetTemplateArg(templateId);
-
-            return this.BeginPropertiesTemplateGet(getTemplateArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the properties template get route
-        /// to complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
-        [sys.Obsolete("This function is deprecated")]
-        public global::Dropbox.Api.FileProperties.GetTemplateResult EndPropertiesTemplateGet(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<global::Dropbox.Api.FileProperties.GetTemplateResult>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>The properties template list route</para>
-        /// </summary>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
-        [sys.Obsolete("This function is deprecated")]
-        public t.Task<global::Dropbox.Api.FileProperties.ListTemplateResult> PropertiesTemplateListAsync()
-        {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, global::Dropbox.Api.FileProperties.ListTemplateResult, global::Dropbox.Api.FileProperties.TemplateError>(enc.Empty.Instance, "api", "/files/properties/template/list", "user", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileProperties.ListTemplateResult.Decoder, global::Dropbox.Api.FileProperties.TemplateError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the properties template list route.</para>
-        /// </summary>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated")]
-        public sys.IAsyncResult BeginPropertiesTemplateList(sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.PropertiesTemplateListAsync();
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the properties template list route
-        /// to complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
-        [sys.Obsolete("This function is deprecated")]
-        public global::Dropbox.Api.FileProperties.ListTemplateResult EndPropertiesTemplateList(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<global::Dropbox.Api.FileProperties.ListTemplateResult>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>The properties update route</para>
+        /// <para>Add, update or remove properties associated with the supplied file and
+        /// templates. This endpoint should be used instead of properties/overwrite when
+        /// property groups are being updated via a "delta" instead of overwriting all
+        /// properties of a file.</para>
         /// </summary>
         /// <param name="updatePropertiesArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -5453,7 +5225,10 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>The properties update route</para>
+        /// <para>Add, update or remove properties associated with the supplied file and
+        /// templates. This endpoint should be used instead of properties/overwrite when
+        /// property groups are being updated via a "delta" instead of overwriting all
+        /// properties of a file.</para>
         /// </summary>
         /// <param name="path">A unique identifier for the file or folder.</param>
         /// <param name="updatePropertyGroups">The property groups "delta" updates to
@@ -5603,11 +5378,9 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Save the data from a specified URL into a file in user's Dropbox.</para>
-        /// <para>Note that the transfer from the URL must complete within 5 minutes, or the
-        /// operation will time out and the job will fail.</para>
-        /// <para>If the given path already exists, the file will be renamed to avoid the
-        /// conflict (e.g. myfile (1).txt).</para>
+        /// <para>Save the data from a specified URL into a file in user's Dropbox. Note that
+        /// the transfer from the URL must complete within 15 minutes, or the operation will
+        /// time out and the job will fail.</para>
         /// </summary>
         /// <param name="saveUrlArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -5636,11 +5409,9 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Save the data from a specified URL into a file in user's Dropbox.</para>
-        /// <para>Note that the transfer from the URL must complete within 5 minutes, or the
-        /// operation will time out and the job will fail.</para>
-        /// <para>If the given path already exists, the file will be renamed to avoid the
-        /// conflict (e.g. myfile (1).txt).</para>
+        /// <para>Save the data from a specified URL into a file in user's Dropbox. Note that
+        /// the transfer from the URL must complete within 15 minutes, or the operation will
+        /// time out and the job will fail.</para>
         /// </summary>
         /// <param name="path">The path in Dropbox where the URL will be saved to.</param>
         /// <param name="url">The URL to be saved.</param>
@@ -5788,17 +5559,16 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Searches for files and folders.</para>
-        /// <para>Note: Recent changes will be reflected in search results within a few seconds
-        /// and older revisions of existing files may still match your query for up to a few
-        /// days.</para>
+        /// <para>Searches for files and folders. Note: Recent changes will be reflected in
+        /// search results within a few seconds and older revisions of existing files may still
+        /// match your query for up to a few days.</para>
         /// </summary>
         /// <param name="searchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use SearchV2Async instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<SearchResult> SearchAsync(SearchArg searchArg)
         {
             return this.Transport.SendRpcRequestAsync<SearchArg, SearchResult, SearchError>(searchArg, "api", "/files/search", "user", global::Dropbox.Api.Files.SearchArg.Encoder, global::Dropbox.Api.Files.SearchResult.Decoder, global::Dropbox.Api.Files.SearchError.Decoder);
@@ -5813,7 +5583,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginSearchV2 instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginSearch(SearchArg searchArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.SearchAsync(searchArg);
@@ -5822,10 +5592,9 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Searches for files and folders.</para>
-        /// <para>Note: Recent changes will be reflected in search results within a few seconds
-        /// and older revisions of existing files may still match your query for up to a few
-        /// days.</para>
+        /// <para>Searches for files and folders. Note: Recent changes will be reflected in
+        /// search results within a few seconds and older revisions of existing files may still
+        /// match your query for up to a few days.</para>
         /// </summary>
         /// <param name="path">The path in the user's Dropbox to search. Should probably be a
         /// folder.</param>
@@ -5843,7 +5612,7 @@ namespace Dropbox.Api.Files.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use SearchV2Async instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<SearchResult> SearchAsync(string path,
                                                 string query,
                                                 ulong start = 0,
@@ -5879,7 +5648,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginSearchV2 instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginSearch(string path,
                                             string query,
                                             ulong start = 0,
@@ -5906,7 +5675,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="SearchError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndSearchV2 instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public SearchResult EndSearch(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<SearchResult>;
@@ -5919,14 +5688,12 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Searches for files and folders.</para>
-        /// <para>Note: <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />
-        /// along with <see
+        /// <para>Searches for files and folders. Note: <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" /> along with <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async" /> can only
-        /// be used to retrieve a maximum of 10,000 matches.</para>
-        /// <para>Recent changes may not immediately be reflected in search results due to a
-        /// short delay in indexing. Duplicate results may be returned across pages. Some
-        /// results may not be returned.</para>
+        /// be used to retrieve a maximum of 10,000 matches. Recent changes may not immediately
+        /// be reflected in search results due to a short delay in indexing. Duplicate results
+        /// may be returned across pages. Some results may not be returned.</para>
         /// </summary>
         /// <param name="searchV2Arg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -5955,21 +5722,19 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Searches for files and folders.</para>
-        /// <para>Note: <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />
-        /// along with <see
+        /// <para>Searches for files and folders. Note: <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" /> along with <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async" /> can only
-        /// be used to retrieve a maximum of 10,000 matches.</para>
-        /// <para>Recent changes may not immediately be reflected in search results due to a
-        /// short delay in indexing. Duplicate results may be returned across pages. Some
-        /// results may not be returned.</para>
+        /// be used to retrieve a maximum of 10,000 matches. Recent changes may not immediately
+        /// be reflected in search results due to a short delay in indexing. Duplicate results
+        /// may be returned across pages. Some results may not be returned.</para>
         /// </summary>
         /// <param name="query">The string to search for. May match across multiple fields
         /// based on the request arguments.</param>
         /// <param name="options">Options for more targeted search results.</param>
         /// <param name="matchFieldOptions">Options for search results match fields.</param>
-        /// <param name="includeHighlights">Deprecated and moved this option to
-        /// SearchMatchFieldOptions.</param>
+        /// <param name="includeHighlights">Field is deprecated. Deprecated and moved this
+        /// option to SearchMatchFieldOptions.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -5994,8 +5759,8 @@ namespace Dropbox.Api.Files.Routes
         /// based on the request arguments.</param>
         /// <param name="options">Options for more targeted search results.</param>
         /// <param name="matchFieldOptions">Options for search results match fields.</param>
-        /// <param name="includeHighlights">Deprecated and moved this option to
-        /// SearchMatchFieldOptions.</param>
+        /// <param name="includeHighlights">Field is deprecated. Deprecated and moved this
+        /// option to SearchMatchFieldOptions.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -6038,14 +5803,12 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Fetches the next page of search results returned from <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />.</para>
-        /// <para>Note: <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />
-        /// along with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />. Note: <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" /> along with <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async" /> can only
-        /// be used to retrieve a maximum of 10,000 matches.</para>
-        /// <para>Recent changes may not immediately be reflected in search results due to a
-        /// short delay in indexing. Duplicate results may be returned across pages. Some
-        /// results may not be returned.</para>
+        /// be used to retrieve a maximum of 10,000 matches. Recent changes may not immediately
+        /// be reflected in search results due to a short delay in indexing. Duplicate results
+        /// may be returned across pages. Some results may not be returned.</para>
         /// </summary>
         /// <param name="searchV2ContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -6075,14 +5838,12 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Fetches the next page of search results returned from <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />.</para>
-        /// <para>Note: <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />
-        /// along with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />. Note: <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" /> along with <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async" /> can only
-        /// be used to retrieve a maximum of 10,000 matches.</para>
-        /// <para>Recent changes may not immediately be reflected in search results due to a
-        /// short delay in indexing. Duplicate results may be returned across pages. Some
-        /// results may not be returned.</para>
+        /// be used to retrieve a maximum of 10,000 matches. Recent changes may not immediately
+        /// be reflected in search results due to a short delay in indexing. Duplicate results
+        /// may be returned across pages. Some results may not be returned.</para>
         /// </summary>
         /// <param name="cursor">The cursor returned by your last call to <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async" />. Used to fetch the
@@ -6493,15 +6254,13 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Create a new file with the contents provided in the request.</para>
-        /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
-        /// upload session with <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
+        /// <para>Create a new file with the contents provided in the request. Do not use this
+        /// to upload a file larger than 150 MiB. Instead, create an upload session with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />. Calls
+        /// to this endpoint will count as data transport calls for any Dropbox Business teams
+        /// with a limit on the number of data transport calls allowed per month. For more
+        /// information, see the Data transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
         /// </summary>
         /// <param name="uploadArg">The request parameters</param>
         /// <param name="body">The content to upload.</param>
@@ -6532,15 +6291,13 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Create a new file with the contents provided in the request.</para>
-        /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
-        /// upload session with <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
+        /// <para>Create a new file with the contents provided in the request. Do not use this
+        /// to upload a file larger than 150 MiB. Instead, create an upload session with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />. Calls
+        /// to this endpoint will count as data transport calls for any Dropbox Business teams
+        /// with a limit on the number of data transport calls allowed per month. For more
+        /// information, see the Data transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to save the file.</param>
         /// <param name="mode">Selects what to do if the file already exists.</param>
@@ -6675,15 +6432,130 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Append more data to an upload session.</para>
-        /// <para>When the parameter close is set, this call will close the session.</para>
-        /// <para>A single request should not upload more than 150 MB. The maximum size of a
-        /// file one can upload to an upload session is 350 GB.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
+        /// <para>Append more data to an upload session. A single request should not upload
+        /// more than 150 MiB. The maximum size of a file one can upload to an upload session
+        /// is 2^41 - 2^22 (2,199,019,061,248) bytes. Calls to this endpoint will count as data
+        /// transport calls for any Dropbox Business teams with a limit on the number of data
+        /// transport calls allowed per month. For more information, see the Data transport
+        /// limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
+        /// </summary>
+        /// <param name="uploadSessionCursor">The request parameters</param>
+        /// <param name="body">The content to upload.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="UploadSessionAppendError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task UploadSessionAppendAsync(UploadSessionCursor uploadSessionCursor, io.Stream body)
+        {
+            return this.Transport.SendUploadRequestAsync<UploadSessionCursor, enc.Empty, UploadSessionAppendError>(uploadSessionCursor, body, "content", "/files/upload_session/append", "user", global::Dropbox.Api.Files.UploadSessionCursor.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.UploadSessionAppendError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the upload session append route.</para>
+        /// </summary>
+        /// <param name="uploadSessionCursor">The request parameters.</param>
+        /// <param name="body">The content to upload.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginUploadSessionAppend(UploadSessionCursor uploadSessionCursor, io.Stream body, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.UploadSessionAppendAsync(uploadSessionCursor, body);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Append more data to an upload session. A single request should not upload
+        /// more than 150 MiB. The maximum size of a file one can upload to an upload session
+        /// is 2^41 - 2^22 (2,199,019,061,248) bytes. Calls to this endpoint will count as data
+        /// transport calls for any Dropbox Business teams with a limit on the number of data
+        /// transport calls allowed per month. For more information, see the Data transport
+        /// limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
+        /// </summary>
+        /// <param name="sessionId">The upload session ID (returned by <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
+        /// />).</param>
+        /// <param name="offset">Offset in bytes at which data should be appended. We use this
+        /// to make sure upload data isn't lost or duplicated in the event of a network
+        /// error.</param>
+        /// <param name="body">The document to upload</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="UploadSessionAppendError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task UploadSessionAppendAsync(string sessionId,
+                                               ulong offset,
+                                               io.Stream body)
+        {
+            var uploadSessionCursor = new UploadSessionCursor(sessionId,
+                                                              offset);
+
+            return this.UploadSessionAppendAsync(uploadSessionCursor, body);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the upload session append route.</para>
+        /// </summary>
+        /// <param name="sessionId">The upload session ID (returned by <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
+        /// />).</param>
+        /// <param name="offset">Offset in bytes at which data should be appended. We use this
+        /// to make sure upload data isn't lost or duplicated in the event of a network
+        /// error.</param>
+        /// <param name="body">The document to upload</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginUploadSessionAppend(string sessionId,
+                                                         ulong offset,
+                                                         io.Stream body,
+                                                         sys.AsyncCallback callback,
+                                                         object callbackState = null)
+        {
+            var uploadSessionCursor = new UploadSessionCursor(sessionId,
+                                                              offset);
+
+            return this.BeginUploadSessionAppend(uploadSessionCursor, body, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the upload session append route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="UploadSessionAppendError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public void EndUploadSessionAppend(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+        }
+
+        /// <summary>
+        /// <para>Append more data to an upload session. When the parameter close is set, this
+        /// call will close the session. A single request should not upload more than 150 MiB.
+        /// The maximum size of a file one can upload to an upload session is 2^41 - 2^22
+        /// (2,199,019,061,248) bytes. Calls to this endpoint will count as data transport
+        /// calls for any Dropbox Business teams with a limit on the number of data transport
+        /// calls allowed per month. For more information, see the Data transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
         /// </summary>
         /// <param name="uploadSessionAppendArg">The request parameters</param>
         /// <param name="body">The content to upload.</param>
@@ -6714,15 +6586,13 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Append more data to an upload session.</para>
-        /// <para>When the parameter close is set, this call will close the session.</para>
-        /// <para>A single request should not upload more than 150 MB. The maximum size of a
-        /// file one can upload to an upload session is 350 GB.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
+        /// <para>Append more data to an upload session. When the parameter close is set, this
+        /// call will close the session. A single request should not upload more than 150 MiB.
+        /// The maximum size of a file one can upload to an upload session is 2^41 - 2^22
+        /// (2,199,019,061,248) bytes. Calls to this endpoint will count as data transport
+        /// calls for any Dropbox Business teams with a limit on the number of data transport
+        /// calls allowed per month. For more information, see the Data transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
         /// </summary>
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
         /// <param name="close">If true, the current session will be closed, at which point you
@@ -6803,134 +6673,142 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Append more data to an upload session.</para>
-        /// <para>A single request should not upload more than 150 MB. The maximum size of a
-        /// file one can upload to an upload session is 350 GB.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
+        /// <para>Append more data to multiple upload sessions. Each piece of file content to
+        /// append to each upload session should be concatenated in the request body, in the
+        /// order delineated by <see
+        /// cref="Dropbox.Api.Files.UploadSessionAppendBatchArg.Entries" /> and their
+        /// individual lengths indicated by <see
+        /// cref="Dropbox.Api.Files.UploadSessionAppendBatchArgEntry.Length" />. A single
+        /// request should not upload more than 150 MiB. The maximum size of a file one can
+        /// upload to an upload session is 2^41 - 2^22 (2,199,019,061,248) bytes. Calls to this
+        /// endpoint will count as data transport calls for any Dropbox Business teams with a
+        /// limit on the number of data transport calls allowed per month. For more
+        /// information, see the Data transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
         /// </summary>
-        /// <param name="uploadSessionCursor">The request parameters</param>
+        /// <param name="uploadSessionAppendBatchArg">The request parameters</param>
         /// <param name="body">The content to upload.</param>
-        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="UploadSessionAppendError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use UploadSessionAppendV2Async instead.")]
-        public t.Task UploadSessionAppendAsync(UploadSessionCursor uploadSessionCursor, io.Stream body)
+        /// cref="UploadSessionAppendBatchError"/>.</exception>
+        public t.Task<UploadSessionAppendBatchResult> UploadSessionAppendBatchAsync(UploadSessionAppendBatchArg uploadSessionAppendBatchArg, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<UploadSessionCursor, enc.Empty, UploadSessionAppendError>(uploadSessionCursor, body, "content", "/files/upload_session/append", "user", global::Dropbox.Api.Files.UploadSessionCursor.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.UploadSessionAppendError.Decoder);
+            return this.Transport.SendUploadRequestAsync<UploadSessionAppendBatchArg, UploadSessionAppendBatchResult, UploadSessionAppendBatchError>(uploadSessionAppendBatchArg, body, "content", "/files/upload_session/append_batch", "user", global::Dropbox.Api.Files.UploadSessionAppendBatchArg.Encoder, global::Dropbox.Api.Files.UploadSessionAppendBatchResult.Decoder, global::Dropbox.Api.Files.UploadSessionAppendBatchError.Decoder);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the upload session append route.</para>
+        /// <para>Begins an asynchronous send to the upload session append batch route.</para>
         /// </summary>
-        /// <param name="uploadSessionCursor">The request parameters.</param>
+        /// <param name="uploadSessionAppendBatchArg">The request parameters.</param>
         /// <param name="body">The content to upload.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginUploadSessionAppendV2 instead.")]
-        public sys.IAsyncResult BeginUploadSessionAppend(UploadSessionCursor uploadSessionCursor, io.Stream body, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginUploadSessionAppendBatch(UploadSessionAppendBatchArg uploadSessionAppendBatchArg, io.Stream body, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.UploadSessionAppendAsync(uploadSessionCursor, body);
+            var task = this.UploadSessionAppendBatchAsync(uploadSessionAppendBatchArg, body);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Append more data to an upload session.</para>
-        /// <para>A single request should not upload more than 150 MB. The maximum size of a
-        /// file one can upload to an upload session is 350 GB.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
+        /// <para>Append more data to multiple upload sessions. Each piece of file content to
+        /// append to each upload session should be concatenated in the request body, in the
+        /// order delineated by <see
+        /// cref="Dropbox.Api.Files.UploadSessionAppendBatchArg.Entries" /> and their
+        /// individual lengths indicated by <see
+        /// cref="Dropbox.Api.Files.UploadSessionAppendBatchArgEntry.Length" />. A single
+        /// request should not upload more than 150 MiB. The maximum size of a file one can
+        /// upload to an upload session is 2^41 - 2^22 (2,199,019,061,248) bytes. Calls to this
+        /// endpoint will count as data transport calls for any Dropbox Business teams with a
+        /// limit on the number of data transport calls allowed per month. For more
+        /// information, see the Data transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
         /// </summary>
-        /// <param name="sessionId">The upload session ID (returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
-        /// />).</param>
-        /// <param name="offset">Offset in bytes at which data should be appended. We use this
-        /// to make sure upload data isn't lost or duplicated in the event of a network
-        /// error.</param>
+        /// <param name="entries">Append information for each file in the batch.</param>
+        /// <param name="contentHash">A hash of the entire request body which is all the
+        /// concatenated pieces of file content that were uploaded in this call. If provided
+        /// and the uploaded content does not match this hash, an error will be returned. For
+        /// more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         /// <param name="body">The document to upload</param>
-        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="UploadSessionAppendError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use UploadSessionAppendV2Async instead.")]
-        public t.Task UploadSessionAppendAsync(string sessionId,
-                                               ulong offset,
-                                               io.Stream body)
+        /// cref="UploadSessionAppendBatchError"/>.</exception>
+        public t.Task<UploadSessionAppendBatchResult> UploadSessionAppendBatchAsync(col.IEnumerable<UploadSessionAppendBatchArgEntry> entries,
+                                                                                    string contentHash = null,
+                                                                                    io.Stream body = null)
         {
-            var uploadSessionCursor = new UploadSessionCursor(sessionId,
-                                                              offset);
+            var uploadSessionAppendBatchArg = new UploadSessionAppendBatchArg(entries,
+                                                                              contentHash);
 
-            return this.UploadSessionAppendAsync(uploadSessionCursor, body);
+            return this.UploadSessionAppendBatchAsync(uploadSessionAppendBatchArg, body);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the upload session append route.</para>
+        /// <para>Begins an asynchronous send to the upload session append batch route.</para>
         /// </summary>
-        /// <param name="sessionId">The upload session ID (returned by <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
-        /// />).</param>
-        /// <param name="offset">Offset in bytes at which data should be appended. We use this
-        /// to make sure upload data isn't lost or duplicated in the event of a network
-        /// error.</param>
+        /// <param name="entries">Append information for each file in the batch.</param>
+        /// <param name="contentHash">A hash of the entire request body which is all the
+        /// concatenated pieces of file content that were uploaded in this call. If provided
+        /// and the uploaded content does not match this hash, an error will be returned. For
+        /// more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         /// <param name="body">The document to upload</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginUploadSessionAppendV2 instead.")]
-        public sys.IAsyncResult BeginUploadSessionAppend(string sessionId,
-                                                         ulong offset,
-                                                         io.Stream body,
-                                                         sys.AsyncCallback callback,
-                                                         object callbackState = null)
+        public sys.IAsyncResult BeginUploadSessionAppendBatch(col.IEnumerable<UploadSessionAppendBatchArgEntry> entries,
+                                                              string contentHash = null,
+                                                              io.Stream body = null,
+                                                              sys.AsyncCallback callback = null,
+                                                              object callbackState = null)
         {
-            var uploadSessionCursor = new UploadSessionCursor(sessionId,
-                                                              offset);
+            var uploadSessionAppendBatchArg = new UploadSessionAppendBatchArg(entries,
+                                                                              contentHash);
 
-            return this.BeginUploadSessionAppend(uploadSessionCursor, body, callback, callbackState);
+            return this.BeginUploadSessionAppendBatch(uploadSessionAppendBatchArg, body, callback, callbackState);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the upload session append route to
-        /// complete</para>
+        /// <para>Waits for the pending asynchronous send to the upload session append batch
+        /// route to complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
+        /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="UploadSessionAppendError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndUploadSessionAppendV2 instead.")]
-        public void EndUploadSessionAppend(sys.IAsyncResult asyncResult)
+        /// cref="UploadSessionAppendBatchError"/>.</exception>
+        public UploadSessionAppendBatchResult EndUploadSessionAppendBatch(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task;
+            var task = asyncResult as t.Task<UploadSessionAppendBatchResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
             }
+
+            return task.Result;
         }
 
         /// <summary>
-        /// <para>Finish an upload session and save the uploaded data to the given file
-        /// path.</para>
-        /// <para>A single request should not upload more than 150 MB. The maximum size of a
-        /// file one can upload to an upload session is 350 GB.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
+        /// <para>Finish an upload session and save the uploaded data to the given file path. A
+        /// single request should not upload more than 150 MiB. The maximum size of a file one
+        /// can upload to an upload session is 2^41 - 2^22 (2,199,019,061,248) bytes. Calls to
+        /// this endpoint will count as data transport calls for any Dropbox Business teams
+        /// with a limit on the number of data transport calls allowed per month. For more
+        /// information, see the Data transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
         /// </summary>
         /// <param name="uploadSessionFinishArg">The request parameters</param>
         /// <param name="body">The content to upload.</param>
@@ -6962,15 +6840,13 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Finish an upload session and save the uploaded data to the given file
-        /// path.</para>
-        /// <para>A single request should not upload more than 150 MB. The maximum size of a
-        /// file one can upload to an upload session is 350 GB.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
+        /// <para>Finish an upload session and save the uploaded data to the given file path. A
+        /// single request should not upload more than 150 MiB. The maximum size of a file one
+        /// can upload to an upload session is 2^41 - 2^22 (2,199,019,061,248) bytes. Calls to
+        /// this endpoint will count as data transport calls for any Dropbox Business teams
+        /// with a limit on the number of data transport calls allowed per month. For more
+        /// information, see the Data transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
         /// </summary>
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
         /// <param name="commit">Contains the path and other optional modifiers for the
@@ -7057,30 +6933,28 @@ namespace Dropbox.Api.Files.Routes
         /// to upload file contents. We recommend uploading many files in parallel to increase
         /// throughput. Once the file contents have been uploaded, rather than calling <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />, use
-        /// this route to finish all your upload sessions in a single request.</para>
-        /// <para><see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
+        /// this route to finish all your upload sessions in a single request. <see
+        /// cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
         /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for the
         /// last <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
         /// /> or <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call.
-        /// The maximum size of a file one can upload to an upload session is 350 GB.</para>
-        /// <para>This route will return a job_id immediately and do the async commit job in
-        /// background. Use <see
+        /// The maximum size of a file one can upload to an upload session is 2^41 - 2^22
+        /// (2,199,019,061,248) bytes. This route will return a job_id immediately and do the
+        /// async commit job in background. Use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchCheckAsync"
-        /// /> to check the job status.</para>
-        /// <para>For the same account, this route should be executed serially. That means you
-        /// should not start the next job before current job finishes. We allow up to 1000
-        /// entries in a single request.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
+        /// /> to check the job status. For the same account, this route should be executed
+        /// serially. That means you should not start the next job before current job finishes.
+        /// We allow up to 1000 entries in a single request. Calls to this endpoint will count
+        /// as data transport calls for any Dropbox Business teams with a limit on the number
+        /// of data transport calls allowed per month. For more information, see the Data
+        /// transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
         /// </summary>
         /// <param name="uploadSessionFinishBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        [sys.Obsolete("This function is deprecated, please use UploadSessionFinishBatchV2Async instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<UploadSessionFinishBatchLaunch> UploadSessionFinishBatchAsync(UploadSessionFinishBatchArg uploadSessionFinishBatchArg)
         {
             return this.Transport.SendRpcRequestAsync<UploadSessionFinishBatchArg, UploadSessionFinishBatchLaunch, enc.Empty>(uploadSessionFinishBatchArg, "api", "/files/upload_session/finish_batch", "user", global::Dropbox.Api.Files.UploadSessionFinishBatchArg.Encoder, global::Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
@@ -7095,7 +6969,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginUploadSessionFinishBatchV2 instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginUploadSessionFinishBatch(UploadSessionFinishBatchArg uploadSessionFinishBatchArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.UploadSessionFinishBatchAsync(uploadSessionFinishBatchArg);
@@ -7110,30 +6984,28 @@ namespace Dropbox.Api.Files.Routes
         /// to upload file contents. We recommend uploading many files in parallel to increase
         /// throughput. Once the file contents have been uploaded, rather than calling <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />, use
-        /// this route to finish all your upload sessions in a single request.</para>
-        /// <para><see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
+        /// this route to finish all your upload sessions in a single request. <see
+        /// cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
         /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for the
         /// last <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
         /// /> or <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call.
-        /// The maximum size of a file one can upload to an upload session is 350 GB.</para>
-        /// <para>This route will return a job_id immediately and do the async commit job in
-        /// background. Use <see
+        /// The maximum size of a file one can upload to an upload session is 2^41 - 2^22
+        /// (2,199,019,061,248) bytes. This route will return a job_id immediately and do the
+        /// async commit job in background. Use <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchCheckAsync"
-        /// /> to check the job status.</para>
-        /// <para>For the same account, this route should be executed serially. That means you
-        /// should not start the next job before current job finishes. We allow up to 1000
-        /// entries in a single request.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
+        /// /> to check the job status. For the same account, this route should be executed
+        /// serially. That means you should not start the next job before current job finishes.
+        /// We allow up to 1000 entries in a single request. Calls to this endpoint will count
+        /// as data transport calls for any Dropbox Business teams with a limit on the number
+        /// of data transport calls allowed per month. For more information, see the Data
+        /// transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
         /// </summary>
         /// <param name="entries">Commit information for each file in the batch.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        [sys.Obsolete("This function is deprecated, please use UploadSessionFinishBatchV2Async instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<UploadSessionFinishBatchLaunch> UploadSessionFinishBatchAsync(col.IEnumerable<UploadSessionFinishArg> entries)
         {
             var uploadSessionFinishBatchArg = new UploadSessionFinishBatchArg(entries);
@@ -7150,7 +7022,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginUploadSessionFinishBatchV2 instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginUploadSessionFinishBatch(col.IEnumerable<UploadSessionFinishArg> entries,
                                                               sys.AsyncCallback callback,
                                                               object callbackState = null)
@@ -7167,7 +7039,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        [sys.Obsolete("This function is deprecated, please use EndUploadSessionFinishBatchV2 instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public UploadSessionFinishBatchLaunch EndUploadSessionFinishBatch(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<UploadSessionFinishBatchLaunch>;
@@ -7186,20 +7058,18 @@ namespace Dropbox.Api.Files.Routes
         /// to upload file contents. We recommend uploading many files in parallel to increase
         /// throughput. Once the file contents have been uploaded, rather than calling <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />, use
-        /// this route to finish all your upload sessions in a single request.</para>
-        /// <para><see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
+        /// this route to finish all your upload sessions in a single request. <see
+        /// cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
         /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for the
         /// last <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
         /// /> or <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call
         /// of each upload session. The maximum size of a file one can upload to an upload
-        /// session is 350 GB.</para>
-        /// <para>We allow up to 1000 entries in a single request.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
+        /// session is 2^41 - 2^22 (2,199,019,061,248) bytes. We allow up to 1000 entries in a
+        /// single request. Calls to this endpoint will count as data transport calls for any
+        /// Dropbox Business teams with a limit on the number of data transport calls allowed
+        /// per month. For more information, see the Data transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
         /// </summary>
         /// <param name="uploadSessionFinishBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -7232,20 +7102,18 @@ namespace Dropbox.Api.Files.Routes
         /// to upload file contents. We recommend uploading many files in parallel to increase
         /// throughput. Once the file contents have been uploaded, rather than calling <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />, use
-        /// this route to finish all your upload sessions in a single request.</para>
-        /// <para><see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
+        /// this route to finish all your upload sessions in a single request. <see
+        /// cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
         /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for the
         /// last <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
         /// /> or <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call
         /// of each upload session. The maximum size of a file one can upload to an upload
-        /// session is 350 GB.</para>
-        /// <para>We allow up to 1000 entries in a single request.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
+        /// session is 2^41 - 2^22 (2,199,019,061,248) bytes. We allow up to 1000 entries in a
+        /// single request. Calls to this endpoint will count as data transport calls for any
+        /// Dropbox Business teams with a limit on the number of data transport calls allowed
+        /// per month. For more information, see the Data transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
         /// </summary>
         /// <param name="entries">Commit information for each file in the batch.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -7388,51 +7256,51 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Upload sessions allow you to upload a single file in one or more requests,
-        /// for example where the size of the file is greater than 150 MB.  This call starts a
+        /// for example where the size of the file is greater than 150 MiB. This call starts a
         /// new upload session with the given data. You can then use <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> to
-        /// add more data and <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> to save
-        /// all the data to a file in Dropbox.</para>
-        /// <para>A single request should not upload more than 150 MB. The maximum size of a
-        /// file one can upload to an upload session is 350 GB.</para>
-        /// <para>An upload session can be used for a maximum of 7 days. Attempting to use an
-        /// <see cref="Dropbox.Api.Files.UploadSessionStartResult.SessionId" /> with <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> or
-        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />
-        /// more than 7 days after its creation will return a <see
-        /// cref="Dropbox.Api.Files.UploadSessionLookupError.NotFound" />.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
-        /// <para>By default, upload sessions require you to send content of the file in
-        /// sequential order via consecutive <see
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendBatchAsync"
+        /// /> to add more data, then <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchV2Async" />
+        /// to save all the data to a file in Dropbox. A single request should not upload more
+        /// than 150 MiB. The maximum size of a file one can upload to an upload session is
+        /// 2^41 - 2^22 (2,199,019,061,248) bytes. An upload session can be used for a maximum
+        /// of 7 days. Attempting to use a <see
+        /// cref="Dropbox.Api.Files.UploadSessionStartResult.SessionId" /> with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> or
+        /// other upload session routes more than 7 days after its creation will return <see
+        /// cref="Dropbox.Api.Files.UploadSessionLookupError.NotFound" />. Calls to this
+        /// endpoint will count as data transport calls for any Dropbox Business teams with a
+        /// limit on the number of data transport calls allowed per month. For more
+        /// information, see the Data transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit. By default,
+        /// upload sessions require you to send content of the file in sequential order via
+        /// consecutive <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />, <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />, <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> calls.
-        /// For better performance, you can instead optionally use a <see
-        /// cref="Dropbox.Api.Files.UploadSessionType.Concurrent" /> upload session. To start a
-        /// new concurrent session, set <see
-        /// cref="Dropbox.Api.Files.UploadSessionStartArg.SessionType" /> to <see
-        /// cref="Dropbox.Api.Files.UploadSessionType.Concurrent" />. After that, you can send
-        /// file data in concurrent <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />, and
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />
+        /// calls (or their batch variants). For better performance, you can optionally set
+        /// <see cref="Dropbox.Api.Files.UploadSessionStartArg.SessionType" /> to <see
+        /// cref="Dropbox.Api.Files.UploadSessionType.Concurrent" /> to start a concurrent
+        /// upload session. Concurrent upload sessions may upload file data in concurrent <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
-        /// requests. Finally finish the session with <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />.</para>
-        /// <para>There are couple of constraints with concurrent sessions to make them work.
-        /// You can not send data with <see
+        /// requests, with a few caveats. After all of the requests are complete, finish the
+        /// session with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> as
+        /// normal. You can not send data in a <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" /> or <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> call,
         /// only with <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call.
-        /// Also data uploaded in <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call
-        /// must be multiple of 4194304 bytes (except for last <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> with
-        /// <see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> to <c>true</c>, that
-        /// may contain any remaining data).</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> or
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendBatchAsync"
+        /// />. Also, the length of the uploaded data in a call to <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> or
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendBatchAsync"
+        /// /> must be a multiple of 2^22 (4,194,304) bytes, except for the final append
+        /// request with <see cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> or <see
+        /// cref="Dropbox.Api.Files.UploadSessionAppendBatchArgEntry.Close" /> set to true that
+        /// may contain any remaining data.</para>
         /// </summary>
         /// <param name="uploadSessionStartArg">The request parameters</param>
         /// <param name="body">The content to upload.</param>
@@ -7465,51 +7333,51 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Upload sessions allow you to upload a single file in one or more requests,
-        /// for example where the size of the file is greater than 150 MB.  This call starts a
+        /// for example where the size of the file is greater than 150 MiB. This call starts a
         /// new upload session with the given data. You can then use <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> to
-        /// add more data and <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> to save
-        /// all the data to a file in Dropbox.</para>
-        /// <para>A single request should not upload more than 150 MB. The maximum size of a
-        /// file one can upload to an upload session is 350 GB.</para>
-        /// <para>An upload session can be used for a maximum of 7 days. Attempting to use an
-        /// <see cref="Dropbox.Api.Files.UploadSessionStartResult.SessionId" /> with <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> or
-        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />
-        /// more than 7 days after its creation will return a <see
-        /// cref="Dropbox.Api.Files.UploadSessionLookupError.NotFound" />.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
-        /// <para>By default, upload sessions require you to send content of the file in
-        /// sequential order via consecutive <see
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendBatchAsync"
+        /// /> to add more data, then <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchV2Async" />
+        /// to save all the data to a file in Dropbox. A single request should not upload more
+        /// than 150 MiB. The maximum size of a file one can upload to an upload session is
+        /// 2^41 - 2^22 (2,199,019,061,248) bytes. An upload session can be used for a maximum
+        /// of 7 days. Attempting to use a <see
+        /// cref="Dropbox.Api.Files.UploadSessionStartResult.SessionId" /> with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> or
+        /// other upload session routes more than 7 days after its creation will return <see
+        /// cref="Dropbox.Api.Files.UploadSessionLookupError.NotFound" />. Calls to this
+        /// endpoint will count as data transport calls for any Dropbox Business teams with a
+        /// limit on the number of data transport calls allowed per month. For more
+        /// information, see the Data transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit. By default,
+        /// upload sessions require you to send content of the file in sequential order via
+        /// consecutive <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />, <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />, <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> calls.
-        /// For better performance, you can instead optionally use a <see
-        /// cref="Dropbox.Api.Files.UploadSessionType.Concurrent" /> upload session. To start a
-        /// new concurrent session, set <see
-        /// cref="Dropbox.Api.Files.UploadSessionStartArg.SessionType" /> to <see
-        /// cref="Dropbox.Api.Files.UploadSessionType.Concurrent" />. After that, you can send
-        /// file data in concurrent <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />, and
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />
+        /// calls (or their batch variants). For better performance, you can optionally set
+        /// <see cref="Dropbox.Api.Files.UploadSessionStartArg.SessionType" /> to <see
+        /// cref="Dropbox.Api.Files.UploadSessionType.Concurrent" /> to start a concurrent
+        /// upload session. Concurrent upload sessions may upload file data in concurrent <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
-        /// requests. Finally finish the session with <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />.</para>
-        /// <para>There are couple of constraints with concurrent sessions to make them work.
-        /// You can not send data with <see
+        /// requests, with a few caveats. After all of the requests are complete, finish the
+        /// session with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> as
+        /// normal. You can not send data in a <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" /> or <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" /> call,
         /// only with <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call.
-        /// Also data uploaded in <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call
-        /// must be multiple of 4194304 bytes (except for last <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> with
-        /// <see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> to <c>true</c>, that
-        /// may contain any remaining data).</para>
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> or
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendBatchAsync"
+        /// />. Also, the length of the uploaded data in a call to <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> or
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendBatchAsync"
+        /// /> must be a multiple of 2^22 (4,194,304) bytes, except for the final append
+        /// request with <see cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> or <see
+        /// cref="Dropbox.Api.Files.UploadSessionAppendBatchArgEntry.Close" /> set to true that
+        /// may contain any remaining data.</para>
         /// </summary>
         /// <param name="close">If true, the current session will be closed, at which point you
         /// won't be able to call <see
@@ -7598,13 +7466,12 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>This route starts batch of upload_sessions. Please refer to
-        /// `upload_session/start` usage.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
+        /// <para>Start a batch of upload sessions. See <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />. Calls
+        /// to this endpoint will count as data transport calls for any Dropbox Business teams
+        /// with a limit on the number of data transport calls allowed per month. For more
+        /// information, see the Data transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
         /// </summary>
         /// <param name="uploadSessionStartBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -7631,13 +7498,12 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>This route starts batch of upload_sessions. Please refer to
-        /// `upload_session/start` usage.</para>
-        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
-        /// Business teams with a limit on the number of data transport calls allowed per
-        /// month. For more information, see the <a
-        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
-        /// transport limit page</a>.</para>
+        /// <para>Start a batch of upload sessions. See <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />. Calls
+        /// to this endpoint will count as data transport calls for any Dropbox Business teams
+        /// with a limit on the number of data transport calls allowed per month. For more
+        /// information, see the Data transport limit page
+        /// https://www.dropbox.com/developers/reference/data-transport-limit.</para>
         /// </summary>
         /// <param name="numSessions">The number of upload sessions to start.</param>
         /// <param name="sessionType">Type of upload session you want to start. If not

@@ -33,16 +33,24 @@ namespace Dropbox.Api.Files
         /// <param name="resource">Information specifying which file to preview. This could be
         /// a path to a file, a shared link pointing to a file, or a shared link pointing to a
         /// folder, with a relative path.</param>
-        /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
-        /// images that are photos, jpeg should be preferred, while png is  better for
-        /// screenshots and digital arts.</param>
+        /// <param name="format">The format for the thumbnail image, jpeg (default), png, or
+        /// webp. For images that are photos, jpeg should be preferred, while png is better for
+        /// screenshots and digital arts, and web for compression.</param>
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
+        /// <param name="quality">Quality of the thumbnail image.</param>
+        /// <param name="excludeMediaInfo">Normally, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
+        /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
+        /// populated. This improves latency for use cases where `media_info` is not
+        /// needed.</param>
         public ThumbnailV2Arg(PathOrLink resource,
                               ThumbnailFormat format = null,
                               ThumbnailSize size = null,
-                              ThumbnailMode mode = null)
+                              ThumbnailMode mode = null,
+                              ThumbnailQuality quality = null,
+                              bool? excludeMediaInfo = null)
         {
             if (resource == null)
             {
@@ -61,10 +69,16 @@ namespace Dropbox.Api.Files
             {
                 mode = global::Dropbox.Api.Files.ThumbnailMode.Strict.Instance;
             }
+            if (quality == null)
+            {
+                quality = global::Dropbox.Api.Files.ThumbnailQuality.Quality80.Instance;
+            }
             this.Resource = resource;
             this.Format = format;
             this.Size = size;
             this.Mode = mode;
+            this.Quality = quality;
+            this.ExcludeMediaInfo = excludeMediaInfo;
         }
 
         /// <summary>
@@ -78,6 +92,7 @@ namespace Dropbox.Api.Files
             this.Format = global::Dropbox.Api.Files.ThumbnailFormat.Jpeg.Instance;
             this.Size = global::Dropbox.Api.Files.ThumbnailSize.W64h64.Instance;
             this.Mode = global::Dropbox.Api.Files.ThumbnailMode.Strict.Instance;
+            this.Quality = global::Dropbox.Api.Files.ThumbnailQuality.Quality80.Instance;
         }
 
         /// <summary>
@@ -88,9 +103,9 @@ namespace Dropbox.Api.Files
         public PathOrLink Resource { get; protected set; }
 
         /// <summary>
-        /// <para>The format for the thumbnail image, jpeg (default) or png. For  images that
-        /// are photos, jpeg should be preferred, while png is  better for screenshots and
-        /// digital arts.</para>
+        /// <para>The format for the thumbnail image, jpeg (default), png, or webp. For images
+        /// that are photos, jpeg should be preferred, while png is better for screenshots and
+        /// digital arts, and web for compression.</para>
         /// </summary>
         public ThumbnailFormat Format { get; protected set; }
 
@@ -103,6 +118,19 @@ namespace Dropbox.Api.Files
         /// <para>How to resize and crop the image to achieve the desired size.</para>
         /// </summary>
         public ThumbnailMode Mode { get; protected set; }
+
+        /// <summary>
+        /// <para>Quality of the thumbnail image.</para>
+        /// </summary>
+        public ThumbnailQuality Quality { get; protected set; }
+
+        /// <summary>
+        /// <para>Normally, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for
+        /// photo and video. When this flag is true, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not populated. This improves
+        /// latency for use cases where `media_info` is not needed.</para>
+        /// </summary>
+        public bool? ExcludeMediaInfo { get; protected set; }
 
         #region Encoder class
 
@@ -122,6 +150,11 @@ namespace Dropbox.Api.Files
                 WriteProperty("format", value.Format, writer, global::Dropbox.Api.Files.ThumbnailFormat.Encoder);
                 WriteProperty("size", value.Size, writer, global::Dropbox.Api.Files.ThumbnailSize.Encoder);
                 WriteProperty("mode", value.Mode, writer, global::Dropbox.Api.Files.ThumbnailMode.Encoder);
+                WriteProperty("quality", value.Quality, writer, global::Dropbox.Api.Files.ThumbnailQuality.Encoder);
+                if (value.ExcludeMediaInfo != null)
+                {
+                    WriteProperty("exclude_media_info", value.ExcludeMediaInfo.Value, writer, enc.BooleanEncoder.Instance);
+                }
             }
         }
 
@@ -165,6 +198,12 @@ namespace Dropbox.Api.Files
                         break;
                     case "mode":
                         value.Mode = global::Dropbox.Api.Files.ThumbnailMode.Decoder.Decode(reader);
+                        break;
+                    case "quality":
+                        value.Quality = global::Dropbox.Api.Files.ThumbnailQuality.Decoder.Decode(reader);
+                        break;
+                    case "exclude_media_info":
+                        value.ExcludeMediaInfo = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

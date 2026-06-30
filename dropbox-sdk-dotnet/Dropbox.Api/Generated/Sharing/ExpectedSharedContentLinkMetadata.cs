@@ -46,7 +46,7 @@ namespace Dropbox.Api.Sharing
         /// <param name="audienceRestrictingSharedFolder">The shared folder that prevents the
         /// link audience for this link from being more restrictive.</param>
         /// <param name="expiry">Whether the link has an expiry set on it. A link with an
-        /// expiry will have its  audience changed to members when the expiry is
+        /// expiry will have its audience changed to members when the expiry is
         /// reached.</param>
         public ExpectedSharedContentLinkMetadata(col.IEnumerable<LinkAudience> audienceOptions,
                                                  LinkAudience currentAudience,

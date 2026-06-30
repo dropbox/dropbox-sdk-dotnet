@@ -22,6 +22,18 @@
                 namespace.</para>
             </summary>
         </member>
+        <member name="N:Dropbox.Api.AccountId">
+            <summary>
+                <para>Contains the types used by the routes declared in <see
+                cref="T:Dropbox.Api.AccountId.Routes.AccountIdRoutes" />.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.AccountId.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.AccountId" />
+                namespace.</para>
+            </summary>
+        </member>
         <member name="N:Dropbox.Api.Async">
             <summary>
                 <para>Contains the types used by the routes declared in <see
@@ -113,10 +125,10 @@
                 the template (either a user or team).</para>
                 <para></para>
                 <para>User-owned templates are accessed via the user-auth
-                file_properties/templates/*_for_user endpoints, while team-owned templates are
-                accessed via the team-auth file_properties/templates/*_for_team endpoints.
-                Properties associated with either type of template can be accessed via the
-                user-auth properties/* endpoints.</para>
+                `file_properties/templates/*_for_user` endpoints, while team-owned templates
+                are accessed via the team-auth `file_properties/templates/*_for_team`
+                endpoints. Properties associated with either type of template can be accessed
+                via the user-auth `properties/*` endpoints.</para>
                 <para></para>
                 <para>Finally, properties can be accessed from a number of endpoints that
                 return metadata, including `files/get_metadata`, and `files/list_folder`.
@@ -180,6 +192,18 @@
         <member name="N:Dropbox.Api.Paper.Routes">
             <summary>
                 <para>Contains the routes for the <see cref="N:Dropbox.Api.Paper" />
+                namespace.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Riviera">
+            <summary>
+                <para>Contains the types used by the routes declared in <see
+                cref="T:Dropbox.Api.Riviera.Routes.RivieraRoutes" />.</para>
+            </summary>
+        </member>
+        <member name="N:Dropbox.Api.Riviera.Routes">
+            <summary>
+                <para>Contains the routes for the <see cref="N:Dropbox.Api.Riviera" />
                 namespace.</para>
             </summary>
         </member>

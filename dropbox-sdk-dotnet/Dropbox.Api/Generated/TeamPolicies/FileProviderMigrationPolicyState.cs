@@ -102,6 +102,28 @@ namespace Dropbox.Api.TeamPolicies
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Immediate</para>
+        /// </summary>
+        public bool IsImmediate
+        {
+            get
+            {
+                return this is Immediate;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Immediate, or <c>null</c>.</para>
+        /// </summary>
+        public Immediate AsImmediate
+        {
+            get
+            {
+                return this as Immediate;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -155,6 +177,12 @@ namespace Dropbox.Api.TeamPolicies
                     Default.Encoder.EncodeFields((Default)value, writer);
                     return;
                 }
+                if (value is Immediate)
+                {
+                    WriteProperty(".tag", "immediate", writer, enc.StringEncoder.Instance);
+                    Immediate.Encoder.EncodeFields((Immediate)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -200,6 +228,8 @@ namespace Dropbox.Api.TeamPolicies
                         return Enabled.Decoder.DecodeFields(reader);
                     case "default":
                         return Default.Decoder.DecodeFields(reader);
+                    case "immediate":
+                        return Immediate.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -409,6 +439,76 @@ namespace Dropbox.Api.TeamPolicies
                 protected override Default Create()
                 {
                     return Default.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Team admin has chosen to do File Provider Migration immediately for the
+        /// team.</para>
+        /// </summary>
+        public sealed class Immediate : FileProviderMigrationPolicyState
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Immediate> Encoder = new ImmediateEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Immediate> Decoder = new ImmediateDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Immediate" /> class.</para>
+            /// </summary>
+            private Immediate()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Immediate</para>
+            /// </summary>
+            public static readonly Immediate Instance = new Immediate();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Immediate" />.</para>
+            /// </summary>
+            private class ImmediateEncoder : enc.StructEncoder<Immediate>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Immediate value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Immediate" />.</para>
+            /// </summary>
+            private class ImmediateDecoder : enc.StructDecoder<Immediate>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Immediate" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Immediate Create()
+                {
+                    return Immediate.Instance;
                 }
 
             }

@@ -84,6 +84,29 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is LegacyDeviceSession</para>
+        /// </summary>
+        public bool IsLegacyDeviceSession
+        {
+            get
+            {
+                return this is LegacyDeviceSessionLogInfo;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a <see cref="LegacyDeviceSessionLogInfo" />, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public LegacyDeviceSessionLogInfo AsLegacyDeviceSession
+        {
+            get
+            {
+                return this as LegacyDeviceSessionLogInfo;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is MobileDeviceSession</para>
         /// </summary>
         public bool IsMobileDeviceSession
@@ -130,29 +153,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is LegacyDeviceSession</para>
-        /// </summary>
-        public bool IsLegacyDeviceSession
-        {
-            get
-            {
-                return this is LegacyDeviceSessionLogInfo;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a <see cref="LegacyDeviceSessionLogInfo" />, or
-        /// <c>null</c>.</para>
-        /// </summary>
-        public LegacyDeviceSessionLogInfo AsLegacyDeviceSession
-        {
-            get
-            {
-                return this as LegacyDeviceSessionLogInfo;
-            }
-        }
-
-        /// <summary>
         /// <para>The IP address of the last activity from this session.</para>
         /// </summary>
         public string IpAddress { get; protected set; }
@@ -187,6 +187,12 @@ namespace Dropbox.Api.TeamLog
                     DesktopDeviceSessionLogInfo.Encoder.EncodeFields((DesktopDeviceSessionLogInfo)value, writer);
                     return;
                 }
+                if (value is LegacyDeviceSessionLogInfo)
+                {
+                    WriteProperty(".tag", "legacy_device_session", writer, enc.StringEncoder.Instance);
+                    LegacyDeviceSessionLogInfo.Encoder.EncodeFields((LegacyDeviceSessionLogInfo)value, writer);
+                    return;
+                }
                 if (value is MobileDeviceSessionLogInfo)
                 {
                     WriteProperty(".tag", "mobile_device_session", writer, enc.StringEncoder.Instance);
@@ -197,12 +203,6 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "web_device_session", writer, enc.StringEncoder.Instance);
                     WebDeviceSessionLogInfo.Encoder.EncodeFields((WebDeviceSessionLogInfo)value, writer);
-                    return;
-                }
-                if (value is LegacyDeviceSessionLogInfo)
-                {
-                    WriteProperty(".tag", "legacy_device_session", writer, enc.StringEncoder.Instance);
-                    LegacyDeviceSessionLogInfo.Encoder.EncodeFields((LegacyDeviceSessionLogInfo)value, writer);
                     return;
                 }
                 if (value.IpAddress != null)
@@ -251,12 +251,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "desktop_device_session":
                         return DesktopDeviceSessionLogInfo.Decoder.DecodeFields(reader);
+                    case "legacy_device_session":
+                        return LegacyDeviceSessionLogInfo.Decoder.DecodeFields(reader);
                     case "mobile_device_session":
                         return MobileDeviceSessionLogInfo.Decoder.DecodeFields(reader);
                     case "web_device_session":
                         return WebDeviceSessionLogInfo.Decoder.DecodeFields(reader);
-                    case "legacy_device_session":
-                        return LegacyDeviceSessionLogInfo.Decoder.DecodeFields(reader);
                     default:
                         return base.Decode(reader);
                 }

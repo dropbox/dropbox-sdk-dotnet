@@ -45,6 +45,8 @@ namespace Dropbox.Api.Sharing
         /// the folder is not owned by a team.</param>
         /// <param name="parentSharedFolderId">The ID of the parent shared folder. This field
         /// is present only if the folder is contained within another shared folder.</param>
+        /// <param name="pathDisplay">The full path of this shared folder. Absent for unmounted
+        /// folders.</param>
         /// <param name="pathLower">The lower-cased full path of this shared folder. Absent for
         /// unmounted folders.</param>
         /// <param name="parentFolderName">Display name for the parent folder.</param>
@@ -54,6 +56,7 @@ namespace Dropbox.Api.Sharing
                                         col.IEnumerable<string> ownerDisplayNames = null,
                                         global::Dropbox.Api.Users.Team ownerTeam = null,
                                         string parentSharedFolderId = null,
+                                        string pathDisplay = null,
                                         string pathLower = null,
                                         string parentFolderName = null)
         {
@@ -78,6 +81,7 @@ namespace Dropbox.Api.Sharing
             this.OwnerDisplayNames = ownerDisplayNamesList;
             this.OwnerTeam = ownerTeam;
             this.ParentSharedFolderId = parentSharedFolderId;
+            this.PathDisplay = pathDisplay;
             this.PathLower = pathLower;
             this.ParentFolderName = parentFolderName;
         }
@@ -129,6 +133,11 @@ namespace Dropbox.Api.Sharing
         public string ParentSharedFolderId { get; protected set; }
 
         /// <summary>
+        /// <para>The full path of this shared folder. Absent for unmounted folders.</para>
+        /// </summary>
+        public string PathDisplay { get; protected set; }
+
+        /// <summary>
         /// <para>The lower-cased full path of this shared folder. Absent for unmounted
         /// folders.</para>
         /// </summary>
@@ -167,6 +176,10 @@ namespace Dropbox.Api.Sharing
                 if (value.ParentSharedFolderId != null)
                 {
                     WriteProperty("parent_shared_folder_id", value.ParentSharedFolderId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.PathDisplay != null)
+                {
+                    WriteProperty("path_display", value.PathDisplay, writer, enc.StringEncoder.Instance);
                 }
                 if (value.PathLower != null)
                 {
@@ -226,6 +239,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "parent_shared_folder_id":
                         value.ParentSharedFolderId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "path_display":
+                        value.PathDisplay = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "path_lower":
                         value.PathLower = enc.StringDecoder.Instance.Decode(reader);

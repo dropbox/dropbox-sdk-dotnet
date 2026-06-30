@@ -58,6 +58,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Skip</para>
+        /// </summary>
+        public bool IsSkip
+        {
+            get
+            {
+                return this is Skip;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Skip, or <c>null</c>.</para>
+        /// </summary>
+        public Skip AsSkip
+        {
+            get
+            {
+                return this as Skip;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Success</para>
         /// </summary>
         public bool IsSuccess
@@ -121,6 +143,12 @@ namespace Dropbox.Api.TeamLog
                     ExceedLicenseCap.Encoder.EncodeFields((ExceedLicenseCap)value, writer);
                     return;
                 }
+                if (value is Skip)
+                {
+                    WriteProperty(".tag", "skip", writer, enc.StringEncoder.Instance);
+                    Skip.Encoder.EncodeFields((Skip)value, writer);
+                    return;
+                }
                 if (value is Success)
                 {
                     WriteProperty(".tag", "success", writer, enc.StringEncoder.Instance);
@@ -168,6 +196,8 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "exceed_license_cap":
                         return ExceedLicenseCap.Decoder.DecodeFields(reader);
+                    case "skip":
+                        return Skip.Decoder.DecodeFields(reader);
                     case "success":
                         return Success.Decoder.DecodeFields(reader);
                     default:
@@ -241,6 +271,75 @@ namespace Dropbox.Api.TeamLog
                 protected override ExceedLicenseCap Create()
                 {
                     return ExceedLicenseCap.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The skip object</para>
+        /// </summary>
+        public sealed class Skip : ExternalDriveBackupEligibilityStatus
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Skip> Encoder = new SkipEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Skip> Decoder = new SkipDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Skip" /> class.</para>
+            /// </summary>
+            private Skip()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Skip</para>
+            /// </summary>
+            public static readonly Skip Instance = new Skip();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Skip" />.</para>
+            /// </summary>
+            private class SkipEncoder : enc.StructEncoder<Skip>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Skip value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Skip" />.</para>
+            /// </summary>
+            private class SkipDecoder : enc.StructDecoder<Skip>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Skip" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Skip Create()
+                {
+                    return Skip.Instance;
                 }
 
             }

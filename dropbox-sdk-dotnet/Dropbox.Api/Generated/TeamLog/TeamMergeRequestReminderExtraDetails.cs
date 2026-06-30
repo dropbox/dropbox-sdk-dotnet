@@ -179,7 +179,7 @@ namespace Dropbox.Api.TeamLog
         #endregion
 
         /// <summary>
-        /// <para>Team merge request reminder details shown to the primary team.</para>
+        /// <para>Team merge request reminder details shown to the primary team</para>
         /// </summary>
         public sealed class PrimaryTeam : TeamMergeRequestReminderExtraDetails
         {
@@ -268,7 +268,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Team merge request reminder details shown to the secondary team.</para>
+        /// <para>Team merge request reminder details shown to the secondary team</para>
         /// </summary>
         public sealed class SecondaryTeam : TeamMergeRequestReminderExtraDetails
         {
