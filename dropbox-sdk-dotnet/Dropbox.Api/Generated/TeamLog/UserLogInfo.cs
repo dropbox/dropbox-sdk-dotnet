@@ -76,6 +76,29 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is NonTeamMember</para>
+        /// </summary>
+        public bool IsNonTeamMember
+        {
+            get
+            {
+                return this is NonTeamMemberLogInfo;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a <see cref="NonTeamMemberLogInfo" />, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public NonTeamMemberLogInfo AsNonTeamMember
+        {
+            get
+            {
+                return this as NonTeamMemberLogInfo;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is TeamMember</para>
         /// </summary>
         public bool IsTeamMember
@@ -122,29 +145,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is NonTeamMember</para>
-        /// </summary>
-        public bool IsNonTeamMember
-        {
-            get
-            {
-                return this is NonTeamMemberLogInfo;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a <see cref="NonTeamMemberLogInfo" />, or
-        /// <c>null</c>.</para>
-        /// </summary>
-        public NonTeamMemberLogInfo AsNonTeamMember
-        {
-            get
-            {
-                return this as NonTeamMemberLogInfo;
-            }
-        }
-
-        /// <summary>
         /// <para>User unique ID.</para>
         /// </summary>
         public string AccountId { get; protected set; }
@@ -173,6 +173,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(UserLogInfo value, enc.IJsonWriter writer)
             {
+                if (value is NonTeamMemberLogInfo)
+                {
+                    WriteProperty(".tag", "non_team_member", writer, enc.StringEncoder.Instance);
+                    NonTeamMemberLogInfo.Encoder.EncodeFields((NonTeamMemberLogInfo)value, writer);
+                    return;
+                }
                 if (value is TeamMemberLogInfo)
                 {
                     WriteProperty(".tag", "team_member", writer, enc.StringEncoder.Instance);
@@ -183,12 +189,6 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "trusted_non_team_member", writer, enc.StringEncoder.Instance);
                     TrustedNonTeamMemberLogInfo.Encoder.EncodeFields((TrustedNonTeamMemberLogInfo)value, writer);
-                    return;
-                }
-                if (value is NonTeamMemberLogInfo)
-                {
-                    WriteProperty(".tag", "non_team_member", writer, enc.StringEncoder.Instance);
-                    NonTeamMemberLogInfo.Encoder.EncodeFields((NonTeamMemberLogInfo)value, writer);
                     return;
                 }
                 if (value.AccountId != null)
@@ -235,12 +235,12 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
+                    case "non_team_member":
+                        return NonTeamMemberLogInfo.Decoder.DecodeFields(reader);
                     case "team_member":
                         return TeamMemberLogInfo.Decoder.DecodeFields(reader);
                     case "trusted_non_team_member":
                         return TrustedNonTeamMemberLogInfo.Decoder.DecodeFields(reader);
-                    case "non_team_member":
-                        return NonTeamMemberLogInfo.Decoder.DecodeFields(reader);
                     default:
                         return base.Decode(reader);
                 }

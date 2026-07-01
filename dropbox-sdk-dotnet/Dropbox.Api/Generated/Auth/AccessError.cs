@@ -80,6 +80,50 @@ namespace Dropbox.Api.Auth
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TeamAccessDenied</para>
+        /// </summary>
+        public bool IsTeamAccessDenied
+        {
+            get
+            {
+                return this is TeamAccessDenied;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamAccessDenied, or <c>null</c>.</para>
+        /// </summary>
+        public TeamAccessDenied AsTeamAccessDenied
+        {
+            get
+            {
+                return this as TeamAccessDenied;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is NoPermission</para>
+        /// </summary>
+        public bool IsNoPermission
+        {
+            get
+            {
+                return this is NoPermission;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a NoPermission, or <c>null</c>.</para>
+        /// </summary>
+        public NoPermission AsNoPermission
+        {
+            get
+            {
+                return this as NoPermission;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +171,18 @@ namespace Dropbox.Api.Auth
                     PaperAccessDenied.Encoder.EncodeFields((PaperAccessDenied)value, writer);
                     return;
                 }
+                if (value is TeamAccessDenied)
+                {
+                    WriteProperty(".tag", "team_access_denied", writer, enc.StringEncoder.Instance);
+                    TeamAccessDenied.Encoder.EncodeFields((TeamAccessDenied)value, writer);
+                    return;
+                }
+                if (value is NoPermission)
+                {
+                    WriteProperty(".tag", "no_permission", writer, enc.StringEncoder.Instance);
+                    NoPermission.Encoder.EncodeFields((NoPermission)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -169,6 +225,10 @@ namespace Dropbox.Api.Auth
                         return InvalidAccountType.Decoder.DecodeFields(reader);
                     case "paper_access_denied":
                         return PaperAccessDenied.Decoder.DecodeFields(reader);
+                    case "team_access_denied":
+                        return TeamAccessDenied.Decoder.DecodeFields(reader);
+                    case "no_permission":
+                        return NoPermission.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -364,6 +424,174 @@ namespace Dropbox.Api.Auth
                     {
                         case "paper_access_denied":
                             value.Value = global::Dropbox.Api.Auth.PaperAccessError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Team doesn't have permission to access.</para>
+        /// </summary>
+        public sealed class TeamAccessDenied : AccessError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamAccessDenied> Encoder = new TeamAccessDeniedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamAccessDenied> Decoder = new TeamAccessDeniedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamAccessDenied" />
+            /// class.</para>
+            /// </summary>
+            private TeamAccessDenied()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TeamAccessDenied</para>
+            /// </summary>
+            public static readonly TeamAccessDenied Instance = new TeamAccessDenied();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamAccessDenied" />.</para>
+            /// </summary>
+            private class TeamAccessDeniedEncoder : enc.StructEncoder<TeamAccessDenied>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamAccessDenied value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamAccessDenied" />.</para>
+            /// </summary>
+            private class TeamAccessDeniedDecoder : enc.StructDecoder<TeamAccessDenied>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamAccessDenied" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamAccessDenied Create()
+                {
+                    return TeamAccessDenied.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Caller does not have permission to access the resource.</para>
+        /// </summary>
+        public sealed class NoPermission : AccessError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NoPermission> Encoder = new NoPermissionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NoPermission> Decoder = new NoPermissionDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NoPermission" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public NoPermission(NoPermissionError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NoPermission" />
+            /// class.</para>
+            /// </summary>
+            private NoPermission()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public NoPermissionError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="NoPermission" />.</para>
+            /// </summary>
+            private class NoPermissionEncoder : enc.StructEncoder<NoPermission>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NoPermission value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("no_permission", value.Value, writer, global::Dropbox.Api.Auth.NoPermissionError.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="NoPermission" />.</para>
+            /// </summary>
+            private class NoPermissionDecoder : enc.StructDecoder<NoPermission>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NoPermission" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NoPermission Create()
+                {
+                    return new NoPermission();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(NoPermission value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "no_permission":
+                            value.Value = global::Dropbox.Api.Auth.NoPermissionError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();

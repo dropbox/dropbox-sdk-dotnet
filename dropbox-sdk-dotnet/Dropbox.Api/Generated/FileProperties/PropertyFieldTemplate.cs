@@ -36,8 +36,7 @@ namespace Dropbox.Api.FileProperties
         /// can be up to 256 bytes.</param>
         /// <param name="description">Description of the property field. Property field
         /// descriptions can be up to 1024 bytes.</param>
-        /// <param name="type">Data type of the value of this property field. This type will be
-        /// enforced upon property creation and modifications.</param>
+        /// <param name="type">The type</param>
         public PropertyFieldTemplate(string name,
                                      string description,
                                      PropertyType type)
@@ -86,8 +85,7 @@ namespace Dropbox.Api.FileProperties
         public string Description { get; protected set; }
 
         /// <summary>
-        /// <para>Data type of the value of this property field. This type will be enforced
-        /// upon property creation and modifications.</para>
+        /// <para>Gets the type of the property field template</para>
         /// </summary>
         public PropertyType Type { get; protected set; }
 

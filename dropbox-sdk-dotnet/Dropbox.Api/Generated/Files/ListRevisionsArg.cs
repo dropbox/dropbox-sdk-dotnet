@@ -35,17 +35,25 @@ namespace Dropbox.Api.Files
         /// <param name="mode">Determines the behavior of the API in listing the revisions for
         /// a given file path or id.</param>
         /// <param name="limit">The maximum number of revision entries returned.</param>
+        /// <param name="beforeRev">If set, ListRevisions will only return revisions prior to
+        /// before_rev. Can be set using the last revision from a previous call to
+        /// list_revisions to fetch the next page of revisions. Only supported in path
+        /// mode.</param>
+        /// <param name="includeRestorableInfo">If true, each returned revision will include
+        /// whether that revision can be restored.</param>
         public ListRevisionsArg(string path,
                                 ListRevisionsMode mode = null,
-                                ulong limit = 10)
+                                ulong limit = 10,
+                                string beforeRev = null,
+                                bool includeRestorableInfo = false)
         {
             if (path == null)
             {
                 throw new sys.ArgumentNullException("path");
             }
-            if (!re.Regex.IsMatch(path, @"\A(?:/(.|[\r\n])*|id:.*|(ns:[0-9]+(/.*)?))\z"))
+            if (!re.Regex.IsMatch(path, @"\A(?:/(.|[\r\n])*|id:.*|(ns:[0-9]+(/(.|[\r\n])*)?))\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:/(.|[\r\n])*|id:.*|(ns:[0-9]+(/.*)?))\z'");
+                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:/(.|[\r\n])*|id:.*|(ns:[0-9]+(/(.|[\r\n])*)?))\z'");
             }
 
             if (mode == null)
@@ -61,9 +69,23 @@ namespace Dropbox.Api.Files
                 throw new sys.ArgumentOutOfRangeException("limit", "Value should be less of equal than 100");
             }
 
+            if (beforeRev != null)
+            {
+                if (beforeRev.Length < 9)
+                {
+                    throw new sys.ArgumentOutOfRangeException("beforeRev", "Length should be at least 9");
+                }
+                if (!re.Regex.IsMatch(beforeRev, @"\A(?:[0-9a-f]+)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("beforeRev", @"Value should match pattern '\A(?:[0-9a-f]+)\z'");
+                }
+            }
+
             this.Path = path;
             this.Mode = mode;
             this.Limit = limit;
+            this.BeforeRev = beforeRev;
+            this.IncludeRestorableInfo = includeRestorableInfo;
         }
 
         /// <summary>
@@ -77,6 +99,7 @@ namespace Dropbox.Api.Files
         {
             this.Mode = global::Dropbox.Api.Files.ListRevisionsMode.Path.Instance;
             this.Limit = 10;
+            this.IncludeRestorableInfo = false;
         }
 
         /// <summary>
@@ -95,6 +118,19 @@ namespace Dropbox.Api.Files
         /// </summary>
         public ulong Limit { get; protected set; }
 
+        /// <summary>
+        /// <para>If set, ListRevisions will only return revisions prior to before_rev. Can be
+        /// set using the last revision from a previous call to list_revisions to fetch the
+        /// next page of revisions. Only supported in path mode.</para>
+        /// </summary>
+        public string BeforeRev { get; protected set; }
+
+        /// <summary>
+        /// <para>If true, each returned revision will include whether that revision can be
+        /// restored.</para>
+        /// </summary>
+        public bool IncludeRestorableInfo { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -112,6 +148,11 @@ namespace Dropbox.Api.Files
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
                 WriteProperty("mode", value.Mode, writer, global::Dropbox.Api.Files.ListRevisionsMode.Encoder);
                 WriteProperty("limit", value.Limit, writer, enc.UInt64Encoder.Instance);
+                if (value.BeforeRev != null)
+                {
+                    WriteProperty("before_rev", value.BeforeRev, writer, enc.StringEncoder.Instance);
+                }
+                WriteProperty("include_restorable_info", value.IncludeRestorableInfo, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -152,6 +193,12 @@ namespace Dropbox.Api.Files
                         break;
                     case "limit":
                         value.Limit = enc.UInt64Decoder.Instance.Decode(reader);
+                        break;
+                    case "before_rev":
+                        value.BeforeRev = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "include_restorable_info":
+                        value.IncludeRestorableInfo = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

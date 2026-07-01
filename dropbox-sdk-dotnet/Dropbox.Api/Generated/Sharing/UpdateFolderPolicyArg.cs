@@ -43,9 +43,9 @@ namespace Dropbox.Api.Sharing
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
         /// <param name="linkSettings">Settings on the link for this folder.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
-        /// `FolderPermission`s that should appear in the  response's <see
+        /// `FolderPermission`s that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the folder.</param>
+        /// actions the authenticated user can perform on the folder.</param>
         public UpdateFolderPolicyArg(string sharedFolderId,
                                      MemberPolicy memberPolicy = null,
                                      AclUpdatePolicy aclUpdatePolicy = null,
@@ -120,9 +120,9 @@ namespace Dropbox.Api.Sharing
 
         /// <summary>
         /// <para>A list of `FolderAction`s corresponding to `FolderPermission`s that should
-        /// appear in the  response's <see
+        /// appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the folder.</para>
+        /// actions the authenticated user can perform on the folder.</para>
         /// </summary>
         public col.IList<FolderAction> Actions { get; protected set; }
 

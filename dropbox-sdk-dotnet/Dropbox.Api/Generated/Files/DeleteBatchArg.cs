@@ -39,6 +39,10 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("entries");
             }
+            if (entriesList.Count > 1000)
+            {
+                throw new sys.ArgumentOutOfRangeException("entries", "List should at at most 1000 items");
+            }
 
             this.Entries = entriesList;
         }

@@ -58,6 +58,50 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InvalidBeforeRev</para>
+        /// </summary>
+        public bool IsInvalidBeforeRev
+        {
+            get
+            {
+                return this is InvalidBeforeRev;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InvalidBeforeRev, or <c>null</c>.</para>
+        /// </summary>
+        public InvalidBeforeRev AsInvalidBeforeRev
+        {
+            get
+            {
+                return this as InvalidBeforeRev;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is BeforeRevNotSupported</para>
+        /// </summary>
+        public bool IsBeforeRevNotSupported
+        {
+            get
+            {
+                return this is BeforeRevNotSupported;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a BeforeRevNotSupported, or <c>null</c>.</para>
+        /// </summary>
+        public BeforeRevNotSupported AsBeforeRevNotSupported
+        {
+            get
+            {
+                return this as BeforeRevNotSupported;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -97,6 +141,18 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty(".tag", "path", writer, enc.StringEncoder.Instance);
                     Path.Encoder.EncodeFields((Path)value, writer);
+                    return;
+                }
+                if (value is InvalidBeforeRev)
+                {
+                    WriteProperty(".tag", "invalid_before_rev", writer, enc.StringEncoder.Instance);
+                    InvalidBeforeRev.Encoder.EncodeFields((InvalidBeforeRev)value, writer);
+                    return;
+                }
+                if (value is BeforeRevNotSupported)
+                {
+                    WriteProperty(".tag", "before_rev_not_supported", writer, enc.StringEncoder.Instance);
+                    BeforeRevNotSupported.Encoder.EncodeFields((BeforeRevNotSupported)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -139,6 +195,10 @@ namespace Dropbox.Api.Files
                 {
                     case "path":
                         return Path.Decoder.DecodeFields(reader);
+                    case "invalid_before_rev":
+                        return InvalidBeforeRev.Decoder.DecodeFields(reader);
+                    case "before_rev_not_supported":
+                        return BeforeRevNotSupported.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -238,6 +298,147 @@ namespace Dropbox.Api.Files
                             break;
                     }
                 }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The revision in before_rev is invalid.</para>
+        /// </summary>
+        public sealed class InvalidBeforeRev : ListRevisionsError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InvalidBeforeRev> Encoder = new InvalidBeforeRevEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InvalidBeforeRev> Decoder = new InvalidBeforeRevDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidBeforeRev" />
+            /// class.</para>
+            /// </summary>
+            private InvalidBeforeRev()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InvalidBeforeRev</para>
+            /// </summary>
+            public static readonly InvalidBeforeRev Instance = new InvalidBeforeRev();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InvalidBeforeRev" />.</para>
+            /// </summary>
+            private class InvalidBeforeRevEncoder : enc.StructEncoder<InvalidBeforeRev>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InvalidBeforeRev value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InvalidBeforeRev" />.</para>
+            /// </summary>
+            private class InvalidBeforeRevDecoder : enc.StructDecoder<InvalidBeforeRev>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InvalidBeforeRev" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InvalidBeforeRev Create()
+                {
+                    return InvalidBeforeRev.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The before_rev argument is only supported in path mode.</para>
+        /// </summary>
+        public sealed class BeforeRevNotSupported : ListRevisionsError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<BeforeRevNotSupported> Encoder = new BeforeRevNotSupportedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<BeforeRevNotSupported> Decoder = new BeforeRevNotSupportedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="BeforeRevNotSupported" />
+            /// class.</para>
+            /// </summary>
+            private BeforeRevNotSupported()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of BeforeRevNotSupported</para>
+            /// </summary>
+            public static readonly BeforeRevNotSupported Instance = new BeforeRevNotSupported();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="BeforeRevNotSupported" />.</para>
+            /// </summary>
+            private class BeforeRevNotSupportedEncoder : enc.StructEncoder<BeforeRevNotSupported>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(BeforeRevNotSupported value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="BeforeRevNotSupported" />.</para>
+            /// </summary>
+            private class BeforeRevNotSupportedDecoder : enc.StructDecoder<BeforeRevNotSupported>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="BeforeRevNotSupported"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override BeforeRevNotSupported Create()
+                {
+                    return BeforeRevNotSupported.Instance;
+                }
+
             }
 
             #endregion

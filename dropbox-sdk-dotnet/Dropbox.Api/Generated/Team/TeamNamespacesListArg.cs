@@ -31,7 +31,8 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="TeamNamespacesListArg" />
         /// class.</para>
         /// </summary>
-        /// <param name="limit">Specifying a value here has no effect.</param>
+        /// <param name="limit">Field is deprecated. Specifying a value here has no
+        /// effect.</param>
         public TeamNamespacesListArg(uint limit = 1000)
         {
             if (limit < 1U)
@@ -59,7 +60,7 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
-        /// <para>Specifying a value here has no effect.</para>
+        /// <para>Field is deprecated. Specifying a value here has no effect.</para>
         /// </summary>
         public uint Limit { get; protected set; }
 

@@ -31,6 +31,164 @@ namespace Dropbox.Api.Account.Routes
         internal enc.ITransport Transport { get; private set; }
 
         /// <summary>
+        /// <para>Deletes the current user's profile photo.</para>
+        /// </summary>
+        /// <param name="deleteProfilePhotoArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DeleteProfilePhotoError"/>.</exception>
+        public t.Task<DeleteProfilePhotoResult> DeleteProfilePhotoAsync(DeleteProfilePhotoArg deleteProfilePhotoArg)
+        {
+            return this.Transport.SendRpcRequestAsync<DeleteProfilePhotoArg, DeleteProfilePhotoResult, DeleteProfilePhotoError>(deleteProfilePhotoArg, "api", "/account/delete_profile_photo", "user", global::Dropbox.Api.Account.DeleteProfilePhotoArg.Encoder, global::Dropbox.Api.Account.DeleteProfilePhotoResult.Decoder, global::Dropbox.Api.Account.DeleteProfilePhotoError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the delete profile photo route.</para>
+        /// </summary>
+        /// <param name="deleteProfilePhotoArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDeleteProfilePhoto(DeleteProfilePhotoArg deleteProfilePhotoArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.DeleteProfilePhotoAsync(deleteProfilePhotoArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the delete profile photo route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="DeleteProfilePhotoError"/>.</exception>
+        public DeleteProfilePhotoResult EndDeleteProfilePhoto(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<DeleteProfilePhotoResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>This lovely endpoint gets the account photo of a given user.</para>
+        /// </summary>
+        /// <param name="accountPhotoGetArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="AccountPhotoGetError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<AccountPhotoGetResult>> GetPhotoAsync(AccountPhotoGetArg accountPhotoGetArg)
+        {
+            return this.Transport.SendDownloadRequestAsync<AccountPhotoGetArg, AccountPhotoGetResult, AccountPhotoGetError>(accountPhotoGetArg, "content", "/account/get_photo", "user", global::Dropbox.Api.Account.AccountPhotoGetArg.Encoder, global::Dropbox.Api.Account.AccountPhotoGetResult.Decoder, global::Dropbox.Api.Account.AccountPhotoGetError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get photo route.</para>
+        /// </summary>
+        /// <param name="accountPhotoGetArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetPhoto(AccountPhotoGetArg accountPhotoGetArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetPhotoAsync(accountPhotoGetArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>This lovely endpoint gets the account photo of a given user.</para>
+        /// </summary>
+        /// <param name="dbxAccountId">Encoded ID of the user. Must start either with 'dbid:'
+        /// or 'dbaphid:'.</param>
+        /// <param name="size">A string representing the size of the photo.</param>
+        /// <param name="circleCrop">True if the photo should be cropped and false
+        /// otherwise.</param>
+        /// <param name="expectAccountPhoto">True if we expect account photo to exist.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="AccountPhotoGetError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<AccountPhotoGetResult>> GetPhotoAsync(string dbxAccountId,
+                                                                                  string size,
+                                                                                  bool circleCrop,
+                                                                                  bool expectAccountPhoto)
+        {
+            var accountPhotoGetArg = new AccountPhotoGetArg(dbxAccountId,
+                                                            size,
+                                                            circleCrop,
+                                                            expectAccountPhoto);
+
+            return this.GetPhotoAsync(accountPhotoGetArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get photo route.</para>
+        /// </summary>
+        /// <param name="dbxAccountId">Encoded ID of the user. Must start either with 'dbid:'
+        /// or 'dbaphid:'.</param>
+        /// <param name="size">A string representing the size of the photo.</param>
+        /// <param name="circleCrop">True if the photo should be cropped and false
+        /// otherwise.</param>
+        /// <param name="expectAccountPhoto">True if we expect account photo to exist.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetPhoto(string dbxAccountId,
+                                              string size,
+                                              bool circleCrop,
+                                              bool expectAccountPhoto,
+                                              sys.AsyncCallback callback,
+                                              object callbackState = null)
+        {
+            var accountPhotoGetArg = new AccountPhotoGetArg(dbxAccountId,
+                                                            size,
+                                                            circleCrop,
+                                                            expectAccountPhoto);
+
+            return this.BeginGetPhoto(accountPhotoGetArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get photo route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="AccountPhotoGetError"/>.</exception>
+        public enc.IDownloadResponse<AccountPhotoGetResult> EndGetPhoto(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<enc.IDownloadResponse<AccountPhotoGetResult>>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Sets a user's profile photo.</para>
         /// </summary>
         /// <param name="setProfilePhotoArg">The request parameters</param>

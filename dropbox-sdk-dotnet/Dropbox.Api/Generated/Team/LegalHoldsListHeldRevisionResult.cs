@@ -87,8 +87,8 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>The cursor idicates where to continue reading file metadata entries for the
-        /// next API call. When there are no more entries, the cursor will return none.</para>
-        /// <para>Pass the cursor into /2/team/legal_holds/list_held_revisions/continue.</para>
+        /// next API call. When there are no more entries, the cursor will return none. Pass
+        /// the cursor into /2/team/legal_holds/list_held_revisions/continue.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 

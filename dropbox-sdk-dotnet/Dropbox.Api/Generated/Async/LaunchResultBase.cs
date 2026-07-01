@@ -11,11 +11,10 @@ namespace Dropbox.Api.Async
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Result returned by methods that launch an asynchronous job.</para>
-    /// <para>A method who may either launch an asynchronous job, or complete the request
-    /// synchronously, can use this union by extending it, and adding a 'complete' field with
-    /// the type of the synchronous response.</para>
-    /// <para>See <see cref="LaunchEmptyResult" /> for an example.</para>
+    /// <para>Result returned by methods that launch an asynchronous job. A method who may
+    /// either launch an asynchronous job, or complete the request synchronously, can use this
+    /// union by extending it, and adding a 'complete' field with the type of the synchronous
+    /// response. See <see cref="LaunchEmptyResult" /> for an example.</para>
     /// </summary>
     public class LaunchResultBase
     {

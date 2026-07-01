@@ -11,14 +11,14 @@ jobs:
   UnitTests:
     strategy:
       matrix:
-        os: [macos-13, ubuntu-latest, windows-latest]
+        os: [macos-latest, ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - name: Add .Net 5 Framework
+      - name: Setup .NET 8
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '5.x'
+          dotnet-version: '8.x'
       - name: Run Unit Tests
         # We don't have a good cross-platform way of splitting long lines
         run: |
@@ -34,15 +34,15 @@ jobs:
   IntegrationTests:
     strategy:
       matrix:
-        os: [macos-13, ubuntu-latest, windows-latest]
+        os: [macos-latest, ubuntu-latest, windows-latest]
       max-parallel: 1
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - name: Add .Net 5 Framework
+      - name: Setup .NET 8
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '5.x'
+          dotnet-version: '8.x'
       - name: Test Legacy User
         env:
           DROPBOX_INTEGRATION_appKey: ${{ secrets.LEGACY_APP_KEY }}
@@ -72,17 +72,15 @@ jobs:
   Linter:
     strategy:
       matrix:
-        os: [macos-13, ubuntu-latest, windows-latest]
+        os: [macos-latest, ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - name: Add .Net 5 Framework
+      - name: Setup .NET 8
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '5.x'
+          dotnet-version: '8.x'
       - name: Run Linter
         run: |
-          # Install latest dotnet-format
-          dotnet tool install -g dotnet-format --version "5.*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
           dotnet restore dropbox-sdk-dotnet/
-          dotnet-format --check --fix-whitespace --fix-style warn --fix-analyzers warn dropbox-sdk-dotnet/
+          dotnet format dropbox-sdk-dotnet/ --verify-no-changes --severity warn

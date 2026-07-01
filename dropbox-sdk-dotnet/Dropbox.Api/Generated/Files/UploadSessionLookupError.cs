@@ -665,7 +665,8 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>You can not append to the upload session because the size of a file should
-        /// not reach the max file size limit (i.e. 350GB).</para>
+        /// not exceed the max file size limit (i.e. 2^41 - 2^22 or 2,199,019,061,248
+        /// bytes).</para>
         /// </summary>
         public sealed class TooLarge : UploadSessionLookupError
         {
@@ -734,8 +735,8 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>For concurrent upload sessions, offset needs to be multiple of 4194304
-        /// bytes.</para>
+        /// <para>For concurrent upload sessions, offset needs to be multiple of 2^22
+        /// (4,194,304) bytes.</para>
         /// </summary>
         public sealed class ConcurrentSessionInvalidOffset : UploadSessionLookupError
         {
@@ -806,8 +807,8 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>For concurrent upload sessions, only chunks with size multiple of 4194304
-        /// bytes can be uploaded.</para>
+        /// <para>For concurrent upload sessions, only chunks with size multiple of 2^22
+        /// (4,194,304) bytes can be uploaded.</para>
         /// </summary>
         public sealed class ConcurrentSessionInvalidDataSize : UploadSessionLookupError
         {
@@ -878,7 +879,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The request payload must be at most 150 MB.</para>
+        /// <para>The request payload must be at most 150 MiB.</para>
         /// </summary>
         public sealed class PayloadTooLarge : UploadSessionLookupError
         {

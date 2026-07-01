@@ -58,25 +58,25 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is UserOrTeamLinkedApp</para>
+        /// <para>Gets a value indicating whether this instance is TeamLinkedApp</para>
         /// </summary>
-        public bool IsUserOrTeamLinkedApp
+        public bool IsTeamLinkedApp
         {
             get
             {
-                return this is UserOrTeamLinkedAppLogInfo;
+                return this is TeamLinkedAppLogInfo;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a <see cref="UserOrTeamLinkedAppLogInfo" />, or
+        /// <para>Gets this instance as a <see cref="TeamLinkedAppLogInfo" />, or
         /// <c>null</c>.</para>
         /// </summary>
-        public UserOrTeamLinkedAppLogInfo AsUserOrTeamLinkedApp
+        public TeamLinkedAppLogInfo AsTeamLinkedApp
         {
             get
             {
-                return this as UserOrTeamLinkedAppLogInfo;
+                return this as TeamLinkedAppLogInfo;
             }
         }
 
@@ -104,25 +104,25 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is TeamLinkedApp</para>
+        /// <para>Gets a value indicating whether this instance is UserOrTeamLinkedApp</para>
         /// </summary>
-        public bool IsTeamLinkedApp
+        public bool IsUserOrTeamLinkedApp
         {
             get
             {
-                return this is TeamLinkedAppLogInfo;
+                return this is UserOrTeamLinkedAppLogInfo;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a <see cref="TeamLinkedAppLogInfo" />, or
+        /// <para>Gets this instance as a <see cref="UserOrTeamLinkedAppLogInfo" />, or
         /// <c>null</c>.</para>
         /// </summary>
-        public TeamLinkedAppLogInfo AsTeamLinkedApp
+        public UserOrTeamLinkedAppLogInfo AsUserOrTeamLinkedApp
         {
             get
             {
-                return this as TeamLinkedAppLogInfo;
+                return this as UserOrTeamLinkedAppLogInfo;
             }
         }
 
@@ -150,10 +150,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(AppLogInfo value, enc.IJsonWriter writer)
             {
-                if (value is UserOrTeamLinkedAppLogInfo)
+                if (value is TeamLinkedAppLogInfo)
                 {
-                    WriteProperty(".tag", "user_or_team_linked_app", writer, enc.StringEncoder.Instance);
-                    UserOrTeamLinkedAppLogInfo.Encoder.EncodeFields((UserOrTeamLinkedAppLogInfo)value, writer);
+                    WriteProperty(".tag", "team_linked_app", writer, enc.StringEncoder.Instance);
+                    TeamLinkedAppLogInfo.Encoder.EncodeFields((TeamLinkedAppLogInfo)value, writer);
                     return;
                 }
                 if (value is UserLinkedAppLogInfo)
@@ -162,10 +162,10 @@ namespace Dropbox.Api.TeamLog
                     UserLinkedAppLogInfo.Encoder.EncodeFields((UserLinkedAppLogInfo)value, writer);
                     return;
                 }
-                if (value is TeamLinkedAppLogInfo)
+                if (value is UserOrTeamLinkedAppLogInfo)
                 {
-                    WriteProperty(".tag", "team_linked_app", writer, enc.StringEncoder.Instance);
-                    TeamLinkedAppLogInfo.Encoder.EncodeFields((TeamLinkedAppLogInfo)value, writer);
+                    WriteProperty(".tag", "user_or_team_linked_app", writer, enc.StringEncoder.Instance);
+                    UserOrTeamLinkedAppLogInfo.Encoder.EncodeFields((UserOrTeamLinkedAppLogInfo)value, writer);
                     return;
                 }
                 if (value.AppId != null)
@@ -208,12 +208,12 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "user_or_team_linked_app":
-                        return UserOrTeamLinkedAppLogInfo.Decoder.DecodeFields(reader);
-                    case "user_linked_app":
-                        return UserLinkedAppLogInfo.Decoder.DecodeFields(reader);
                     case "team_linked_app":
                         return TeamLinkedAppLogInfo.Decoder.DecodeFields(reader);
+                    case "user_linked_app":
+                        return UserLinkedAppLogInfo.Decoder.DecodeFields(reader);
+                    case "user_or_team_linked_app":
+                        return UserOrTeamLinkedAppLogInfo.Decoder.DecodeFields(reader);
                     default:
                         return base.Decode(reader);
                 }

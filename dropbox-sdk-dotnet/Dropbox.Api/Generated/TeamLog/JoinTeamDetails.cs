@@ -31,19 +31,19 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="JoinTeamDetails" />
         /// class.</para>
         /// </summary>
-        /// <param name="linkedApps">Linked applications. (Deprecated) Please use
-        /// has_linked_apps boolean field instead.</param>
-        /// <param name="linkedDevices">Linked devices. (Deprecated) Please use
-        /// has_linked_devices boolean field instead.</param>
-        /// <param name="linkedSharedFolders">Linked shared folders. (Deprecated) Please use
-        /// has_linked_shared_folders boolean field instead.</param>
-        /// <param name="wasLinkedAppsTruncated">(Deprecated) True if the linked_apps list was
-        /// truncated to the maximum supported length (50).</param>
-        /// <param name="wasLinkedDevicesTruncated">(Deprecated) True if the linked_devices
-        /// list was truncated to the maximum supported length (50).</param>
-        /// <param name="wasLinkedSharedFoldersTruncated">(Deprecated) True if the
-        /// linked_shared_folders list was truncated to the maximum supported length
-        /// (50).</param>
+        /// <param name="linkedApps">Field is deprecated. Linked applications. (Deprecated)
+        /// Please use has_linked_apps boolean field instead.</param>
+        /// <param name="linkedDevices">Field is deprecated. Linked devices. (Deprecated)
+        /// Please use has_linked_devices boolean field instead.</param>
+        /// <param name="linkedSharedFolders">Field is deprecated. Linked shared folders.
+        /// (Deprecated) Please use has_linked_shared_folders boolean field instead.</param>
+        /// <param name="wasLinkedAppsTruncated">Field is deprecated. (Deprecated) True if the
+        /// linked_apps list was truncated to the maximum supported length (50).</param>
+        /// <param name="wasLinkedDevicesTruncated">Field is deprecated. (Deprecated) True if
+        /// the linked_devices list was truncated to the maximum supported length (50).</param>
+        /// <param name="wasLinkedSharedFoldersTruncated">Field is deprecated. (Deprecated)
+        /// True if the linked_shared_folders list was truncated to the maximum supported
+        /// length (50).</param>
         /// <param name="hasLinkedApps">True if the user had linked apps at event time.</param>
         /// <param name="hasLinkedDevices">True if the user had linked apps at event
         /// time.</param>
@@ -103,38 +103,38 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Linked applications. (Deprecated) Please use has_linked_apps boolean field
-        /// instead.</para>
+        /// <para>Field is deprecated. Linked applications. (Deprecated) Please use
+        /// has_linked_apps boolean field instead.</para>
         /// </summary>
         public col.IList<UserLinkedAppLogInfo> LinkedApps { get; protected set; }
 
         /// <summary>
-        /// <para>Linked devices. (Deprecated) Please use has_linked_devices boolean field
-        /// instead.</para>
+        /// <para>Field is deprecated. Linked devices. (Deprecated) Please use
+        /// has_linked_devices boolean field instead.</para>
         /// </summary>
         public col.IList<LinkedDeviceLogInfo> LinkedDevices { get; protected set; }
 
         /// <summary>
-        /// <para>Linked shared folders. (Deprecated) Please use has_linked_shared_folders
-        /// boolean field instead.</para>
+        /// <para>Field is deprecated. Linked shared folders. (Deprecated) Please use
+        /// has_linked_shared_folders boolean field instead.</para>
         /// </summary>
         public col.IList<FolderLogInfo> LinkedSharedFolders { get; protected set; }
 
         /// <summary>
-        /// <para>(Deprecated) True if the linked_apps list was truncated to the maximum
-        /// supported length (50).</para>
+        /// <para>Field is deprecated. (Deprecated) True if the linked_apps list was truncated
+        /// to the maximum supported length (50).</para>
         /// </summary>
         public bool? WasLinkedAppsTruncated { get; protected set; }
 
         /// <summary>
-        /// <para>(Deprecated) True if the linked_devices list was truncated to the maximum
-        /// supported length (50).</para>
+        /// <para>Field is deprecated. (Deprecated) True if the linked_devices list was
+        /// truncated to the maximum supported length (50).</para>
         /// </summary>
         public bool? WasLinkedDevicesTruncated { get; protected set; }
 
         /// <summary>
-        /// <para>(Deprecated) True if the linked_shared_folders list was truncated to the
-        /// maximum supported length (50).</para>
+        /// <para>Field is deprecated. (Deprecated) True if the linked_shared_folders list was
+        /// truncated to the maximum supported length (50).</para>
         /// </summary>
         public bool? WasLinkedSharedFoldersTruncated { get; protected set; }
 

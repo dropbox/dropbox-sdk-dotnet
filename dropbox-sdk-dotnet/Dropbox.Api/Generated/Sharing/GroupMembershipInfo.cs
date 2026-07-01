@@ -37,9 +37,8 @@ namespace Dropbox.Api.Sharing
         /// <param name="group">The information about the membership group.</param>
         /// <param name="permissions">The permissions that requesting user has on this member.
         /// The set of permissions corresponds to the MemberActions in the request.</param>
-        /// <param name="initials">Never set.</param>
-        /// <param name="isInherited">True if the member has access from a parent
-        /// folder.</param>
+        /// <param name="initials">Field is deprecated. Never set.</param>
+        /// <param name="isInherited">True if the member has access on a parent folder.</param>
         public GroupMembershipInfo(AccessLevel accessType,
                                    GroupInfo @group,
                                    col.IEnumerable<MemberPermission> permissions = null,

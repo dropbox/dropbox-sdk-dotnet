@@ -168,6 +168,28 @@ namespace Dropbox.Api.FileRequests
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is NoWritePermission</para>
+        /// </summary>
+        public bool IsNoWritePermission
+        {
+            get
+            {
+                return this is NoWritePermission;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a NoWritePermission, or <c>null</c>.</para>
+        /// </summary>
+        public NoWritePermission AsNoWritePermission
+        {
+            get
+            {
+                return this as NoWritePermission;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is DisabledForTeam</para>
         /// </summary>
         public bool IsDisabledForTeam
@@ -261,6 +283,12 @@ namespace Dropbox.Api.FileRequests
                     ValidationError.Encoder.EncodeFields((ValidationError)value, writer);
                     return;
                 }
+                if (value is NoWritePermission)
+                {
+                    WriteProperty(".tag", "no_write_permission", writer, enc.StringEncoder.Instance);
+                    NoWritePermission.Encoder.EncodeFields((NoWritePermission)value, writer);
+                    return;
+                }
                 if (value is DisabledForTeam)
                 {
                     WriteProperty(".tag", "disabled_for_team", writer, enc.StringEncoder.Instance);
@@ -317,6 +345,8 @@ namespace Dropbox.Api.FileRequests
                         return EmailUnverified.Decoder.DecodeFields(reader);
                     case "validation_error":
                         return ValidationError.Decoder.DecodeFields(reader);
+                    case "no_write_permission":
+                        return NoWritePermission.Decoder.DecodeFields(reader);
                     case "disabled_for_team":
                         return DisabledForTeam.Decoder.DecodeFields(reader);
                     case "other":
@@ -745,6 +775,78 @@ namespace Dropbox.Api.FileRequests
                 protected override ValidationError Create()
                 {
                     return ValidationError.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>This user doesn't have permission to edit files in a destination
+        /// folder</para>
+        /// </summary>
+        public sealed class NoWritePermission : GetFileRequestError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NoWritePermission> Encoder = new NoWritePermissionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NoWritePermission> Decoder = new NoWritePermissionDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NoWritePermission" />
+            /// class.</para>
+            /// </summary>
+            private NoWritePermission()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of NoWritePermission</para>
+            /// </summary>
+            public static readonly NoWritePermission Instance = new NoWritePermission();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="NoWritePermission" />.</para>
+            /// </summary>
+            private class NoWritePermissionEncoder : enc.StructEncoder<NoWritePermission>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NoWritePermission value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="NoWritePermission" />.</para>
+            /// </summary>
+            private class NoWritePermissionDecoder : enc.StructDecoder<NoWritePermission>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NoWritePermission"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NoWritePermission Create()
+                {
+                    return NoWritePermission.Instance;
                 }
 
             }

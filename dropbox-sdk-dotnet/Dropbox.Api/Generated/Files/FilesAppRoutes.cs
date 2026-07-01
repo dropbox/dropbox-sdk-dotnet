@@ -30,10 +30,9 @@ namespace Dropbox.Api.Files.Routes
         internal enc.ITransport Transport { get; private set; }
 
         /// <summary>
-        /// <para>Get a thumbnail for an image.</para>
-        /// <para>This method currently supports files with the following file extensions: jpg,
-        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
-        /// size won't be converted to a thumbnail.</para>
+        /// <para>Get a thumbnail for an image. This method currently supports files with the
+        /// following file extensions: jpg, jpeg, png, tiff, tif, gif, webp, ppm and bmp.
+        /// Photos that are larger than 20MB in size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="thumbnailV2Arg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -63,20 +62,25 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Get a thumbnail for an image.</para>
-        /// <para>This method currently supports files with the following file extensions: jpg,
-        /// jpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in
-        /// size won't be converted to a thumbnail.</para>
+        /// <para>Get a thumbnail for an image. This method currently supports files with the
+        /// following file extensions: jpg, jpeg, png, tiff, tif, gif, webp, ppm and bmp.
+        /// Photos that are larger than 20MB in size won't be converted to a thumbnail.</para>
         /// </summary>
         /// <param name="resource">Information specifying which file to preview. This could be
         /// a path to a file, a shared link pointing to a file, or a shared link pointing to a
         /// folder, with a relative path.</param>
-        /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
-        /// images that are photos, jpeg should be preferred, while png is  better for
-        /// screenshots and digital arts.</param>
+        /// <param name="format">The format for the thumbnail image, jpeg (default), png, or
+        /// webp. For images that are photos, jpeg should be preferred, while png is better for
+        /// screenshots and digital arts, and web for compression.</param>
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
+        /// <param name="quality">Quality of the thumbnail image.</param>
+        /// <param name="excludeMediaInfo">Normally, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
+        /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
+        /// populated. This improves latency for use cases where `media_info` is not
+        /// needed.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -85,12 +89,16 @@ namespace Dropbox.Api.Files.Routes
         public t.Task<enc.IDownloadResponse<PreviewResult>> GetThumbnailV2Async(PathOrLink resource,
                                                                                 ThumbnailFormat format = null,
                                                                                 ThumbnailSize size = null,
-                                                                                ThumbnailMode mode = null)
+                                                                                ThumbnailMode mode = null,
+                                                                                ThumbnailQuality quality = null,
+                                                                                bool? excludeMediaInfo = null)
         {
             var thumbnailV2Arg = new ThumbnailV2Arg(resource,
                                                     format,
                                                     size,
-                                                    mode);
+                                                    mode,
+                                                    quality,
+                                                    excludeMediaInfo);
 
             return this.GetThumbnailV2Async(thumbnailV2Arg);
         }
@@ -101,12 +109,18 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="resource">Information specifying which file to preview. This could be
         /// a path to a file, a shared link pointing to a file, or a shared link pointing to a
         /// folder, with a relative path.</param>
-        /// <param name="format">The format for the thumbnail image, jpeg (default) or png. For
-        /// images that are photos, jpeg should be preferred, while png is  better for
-        /// screenshots and digital arts.</param>
+        /// <param name="format">The format for the thumbnail image, jpeg (default), png, or
+        /// webp. For images that are photos, jpeg should be preferred, while png is better for
+        /// screenshots and digital arts, and web for compression.</param>
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
+        /// <param name="quality">Quality of the thumbnail image.</param>
+        /// <param name="excludeMediaInfo">Normally, <see
+        /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
+        /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
+        /// populated. This improves latency for use cases where `media_info` is not
+        /// needed.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -116,13 +130,17 @@ namespace Dropbox.Api.Files.Routes
                                                     ThumbnailFormat format = null,
                                                     ThumbnailSize size = null,
                                                     ThumbnailMode mode = null,
+                                                    ThumbnailQuality quality = null,
+                                                    bool? excludeMediaInfo = null,
                                                     sys.AsyncCallback callback = null,
                                                     object callbackState = null)
         {
             var thumbnailV2Arg = new ThumbnailV2Arg(resource,
                                                     format,
                                                     size,
-                                                    mode);
+                                                    mode,
+                                                    quality,
+                                                    excludeMediaInfo);
 
             return this.BeginGetThumbnailV2(thumbnailV2Arg, callback, callbackState);
         }
@@ -150,29 +168,23 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Starts returning the contents of a folder. If the result's <see
-        /// cref="Dropbox.Api.Files.ListFolderResult.HasMore" /> field is <c>true</c>, call
-        /// <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
+        /// cref="Dropbox.Api.Files.ListFolderResult.HasMore" /> field is true, call <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> with the
-        /// returned <see cref="Dropbox.Api.Files.ListFolderResult.Cursor" /> to retrieve more
-        /// entries.</para>
-        /// <para>If you're using <see cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> set
-        /// to <c>true</c> to keep a local cache of the contents of a Dropbox account, iterate
-        /// through each entry in order and process them as follows to keep your local state in
-        /// sync:</para>
-        /// <para>For each <see cref="FileMetadata" />, store the new entry at the given path
-        /// in your local state. If the required parent folders don't exist yet, create them.
-        /// If there's already something else at the given path, replace it and remove all its
-        /// children.</para>
-        /// <para>For each <see cref="FolderMetadata" />, store the new entry at the given path
-        /// in your local state. If the required parent folders don't exist yet, create them.
-        /// If there's already something else at the given path, replace it but leave the
-        /// children as they are. Check the new entry's <see
-        /// cref="Dropbox.Api.Files.FolderSharingInfo.ReadOnly" /> and set all its children's
-        /// read-only statuses to match.</para>
-        /// <para>For each <see cref="DeletedMetadata" />, if your local state has something at
-        /// the given path, remove it and all its children. If there's nothing at the given
-        /// path, ignore this entry.</para>
-        /// <para>Note: <see cref="Auth.RateLimitError" /> may be returned if multiple <see
+        /// returned ListFolderResult.cursor to retrieve more entries. If you're using
+        /// ListFolderArg.recursive set to true to keep a local cache of the contents of a
+        /// Dropbox account, iterate through each entry in order and process them as follows to
+        /// keep your local state in sync: For each FileMetadata, store the new entry at the
+        /// given path in your local state. If the required parent folders don't exist yet,
+        /// create them. If there's already something else at the given path, replace it and
+        /// remove all its children. For each FolderMetadata, store the new entry at the given
+        /// path in your local state. If the required parent folders don't exist yet, create
+        /// them. If there's already something else at the given path, replace it but leave the
+        /// children as they are. Check the new entry's FolderSharingInfo.read_only and set all
+        /// its children's read-only statuses to match. For each DeletedMetadata, if your local
+        /// state has something at the given path, remove it and all its children. If there's
+        /// nothing at the given path, ignore this entry. Note: auth.RateLimitError may be
+        /// returned if multiple <see
         /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
         /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
@@ -210,29 +222,23 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Starts returning the contents of a folder. If the result's <see
-        /// cref="Dropbox.Api.Files.ListFolderResult.HasMore" /> field is <c>true</c>, call
-        /// <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
+        /// cref="Dropbox.Api.Files.ListFolderResult.HasMore" /> field is true, call <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> with the
-        /// returned <see cref="Dropbox.Api.Files.ListFolderResult.Cursor" /> to retrieve more
-        /// entries.</para>
-        /// <para>If you're using <see cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> set
-        /// to <c>true</c> to keep a local cache of the contents of a Dropbox account, iterate
-        /// through each entry in order and process them as follows to keep your local state in
-        /// sync:</para>
-        /// <para>For each <see cref="FileMetadata" />, store the new entry at the given path
-        /// in your local state. If the required parent folders don't exist yet, create them.
-        /// If there's already something else at the given path, replace it and remove all its
-        /// children.</para>
-        /// <para>For each <see cref="FolderMetadata" />, store the new entry at the given path
-        /// in your local state. If the required parent folders don't exist yet, create them.
-        /// If there's already something else at the given path, replace it but leave the
-        /// children as they are. Check the new entry's <see
-        /// cref="Dropbox.Api.Files.FolderSharingInfo.ReadOnly" /> and set all its children's
-        /// read-only statuses to match.</para>
-        /// <para>For each <see cref="DeletedMetadata" />, if your local state has something at
-        /// the given path, remove it and all its children. If there's nothing at the given
-        /// path, ignore this entry.</para>
-        /// <para>Note: <see cref="Auth.RateLimitError" /> may be returned if multiple <see
+        /// returned ListFolderResult.cursor to retrieve more entries. If you're using
+        /// ListFolderArg.recursive set to true to keep a local cache of the contents of a
+        /// Dropbox account, iterate through each entry in order and process them as follows to
+        /// keep your local state in sync: For each FileMetadata, store the new entry at the
+        /// given path in your local state. If the required parent folders don't exist yet,
+        /// create them. If there's already something else at the given path, replace it and
+        /// remove all its children. For each FolderMetadata, store the new entry at the given
+        /// path in your local state. If the required parent folders don't exist yet, create
+        /// them. If there's already something else at the given path, replace it but leave the
+        /// children as they are. Check the new entry's FolderSharingInfo.read_only and set all
+        /// its children's read-only statuses to match. For each DeletedMetadata, if your local
+        /// state has something at the given path, remove it and all its children. If there's
+        /// nothing at the given path, ignore this entry. Note: auth.RateLimitError may be
+        /// returned if multiple <see
         /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
         /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
@@ -244,14 +250,19 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="path">A unique identifier for the file.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
-        /// subfolders.</param>
-        /// <param name="includeMediaInfo">If true, <see
+        /// subfolders. In some cases, setting <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>true</c> may lead to
+        /// performance issues or errors, especially when traversing folder structures with a
+        /// large number of items. A workaround for such cases is to set <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>false</c> and traverse
+        /// subfolders one at a time.</param>
+        /// <param name="includeMediaInfo">Field is deprecated. If true, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. This
         /// parameter will no longer have an effect starting December 2, 2019.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
-        /// flag for each file indicating whether or not  that file has any explicit
+        /// flag for each file indicating whether or not that file has any explicit
         /// members.</param>
         /// <param name="includeMountedFolders">If true, the results will include entries under
         /// mounted folders which includes app folder, shared folder and team folder.</param>
@@ -267,6 +278,8 @@ namespace Dropbox.Api.Files.Routes
         /// property data associated with the file and each of the listed templates.</param>
         /// <param name="includeNonDownloadableFiles">If true, include files that are not
         /// downloadable, i.e. Google Docs.</param>
+        /// <param name="includeRestorableInfo">If true, each returned deleted entry will
+        /// include whether that entry can be restored.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -281,7 +294,8 @@ namespace Dropbox.Api.Files.Routes
                                                         uint? limit = null,
                                                         SharedLink sharedLink = null,
                                                         global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
-                                                        bool includeNonDownloadableFiles = true)
+                                                        bool includeNonDownloadableFiles = true,
+                                                        bool includeRestorableInfo = false)
         {
             var listFolderArg = new ListFolderArg(path,
                                                   recursive,
@@ -292,7 +306,8 @@ namespace Dropbox.Api.Files.Routes
                                                   limit,
                                                   sharedLink,
                                                   includePropertyGroups,
-                                                  includeNonDownloadableFiles);
+                                                  includeNonDownloadableFiles,
+                                                  includeRestorableInfo);
 
             return this.ListFolderAsync(listFolderArg);
         }
@@ -303,14 +318,19 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="path">A unique identifier for the file.</param>
         /// <param name="recursive">If true, the list folder operation will be applied
         /// recursively to all subfolders and the response will contain contents of all
-        /// subfolders.</param>
-        /// <param name="includeMediaInfo">If true, <see
+        /// subfolders. In some cases, setting <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>true</c> may lead to
+        /// performance issues or errors, especially when traversing folder structures with a
+        /// large number of items. A workaround for such cases is to set <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> to <c>false</c> and traverse
+        /// subfolders one at a time.</param>
+        /// <param name="includeMediaInfo">Field is deprecated. If true, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. This
         /// parameter will no longer have an effect starting December 2, 2019.</param>
         /// <param name="includeDeleted">If true, the results will include entries for files
         /// and folders that used to exist but were deleted.</param>
         /// <param name="includeHasExplicitSharedMembers">If true, the results will include a
-        /// flag for each file indicating whether or not  that file has any explicit
+        /// flag for each file indicating whether or not that file has any explicit
         /// members.</param>
         /// <param name="includeMountedFolders">If true, the results will include entries under
         /// mounted folders which includes app folder, shared folder and team folder.</param>
@@ -326,6 +346,8 @@ namespace Dropbox.Api.Files.Routes
         /// property data associated with the file and each of the listed templates.</param>
         /// <param name="includeNonDownloadableFiles">If true, include files that are not
         /// downloadable, i.e. Google Docs.</param>
+        /// <param name="includeRestorableInfo">If true, each returned deleted entry will
+        /// include whether that entry can be restored.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -341,6 +363,7 @@ namespace Dropbox.Api.Files.Routes
                                                 SharedLink sharedLink = null,
                                                 global::Dropbox.Api.FileProperties.TemplateFilterBase includePropertyGroups = null,
                                                 bool includeNonDownloadableFiles = true,
+                                                bool includeRestorableInfo = false,
                                                 sys.AsyncCallback callback = null,
                                                 object callbackState = null)
         {
@@ -353,7 +376,8 @@ namespace Dropbox.Api.Files.Routes
                                                   limit,
                                                   sharedLink,
                                                   includePropertyGroups,
-                                                  includeNonDownloadableFiles);
+                                                  includeNonDownloadableFiles,
+                                                  includeRestorableInfo);
 
             return this.BeginListFolder(listFolderArg, callback, callbackState);
         }

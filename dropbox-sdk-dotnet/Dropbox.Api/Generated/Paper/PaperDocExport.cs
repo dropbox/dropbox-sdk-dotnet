@@ -33,8 +33,13 @@ namespace Dropbox.Api.Paper
         /// </summary>
         /// <param name="docId">The Paper doc ID.</param>
         /// <param name="exportFormat">The export format</param>
+        /// <param name="includeComments">When true, export includes comment threads (e.g.
+        /// markdown footnotes). When false or omitted, body only. Other formats may adopt this
+        /// later; currently only markdown uses it. Plain bool (not optional): protoc-gen-godbx
+        /// does not support proto3 optional yet.</param>
         public PaperDocExport(string docId,
-                              ExportFormat exportFormat)
+                              ExportFormat exportFormat,
+                              bool includeComments = false)
             : base(docId)
         {
             if (exportFormat == null)
@@ -43,6 +48,7 @@ namespace Dropbox.Api.Paper
             }
 
             this.ExportFormat = exportFormat;
+            this.IncludeComments = includeComments;
         }
 
         /// <summary>
@@ -53,12 +59,21 @@ namespace Dropbox.Api.Paper
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public PaperDocExport()
         {
+            this.IncludeComments = false;
         }
 
         /// <summary>
         /// <para>Gets the export format of the paper doc export</para>
         /// </summary>
         public ExportFormat ExportFormat { get; protected set; }
+
+        /// <summary>
+        /// <para>When true, export includes comment threads (e.g. markdown footnotes). When
+        /// false or omitted, body only. Other formats may adopt this later; currently only
+        /// markdown uses it. Plain bool (not optional): protoc-gen-godbx does not support
+        /// proto3 optional yet.</para>
+        /// </summary>
+        public bool IncludeComments { get; protected set; }
 
         #region Encoder class
 
@@ -76,6 +91,7 @@ namespace Dropbox.Api.Paper
             {
                 WriteProperty("doc_id", value.DocId, writer, enc.StringEncoder.Instance);
                 WriteProperty("export_format", value.ExportFormat, writer, global::Dropbox.Api.Paper.ExportFormat.Encoder);
+                WriteProperty("include_comments", value.IncludeComments, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -113,6 +129,9 @@ namespace Dropbox.Api.Paper
                         break;
                     case "export_format":
                         value.ExportFormat = global::Dropbox.Api.Paper.ExportFormat.Decoder.Decode(reader);
+                        break;
+                    case "include_comments":
+                        value.IncludeComments = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

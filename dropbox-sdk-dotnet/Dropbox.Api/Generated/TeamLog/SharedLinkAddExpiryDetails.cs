@@ -32,9 +32,13 @@ namespace Dropbox.Api.TeamLog
         /// class.</para>
         /// </summary>
         /// <param name="newValue">New shared link expiration date.</param>
-        public SharedLinkAddExpiryDetails(sys.DateTime newValue)
+        /// <param name="isConsolidationAction">Indicates whether this was a consolidation
+        /// action by system.</param>
+        public SharedLinkAddExpiryDetails(sys.DateTime newValue,
+                                          bool? isConsolidationAction = null)
         {
             this.NewValue = newValue;
+            this.IsConsolidationAction = isConsolidationAction;
         }
 
         /// <summary>
@@ -53,6 +57,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public sys.DateTime NewValue { get; protected set; }
 
+        /// <summary>
+        /// <para>Indicates whether this was a consolidation action by system.</para>
+        /// </summary>
+        public bool? IsConsolidationAction { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -68,6 +77,10 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(SharedLinkAddExpiryDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("new_value", value.NewValue, writer, enc.DateTimeEncoder.Instance);
+                if (value.IsConsolidationAction != null)
+                {
+                    WriteProperty("is_consolidation_action", value.IsConsolidationAction.Value, writer, enc.BooleanEncoder.Instance);
+                }
             }
         }
 
@@ -103,6 +116,9 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "new_value":
                         value.NewValue = enc.DateTimeDecoder.Instance.Decode(reader);
+                        break;
+                    case "is_consolidation_action":
+                        value.IsConsolidationAction = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

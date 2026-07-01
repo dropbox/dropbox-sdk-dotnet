@@ -102,6 +102,72 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is KakaoOauth</para>
+        /// </summary>
+        public bool IsKakaoOauth
+        {
+            get
+            {
+                return this is KakaoOauth;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a KakaoOauth, or <c>null</c>.</para>
+        /// </summary>
+        public KakaoOauth AsKakaoOauth
+        {
+            get
+            {
+                return this as KakaoOauth;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is LenovoOauth</para>
+        /// </summary>
+        public bool IsLenovoOauth
+        {
+            get
+            {
+                return this is LenovoOauth;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a LenovoOauth, or <c>null</c>.</para>
+        /// </summary>
+        public LenovoOauth AsLenovoOauth
+        {
+            get
+            {
+                return this as LenovoOauth;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is Passkey</para>
+        /// </summary>
+        public bool IsPasskey
+        {
+            get
+            {
+                return this is Passkey;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Passkey, or <c>null</c>.</para>
+        /// </summary>
+        public Passkey AsPasskey
+        {
+            get
+            {
+                return this as Passkey;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Password</para>
         /// </summary>
         public bool IsPassword
@@ -213,6 +279,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is MicrosoftOauth</para>
+        /// </summary>
+        public bool IsMicrosoftOauth
+        {
+            get
+            {
+                return this is MicrosoftOauth;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MicrosoftOauth, or <c>null</c>.</para>
+        /// </summary>
+        public MicrosoftOauth AsMicrosoftOauth
+        {
+            get
+            {
+                return this as MicrosoftOauth;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -266,6 +354,24 @@ namespace Dropbox.Api.TeamLog
                     GoogleOauth.Encoder.EncodeFields((GoogleOauth)value, writer);
                     return;
                 }
+                if (value is KakaoOauth)
+                {
+                    WriteProperty(".tag", "kakao_oauth", writer, enc.StringEncoder.Instance);
+                    KakaoOauth.Encoder.EncodeFields((KakaoOauth)value, writer);
+                    return;
+                }
+                if (value is LenovoOauth)
+                {
+                    WriteProperty(".tag", "lenovo_oauth", writer, enc.StringEncoder.Instance);
+                    LenovoOauth.Encoder.EncodeFields((LenovoOauth)value, writer);
+                    return;
+                }
+                if (value is Passkey)
+                {
+                    WriteProperty(".tag", "passkey", writer, enc.StringEncoder.Instance);
+                    Passkey.Encoder.EncodeFields((Passkey)value, writer);
+                    return;
+                }
                 if (value is Password)
                 {
                     WriteProperty(".tag", "password", writer, enc.StringEncoder.Instance);
@@ -294,6 +400,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "web_session", writer, enc.StringEncoder.Instance);
                     WebSession.Encoder.EncodeFields((WebSession)value, writer);
+                    return;
+                }
+                if (value is MicrosoftOauth)
+                {
+                    WriteProperty(".tag", "microsoft_oauth", writer, enc.StringEncoder.Instance);
+                    MicrosoftOauth.Encoder.EncodeFields((MicrosoftOauth)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -340,6 +452,12 @@ namespace Dropbox.Api.TeamLog
                         return FirstPartyTokenExchange.Decoder.DecodeFields(reader);
                     case "google_oauth":
                         return GoogleOauth.Decoder.DecodeFields(reader);
+                    case "kakao_oauth":
+                        return KakaoOauth.Decoder.DecodeFields(reader);
+                    case "lenovo_oauth":
+                        return LenovoOauth.Decoder.DecodeFields(reader);
+                    case "passkey":
+                        return Passkey.Decoder.DecodeFields(reader);
                     case "password":
                         return Password.Decoder.DecodeFields(reader);
                     case "qr_code":
@@ -350,6 +468,8 @@ namespace Dropbox.Api.TeamLog
                         return TwoFactorAuthentication.Decoder.DecodeFields(reader);
                     case "web_session":
                         return WebSession.Decoder.DecodeFields(reader);
+                    case "microsoft_oauth":
+                        return MicrosoftOauth.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -561,6 +681,214 @@ namespace Dropbox.Api.TeamLog
                 protected override GoogleOauth Create()
                 {
                     return GoogleOauth.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The kakao oauth object</para>
+        /// </summary>
+        public sealed class KakaoOauth : LoginMethod
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<KakaoOauth> Encoder = new KakaoOauthEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<KakaoOauth> Decoder = new KakaoOauthDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="KakaoOauth" /> class.</para>
+            /// </summary>
+            private KakaoOauth()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of KakaoOauth</para>
+            /// </summary>
+            public static readonly KakaoOauth Instance = new KakaoOauth();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="KakaoOauth" />.</para>
+            /// </summary>
+            private class KakaoOauthEncoder : enc.StructEncoder<KakaoOauth>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(KakaoOauth value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="KakaoOauth" />.</para>
+            /// </summary>
+            private class KakaoOauthDecoder : enc.StructDecoder<KakaoOauth>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="KakaoOauth" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override KakaoOauth Create()
+                {
+                    return KakaoOauth.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The lenovo oauth object</para>
+        /// </summary>
+        public sealed class LenovoOauth : LoginMethod
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<LenovoOauth> Encoder = new LenovoOauthEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<LenovoOauth> Decoder = new LenovoOauthDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="LenovoOauth" />
+            /// class.</para>
+            /// </summary>
+            private LenovoOauth()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of LenovoOauth</para>
+            /// </summary>
+            public static readonly LenovoOauth Instance = new LenovoOauth();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="LenovoOauth" />.</para>
+            /// </summary>
+            private class LenovoOauthEncoder : enc.StructEncoder<LenovoOauth>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(LenovoOauth value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="LenovoOauth" />.</para>
+            /// </summary>
+            private class LenovoOauthDecoder : enc.StructDecoder<LenovoOauth>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="LenovoOauth" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override LenovoOauth Create()
+                {
+                    return LenovoOauth.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The passkey object</para>
+        /// </summary>
+        public sealed class Passkey : LoginMethod
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Passkey> Encoder = new PasskeyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Passkey> Decoder = new PasskeyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Passkey" /> class.</para>
+            /// </summary>
+            private Passkey()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Passkey</para>
+            /// </summary>
+            public static readonly Passkey Instance = new Passkey();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Passkey" />.</para>
+            /// </summary>
+            private class PasskeyEncoder : enc.StructEncoder<Passkey>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Passkey value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Passkey" />.</para>
+            /// </summary>
+            private class PasskeyDecoder : enc.StructDecoder<Passkey>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Passkey" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Passkey Create()
+                {
+                    return Passkey.Instance;
                 }
 
             }
@@ -908,6 +1236,76 @@ namespace Dropbox.Api.TeamLog
                 protected override WebSession Create()
                 {
                     return WebSession.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The microsoft oauth object</para>
+        /// </summary>
+        public sealed class MicrosoftOauth : LoginMethod
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MicrosoftOauth> Encoder = new MicrosoftOauthEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MicrosoftOauth> Decoder = new MicrosoftOauthDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MicrosoftOauth" />
+            /// class.</para>
+            /// </summary>
+            private MicrosoftOauth()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MicrosoftOauth</para>
+            /// </summary>
+            public static readonly MicrosoftOauth Instance = new MicrosoftOauth();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MicrosoftOauth" />.</para>
+            /// </summary>
+            private class MicrosoftOauthEncoder : enc.StructEncoder<MicrosoftOauth>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MicrosoftOauth value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MicrosoftOauth" />.</para>
+            /// </summary>
+            private class MicrosoftOauthDecoder : enc.StructDecoder<MicrosoftOauth>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MicrosoftOauth" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MicrosoftOauth Create()
+                {
+                    return MicrosoftOauth.Instance;
                 }
 
             }

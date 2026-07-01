@@ -305,7 +305,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>This preview generation is still in progress and the file is not ready  for
+        /// <para>This preview generation is still in progress and the file is not ready for
         /// preview yet.</para>
         /// </summary>
         public sealed class InProgress : PreviewError

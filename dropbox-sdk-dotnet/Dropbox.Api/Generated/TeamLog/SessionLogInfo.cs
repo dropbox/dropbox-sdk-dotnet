@@ -50,29 +50,6 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Web</para>
-        /// </summary>
-        public bool IsWeb
-        {
-            get
-            {
-                return this is WebSessionLogInfo;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a <see cref="WebSessionLogInfo" />, or
-        /// <c>null</c>.</para>
-        /// </summary>
-        public WebSessionLogInfo AsWeb
-        {
-            get
-            {
-                return this as WebSessionLogInfo;
-            }
-        }
-
-        /// <summary>
         /// <para>Gets a value indicating whether this instance is Desktop</para>
         /// </summary>
         public bool IsDesktop
@@ -119,6 +96,29 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Web</para>
+        /// </summary>
+        public bool IsWeb
+        {
+            get
+            {
+                return this is WebSessionLogInfo;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a <see cref="WebSessionLogInfo" />, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public WebSessionLogInfo AsWeb
+        {
+            get
+            {
+                return this as WebSessionLogInfo;
+            }
+        }
+
+        /// <summary>
         /// <para>Session ID.</para>
         /// </summary>
         public string SessionId { get; protected set; }
@@ -137,12 +137,6 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SessionLogInfo value, enc.IJsonWriter writer)
             {
-                if (value is WebSessionLogInfo)
-                {
-                    WriteProperty(".tag", "web", writer, enc.StringEncoder.Instance);
-                    WebSessionLogInfo.Encoder.EncodeFields((WebSessionLogInfo)value, writer);
-                    return;
-                }
                 if (value is DesktopSessionLogInfo)
                 {
                     WriteProperty(".tag", "desktop", writer, enc.StringEncoder.Instance);
@@ -153,6 +147,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "mobile", writer, enc.StringEncoder.Instance);
                     MobileSessionLogInfo.Encoder.EncodeFields((MobileSessionLogInfo)value, writer);
+                    return;
+                }
+                if (value is WebSessionLogInfo)
+                {
+                    WriteProperty(".tag", "web", writer, enc.StringEncoder.Instance);
+                    WebSessionLogInfo.Encoder.EncodeFields((WebSessionLogInfo)value, writer);
                     return;
                 }
                 if (value.SessionId != null)
@@ -191,12 +191,12 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
-                    case "web":
-                        return WebSessionLogInfo.Decoder.DecodeFields(reader);
                     case "desktop":
                         return DesktopSessionLogInfo.Decoder.DecodeFields(reader);
                     case "mobile":
                         return MobileSessionLogInfo.Decoder.DecodeFields(reader);
+                    case "web":
+                        return WebSessionLogInfo.Decoder.DecodeFields(reader);
                     default:
                         return base.Decode(reader);
                 }

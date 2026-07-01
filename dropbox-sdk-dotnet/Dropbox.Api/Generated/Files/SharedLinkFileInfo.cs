@@ -37,7 +37,7 @@ namespace Dropbox.Api.Files
         /// <param name="path">The path corresponding to a file in a shared link to a folder.
         /// Required for shared links to folders.</param>
         /// <param name="password">Password for the shared link. Required for
-        /// password-protected shared links to files  unless it can be read from a
+        /// password-protected shared links to files unless it can be read from a
         /// cookie.</param>
         public SharedLinkFileInfo(string url,
                                   string path = null,
@@ -79,7 +79,7 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>Password for the shared link. Required for password-protected shared links to
-        /// files  unless it can be read from a cookie.</para>
+        /// files unless it can be read from a cookie.</para>
         /// </summary>
         public string Password { get; protected set; }
 

@@ -74,19 +74,17 @@ namespace Dropbox.Api.Paper
         public string Value { get; protected set; }
 
         /// <summary>
-        /// <para>Expiration time of <see cref="Value" />.</para>
-        /// <para>Some cursors might have expiration time assigned. This is a UTC value after
-        /// which the cursor is no longer valid and the API starts returning an error. If
-        /// cursor expires a new one needs to be obtained and pagination needs to be restarted.
-        /// Some cursors might be short-lived some cursors might be long-lived.</para>
-        /// <para>This really depends on the sorting type and order, e.g.:</para>
-        /// <para>1. on one hand, listing docs created by the user, sorted by the created time
+        /// <para>Expiration time of <see cref="Value" />. Some cursors might have expiration
+        /// time assigned. This is a UTC value after which the cursor is no longer valid and
+        /// the API starts returning an error. If cursor expires a new one needs to be obtained
+        /// and pagination needs to be restarted. Some cursors might be short-lived some
+        /// cursors might be long-lived. This really depends on the sorting type and order,
+        /// e.g.: 1. on one hand, listing docs created by the user, sorted by the created time
         /// ascending will have undefinite expiration because the results cannot change while
-        /// the iteration is happening. This cursor would be suitable for long term
-        /// polling.</para>
-        /// <para>2. on the other hand, listing docs sorted by the last modified time will have
-        /// a very short expiration as docs do get modified very often and the modified time
-        /// can be changed while the iteration is happening thus altering the results.</para>
+        /// the iteration is happening. This cursor would be suitable for long term polling. 2.
+        /// on the other hand, listing docs sorted by the last modified time will have a very
+        /// short expiration as docs do get modified very often and the modified time can be
+        /// changed while the iteration is happening thus altering the results.</para>
         /// </summary>
         public sys.DateTime? Expiration { get; protected set; }
 

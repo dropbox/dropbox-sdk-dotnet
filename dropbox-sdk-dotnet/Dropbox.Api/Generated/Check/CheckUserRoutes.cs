@@ -40,9 +40,11 @@ namespace Dropbox.Api.Check.Routes
         /// <param name="echoArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="EchoError"/>.</exception>
         public t.Task<EchoResult> UserAsync(EchoArg echoArg)
         {
-            return this.Transport.SendRpcRequestAsync<EchoArg, EchoResult, enc.Empty>(echoArg, "api", "/check/user", "user", global::Dropbox.Api.Check.EchoArg.Encoder, global::Dropbox.Api.Check.EchoResult.Decoder, enc.EmptyDecoder.Instance);
+            return this.Transport.SendRpcRequestAsync<EchoArg, EchoResult, EchoError>(echoArg, "api", "/check/user", "user", global::Dropbox.Api.Check.EchoArg.Encoder, global::Dropbox.Api.Check.EchoResult.Decoder, global::Dropbox.Api.Check.EchoError.Decoder);
         }
 
         /// <summary>
@@ -71,6 +73,8 @@ namespace Dropbox.Api.Check.Routes
         /// <param name="query">The string that you'd like to be echoed back to you.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="EchoError"/>.</exception>
         public t.Task<EchoResult> UserAsync(string query = "")
         {
             var echoArg = new EchoArg(query);
@@ -102,6 +106,8 @@ namespace Dropbox.Api.Check.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="EchoError"/>.</exception>
         public EchoResult EndUser(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<EchoResult>;

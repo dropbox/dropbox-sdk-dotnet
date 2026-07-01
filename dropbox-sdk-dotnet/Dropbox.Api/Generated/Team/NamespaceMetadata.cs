@@ -36,10 +36,13 @@ namespace Dropbox.Api.Team
         /// <param name="namespaceType">The type of this namespace.</param>
         /// <param name="teamMemberId">If this is a team member or app folder, the ID of the
         /// owning team member. Otherwise, this field is not present.</param>
+        /// <param name="quotaLimit">The quota limit in bytes for this namespace tree. Only
+        /// applicable to team folders.</param>
         public NamespaceMetadata(string name,
                                  string namespaceId,
                                  NamespaceType namespaceType,
-                                 string teamMemberId = null)
+                                 string teamMemberId = null,
+                                 long quotaLimit = 0)
         {
             if (name == null)
             {
@@ -64,6 +67,7 @@ namespace Dropbox.Api.Team
             this.NamespaceId = namespaceId;
             this.NamespaceType = namespaceType;
             this.TeamMemberId = teamMemberId;
+            this.QuotaLimit = quotaLimit;
         }
 
         /// <summary>
@@ -75,6 +79,7 @@ namespace Dropbox.Api.Team
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public NamespaceMetadata()
         {
+            this.QuotaLimit = 0;
         }
 
         /// <summary>
@@ -98,6 +103,12 @@ namespace Dropbox.Api.Team
         /// </summary>
         public string TeamMemberId { get; protected set; }
 
+        /// <summary>
+        /// <para>The quota limit in bytes for this namespace tree. Only applicable to team
+        /// folders.</para>
+        /// </summary>
+        public long QuotaLimit { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -119,6 +130,7 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty("team_member_id", value.TeamMemberId, writer, enc.StringEncoder.Instance);
                 }
+                WriteProperty("quota_limit", value.QuotaLimit, writer, enc.Int64Encoder.Instance);
             }
         }
 
@@ -162,6 +174,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "team_member_id":
                         value.TeamMemberId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "quota_limit":
+                        value.QuotaLimit = enc.Int64Decoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

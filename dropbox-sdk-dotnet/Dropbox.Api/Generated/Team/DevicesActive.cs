@@ -12,8 +12,8 @@ namespace Dropbox.Api.Team
 
     /// <summary>
     /// <para>Each of the items is an array of values, one value per day. The value is the
-    /// number of devices active within a time window, ending with that day.</para>
-    /// <para>If there is no data for a day, then the value will be None.</para>
+    /// number of devices active within a time window, ending with that day. If there is no
+    /// data for a day, then the value will be None.</para>
     /// </summary>
     /// <seealso cref="GetDevicesReport" />
     public class DevicesActive
@@ -43,7 +43,7 @@ namespace Dropbox.Api.Team
         /// <param name="android">Array of number of linked android devices with
         /// activity.</param>
         /// <param name="other">Array of number of other linked devices (blackberry, windows
-        /// phone, etc)  with activity.</param>
+        /// phone, etc) with activity.</param>
         /// <param name="total">Array of total number of linked clients with activity.</param>
         public DevicesActive(col.IEnumerable<ulong?> windows,
                              col.IEnumerable<ulong?> macos,
@@ -147,8 +147,8 @@ namespace Dropbox.Api.Team
         public col.IList<ulong?> Android { get; protected set; }
 
         /// <summary>
-        /// <para>Array of number of other linked devices (blackberry, windows phone, etc)
-        /// with activity.</para>
+        /// <para>Array of number of other linked devices (blackberry, windows phone, etc) with
+        /// activity.</para>
         /// </summary>
         public col.IList<ulong?> Other { get; protected set; }
 

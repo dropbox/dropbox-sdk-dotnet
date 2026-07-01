@@ -31,7 +31,8 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="LockFileResult" /> class.</para>
         /// </summary>
         /// <param name="metadata">Metadata of the file.</param>
-        /// <param name="lock">The file lock state after the operation.</param>
+        /// <param name="lock">Field is deprecated. The file lock state after the
+        /// operation.</param>
         public LockFileResult(Metadata metadata,
                               FileLock @lock)
         {
@@ -65,7 +66,7 @@ namespace Dropbox.Api.Files
         public Metadata Metadata { get; protected set; }
 
         /// <summary>
-        /// <para>The file lock state after the operation.</para>
+        /// <para>Field is deprecated. The file lock state after the operation.</para>
         /// </summary>
         public FileLock Lock { get; protected set; }
 

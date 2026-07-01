@@ -11,8 +11,8 @@ namespace Dropbox.Api.Sharing
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The information about a group. Groups is a way to manage a list of users  who
-    /// need same access permission to the shared folder.</para>
+    /// <para>The information about a group. Groups is a way to manage a list of users who need
+    /// same access permission to the shared folder.</para>
     /// </summary>
     /// <seealso cref="GroupMembershipInfo" />
     /// <seealso cref="Global::Dropbox.Api.TeamCommon.GroupSummary" />
@@ -36,7 +36,7 @@ namespace Dropbox.Api.Sharing
         /// <param name="groupName">The group name</param>
         /// <param name="groupId">The group id</param>
         /// <param name="groupManagementType">Who is allowed to manage the group.</param>
-        /// <param name="groupType">The type of group.</param>
+        /// <param name="groupType">Field is deprecated. The type of group.</param>
         /// <param name="isMember">If the current user is a member of the group.</param>
         /// <param name="isOwner">If the current user is an owner of the group.</param>
         /// <param name="sameTeam">If the group is owned by the current user's team.</param>
@@ -76,7 +76,7 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>The type of group.</para>
+        /// <para>Field is deprecated. The type of group.</para>
         /// </summary>
         public global::Dropbox.Api.TeamCommon.GroupType GroupType { get; protected set; }
 

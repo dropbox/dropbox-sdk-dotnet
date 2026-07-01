@@ -40,10 +40,13 @@ namespace Dropbox.Api.Paper
         /// <param name="limit">Size limit per batch. The maximum number of docs that can be
         /// retrieved per batch is 1000. Higher value results in invalid arguments
         /// error.</param>
+        /// <param name="stopAtDate">Do not return results beyond this date. Behavior depends
+        /// on sort order.</param>
         public ListPaperDocsArgs(ListPaperDocsFilterBy filterBy = null,
                                  ListPaperDocsSortBy sortBy = null,
                                  ListPaperDocsSortOrder sortOrder = null,
-                                 int limit = 1000)
+                                 int limit = 1000,
+                                 sys.DateTime? stopAtDate = null)
         {
             if (filterBy == null)
             {
@@ -70,6 +73,7 @@ namespace Dropbox.Api.Paper
             this.SortBy = sortBy;
             this.SortOrder = sortOrder;
             this.Limit = limit;
+            this.StopAtDate = stopAtDate;
         }
 
         /// <summary>
@@ -108,6 +112,12 @@ namespace Dropbox.Api.Paper
         /// </summary>
         public int Limit { get; protected set; }
 
+        /// <summary>
+        /// <para>Do not return results beyond this date. Behavior depends on sort
+        /// order.</para>
+        /// </summary>
+        public sys.DateTime? StopAtDate { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -126,6 +136,10 @@ namespace Dropbox.Api.Paper
                 WriteProperty("sort_by", value.SortBy, writer, global::Dropbox.Api.Paper.ListPaperDocsSortBy.Encoder);
                 WriteProperty("sort_order", value.SortOrder, writer, global::Dropbox.Api.Paper.ListPaperDocsSortOrder.Encoder);
                 WriteProperty("limit", value.Limit, writer, enc.Int32Encoder.Instance);
+                if (value.StopAtDate != null)
+                {
+                    WriteProperty("stop_at_date", value.StopAtDate.Value, writer, enc.DateTimeEncoder.Instance);
+                }
             }
         }
 
@@ -169,6 +183,9 @@ namespace Dropbox.Api.Paper
                         break;
                     case "limit":
                         value.Limit = enc.Int32Decoder.Instance.Decode(reader);
+                        break;
+                    case "stop_at_date":
+                        value.StopAtDate = enc.DateTimeDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

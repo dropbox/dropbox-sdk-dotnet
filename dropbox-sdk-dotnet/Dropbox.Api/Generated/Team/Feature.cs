@@ -123,6 +123,29 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// HasDistinctMemberHomes</para>
+        /// </summary>
+        public bool IsHasDistinctMemberHomes
+        {
+            get
+            {
+                return this is HasDistinctMemberHomes;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a HasDistinctMemberHomes, or <c>null</c>.</para>
+        /// </summary>
+        public HasDistinctMemberHomes AsHasDistinctMemberHomes
+        {
+            get
+            {
+                return this as HasDistinctMemberHomes;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -182,6 +205,12 @@ namespace Dropbox.Api.Team
                     HasTeamSelectiveSync.Encoder.EncodeFields((HasTeamSelectiveSync)value, writer);
                     return;
                 }
+                if (value is HasDistinctMemberHomes)
+                {
+                    WriteProperty(".tag", "has_distinct_member_homes", writer, enc.StringEncoder.Instance);
+                    HasDistinctMemberHomes.Encoder.EncodeFields((HasDistinctMemberHomes)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -228,6 +257,8 @@ namespace Dropbox.Api.Team
                         return HasTeamFileEvents.Decoder.DecodeFields(reader);
                     case "has_team_selective_sync":
                         return HasTeamSelectiveSync.Decoder.DecodeFields(reader);
+                    case "has_distinct_member_homes":
+                        return HasDistinctMemberHomes.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -513,6 +544,77 @@ namespace Dropbox.Api.Team
                 protected override HasTeamSelectiveSync Create()
                 {
                     return HasTeamSelectiveSync.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Does this team have team member folder.</para>
+        /// </summary>
+        public sealed class HasDistinctMemberHomes : Feature
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<HasDistinctMemberHomes> Encoder = new HasDistinctMemberHomesEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<HasDistinctMemberHomes> Decoder = new HasDistinctMemberHomesDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="HasDistinctMemberHomes" />
+            /// class.</para>
+            /// </summary>
+            private HasDistinctMemberHomes()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of HasDistinctMemberHomes</para>
+            /// </summary>
+            public static readonly HasDistinctMemberHomes Instance = new HasDistinctMemberHomes();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="HasDistinctMemberHomes" />.</para>
+            /// </summary>
+            private class HasDistinctMemberHomesEncoder : enc.StructEncoder<HasDistinctMemberHomes>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(HasDistinctMemberHomes value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="HasDistinctMemberHomes" />.</para>
+            /// </summary>
+            private class HasDistinctMemberHomesDecoder : enc.StructDecoder<HasDistinctMemberHomes>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="HasDistinctMemberHomes"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override HasDistinctMemberHomes Create()
+                {
+                    return HasDistinctMemberHomes.Instance;
                 }
 
             }

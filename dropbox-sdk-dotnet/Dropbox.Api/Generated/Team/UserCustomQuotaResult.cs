@@ -11,7 +11,7 @@ namespace Dropbox.Api.Team
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>User and their custom quota in GB (1 TB = 1024 GB).  No quota returns if the user
+    /// <para>User and their custom quota in GB (1 TB = 1024 GB). No quota returns if the user
     /// has no custom quota set.</para>
     /// </summary>
     public class UserCustomQuotaResult
@@ -44,9 +44,9 @@ namespace Dropbox.Api.Team
 
             if (quotaGb != null)
             {
-                if (quotaGb < 15U)
+                if (quotaGb < 2U)
                 {
-                    throw new sys.ArgumentOutOfRangeException("quotaGb", "Value should be greater or equal than 15");
+                    throw new sys.ArgumentOutOfRangeException("quotaGb", "Value should be greater or equal than 2");
                 }
             }
 

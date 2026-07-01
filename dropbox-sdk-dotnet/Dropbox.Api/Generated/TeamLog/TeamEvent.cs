@@ -37,17 +37,15 @@ namespace Dropbox.Api.TeamLog
         /// <param name="eventType">The particular type of action taken.</param>
         /// <param name="details">The variable event schema applicable to this type of action,
         /// instantiated with respect to this particular action.</param>
-        /// <param name="actor">The entity who actually performed the action. Might be missing
-        /// due to historical data gap.</param>
+        /// <param name="actor">The entity who actually performed the action.</param>
         /// <param name="origin">The origin from which the actor performed the action including
         /// information about host, ip address, location, session, etc. If the action was
         /// performed programmatically via the API the origin represents the API
         /// client.</param>
         /// <param name="involveNonTeamMember">True if the action involved a non team member
-        /// either as the actor or as one of the affected users. Might be missing due to
-        /// historical data gap.</param>
+        /// either as the actor or as one of the affected users.</param>
         /// <param name="context">The user or team on whose behalf the actor performed the
-        /// action. Might be missing due to historical data gap.</param>
+        /// action.</param>
         /// <param name="participants">Zero or more users and/or groups that are affected by
         /// the action. Note that this list doesn't include any actors or users in
         /// context.</param>
@@ -128,8 +126,7 @@ namespace Dropbox.Api.TeamLog
         public EventDetails Details { get; protected set; }
 
         /// <summary>
-        /// <para>The entity who actually performed the action. Might be missing due to
-        /// historical data gap.</para>
+        /// <para>The entity who actually performed the action.</para>
         /// </summary>
         public ActorLogInfo Actor { get; protected set; }
 
@@ -142,13 +139,12 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>True if the action involved a non team member either as the actor or as one
-        /// of the affected users. Might be missing due to historical data gap.</para>
+        /// of the affected users.</para>
         /// </summary>
         public bool? InvolveNonTeamMember { get; protected set; }
 
         /// <summary>
-        /// <para>The user or team on whose behalf the actor performed the action. Might be
-        /// missing due to historical data gap.</para>
+        /// <para>The user or team on whose behalf the actor performed the action.</para>
         /// </summary>
         public ContextLogInfo Context { get; protected set; }
 

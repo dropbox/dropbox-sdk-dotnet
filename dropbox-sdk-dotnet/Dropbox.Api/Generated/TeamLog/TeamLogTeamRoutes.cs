@@ -38,14 +38,11 @@ namespace Dropbox.Api.TeamLog.Routes
         /// the returned cursor to retrieve more entries. If end_time is not specified in your
         /// request, you may use the returned cursor to poll <see
         /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" /> for
-        /// new events.</para>
-        /// <para>Many attributes note 'may be missing due to historical data gap'.</para>
-        /// <para>Note that the file_operations category and & analogous paper events are not
-        /// available on all Dropbox Business <a href="/business/plans-comparison">plans</a>.
-        /// Use <a
+        /// new events. Many attributes note 'may be missing due to historical data gap'. Note
+        /// that the file_operations category and & analogous paper events are not available on
+        /// all Dropbox Business <a href="/business/plans-comparison">plans</a>. Use <a
         /// href="/developers/documentation/http/teams#team-features-get_values">features/get_values</a>
-        /// to check for this feature.</para>
-        /// <para>Permission : Team Auditing.</para>
+        /// to check for this feature. Permission : Team Auditing.</para>
         /// </summary>
         /// <param name="getTeamEventsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -82,14 +79,11 @@ namespace Dropbox.Api.TeamLog.Routes
         /// the returned cursor to retrieve more entries. If end_time is not specified in your
         /// request, you may use the returned cursor to poll <see
         /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" /> for
-        /// new events.</para>
-        /// <para>Many attributes note 'may be missing due to historical data gap'.</para>
-        /// <para>Note that the file_operations category and & analogous paper events are not
-        /// available on all Dropbox Business <a href="/business/plans-comparison">plans</a>.
-        /// Use <a
+        /// new events. Many attributes note 'may be missing due to historical data gap'. Note
+        /// that the file_operations category and & analogous paper events are not available on
+        /// all Dropbox Business <a href="/business/plans-comparison">plans</a>. Use <a
         /// href="/developers/documentation/http/teams#team-features-get_values">features/get_values</a>
-        /// to check for this feature.</para>
-        /// <para>Permission : Team Auditing.</para>
+        /// to check for this feature. Permission : Team Auditing.</para>
         /// </summary>
         /// <param name="limit">The maximal number of results to return per call. Note that
         /// some calls may not return <paramref name="limit" /> number of events, and may even
@@ -186,8 +180,7 @@ namespace Dropbox.Api.TeamLog.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync" />, use this to
-        /// paginate through all events.</para>
-        /// <para>Permission : Team Auditing.</para>
+        /// paginate through all events. Permission : Team Auditing.</para>
         /// </summary>
         /// <param name="getTeamEventsContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -219,8 +212,7 @@ namespace Dropbox.Api.TeamLog.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync" />, use this to
-        /// paginate through all events.</para>
-        /// <para>Permission : Team Auditing.</para>
+        /// paginate through all events. Permission : Team Auditing.</para>
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of
         /// events.</param>

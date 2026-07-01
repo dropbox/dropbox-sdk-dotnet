@@ -31,8 +31,8 @@ namespace Dropbox.Api.Files
         /// <para>Initializes a new instance of the <see cref="DownloadArg" /> class.</para>
         /// </summary>
         /// <param name="path">The path of the file to download.</param>
-        /// <param name="rev">Please specify revision in <paramref name="path" />
-        /// instead.</param>
+        /// <param name="rev">Field is deprecated. Please specify revision in <paramref
+        /// name="path" /> instead.</param>
         public DownloadArg(string path,
                            string rev = null)
         {
@@ -40,9 +40,9 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentNullException("path");
             }
-            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*|id:.*)|(rev:[0-9a-f]{9,})|(ns:[0-9]+(/.*)?))\z"))
+            if (!re.Regex.IsMatch(path, @"\A(?:(/(.|[\r\n])*|id:.*)|(rev:[0-9a-f]{9,})|(ns:[0-9]+(/(.|[\r\n])*)?))\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*|id:.*)|(rev:[0-9a-f]{9,})|(ns:[0-9]+(/.*)?))\z'");
+                throw new sys.ArgumentOutOfRangeException("path", @"Value should match pattern '\A(?:(/(.|[\r\n])*|id:.*)|(rev:[0-9a-f]{9,})|(ns:[0-9]+(/(.|[\r\n])*)?))\z'");
             }
 
             if (rev != null)
@@ -77,7 +77,8 @@ namespace Dropbox.Api.Files
         public string Path { get; protected set; }
 
         /// <summary>
-        /// <para>Please specify revision in <see cref="Path" /> instead.</para>
+        /// <para>Field is deprecated. Please specify revision in <see cref="Path" />
+        /// instead.</para>
         /// </summary>
         public string Rev { get; protected set; }
 

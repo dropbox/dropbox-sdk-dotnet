@@ -276,8 +276,8 @@ namespace Dropbox.Api.Paper
         }
 
         /// <summary>
-        /// <para>The provided data is interpreted as markdown.</para>
-        /// <para>The first line of the provided document will be used as the doc title.</para>
+        /// <para>The provided data is interpreted as markdown. The first line of the provided
+        /// document will be used as the doc title.</para>
         /// </summary>
         public sealed class Markdown : ImportFormat
         {
@@ -346,8 +346,8 @@ namespace Dropbox.Api.Paper
         }
 
         /// <summary>
-        /// <para>The provided data is interpreted as plain text.</para>
-        /// <para>The first line of the provided document will be used as the doc title.</para>
+        /// <para>The provided data is interpreted as plain text. The first line of the
+        /// provided document will be used as the doc title.</para>
         /// </summary>
         public sealed class PlainText : ImportFormat
         {

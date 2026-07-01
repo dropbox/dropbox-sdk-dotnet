@@ -36,10 +36,13 @@ namespace Dropbox.Api.Users
         /// <param name="sharingPolicies">Team policies governing sharing.</param>
         /// <param name="officeAddinPolicy">Team policy governing the use of the Office
         /// Add-In.</param>
+        /// <param name="topLevelContentPolicy">Team policy governing whether members can edit
+        /// team folders at the top level of the team space.</param>
         public FullTeam(string id,
                         string name,
                         global::Dropbox.Api.TeamPolicies.TeamSharingPolicies sharingPolicies,
-                        global::Dropbox.Api.TeamPolicies.OfficeAddInPolicy officeAddinPolicy)
+                        global::Dropbox.Api.TeamPolicies.OfficeAddInPolicy officeAddinPolicy,
+                        global::Dropbox.Api.TeamPolicies.TopLevelContentPolicy topLevelContentPolicy)
             : base(id, name)
         {
             if (sharingPolicies == null)
@@ -52,8 +55,14 @@ namespace Dropbox.Api.Users
                 throw new sys.ArgumentNullException("officeAddinPolicy");
             }
 
+            if (topLevelContentPolicy == null)
+            {
+                throw new sys.ArgumentNullException("topLevelContentPolicy");
+            }
+
             this.SharingPolicies = sharingPolicies;
             this.OfficeAddinPolicy = officeAddinPolicy;
+            this.TopLevelContentPolicy = topLevelContentPolicy;
         }
 
         /// <summary>
@@ -76,6 +85,12 @@ namespace Dropbox.Api.Users
         /// </summary>
         public global::Dropbox.Api.TeamPolicies.OfficeAddInPolicy OfficeAddinPolicy { get; protected set; }
 
+        /// <summary>
+        /// <para>Team policy governing whether members can edit team folders at the top level
+        /// of the team space.</para>
+        /// </summary>
+        public global::Dropbox.Api.TeamPolicies.TopLevelContentPolicy TopLevelContentPolicy { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -94,6 +109,7 @@ namespace Dropbox.Api.Users
                 WriteProperty("name", value.Name, writer, enc.StringEncoder.Instance);
                 WriteProperty("sharing_policies", value.SharingPolicies, writer, global::Dropbox.Api.TeamPolicies.TeamSharingPolicies.Encoder);
                 WriteProperty("office_addin_policy", value.OfficeAddinPolicy, writer, global::Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Encoder);
+                WriteProperty("top_level_content_policy", value.TopLevelContentPolicy, writer, global::Dropbox.Api.TeamPolicies.TopLevelContentPolicy.Encoder);
             }
         }
 
@@ -137,6 +153,9 @@ namespace Dropbox.Api.Users
                         break;
                     case "office_addin_policy":
                         value.OfficeAddinPolicy = global::Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Decoder.Decode(reader);
+                        break;
+                    case "top_level_content_policy":
+                        value.TopLevelContentPolicy = global::Dropbox.Api.TeamPolicies.TopLevelContentPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

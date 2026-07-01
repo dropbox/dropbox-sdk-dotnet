@@ -385,7 +385,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The request payload must be at most 150 MB.</para>
+        /// <para>The request payload must be at most 150 MiB.</para>
         /// </summary>
         public sealed class PayloadTooLarge : UploadSessionStartError
         {

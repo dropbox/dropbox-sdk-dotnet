@@ -79,6 +79,28 @@ namespace Dropbox.Api.Paper
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Json</para>
+        /// </summary>
+        public bool IsJson
+        {
+            get
+            {
+                return this is Json;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Json, or <c>null</c>.</para>
+        /// </summary>
+        public Json AsJson
+        {
+            get
+            {
+                return this as Json;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -126,6 +148,12 @@ namespace Dropbox.Api.Paper
                     Markdown.Encoder.EncodeFields((Markdown)value, writer);
                     return;
                 }
+                if (value is Json)
+                {
+                    WriteProperty(".tag", "json", writer, enc.StringEncoder.Instance);
+                    Json.Encoder.EncodeFields((Json)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -168,6 +196,8 @@ namespace Dropbox.Api.Paper
                         return Html.Decoder.DecodeFields(reader);
                     case "markdown":
                         return Markdown.Decoder.DecodeFields(reader);
+                    case "json":
+                        return Json.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -307,6 +337,75 @@ namespace Dropbox.Api.Paper
                 protected override Markdown Create()
                 {
                     return Markdown.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Doc metadata JSON export format.</para>
+        /// </summary>
+        public sealed class Json : ExportFormat
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Json> Encoder = new JsonEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Json> Decoder = new JsonDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Json" /> class.</para>
+            /// </summary>
+            private Json()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Json</para>
+            /// </summary>
+            public static readonly Json Instance = new Json();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Json" />.</para>
+            /// </summary>
+            private class JsonEncoder : enc.StructEncoder<Json>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Json value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Json" />.</para>
+            /// </summary>
+            private class JsonDecoder : enc.StructDecoder<Json>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Json" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Json Create()
+                {
+                    return Json.Instance;
                 }
 
             }

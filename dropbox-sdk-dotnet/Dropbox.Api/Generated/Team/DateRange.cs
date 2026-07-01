@@ -31,7 +31,7 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="DateRange" /> class.</para>
         /// </summary>
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
-        /// or too long ago, this field will  be set to 6 months ago.</param>
+        /// or too long ago, this field will be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         public DateRange(sys.DateTime? startDate = null,
                          sys.DateTime? endDate = null)
@@ -52,7 +52,7 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>Optional starting date (inclusive). If start_date is None or too long ago,
-        /// this field will  be set to 6 months ago.</para>
+        /// this field will be set to 6 months ago.</para>
         /// </summary>
         public sys.DateTime? StartDate { get; protected set; }
 

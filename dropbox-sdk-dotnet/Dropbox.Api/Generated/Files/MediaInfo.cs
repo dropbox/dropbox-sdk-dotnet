@@ -219,7 +219,8 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The metadata for the photo/video.</para>
+        /// <para>The metadata for the photo/video. Uses MediaMetadataAbstract to preserve
+        /// photo/video subtypes (e.g. VideoMetadata.duration).</para>
         /// </summary>
         public sealed class Metadata : MediaInfo
         {

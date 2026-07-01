@@ -31,6 +31,111 @@ namespace Dropbox.Api.Sharing.Routes
         internal enc.ITransport Transport { get; private set; }
 
         /// <summary>
+        /// <para>Download the shared link's file from a user's Dropbox. This is a
+        /// download-style endpoint that returns the file content.</para>
+        /// </summary>
+        /// <param name="getSharedLinkMetadataArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="GetSharedLinkFileError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<SharedLinkMetadata>> GetSharedLinkFileAsync(GetSharedLinkMetadataArg getSharedLinkMetadataArg)
+        {
+            return this.Transport.SendDownloadRequestAsync<GetSharedLinkMetadataArg, SharedLinkMetadata, GetSharedLinkFileError>(getSharedLinkMetadataArg, "content", "/sharing/get_shared_link_file", "app", global::Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.GetSharedLinkFileError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get shared link file route.</para>
+        /// </summary>
+        /// <param name="getSharedLinkMetadataArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetSharedLinkFile(GetSharedLinkMetadataArg getSharedLinkMetadataArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetSharedLinkFileAsync(getSharedLinkMetadataArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Download the shared link's file from a user's Dropbox. This is a
+        /// download-style endpoint that returns the file content.</para>
+        /// </summary>
+        /// <param name="url">URL of the shared link.</param>
+        /// <param name="path">If the shared link is to a folder, this parameter can be used to
+        /// retrieve the metadata for a specific file or sub-folder in this folder. A relative
+        /// path should be used.</param>
+        /// <param name="linkPassword">If the shared link has a password, this parameter can be
+        /// used.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="GetSharedLinkFileError"/>.</exception>
+        public t.Task<enc.IDownloadResponse<SharedLinkMetadata>> GetSharedLinkFileAsync(string url,
+                                                                                        string path = null,
+                                                                                        string linkPassword = null)
+        {
+            var getSharedLinkMetadataArg = new GetSharedLinkMetadataArg(url,
+                                                                        path,
+                                                                        linkPassword);
+
+            return this.GetSharedLinkFileAsync(getSharedLinkMetadataArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get shared link file route.</para>
+        /// </summary>
+        /// <param name="url">URL of the shared link.</param>
+        /// <param name="path">If the shared link is to a folder, this parameter can be used to
+        /// retrieve the metadata for a specific file or sub-folder in this folder. A relative
+        /// path should be used.</param>
+        /// <param name="linkPassword">If the shared link has a password, this parameter can be
+        /// used.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetSharedLinkFile(string url,
+                                                       string path = null,
+                                                       string linkPassword = null,
+                                                       sys.AsyncCallback callback = null,
+                                                       object callbackState = null)
+        {
+            var getSharedLinkMetadataArg = new GetSharedLinkMetadataArg(url,
+                                                                        path,
+                                                                        linkPassword);
+
+            return this.BeginGetSharedLinkFile(getSharedLinkMetadataArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get shared link file route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="GetSharedLinkFileError"/>.</exception>
+        public enc.IDownloadResponse<SharedLinkMetadata> EndGetSharedLinkFile(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<enc.IDownloadResponse<SharedLinkMetadata>>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Get the shared link's metadata.</para>
         /// </summary>
         /// <param name="getSharedLinkMetadataArg">The request parameters</param>
@@ -38,10 +143,10 @@ namespace Dropbox.Api.Sharing.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="SharedLinkError"/>.</exception>
+        /// cref="SharedLinkMetadataError"/>.</exception>
         public t.Task<SharedLinkMetadata> GetSharedLinkMetadataAsync(GetSharedLinkMetadataArg getSharedLinkMetadataArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetSharedLinkMetadataArg, SharedLinkMetadata, SharedLinkError>(getSharedLinkMetadataArg, "api", "/sharing/get_shared_link_metadata", "app", global::Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.SharedLinkError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetSharedLinkMetadataArg, SharedLinkMetadata, SharedLinkMetadataError>(getSharedLinkMetadataArg, "api", "/sharing/get_shared_link_metadata", "app", global::Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.SharedLinkMetadataError.Decoder);
         }
 
         /// <summary>
@@ -73,7 +178,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="SharedLinkError"/>.</exception>
+        /// cref="SharedLinkMetadataError"/>.</exception>
         public t.Task<SharedLinkMetadata> GetSharedLinkMetadataAsync(string url,
                                                                      string path = null,
                                                                      string linkPassword = null)
@@ -121,7 +226,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="SharedLinkError"/>.</exception>
+        /// cref="SharedLinkMetadataError"/>.</exception>
         public SharedLinkMetadata EndGetSharedLinkMetadata(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<SharedLinkMetadata>;

@@ -34,9 +34,9 @@ namespace Dropbox.Api.Files
         /// <param name="commitInfo">Contains the path and other optional modifiers for the
         /// future upload commit. Equivalent to the parameters provided to <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadAsync" />.</param>
-        /// <param name="duration">How long before this link expires, in seconds.  Attempting
-        /// to start an upload with this link longer than this period  of time after link
-        /// creation will result in an error.</param>
+        /// <param name="duration">How long before this link expires, in seconds. Attempting to
+        /// start an upload with this link longer than this period of time after link creation
+        /// will result in an error.</param>
         public GetTemporaryUploadLinkArg(CommitInfo commitInfo,
                                          double duration = 14400.0)
         {
@@ -78,8 +78,8 @@ namespace Dropbox.Api.Files
         public CommitInfo CommitInfo { get; protected set; }
 
         /// <summary>
-        /// <para>How long before this link expires, in seconds.  Attempting to start an upload
-        /// with this link longer than this period  of time after link creation will result in
+        /// <para>How long before this link expires, in seconds. Attempting to start an upload
+        /// with this link longer than this period of time after link creation will result in
         /// an error.</para>
         /// </summary>
         public double Duration { get; protected set; }

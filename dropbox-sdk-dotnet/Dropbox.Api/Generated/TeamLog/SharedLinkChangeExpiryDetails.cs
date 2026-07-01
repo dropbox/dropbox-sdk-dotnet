@@ -35,11 +35,15 @@ namespace Dropbox.Api.TeamLog
         /// historical data gap.</param>
         /// <param name="previousValue">Previous shared link expiration date. Might be missing
         /// due to historical data gap.</param>
+        /// <param name="isConsolidationAction">Indicates whether this was a consolidation
+        /// action by system.</param>
         public SharedLinkChangeExpiryDetails(sys.DateTime? newValue = null,
-                                             sys.DateTime? previousValue = null)
+                                             sys.DateTime? previousValue = null,
+                                             bool? isConsolidationAction = null)
         {
             this.NewValue = newValue;
             this.PreviousValue = previousValue;
+            this.IsConsolidationAction = isConsolidationAction;
         }
 
         /// <summary>
@@ -65,6 +69,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public sys.DateTime? PreviousValue { get; protected set; }
 
+        /// <summary>
+        /// <para>Indicates whether this was a consolidation action by system.</para>
+        /// </summary>
+        public bool? IsConsolidationAction { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -86,6 +95,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.PreviousValue != null)
                 {
                     WriteProperty("previous_value", value.PreviousValue.Value, writer, enc.DateTimeEncoder.Instance);
+                }
+                if (value.IsConsolidationAction != null)
+                {
+                    WriteProperty("is_consolidation_action", value.IsConsolidationAction.Value, writer, enc.BooleanEncoder.Instance);
                 }
             }
         }
@@ -125,6 +138,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "previous_value":
                         value.PreviousValue = enc.DateTimeDecoder.Instance.Decode(reader);
+                        break;
+                    case "is_consolidation_action":
+                        value.IsConsolidationAction = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

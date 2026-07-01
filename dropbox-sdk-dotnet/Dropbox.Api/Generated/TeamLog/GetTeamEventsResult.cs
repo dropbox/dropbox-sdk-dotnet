@@ -89,15 +89,13 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>Pass the cursor into <see
         /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" /> to
-        /// obtain additional events.</para>
-        /// <para>The value of <see cref="Cursor" /> may change for each response from <see
+        /// obtain additional events. The value of <see cref="Cursor" /> may change for each
+        /// response from <see
         /// cref="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync" />,
-        /// regardless of the value of <see cref="HasMore" />; older cursor strings may
-        /// expire.</para>
-        /// <para>Thus, callers should ensure that they update their cursor based on the latest
-        /// value of <see cref="Cursor" /> after each call, and poll regularly if they wish to
-        /// poll for new events.</para>
-        /// <para>Callers should handle reset exceptions for expired cursors.</para>
+        /// regardless of the value of <see cref="HasMore" />; older cursor strings may expire.
+        /// Thus, callers should ensure that they update their cursor based on the latest value
+        /// of <see cref="Cursor" /> after each call, and poll regularly if they wish to poll
+        /// for new events. Callers should handle reset exceptions for expired cursors.</para>
         /// </summary>
         public string Cursor { get; protected set; }
 

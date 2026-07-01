@@ -44,7 +44,8 @@ namespace Dropbox.Api.Team
         /// <param name="membershipType">The user's membership type: full (normal team member)
         /// vs limited (does not use a license; no access to the team's shared quota).</param>
         /// <param name="groups">List of group IDs of groups that the user belongs to.</param>
-        /// <param name="memberFolderId">The namespace id of the user's root folder.</param>
+        /// <param name="memberFolderId">The namespace id of the user's member folder.</param>
+        /// <param name="rootFolderId">The namespace id of the user's root folder.</param>
         /// <param name="externalId">External ID that a team can attach to the user. An
         /// application using the API may find it easier to use their own IDs instead of
         /// Dropbox IDs like account_id or team_member_id.</param>
@@ -72,6 +73,7 @@ namespace Dropbox.Api.Team
                                  TeamMembershipType membershipType,
                                  col.IEnumerable<string> groups,
                                  string memberFolderId,
+                                 string rootFolderId,
                                  string externalId = null,
                                  string accountId = null,
                                  col.IEnumerable<global::Dropbox.Api.SecondaryEmails.SecondaryEmail> secondaryEmails = null,
@@ -99,8 +101,18 @@ namespace Dropbox.Api.Team
                 throw new sys.ArgumentOutOfRangeException("memberFolderId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z:]+)\z'");
             }
 
+            if (rootFolderId == null)
+            {
+                throw new sys.ArgumentNullException("rootFolderId");
+            }
+            if (!re.Regex.IsMatch(rootFolderId, @"\A(?:[-_0-9a-zA-Z:]+)\z"))
+            {
+                throw new sys.ArgumentOutOfRangeException("rootFolderId", @"Value should match pattern '\A(?:[-_0-9a-zA-Z:]+)\z'");
+            }
+
             this.Groups = groupsList;
             this.MemberFolderId = memberFolderId;
+            this.RootFolderId = rootFolderId;
         }
 
         /// <summary>
@@ -120,9 +132,14 @@ namespace Dropbox.Api.Team
         public col.IList<string> Groups { get; protected set; }
 
         /// <summary>
-        /// <para>The namespace id of the user's root folder.</para>
+        /// <para>The namespace id of the user's member folder.</para>
         /// </summary>
         public string MemberFolderId { get; protected set; }
+
+        /// <summary>
+        /// <para>The namespace id of the user's root folder.</para>
+        /// </summary>
+        public string RootFolderId { get; protected set; }
 
         #region Encoder class
 
@@ -146,6 +163,7 @@ namespace Dropbox.Api.Team
                 WriteProperty("membership_type", value.MembershipType, writer, global::Dropbox.Api.Team.TeamMembershipType.Encoder);
                 WriteListProperty("groups", value.Groups, writer, enc.StringEncoder.Instance);
                 WriteProperty("member_folder_id", value.MemberFolderId, writer, enc.StringEncoder.Instance);
+                WriteProperty("root_folder_id", value.RootFolderId, writer, enc.StringEncoder.Instance);
                 if (value.ExternalId != null)
                 {
                     WriteProperty("external_id", value.ExternalId, writer, enc.StringEncoder.Instance);
@@ -237,6 +255,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "member_folder_id":
                         value.MemberFolderId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "root_folder_id":
+                        value.RootFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "external_id":
                         value.ExternalId = enc.StringDecoder.Instance.Decode(reader);

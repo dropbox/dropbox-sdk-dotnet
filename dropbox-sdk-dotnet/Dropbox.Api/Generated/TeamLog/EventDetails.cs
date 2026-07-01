@@ -108,6 +108,54 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// RansomwareRestoreProcessCompletedDetails</para>
+        /// </summary>
+        public bool IsRansomwareRestoreProcessCompletedDetails
+        {
+            get
+            {
+                return this is RansomwareRestoreProcessCompletedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a RansomwareRestoreProcessCompletedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public RansomwareRestoreProcessCompletedDetails AsRansomwareRestoreProcessCompletedDetails
+        {
+            get
+            {
+                return this as RansomwareRestoreProcessCompletedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// RansomwareRestoreProcessStartedDetails</para>
+        /// </summary>
+        public bool IsRansomwareRestoreProcessStartedDetails
+        {
+            get
+            {
+                return this is RansomwareRestoreProcessStartedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a RansomwareRestoreProcessStartedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public RansomwareRestoreProcessStartedDetails AsRansomwareRestoreProcessStartedDetails
+        {
+            get
+            {
+                return this as RansomwareRestoreProcessStartedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// AppBlockedByPermissionsDetails</para>
         /// </summary>
         public bool IsAppBlockedByPermissionsDetails
@@ -446,6 +494,761 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as FileUnresolveCommentDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashAddedCommentToStackDetails</para>
+        /// </summary>
+        public bool IsDashAddedCommentToStackDetails
+        {
+            get
+            {
+                return this is DashAddedCommentToStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashAddedCommentToStackDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashAddedCommentToStackDetails AsDashAddedCommentToStackDetails
+        {
+            get
+            {
+                return this as DashAddedCommentToStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashAddedConnectorDetails</para>
+        /// </summary>
+        public bool IsDashAddedConnectorDetails
+        {
+            get
+            {
+                return this is DashAddedConnectorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashAddedConnectorDetails, or <c>null</c>.</para>
+        /// </summary>
+        public DashAddedConnectorDetails AsDashAddedConnectorDetails
+        {
+            get
+            {
+                return this as DashAddedConnectorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashAddedLinkToStackDetails</para>
+        /// </summary>
+        public bool IsDashAddedLinkToStackDetails
+        {
+            get
+            {
+                return this is DashAddedLinkToStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashAddedLinkToStackDetails, or <c>null</c>.</para>
+        /// </summary>
+        public DashAddedLinkToStackDetails AsDashAddedLinkToStackDetails
+        {
+            get
+            {
+                return this as DashAddedLinkToStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashAddedTeamEmailDomainAllowlistDetails</para>
+        /// </summary>
+        public bool IsDashAddedTeamEmailDomainAllowlistDetails
+        {
+            get
+            {
+                return this is DashAddedTeamEmailDomainAllowlistDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashAddedTeamEmailDomainAllowlistDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashAddedTeamEmailDomainAllowlistDetails AsDashAddedTeamEmailDomainAllowlistDetails
+        {
+            get
+            {
+                return this as DashAddedTeamEmailDomainAllowlistDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashAdminAddedOrgWideConnectorDetails</para>
+        /// </summary>
+        public bool IsDashAdminAddedOrgWideConnectorDetails
+        {
+            get
+            {
+                return this is DashAdminAddedOrgWideConnectorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashAdminAddedOrgWideConnectorDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashAdminAddedOrgWideConnectorDetails AsDashAdminAddedOrgWideConnectorDetails
+        {
+            get
+            {
+                return this as DashAdminAddedOrgWideConnectorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashAdminDisabledConnectorDetails</para>
+        /// </summary>
+        public bool IsDashAdminDisabledConnectorDetails
+        {
+            get
+            {
+                return this is DashAdminDisabledConnectorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashAdminDisabledConnectorDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashAdminDisabledConnectorDetails AsDashAdminDisabledConnectorDetails
+        {
+            get
+            {
+                return this as DashAdminDisabledConnectorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashAdminEnabledConnectorDetails</para>
+        /// </summary>
+        public bool IsDashAdminEnabledConnectorDetails
+        {
+            get
+            {
+                return this is DashAdminEnabledConnectorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashAdminEnabledConnectorDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashAdminEnabledConnectorDetails AsDashAdminEnabledConnectorDetails
+        {
+            get
+            {
+                return this as DashAdminEnabledConnectorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashAdminRemovedOrgWideConnectorDetails</para>
+        /// </summary>
+        public bool IsDashAdminRemovedOrgWideConnectorDetails
+        {
+            get
+            {
+                return this is DashAdminRemovedOrgWideConnectorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashAdminRemovedOrgWideConnectorDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashAdminRemovedOrgWideConnectorDetails AsDashAdminRemovedOrgWideConnectorDetails
+        {
+            get
+            {
+                return this as DashAdminRemovedOrgWideConnectorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashArchivedStackDetails</para>
+        /// </summary>
+        public bool IsDashArchivedStackDetails
+        {
+            get
+            {
+                return this is DashArchivedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashArchivedStackDetails, or <c>null</c>.</para>
+        /// </summary>
+        public DashArchivedStackDetails AsDashArchivedStackDetails
+        {
+            get
+            {
+                return this as DashArchivedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashChangedAudienceOfSharedLinkToStackDetails</para>
+        /// </summary>
+        public bool IsDashChangedAudienceOfSharedLinkToStackDetails
+        {
+            get
+            {
+                return this is DashChangedAudienceOfSharedLinkToStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashChangedAudienceOfSharedLinkToStackDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashChangedAudienceOfSharedLinkToStackDetails AsDashChangedAudienceOfSharedLinkToStackDetails
+        {
+            get
+            {
+                return this as DashChangedAudienceOfSharedLinkToStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashClonedStackDetails</para>
+        /// </summary>
+        public bool IsDashClonedStackDetails
+        {
+            get
+            {
+                return this is DashClonedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashClonedStackDetails, or <c>null</c>.</para>
+        /// </summary>
+        public DashClonedStackDetails AsDashClonedStackDetails
+        {
+            get
+            {
+                return this as DashClonedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashConnectorToolsCallDetails</para>
+        /// </summary>
+        public bool IsDashConnectorToolsCallDetails
+        {
+            get
+            {
+                return this is DashConnectorToolsCallDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashConnectorToolsCallDetails, or <c>null</c>.</para>
+        /// </summary>
+        public DashConnectorToolsCallDetails AsDashConnectorToolsCallDetails
+        {
+            get
+            {
+                return this as DashConnectorToolsCallDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashCreatedStackDetails</para>
+        /// </summary>
+        public bool IsDashCreatedStackDetails
+        {
+            get
+            {
+                return this is DashCreatedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashCreatedStackDetails, or <c>null</c>.</para>
+        /// </summary>
+        public DashCreatedStackDetails AsDashCreatedStackDetails
+        {
+            get
+            {
+                return this as DashCreatedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashDeletedCommentFromStackDetails</para>
+        /// </summary>
+        public bool IsDashDeletedCommentFromStackDetails
+        {
+            get
+            {
+                return this is DashDeletedCommentFromStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashDeletedCommentFromStackDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashDeletedCommentFromStackDetails AsDashDeletedCommentFromStackDetails
+        {
+            get
+            {
+                return this as DashDeletedCommentFromStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashDeletedStackDetails</para>
+        /// </summary>
+        public bool IsDashDeletedStackDetails
+        {
+            get
+            {
+                return this is DashDeletedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashDeletedStackDetails, or <c>null</c>.</para>
+        /// </summary>
+        public DashDeletedStackDetails AsDashDeletedStackDetails
+        {
+            get
+            {
+                return this as DashDeletedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashEditedCommentInStackDetails</para>
+        /// </summary>
+        public bool IsDashEditedCommentInStackDetails
+        {
+            get
+            {
+                return this is DashEditedCommentInStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashEditedCommentInStackDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashEditedCommentInStackDetails AsDashEditedCommentInStackDetails
+        {
+            get
+            {
+                return this as DashEditedCommentInStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashExternalUserOpenedStackDetails</para>
+        /// </summary>
+        public bool IsDashExternalUserOpenedStackDetails
+        {
+            get
+            {
+                return this is DashExternalUserOpenedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashExternalUserOpenedStackDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashExternalUserOpenedStackDetails AsDashExternalUserOpenedStackDetails
+        {
+            get
+            {
+                return this as DashExternalUserOpenedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashFirstLaunchedDesktopDetails</para>
+        /// </summary>
+        public bool IsDashFirstLaunchedDesktopDetails
+        {
+            get
+            {
+                return this is DashFirstLaunchedDesktopDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashFirstLaunchedDesktopDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashFirstLaunchedDesktopDetails AsDashFirstLaunchedDesktopDetails
+        {
+            get
+            {
+                return this as DashFirstLaunchedDesktopDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashFirstLaunchedExtensionDetails</para>
+        /// </summary>
+        public bool IsDashFirstLaunchedExtensionDetails
+        {
+            get
+            {
+                return this is DashFirstLaunchedExtensionDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashFirstLaunchedExtensionDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashFirstLaunchedExtensionDetails AsDashFirstLaunchedExtensionDetails
+        {
+            get
+            {
+                return this as DashFirstLaunchedExtensionDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashFirstLaunchedWebStartPageDetails</para>
+        /// </summary>
+        public bool IsDashFirstLaunchedWebStartPageDetails
+        {
+            get
+            {
+                return this is DashFirstLaunchedWebStartPageDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashFirstLaunchedWebStartPageDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashFirstLaunchedWebStartPageDetails AsDashFirstLaunchedWebStartPageDetails
+        {
+            get
+            {
+                return this as DashFirstLaunchedWebStartPageDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashOpenedSharedLinkToStackDetails</para>
+        /// </summary>
+        public bool IsDashOpenedSharedLinkToStackDetails
+        {
+            get
+            {
+                return this is DashOpenedSharedLinkToStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashOpenedSharedLinkToStackDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashOpenedSharedLinkToStackDetails AsDashOpenedSharedLinkToStackDetails
+        {
+            get
+            {
+                return this as DashOpenedSharedLinkToStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashOpenedStackDetails</para>
+        /// </summary>
+        public bool IsDashOpenedStackDetails
+        {
+            get
+            {
+                return this is DashOpenedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashOpenedStackDetails, or <c>null</c>.</para>
+        /// </summary>
+        public DashOpenedStackDetails AsDashOpenedStackDetails
+        {
+            get
+            {
+                return this as DashOpenedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashPreviewOptOutStatusChangedDetails</para>
+        /// </summary>
+        public bool IsDashPreviewOptOutStatusChangedDetails
+        {
+            get
+            {
+                return this is DashPreviewOptOutStatusChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashPreviewOptOutStatusChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashPreviewOptOutStatusChangedDetails AsDashPreviewOptOutStatusChangedDetails
+        {
+            get
+            {
+                return this as DashPreviewOptOutStatusChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashRemovedConnectorDetails</para>
+        /// </summary>
+        public bool IsDashRemovedConnectorDetails
+        {
+            get
+            {
+                return this is DashRemovedConnectorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashRemovedConnectorDetails, or <c>null</c>.</para>
+        /// </summary>
+        public DashRemovedConnectorDetails AsDashRemovedConnectorDetails
+        {
+            get
+            {
+                return this as DashRemovedConnectorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashRemovedLinkFromStackDetails</para>
+        /// </summary>
+        public bool IsDashRemovedLinkFromStackDetails
+        {
+            get
+            {
+                return this is DashRemovedLinkFromStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashRemovedLinkFromStackDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashRemovedLinkFromStackDetails AsDashRemovedLinkFromStackDetails
+        {
+            get
+            {
+                return this as DashRemovedLinkFromStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashRemovedSharedLinkToStackDetails</para>
+        /// </summary>
+        public bool IsDashRemovedSharedLinkToStackDetails
+        {
+            get
+            {
+                return this is DashRemovedSharedLinkToStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashRemovedSharedLinkToStackDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashRemovedSharedLinkToStackDetails AsDashRemovedSharedLinkToStackDetails
+        {
+            get
+            {
+                return this as DashRemovedSharedLinkToStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashRemovedTeamEmailDomainAllowlistDetails</para>
+        /// </summary>
+        public bool IsDashRemovedTeamEmailDomainAllowlistDetails
+        {
+            get
+            {
+                return this is DashRemovedTeamEmailDomainAllowlistDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashRemovedTeamEmailDomainAllowlistDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashRemovedTeamEmailDomainAllowlistDetails AsDashRemovedTeamEmailDomainAllowlistDetails
+        {
+            get
+            {
+                return this as DashRemovedTeamEmailDomainAllowlistDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashRenamedStackDetails</para>
+        /// </summary>
+        public bool IsDashRenamedStackDetails
+        {
+            get
+            {
+                return this is DashRenamedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashRenamedStackDetails, or <c>null</c>.</para>
+        /// </summary>
+        public DashRenamedStackDetails AsDashRenamedStackDetails
+        {
+            get
+            {
+                return this as DashRenamedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashSharedLinkToStackDetails</para>
+        /// </summary>
+        public bool IsDashSharedLinkToStackDetails
+        {
+            get
+            {
+                return this is DashSharedLinkToStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashSharedLinkToStackDetails, or <c>null</c>.</para>
+        /// </summary>
+        public DashSharedLinkToStackDetails AsDashSharedLinkToStackDetails
+        {
+            get
+            {
+                return this as DashSharedLinkToStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashUnarchivedStackDetails</para>
+        /// </summary>
+        public bool IsDashUnarchivedStackDetails
+        {
+            get
+            {
+                return this is DashUnarchivedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashUnarchivedStackDetails, or <c>null</c>.</para>
+        /// </summary>
+        public DashUnarchivedStackDetails AsDashUnarchivedStackDetails
+        {
+            get
+            {
+                return this as DashUnarchivedStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashViewedCompanyStackDetails</para>
+        /// </summary>
+        public bool IsDashViewedCompanyStackDetails
+        {
+            get
+            {
+                return this is DashViewedCompanyStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashViewedCompanyStackDetails, or <c>null</c>.</para>
+        /// </summary>
+        public DashViewedCompanyStackDetails AsDashViewedCompanyStackDetails
+        {
+            get
+            {
+                return this as DashViewedCompanyStackDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashViewedExternalAiActivityReportDetails</para>
+        /// </summary>
+        public bool IsDashViewedExternalAiActivityReportDetails
+        {
+            get
+            {
+                return this is DashViewedExternalAiActivityReportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashViewedExternalAiActivityReportDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashViewedExternalAiActivityReportDetails AsDashViewedExternalAiActivityReportDetails
+        {
+            get
+            {
+                return this as DashViewedExternalAiActivityReportDetails;
             }
         }
 
@@ -1730,6 +2533,462 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// EncryptedFolderCancelTeamKeyRotationDetails</para>
+        /// </summary>
+        public bool IsEncryptedFolderCancelTeamKeyRotationDetails
+        {
+            get
+            {
+                return this is EncryptedFolderCancelTeamKeyRotationDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EncryptedFolderCancelTeamKeyRotationDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public EncryptedFolderCancelTeamKeyRotationDetails AsEncryptedFolderCancelTeamKeyRotationDetails
+        {
+            get
+            {
+                return this as EncryptedFolderCancelTeamKeyRotationDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// EncryptedFolderEnrollBackupKeyDetails</para>
+        /// </summary>
+        public bool IsEncryptedFolderEnrollBackupKeyDetails
+        {
+            get
+            {
+                return this is EncryptedFolderEnrollBackupKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EncryptedFolderEnrollBackupKeyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public EncryptedFolderEnrollBackupKeyDetails AsEncryptedFolderEnrollBackupKeyDetails
+        {
+            get
+            {
+                return this as EncryptedFolderEnrollBackupKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// EncryptedFolderEnrollClientDetails</para>
+        /// </summary>
+        public bool IsEncryptedFolderEnrollClientDetails
+        {
+            get
+            {
+                return this is EncryptedFolderEnrollClientDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EncryptedFolderEnrollClientDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public EncryptedFolderEnrollClientDetails AsEncryptedFolderEnrollClientDetails
+        {
+            get
+            {
+                return this as EncryptedFolderEnrollClientDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// EncryptedFolderEnrollTeamDetails</para>
+        /// </summary>
+        public bool IsEncryptedFolderEnrollTeamDetails
+        {
+            get
+            {
+                return this is EncryptedFolderEnrollTeamDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EncryptedFolderEnrollTeamDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public EncryptedFolderEnrollTeamDetails AsEncryptedFolderEnrollTeamDetails
+        {
+            get
+            {
+                return this as EncryptedFolderEnrollTeamDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// EncryptedFolderFinishTeamUnenrollmentDetails</para>
+        /// </summary>
+        public bool IsEncryptedFolderFinishTeamUnenrollmentDetails
+        {
+            get
+            {
+                return this is EncryptedFolderFinishTeamUnenrollmentDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EncryptedFolderFinishTeamUnenrollmentDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public EncryptedFolderFinishTeamUnenrollmentDetails AsEncryptedFolderFinishTeamUnenrollmentDetails
+        {
+            get
+            {
+                return this as EncryptedFolderFinishTeamUnenrollmentDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// EncryptedFolderInitTeamKeyRotationDetails</para>
+        /// </summary>
+        public bool IsEncryptedFolderInitTeamKeyRotationDetails
+        {
+            get
+            {
+                return this is EncryptedFolderInitTeamKeyRotationDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EncryptedFolderInitTeamKeyRotationDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public EncryptedFolderInitTeamKeyRotationDetails AsEncryptedFolderInitTeamKeyRotationDetails
+        {
+            get
+            {
+                return this as EncryptedFolderInitTeamKeyRotationDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// EncryptedFolderInitTeamUnenrollmentDetails</para>
+        /// </summary>
+        public bool IsEncryptedFolderInitTeamUnenrollmentDetails
+        {
+            get
+            {
+                return this is EncryptedFolderInitTeamUnenrollmentDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EncryptedFolderInitTeamUnenrollmentDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public EncryptedFolderInitTeamUnenrollmentDetails AsEncryptedFolderInitTeamUnenrollmentDetails
+        {
+            get
+            {
+                return this as EncryptedFolderInitTeamUnenrollmentDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// EncryptedFolderRemoveBackupKeyDetails</para>
+        /// </summary>
+        public bool IsEncryptedFolderRemoveBackupKeyDetails
+        {
+            get
+            {
+                return this is EncryptedFolderRemoveBackupKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EncryptedFolderRemoveBackupKeyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public EncryptedFolderRemoveBackupKeyDetails AsEncryptedFolderRemoveBackupKeyDetails
+        {
+            get
+            {
+                return this as EncryptedFolderRemoveBackupKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// EncryptedFolderRotateTeamKeyDetails</para>
+        /// </summary>
+        public bool IsEncryptedFolderRotateTeamKeyDetails
+        {
+            get
+            {
+                return this is EncryptedFolderRotateTeamKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EncryptedFolderRotateTeamKeyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public EncryptedFolderRotateTeamKeyDetails AsEncryptedFolderRotateTeamKeyDetails
+        {
+            get
+            {
+                return this as EncryptedFolderRotateTeamKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// EncryptedFolderUnenrollClientDetails</para>
+        /// </summary>
+        public bool IsEncryptedFolderUnenrollClientDetails
+        {
+            get
+            {
+                return this is EncryptedFolderUnenrollClientDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EncryptedFolderUnenrollClientDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public EncryptedFolderUnenrollClientDetails AsEncryptedFolderUnenrollClientDetails
+        {
+            get
+            {
+                return this as EncryptedFolderUnenrollClientDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamEncryptionKeyActivateKeyDetails</para>
+        /// </summary>
+        public bool IsTeamEncryptionKeyActivateKeyDetails
+        {
+            get
+            {
+                return this is TeamEncryptionKeyActivateKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamEncryptionKeyActivateKeyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamEncryptionKeyActivateKeyDetails AsTeamEncryptionKeyActivateKeyDetails
+        {
+            get
+            {
+                return this as TeamEncryptionKeyActivateKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamEncryptionKeyCancelKeyDeletionDetails</para>
+        /// </summary>
+        public bool IsTeamEncryptionKeyCancelKeyDeletionDetails
+        {
+            get
+            {
+                return this is TeamEncryptionKeyCancelKeyDeletionDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamEncryptionKeyCancelKeyDeletionDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamEncryptionKeyCancelKeyDeletionDetails AsTeamEncryptionKeyCancelKeyDeletionDetails
+        {
+            get
+            {
+                return this as TeamEncryptionKeyCancelKeyDeletionDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamEncryptionKeyCreateKeyDetails</para>
+        /// </summary>
+        public bool IsTeamEncryptionKeyCreateKeyDetails
+        {
+            get
+            {
+                return this is TeamEncryptionKeyCreateKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamEncryptionKeyCreateKeyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamEncryptionKeyCreateKeyDetails AsTeamEncryptionKeyCreateKeyDetails
+        {
+            get
+            {
+                return this as TeamEncryptionKeyCreateKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamEncryptionKeyDeactivateKeyDetails</para>
+        /// </summary>
+        public bool IsTeamEncryptionKeyDeactivateKeyDetails
+        {
+            get
+            {
+                return this is TeamEncryptionKeyDeactivateKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamEncryptionKeyDeactivateKeyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamEncryptionKeyDeactivateKeyDetails AsTeamEncryptionKeyDeactivateKeyDetails
+        {
+            get
+            {
+                return this as TeamEncryptionKeyDeactivateKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamEncryptionKeyDeleteKeyDetails</para>
+        /// </summary>
+        public bool IsTeamEncryptionKeyDeleteKeyDetails
+        {
+            get
+            {
+                return this is TeamEncryptionKeyDeleteKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamEncryptionKeyDeleteKeyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamEncryptionKeyDeleteKeyDetails AsTeamEncryptionKeyDeleteKeyDetails
+        {
+            get
+            {
+                return this as TeamEncryptionKeyDeleteKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamEncryptionKeyDisableKeyDetails</para>
+        /// </summary>
+        public bool IsTeamEncryptionKeyDisableKeyDetails
+        {
+            get
+            {
+                return this is TeamEncryptionKeyDisableKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamEncryptionKeyDisableKeyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamEncryptionKeyDisableKeyDetails AsTeamEncryptionKeyDisableKeyDetails
+        {
+            get
+            {
+                return this as TeamEncryptionKeyDisableKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamEncryptionKeyEnableKeyDetails</para>
+        /// </summary>
+        public bool IsTeamEncryptionKeyEnableKeyDetails
+        {
+            get
+            {
+                return this is TeamEncryptionKeyEnableKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamEncryptionKeyEnableKeyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamEncryptionKeyEnableKeyDetails AsTeamEncryptionKeyEnableKeyDetails
+        {
+            get
+            {
+                return this as TeamEncryptionKeyEnableKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamEncryptionKeyRotateKeyDetails</para>
+        /// </summary>
+        public bool IsTeamEncryptionKeyRotateKeyDetails
+        {
+            get
+            {
+                return this is TeamEncryptionKeyRotateKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamEncryptionKeyRotateKeyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamEncryptionKeyRotateKeyDetails AsTeamEncryptionKeyRotateKeyDetails
+        {
+            get
+            {
+                return this as TeamEncryptionKeyRotateKeyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamEncryptionKeyScheduleKeyDeletionDetails</para>
+        /// </summary>
+        public bool IsTeamEncryptionKeyScheduleKeyDeletionDetails
+        {
+            get
+            {
+                return this is TeamEncryptionKeyScheduleKeyDeletionDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamEncryptionKeyScheduleKeyDeletionDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamEncryptionKeyScheduleKeyDeletionDetails AsTeamEncryptionKeyScheduleKeyDeletionDetails
+        {
+            get
+            {
+                return this as TeamEncryptionKeyScheduleKeyDeletionDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// ApplyNamingConventionDetails</para>
         /// </summary>
         public bool IsApplyNamingConventionDetails
@@ -1792,6 +3051,29 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as FileAddDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// FileAddFromAutomationDetails</para>
+        /// </summary>
+        public bool IsFileAddFromAutomationDetails
+        {
+            get
+            {
+                return this is FileAddFromAutomationDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FileAddFromAutomationDetails, or <c>null</c>.</para>
+        /// </summary>
+        public FileAddFromAutomationDetails AsFileAddFromAutomationDetails
+        {
+            get
+            {
+                return this as FileAddFromAutomationDetails;
             }
         }
 
@@ -2275,6 +3557,76 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ReplayFileDeleteDetails</para>
+        /// </summary>
+        public bool IsReplayFileDeleteDetails
+        {
+            get
+            {
+                return this is ReplayFileDeleteDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ReplayFileDeleteDetails, or <c>null</c>.</para>
+        /// </summary>
+        public ReplayFileDeleteDetails AsReplayFileDeleteDetails
+        {
+            get
+            {
+                return this as ReplayFileDeleteDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ReplayFileDownloadedDetails</para>
+        /// </summary>
+        public bool IsReplayFileDownloadedDetails
+        {
+            get
+            {
+                return this is ReplayFileDownloadedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ReplayFileDownloadedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public ReplayFileDownloadedDetails AsReplayFileDownloadedDetails
+        {
+            get
+            {
+                return this as ReplayFileDownloadedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ReplayTeamProjectCreatedDetails</para>
+        /// </summary>
+        public bool IsReplayTeamProjectCreatedDetails
+        {
+            get
+            {
+                return this is ReplayTeamProjectCreatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ReplayTeamProjectCreatedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ReplayTeamProjectCreatedDetails AsReplayTeamProjectCreatedDetails
+        {
+            get
+            {
+                return this as ReplayTeamProjectCreatedDetails;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is RewindFolderDetails</para>
         /// </summary>
         public bool IsRewindFolderDetails
@@ -2408,6 +3760,29 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as EmailIngestReceiveFileDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// FileRequestAutoCloseDetails</para>
+        /// </summary>
+        public bool IsFileRequestAutoCloseDetails
+        {
+            get
+            {
+                return this is FileRequestAutoCloseDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FileRequestAutoCloseDetails, or <c>null</c>.</para>
+        /// </summary>
+        public FileRequestAutoCloseDetails AsFileRequestAutoCloseDetails
+        {
+            get
+            {
+                return this as FileRequestAutoCloseDetails;
             }
         }
 
@@ -2706,6 +4081,30 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as GroupDescriptionUpdatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// GroupExternalSharingSettingOverrideChangedDetails</para>
+        /// </summary>
+        public bool IsGroupExternalSharingSettingOverrideChangedDetails
+        {
+            get
+            {
+                return this is GroupExternalSharingSettingOverrideChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a GroupExternalSharingSettingOverrideChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public GroupExternalSharingSettingOverrideChangedDetails AsGroupExternalSharingSettingOverrideChangedDetails
+        {
+            get
+            {
+                return this as GroupExternalSharingSettingOverrideChangedDetails;
             }
         }
 
@@ -3094,6 +4493,97 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as SsoErrorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is AddonAssignedDetails</para>
+        /// </summary>
+        public bool IsAddonAssignedDetails
+        {
+            get
+            {
+                return this is AddonAssignedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AddonAssignedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public AddonAssignedDetails AsAddonAssignedDetails
+        {
+            get
+            {
+                return this as AddonAssignedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is AddonRemovedDetails</para>
+        /// </summary>
+        public bool IsAddonRemovedDetails
+        {
+            get
+            {
+                return this is AddonRemovedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AddonRemovedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public AddonRemovedDetails AsAddonRemovedDetails
+        {
+            get
+            {
+                return this as AddonRemovedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// BackupAdminInvitationSentDetails</para>
+        /// </summary>
+        public bool IsBackupAdminInvitationSentDetails
+        {
+            get
+            {
+                return this is BackupAdminInvitationSentDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a BackupAdminInvitationSentDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public BackupAdminInvitationSentDetails AsBackupAdminInvitationSentDetails
+        {
+            get
+            {
+                return this as BackupAdminInvitationSentDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// BackupInvitationOpenedDetails</para>
+        /// </summary>
+        public bool IsBackupInvitationOpenedDetails
+        {
+            get
+            {
+                return this is BackupInvitationOpenedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a BackupInvitationOpenedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public BackupInvitationOpenedDetails AsBackupInvitationOpenedDetails
+        {
+            get
+            {
+                return this as BackupInvitationOpenedDetails;
             }
         }
 
@@ -3632,6 +5122,54 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as PendingSecondaryEmailAddedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProductAssignedToMemberDetails</para>
+        /// </summary>
+        public bool IsProductAssignedToMemberDetails
+        {
+            get
+            {
+                return this is ProductAssignedToMemberDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProductAssignedToMemberDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ProductAssignedToMemberDetails AsProductAssignedToMemberDetails
+        {
+            get
+            {
+                return this as ProductAssignedToMemberDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProductRemovedFromMemberDetails</para>
+        /// </summary>
+        public bool IsProductRemovedFromMemberDetails
+        {
+            get
+            {
+                return this is ProductRemovedFromMemberDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProductRemovedFromMemberDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ProductRemovedFromMemberDetails AsProductRemovedFromMemberDetails
+        {
+            get
+            {
+                return this as ProductRemovedFromMemberDetails;
             }
         }
 
@@ -4912,6 +6450,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// ProtectInternalDomainsChangedDetails</para>
+        /// </summary>
+        public bool IsProtectInternalDomainsChangedDetails
+        {
+            get
+            {
+                return this is ProtectInternalDomainsChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectInternalDomainsChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ProtectInternalDomainsChangedDetails AsProtectInternalDomainsChangedDetails
+        {
+            get
+            {
+                return this as ProtectInternalDomainsChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// ClassificationCreateReportDetails</para>
         /// </summary>
         public bool IsClassificationCreateReportDetails
@@ -5097,6 +6659,54 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as ExternalSharingReportFailedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MemberAccessDetailsCreateReportDetails</para>
+        /// </summary>
+        public bool IsMemberAccessDetailsCreateReportDetails
+        {
+            get
+            {
+                return this is MemberAccessDetailsCreateReportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MemberAccessDetailsCreateReportDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MemberAccessDetailsCreateReportDetails AsMemberAccessDetailsCreateReportDetails
+        {
+            get
+            {
+                return this as MemberAccessDetailsCreateReportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MemberAccessDetailsCreateReportFailedDetails</para>
+        /// </summary>
+        public bool IsMemberAccessDetailsCreateReportFailedDetails
+        {
+            get
+            {
+                return this is MemberAccessDetailsCreateReportFailedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MemberAccessDetailsCreateReportFailedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MemberAccessDetailsCreateReportFailedDetails AsMemberAccessDetailsCreateReportFailedDetails
+        {
+            get
+            {
+                return this as MemberAccessDetailsCreateReportFailedDetails;
             }
         }
 
@@ -5317,6 +6927,102 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// RansomwareAlertCreateReportDetails</para>
+        /// </summary>
+        public bool IsRansomwareAlertCreateReportDetails
+        {
+            get
+            {
+                return this is RansomwareAlertCreateReportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a RansomwareAlertCreateReportDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public RansomwareAlertCreateReportDetails AsRansomwareAlertCreateReportDetails
+        {
+            get
+            {
+                return this as RansomwareAlertCreateReportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// RansomwareAlertCreateReportFailedDetails</para>
+        /// </summary>
+        public bool IsRansomwareAlertCreateReportFailedDetails
+        {
+            get
+            {
+                return this is RansomwareAlertCreateReportFailedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a RansomwareAlertCreateReportFailedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public RansomwareAlertCreateReportFailedDetails AsRansomwareAlertCreateReportFailedDetails
+        {
+            get
+            {
+                return this as RansomwareAlertCreateReportFailedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SharedFoldersCreateReportDetails</para>
+        /// </summary>
+        public bool IsSharedFoldersCreateReportDetails
+        {
+            get
+            {
+                return this is SharedFoldersCreateReportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SharedFoldersCreateReportDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SharedFoldersCreateReportDetails AsSharedFoldersCreateReportDetails
+        {
+            get
+            {
+                return this as SharedFoldersCreateReportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SharedFoldersCreateReportFailedDetails</para>
+        /// </summary>
+        public bool IsSharedFoldersCreateReportFailedDetails
+        {
+            get
+            {
+                return this is SharedFoldersCreateReportFailedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SharedFoldersCreateReportFailedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SharedFoldersCreateReportFailedDetails AsSharedFoldersCreateReportFailedDetails
+        {
+            get
+            {
+                return this as SharedFoldersCreateReportFailedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// SmartSyncCreateAdminPrivilegeReportDetails</para>
         /// </summary>
         public bool IsSmartSyncCreateAdminPrivilegeReportDetails
@@ -5384,6 +7090,102 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as TeamActivityCreateReportFailDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamFoldersCreateReportDetails</para>
+        /// </summary>
+        public bool IsTeamFoldersCreateReportDetails
+        {
+            get
+            {
+                return this is TeamFoldersCreateReportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamFoldersCreateReportDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamFoldersCreateReportDetails AsTeamFoldersCreateReportDetails
+        {
+            get
+            {
+                return this as TeamFoldersCreateReportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamFoldersCreateReportFailedDetails</para>
+        /// </summary>
+        public bool IsTeamFoldersCreateReportFailedDetails
+        {
+            get
+            {
+                return this is TeamFoldersCreateReportFailedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamFoldersCreateReportFailedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamFoldersCreateReportFailedDetails AsTeamFoldersCreateReportFailedDetails
+        {
+            get
+            {
+                return this as TeamFoldersCreateReportFailedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamStorageCreateReportDetails</para>
+        /// </summary>
+        public bool IsTeamStorageCreateReportDetails
+        {
+            get
+            {
+                return this is TeamStorageCreateReportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamStorageCreateReportDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamStorageCreateReportDetails AsTeamStorageCreateReportDetails
+        {
+            get
+            {
+                return this as TeamStorageCreateReportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamStorageCreateReportFailedDetails</para>
+        /// </summary>
+        public bool IsTeamStorageCreateReportFailedDetails
+        {
+            get
+            {
+                return this is TeamStorageCreateReportFailedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamStorageCreateReportFailedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamStorageCreateReportFailedDetails AsTeamStorageCreateReportFailedDetails
+        {
+            get
+            {
+                return this as TeamStorageCreateReportFailedDetails;
             }
         }
 
@@ -5661,6 +7463,291 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as OpenNoteSharedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ReplayFileSharedLinkCreatedDetails</para>
+        /// </summary>
+        public bool IsReplayFileSharedLinkCreatedDetails
+        {
+            get
+            {
+                return this is ReplayFileSharedLinkCreatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ReplayFileSharedLinkCreatedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ReplayFileSharedLinkCreatedDetails AsReplayFileSharedLinkCreatedDetails
+        {
+            get
+            {
+                return this as ReplayFileSharedLinkCreatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ReplayFileSharedLinkModifiedDetails</para>
+        /// </summary>
+        public bool IsReplayFileSharedLinkModifiedDetails
+        {
+            get
+            {
+                return this is ReplayFileSharedLinkModifiedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ReplayFileSharedLinkModifiedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ReplayFileSharedLinkModifiedDetails AsReplayFileSharedLinkModifiedDetails
+        {
+            get
+            {
+                return this as ReplayFileSharedLinkModifiedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ReplayProjectTeamAddDetails</para>
+        /// </summary>
+        public bool IsReplayProjectTeamAddDetails
+        {
+            get
+            {
+                return this is ReplayProjectTeamAddDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ReplayProjectTeamAddDetails, or <c>null</c>.</para>
+        /// </summary>
+        public ReplayProjectTeamAddDetails AsReplayProjectTeamAddDetails
+        {
+            get
+            {
+                return this as ReplayProjectTeamAddDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ReplayProjectTeamDeleteDetails</para>
+        /// </summary>
+        public bool IsReplayProjectTeamDeleteDetails
+        {
+            get
+            {
+                return this is ReplayProjectTeamDeleteDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ReplayProjectTeamDeleteDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ReplayProjectTeamDeleteDetails AsReplayProjectTeamDeleteDetails
+        {
+            get
+            {
+                return this as ReplayProjectTeamDeleteDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SendAndTrackFileAddedDetails</para>
+        /// </summary>
+        public bool IsSendAndTrackFileAddedDetails
+        {
+            get
+            {
+                return this is SendAndTrackFileAddedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SendAndTrackFileAddedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public SendAndTrackFileAddedDetails AsSendAndTrackFileAddedDetails
+        {
+            get
+            {
+                return this as SendAndTrackFileAddedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SendAndTrackFileRenamedDetails</para>
+        /// </summary>
+        public bool IsSendAndTrackFileRenamedDetails
+        {
+            get
+            {
+                return this is SendAndTrackFileRenamedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SendAndTrackFileRenamedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SendAndTrackFileRenamedDetails AsSendAndTrackFileRenamedDetails
+        {
+            get
+            {
+                return this as SendAndTrackFileRenamedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SendAndTrackFileUpdatedDetails</para>
+        /// </summary>
+        public bool IsSendAndTrackFileUpdatedDetails
+        {
+            get
+            {
+                return this is SendAndTrackFileUpdatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SendAndTrackFileUpdatedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SendAndTrackFileUpdatedDetails AsSendAndTrackFileUpdatedDetails
+        {
+            get
+            {
+                return this as SendAndTrackFileUpdatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SendAndTrackLinkCreatedDetails</para>
+        /// </summary>
+        public bool IsSendAndTrackLinkCreatedDetails
+        {
+            get
+            {
+                return this is SendAndTrackLinkCreatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SendAndTrackLinkCreatedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SendAndTrackLinkCreatedDetails AsSendAndTrackLinkCreatedDetails
+        {
+            get
+            {
+                return this as SendAndTrackLinkCreatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SendAndTrackLinkDeletedDetails</para>
+        /// </summary>
+        public bool IsSendAndTrackLinkDeletedDetails
+        {
+            get
+            {
+                return this is SendAndTrackLinkDeletedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SendAndTrackLinkDeletedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SendAndTrackLinkDeletedDetails AsSendAndTrackLinkDeletedDetails
+        {
+            get
+            {
+                return this as SendAndTrackLinkDeletedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SendAndTrackLinkUpdatedDetails</para>
+        /// </summary>
+        public bool IsSendAndTrackLinkUpdatedDetails
+        {
+            get
+            {
+                return this is SendAndTrackLinkUpdatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SendAndTrackLinkUpdatedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SendAndTrackLinkUpdatedDetails AsSendAndTrackLinkUpdatedDetails
+        {
+            get
+            {
+                return this as SendAndTrackLinkUpdatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SendAndTrackLinkViewedDetails</para>
+        /// </summary>
+        public bool IsSendAndTrackLinkViewedDetails
+        {
+            get
+            {
+                return this is SendAndTrackLinkViewedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SendAndTrackLinkViewedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public SendAndTrackLinkViewedDetails AsSendAndTrackLinkViewedDetails
+        {
+            get
+            {
+                return this as SendAndTrackLinkViewedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SendAndTrackRemovedFileAndAssociatedLinksDetails</para>
+        /// </summary>
+        public bool IsSendAndTrackRemovedFileAndAssociatedLinksDetails
+        {
+            get
+            {
+                return this is SendAndTrackRemovedFileAndAssociatedLinksDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SendAndTrackRemovedFileAndAssociatedLinksDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SendAndTrackRemovedFileAndAssociatedLinksDetails AsSendAndTrackRemovedFileAndAssociatedLinksDetails
+        {
+            get
+            {
+                return this as SendAndTrackRemovedFileAndAssociatedLinksDetails;
             }
         }
 
@@ -6950,6 +9037,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// SharedLinkRemoveVisitorDetails</para>
+        /// </summary>
+        public bool IsSharedLinkRemoveVisitorDetails
+        {
+            get
+            {
+                return this is SharedLinkRemoveVisitorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SharedLinkRemoveVisitorDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SharedLinkRemoveVisitorDetails AsSharedLinkRemoveVisitorDetails
+        {
+            get
+            {
+                return this as SharedLinkRemoveVisitorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// SharedLinkSettingsAddExpirationDetails</para>
         /// </summary>
         public bool IsSharedLinkSettingsAddExpirationDetails
@@ -7857,6 +9968,219 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SignSignatureRequestCanceledDetails</para>
+        /// </summary>
+        public bool IsSignSignatureRequestCanceledDetails
+        {
+            get
+            {
+                return this is SignSignatureRequestCanceledDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SignSignatureRequestCanceledDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SignSignatureRequestCanceledDetails AsSignSignatureRequestCanceledDetails
+        {
+            get
+            {
+                return this as SignSignatureRequestCanceledDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SignSignatureRequestCompletedDetails</para>
+        /// </summary>
+        public bool IsSignSignatureRequestCompletedDetails
+        {
+            get
+            {
+                return this is SignSignatureRequestCompletedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SignSignatureRequestCompletedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SignSignatureRequestCompletedDetails AsSignSignatureRequestCompletedDetails
+        {
+            get
+            {
+                return this as SignSignatureRequestCompletedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SignSignatureRequestDeclinedDetails</para>
+        /// </summary>
+        public bool IsSignSignatureRequestDeclinedDetails
+        {
+            get
+            {
+                return this is SignSignatureRequestDeclinedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SignSignatureRequestDeclinedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SignSignatureRequestDeclinedDetails AsSignSignatureRequestDeclinedDetails
+        {
+            get
+            {
+                return this as SignSignatureRequestDeclinedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SignSignatureRequestOpenedDetails</para>
+        /// </summary>
+        public bool IsSignSignatureRequestOpenedDetails
+        {
+            get
+            {
+                return this is SignSignatureRequestOpenedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SignSignatureRequestOpenedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SignSignatureRequestOpenedDetails AsSignSignatureRequestOpenedDetails
+        {
+            get
+            {
+                return this as SignSignatureRequestOpenedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SignSignatureRequestReminderSentDetails</para>
+        /// </summary>
+        public bool IsSignSignatureRequestReminderSentDetails
+        {
+            get
+            {
+                return this is SignSignatureRequestReminderSentDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SignSignatureRequestReminderSentDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SignSignatureRequestReminderSentDetails AsSignSignatureRequestReminderSentDetails
+        {
+            get
+            {
+                return this as SignSignatureRequestReminderSentDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SignSignatureRequestSentDetails</para>
+        /// </summary>
+        public bool IsSignSignatureRequestSentDetails
+        {
+            get
+            {
+                return this is SignSignatureRequestSentDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SignSignatureRequestSentDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SignSignatureRequestSentDetails AsSignSignatureRequestSentDetails
+        {
+            get
+            {
+                return this as SignSignatureRequestSentDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SignTemplateCreatedDetails</para>
+        /// </summary>
+        public bool IsSignTemplateCreatedDetails
+        {
+            get
+            {
+                return this is SignTemplateCreatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SignTemplateCreatedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public SignTemplateCreatedDetails AsSignTemplateCreatedDetails
+        {
+            get
+            {
+                return this as SignTemplateCreatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SignTemplateSharedDetails</para>
+        /// </summary>
+        public bool IsSignTemplateSharedDetails
+        {
+            get
+            {
+                return this is SignTemplateSharedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SignTemplateSharedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public SignTemplateSharedDetails AsSignTemplateSharedDetails
+        {
+            get
+            {
+                return this as SignTemplateSharedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// RiscSecurityEventDetails</para>
+        /// </summary>
+        public bool IsRiscSecurityEventDetails
+        {
+            get
+            {
+                return this is RiscSecurityEventDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a RiscSecurityEventDetails, or <c>null</c>.</para>
+        /// </summary>
+        public RiscSecurityEventDetails AsRiscSecurityEventDetails
+        {
+            get
+            {
+                return this as RiscSecurityEventDetails;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is SsoAddCertDetails</para>
         /// </summary>
         public bool IsSsoAddCertDetails
@@ -8201,6 +10525,78 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// TeamFolderSpaceLimitsChangeCapsTypeDetails</para>
+        /// </summary>
+        public bool IsTeamFolderSpaceLimitsChangeCapsTypeDetails
+        {
+            get
+            {
+                return this is TeamFolderSpaceLimitsChangeCapsTypeDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamFolderSpaceLimitsChangeCapsTypeDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamFolderSpaceLimitsChangeCapsTypeDetails AsTeamFolderSpaceLimitsChangeCapsTypeDetails
+        {
+            get
+            {
+                return this as TeamFolderSpaceLimitsChangeCapsTypeDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamFolderSpaceLimitsChangeLimitDetails</para>
+        /// </summary>
+        public bool IsTeamFolderSpaceLimitsChangeLimitDetails
+        {
+            get
+            {
+                return this is TeamFolderSpaceLimitsChangeLimitDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamFolderSpaceLimitsChangeLimitDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamFolderSpaceLimitsChangeLimitDetails AsTeamFolderSpaceLimitsChangeLimitDetails
+        {
+            get
+            {
+                return this as TeamFolderSpaceLimitsChangeLimitDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamFolderSpaceLimitsChangeNotificationTargetDetails</para>
+        /// </summary>
+        public bool IsTeamFolderSpaceLimitsChangeNotificationTargetDetails
+        {
+            get
+            {
+                return this is TeamFolderSpaceLimitsChangeNotificationTargetDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamFolderSpaceLimitsChangeNotificationTargetDetails,
+        /// or <c>null</c>.</para>
+        /// </summary>
+        public TeamFolderSpaceLimitsChangeNotificationTargetDetails AsTeamFolderSpaceLimitsChangeNotificationTargetDetails
+        {
+            get
+            {
+                return this as TeamFolderSpaceLimitsChangeNotificationTargetDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// TeamSelectiveSyncSettingsChangedDetails</para>
         /// </summary>
         public bool IsTeamSelectiveSyncSettingsChangedDetails
@@ -8273,6 +10669,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// AiThirdPartySharingDropboxBasePolicyChangedDetails</para>
+        /// </summary>
+        public bool IsAiThirdPartySharingDropboxBasePolicyChangedDetails
+        {
+            get
+            {
+                return this is AiThirdPartySharingDropboxBasePolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AiThirdPartySharingDropboxBasePolicyChangedDetails,
+        /// or <c>null</c>.</para>
+        /// </summary>
+        public AiThirdPartySharingDropboxBasePolicyChangedDetails AsAiThirdPartySharingDropboxBasePolicyChangedDetails
+        {
+            get
+            {
+                return this as AiThirdPartySharingDropboxBasePolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// AllowDownloadDisabledDetails</para>
         /// </summary>
         public bool IsAllowDownloadDisabledDetails
@@ -8314,6 +10734,29 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as AllowDownloadEnabledDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// AppleLoginChangePolicyDetails</para>
+        /// </summary>
+        public bool IsAppleLoginChangePolicyDetails
+        {
+            get
+            {
+                return this is AppleLoginChangePolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AppleLoginChangePolicyDetails, or <c>null</c>.</para>
+        /// </summary>
+        public AppleLoginChangePolicyDetails AsAppleLoginChangePolicyDetails
+        {
+            get
+            {
+                return this as AppleLoginChangePolicyDetails;
             }
         }
 
@@ -8361,6 +10804,30 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as CameraUploadsPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// CaptureTeamSpacePolicyChangedDetails</para>
+        /// </summary>
+        public bool IsCaptureTeamSpacePolicyChangedDetails
+        {
+            get
+            {
+                return this is CaptureTeamSpacePolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CaptureTeamSpacePolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public CaptureTeamSpacePolicyChangedDetails AsCaptureTeamSpacePolicyChangedDetails
+        {
+            get
+            {
+                return this as CaptureTeamSpacePolicyChangedDetails;
             }
         }
 
@@ -8457,6 +10924,54 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as ContentAdministrationPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ContentDeletionProtectionChangePolicyDetails</para>
+        /// </summary>
+        public bool IsContentDeletionProtectionChangePolicyDetails
+        {
+            get
+            {
+                return this is ContentDeletionProtectionChangePolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ContentDeletionProtectionChangePolicyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ContentDeletionProtectionChangePolicyDetails AsContentDeletionProtectionChangePolicyDetails
+        {
+            get
+            {
+                return this as ContentDeletionProtectionChangePolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DashExternalSharingPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsDashExternalSharingPolicyChangedDetails
+        {
+            get
+            {
+                return this is DashExternalSharingPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DashExternalSharingPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DashExternalSharingPolicyChangedDetails AsDashExternalSharingPolicyChangedDetails
+        {
+            get
+            {
+                return this as DashExternalSharingPolicyChangedDetails;
             }
         }
 
@@ -9035,6 +11550,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// FlexibleFileNamesPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsFlexibleFileNamesPolicyChangedDetails
+        {
+            get
+            {
+                return this is FlexibleFileNamesPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FlexibleFileNamesPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public FlexibleFileNamesPolicyChangedDetails AsFlexibleFileNamesPolicyChangedDetails
+        {
+            get
+            {
+                return this as FlexibleFileNamesPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// FolderLinkRestrictionPolicyChangedDetails</para>
         /// </summary>
         public bool IsFolderLinkRestrictionPolicyChangedDetails
@@ -9322,6 +11861,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// MicrosoftLoginChangePolicyDetails</para>
+        /// </summary>
+        public bool IsMicrosoftLoginChangePolicyDetails
+        {
+            get
+            {
+                return this is MicrosoftLoginChangePolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MicrosoftLoginChangePolicyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MicrosoftLoginChangePolicyDetails AsMicrosoftLoginChangePolicyDetails
+        {
+            get
+            {
+                return this as MicrosoftLoginChangePolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// MicrosoftOfficeAddinChangePolicyDetails</para>
         /// </summary>
         public bool IsMicrosoftOfficeAddinChangePolicyDetails
@@ -9561,6 +12124,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// PasskeyLoginPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsPasskeyLoginPolicyChangedDetails
+        {
+            get
+            {
+                return this is PasskeyLoginPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PasskeyLoginPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public PasskeyLoginPolicyChangedDetails AsPasskeyLoginPolicyChangedDetails
+        {
+            get
+            {
+                return this as PasskeyLoginPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// PasswordStrengthRequirementsChangePolicyDetails</para>
         /// </summary>
         public bool IsPasswordStrengthRequirementsChangePolicyDetails
@@ -9604,6 +12191,78 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as PermanentDeleteChangePolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// PreviewsAiPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsPreviewsAiPolicyChangedDetails
+        {
+            get
+            {
+                return this is PreviewsAiPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PreviewsAiPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public PreviewsAiPolicyChangedDetails AsPreviewsAiPolicyChangedDetails
+        {
+            get
+            {
+                return this as PreviewsAiPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ReplayAddingPeoplePolicyChangedDetails</para>
+        /// </summary>
+        public bool IsReplayAddingPeoplePolicyChangedDetails
+        {
+            get
+            {
+                return this is ReplayAddingPeoplePolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ReplayAddingPeoplePolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ReplayAddingPeoplePolicyChangedDetails AsReplayAddingPeoplePolicyChangedDetails
+        {
+            get
+            {
+                return this as ReplayAddingPeoplePolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ReplaySharingPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsReplaySharingPolicyChangedDetails
+        {
+            get
+            {
+                return this is ReplaySharingPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ReplaySharingPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ReplaySharingPolicyChangedDetails AsReplaySharingPolicyChangedDetails
+        {
+            get
+            {
+                return this as ReplaySharingPolicyChangedDetails;
             }
         }
 
@@ -9656,6 +12315,54 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// SendAndTrackPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsSendAndTrackPolicyChangedDetails
+        {
+            get
+            {
+                return this is SendAndTrackPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SendAndTrackPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SendAndTrackPolicyChangedDetails AsSendAndTrackPolicyChangedDetails
+        {
+            get
+            {
+                return this as SendAndTrackPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SendExternalSharingPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsSendExternalSharingPolicyChangedDetails
+        {
+            get
+            {
+                return this is SendExternalSharingPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SendExternalSharingPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SendExternalSharingPolicyChangedDetails AsSendExternalSharingPolicyChangedDetails
+        {
+            get
+            {
+                return this as SendExternalSharingPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// SendForSignaturePolicyChangedDetails</para>
         /// </summary>
         public bool IsSendForSignaturePolicyChangedDetails
@@ -9675,6 +12382,30 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as SendForSignaturePolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SharedLinkDefaultPermissionsPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsSharedLinkDefaultPermissionsPolicyChangedDetails
+        {
+            get
+            {
+                return this is SharedLinkDefaultPermissionsPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SharedLinkDefaultPermissionsPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SharedLinkDefaultPermissionsPolicyChangedDetails AsSharedLinkDefaultPermissionsPolicyChangedDetails
+        {
+            get
+            {
+                return this as SharedLinkDefaultPermissionsPolicyChangedDetails;
             }
         }
 
@@ -9896,6 +12627,54 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// SignExternalSharingPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsSignExternalSharingPolicyChangedDetails
+        {
+            get
+            {
+                return this is SignExternalSharingPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SignExternalSharingPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SignExternalSharingPolicyChangedDetails AsSignExternalSharingPolicyChangedDetails
+        {
+            get
+            {
+                return this as SignExternalSharingPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// SignTemplateCreationPermissionChangedDetails</para>
+        /// </summary>
+        public bool IsSignTemplateCreationPermissionChangedDetails
+        {
+            get
+            {
+                return this is SignTemplateCreationPermissionChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SignTemplateCreationPermissionChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SignTemplateCreationPermissionChangedDetails AsSignTemplateCreationPermissionChangedDetails
+        {
+            get
+            {
+                return this as SignTemplateCreationPermissionChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// SmarterSmartSyncPolicyChangedDetails</para>
         /// </summary>
         public bool IsSmarterSmartSyncPolicyChangedDetails
@@ -10012,6 +12791,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// StackCrossTeamAccessPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsStackCrossTeamAccessPolicyChangedDetails
+        {
+            get
+            {
+                return this is StackCrossTeamAccessPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a StackCrossTeamAccessPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public StackCrossTeamAccessPolicyChangedDetails AsStackCrossTeamAccessPolicyChangedDetails
+        {
+            get
+            {
+                return this as StackCrossTeamAccessPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// TeamBrandingPolicyChangedDetails</para>
         /// </summary>
         public bool IsTeamBrandingPolicyChangedDetails
@@ -10055,6 +12858,30 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as TeamExtensionsPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamMemberStorageRequestPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsTeamMemberStorageRequestPolicyChangedDetails
+        {
+            get
+            {
+                return this is TeamMemberStorageRequestPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamMemberStorageRequestPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamMemberStorageRequestPolicyChangedDetails AsTeamMemberStorageRequestPolicyChangedDetails
+        {
+            get
+            {
+                return this as TeamMemberStorageRequestPolicyChangedDetails;
             }
         }
 
@@ -10172,6 +12999,30 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as TfaRemoveExceptionDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TopLevelContentPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsTopLevelContentPolicyChangedDetails
+        {
+            get
+            {
+                return this is TopLevelContentPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TopLevelContentPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TopLevelContentPolicyChangedDetails AsTopLevelContentPolicyChangedDetails
+        {
+            get
+            {
+                return this as TopLevelContentPolicyChangedDetails;
             }
         }
 
@@ -10595,6 +13446,50 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as TeamProfileRemoveLogoDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is PasskeyAddDetails</para>
+        /// </summary>
+        public bool IsPasskeyAddDetails
+        {
+            get
+            {
+                return this is PasskeyAddDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PasskeyAddDetails, or <c>null</c>.</para>
+        /// </summary>
+        public PasskeyAddDetails AsPasskeyAddDetails
+        {
+            get
+            {
+                return this as PasskeyAddDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is PasskeyRemoveDetails</para>
+        /// </summary>
+        public bool IsPasskeyRemoveDetails
+        {
+            get
+            {
+                return this is PasskeyRemoveDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PasskeyRemoveDetails, or <c>null</c>.</para>
+        /// </summary>
+        public PasskeyRemoveDetails AsPasskeyRemoveDetails
+        {
+            get
+            {
+                return this as PasskeyRemoveDetails;
             }
         }
 
@@ -11433,6 +14328,18 @@ namespace Dropbox.Api.TeamLog
                     AdminAlertingTriggeredAlertDetails.Encoder.EncodeFields((AdminAlertingTriggeredAlertDetails)value, writer);
                     return;
                 }
+                if (value is RansomwareRestoreProcessCompletedDetails)
+                {
+                    WriteProperty(".tag", "ransomware_restore_process_completed_details", writer, enc.StringEncoder.Instance);
+                    RansomwareRestoreProcessCompletedDetails.Encoder.EncodeFields((RansomwareRestoreProcessCompletedDetails)value, writer);
+                    return;
+                }
+                if (value is RansomwareRestoreProcessStartedDetails)
+                {
+                    WriteProperty(".tag", "ransomware_restore_process_started_details", writer, enc.StringEncoder.Instance);
+                    RansomwareRestoreProcessStartedDetails.Encoder.EncodeFields((RansomwareRestoreProcessStartedDetails)value, writer);
+                    return;
+                }
                 if (value is AppBlockedByPermissionsDetails)
                 {
                     WriteProperty(".tag", "app_blocked_by_permissions_details", writer, enc.StringEncoder.Instance);
@@ -11521,6 +14428,198 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "file_unresolve_comment_details", writer, enc.StringEncoder.Instance);
                     FileUnresolveCommentDetails.Encoder.EncodeFields((FileUnresolveCommentDetails)value, writer);
+                    return;
+                }
+                if (value is DashAddedCommentToStackDetails)
+                {
+                    WriteProperty(".tag", "dash_added_comment_to_stack_details", writer, enc.StringEncoder.Instance);
+                    DashAddedCommentToStackDetails.Encoder.EncodeFields((DashAddedCommentToStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashAddedConnectorDetails)
+                {
+                    WriteProperty(".tag", "dash_added_connector_details", writer, enc.StringEncoder.Instance);
+                    DashAddedConnectorDetails.Encoder.EncodeFields((DashAddedConnectorDetails)value, writer);
+                    return;
+                }
+                if (value is DashAddedLinkToStackDetails)
+                {
+                    WriteProperty(".tag", "dash_added_link_to_stack_details", writer, enc.StringEncoder.Instance);
+                    DashAddedLinkToStackDetails.Encoder.EncodeFields((DashAddedLinkToStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashAddedTeamEmailDomainAllowlistDetails)
+                {
+                    WriteProperty(".tag", "dash_added_team_email_domain_allowlist_details", writer, enc.StringEncoder.Instance);
+                    DashAddedTeamEmailDomainAllowlistDetails.Encoder.EncodeFields((DashAddedTeamEmailDomainAllowlistDetails)value, writer);
+                    return;
+                }
+                if (value is DashAdminAddedOrgWideConnectorDetails)
+                {
+                    WriteProperty(".tag", "dash_admin_added_org_wide_connector_details", writer, enc.StringEncoder.Instance);
+                    DashAdminAddedOrgWideConnectorDetails.Encoder.EncodeFields((DashAdminAddedOrgWideConnectorDetails)value, writer);
+                    return;
+                }
+                if (value is DashAdminDisabledConnectorDetails)
+                {
+                    WriteProperty(".tag", "dash_admin_disabled_connector_details", writer, enc.StringEncoder.Instance);
+                    DashAdminDisabledConnectorDetails.Encoder.EncodeFields((DashAdminDisabledConnectorDetails)value, writer);
+                    return;
+                }
+                if (value is DashAdminEnabledConnectorDetails)
+                {
+                    WriteProperty(".tag", "dash_admin_enabled_connector_details", writer, enc.StringEncoder.Instance);
+                    DashAdminEnabledConnectorDetails.Encoder.EncodeFields((DashAdminEnabledConnectorDetails)value, writer);
+                    return;
+                }
+                if (value is DashAdminRemovedOrgWideConnectorDetails)
+                {
+                    WriteProperty(".tag", "dash_admin_removed_org_wide_connector_details", writer, enc.StringEncoder.Instance);
+                    DashAdminRemovedOrgWideConnectorDetails.Encoder.EncodeFields((DashAdminRemovedOrgWideConnectorDetails)value, writer);
+                    return;
+                }
+                if (value is DashArchivedStackDetails)
+                {
+                    WriteProperty(".tag", "dash_archived_stack_details", writer, enc.StringEncoder.Instance);
+                    DashArchivedStackDetails.Encoder.EncodeFields((DashArchivedStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashChangedAudienceOfSharedLinkToStackDetails)
+                {
+                    WriteProperty(".tag", "dash_changed_audience_of_shared_link_to_stack_details", writer, enc.StringEncoder.Instance);
+                    DashChangedAudienceOfSharedLinkToStackDetails.Encoder.EncodeFields((DashChangedAudienceOfSharedLinkToStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashClonedStackDetails)
+                {
+                    WriteProperty(".tag", "dash_cloned_stack_details", writer, enc.StringEncoder.Instance);
+                    DashClonedStackDetails.Encoder.EncodeFields((DashClonedStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashConnectorToolsCallDetails)
+                {
+                    WriteProperty(".tag", "dash_connector_tools_call_details", writer, enc.StringEncoder.Instance);
+                    DashConnectorToolsCallDetails.Encoder.EncodeFields((DashConnectorToolsCallDetails)value, writer);
+                    return;
+                }
+                if (value is DashCreatedStackDetails)
+                {
+                    WriteProperty(".tag", "dash_created_stack_details", writer, enc.StringEncoder.Instance);
+                    DashCreatedStackDetails.Encoder.EncodeFields((DashCreatedStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashDeletedCommentFromStackDetails)
+                {
+                    WriteProperty(".tag", "dash_deleted_comment_from_stack_details", writer, enc.StringEncoder.Instance);
+                    DashDeletedCommentFromStackDetails.Encoder.EncodeFields((DashDeletedCommentFromStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashDeletedStackDetails)
+                {
+                    WriteProperty(".tag", "dash_deleted_stack_details", writer, enc.StringEncoder.Instance);
+                    DashDeletedStackDetails.Encoder.EncodeFields((DashDeletedStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashEditedCommentInStackDetails)
+                {
+                    WriteProperty(".tag", "dash_edited_comment_in_stack_details", writer, enc.StringEncoder.Instance);
+                    DashEditedCommentInStackDetails.Encoder.EncodeFields((DashEditedCommentInStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashExternalUserOpenedStackDetails)
+                {
+                    WriteProperty(".tag", "dash_external_user_opened_stack_details", writer, enc.StringEncoder.Instance);
+                    DashExternalUserOpenedStackDetails.Encoder.EncodeFields((DashExternalUserOpenedStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashFirstLaunchedDesktopDetails)
+                {
+                    WriteProperty(".tag", "dash_first_launched_desktop_details", writer, enc.StringEncoder.Instance);
+                    DashFirstLaunchedDesktopDetails.Encoder.EncodeFields((DashFirstLaunchedDesktopDetails)value, writer);
+                    return;
+                }
+                if (value is DashFirstLaunchedExtensionDetails)
+                {
+                    WriteProperty(".tag", "dash_first_launched_extension_details", writer, enc.StringEncoder.Instance);
+                    DashFirstLaunchedExtensionDetails.Encoder.EncodeFields((DashFirstLaunchedExtensionDetails)value, writer);
+                    return;
+                }
+                if (value is DashFirstLaunchedWebStartPageDetails)
+                {
+                    WriteProperty(".tag", "dash_first_launched_web_start_page_details", writer, enc.StringEncoder.Instance);
+                    DashFirstLaunchedWebStartPageDetails.Encoder.EncodeFields((DashFirstLaunchedWebStartPageDetails)value, writer);
+                    return;
+                }
+                if (value is DashOpenedSharedLinkToStackDetails)
+                {
+                    WriteProperty(".tag", "dash_opened_shared_link_to_stack_details", writer, enc.StringEncoder.Instance);
+                    DashOpenedSharedLinkToStackDetails.Encoder.EncodeFields((DashOpenedSharedLinkToStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashOpenedStackDetails)
+                {
+                    WriteProperty(".tag", "dash_opened_stack_details", writer, enc.StringEncoder.Instance);
+                    DashOpenedStackDetails.Encoder.EncodeFields((DashOpenedStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashPreviewOptOutStatusChangedDetails)
+                {
+                    WriteProperty(".tag", "dash_preview_opt_out_status_changed_details", writer, enc.StringEncoder.Instance);
+                    DashPreviewOptOutStatusChangedDetails.Encoder.EncodeFields((DashPreviewOptOutStatusChangedDetails)value, writer);
+                    return;
+                }
+                if (value is DashRemovedConnectorDetails)
+                {
+                    WriteProperty(".tag", "dash_removed_connector_details", writer, enc.StringEncoder.Instance);
+                    DashRemovedConnectorDetails.Encoder.EncodeFields((DashRemovedConnectorDetails)value, writer);
+                    return;
+                }
+                if (value is DashRemovedLinkFromStackDetails)
+                {
+                    WriteProperty(".tag", "dash_removed_link_from_stack_details", writer, enc.StringEncoder.Instance);
+                    DashRemovedLinkFromStackDetails.Encoder.EncodeFields((DashRemovedLinkFromStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashRemovedSharedLinkToStackDetails)
+                {
+                    WriteProperty(".tag", "dash_removed_shared_link_to_stack_details", writer, enc.StringEncoder.Instance);
+                    DashRemovedSharedLinkToStackDetails.Encoder.EncodeFields((DashRemovedSharedLinkToStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashRemovedTeamEmailDomainAllowlistDetails)
+                {
+                    WriteProperty(".tag", "dash_removed_team_email_domain_allowlist_details", writer, enc.StringEncoder.Instance);
+                    DashRemovedTeamEmailDomainAllowlistDetails.Encoder.EncodeFields((DashRemovedTeamEmailDomainAllowlistDetails)value, writer);
+                    return;
+                }
+                if (value is DashRenamedStackDetails)
+                {
+                    WriteProperty(".tag", "dash_renamed_stack_details", writer, enc.StringEncoder.Instance);
+                    DashRenamedStackDetails.Encoder.EncodeFields((DashRenamedStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashSharedLinkToStackDetails)
+                {
+                    WriteProperty(".tag", "dash_shared_link_to_stack_details", writer, enc.StringEncoder.Instance);
+                    DashSharedLinkToStackDetails.Encoder.EncodeFields((DashSharedLinkToStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashUnarchivedStackDetails)
+                {
+                    WriteProperty(".tag", "dash_unarchived_stack_details", writer, enc.StringEncoder.Instance);
+                    DashUnarchivedStackDetails.Encoder.EncodeFields((DashUnarchivedStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashViewedCompanyStackDetails)
+                {
+                    WriteProperty(".tag", "dash_viewed_company_stack_details", writer, enc.StringEncoder.Instance);
+                    DashViewedCompanyStackDetails.Encoder.EncodeFields((DashViewedCompanyStackDetails)value, writer);
+                    return;
+                }
+                if (value is DashViewedExternalAiActivityReportDetails)
+                {
+                    WriteProperty(".tag", "dash_viewed_external_ai_activity_report_details", writer, enc.StringEncoder.Instance);
+                    DashViewedExternalAiActivityReportDetails.Encoder.EncodeFields((DashViewedExternalAiActivityReportDetails)value, writer);
                     return;
                 }
                 if (value is GovernancePolicyAddFoldersDetails)
@@ -11847,6 +14946,120 @@ namespace Dropbox.Api.TeamLog
                     EnabledDomainInvitesDetails.Encoder.EncodeFields((EnabledDomainInvitesDetails)value, writer);
                     return;
                 }
+                if (value is EncryptedFolderCancelTeamKeyRotationDetails)
+                {
+                    WriteProperty(".tag", "encrypted_folder_cancel_team_key_rotation_details", writer, enc.StringEncoder.Instance);
+                    EncryptedFolderCancelTeamKeyRotationDetails.Encoder.EncodeFields((EncryptedFolderCancelTeamKeyRotationDetails)value, writer);
+                    return;
+                }
+                if (value is EncryptedFolderEnrollBackupKeyDetails)
+                {
+                    WriteProperty(".tag", "encrypted_folder_enroll_backup_key_details", writer, enc.StringEncoder.Instance);
+                    EncryptedFolderEnrollBackupKeyDetails.Encoder.EncodeFields((EncryptedFolderEnrollBackupKeyDetails)value, writer);
+                    return;
+                }
+                if (value is EncryptedFolderEnrollClientDetails)
+                {
+                    WriteProperty(".tag", "encrypted_folder_enroll_client_details", writer, enc.StringEncoder.Instance);
+                    EncryptedFolderEnrollClientDetails.Encoder.EncodeFields((EncryptedFolderEnrollClientDetails)value, writer);
+                    return;
+                }
+                if (value is EncryptedFolderEnrollTeamDetails)
+                {
+                    WriteProperty(".tag", "encrypted_folder_enroll_team_details", writer, enc.StringEncoder.Instance);
+                    EncryptedFolderEnrollTeamDetails.Encoder.EncodeFields((EncryptedFolderEnrollTeamDetails)value, writer);
+                    return;
+                }
+                if (value is EncryptedFolderFinishTeamUnenrollmentDetails)
+                {
+                    WriteProperty(".tag", "encrypted_folder_finish_team_unenrollment_details", writer, enc.StringEncoder.Instance);
+                    EncryptedFolderFinishTeamUnenrollmentDetails.Encoder.EncodeFields((EncryptedFolderFinishTeamUnenrollmentDetails)value, writer);
+                    return;
+                }
+                if (value is EncryptedFolderInitTeamKeyRotationDetails)
+                {
+                    WriteProperty(".tag", "encrypted_folder_init_team_key_rotation_details", writer, enc.StringEncoder.Instance);
+                    EncryptedFolderInitTeamKeyRotationDetails.Encoder.EncodeFields((EncryptedFolderInitTeamKeyRotationDetails)value, writer);
+                    return;
+                }
+                if (value is EncryptedFolderInitTeamUnenrollmentDetails)
+                {
+                    WriteProperty(".tag", "encrypted_folder_init_team_unenrollment_details", writer, enc.StringEncoder.Instance);
+                    EncryptedFolderInitTeamUnenrollmentDetails.Encoder.EncodeFields((EncryptedFolderInitTeamUnenrollmentDetails)value, writer);
+                    return;
+                }
+                if (value is EncryptedFolderRemoveBackupKeyDetails)
+                {
+                    WriteProperty(".tag", "encrypted_folder_remove_backup_key_details", writer, enc.StringEncoder.Instance);
+                    EncryptedFolderRemoveBackupKeyDetails.Encoder.EncodeFields((EncryptedFolderRemoveBackupKeyDetails)value, writer);
+                    return;
+                }
+                if (value is EncryptedFolderRotateTeamKeyDetails)
+                {
+                    WriteProperty(".tag", "encrypted_folder_rotate_team_key_details", writer, enc.StringEncoder.Instance);
+                    EncryptedFolderRotateTeamKeyDetails.Encoder.EncodeFields((EncryptedFolderRotateTeamKeyDetails)value, writer);
+                    return;
+                }
+                if (value is EncryptedFolderUnenrollClientDetails)
+                {
+                    WriteProperty(".tag", "encrypted_folder_unenroll_client_details", writer, enc.StringEncoder.Instance);
+                    EncryptedFolderUnenrollClientDetails.Encoder.EncodeFields((EncryptedFolderUnenrollClientDetails)value, writer);
+                    return;
+                }
+                if (value is TeamEncryptionKeyActivateKeyDetails)
+                {
+                    WriteProperty(".tag", "team_encryption_key_activate_key_details", writer, enc.StringEncoder.Instance);
+                    TeamEncryptionKeyActivateKeyDetails.Encoder.EncodeFields((TeamEncryptionKeyActivateKeyDetails)value, writer);
+                    return;
+                }
+                if (value is TeamEncryptionKeyCancelKeyDeletionDetails)
+                {
+                    WriteProperty(".tag", "team_encryption_key_cancel_key_deletion_details", writer, enc.StringEncoder.Instance);
+                    TeamEncryptionKeyCancelKeyDeletionDetails.Encoder.EncodeFields((TeamEncryptionKeyCancelKeyDeletionDetails)value, writer);
+                    return;
+                }
+                if (value is TeamEncryptionKeyCreateKeyDetails)
+                {
+                    WriteProperty(".tag", "team_encryption_key_create_key_details", writer, enc.StringEncoder.Instance);
+                    TeamEncryptionKeyCreateKeyDetails.Encoder.EncodeFields((TeamEncryptionKeyCreateKeyDetails)value, writer);
+                    return;
+                }
+                if (value is TeamEncryptionKeyDeactivateKeyDetails)
+                {
+                    WriteProperty(".tag", "team_encryption_key_deactivate_key_details", writer, enc.StringEncoder.Instance);
+                    TeamEncryptionKeyDeactivateKeyDetails.Encoder.EncodeFields((TeamEncryptionKeyDeactivateKeyDetails)value, writer);
+                    return;
+                }
+                if (value is TeamEncryptionKeyDeleteKeyDetails)
+                {
+                    WriteProperty(".tag", "team_encryption_key_delete_key_details", writer, enc.StringEncoder.Instance);
+                    TeamEncryptionKeyDeleteKeyDetails.Encoder.EncodeFields((TeamEncryptionKeyDeleteKeyDetails)value, writer);
+                    return;
+                }
+                if (value is TeamEncryptionKeyDisableKeyDetails)
+                {
+                    WriteProperty(".tag", "team_encryption_key_disable_key_details", writer, enc.StringEncoder.Instance);
+                    TeamEncryptionKeyDisableKeyDetails.Encoder.EncodeFields((TeamEncryptionKeyDisableKeyDetails)value, writer);
+                    return;
+                }
+                if (value is TeamEncryptionKeyEnableKeyDetails)
+                {
+                    WriteProperty(".tag", "team_encryption_key_enable_key_details", writer, enc.StringEncoder.Instance);
+                    TeamEncryptionKeyEnableKeyDetails.Encoder.EncodeFields((TeamEncryptionKeyEnableKeyDetails)value, writer);
+                    return;
+                }
+                if (value is TeamEncryptionKeyRotateKeyDetails)
+                {
+                    WriteProperty(".tag", "team_encryption_key_rotate_key_details", writer, enc.StringEncoder.Instance);
+                    TeamEncryptionKeyRotateKeyDetails.Encoder.EncodeFields((TeamEncryptionKeyRotateKeyDetails)value, writer);
+                    return;
+                }
+                if (value is TeamEncryptionKeyScheduleKeyDeletionDetails)
+                {
+                    WriteProperty(".tag", "team_encryption_key_schedule_key_deletion_details", writer, enc.StringEncoder.Instance);
+                    TeamEncryptionKeyScheduleKeyDeletionDetails.Encoder.EncodeFields((TeamEncryptionKeyScheduleKeyDeletionDetails)value, writer);
+                    return;
+                }
                 if (value is ApplyNamingConventionDetails)
                 {
                     WriteProperty(".tag", "apply_naming_convention_details", writer, enc.StringEncoder.Instance);
@@ -11863,6 +15076,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "file_add_details", writer, enc.StringEncoder.Instance);
                     FileAddDetails.Encoder.EncodeFields((FileAddDetails)value, writer);
+                    return;
+                }
+                if (value is FileAddFromAutomationDetails)
+                {
+                    WriteProperty(".tag", "file_add_from_automation_details", writer, enc.StringEncoder.Instance);
+                    FileAddFromAutomationDetails.Encoder.EncodeFields((FileAddFromAutomationDetails)value, writer);
                     return;
                 }
                 if (value is FileCopyDetails)
@@ -11991,6 +15210,24 @@ namespace Dropbox.Api.TeamLog
                     OrganizeFolderWithTidyDetails.Encoder.EncodeFields((OrganizeFolderWithTidyDetails)value, writer);
                     return;
                 }
+                if (value is ReplayFileDeleteDetails)
+                {
+                    WriteProperty(".tag", "replay_file_delete_details", writer, enc.StringEncoder.Instance);
+                    ReplayFileDeleteDetails.Encoder.EncodeFields((ReplayFileDeleteDetails)value, writer);
+                    return;
+                }
+                if (value is ReplayFileDownloadedDetails)
+                {
+                    WriteProperty(".tag", "replay_file_downloaded_details", writer, enc.StringEncoder.Instance);
+                    ReplayFileDownloadedDetails.Encoder.EncodeFields((ReplayFileDownloadedDetails)value, writer);
+                    return;
+                }
+                if (value is ReplayTeamProjectCreatedDetails)
+                {
+                    WriteProperty(".tag", "replay_team_project_created_details", writer, enc.StringEncoder.Instance);
+                    ReplayTeamProjectCreatedDetails.Encoder.EncodeFields((ReplayTeamProjectCreatedDetails)value, writer);
+                    return;
+                }
                 if (value is RewindFolderDetails)
                 {
                     WriteProperty(".tag", "rewind_folder_details", writer, enc.StringEncoder.Instance);
@@ -12025,6 +15262,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "email_ingest_receive_file_details", writer, enc.StringEncoder.Instance);
                     EmailIngestReceiveFileDetails.Encoder.EncodeFields((EmailIngestReceiveFileDetails)value, writer);
+                    return;
+                }
+                if (value is FileRequestAutoCloseDetails)
+                {
+                    WriteProperty(".tag", "file_request_auto_close_details", writer, enc.StringEncoder.Instance);
+                    FileRequestAutoCloseDetails.Encoder.EncodeFields((FileRequestAutoCloseDetails)value, writer);
                     return;
                 }
                 if (value is FileRequestChangeDetails)
@@ -12103,6 +15346,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "group_description_updated_details", writer, enc.StringEncoder.Instance);
                     GroupDescriptionUpdatedDetails.Encoder.EncodeFields((GroupDescriptionUpdatedDetails)value, writer);
+                    return;
+                }
+                if (value is GroupExternalSharingSettingOverrideChangedDetails)
+                {
+                    WriteProperty(".tag", "group_external_sharing_setting_override_changed_details", writer, enc.StringEncoder.Instance);
+                    GroupExternalSharingSettingOverrideChangedDetails.Encoder.EncodeFields((GroupExternalSharingSettingOverrideChangedDetails)value, writer);
                     return;
                 }
                 if (value is GroupJoinPolicyUpdatedDetails)
@@ -12205,6 +15454,30 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "sso_error_details", writer, enc.StringEncoder.Instance);
                     SsoErrorDetails.Encoder.EncodeFields((SsoErrorDetails)value, writer);
+                    return;
+                }
+                if (value is AddonAssignedDetails)
+                {
+                    WriteProperty(".tag", "addon_assigned_details", writer, enc.StringEncoder.Instance);
+                    AddonAssignedDetails.Encoder.EncodeFields((AddonAssignedDetails)value, writer);
+                    return;
+                }
+                if (value is AddonRemovedDetails)
+                {
+                    WriteProperty(".tag", "addon_removed_details", writer, enc.StringEncoder.Instance);
+                    AddonRemovedDetails.Encoder.EncodeFields((AddonRemovedDetails)value, writer);
+                    return;
+                }
+                if (value is BackupAdminInvitationSentDetails)
+                {
+                    WriteProperty(".tag", "backup_admin_invitation_sent_details", writer, enc.StringEncoder.Instance);
+                    BackupAdminInvitationSentDetails.Encoder.EncodeFields((BackupAdminInvitationSentDetails)value, writer);
+                    return;
+                }
+                if (value is BackupInvitationOpenedDetails)
+                {
+                    WriteProperty(".tag", "backup_invitation_opened_details", writer, enc.StringEncoder.Instance);
+                    BackupInvitationOpenedDetails.Encoder.EncodeFields((BackupInvitationOpenedDetails)value, writer);
                     return;
                 }
                 if (value is CreateTeamInviteLinkDetails)
@@ -12343,6 +15616,18 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "pending_secondary_email_added_details", writer, enc.StringEncoder.Instance);
                     PendingSecondaryEmailAddedDetails.Encoder.EncodeFields((PendingSecondaryEmailAddedDetails)value, writer);
+                    return;
+                }
+                if (value is ProductAssignedToMemberDetails)
+                {
+                    WriteProperty(".tag", "product_assigned_to_member_details", writer, enc.StringEncoder.Instance);
+                    ProductAssignedToMemberDetails.Encoder.EncodeFields((ProductAssignedToMemberDetails)value, writer);
+                    return;
+                }
+                if (value is ProductRemovedFromMemberDetails)
+                {
+                    WriteProperty(".tag", "product_removed_from_member_details", writer, enc.StringEncoder.Instance);
+                    ProductRemovedFromMemberDetails.Encoder.EncodeFields((ProductRemovedFromMemberDetails)value, writer);
                     return;
                 }
                 if (value is SecondaryEmailDeletedDetails)
@@ -12675,6 +15960,12 @@ namespace Dropbox.Api.TeamLog
                     PasswordResetAllDetails.Encoder.EncodeFields((PasswordResetAllDetails)value, writer);
                     return;
                 }
+                if (value is ProtectInternalDomainsChangedDetails)
+                {
+                    WriteProperty(".tag", "protect_internal_domains_changed_details", writer, enc.StringEncoder.Instance);
+                    ProtectInternalDomainsChangedDetails.Encoder.EncodeFields((ProtectInternalDomainsChangedDetails)value, writer);
+                    return;
+                }
                 if (value is ClassificationCreateReportDetails)
                 {
                     WriteProperty(".tag", "classification_create_report_details", writer, enc.StringEncoder.Instance);
@@ -12721,6 +16012,18 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "external_sharing_report_failed_details", writer, enc.StringEncoder.Instance);
                     ExternalSharingReportFailedDetails.Encoder.EncodeFields((ExternalSharingReportFailedDetails)value, writer);
+                    return;
+                }
+                if (value is MemberAccessDetailsCreateReportDetails)
+                {
+                    WriteProperty(".tag", "member_access_details_create_report_details", writer, enc.StringEncoder.Instance);
+                    MemberAccessDetailsCreateReportDetails.Encoder.EncodeFields((MemberAccessDetailsCreateReportDetails)value, writer);
+                    return;
+                }
+                if (value is MemberAccessDetailsCreateReportFailedDetails)
+                {
+                    WriteProperty(".tag", "member_access_details_create_report_failed_details", writer, enc.StringEncoder.Instance);
+                    MemberAccessDetailsCreateReportFailedDetails.Encoder.EncodeFields((MemberAccessDetailsCreateReportFailedDetails)value, writer);
                     return;
                 }
                 if (value is NoExpirationLinkGenCreateReportDetails)
@@ -12777,6 +16080,30 @@ namespace Dropbox.Api.TeamLog
                     PaperAdminExportStartDetails.Encoder.EncodeFields((PaperAdminExportStartDetails)value, writer);
                     return;
                 }
+                if (value is RansomwareAlertCreateReportDetails)
+                {
+                    WriteProperty(".tag", "ransomware_alert_create_report_details", writer, enc.StringEncoder.Instance);
+                    RansomwareAlertCreateReportDetails.Encoder.EncodeFields((RansomwareAlertCreateReportDetails)value, writer);
+                    return;
+                }
+                if (value is RansomwareAlertCreateReportFailedDetails)
+                {
+                    WriteProperty(".tag", "ransomware_alert_create_report_failed_details", writer, enc.StringEncoder.Instance);
+                    RansomwareAlertCreateReportFailedDetails.Encoder.EncodeFields((RansomwareAlertCreateReportFailedDetails)value, writer);
+                    return;
+                }
+                if (value is SharedFoldersCreateReportDetails)
+                {
+                    WriteProperty(".tag", "shared_folders_create_report_details", writer, enc.StringEncoder.Instance);
+                    SharedFoldersCreateReportDetails.Encoder.EncodeFields((SharedFoldersCreateReportDetails)value, writer);
+                    return;
+                }
+                if (value is SharedFoldersCreateReportFailedDetails)
+                {
+                    WriteProperty(".tag", "shared_folders_create_report_failed_details", writer, enc.StringEncoder.Instance);
+                    SharedFoldersCreateReportFailedDetails.Encoder.EncodeFields((SharedFoldersCreateReportFailedDetails)value, writer);
+                    return;
+                }
                 if (value is SmartSyncCreateAdminPrivilegeReportDetails)
                 {
                     WriteProperty(".tag", "smart_sync_create_admin_privilege_report_details", writer, enc.StringEncoder.Instance);
@@ -12793,6 +16120,30 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "team_activity_create_report_fail_details", writer, enc.StringEncoder.Instance);
                     TeamActivityCreateReportFailDetails.Encoder.EncodeFields((TeamActivityCreateReportFailDetails)value, writer);
+                    return;
+                }
+                if (value is TeamFoldersCreateReportDetails)
+                {
+                    WriteProperty(".tag", "team_folders_create_report_details", writer, enc.StringEncoder.Instance);
+                    TeamFoldersCreateReportDetails.Encoder.EncodeFields((TeamFoldersCreateReportDetails)value, writer);
+                    return;
+                }
+                if (value is TeamFoldersCreateReportFailedDetails)
+                {
+                    WriteProperty(".tag", "team_folders_create_report_failed_details", writer, enc.StringEncoder.Instance);
+                    TeamFoldersCreateReportFailedDetails.Encoder.EncodeFields((TeamFoldersCreateReportFailedDetails)value, writer);
+                    return;
+                }
+                if (value is TeamStorageCreateReportDetails)
+                {
+                    WriteProperty(".tag", "team_storage_create_report_details", writer, enc.StringEncoder.Instance);
+                    TeamStorageCreateReportDetails.Encoder.EncodeFields((TeamStorageCreateReportDetails)value, writer);
+                    return;
+                }
+                if (value is TeamStorageCreateReportFailedDetails)
+                {
+                    WriteProperty(".tag", "team_storage_create_report_failed_details", writer, enc.StringEncoder.Instance);
+                    TeamStorageCreateReportFailedDetails.Encoder.EncodeFields((TeamStorageCreateReportFailedDetails)value, writer);
                     return;
                 }
                 if (value is CollectionShareDetails)
@@ -12865,6 +16216,78 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "open_note_shared_details", writer, enc.StringEncoder.Instance);
                     OpenNoteSharedDetails.Encoder.EncodeFields((OpenNoteSharedDetails)value, writer);
+                    return;
+                }
+                if (value is ReplayFileSharedLinkCreatedDetails)
+                {
+                    WriteProperty(".tag", "replay_file_shared_link_created_details", writer, enc.StringEncoder.Instance);
+                    ReplayFileSharedLinkCreatedDetails.Encoder.EncodeFields((ReplayFileSharedLinkCreatedDetails)value, writer);
+                    return;
+                }
+                if (value is ReplayFileSharedLinkModifiedDetails)
+                {
+                    WriteProperty(".tag", "replay_file_shared_link_modified_details", writer, enc.StringEncoder.Instance);
+                    ReplayFileSharedLinkModifiedDetails.Encoder.EncodeFields((ReplayFileSharedLinkModifiedDetails)value, writer);
+                    return;
+                }
+                if (value is ReplayProjectTeamAddDetails)
+                {
+                    WriteProperty(".tag", "replay_project_team_add_details", writer, enc.StringEncoder.Instance);
+                    ReplayProjectTeamAddDetails.Encoder.EncodeFields((ReplayProjectTeamAddDetails)value, writer);
+                    return;
+                }
+                if (value is ReplayProjectTeamDeleteDetails)
+                {
+                    WriteProperty(".tag", "replay_project_team_delete_details", writer, enc.StringEncoder.Instance);
+                    ReplayProjectTeamDeleteDetails.Encoder.EncodeFields((ReplayProjectTeamDeleteDetails)value, writer);
+                    return;
+                }
+                if (value is SendAndTrackFileAddedDetails)
+                {
+                    WriteProperty(".tag", "send_and_track_file_added_details", writer, enc.StringEncoder.Instance);
+                    SendAndTrackFileAddedDetails.Encoder.EncodeFields((SendAndTrackFileAddedDetails)value, writer);
+                    return;
+                }
+                if (value is SendAndTrackFileRenamedDetails)
+                {
+                    WriteProperty(".tag", "send_and_track_file_renamed_details", writer, enc.StringEncoder.Instance);
+                    SendAndTrackFileRenamedDetails.Encoder.EncodeFields((SendAndTrackFileRenamedDetails)value, writer);
+                    return;
+                }
+                if (value is SendAndTrackFileUpdatedDetails)
+                {
+                    WriteProperty(".tag", "send_and_track_file_updated_details", writer, enc.StringEncoder.Instance);
+                    SendAndTrackFileUpdatedDetails.Encoder.EncodeFields((SendAndTrackFileUpdatedDetails)value, writer);
+                    return;
+                }
+                if (value is SendAndTrackLinkCreatedDetails)
+                {
+                    WriteProperty(".tag", "send_and_track_link_created_details", writer, enc.StringEncoder.Instance);
+                    SendAndTrackLinkCreatedDetails.Encoder.EncodeFields((SendAndTrackLinkCreatedDetails)value, writer);
+                    return;
+                }
+                if (value is SendAndTrackLinkDeletedDetails)
+                {
+                    WriteProperty(".tag", "send_and_track_link_deleted_details", writer, enc.StringEncoder.Instance);
+                    SendAndTrackLinkDeletedDetails.Encoder.EncodeFields((SendAndTrackLinkDeletedDetails)value, writer);
+                    return;
+                }
+                if (value is SendAndTrackLinkUpdatedDetails)
+                {
+                    WriteProperty(".tag", "send_and_track_link_updated_details", writer, enc.StringEncoder.Instance);
+                    SendAndTrackLinkUpdatedDetails.Encoder.EncodeFields((SendAndTrackLinkUpdatedDetails)value, writer);
+                    return;
+                }
+                if (value is SendAndTrackLinkViewedDetails)
+                {
+                    WriteProperty(".tag", "send_and_track_link_viewed_details", writer, enc.StringEncoder.Instance);
+                    SendAndTrackLinkViewedDetails.Encoder.EncodeFields((SendAndTrackLinkViewedDetails)value, writer);
+                    return;
+                }
+                if (value is SendAndTrackRemovedFileAndAssociatedLinksDetails)
+                {
+                    WriteProperty(".tag", "send_and_track_removed_file_and_associated_links_details", writer, enc.StringEncoder.Instance);
+                    SendAndTrackRemovedFileAndAssociatedLinksDetails.Encoder.EncodeFields((SendAndTrackRemovedFileAndAssociatedLinksDetails)value, writer);
                     return;
                 }
                 if (value is SfAddGroupDetails)
@@ -13197,6 +16620,12 @@ namespace Dropbox.Api.TeamLog
                     SharedLinkRemoveExpiryDetails.Encoder.EncodeFields((SharedLinkRemoveExpiryDetails)value, writer);
                     return;
                 }
+                if (value is SharedLinkRemoveVisitorDetails)
+                {
+                    WriteProperty(".tag", "shared_link_remove_visitor_details", writer, enc.StringEncoder.Instance);
+                    SharedLinkRemoveVisitorDetails.Encoder.EncodeFields((SharedLinkRemoveVisitorDetails)value, writer);
+                    return;
+                }
                 if (value is SharedLinkSettingsAddExpirationDetails)
                 {
                     WriteProperty(".tag", "shared_link_settings_add_expiration_details", writer, enc.StringEncoder.Instance);
@@ -13431,6 +16860,60 @@ namespace Dropbox.Api.TeamLog
                     ShowcaseViewDetails.Encoder.EncodeFields((ShowcaseViewDetails)value, writer);
                     return;
                 }
+                if (value is SignSignatureRequestCanceledDetails)
+                {
+                    WriteProperty(".tag", "sign_signature_request_canceled_details", writer, enc.StringEncoder.Instance);
+                    SignSignatureRequestCanceledDetails.Encoder.EncodeFields((SignSignatureRequestCanceledDetails)value, writer);
+                    return;
+                }
+                if (value is SignSignatureRequestCompletedDetails)
+                {
+                    WriteProperty(".tag", "sign_signature_request_completed_details", writer, enc.StringEncoder.Instance);
+                    SignSignatureRequestCompletedDetails.Encoder.EncodeFields((SignSignatureRequestCompletedDetails)value, writer);
+                    return;
+                }
+                if (value is SignSignatureRequestDeclinedDetails)
+                {
+                    WriteProperty(".tag", "sign_signature_request_declined_details", writer, enc.StringEncoder.Instance);
+                    SignSignatureRequestDeclinedDetails.Encoder.EncodeFields((SignSignatureRequestDeclinedDetails)value, writer);
+                    return;
+                }
+                if (value is SignSignatureRequestOpenedDetails)
+                {
+                    WriteProperty(".tag", "sign_signature_request_opened_details", writer, enc.StringEncoder.Instance);
+                    SignSignatureRequestOpenedDetails.Encoder.EncodeFields((SignSignatureRequestOpenedDetails)value, writer);
+                    return;
+                }
+                if (value is SignSignatureRequestReminderSentDetails)
+                {
+                    WriteProperty(".tag", "sign_signature_request_reminder_sent_details", writer, enc.StringEncoder.Instance);
+                    SignSignatureRequestReminderSentDetails.Encoder.EncodeFields((SignSignatureRequestReminderSentDetails)value, writer);
+                    return;
+                }
+                if (value is SignSignatureRequestSentDetails)
+                {
+                    WriteProperty(".tag", "sign_signature_request_sent_details", writer, enc.StringEncoder.Instance);
+                    SignSignatureRequestSentDetails.Encoder.EncodeFields((SignSignatureRequestSentDetails)value, writer);
+                    return;
+                }
+                if (value is SignTemplateCreatedDetails)
+                {
+                    WriteProperty(".tag", "sign_template_created_details", writer, enc.StringEncoder.Instance);
+                    SignTemplateCreatedDetails.Encoder.EncodeFields((SignTemplateCreatedDetails)value, writer);
+                    return;
+                }
+                if (value is SignTemplateSharedDetails)
+                {
+                    WriteProperty(".tag", "sign_template_shared_details", writer, enc.StringEncoder.Instance);
+                    SignTemplateSharedDetails.Encoder.EncodeFields((SignTemplateSharedDetails)value, writer);
+                    return;
+                }
+                if (value is RiscSecurityEventDetails)
+                {
+                    WriteProperty(".tag", "risc_security_event_details", writer, enc.StringEncoder.Instance);
+                    RiscSecurityEventDetails.Encoder.EncodeFields((RiscSecurityEventDetails)value, writer);
+                    return;
+                }
                 if (value is SsoAddCertDetails)
                 {
                     WriteProperty(".tag", "sso_add_cert_details", writer, enc.StringEncoder.Instance);
@@ -13521,6 +17004,24 @@ namespace Dropbox.Api.TeamLog
                     TeamFolderRenameDetails.Encoder.EncodeFields((TeamFolderRenameDetails)value, writer);
                     return;
                 }
+                if (value is TeamFolderSpaceLimitsChangeCapsTypeDetails)
+                {
+                    WriteProperty(".tag", "team_folder_space_limits_change_caps_type_details", writer, enc.StringEncoder.Instance);
+                    TeamFolderSpaceLimitsChangeCapsTypeDetails.Encoder.EncodeFields((TeamFolderSpaceLimitsChangeCapsTypeDetails)value, writer);
+                    return;
+                }
+                if (value is TeamFolderSpaceLimitsChangeLimitDetails)
+                {
+                    WriteProperty(".tag", "team_folder_space_limits_change_limit_details", writer, enc.StringEncoder.Instance);
+                    TeamFolderSpaceLimitsChangeLimitDetails.Encoder.EncodeFields((TeamFolderSpaceLimitsChangeLimitDetails)value, writer);
+                    return;
+                }
+                if (value is TeamFolderSpaceLimitsChangeNotificationTargetDetails)
+                {
+                    WriteProperty(".tag", "team_folder_space_limits_change_notification_target_details", writer, enc.StringEncoder.Instance);
+                    TeamFolderSpaceLimitsChangeNotificationTargetDetails.Encoder.EncodeFields((TeamFolderSpaceLimitsChangeNotificationTargetDetails)value, writer);
+                    return;
+                }
                 if (value is TeamSelectiveSyncSettingsChangedDetails)
                 {
                     WriteProperty(".tag", "team_selective_sync_settings_changed_details", writer, enc.StringEncoder.Instance);
@@ -13539,6 +17040,12 @@ namespace Dropbox.Api.TeamLog
                     AdminEmailRemindersChangedDetails.Encoder.EncodeFields((AdminEmailRemindersChangedDetails)value, writer);
                     return;
                 }
+                if (value is AiThirdPartySharingDropboxBasePolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "ai_third_party_sharing_dropbox_base_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    AiThirdPartySharingDropboxBasePolicyChangedDetails.Encoder.EncodeFields((AiThirdPartySharingDropboxBasePolicyChangedDetails)value, writer);
+                    return;
+                }
                 if (value is AllowDownloadDisabledDetails)
                 {
                     WriteProperty(".tag", "allow_download_disabled_details", writer, enc.StringEncoder.Instance);
@@ -13551,6 +17058,12 @@ namespace Dropbox.Api.TeamLog
                     AllowDownloadEnabledDetails.Encoder.EncodeFields((AllowDownloadEnabledDetails)value, writer);
                     return;
                 }
+                if (value is AppleLoginChangePolicyDetails)
+                {
+                    WriteProperty(".tag", "apple_login_change_policy_details", writer, enc.StringEncoder.Instance);
+                    AppleLoginChangePolicyDetails.Encoder.EncodeFields((AppleLoginChangePolicyDetails)value, writer);
+                    return;
+                }
                 if (value is AppPermissionsChangedDetails)
                 {
                     WriteProperty(".tag", "app_permissions_changed_details", writer, enc.StringEncoder.Instance);
@@ -13561,6 +17074,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "camera_uploads_policy_changed_details", writer, enc.StringEncoder.Instance);
                     CameraUploadsPolicyChangedDetails.Encoder.EncodeFields((CameraUploadsPolicyChangedDetails)value, writer);
+                    return;
+                }
+                if (value is CaptureTeamSpacePolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "capture_team_space_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    CaptureTeamSpacePolicyChangedDetails.Encoder.EncodeFields((CaptureTeamSpacePolicyChangedDetails)value, writer);
                     return;
                 }
                 if (value is CaptureTranscriptPolicyChangedDetails)
@@ -13585,6 +17104,18 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "content_administration_policy_changed_details", writer, enc.StringEncoder.Instance);
                     ContentAdministrationPolicyChangedDetails.Encoder.EncodeFields((ContentAdministrationPolicyChangedDetails)value, writer);
+                    return;
+                }
+                if (value is ContentDeletionProtectionChangePolicyDetails)
+                {
+                    WriteProperty(".tag", "content_deletion_protection_change_policy_details", writer, enc.StringEncoder.Instance);
+                    ContentDeletionProtectionChangePolicyDetails.Encoder.EncodeFields((ContentDeletionProtectionChangePolicyDetails)value, writer);
+                    return;
+                }
+                if (value is DashExternalSharingPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "dash_external_sharing_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    DashExternalSharingPolicyChangedDetails.Encoder.EncodeFields((DashExternalSharingPolicyChangedDetails)value, writer);
                     return;
                 }
                 if (value is DataPlacementRestrictionChangePolicyDetails)
@@ -13731,6 +17262,12 @@ namespace Dropbox.Api.TeamLog
                     FileTransfersPolicyChangedDetails.Encoder.EncodeFields((FileTransfersPolicyChangedDetails)value, writer);
                     return;
                 }
+                if (value is FlexibleFileNamesPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "flexible_file_names_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    FlexibleFileNamesPolicyChangedDetails.Encoder.EncodeFields((FlexibleFileNamesPolicyChangedDetails)value, writer);
+                    return;
+                }
                 if (value is FolderLinkRestrictionPolicyChangedDetails)
                 {
                     WriteProperty(".tag", "folder_link_restriction_policy_changed_details", writer, enc.StringEncoder.Instance);
@@ -13803,6 +17340,12 @@ namespace Dropbox.Api.TeamLog
                     MemberSuggestionsChangePolicyDetails.Encoder.EncodeFields((MemberSuggestionsChangePolicyDetails)value, writer);
                     return;
                 }
+                if (value is MicrosoftLoginChangePolicyDetails)
+                {
+                    WriteProperty(".tag", "microsoft_login_change_policy_details", writer, enc.StringEncoder.Instance);
+                    MicrosoftLoginChangePolicyDetails.Encoder.EncodeFields((MicrosoftLoginChangePolicyDetails)value, writer);
+                    return;
+                }
                 if (value is MicrosoftOfficeAddinChangePolicyDetails)
                 {
                     WriteProperty(".tag", "microsoft_office_addin_change_policy_details", writer, enc.StringEncoder.Instance);
@@ -13863,6 +17406,12 @@ namespace Dropbox.Api.TeamLog
                     PaperEnabledUsersGroupRemovalDetails.Encoder.EncodeFields((PaperEnabledUsersGroupRemovalDetails)value, writer);
                     return;
                 }
+                if (value is PasskeyLoginPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "passkey_login_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    PasskeyLoginPolicyChangedDetails.Encoder.EncodeFields((PasskeyLoginPolicyChangedDetails)value, writer);
+                    return;
+                }
                 if (value is PasswordStrengthRequirementsChangePolicyDetails)
                 {
                     WriteProperty(".tag", "password_strength_requirements_change_policy_details", writer, enc.StringEncoder.Instance);
@@ -13873,6 +17422,24 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "permanent_delete_change_policy_details", writer, enc.StringEncoder.Instance);
                     PermanentDeleteChangePolicyDetails.Encoder.EncodeFields((PermanentDeleteChangePolicyDetails)value, writer);
+                    return;
+                }
+                if (value is PreviewsAiPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "previews_ai_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    PreviewsAiPolicyChangedDetails.Encoder.EncodeFields((PreviewsAiPolicyChangedDetails)value, writer);
+                    return;
+                }
+                if (value is ReplayAddingPeoplePolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "replay_adding_people_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    ReplayAddingPeoplePolicyChangedDetails.Encoder.EncodeFields((ReplayAddingPeoplePolicyChangedDetails)value, writer);
+                    return;
+                }
+                if (value is ReplaySharingPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "replay_sharing_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    ReplaySharingPolicyChangedDetails.Encoder.EncodeFields((ReplaySharingPolicyChangedDetails)value, writer);
                     return;
                 }
                 if (value is ResellerSupportChangePolicyDetails)
@@ -13887,10 +17454,28 @@ namespace Dropbox.Api.TeamLog
                     RewindPolicyChangedDetails.Encoder.EncodeFields((RewindPolicyChangedDetails)value, writer);
                     return;
                 }
+                if (value is SendAndTrackPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "send_and_track_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    SendAndTrackPolicyChangedDetails.Encoder.EncodeFields((SendAndTrackPolicyChangedDetails)value, writer);
+                    return;
+                }
+                if (value is SendExternalSharingPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "send_external_sharing_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    SendExternalSharingPolicyChangedDetails.Encoder.EncodeFields((SendExternalSharingPolicyChangedDetails)value, writer);
+                    return;
+                }
                 if (value is SendForSignaturePolicyChangedDetails)
                 {
                     WriteProperty(".tag", "send_for_signature_policy_changed_details", writer, enc.StringEncoder.Instance);
                     SendForSignaturePolicyChangedDetails.Encoder.EncodeFields((SendForSignaturePolicyChangedDetails)value, writer);
+                    return;
+                }
+                if (value is SharedLinkDefaultPermissionsPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "shared_link_default_permissions_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    SharedLinkDefaultPermissionsPolicyChangedDetails.Encoder.EncodeFields((SharedLinkDefaultPermissionsPolicyChangedDetails)value, writer);
                     return;
                 }
                 if (value is SharingChangeFolderJoinPolicyDetails)
@@ -13947,6 +17532,18 @@ namespace Dropbox.Api.TeamLog
                     ShowcaseChangeExternalSharingPolicyDetails.Encoder.EncodeFields((ShowcaseChangeExternalSharingPolicyDetails)value, writer);
                     return;
                 }
+                if (value is SignExternalSharingPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "sign_external_sharing_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    SignExternalSharingPolicyChangedDetails.Encoder.EncodeFields((SignExternalSharingPolicyChangedDetails)value, writer);
+                    return;
+                }
+                if (value is SignTemplateCreationPermissionChangedDetails)
+                {
+                    WriteProperty(".tag", "sign_template_creation_permission_changed_details", writer, enc.StringEncoder.Instance);
+                    SignTemplateCreationPermissionChangedDetails.Encoder.EncodeFields((SignTemplateCreationPermissionChangedDetails)value, writer);
+                    return;
+                }
                 if (value is SmarterSmartSyncPolicyChangedDetails)
                 {
                     WriteProperty(".tag", "smarter_smart_sync_policy_changed_details", writer, enc.StringEncoder.Instance);
@@ -13977,6 +17574,12 @@ namespace Dropbox.Api.TeamLog
                     SsoChangePolicyDetails.Encoder.EncodeFields((SsoChangePolicyDetails)value, writer);
                     return;
                 }
+                if (value is StackCrossTeamAccessPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "stack_cross_team_access_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    StackCrossTeamAccessPolicyChangedDetails.Encoder.EncodeFields((StackCrossTeamAccessPolicyChangedDetails)value, writer);
+                    return;
+                }
                 if (value is TeamBrandingPolicyChangedDetails)
                 {
                     WriteProperty(".tag", "team_branding_policy_changed_details", writer, enc.StringEncoder.Instance);
@@ -13987,6 +17590,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "team_extensions_policy_changed_details", writer, enc.StringEncoder.Instance);
                     TeamExtensionsPolicyChangedDetails.Encoder.EncodeFields((TeamExtensionsPolicyChangedDetails)value, writer);
+                    return;
+                }
+                if (value is TeamMemberStorageRequestPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "team_member_storage_request_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    TeamMemberStorageRequestPolicyChangedDetails.Encoder.EncodeFields((TeamMemberStorageRequestPolicyChangedDetails)value, writer);
                     return;
                 }
                 if (value is TeamSelectiveSyncPolicyChangedDetails)
@@ -14017,6 +17626,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "tfa_remove_exception_details", writer, enc.StringEncoder.Instance);
                     TfaRemoveExceptionDetails.Encoder.EncodeFields((TfaRemoveExceptionDetails)value, writer);
+                    return;
+                }
+                if (value is TopLevelContentPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "top_level_content_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    TopLevelContentPolicyChangedDetails.Encoder.EncodeFields((TopLevelContentPolicyChangedDetails)value, writer);
                     return;
                 }
                 if (value is TwoAccountChangePolicyDetails)
@@ -14125,6 +17740,18 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "team_profile_remove_logo_details", writer, enc.StringEncoder.Instance);
                     TeamProfileRemoveLogoDetails.Encoder.EncodeFields((TeamProfileRemoveLogoDetails)value, writer);
+                    return;
+                }
+                if (value is PasskeyAddDetails)
+                {
+                    WriteProperty(".tag", "passkey_add_details", writer, enc.StringEncoder.Instance);
+                    PasskeyAddDetails.Encoder.EncodeFields((PasskeyAddDetails)value, writer);
+                    return;
+                }
+                if (value is PasskeyRemoveDetails)
+                {
+                    WriteProperty(".tag", "passkey_remove_details", writer, enc.StringEncoder.Instance);
+                    PasskeyRemoveDetails.Encoder.EncodeFields((PasskeyRemoveDetails)value, writer);
                     return;
                 }
                 if (value is TfaAddBackupPhoneDetails)
@@ -14369,6 +17996,10 @@ namespace Dropbox.Api.TeamLog
                         return AdminAlertingChangedAlertConfigDetails.Decoder.DecodeFields(reader);
                     case "admin_alerting_triggered_alert_details":
                         return AdminAlertingTriggeredAlertDetails.Decoder.DecodeFields(reader);
+                    case "ransomware_restore_process_completed_details":
+                        return RansomwareRestoreProcessCompletedDetails.Decoder.DecodeFields(reader);
+                    case "ransomware_restore_process_started_details":
+                        return RansomwareRestoreProcessStartedDetails.Decoder.DecodeFields(reader);
                     case "app_blocked_by_permissions_details":
                         return AppBlockedByPermissionsDetails.Decoder.DecodeFields(reader);
                     case "app_link_team_details":
@@ -14399,6 +18030,70 @@ namespace Dropbox.Api.TeamLog
                         return FileUnlikeCommentDetails.Decoder.DecodeFields(reader);
                     case "file_unresolve_comment_details":
                         return FileUnresolveCommentDetails.Decoder.DecodeFields(reader);
+                    case "dash_added_comment_to_stack_details":
+                        return DashAddedCommentToStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_added_connector_details":
+                        return DashAddedConnectorDetails.Decoder.DecodeFields(reader);
+                    case "dash_added_link_to_stack_details":
+                        return DashAddedLinkToStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_added_team_email_domain_allowlist_details":
+                        return DashAddedTeamEmailDomainAllowlistDetails.Decoder.DecodeFields(reader);
+                    case "dash_admin_added_org_wide_connector_details":
+                        return DashAdminAddedOrgWideConnectorDetails.Decoder.DecodeFields(reader);
+                    case "dash_admin_disabled_connector_details":
+                        return DashAdminDisabledConnectorDetails.Decoder.DecodeFields(reader);
+                    case "dash_admin_enabled_connector_details":
+                        return DashAdminEnabledConnectorDetails.Decoder.DecodeFields(reader);
+                    case "dash_admin_removed_org_wide_connector_details":
+                        return DashAdminRemovedOrgWideConnectorDetails.Decoder.DecodeFields(reader);
+                    case "dash_archived_stack_details":
+                        return DashArchivedStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_changed_audience_of_shared_link_to_stack_details":
+                        return DashChangedAudienceOfSharedLinkToStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_cloned_stack_details":
+                        return DashClonedStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_connector_tools_call_details":
+                        return DashConnectorToolsCallDetails.Decoder.DecodeFields(reader);
+                    case "dash_created_stack_details":
+                        return DashCreatedStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_deleted_comment_from_stack_details":
+                        return DashDeletedCommentFromStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_deleted_stack_details":
+                        return DashDeletedStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_edited_comment_in_stack_details":
+                        return DashEditedCommentInStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_external_user_opened_stack_details":
+                        return DashExternalUserOpenedStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_first_launched_desktop_details":
+                        return DashFirstLaunchedDesktopDetails.Decoder.DecodeFields(reader);
+                    case "dash_first_launched_extension_details":
+                        return DashFirstLaunchedExtensionDetails.Decoder.DecodeFields(reader);
+                    case "dash_first_launched_web_start_page_details":
+                        return DashFirstLaunchedWebStartPageDetails.Decoder.DecodeFields(reader);
+                    case "dash_opened_shared_link_to_stack_details":
+                        return DashOpenedSharedLinkToStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_opened_stack_details":
+                        return DashOpenedStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_preview_opt_out_status_changed_details":
+                        return DashPreviewOptOutStatusChangedDetails.Decoder.DecodeFields(reader);
+                    case "dash_removed_connector_details":
+                        return DashRemovedConnectorDetails.Decoder.DecodeFields(reader);
+                    case "dash_removed_link_from_stack_details":
+                        return DashRemovedLinkFromStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_removed_shared_link_to_stack_details":
+                        return DashRemovedSharedLinkToStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_removed_team_email_domain_allowlist_details":
+                        return DashRemovedTeamEmailDomainAllowlistDetails.Decoder.DecodeFields(reader);
+                    case "dash_renamed_stack_details":
+                        return DashRenamedStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_shared_link_to_stack_details":
+                        return DashSharedLinkToStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_unarchived_stack_details":
+                        return DashUnarchivedStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_viewed_company_stack_details":
+                        return DashViewedCompanyStackDetails.Decoder.DecodeFields(reader);
+                    case "dash_viewed_external_ai_activity_report_details":
+                        return DashViewedExternalAiActivityReportDetails.Decoder.DecodeFields(reader);
                     case "governance_policy_add_folders_details":
                         return GovernancePolicyAddFoldersDetails.Decoder.DecodeFields(reader);
                     case "governance_policy_add_folder_failed_details":
@@ -14507,12 +18202,52 @@ namespace Dropbox.Api.TeamLog
                         return DomainVerificationRemoveDomainDetails.Decoder.DecodeFields(reader);
                     case "enabled_domain_invites_details":
                         return EnabledDomainInvitesDetails.Decoder.DecodeFields(reader);
+                    case "encrypted_folder_cancel_team_key_rotation_details":
+                        return EncryptedFolderCancelTeamKeyRotationDetails.Decoder.DecodeFields(reader);
+                    case "encrypted_folder_enroll_backup_key_details":
+                        return EncryptedFolderEnrollBackupKeyDetails.Decoder.DecodeFields(reader);
+                    case "encrypted_folder_enroll_client_details":
+                        return EncryptedFolderEnrollClientDetails.Decoder.DecodeFields(reader);
+                    case "encrypted_folder_enroll_team_details":
+                        return EncryptedFolderEnrollTeamDetails.Decoder.DecodeFields(reader);
+                    case "encrypted_folder_finish_team_unenrollment_details":
+                        return EncryptedFolderFinishTeamUnenrollmentDetails.Decoder.DecodeFields(reader);
+                    case "encrypted_folder_init_team_key_rotation_details":
+                        return EncryptedFolderInitTeamKeyRotationDetails.Decoder.DecodeFields(reader);
+                    case "encrypted_folder_init_team_unenrollment_details":
+                        return EncryptedFolderInitTeamUnenrollmentDetails.Decoder.DecodeFields(reader);
+                    case "encrypted_folder_remove_backup_key_details":
+                        return EncryptedFolderRemoveBackupKeyDetails.Decoder.DecodeFields(reader);
+                    case "encrypted_folder_rotate_team_key_details":
+                        return EncryptedFolderRotateTeamKeyDetails.Decoder.DecodeFields(reader);
+                    case "encrypted_folder_unenroll_client_details":
+                        return EncryptedFolderUnenrollClientDetails.Decoder.DecodeFields(reader);
+                    case "team_encryption_key_activate_key_details":
+                        return TeamEncryptionKeyActivateKeyDetails.Decoder.DecodeFields(reader);
+                    case "team_encryption_key_cancel_key_deletion_details":
+                        return TeamEncryptionKeyCancelKeyDeletionDetails.Decoder.DecodeFields(reader);
+                    case "team_encryption_key_create_key_details":
+                        return TeamEncryptionKeyCreateKeyDetails.Decoder.DecodeFields(reader);
+                    case "team_encryption_key_deactivate_key_details":
+                        return TeamEncryptionKeyDeactivateKeyDetails.Decoder.DecodeFields(reader);
+                    case "team_encryption_key_delete_key_details":
+                        return TeamEncryptionKeyDeleteKeyDetails.Decoder.DecodeFields(reader);
+                    case "team_encryption_key_disable_key_details":
+                        return TeamEncryptionKeyDisableKeyDetails.Decoder.DecodeFields(reader);
+                    case "team_encryption_key_enable_key_details":
+                        return TeamEncryptionKeyEnableKeyDetails.Decoder.DecodeFields(reader);
+                    case "team_encryption_key_rotate_key_details":
+                        return TeamEncryptionKeyRotateKeyDetails.Decoder.DecodeFields(reader);
+                    case "team_encryption_key_schedule_key_deletion_details":
+                        return TeamEncryptionKeyScheduleKeyDeletionDetails.Decoder.DecodeFields(reader);
                     case "apply_naming_convention_details":
                         return ApplyNamingConventionDetails.Decoder.DecodeFields(reader);
                     case "create_folder_details":
                         return CreateFolderDetails.Decoder.DecodeFields(reader);
                     case "file_add_details":
                         return FileAddDetails.Decoder.DecodeFields(reader);
+                    case "file_add_from_automation_details":
+                        return FileAddFromAutomationDetails.Decoder.DecodeFields(reader);
                     case "file_copy_details":
                         return FileCopyDetails.Decoder.DecodeFields(reader);
                     case "file_delete_details":
@@ -14555,6 +18290,12 @@ namespace Dropbox.Api.TeamLog
                         return ObjectLabelUpdatedValueDetails.Decoder.DecodeFields(reader);
                     case "organize_folder_with_tidy_details":
                         return OrganizeFolderWithTidyDetails.Decoder.DecodeFields(reader);
+                    case "replay_file_delete_details":
+                        return ReplayFileDeleteDetails.Decoder.DecodeFields(reader);
+                    case "replay_file_downloaded_details":
+                        return ReplayFileDownloadedDetails.Decoder.DecodeFields(reader);
+                    case "replay_team_project_created_details":
+                        return ReplayTeamProjectCreatedDetails.Decoder.DecodeFields(reader);
                     case "rewind_folder_details":
                         return RewindFolderDetails.Decoder.DecodeFields(reader);
                     case "undo_naming_convention_details":
@@ -14567,6 +18308,8 @@ namespace Dropbox.Api.TeamLog
                         return UserTagsRemovedDetails.Decoder.DecodeFields(reader);
                     case "email_ingest_receive_file_details":
                         return EmailIngestReceiveFileDetails.Decoder.DecodeFields(reader);
+                    case "file_request_auto_close_details":
+                        return FileRequestAutoCloseDetails.Decoder.DecodeFields(reader);
                     case "file_request_change_details":
                         return FileRequestChangeDetails.Decoder.DecodeFields(reader);
                     case "file_request_close_details":
@@ -14593,6 +18336,8 @@ namespace Dropbox.Api.TeamLog
                         return GroupDeleteDetails.Decoder.DecodeFields(reader);
                     case "group_description_updated_details":
                         return GroupDescriptionUpdatedDetails.Decoder.DecodeFields(reader);
+                    case "group_external_sharing_setting_override_changed_details":
+                        return GroupExternalSharingSettingOverrideChangedDetails.Decoder.DecodeFields(reader);
                     case "group_join_policy_updated_details":
                         return GroupJoinPolicyUpdatedDetails.Decoder.DecodeFields(reader);
                     case "group_moved_details":
@@ -14627,6 +18372,14 @@ namespace Dropbox.Api.TeamLog
                         return SignInAsSessionStartDetails.Decoder.DecodeFields(reader);
                     case "sso_error_details":
                         return SsoErrorDetails.Decoder.DecodeFields(reader);
+                    case "addon_assigned_details":
+                        return AddonAssignedDetails.Decoder.DecodeFields(reader);
+                    case "addon_removed_details":
+                        return AddonRemovedDetails.Decoder.DecodeFields(reader);
+                    case "backup_admin_invitation_sent_details":
+                        return BackupAdminInvitationSentDetails.Decoder.DecodeFields(reader);
+                    case "backup_invitation_opened_details":
+                        return BackupInvitationOpenedDetails.Decoder.DecodeFields(reader);
                     case "create_team_invite_link_details":
                         return CreateTeamInviteLinkDetails.Decoder.DecodeFields(reader);
                     case "delete_team_invite_link_details":
@@ -14673,6 +18426,10 @@ namespace Dropbox.Api.TeamLog
                         return MemberTransferAccountContentsDetails.Decoder.DecodeFields(reader);
                     case "pending_secondary_email_added_details":
                         return PendingSecondaryEmailAddedDetails.Decoder.DecodeFields(reader);
+                    case "product_assigned_to_member_details":
+                        return ProductAssignedToMemberDetails.Decoder.DecodeFields(reader);
+                    case "product_removed_from_member_details":
+                        return ProductRemovedFromMemberDetails.Decoder.DecodeFields(reader);
                     case "secondary_email_deleted_details":
                         return SecondaryEmailDeletedDetails.Decoder.DecodeFields(reader);
                     case "secondary_email_verified_details":
@@ -14783,6 +18540,8 @@ namespace Dropbox.Api.TeamLog
                         return PasswordResetDetails.Decoder.DecodeFields(reader);
                     case "password_reset_all_details":
                         return PasswordResetAllDetails.Decoder.DecodeFields(reader);
+                    case "protect_internal_domains_changed_details":
+                        return ProtectInternalDomainsChangedDetails.Decoder.DecodeFields(reader);
                     case "classification_create_report_details":
                         return ClassificationCreateReportDetails.Decoder.DecodeFields(reader);
                     case "classification_create_report_fail_details":
@@ -14799,6 +18558,10 @@ namespace Dropbox.Api.TeamLog
                         return ExternalSharingCreateReportDetails.Decoder.DecodeFields(reader);
                     case "external_sharing_report_failed_details":
                         return ExternalSharingReportFailedDetails.Decoder.DecodeFields(reader);
+                    case "member_access_details_create_report_details":
+                        return MemberAccessDetailsCreateReportDetails.Decoder.DecodeFields(reader);
+                    case "member_access_details_create_report_failed_details":
+                        return MemberAccessDetailsCreateReportFailedDetails.Decoder.DecodeFields(reader);
                     case "no_expiration_link_gen_create_report_details":
                         return NoExpirationLinkGenCreateReportDetails.Decoder.DecodeFields(reader);
                     case "no_expiration_link_gen_report_failed_details":
@@ -14817,12 +18580,28 @@ namespace Dropbox.Api.TeamLog
                         return OutdatedLinkViewReportFailedDetails.Decoder.DecodeFields(reader);
                     case "paper_admin_export_start_details":
                         return PaperAdminExportStartDetails.Decoder.DecodeFields(reader);
+                    case "ransomware_alert_create_report_details":
+                        return RansomwareAlertCreateReportDetails.Decoder.DecodeFields(reader);
+                    case "ransomware_alert_create_report_failed_details":
+                        return RansomwareAlertCreateReportFailedDetails.Decoder.DecodeFields(reader);
+                    case "shared_folders_create_report_details":
+                        return SharedFoldersCreateReportDetails.Decoder.DecodeFields(reader);
+                    case "shared_folders_create_report_failed_details":
+                        return SharedFoldersCreateReportFailedDetails.Decoder.DecodeFields(reader);
                     case "smart_sync_create_admin_privilege_report_details":
                         return SmartSyncCreateAdminPrivilegeReportDetails.Decoder.DecodeFields(reader);
                     case "team_activity_create_report_details":
                         return TeamActivityCreateReportDetails.Decoder.DecodeFields(reader);
                     case "team_activity_create_report_fail_details":
                         return TeamActivityCreateReportFailDetails.Decoder.DecodeFields(reader);
+                    case "team_folders_create_report_details":
+                        return TeamFoldersCreateReportDetails.Decoder.DecodeFields(reader);
+                    case "team_folders_create_report_failed_details":
+                        return TeamFoldersCreateReportFailedDetails.Decoder.DecodeFields(reader);
+                    case "team_storage_create_report_details":
+                        return TeamStorageCreateReportDetails.Decoder.DecodeFields(reader);
+                    case "team_storage_create_report_failed_details":
+                        return TeamStorageCreateReportFailedDetails.Decoder.DecodeFields(reader);
                     case "collection_share_details":
                         return CollectionShareDetails.Decoder.DecodeFields(reader);
                     case "file_transfers_file_add_details":
@@ -14847,6 +18626,30 @@ namespace Dropbox.Api.TeamLog
                         return NoteShareReceiveDetails.Decoder.DecodeFields(reader);
                     case "open_note_shared_details":
                         return OpenNoteSharedDetails.Decoder.DecodeFields(reader);
+                    case "replay_file_shared_link_created_details":
+                        return ReplayFileSharedLinkCreatedDetails.Decoder.DecodeFields(reader);
+                    case "replay_file_shared_link_modified_details":
+                        return ReplayFileSharedLinkModifiedDetails.Decoder.DecodeFields(reader);
+                    case "replay_project_team_add_details":
+                        return ReplayProjectTeamAddDetails.Decoder.DecodeFields(reader);
+                    case "replay_project_team_delete_details":
+                        return ReplayProjectTeamDeleteDetails.Decoder.DecodeFields(reader);
+                    case "send_and_track_file_added_details":
+                        return SendAndTrackFileAddedDetails.Decoder.DecodeFields(reader);
+                    case "send_and_track_file_renamed_details":
+                        return SendAndTrackFileRenamedDetails.Decoder.DecodeFields(reader);
+                    case "send_and_track_file_updated_details":
+                        return SendAndTrackFileUpdatedDetails.Decoder.DecodeFields(reader);
+                    case "send_and_track_link_created_details":
+                        return SendAndTrackLinkCreatedDetails.Decoder.DecodeFields(reader);
+                    case "send_and_track_link_deleted_details":
+                        return SendAndTrackLinkDeletedDetails.Decoder.DecodeFields(reader);
+                    case "send_and_track_link_updated_details":
+                        return SendAndTrackLinkUpdatedDetails.Decoder.DecodeFields(reader);
+                    case "send_and_track_link_viewed_details":
+                        return SendAndTrackLinkViewedDetails.Decoder.DecodeFields(reader);
+                    case "send_and_track_removed_file_and_associated_links_details":
+                        return SendAndTrackRemovedFileAndAssociatedLinksDetails.Decoder.DecodeFields(reader);
                     case "sf_add_group_details":
                         return SfAddGroupDetails.Decoder.DecodeFields(reader);
                     case "sf_allow_non_members_to_view_shared_links_details":
@@ -14957,6 +18760,8 @@ namespace Dropbox.Api.TeamLog
                         return SharedLinkDownloadDetails.Decoder.DecodeFields(reader);
                     case "shared_link_remove_expiry_details":
                         return SharedLinkRemoveExpiryDetails.Decoder.DecodeFields(reader);
+                    case "shared_link_remove_visitor_details":
+                        return SharedLinkRemoveVisitorDetails.Decoder.DecodeFields(reader);
                     case "shared_link_settings_add_expiration_details":
                         return SharedLinkSettingsAddExpirationDetails.Decoder.DecodeFields(reader);
                     case "shared_link_settings_add_password_details":
@@ -15035,6 +18840,24 @@ namespace Dropbox.Api.TeamLog
                         return ShowcaseUntrashedDeprecatedDetails.Decoder.DecodeFields(reader);
                     case "showcase_view_details":
                         return ShowcaseViewDetails.Decoder.DecodeFields(reader);
+                    case "sign_signature_request_canceled_details":
+                        return SignSignatureRequestCanceledDetails.Decoder.DecodeFields(reader);
+                    case "sign_signature_request_completed_details":
+                        return SignSignatureRequestCompletedDetails.Decoder.DecodeFields(reader);
+                    case "sign_signature_request_declined_details":
+                        return SignSignatureRequestDeclinedDetails.Decoder.DecodeFields(reader);
+                    case "sign_signature_request_opened_details":
+                        return SignSignatureRequestOpenedDetails.Decoder.DecodeFields(reader);
+                    case "sign_signature_request_reminder_sent_details":
+                        return SignSignatureRequestReminderSentDetails.Decoder.DecodeFields(reader);
+                    case "sign_signature_request_sent_details":
+                        return SignSignatureRequestSentDetails.Decoder.DecodeFields(reader);
+                    case "sign_template_created_details":
+                        return SignTemplateCreatedDetails.Decoder.DecodeFields(reader);
+                    case "sign_template_shared_details":
+                        return SignTemplateSharedDetails.Decoder.DecodeFields(reader);
+                    case "risc_security_event_details":
+                        return RiscSecurityEventDetails.Decoder.DecodeFields(reader);
                     case "sso_add_cert_details":
                         return SsoAddCertDetails.Decoder.DecodeFields(reader);
                     case "sso_add_login_url_details":
@@ -15065,20 +18888,32 @@ namespace Dropbox.Api.TeamLog
                         return TeamFolderPermanentlyDeleteDetails.Decoder.DecodeFields(reader);
                     case "team_folder_rename_details":
                         return TeamFolderRenameDetails.Decoder.DecodeFields(reader);
+                    case "team_folder_space_limits_change_caps_type_details":
+                        return TeamFolderSpaceLimitsChangeCapsTypeDetails.Decoder.DecodeFields(reader);
+                    case "team_folder_space_limits_change_limit_details":
+                        return TeamFolderSpaceLimitsChangeLimitDetails.Decoder.DecodeFields(reader);
+                    case "team_folder_space_limits_change_notification_target_details":
+                        return TeamFolderSpaceLimitsChangeNotificationTargetDetails.Decoder.DecodeFields(reader);
                     case "team_selective_sync_settings_changed_details":
                         return TeamSelectiveSyncSettingsChangedDetails.Decoder.DecodeFields(reader);
                     case "account_capture_change_policy_details":
                         return AccountCaptureChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "admin_email_reminders_changed_details":
                         return AdminEmailRemindersChangedDetails.Decoder.DecodeFields(reader);
+                    case "ai_third_party_sharing_dropbox_base_policy_changed_details":
+                        return AiThirdPartySharingDropboxBasePolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "allow_download_disabled_details":
                         return AllowDownloadDisabledDetails.Decoder.DecodeFields(reader);
                     case "allow_download_enabled_details":
                         return AllowDownloadEnabledDetails.Decoder.DecodeFields(reader);
+                    case "apple_login_change_policy_details":
+                        return AppleLoginChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "app_permissions_changed_details":
                         return AppPermissionsChangedDetails.Decoder.DecodeFields(reader);
                     case "camera_uploads_policy_changed_details":
                         return CameraUploadsPolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "capture_team_space_policy_changed_details":
+                        return CaptureTeamSpacePolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "capture_transcript_policy_changed_details":
                         return CaptureTranscriptPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "classification_change_policy_details":
@@ -15087,6 +18922,10 @@ namespace Dropbox.Api.TeamLog
                         return ComputerBackupPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "content_administration_policy_changed_details":
                         return ContentAdministrationPolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "content_deletion_protection_change_policy_details":
+                        return ContentDeletionProtectionChangePolicyDetails.Decoder.DecodeFields(reader);
+                    case "dash_external_sharing_policy_changed_details":
+                        return DashExternalSharingPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "data_placement_restriction_change_policy_details":
                         return DataPlacementRestrictionChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "data_placement_restriction_satisfy_policy_details":
@@ -15135,6 +18974,8 @@ namespace Dropbox.Api.TeamLog
                         return FileRequestsEmailsRestrictedToTeamOnlyDetails.Decoder.DecodeFields(reader);
                     case "file_transfers_policy_changed_details":
                         return FileTransfersPolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "flexible_file_names_policy_changed_details":
+                        return FlexibleFileNamesPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "folder_link_restriction_policy_changed_details":
                         return FolderLinkRestrictionPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "google_sso_change_policy_details":
@@ -15159,6 +19000,8 @@ namespace Dropbox.Api.TeamLog
                         return MemberSpaceLimitsRemoveExceptionDetails.Decoder.DecodeFields(reader);
                     case "member_suggestions_change_policy_details":
                         return MemberSuggestionsChangePolicyDetails.Decoder.DecodeFields(reader);
+                    case "microsoft_login_change_policy_details":
+                        return MicrosoftLoginChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "microsoft_office_addin_change_policy_details":
                         return MicrosoftOfficeAddinChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "network_control_change_policy_details":
@@ -15179,16 +19022,30 @@ namespace Dropbox.Api.TeamLog
                         return PaperEnabledUsersGroupAdditionDetails.Decoder.DecodeFields(reader);
                     case "paper_enabled_users_group_removal_details":
                         return PaperEnabledUsersGroupRemovalDetails.Decoder.DecodeFields(reader);
+                    case "passkey_login_policy_changed_details":
+                        return PasskeyLoginPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "password_strength_requirements_change_policy_details":
                         return PasswordStrengthRequirementsChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "permanent_delete_change_policy_details":
                         return PermanentDeleteChangePolicyDetails.Decoder.DecodeFields(reader);
+                    case "previews_ai_policy_changed_details":
+                        return PreviewsAiPolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "replay_adding_people_policy_changed_details":
+                        return ReplayAddingPeoplePolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "replay_sharing_policy_changed_details":
+                        return ReplaySharingPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "reseller_support_change_policy_details":
                         return ResellerSupportChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "rewind_policy_changed_details":
                         return RewindPolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "send_and_track_policy_changed_details":
+                        return SendAndTrackPolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "send_external_sharing_policy_changed_details":
+                        return SendExternalSharingPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "send_for_signature_policy_changed_details":
                         return SendForSignaturePolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "shared_link_default_permissions_policy_changed_details":
+                        return SharedLinkDefaultPermissionsPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "sharing_change_folder_join_policy_details":
                         return SharingChangeFolderJoinPolicyDetails.Decoder.DecodeFields(reader);
                     case "sharing_change_link_allow_change_expiration_policy_details":
@@ -15207,6 +19064,10 @@ namespace Dropbox.Api.TeamLog
                         return ShowcaseChangeEnabledPolicyDetails.Decoder.DecodeFields(reader);
                     case "showcase_change_external_sharing_policy_details":
                         return ShowcaseChangeExternalSharingPolicyDetails.Decoder.DecodeFields(reader);
+                    case "sign_external_sharing_policy_changed_details":
+                        return SignExternalSharingPolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "sign_template_creation_permission_changed_details":
+                        return SignTemplateCreationPermissionChangedDetails.Decoder.DecodeFields(reader);
                     case "smarter_smart_sync_policy_changed_details":
                         return SmarterSmartSyncPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "smart_sync_change_policy_details":
@@ -15217,10 +19078,14 @@ namespace Dropbox.Api.TeamLog
                         return SmartSyncOptOutDetails.Decoder.DecodeFields(reader);
                     case "sso_change_policy_details":
                         return SsoChangePolicyDetails.Decoder.DecodeFields(reader);
+                    case "stack_cross_team_access_policy_changed_details":
+                        return StackCrossTeamAccessPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "team_branding_policy_changed_details":
                         return TeamBrandingPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "team_extensions_policy_changed_details":
                         return TeamExtensionsPolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "team_member_storage_request_policy_changed_details":
+                        return TeamMemberStorageRequestPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "team_selective_sync_policy_changed_details":
                         return TeamSelectiveSyncPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "team_sharing_whitelist_subjects_changed_details":
@@ -15231,6 +19096,8 @@ namespace Dropbox.Api.TeamLog
                         return TfaChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "tfa_remove_exception_details":
                         return TfaRemoveExceptionDetails.Decoder.DecodeFields(reader);
+                    case "top_level_content_policy_changed_details":
+                        return TopLevelContentPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "two_account_change_policy_details":
                         return TwoAccountChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "viewer_info_policy_changed_details":
@@ -15267,6 +19134,10 @@ namespace Dropbox.Api.TeamLog
                         return TeamProfileRemoveBackgroundDetails.Decoder.DecodeFields(reader);
                     case "team_profile_remove_logo_details":
                         return TeamProfileRemoveLogoDetails.Decoder.DecodeFields(reader);
+                    case "passkey_add_details":
+                        return PasskeyAddDetails.Decoder.DecodeFields(reader);
+                    case "passkey_remove_details":
+                        return PasskeyRemoveDetails.Decoder.DecodeFields(reader);
                     case "tfa_add_backup_phone_details":
                         return TfaAddBackupPhoneDetails.Decoder.DecodeFields(reader);
                     case "tfa_add_security_key_details":
@@ -15607,6 +19478,190 @@ namespace Dropbox.Api.TeamLog
                 public override AdminAlertingTriggeredAlertDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new AdminAlertingTriggeredAlertDetails(global::Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The ransomware restore process completed details object</para>
+        /// </summary>
+        public sealed class RansomwareRestoreProcessCompletedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<RansomwareRestoreProcessCompletedDetails> Encoder = new RansomwareRestoreProcessCompletedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<RansomwareRestoreProcessCompletedDetails> Decoder = new RansomwareRestoreProcessCompletedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="RansomwareRestoreProcessCompletedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public RansomwareRestoreProcessCompletedDetails(global::Dropbox.Api.TeamLog.RansomwareRestoreProcessCompletedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="RansomwareRestoreProcessCompletedDetails" /> class.</para>
+            /// </summary>
+            private RansomwareRestoreProcessCompletedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.RansomwareRestoreProcessCompletedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="RansomwareRestoreProcessCompletedDetails"
+            /// />.</para>
+            /// </summary>
+            private class RansomwareRestoreProcessCompletedDetailsEncoder : enc.StructEncoder<RansomwareRestoreProcessCompletedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(RansomwareRestoreProcessCompletedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("ransomware_restore_process_completed_details", value.Value, writer, global::Dropbox.Api.TeamLog.RansomwareRestoreProcessCompletedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="RansomwareRestoreProcessCompletedDetails"
+            /// />.</para>
+            /// </summary>
+            private class RansomwareRestoreProcessCompletedDetailsDecoder : enc.StructDecoder<RansomwareRestoreProcessCompletedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="RansomwareRestoreProcessCompletedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override RansomwareRestoreProcessCompletedDetails Create()
+                {
+                    return new RansomwareRestoreProcessCompletedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override RansomwareRestoreProcessCompletedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new RansomwareRestoreProcessCompletedDetails(global::Dropbox.Api.TeamLog.RansomwareRestoreProcessCompletedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The ransomware restore process started details object</para>
+        /// </summary>
+        public sealed class RansomwareRestoreProcessStartedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<RansomwareRestoreProcessStartedDetails> Encoder = new RansomwareRestoreProcessStartedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<RansomwareRestoreProcessStartedDetails> Decoder = new RansomwareRestoreProcessStartedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="RansomwareRestoreProcessStartedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public RansomwareRestoreProcessStartedDetails(global::Dropbox.Api.TeamLog.RansomwareRestoreProcessStartedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="RansomwareRestoreProcessStartedDetails" /> class.</para>
+            /// </summary>
+            private RansomwareRestoreProcessStartedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.RansomwareRestoreProcessStartedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="RansomwareRestoreProcessStartedDetails"
+            /// />.</para>
+            /// </summary>
+            private class RansomwareRestoreProcessStartedDetailsEncoder : enc.StructEncoder<RansomwareRestoreProcessStartedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(RansomwareRestoreProcessStartedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("ransomware_restore_process_started_details", value.Value, writer, global::Dropbox.Api.TeamLog.RansomwareRestoreProcessStartedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="RansomwareRestoreProcessStartedDetails"
+            /// />.</para>
+            /// </summary>
+            private class RansomwareRestoreProcessStartedDetailsDecoder : enc.StructDecoder<RansomwareRestoreProcessStartedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="RansomwareRestoreProcessStartedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override RansomwareRestoreProcessStartedDetails Create()
+                {
+                    return new RansomwareRestoreProcessStartedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override RansomwareRestoreProcessStartedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new RansomwareRestoreProcessStartedDetails(global::Dropbox.Api.TeamLog.RansomwareRestoreProcessStartedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -16957,6 +21012,2896 @@ namespace Dropbox.Api.TeamLog
                 public override FileUnresolveCommentDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new FileUnresolveCommentDetails(global::Dropbox.Api.TeamLog.FileUnresolveCommentDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash added comment to stack details object</para>
+        /// </summary>
+        public sealed class DashAddedCommentToStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashAddedCommentToStackDetails> Encoder = new DashAddedCommentToStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashAddedCommentToStackDetails> Decoder = new DashAddedCommentToStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashAddedCommentToStackDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashAddedCommentToStackDetails(global::Dropbox.Api.TeamLog.DashAddedCommentToStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashAddedCommentToStackDetails" /> class.</para>
+            /// </summary>
+            private DashAddedCommentToStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashAddedCommentToStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashAddedCommentToStackDetails" />.</para>
+            /// </summary>
+            private class DashAddedCommentToStackDetailsEncoder : enc.StructEncoder<DashAddedCommentToStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashAddedCommentToStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_added_comment_to_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashAddedCommentToStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashAddedCommentToStackDetails" />.</para>
+            /// </summary>
+            private class DashAddedCommentToStackDetailsDecoder : enc.StructDecoder<DashAddedCommentToStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashAddedCommentToStackDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashAddedCommentToStackDetails Create()
+                {
+                    return new DashAddedCommentToStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashAddedCommentToStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashAddedCommentToStackDetails(global::Dropbox.Api.TeamLog.DashAddedCommentToStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash added connector details object</para>
+        /// </summary>
+        public sealed class DashAddedConnectorDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashAddedConnectorDetails> Encoder = new DashAddedConnectorDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashAddedConnectorDetails> Decoder = new DashAddedConnectorDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashAddedConnectorDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashAddedConnectorDetails(global::Dropbox.Api.TeamLog.DashAddedConnectorDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashAddedConnectorDetails"
+            /// /> class.</para>
+            /// </summary>
+            private DashAddedConnectorDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashAddedConnectorDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashAddedConnectorDetails" />.</para>
+            /// </summary>
+            private class DashAddedConnectorDetailsEncoder : enc.StructEncoder<DashAddedConnectorDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashAddedConnectorDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_added_connector_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashAddedConnectorDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashAddedConnectorDetails" />.</para>
+            /// </summary>
+            private class DashAddedConnectorDetailsDecoder : enc.StructDecoder<DashAddedConnectorDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DashAddedConnectorDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashAddedConnectorDetails Create()
+                {
+                    return new DashAddedConnectorDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashAddedConnectorDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashAddedConnectorDetails(global::Dropbox.Api.TeamLog.DashAddedConnectorDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash added link to stack details object</para>
+        /// </summary>
+        public sealed class DashAddedLinkToStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashAddedLinkToStackDetails> Encoder = new DashAddedLinkToStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashAddedLinkToStackDetails> Decoder = new DashAddedLinkToStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashAddedLinkToStackDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashAddedLinkToStackDetails(global::Dropbox.Api.TeamLog.DashAddedLinkToStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashAddedLinkToStackDetails"
+            /// /> class.</para>
+            /// </summary>
+            private DashAddedLinkToStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashAddedLinkToStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashAddedLinkToStackDetails" />.</para>
+            /// </summary>
+            private class DashAddedLinkToStackDetailsEncoder : enc.StructEncoder<DashAddedLinkToStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashAddedLinkToStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_added_link_to_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashAddedLinkToStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashAddedLinkToStackDetails" />.</para>
+            /// </summary>
+            private class DashAddedLinkToStackDetailsDecoder : enc.StructDecoder<DashAddedLinkToStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DashAddedLinkToStackDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashAddedLinkToStackDetails Create()
+                {
+                    return new DashAddedLinkToStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashAddedLinkToStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashAddedLinkToStackDetails(global::Dropbox.Api.TeamLog.DashAddedLinkToStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash added team email domain allowlist details object</para>
+        /// </summary>
+        public sealed class DashAddedTeamEmailDomainAllowlistDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashAddedTeamEmailDomainAllowlistDetails> Encoder = new DashAddedTeamEmailDomainAllowlistDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashAddedTeamEmailDomainAllowlistDetails> Decoder = new DashAddedTeamEmailDomainAllowlistDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashAddedTeamEmailDomainAllowlistDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashAddedTeamEmailDomainAllowlistDetails(global::Dropbox.Api.TeamLog.DashAddedTeamEmailDomainAllowlistDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashAddedTeamEmailDomainAllowlistDetails" /> class.</para>
+            /// </summary>
+            private DashAddedTeamEmailDomainAllowlistDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashAddedTeamEmailDomainAllowlistDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashAddedTeamEmailDomainAllowlistDetails"
+            /// />.</para>
+            /// </summary>
+            private class DashAddedTeamEmailDomainAllowlistDetailsEncoder : enc.StructEncoder<DashAddedTeamEmailDomainAllowlistDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashAddedTeamEmailDomainAllowlistDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_added_team_email_domain_allowlist_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashAddedTeamEmailDomainAllowlistDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashAddedTeamEmailDomainAllowlistDetails"
+            /// />.</para>
+            /// </summary>
+            private class DashAddedTeamEmailDomainAllowlistDetailsDecoder : enc.StructDecoder<DashAddedTeamEmailDomainAllowlistDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashAddedTeamEmailDomainAllowlistDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashAddedTeamEmailDomainAllowlistDetails Create()
+                {
+                    return new DashAddedTeamEmailDomainAllowlistDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashAddedTeamEmailDomainAllowlistDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashAddedTeamEmailDomainAllowlistDetails(global::Dropbox.Api.TeamLog.DashAddedTeamEmailDomainAllowlistDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash admin added org wide connector details object</para>
+        /// </summary>
+        public sealed class DashAdminAddedOrgWideConnectorDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashAdminAddedOrgWideConnectorDetails> Encoder = new DashAdminAddedOrgWideConnectorDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashAdminAddedOrgWideConnectorDetails> Decoder = new DashAdminAddedOrgWideConnectorDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashAdminAddedOrgWideConnectorDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashAdminAddedOrgWideConnectorDetails(global::Dropbox.Api.TeamLog.DashAdminAddedOrgWideConnectorDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashAdminAddedOrgWideConnectorDetails" /> class.</para>
+            /// </summary>
+            private DashAdminAddedOrgWideConnectorDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashAdminAddedOrgWideConnectorDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashAdminAddedOrgWideConnectorDetails" />.</para>
+            /// </summary>
+            private class DashAdminAddedOrgWideConnectorDetailsEncoder : enc.StructEncoder<DashAdminAddedOrgWideConnectorDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashAdminAddedOrgWideConnectorDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_admin_added_org_wide_connector_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashAdminAddedOrgWideConnectorDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashAdminAddedOrgWideConnectorDetails" />.</para>
+            /// </summary>
+            private class DashAdminAddedOrgWideConnectorDetailsDecoder : enc.StructDecoder<DashAdminAddedOrgWideConnectorDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashAdminAddedOrgWideConnectorDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashAdminAddedOrgWideConnectorDetails Create()
+                {
+                    return new DashAdminAddedOrgWideConnectorDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashAdminAddedOrgWideConnectorDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashAdminAddedOrgWideConnectorDetails(global::Dropbox.Api.TeamLog.DashAdminAddedOrgWideConnectorDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash admin disabled connector details object</para>
+        /// </summary>
+        public sealed class DashAdminDisabledConnectorDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashAdminDisabledConnectorDetails> Encoder = new DashAdminDisabledConnectorDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashAdminDisabledConnectorDetails> Decoder = new DashAdminDisabledConnectorDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashAdminDisabledConnectorDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashAdminDisabledConnectorDetails(global::Dropbox.Api.TeamLog.DashAdminDisabledConnectorDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashAdminDisabledConnectorDetails" /> class.</para>
+            /// </summary>
+            private DashAdminDisabledConnectorDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashAdminDisabledConnectorDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashAdminDisabledConnectorDetails" />.</para>
+            /// </summary>
+            private class DashAdminDisabledConnectorDetailsEncoder : enc.StructEncoder<DashAdminDisabledConnectorDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashAdminDisabledConnectorDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_admin_disabled_connector_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashAdminDisabledConnectorDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashAdminDisabledConnectorDetails" />.</para>
+            /// </summary>
+            private class DashAdminDisabledConnectorDetailsDecoder : enc.StructDecoder<DashAdminDisabledConnectorDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashAdminDisabledConnectorDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashAdminDisabledConnectorDetails Create()
+                {
+                    return new DashAdminDisabledConnectorDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashAdminDisabledConnectorDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashAdminDisabledConnectorDetails(global::Dropbox.Api.TeamLog.DashAdminDisabledConnectorDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash admin enabled connector details object</para>
+        /// </summary>
+        public sealed class DashAdminEnabledConnectorDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashAdminEnabledConnectorDetails> Encoder = new DashAdminEnabledConnectorDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashAdminEnabledConnectorDetails> Decoder = new DashAdminEnabledConnectorDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashAdminEnabledConnectorDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashAdminEnabledConnectorDetails(global::Dropbox.Api.TeamLog.DashAdminEnabledConnectorDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashAdminEnabledConnectorDetails" /> class.</para>
+            /// </summary>
+            private DashAdminEnabledConnectorDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashAdminEnabledConnectorDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashAdminEnabledConnectorDetails" />.</para>
+            /// </summary>
+            private class DashAdminEnabledConnectorDetailsEncoder : enc.StructEncoder<DashAdminEnabledConnectorDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashAdminEnabledConnectorDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_admin_enabled_connector_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashAdminEnabledConnectorDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashAdminEnabledConnectorDetails" />.</para>
+            /// </summary>
+            private class DashAdminEnabledConnectorDetailsDecoder : enc.StructDecoder<DashAdminEnabledConnectorDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashAdminEnabledConnectorDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashAdminEnabledConnectorDetails Create()
+                {
+                    return new DashAdminEnabledConnectorDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashAdminEnabledConnectorDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashAdminEnabledConnectorDetails(global::Dropbox.Api.TeamLog.DashAdminEnabledConnectorDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash admin removed org wide connector details object</para>
+        /// </summary>
+        public sealed class DashAdminRemovedOrgWideConnectorDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashAdminRemovedOrgWideConnectorDetails> Encoder = new DashAdminRemovedOrgWideConnectorDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashAdminRemovedOrgWideConnectorDetails> Decoder = new DashAdminRemovedOrgWideConnectorDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashAdminRemovedOrgWideConnectorDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashAdminRemovedOrgWideConnectorDetails(global::Dropbox.Api.TeamLog.DashAdminRemovedOrgWideConnectorDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashAdminRemovedOrgWideConnectorDetails" /> class.</para>
+            /// </summary>
+            private DashAdminRemovedOrgWideConnectorDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashAdminRemovedOrgWideConnectorDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashAdminRemovedOrgWideConnectorDetails"
+            /// />.</para>
+            /// </summary>
+            private class DashAdminRemovedOrgWideConnectorDetailsEncoder : enc.StructEncoder<DashAdminRemovedOrgWideConnectorDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashAdminRemovedOrgWideConnectorDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_admin_removed_org_wide_connector_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashAdminRemovedOrgWideConnectorDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashAdminRemovedOrgWideConnectorDetails"
+            /// />.</para>
+            /// </summary>
+            private class DashAdminRemovedOrgWideConnectorDetailsDecoder : enc.StructDecoder<DashAdminRemovedOrgWideConnectorDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashAdminRemovedOrgWideConnectorDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashAdminRemovedOrgWideConnectorDetails Create()
+                {
+                    return new DashAdminRemovedOrgWideConnectorDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashAdminRemovedOrgWideConnectorDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashAdminRemovedOrgWideConnectorDetails(global::Dropbox.Api.TeamLog.DashAdminRemovedOrgWideConnectorDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash archived stack details object</para>
+        /// </summary>
+        public sealed class DashArchivedStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashArchivedStackDetails> Encoder = new DashArchivedStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashArchivedStackDetails> Decoder = new DashArchivedStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashArchivedStackDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashArchivedStackDetails(global::Dropbox.Api.TeamLog.DashArchivedStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashArchivedStackDetails" />
+            /// class.</para>
+            /// </summary>
+            private DashArchivedStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashArchivedStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashArchivedStackDetails" />.</para>
+            /// </summary>
+            private class DashArchivedStackDetailsEncoder : enc.StructEncoder<DashArchivedStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashArchivedStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_archived_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashArchivedStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashArchivedStackDetails" />.</para>
+            /// </summary>
+            private class DashArchivedStackDetailsDecoder : enc.StructDecoder<DashArchivedStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DashArchivedStackDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashArchivedStackDetails Create()
+                {
+                    return new DashArchivedStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashArchivedStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashArchivedStackDetails(global::Dropbox.Api.TeamLog.DashArchivedStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash changed audience of shared link to stack details object</para>
+        /// </summary>
+        public sealed class DashChangedAudienceOfSharedLinkToStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashChangedAudienceOfSharedLinkToStackDetails> Encoder = new DashChangedAudienceOfSharedLinkToStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashChangedAudienceOfSharedLinkToStackDetails> Decoder = new DashChangedAudienceOfSharedLinkToStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashChangedAudienceOfSharedLinkToStackDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashChangedAudienceOfSharedLinkToStackDetails(global::Dropbox.Api.TeamLog.DashChangedAudienceOfSharedLinkToStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashChangedAudienceOfSharedLinkToStackDetails" /> class.</para>
+            /// </summary>
+            private DashChangedAudienceOfSharedLinkToStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashChangedAudienceOfSharedLinkToStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashChangedAudienceOfSharedLinkToStackDetails"
+            /// />.</para>
+            /// </summary>
+            private class DashChangedAudienceOfSharedLinkToStackDetailsEncoder : enc.StructEncoder<DashChangedAudienceOfSharedLinkToStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashChangedAudienceOfSharedLinkToStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_changed_audience_of_shared_link_to_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashChangedAudienceOfSharedLinkToStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashChangedAudienceOfSharedLinkToStackDetails"
+            /// />.</para>
+            /// </summary>
+            private class DashChangedAudienceOfSharedLinkToStackDetailsDecoder : enc.StructDecoder<DashChangedAudienceOfSharedLinkToStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashChangedAudienceOfSharedLinkToStackDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashChangedAudienceOfSharedLinkToStackDetails Create()
+                {
+                    return new DashChangedAudienceOfSharedLinkToStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashChangedAudienceOfSharedLinkToStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashChangedAudienceOfSharedLinkToStackDetails(global::Dropbox.Api.TeamLog.DashChangedAudienceOfSharedLinkToStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash cloned stack details object</para>
+        /// </summary>
+        public sealed class DashClonedStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashClonedStackDetails> Encoder = new DashClonedStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashClonedStackDetails> Decoder = new DashClonedStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashClonedStackDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashClonedStackDetails(global::Dropbox.Api.TeamLog.DashClonedStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashClonedStackDetails" />
+            /// class.</para>
+            /// </summary>
+            private DashClonedStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashClonedStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashClonedStackDetails" />.</para>
+            /// </summary>
+            private class DashClonedStackDetailsEncoder : enc.StructEncoder<DashClonedStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashClonedStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_cloned_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashClonedStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashClonedStackDetails" />.</para>
+            /// </summary>
+            private class DashClonedStackDetailsDecoder : enc.StructDecoder<DashClonedStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DashClonedStackDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashClonedStackDetails Create()
+                {
+                    return new DashClonedStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashClonedStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashClonedStackDetails(global::Dropbox.Api.TeamLog.DashClonedStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash connector tools call details object</para>
+        /// </summary>
+        public sealed class DashConnectorToolsCallDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashConnectorToolsCallDetails> Encoder = new DashConnectorToolsCallDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashConnectorToolsCallDetails> Decoder = new DashConnectorToolsCallDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashConnectorToolsCallDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashConnectorToolsCallDetails(global::Dropbox.Api.TeamLog.DashConnectorToolsCallDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashConnectorToolsCallDetails" /> class.</para>
+            /// </summary>
+            private DashConnectorToolsCallDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashConnectorToolsCallDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashConnectorToolsCallDetails" />.</para>
+            /// </summary>
+            private class DashConnectorToolsCallDetailsEncoder : enc.StructEncoder<DashConnectorToolsCallDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashConnectorToolsCallDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_connector_tools_call_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashConnectorToolsCallDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashConnectorToolsCallDetails" />.</para>
+            /// </summary>
+            private class DashConnectorToolsCallDetailsDecoder : enc.StructDecoder<DashConnectorToolsCallDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashConnectorToolsCallDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashConnectorToolsCallDetails Create()
+                {
+                    return new DashConnectorToolsCallDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashConnectorToolsCallDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashConnectorToolsCallDetails(global::Dropbox.Api.TeamLog.DashConnectorToolsCallDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash created stack details object</para>
+        /// </summary>
+        public sealed class DashCreatedStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashCreatedStackDetails> Encoder = new DashCreatedStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashCreatedStackDetails> Decoder = new DashCreatedStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashCreatedStackDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashCreatedStackDetails(global::Dropbox.Api.TeamLog.DashCreatedStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashCreatedStackDetails" />
+            /// class.</para>
+            /// </summary>
+            private DashCreatedStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashCreatedStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashCreatedStackDetails" />.</para>
+            /// </summary>
+            private class DashCreatedStackDetailsEncoder : enc.StructEncoder<DashCreatedStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashCreatedStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_created_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashCreatedStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashCreatedStackDetails" />.</para>
+            /// </summary>
+            private class DashCreatedStackDetailsDecoder : enc.StructDecoder<DashCreatedStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DashCreatedStackDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashCreatedStackDetails Create()
+                {
+                    return new DashCreatedStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashCreatedStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashCreatedStackDetails(global::Dropbox.Api.TeamLog.DashCreatedStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash deleted comment from stack details object</para>
+        /// </summary>
+        public sealed class DashDeletedCommentFromStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashDeletedCommentFromStackDetails> Encoder = new DashDeletedCommentFromStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashDeletedCommentFromStackDetails> Decoder = new DashDeletedCommentFromStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashDeletedCommentFromStackDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashDeletedCommentFromStackDetails(global::Dropbox.Api.TeamLog.DashDeletedCommentFromStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashDeletedCommentFromStackDetails" /> class.</para>
+            /// </summary>
+            private DashDeletedCommentFromStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashDeletedCommentFromStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashDeletedCommentFromStackDetails" />.</para>
+            /// </summary>
+            private class DashDeletedCommentFromStackDetailsEncoder : enc.StructEncoder<DashDeletedCommentFromStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashDeletedCommentFromStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_deleted_comment_from_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashDeletedCommentFromStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashDeletedCommentFromStackDetails" />.</para>
+            /// </summary>
+            private class DashDeletedCommentFromStackDetailsDecoder : enc.StructDecoder<DashDeletedCommentFromStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashDeletedCommentFromStackDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashDeletedCommentFromStackDetails Create()
+                {
+                    return new DashDeletedCommentFromStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashDeletedCommentFromStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashDeletedCommentFromStackDetails(global::Dropbox.Api.TeamLog.DashDeletedCommentFromStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash deleted stack details object</para>
+        /// </summary>
+        public sealed class DashDeletedStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashDeletedStackDetails> Encoder = new DashDeletedStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashDeletedStackDetails> Decoder = new DashDeletedStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashDeletedStackDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashDeletedStackDetails(global::Dropbox.Api.TeamLog.DashDeletedStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashDeletedStackDetails" />
+            /// class.</para>
+            /// </summary>
+            private DashDeletedStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashDeletedStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashDeletedStackDetails" />.</para>
+            /// </summary>
+            private class DashDeletedStackDetailsEncoder : enc.StructEncoder<DashDeletedStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashDeletedStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_deleted_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashDeletedStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashDeletedStackDetails" />.</para>
+            /// </summary>
+            private class DashDeletedStackDetailsDecoder : enc.StructDecoder<DashDeletedStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DashDeletedStackDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashDeletedStackDetails Create()
+                {
+                    return new DashDeletedStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashDeletedStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashDeletedStackDetails(global::Dropbox.Api.TeamLog.DashDeletedStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash edited comment in stack details object</para>
+        /// </summary>
+        public sealed class DashEditedCommentInStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashEditedCommentInStackDetails> Encoder = new DashEditedCommentInStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashEditedCommentInStackDetails> Decoder = new DashEditedCommentInStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashEditedCommentInStackDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashEditedCommentInStackDetails(global::Dropbox.Api.TeamLog.DashEditedCommentInStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashEditedCommentInStackDetails" /> class.</para>
+            /// </summary>
+            private DashEditedCommentInStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashEditedCommentInStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashEditedCommentInStackDetails" />.</para>
+            /// </summary>
+            private class DashEditedCommentInStackDetailsEncoder : enc.StructEncoder<DashEditedCommentInStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashEditedCommentInStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_edited_comment_in_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashEditedCommentInStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashEditedCommentInStackDetails" />.</para>
+            /// </summary>
+            private class DashEditedCommentInStackDetailsDecoder : enc.StructDecoder<DashEditedCommentInStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashEditedCommentInStackDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashEditedCommentInStackDetails Create()
+                {
+                    return new DashEditedCommentInStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashEditedCommentInStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashEditedCommentInStackDetails(global::Dropbox.Api.TeamLog.DashEditedCommentInStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash external user opened stack details object</para>
+        /// </summary>
+        public sealed class DashExternalUserOpenedStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashExternalUserOpenedStackDetails> Encoder = new DashExternalUserOpenedStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashExternalUserOpenedStackDetails> Decoder = new DashExternalUserOpenedStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashExternalUserOpenedStackDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashExternalUserOpenedStackDetails(global::Dropbox.Api.TeamLog.DashExternalUserOpenedStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashExternalUserOpenedStackDetails" /> class.</para>
+            /// </summary>
+            private DashExternalUserOpenedStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashExternalUserOpenedStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashExternalUserOpenedStackDetails" />.</para>
+            /// </summary>
+            private class DashExternalUserOpenedStackDetailsEncoder : enc.StructEncoder<DashExternalUserOpenedStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashExternalUserOpenedStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_external_user_opened_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashExternalUserOpenedStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashExternalUserOpenedStackDetails" />.</para>
+            /// </summary>
+            private class DashExternalUserOpenedStackDetailsDecoder : enc.StructDecoder<DashExternalUserOpenedStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashExternalUserOpenedStackDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashExternalUserOpenedStackDetails Create()
+                {
+                    return new DashExternalUserOpenedStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashExternalUserOpenedStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashExternalUserOpenedStackDetails(global::Dropbox.Api.TeamLog.DashExternalUserOpenedStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash first launched desktop details object</para>
+        /// </summary>
+        public sealed class DashFirstLaunchedDesktopDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashFirstLaunchedDesktopDetails> Encoder = new DashFirstLaunchedDesktopDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashFirstLaunchedDesktopDetails> Decoder = new DashFirstLaunchedDesktopDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashFirstLaunchedDesktopDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashFirstLaunchedDesktopDetails(global::Dropbox.Api.TeamLog.DashFirstLaunchedDesktopDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashFirstLaunchedDesktopDetails" /> class.</para>
+            /// </summary>
+            private DashFirstLaunchedDesktopDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashFirstLaunchedDesktopDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashFirstLaunchedDesktopDetails" />.</para>
+            /// </summary>
+            private class DashFirstLaunchedDesktopDetailsEncoder : enc.StructEncoder<DashFirstLaunchedDesktopDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashFirstLaunchedDesktopDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_first_launched_desktop_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashFirstLaunchedDesktopDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashFirstLaunchedDesktopDetails" />.</para>
+            /// </summary>
+            private class DashFirstLaunchedDesktopDetailsDecoder : enc.StructDecoder<DashFirstLaunchedDesktopDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashFirstLaunchedDesktopDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashFirstLaunchedDesktopDetails Create()
+                {
+                    return new DashFirstLaunchedDesktopDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashFirstLaunchedDesktopDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashFirstLaunchedDesktopDetails(global::Dropbox.Api.TeamLog.DashFirstLaunchedDesktopDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash first launched extension details object</para>
+        /// </summary>
+        public sealed class DashFirstLaunchedExtensionDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashFirstLaunchedExtensionDetails> Encoder = new DashFirstLaunchedExtensionDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashFirstLaunchedExtensionDetails> Decoder = new DashFirstLaunchedExtensionDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashFirstLaunchedExtensionDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashFirstLaunchedExtensionDetails(global::Dropbox.Api.TeamLog.DashFirstLaunchedExtensionDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashFirstLaunchedExtensionDetails" /> class.</para>
+            /// </summary>
+            private DashFirstLaunchedExtensionDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashFirstLaunchedExtensionDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashFirstLaunchedExtensionDetails" />.</para>
+            /// </summary>
+            private class DashFirstLaunchedExtensionDetailsEncoder : enc.StructEncoder<DashFirstLaunchedExtensionDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashFirstLaunchedExtensionDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_first_launched_extension_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashFirstLaunchedExtensionDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashFirstLaunchedExtensionDetails" />.</para>
+            /// </summary>
+            private class DashFirstLaunchedExtensionDetailsDecoder : enc.StructDecoder<DashFirstLaunchedExtensionDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashFirstLaunchedExtensionDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashFirstLaunchedExtensionDetails Create()
+                {
+                    return new DashFirstLaunchedExtensionDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashFirstLaunchedExtensionDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashFirstLaunchedExtensionDetails(global::Dropbox.Api.TeamLog.DashFirstLaunchedExtensionDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash first launched web start page details object</para>
+        /// </summary>
+        public sealed class DashFirstLaunchedWebStartPageDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashFirstLaunchedWebStartPageDetails> Encoder = new DashFirstLaunchedWebStartPageDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashFirstLaunchedWebStartPageDetails> Decoder = new DashFirstLaunchedWebStartPageDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashFirstLaunchedWebStartPageDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashFirstLaunchedWebStartPageDetails(global::Dropbox.Api.TeamLog.DashFirstLaunchedWebStartPageDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashFirstLaunchedWebStartPageDetails" /> class.</para>
+            /// </summary>
+            private DashFirstLaunchedWebStartPageDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashFirstLaunchedWebStartPageDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashFirstLaunchedWebStartPageDetails" />.</para>
+            /// </summary>
+            private class DashFirstLaunchedWebStartPageDetailsEncoder : enc.StructEncoder<DashFirstLaunchedWebStartPageDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashFirstLaunchedWebStartPageDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_first_launched_web_start_page_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashFirstLaunchedWebStartPageDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashFirstLaunchedWebStartPageDetails" />.</para>
+            /// </summary>
+            private class DashFirstLaunchedWebStartPageDetailsDecoder : enc.StructDecoder<DashFirstLaunchedWebStartPageDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashFirstLaunchedWebStartPageDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashFirstLaunchedWebStartPageDetails Create()
+                {
+                    return new DashFirstLaunchedWebStartPageDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashFirstLaunchedWebStartPageDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashFirstLaunchedWebStartPageDetails(global::Dropbox.Api.TeamLog.DashFirstLaunchedWebStartPageDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash opened shared link to stack details object</para>
+        /// </summary>
+        public sealed class DashOpenedSharedLinkToStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashOpenedSharedLinkToStackDetails> Encoder = new DashOpenedSharedLinkToStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashOpenedSharedLinkToStackDetails> Decoder = new DashOpenedSharedLinkToStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashOpenedSharedLinkToStackDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashOpenedSharedLinkToStackDetails(global::Dropbox.Api.TeamLog.DashOpenedSharedLinkToStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashOpenedSharedLinkToStackDetails" /> class.</para>
+            /// </summary>
+            private DashOpenedSharedLinkToStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashOpenedSharedLinkToStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashOpenedSharedLinkToStackDetails" />.</para>
+            /// </summary>
+            private class DashOpenedSharedLinkToStackDetailsEncoder : enc.StructEncoder<DashOpenedSharedLinkToStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashOpenedSharedLinkToStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_opened_shared_link_to_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashOpenedSharedLinkToStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashOpenedSharedLinkToStackDetails" />.</para>
+            /// </summary>
+            private class DashOpenedSharedLinkToStackDetailsDecoder : enc.StructDecoder<DashOpenedSharedLinkToStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashOpenedSharedLinkToStackDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashOpenedSharedLinkToStackDetails Create()
+                {
+                    return new DashOpenedSharedLinkToStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashOpenedSharedLinkToStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashOpenedSharedLinkToStackDetails(global::Dropbox.Api.TeamLog.DashOpenedSharedLinkToStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash opened stack details object</para>
+        /// </summary>
+        public sealed class DashOpenedStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashOpenedStackDetails> Encoder = new DashOpenedStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashOpenedStackDetails> Decoder = new DashOpenedStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashOpenedStackDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashOpenedStackDetails(global::Dropbox.Api.TeamLog.DashOpenedStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashOpenedStackDetails" />
+            /// class.</para>
+            /// </summary>
+            private DashOpenedStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashOpenedStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashOpenedStackDetails" />.</para>
+            /// </summary>
+            private class DashOpenedStackDetailsEncoder : enc.StructEncoder<DashOpenedStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashOpenedStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_opened_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashOpenedStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashOpenedStackDetails" />.</para>
+            /// </summary>
+            private class DashOpenedStackDetailsDecoder : enc.StructDecoder<DashOpenedStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DashOpenedStackDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashOpenedStackDetails Create()
+                {
+                    return new DashOpenedStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashOpenedStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashOpenedStackDetails(global::Dropbox.Api.TeamLog.DashOpenedStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash preview opt out status changed details object</para>
+        /// </summary>
+        public sealed class DashPreviewOptOutStatusChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashPreviewOptOutStatusChangedDetails> Encoder = new DashPreviewOptOutStatusChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashPreviewOptOutStatusChangedDetails> Decoder = new DashPreviewOptOutStatusChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashPreviewOptOutStatusChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashPreviewOptOutStatusChangedDetails(global::Dropbox.Api.TeamLog.DashPreviewOptOutStatusChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashPreviewOptOutStatusChangedDetails" /> class.</para>
+            /// </summary>
+            private DashPreviewOptOutStatusChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashPreviewOptOutStatusChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashPreviewOptOutStatusChangedDetails" />.</para>
+            /// </summary>
+            private class DashPreviewOptOutStatusChangedDetailsEncoder : enc.StructEncoder<DashPreviewOptOutStatusChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashPreviewOptOutStatusChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_preview_opt_out_status_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashPreviewOptOutStatusChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashPreviewOptOutStatusChangedDetails" />.</para>
+            /// </summary>
+            private class DashPreviewOptOutStatusChangedDetailsDecoder : enc.StructDecoder<DashPreviewOptOutStatusChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashPreviewOptOutStatusChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashPreviewOptOutStatusChangedDetails Create()
+                {
+                    return new DashPreviewOptOutStatusChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashPreviewOptOutStatusChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashPreviewOptOutStatusChangedDetails(global::Dropbox.Api.TeamLog.DashPreviewOptOutStatusChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash removed connector details object</para>
+        /// </summary>
+        public sealed class DashRemovedConnectorDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashRemovedConnectorDetails> Encoder = new DashRemovedConnectorDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashRemovedConnectorDetails> Decoder = new DashRemovedConnectorDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashRemovedConnectorDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashRemovedConnectorDetails(global::Dropbox.Api.TeamLog.DashRemovedConnectorDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashRemovedConnectorDetails"
+            /// /> class.</para>
+            /// </summary>
+            private DashRemovedConnectorDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashRemovedConnectorDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashRemovedConnectorDetails" />.</para>
+            /// </summary>
+            private class DashRemovedConnectorDetailsEncoder : enc.StructEncoder<DashRemovedConnectorDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashRemovedConnectorDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_removed_connector_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashRemovedConnectorDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashRemovedConnectorDetails" />.</para>
+            /// </summary>
+            private class DashRemovedConnectorDetailsDecoder : enc.StructDecoder<DashRemovedConnectorDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DashRemovedConnectorDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashRemovedConnectorDetails Create()
+                {
+                    return new DashRemovedConnectorDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashRemovedConnectorDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashRemovedConnectorDetails(global::Dropbox.Api.TeamLog.DashRemovedConnectorDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash removed link from stack details object</para>
+        /// </summary>
+        public sealed class DashRemovedLinkFromStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashRemovedLinkFromStackDetails> Encoder = new DashRemovedLinkFromStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashRemovedLinkFromStackDetails> Decoder = new DashRemovedLinkFromStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashRemovedLinkFromStackDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashRemovedLinkFromStackDetails(global::Dropbox.Api.TeamLog.DashRemovedLinkFromStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashRemovedLinkFromStackDetails" /> class.</para>
+            /// </summary>
+            private DashRemovedLinkFromStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashRemovedLinkFromStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashRemovedLinkFromStackDetails" />.</para>
+            /// </summary>
+            private class DashRemovedLinkFromStackDetailsEncoder : enc.StructEncoder<DashRemovedLinkFromStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashRemovedLinkFromStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_removed_link_from_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashRemovedLinkFromStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashRemovedLinkFromStackDetails" />.</para>
+            /// </summary>
+            private class DashRemovedLinkFromStackDetailsDecoder : enc.StructDecoder<DashRemovedLinkFromStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashRemovedLinkFromStackDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashRemovedLinkFromStackDetails Create()
+                {
+                    return new DashRemovedLinkFromStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashRemovedLinkFromStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashRemovedLinkFromStackDetails(global::Dropbox.Api.TeamLog.DashRemovedLinkFromStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash removed shared link to stack details object</para>
+        /// </summary>
+        public sealed class DashRemovedSharedLinkToStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashRemovedSharedLinkToStackDetails> Encoder = new DashRemovedSharedLinkToStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashRemovedSharedLinkToStackDetails> Decoder = new DashRemovedSharedLinkToStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashRemovedSharedLinkToStackDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashRemovedSharedLinkToStackDetails(global::Dropbox.Api.TeamLog.DashRemovedSharedLinkToStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashRemovedSharedLinkToStackDetails" /> class.</para>
+            /// </summary>
+            private DashRemovedSharedLinkToStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashRemovedSharedLinkToStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashRemovedSharedLinkToStackDetails" />.</para>
+            /// </summary>
+            private class DashRemovedSharedLinkToStackDetailsEncoder : enc.StructEncoder<DashRemovedSharedLinkToStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashRemovedSharedLinkToStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_removed_shared_link_to_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashRemovedSharedLinkToStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashRemovedSharedLinkToStackDetails" />.</para>
+            /// </summary>
+            private class DashRemovedSharedLinkToStackDetailsDecoder : enc.StructDecoder<DashRemovedSharedLinkToStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashRemovedSharedLinkToStackDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashRemovedSharedLinkToStackDetails Create()
+                {
+                    return new DashRemovedSharedLinkToStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashRemovedSharedLinkToStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashRemovedSharedLinkToStackDetails(global::Dropbox.Api.TeamLog.DashRemovedSharedLinkToStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash removed team email domain allowlist details object</para>
+        /// </summary>
+        public sealed class DashRemovedTeamEmailDomainAllowlistDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashRemovedTeamEmailDomainAllowlistDetails> Encoder = new DashRemovedTeamEmailDomainAllowlistDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashRemovedTeamEmailDomainAllowlistDetails> Decoder = new DashRemovedTeamEmailDomainAllowlistDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashRemovedTeamEmailDomainAllowlistDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashRemovedTeamEmailDomainAllowlistDetails(global::Dropbox.Api.TeamLog.DashRemovedTeamEmailDomainAllowlistDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashRemovedTeamEmailDomainAllowlistDetails" /> class.</para>
+            /// </summary>
+            private DashRemovedTeamEmailDomainAllowlistDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashRemovedTeamEmailDomainAllowlistDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashRemovedTeamEmailDomainAllowlistDetails"
+            /// />.</para>
+            /// </summary>
+            private class DashRemovedTeamEmailDomainAllowlistDetailsEncoder : enc.StructEncoder<DashRemovedTeamEmailDomainAllowlistDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashRemovedTeamEmailDomainAllowlistDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_removed_team_email_domain_allowlist_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashRemovedTeamEmailDomainAllowlistDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashRemovedTeamEmailDomainAllowlistDetails"
+            /// />.</para>
+            /// </summary>
+            private class DashRemovedTeamEmailDomainAllowlistDetailsDecoder : enc.StructDecoder<DashRemovedTeamEmailDomainAllowlistDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashRemovedTeamEmailDomainAllowlistDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashRemovedTeamEmailDomainAllowlistDetails Create()
+                {
+                    return new DashRemovedTeamEmailDomainAllowlistDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashRemovedTeamEmailDomainAllowlistDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashRemovedTeamEmailDomainAllowlistDetails(global::Dropbox.Api.TeamLog.DashRemovedTeamEmailDomainAllowlistDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash renamed stack details object</para>
+        /// </summary>
+        public sealed class DashRenamedStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashRenamedStackDetails> Encoder = new DashRenamedStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashRenamedStackDetails> Decoder = new DashRenamedStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashRenamedStackDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashRenamedStackDetails(global::Dropbox.Api.TeamLog.DashRenamedStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashRenamedStackDetails" />
+            /// class.</para>
+            /// </summary>
+            private DashRenamedStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashRenamedStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashRenamedStackDetails" />.</para>
+            /// </summary>
+            private class DashRenamedStackDetailsEncoder : enc.StructEncoder<DashRenamedStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashRenamedStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_renamed_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashRenamedStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashRenamedStackDetails" />.</para>
+            /// </summary>
+            private class DashRenamedStackDetailsDecoder : enc.StructDecoder<DashRenamedStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DashRenamedStackDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashRenamedStackDetails Create()
+                {
+                    return new DashRenamedStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashRenamedStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashRenamedStackDetails(global::Dropbox.Api.TeamLog.DashRenamedStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash shared link to stack details object</para>
+        /// </summary>
+        public sealed class DashSharedLinkToStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashSharedLinkToStackDetails> Encoder = new DashSharedLinkToStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashSharedLinkToStackDetails> Decoder = new DashSharedLinkToStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashSharedLinkToStackDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashSharedLinkToStackDetails(global::Dropbox.Api.TeamLog.DashSharedLinkToStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashSharedLinkToStackDetails" /> class.</para>
+            /// </summary>
+            private DashSharedLinkToStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashSharedLinkToStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashSharedLinkToStackDetails" />.</para>
+            /// </summary>
+            private class DashSharedLinkToStackDetailsEncoder : enc.StructEncoder<DashSharedLinkToStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashSharedLinkToStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_shared_link_to_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashSharedLinkToStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashSharedLinkToStackDetails" />.</para>
+            /// </summary>
+            private class DashSharedLinkToStackDetailsDecoder : enc.StructDecoder<DashSharedLinkToStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashSharedLinkToStackDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashSharedLinkToStackDetails Create()
+                {
+                    return new DashSharedLinkToStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashSharedLinkToStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashSharedLinkToStackDetails(global::Dropbox.Api.TeamLog.DashSharedLinkToStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash unarchived stack details object</para>
+        /// </summary>
+        public sealed class DashUnarchivedStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashUnarchivedStackDetails> Encoder = new DashUnarchivedStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashUnarchivedStackDetails> Decoder = new DashUnarchivedStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashUnarchivedStackDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashUnarchivedStackDetails(global::Dropbox.Api.TeamLog.DashUnarchivedStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DashUnarchivedStackDetails"
+            /// /> class.</para>
+            /// </summary>
+            private DashUnarchivedStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashUnarchivedStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashUnarchivedStackDetails" />.</para>
+            /// </summary>
+            private class DashUnarchivedStackDetailsEncoder : enc.StructEncoder<DashUnarchivedStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashUnarchivedStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_unarchived_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashUnarchivedStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashUnarchivedStackDetails" />.</para>
+            /// </summary>
+            private class DashUnarchivedStackDetailsDecoder : enc.StructDecoder<DashUnarchivedStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DashUnarchivedStackDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashUnarchivedStackDetails Create()
+                {
+                    return new DashUnarchivedStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashUnarchivedStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashUnarchivedStackDetails(global::Dropbox.Api.TeamLog.DashUnarchivedStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash viewed company stack details object</para>
+        /// </summary>
+        public sealed class DashViewedCompanyStackDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashViewedCompanyStackDetails> Encoder = new DashViewedCompanyStackDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashViewedCompanyStackDetails> Decoder = new DashViewedCompanyStackDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashViewedCompanyStackDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashViewedCompanyStackDetails(global::Dropbox.Api.TeamLog.DashViewedCompanyStackDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashViewedCompanyStackDetails" /> class.</para>
+            /// </summary>
+            private DashViewedCompanyStackDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashViewedCompanyStackDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashViewedCompanyStackDetails" />.</para>
+            /// </summary>
+            private class DashViewedCompanyStackDetailsEncoder : enc.StructEncoder<DashViewedCompanyStackDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashViewedCompanyStackDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_viewed_company_stack_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashViewedCompanyStackDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashViewedCompanyStackDetails" />.</para>
+            /// </summary>
+            private class DashViewedCompanyStackDetailsDecoder : enc.StructDecoder<DashViewedCompanyStackDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashViewedCompanyStackDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashViewedCompanyStackDetails Create()
+                {
+                    return new DashViewedCompanyStackDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashViewedCompanyStackDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashViewedCompanyStackDetails(global::Dropbox.Api.TeamLog.DashViewedCompanyStackDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash viewed external ai activity report details object</para>
+        /// </summary>
+        public sealed class DashViewedExternalAiActivityReportDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashViewedExternalAiActivityReportDetails> Encoder = new DashViewedExternalAiActivityReportDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashViewedExternalAiActivityReportDetails> Decoder = new DashViewedExternalAiActivityReportDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashViewedExternalAiActivityReportDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashViewedExternalAiActivityReportDetails(global::Dropbox.Api.TeamLog.DashViewedExternalAiActivityReportDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashViewedExternalAiActivityReportDetails" /> class.</para>
+            /// </summary>
+            private DashViewedExternalAiActivityReportDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashViewedExternalAiActivityReportDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashViewedExternalAiActivityReportDetails"
+            /// />.</para>
+            /// </summary>
+            private class DashViewedExternalAiActivityReportDetailsEncoder : enc.StructEncoder<DashViewedExternalAiActivityReportDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashViewedExternalAiActivityReportDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_viewed_external_ai_activity_report_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashViewedExternalAiActivityReportDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashViewedExternalAiActivityReportDetails"
+            /// />.</para>
+            /// </summary>
+            private class DashViewedExternalAiActivityReportDetailsDecoder : enc.StructDecoder<DashViewedExternalAiActivityReportDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashViewedExternalAiActivityReportDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashViewedExternalAiActivityReportDetails Create()
+                {
+                    return new DashViewedExternalAiActivityReportDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashViewedExternalAiActivityReportDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashViewedExternalAiActivityReportDetails(global::Dropbox.Api.TeamLog.DashViewedExternalAiActivityReportDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -21856,6 +28801,1728 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The encrypted folder cancel team key rotation details object</para>
+        /// </summary>
+        public sealed class EncryptedFolderCancelTeamKeyRotationDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EncryptedFolderCancelTeamKeyRotationDetails> Encoder = new EncryptedFolderCancelTeamKeyRotationDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EncryptedFolderCancelTeamKeyRotationDetails> Decoder = new EncryptedFolderCancelTeamKeyRotationDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderCancelTeamKeyRotationDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public EncryptedFolderCancelTeamKeyRotationDetails(global::Dropbox.Api.TeamLog.EncryptedFolderCancelTeamKeyRotationDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderCancelTeamKeyRotationDetails" /> class.</para>
+            /// </summary>
+            private EncryptedFolderCancelTeamKeyRotationDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.EncryptedFolderCancelTeamKeyRotationDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EncryptedFolderCancelTeamKeyRotationDetails"
+            /// />.</para>
+            /// </summary>
+            private class EncryptedFolderCancelTeamKeyRotationDetailsEncoder : enc.StructEncoder<EncryptedFolderCancelTeamKeyRotationDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EncryptedFolderCancelTeamKeyRotationDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("encrypted_folder_cancel_team_key_rotation_details", value.Value, writer, global::Dropbox.Api.TeamLog.EncryptedFolderCancelTeamKeyRotationDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EncryptedFolderCancelTeamKeyRotationDetails"
+            /// />.</para>
+            /// </summary>
+            private class EncryptedFolderCancelTeamKeyRotationDetailsDecoder : enc.StructDecoder<EncryptedFolderCancelTeamKeyRotationDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="EncryptedFolderCancelTeamKeyRotationDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EncryptedFolderCancelTeamKeyRotationDetails Create()
+                {
+                    return new EncryptedFolderCancelTeamKeyRotationDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EncryptedFolderCancelTeamKeyRotationDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new EncryptedFolderCancelTeamKeyRotationDetails(global::Dropbox.Api.TeamLog.EncryptedFolderCancelTeamKeyRotationDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The encrypted folder enroll backup key details object</para>
+        /// </summary>
+        public sealed class EncryptedFolderEnrollBackupKeyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EncryptedFolderEnrollBackupKeyDetails> Encoder = new EncryptedFolderEnrollBackupKeyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EncryptedFolderEnrollBackupKeyDetails> Decoder = new EncryptedFolderEnrollBackupKeyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderEnrollBackupKeyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public EncryptedFolderEnrollBackupKeyDetails(global::Dropbox.Api.TeamLog.EncryptedFolderEnrollBackupKeyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderEnrollBackupKeyDetails" /> class.</para>
+            /// </summary>
+            private EncryptedFolderEnrollBackupKeyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.EncryptedFolderEnrollBackupKeyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EncryptedFolderEnrollBackupKeyDetails" />.</para>
+            /// </summary>
+            private class EncryptedFolderEnrollBackupKeyDetailsEncoder : enc.StructEncoder<EncryptedFolderEnrollBackupKeyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EncryptedFolderEnrollBackupKeyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("encrypted_folder_enroll_backup_key_details", value.Value, writer, global::Dropbox.Api.TeamLog.EncryptedFolderEnrollBackupKeyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EncryptedFolderEnrollBackupKeyDetails" />.</para>
+            /// </summary>
+            private class EncryptedFolderEnrollBackupKeyDetailsDecoder : enc.StructDecoder<EncryptedFolderEnrollBackupKeyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="EncryptedFolderEnrollBackupKeyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EncryptedFolderEnrollBackupKeyDetails Create()
+                {
+                    return new EncryptedFolderEnrollBackupKeyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EncryptedFolderEnrollBackupKeyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new EncryptedFolderEnrollBackupKeyDetails(global::Dropbox.Api.TeamLog.EncryptedFolderEnrollBackupKeyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The encrypted folder enroll client details object</para>
+        /// </summary>
+        public sealed class EncryptedFolderEnrollClientDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EncryptedFolderEnrollClientDetails> Encoder = new EncryptedFolderEnrollClientDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EncryptedFolderEnrollClientDetails> Decoder = new EncryptedFolderEnrollClientDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderEnrollClientDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public EncryptedFolderEnrollClientDetails(global::Dropbox.Api.TeamLog.EncryptedFolderEnrollClientDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderEnrollClientDetails" /> class.</para>
+            /// </summary>
+            private EncryptedFolderEnrollClientDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.EncryptedFolderEnrollClientDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EncryptedFolderEnrollClientDetails" />.</para>
+            /// </summary>
+            private class EncryptedFolderEnrollClientDetailsEncoder : enc.StructEncoder<EncryptedFolderEnrollClientDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EncryptedFolderEnrollClientDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("encrypted_folder_enroll_client_details", value.Value, writer, global::Dropbox.Api.TeamLog.EncryptedFolderEnrollClientDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EncryptedFolderEnrollClientDetails" />.</para>
+            /// </summary>
+            private class EncryptedFolderEnrollClientDetailsDecoder : enc.StructDecoder<EncryptedFolderEnrollClientDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="EncryptedFolderEnrollClientDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EncryptedFolderEnrollClientDetails Create()
+                {
+                    return new EncryptedFolderEnrollClientDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EncryptedFolderEnrollClientDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new EncryptedFolderEnrollClientDetails(global::Dropbox.Api.TeamLog.EncryptedFolderEnrollClientDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The encrypted folder enroll team details object</para>
+        /// </summary>
+        public sealed class EncryptedFolderEnrollTeamDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EncryptedFolderEnrollTeamDetails> Encoder = new EncryptedFolderEnrollTeamDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EncryptedFolderEnrollTeamDetails> Decoder = new EncryptedFolderEnrollTeamDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderEnrollTeamDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public EncryptedFolderEnrollTeamDetails(global::Dropbox.Api.TeamLog.EncryptedFolderEnrollTeamDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderEnrollTeamDetails" /> class.</para>
+            /// </summary>
+            private EncryptedFolderEnrollTeamDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.EncryptedFolderEnrollTeamDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EncryptedFolderEnrollTeamDetails" />.</para>
+            /// </summary>
+            private class EncryptedFolderEnrollTeamDetailsEncoder : enc.StructEncoder<EncryptedFolderEnrollTeamDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EncryptedFolderEnrollTeamDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("encrypted_folder_enroll_team_details", value.Value, writer, global::Dropbox.Api.TeamLog.EncryptedFolderEnrollTeamDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EncryptedFolderEnrollTeamDetails" />.</para>
+            /// </summary>
+            private class EncryptedFolderEnrollTeamDetailsDecoder : enc.StructDecoder<EncryptedFolderEnrollTeamDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="EncryptedFolderEnrollTeamDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EncryptedFolderEnrollTeamDetails Create()
+                {
+                    return new EncryptedFolderEnrollTeamDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EncryptedFolderEnrollTeamDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new EncryptedFolderEnrollTeamDetails(global::Dropbox.Api.TeamLog.EncryptedFolderEnrollTeamDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The encrypted folder finish team unenrollment details object</para>
+        /// </summary>
+        public sealed class EncryptedFolderFinishTeamUnenrollmentDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EncryptedFolderFinishTeamUnenrollmentDetails> Encoder = new EncryptedFolderFinishTeamUnenrollmentDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EncryptedFolderFinishTeamUnenrollmentDetails> Decoder = new EncryptedFolderFinishTeamUnenrollmentDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderFinishTeamUnenrollmentDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public EncryptedFolderFinishTeamUnenrollmentDetails(global::Dropbox.Api.TeamLog.EncryptedFolderFinishTeamUnenrollmentDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderFinishTeamUnenrollmentDetails" /> class.</para>
+            /// </summary>
+            private EncryptedFolderFinishTeamUnenrollmentDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.EncryptedFolderFinishTeamUnenrollmentDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EncryptedFolderFinishTeamUnenrollmentDetails"
+            /// />.</para>
+            /// </summary>
+            private class EncryptedFolderFinishTeamUnenrollmentDetailsEncoder : enc.StructEncoder<EncryptedFolderFinishTeamUnenrollmentDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EncryptedFolderFinishTeamUnenrollmentDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("encrypted_folder_finish_team_unenrollment_details", value.Value, writer, global::Dropbox.Api.TeamLog.EncryptedFolderFinishTeamUnenrollmentDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EncryptedFolderFinishTeamUnenrollmentDetails"
+            /// />.</para>
+            /// </summary>
+            private class EncryptedFolderFinishTeamUnenrollmentDetailsDecoder : enc.StructDecoder<EncryptedFolderFinishTeamUnenrollmentDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="EncryptedFolderFinishTeamUnenrollmentDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EncryptedFolderFinishTeamUnenrollmentDetails Create()
+                {
+                    return new EncryptedFolderFinishTeamUnenrollmentDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EncryptedFolderFinishTeamUnenrollmentDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new EncryptedFolderFinishTeamUnenrollmentDetails(global::Dropbox.Api.TeamLog.EncryptedFolderFinishTeamUnenrollmentDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The encrypted folder init team key rotation details object</para>
+        /// </summary>
+        public sealed class EncryptedFolderInitTeamKeyRotationDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EncryptedFolderInitTeamKeyRotationDetails> Encoder = new EncryptedFolderInitTeamKeyRotationDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EncryptedFolderInitTeamKeyRotationDetails> Decoder = new EncryptedFolderInitTeamKeyRotationDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderInitTeamKeyRotationDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public EncryptedFolderInitTeamKeyRotationDetails(global::Dropbox.Api.TeamLog.EncryptedFolderInitTeamKeyRotationDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderInitTeamKeyRotationDetails" /> class.</para>
+            /// </summary>
+            private EncryptedFolderInitTeamKeyRotationDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.EncryptedFolderInitTeamKeyRotationDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EncryptedFolderInitTeamKeyRotationDetails"
+            /// />.</para>
+            /// </summary>
+            private class EncryptedFolderInitTeamKeyRotationDetailsEncoder : enc.StructEncoder<EncryptedFolderInitTeamKeyRotationDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EncryptedFolderInitTeamKeyRotationDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("encrypted_folder_init_team_key_rotation_details", value.Value, writer, global::Dropbox.Api.TeamLog.EncryptedFolderInitTeamKeyRotationDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EncryptedFolderInitTeamKeyRotationDetails"
+            /// />.</para>
+            /// </summary>
+            private class EncryptedFolderInitTeamKeyRotationDetailsDecoder : enc.StructDecoder<EncryptedFolderInitTeamKeyRotationDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="EncryptedFolderInitTeamKeyRotationDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EncryptedFolderInitTeamKeyRotationDetails Create()
+                {
+                    return new EncryptedFolderInitTeamKeyRotationDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EncryptedFolderInitTeamKeyRotationDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new EncryptedFolderInitTeamKeyRotationDetails(global::Dropbox.Api.TeamLog.EncryptedFolderInitTeamKeyRotationDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The encrypted folder init team unenrollment details object</para>
+        /// </summary>
+        public sealed class EncryptedFolderInitTeamUnenrollmentDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EncryptedFolderInitTeamUnenrollmentDetails> Encoder = new EncryptedFolderInitTeamUnenrollmentDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EncryptedFolderInitTeamUnenrollmentDetails> Decoder = new EncryptedFolderInitTeamUnenrollmentDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderInitTeamUnenrollmentDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public EncryptedFolderInitTeamUnenrollmentDetails(global::Dropbox.Api.TeamLog.EncryptedFolderInitTeamUnenrollmentDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderInitTeamUnenrollmentDetails" /> class.</para>
+            /// </summary>
+            private EncryptedFolderInitTeamUnenrollmentDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.EncryptedFolderInitTeamUnenrollmentDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EncryptedFolderInitTeamUnenrollmentDetails"
+            /// />.</para>
+            /// </summary>
+            private class EncryptedFolderInitTeamUnenrollmentDetailsEncoder : enc.StructEncoder<EncryptedFolderInitTeamUnenrollmentDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EncryptedFolderInitTeamUnenrollmentDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("encrypted_folder_init_team_unenrollment_details", value.Value, writer, global::Dropbox.Api.TeamLog.EncryptedFolderInitTeamUnenrollmentDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EncryptedFolderInitTeamUnenrollmentDetails"
+            /// />.</para>
+            /// </summary>
+            private class EncryptedFolderInitTeamUnenrollmentDetailsDecoder : enc.StructDecoder<EncryptedFolderInitTeamUnenrollmentDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="EncryptedFolderInitTeamUnenrollmentDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EncryptedFolderInitTeamUnenrollmentDetails Create()
+                {
+                    return new EncryptedFolderInitTeamUnenrollmentDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EncryptedFolderInitTeamUnenrollmentDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new EncryptedFolderInitTeamUnenrollmentDetails(global::Dropbox.Api.TeamLog.EncryptedFolderInitTeamUnenrollmentDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The encrypted folder remove backup key details object</para>
+        /// </summary>
+        public sealed class EncryptedFolderRemoveBackupKeyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EncryptedFolderRemoveBackupKeyDetails> Encoder = new EncryptedFolderRemoveBackupKeyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EncryptedFolderRemoveBackupKeyDetails> Decoder = new EncryptedFolderRemoveBackupKeyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderRemoveBackupKeyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public EncryptedFolderRemoveBackupKeyDetails(global::Dropbox.Api.TeamLog.EncryptedFolderRemoveBackupKeyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderRemoveBackupKeyDetails" /> class.</para>
+            /// </summary>
+            private EncryptedFolderRemoveBackupKeyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.EncryptedFolderRemoveBackupKeyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EncryptedFolderRemoveBackupKeyDetails" />.</para>
+            /// </summary>
+            private class EncryptedFolderRemoveBackupKeyDetailsEncoder : enc.StructEncoder<EncryptedFolderRemoveBackupKeyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EncryptedFolderRemoveBackupKeyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("encrypted_folder_remove_backup_key_details", value.Value, writer, global::Dropbox.Api.TeamLog.EncryptedFolderRemoveBackupKeyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EncryptedFolderRemoveBackupKeyDetails" />.</para>
+            /// </summary>
+            private class EncryptedFolderRemoveBackupKeyDetailsDecoder : enc.StructDecoder<EncryptedFolderRemoveBackupKeyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="EncryptedFolderRemoveBackupKeyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EncryptedFolderRemoveBackupKeyDetails Create()
+                {
+                    return new EncryptedFolderRemoveBackupKeyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EncryptedFolderRemoveBackupKeyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new EncryptedFolderRemoveBackupKeyDetails(global::Dropbox.Api.TeamLog.EncryptedFolderRemoveBackupKeyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The encrypted folder rotate team key details object</para>
+        /// </summary>
+        public sealed class EncryptedFolderRotateTeamKeyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EncryptedFolderRotateTeamKeyDetails> Encoder = new EncryptedFolderRotateTeamKeyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EncryptedFolderRotateTeamKeyDetails> Decoder = new EncryptedFolderRotateTeamKeyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderRotateTeamKeyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public EncryptedFolderRotateTeamKeyDetails(global::Dropbox.Api.TeamLog.EncryptedFolderRotateTeamKeyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderRotateTeamKeyDetails" /> class.</para>
+            /// </summary>
+            private EncryptedFolderRotateTeamKeyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.EncryptedFolderRotateTeamKeyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EncryptedFolderRotateTeamKeyDetails" />.</para>
+            /// </summary>
+            private class EncryptedFolderRotateTeamKeyDetailsEncoder : enc.StructEncoder<EncryptedFolderRotateTeamKeyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EncryptedFolderRotateTeamKeyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("encrypted_folder_rotate_team_key_details", value.Value, writer, global::Dropbox.Api.TeamLog.EncryptedFolderRotateTeamKeyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EncryptedFolderRotateTeamKeyDetails" />.</para>
+            /// </summary>
+            private class EncryptedFolderRotateTeamKeyDetailsDecoder : enc.StructDecoder<EncryptedFolderRotateTeamKeyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="EncryptedFolderRotateTeamKeyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EncryptedFolderRotateTeamKeyDetails Create()
+                {
+                    return new EncryptedFolderRotateTeamKeyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EncryptedFolderRotateTeamKeyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new EncryptedFolderRotateTeamKeyDetails(global::Dropbox.Api.TeamLog.EncryptedFolderRotateTeamKeyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The encrypted folder unenroll client details object</para>
+        /// </summary>
+        public sealed class EncryptedFolderUnenrollClientDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EncryptedFolderUnenrollClientDetails> Encoder = new EncryptedFolderUnenrollClientDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EncryptedFolderUnenrollClientDetails> Decoder = new EncryptedFolderUnenrollClientDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderUnenrollClientDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public EncryptedFolderUnenrollClientDetails(global::Dropbox.Api.TeamLog.EncryptedFolderUnenrollClientDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EncryptedFolderUnenrollClientDetails" /> class.</para>
+            /// </summary>
+            private EncryptedFolderUnenrollClientDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.EncryptedFolderUnenrollClientDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EncryptedFolderUnenrollClientDetails" />.</para>
+            /// </summary>
+            private class EncryptedFolderUnenrollClientDetailsEncoder : enc.StructEncoder<EncryptedFolderUnenrollClientDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EncryptedFolderUnenrollClientDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("encrypted_folder_unenroll_client_details", value.Value, writer, global::Dropbox.Api.TeamLog.EncryptedFolderUnenrollClientDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EncryptedFolderUnenrollClientDetails" />.</para>
+            /// </summary>
+            private class EncryptedFolderUnenrollClientDetailsDecoder : enc.StructDecoder<EncryptedFolderUnenrollClientDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="EncryptedFolderUnenrollClientDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EncryptedFolderUnenrollClientDetails Create()
+                {
+                    return new EncryptedFolderUnenrollClientDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EncryptedFolderUnenrollClientDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new EncryptedFolderUnenrollClientDetails(global::Dropbox.Api.TeamLog.EncryptedFolderUnenrollClientDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team encryption key activate key details object</para>
+        /// </summary>
+        public sealed class TeamEncryptionKeyActivateKeyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamEncryptionKeyActivateKeyDetails> Encoder = new TeamEncryptionKeyActivateKeyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamEncryptionKeyActivateKeyDetails> Decoder = new TeamEncryptionKeyActivateKeyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyActivateKeyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamEncryptionKeyActivateKeyDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyActivateKeyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyActivateKeyDetails" /> class.</para>
+            /// </summary>
+            private TeamEncryptionKeyActivateKeyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamEncryptionKeyActivateKeyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamEncryptionKeyActivateKeyDetails" />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyActivateKeyDetailsEncoder : enc.StructEncoder<TeamEncryptionKeyActivateKeyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamEncryptionKeyActivateKeyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_encryption_key_activate_key_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamEncryptionKeyActivateKeyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamEncryptionKeyActivateKeyDetails" />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyActivateKeyDetailsDecoder : enc.StructDecoder<TeamEncryptionKeyActivateKeyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamEncryptionKeyActivateKeyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamEncryptionKeyActivateKeyDetails Create()
+                {
+                    return new TeamEncryptionKeyActivateKeyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamEncryptionKeyActivateKeyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamEncryptionKeyActivateKeyDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyActivateKeyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team encryption key cancel key deletion details object</para>
+        /// </summary>
+        public sealed class TeamEncryptionKeyCancelKeyDeletionDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamEncryptionKeyCancelKeyDeletionDetails> Encoder = new TeamEncryptionKeyCancelKeyDeletionDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamEncryptionKeyCancelKeyDeletionDetails> Decoder = new TeamEncryptionKeyCancelKeyDeletionDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyCancelKeyDeletionDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamEncryptionKeyCancelKeyDeletionDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyCancelKeyDeletionDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyCancelKeyDeletionDetails" /> class.</para>
+            /// </summary>
+            private TeamEncryptionKeyCancelKeyDeletionDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamEncryptionKeyCancelKeyDeletionDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamEncryptionKeyCancelKeyDeletionDetails"
+            /// />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyCancelKeyDeletionDetailsEncoder : enc.StructEncoder<TeamEncryptionKeyCancelKeyDeletionDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamEncryptionKeyCancelKeyDeletionDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_encryption_key_cancel_key_deletion_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamEncryptionKeyCancelKeyDeletionDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamEncryptionKeyCancelKeyDeletionDetails"
+            /// />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyCancelKeyDeletionDetailsDecoder : enc.StructDecoder<TeamEncryptionKeyCancelKeyDeletionDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamEncryptionKeyCancelKeyDeletionDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamEncryptionKeyCancelKeyDeletionDetails Create()
+                {
+                    return new TeamEncryptionKeyCancelKeyDeletionDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamEncryptionKeyCancelKeyDeletionDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamEncryptionKeyCancelKeyDeletionDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyCancelKeyDeletionDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team encryption key create key details object</para>
+        /// </summary>
+        public sealed class TeamEncryptionKeyCreateKeyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamEncryptionKeyCreateKeyDetails> Encoder = new TeamEncryptionKeyCreateKeyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamEncryptionKeyCreateKeyDetails> Decoder = new TeamEncryptionKeyCreateKeyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyCreateKeyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamEncryptionKeyCreateKeyDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyCreateKeyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyCreateKeyDetails" /> class.</para>
+            /// </summary>
+            private TeamEncryptionKeyCreateKeyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamEncryptionKeyCreateKeyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamEncryptionKeyCreateKeyDetails" />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyCreateKeyDetailsEncoder : enc.StructEncoder<TeamEncryptionKeyCreateKeyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamEncryptionKeyCreateKeyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_encryption_key_create_key_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamEncryptionKeyCreateKeyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamEncryptionKeyCreateKeyDetails" />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyCreateKeyDetailsDecoder : enc.StructDecoder<TeamEncryptionKeyCreateKeyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamEncryptionKeyCreateKeyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamEncryptionKeyCreateKeyDetails Create()
+                {
+                    return new TeamEncryptionKeyCreateKeyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamEncryptionKeyCreateKeyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamEncryptionKeyCreateKeyDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyCreateKeyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team encryption key deactivate key details object</para>
+        /// </summary>
+        public sealed class TeamEncryptionKeyDeactivateKeyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamEncryptionKeyDeactivateKeyDetails> Encoder = new TeamEncryptionKeyDeactivateKeyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamEncryptionKeyDeactivateKeyDetails> Decoder = new TeamEncryptionKeyDeactivateKeyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyDeactivateKeyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamEncryptionKeyDeactivateKeyDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyDeactivateKeyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyDeactivateKeyDetails" /> class.</para>
+            /// </summary>
+            private TeamEncryptionKeyDeactivateKeyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamEncryptionKeyDeactivateKeyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamEncryptionKeyDeactivateKeyDetails" />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyDeactivateKeyDetailsEncoder : enc.StructEncoder<TeamEncryptionKeyDeactivateKeyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamEncryptionKeyDeactivateKeyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_encryption_key_deactivate_key_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamEncryptionKeyDeactivateKeyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamEncryptionKeyDeactivateKeyDetails" />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyDeactivateKeyDetailsDecoder : enc.StructDecoder<TeamEncryptionKeyDeactivateKeyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamEncryptionKeyDeactivateKeyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamEncryptionKeyDeactivateKeyDetails Create()
+                {
+                    return new TeamEncryptionKeyDeactivateKeyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamEncryptionKeyDeactivateKeyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamEncryptionKeyDeactivateKeyDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyDeactivateKeyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team encryption key delete key details object</para>
+        /// </summary>
+        public sealed class TeamEncryptionKeyDeleteKeyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamEncryptionKeyDeleteKeyDetails> Encoder = new TeamEncryptionKeyDeleteKeyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamEncryptionKeyDeleteKeyDetails> Decoder = new TeamEncryptionKeyDeleteKeyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyDeleteKeyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamEncryptionKeyDeleteKeyDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyDeleteKeyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyDeleteKeyDetails" /> class.</para>
+            /// </summary>
+            private TeamEncryptionKeyDeleteKeyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamEncryptionKeyDeleteKeyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamEncryptionKeyDeleteKeyDetails" />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyDeleteKeyDetailsEncoder : enc.StructEncoder<TeamEncryptionKeyDeleteKeyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamEncryptionKeyDeleteKeyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_encryption_key_delete_key_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamEncryptionKeyDeleteKeyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamEncryptionKeyDeleteKeyDetails" />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyDeleteKeyDetailsDecoder : enc.StructDecoder<TeamEncryptionKeyDeleteKeyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamEncryptionKeyDeleteKeyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamEncryptionKeyDeleteKeyDetails Create()
+                {
+                    return new TeamEncryptionKeyDeleteKeyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamEncryptionKeyDeleteKeyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamEncryptionKeyDeleteKeyDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyDeleteKeyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team encryption key disable key details object</para>
+        /// </summary>
+        public sealed class TeamEncryptionKeyDisableKeyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamEncryptionKeyDisableKeyDetails> Encoder = new TeamEncryptionKeyDisableKeyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamEncryptionKeyDisableKeyDetails> Decoder = new TeamEncryptionKeyDisableKeyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyDisableKeyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamEncryptionKeyDisableKeyDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyDisableKeyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyDisableKeyDetails" /> class.</para>
+            /// </summary>
+            private TeamEncryptionKeyDisableKeyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamEncryptionKeyDisableKeyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamEncryptionKeyDisableKeyDetails" />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyDisableKeyDetailsEncoder : enc.StructEncoder<TeamEncryptionKeyDisableKeyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamEncryptionKeyDisableKeyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_encryption_key_disable_key_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamEncryptionKeyDisableKeyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamEncryptionKeyDisableKeyDetails" />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyDisableKeyDetailsDecoder : enc.StructDecoder<TeamEncryptionKeyDisableKeyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamEncryptionKeyDisableKeyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamEncryptionKeyDisableKeyDetails Create()
+                {
+                    return new TeamEncryptionKeyDisableKeyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamEncryptionKeyDisableKeyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamEncryptionKeyDisableKeyDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyDisableKeyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team encryption key enable key details object</para>
+        /// </summary>
+        public sealed class TeamEncryptionKeyEnableKeyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamEncryptionKeyEnableKeyDetails> Encoder = new TeamEncryptionKeyEnableKeyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamEncryptionKeyEnableKeyDetails> Decoder = new TeamEncryptionKeyEnableKeyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyEnableKeyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamEncryptionKeyEnableKeyDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyEnableKeyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyEnableKeyDetails" /> class.</para>
+            /// </summary>
+            private TeamEncryptionKeyEnableKeyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamEncryptionKeyEnableKeyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamEncryptionKeyEnableKeyDetails" />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyEnableKeyDetailsEncoder : enc.StructEncoder<TeamEncryptionKeyEnableKeyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamEncryptionKeyEnableKeyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_encryption_key_enable_key_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamEncryptionKeyEnableKeyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamEncryptionKeyEnableKeyDetails" />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyEnableKeyDetailsDecoder : enc.StructDecoder<TeamEncryptionKeyEnableKeyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamEncryptionKeyEnableKeyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamEncryptionKeyEnableKeyDetails Create()
+                {
+                    return new TeamEncryptionKeyEnableKeyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamEncryptionKeyEnableKeyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamEncryptionKeyEnableKeyDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyEnableKeyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team encryption key rotate key details object</para>
+        /// </summary>
+        public sealed class TeamEncryptionKeyRotateKeyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamEncryptionKeyRotateKeyDetails> Encoder = new TeamEncryptionKeyRotateKeyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamEncryptionKeyRotateKeyDetails> Decoder = new TeamEncryptionKeyRotateKeyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyRotateKeyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamEncryptionKeyRotateKeyDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyRotateKeyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyRotateKeyDetails" /> class.</para>
+            /// </summary>
+            private TeamEncryptionKeyRotateKeyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamEncryptionKeyRotateKeyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamEncryptionKeyRotateKeyDetails" />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyRotateKeyDetailsEncoder : enc.StructEncoder<TeamEncryptionKeyRotateKeyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamEncryptionKeyRotateKeyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_encryption_key_rotate_key_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamEncryptionKeyRotateKeyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamEncryptionKeyRotateKeyDetails" />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyRotateKeyDetailsDecoder : enc.StructDecoder<TeamEncryptionKeyRotateKeyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamEncryptionKeyRotateKeyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamEncryptionKeyRotateKeyDetails Create()
+                {
+                    return new TeamEncryptionKeyRotateKeyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamEncryptionKeyRotateKeyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamEncryptionKeyRotateKeyDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyRotateKeyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team encryption key schedule key deletion details object</para>
+        /// </summary>
+        public sealed class TeamEncryptionKeyScheduleKeyDeletionDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamEncryptionKeyScheduleKeyDeletionDetails> Encoder = new TeamEncryptionKeyScheduleKeyDeletionDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamEncryptionKeyScheduleKeyDeletionDetails> Decoder = new TeamEncryptionKeyScheduleKeyDeletionDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyScheduleKeyDeletionDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamEncryptionKeyScheduleKeyDeletionDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyScheduleKeyDeletionDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamEncryptionKeyScheduleKeyDeletionDetails" /> class.</para>
+            /// </summary>
+            private TeamEncryptionKeyScheduleKeyDeletionDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamEncryptionKeyScheduleKeyDeletionDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamEncryptionKeyScheduleKeyDeletionDetails"
+            /// />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyScheduleKeyDeletionDetailsEncoder : enc.StructEncoder<TeamEncryptionKeyScheduleKeyDeletionDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamEncryptionKeyScheduleKeyDeletionDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_encryption_key_schedule_key_deletion_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamEncryptionKeyScheduleKeyDeletionDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamEncryptionKeyScheduleKeyDeletionDetails"
+            /// />.</para>
+            /// </summary>
+            private class TeamEncryptionKeyScheduleKeyDeletionDetailsDecoder : enc.StructDecoder<TeamEncryptionKeyScheduleKeyDeletionDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamEncryptionKeyScheduleKeyDeletionDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamEncryptionKeyScheduleKeyDeletionDetails Create()
+                {
+                    return new TeamEncryptionKeyScheduleKeyDeletionDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamEncryptionKeyScheduleKeyDeletionDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamEncryptionKeyScheduleKeyDeletionDetails(global::Dropbox.Api.TeamLog.TeamEncryptionKeyScheduleKeyDeletionDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The apply naming convention details object</para>
         /// </summary>
         public sealed class ApplyNamingConventionDetails : EventDetails
@@ -22118,6 +30785,96 @@ namespace Dropbox.Api.TeamLog
                 public override FileAddDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new FileAddDetails(global::Dropbox.Api.TeamLog.FileAddDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The file add from automation details object</para>
+        /// </summary>
+        public sealed class FileAddFromAutomationDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FileAddFromAutomationDetails> Encoder = new FileAddFromAutomationDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FileAddFromAutomationDetails> Decoder = new FileAddFromAutomationDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="FileAddFromAutomationDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public FileAddFromAutomationDetails(global::Dropbox.Api.TeamLog.FileAddFromAutomationDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="FileAddFromAutomationDetails" /> class.</para>
+            /// </summary>
+            private FileAddFromAutomationDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.FileAddFromAutomationDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FileAddFromAutomationDetails" />.</para>
+            /// </summary>
+            private class FileAddFromAutomationDetailsEncoder : enc.StructEncoder<FileAddFromAutomationDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FileAddFromAutomationDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("file_add_from_automation_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileAddFromAutomationDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FileAddFromAutomationDetails" />.</para>
+            /// </summary>
+            private class FileAddFromAutomationDetailsDecoder : enc.StructDecoder<FileAddFromAutomationDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="FileAddFromAutomationDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FileAddFromAutomationDetails Create()
+                {
+                    return new FileAddFromAutomationDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override FileAddFromAutomationDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new FileAddFromAutomationDetails(global::Dropbox.Api.TeamLog.FileAddFromAutomationDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -24014,6 +32771,276 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The replay file delete details object</para>
+        /// </summary>
+        public sealed class ReplayFileDeleteDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ReplayFileDeleteDetails> Encoder = new ReplayFileDeleteDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ReplayFileDeleteDetails> Decoder = new ReplayFileDeleteDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ReplayFileDeleteDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ReplayFileDeleteDetails(global::Dropbox.Api.TeamLog.ReplayFileDeleteDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ReplayFileDeleteDetails" />
+            /// class.</para>
+            /// </summary>
+            private ReplayFileDeleteDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ReplayFileDeleteDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ReplayFileDeleteDetails" />.</para>
+            /// </summary>
+            private class ReplayFileDeleteDetailsEncoder : enc.StructEncoder<ReplayFileDeleteDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ReplayFileDeleteDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("replay_file_delete_details", value.Value, writer, global::Dropbox.Api.TeamLog.ReplayFileDeleteDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ReplayFileDeleteDetails" />.</para>
+            /// </summary>
+            private class ReplayFileDeleteDetailsDecoder : enc.StructDecoder<ReplayFileDeleteDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ReplayFileDeleteDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ReplayFileDeleteDetails Create()
+                {
+                    return new ReplayFileDeleteDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ReplayFileDeleteDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ReplayFileDeleteDetails(global::Dropbox.Api.TeamLog.ReplayFileDeleteDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The replay file downloaded details object</para>
+        /// </summary>
+        public sealed class ReplayFileDownloadedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ReplayFileDownloadedDetails> Encoder = new ReplayFileDownloadedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ReplayFileDownloadedDetails> Decoder = new ReplayFileDownloadedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ReplayFileDownloadedDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ReplayFileDownloadedDetails(global::Dropbox.Api.TeamLog.ReplayFileDownloadedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ReplayFileDownloadedDetails"
+            /// /> class.</para>
+            /// </summary>
+            private ReplayFileDownloadedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ReplayFileDownloadedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ReplayFileDownloadedDetails" />.</para>
+            /// </summary>
+            private class ReplayFileDownloadedDetailsEncoder : enc.StructEncoder<ReplayFileDownloadedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ReplayFileDownloadedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("replay_file_downloaded_details", value.Value, writer, global::Dropbox.Api.TeamLog.ReplayFileDownloadedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ReplayFileDownloadedDetails" />.</para>
+            /// </summary>
+            private class ReplayFileDownloadedDetailsDecoder : enc.StructDecoder<ReplayFileDownloadedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ReplayFileDownloadedDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ReplayFileDownloadedDetails Create()
+                {
+                    return new ReplayFileDownloadedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ReplayFileDownloadedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ReplayFileDownloadedDetails(global::Dropbox.Api.TeamLog.ReplayFileDownloadedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The replay team project created details object</para>
+        /// </summary>
+        public sealed class ReplayTeamProjectCreatedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ReplayTeamProjectCreatedDetails> Encoder = new ReplayTeamProjectCreatedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ReplayTeamProjectCreatedDetails> Decoder = new ReplayTeamProjectCreatedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ReplayTeamProjectCreatedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ReplayTeamProjectCreatedDetails(global::Dropbox.Api.TeamLog.ReplayTeamProjectCreatedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ReplayTeamProjectCreatedDetails" /> class.</para>
+            /// </summary>
+            private ReplayTeamProjectCreatedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ReplayTeamProjectCreatedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ReplayTeamProjectCreatedDetails" />.</para>
+            /// </summary>
+            private class ReplayTeamProjectCreatedDetailsEncoder : enc.StructEncoder<ReplayTeamProjectCreatedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ReplayTeamProjectCreatedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("replay_team_project_created_details", value.Value, writer, global::Dropbox.Api.TeamLog.ReplayTeamProjectCreatedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ReplayTeamProjectCreatedDetails" />.</para>
+            /// </summary>
+            private class ReplayTeamProjectCreatedDetailsDecoder : enc.StructDecoder<ReplayTeamProjectCreatedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ReplayTeamProjectCreatedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ReplayTeamProjectCreatedDetails Create()
+                {
+                    return new ReplayTeamProjectCreatedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ReplayTeamProjectCreatedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ReplayTeamProjectCreatedDetails(global::Dropbox.Api.TeamLog.ReplayTeamProjectCreatedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The rewind folder details object</para>
         /// </summary>
         public sealed class RewindFolderDetails : EventDetails
@@ -24547,6 +33574,96 @@ namespace Dropbox.Api.TeamLog
                 public override EmailIngestReceiveFileDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new EmailIngestReceiveFileDetails(global::Dropbox.Api.TeamLog.EmailIngestReceiveFileDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The file request auto close details object</para>
+        /// </summary>
+        public sealed class FileRequestAutoCloseDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FileRequestAutoCloseDetails> Encoder = new FileRequestAutoCloseDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FileRequestAutoCloseDetails> Decoder = new FileRequestAutoCloseDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FileRequestAutoCloseDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public FileRequestAutoCloseDetails(global::Dropbox.Api.TeamLog.FileRequestAutoCloseDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FileRequestAutoCloseDetails"
+            /// /> class.</para>
+            /// </summary>
+            private FileRequestAutoCloseDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.FileRequestAutoCloseDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FileRequestAutoCloseDetails" />.</para>
+            /// </summary>
+            private class FileRequestAutoCloseDetailsEncoder : enc.StructEncoder<FileRequestAutoCloseDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FileRequestAutoCloseDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("file_request_auto_close_details", value.Value, writer, global::Dropbox.Api.TeamLog.FileRequestAutoCloseDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FileRequestAutoCloseDetails" />.</para>
+            /// </summary>
+            private class FileRequestAutoCloseDetailsDecoder : enc.StructDecoder<FileRequestAutoCloseDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FileRequestAutoCloseDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FileRequestAutoCloseDetails Create()
+                {
+                    return new FileRequestAutoCloseDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override FileRequestAutoCloseDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new FileRequestAutoCloseDetails(global::Dropbox.Api.TeamLog.FileRequestAutoCloseDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -25717,6 +34834,98 @@ namespace Dropbox.Api.TeamLog
                 public override GroupDescriptionUpdatedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new GroupDescriptionUpdatedDetails(global::Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The group external sharing setting override changed details object</para>
+        /// </summary>
+        public sealed class GroupExternalSharingSettingOverrideChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<GroupExternalSharingSettingOverrideChangedDetails> Encoder = new GroupExternalSharingSettingOverrideChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<GroupExternalSharingSettingOverrideChangedDetails> Decoder = new GroupExternalSharingSettingOverrideChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GroupExternalSharingSettingOverrideChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public GroupExternalSharingSettingOverrideChangedDetails(global::Dropbox.Api.TeamLog.GroupExternalSharingSettingOverrideChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="GroupExternalSharingSettingOverrideChangedDetails" /> class.</para>
+            /// </summary>
+            private GroupExternalSharingSettingOverrideChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.GroupExternalSharingSettingOverrideChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see
+            /// cref="GroupExternalSharingSettingOverrideChangedDetails" />.</para>
+            /// </summary>
+            private class GroupExternalSharingSettingOverrideChangedDetailsEncoder : enc.StructEncoder<GroupExternalSharingSettingOverrideChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(GroupExternalSharingSettingOverrideChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("group_external_sharing_setting_override_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.GroupExternalSharingSettingOverrideChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see
+            /// cref="GroupExternalSharingSettingOverrideChangedDetails" />.</para>
+            /// </summary>
+            private class GroupExternalSharingSettingOverrideChangedDetailsDecoder : enc.StructDecoder<GroupExternalSharingSettingOverrideChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="GroupExternalSharingSettingOverrideChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override GroupExternalSharingSettingOverrideChangedDetails Create()
+                {
+                    return new GroupExternalSharingSettingOverrideChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override GroupExternalSharingSettingOverrideChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new GroupExternalSharingSettingOverrideChangedDetails(global::Dropbox.Api.TeamLog.GroupExternalSharingSettingOverrideChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -27247,6 +36456,366 @@ namespace Dropbox.Api.TeamLog
                 public override SsoErrorDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new SsoErrorDetails(global::Dropbox.Api.TeamLog.SsoErrorDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The addon assigned details object</para>
+        /// </summary>
+        public sealed class AddonAssignedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AddonAssignedDetails> Encoder = new AddonAssignedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AddonAssignedDetails> Decoder = new AddonAssignedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AddonAssignedDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public AddonAssignedDetails(global::Dropbox.Api.TeamLog.AddonAssignedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AddonAssignedDetails" />
+            /// class.</para>
+            /// </summary>
+            private AddonAssignedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.AddonAssignedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AddonAssignedDetails" />.</para>
+            /// </summary>
+            private class AddonAssignedDetailsEncoder : enc.StructEncoder<AddonAssignedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AddonAssignedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("addon_assigned_details", value.Value, writer, global::Dropbox.Api.TeamLog.AddonAssignedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AddonAssignedDetails" />.</para>
+            /// </summary>
+            private class AddonAssignedDetailsDecoder : enc.StructDecoder<AddonAssignedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AddonAssignedDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AddonAssignedDetails Create()
+                {
+                    return new AddonAssignedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override AddonAssignedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new AddonAssignedDetails(global::Dropbox.Api.TeamLog.AddonAssignedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The addon removed details object</para>
+        /// </summary>
+        public sealed class AddonRemovedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AddonRemovedDetails> Encoder = new AddonRemovedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AddonRemovedDetails> Decoder = new AddonRemovedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AddonRemovedDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public AddonRemovedDetails(global::Dropbox.Api.TeamLog.AddonRemovedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AddonRemovedDetails" />
+            /// class.</para>
+            /// </summary>
+            private AddonRemovedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.AddonRemovedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AddonRemovedDetails" />.</para>
+            /// </summary>
+            private class AddonRemovedDetailsEncoder : enc.StructEncoder<AddonRemovedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AddonRemovedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("addon_removed_details", value.Value, writer, global::Dropbox.Api.TeamLog.AddonRemovedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AddonRemovedDetails" />.</para>
+            /// </summary>
+            private class AddonRemovedDetailsDecoder : enc.StructDecoder<AddonRemovedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AddonRemovedDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AddonRemovedDetails Create()
+                {
+                    return new AddonRemovedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override AddonRemovedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new AddonRemovedDetails(global::Dropbox.Api.TeamLog.AddonRemovedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The backup admin invitation sent details object</para>
+        /// </summary>
+        public sealed class BackupAdminInvitationSentDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<BackupAdminInvitationSentDetails> Encoder = new BackupAdminInvitationSentDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<BackupAdminInvitationSentDetails> Decoder = new BackupAdminInvitationSentDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="BackupAdminInvitationSentDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public BackupAdminInvitationSentDetails(global::Dropbox.Api.TeamLog.BackupAdminInvitationSentDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="BackupAdminInvitationSentDetails" /> class.</para>
+            /// </summary>
+            private BackupAdminInvitationSentDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.BackupAdminInvitationSentDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="BackupAdminInvitationSentDetails" />.</para>
+            /// </summary>
+            private class BackupAdminInvitationSentDetailsEncoder : enc.StructEncoder<BackupAdminInvitationSentDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(BackupAdminInvitationSentDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("backup_admin_invitation_sent_details", value.Value, writer, global::Dropbox.Api.TeamLog.BackupAdminInvitationSentDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="BackupAdminInvitationSentDetails" />.</para>
+            /// </summary>
+            private class BackupAdminInvitationSentDetailsDecoder : enc.StructDecoder<BackupAdminInvitationSentDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="BackupAdminInvitationSentDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override BackupAdminInvitationSentDetails Create()
+                {
+                    return new BackupAdminInvitationSentDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override BackupAdminInvitationSentDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new BackupAdminInvitationSentDetails(global::Dropbox.Api.TeamLog.BackupAdminInvitationSentDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The backup invitation opened details object</para>
+        /// </summary>
+        public sealed class BackupInvitationOpenedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<BackupInvitationOpenedDetails> Encoder = new BackupInvitationOpenedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<BackupInvitationOpenedDetails> Decoder = new BackupInvitationOpenedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="BackupInvitationOpenedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public BackupInvitationOpenedDetails(global::Dropbox.Api.TeamLog.BackupInvitationOpenedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="BackupInvitationOpenedDetails" /> class.</para>
+            /// </summary>
+            private BackupInvitationOpenedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.BackupInvitationOpenedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="BackupInvitationOpenedDetails" />.</para>
+            /// </summary>
+            private class BackupInvitationOpenedDetailsEncoder : enc.StructEncoder<BackupInvitationOpenedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(BackupInvitationOpenedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("backup_invitation_opened_details", value.Value, writer, global::Dropbox.Api.TeamLog.BackupInvitationOpenedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="BackupInvitationOpenedDetails" />.</para>
+            /// </summary>
+            private class BackupInvitationOpenedDetailsDecoder : enc.StructDecoder<BackupInvitationOpenedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="BackupInvitationOpenedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override BackupInvitationOpenedDetails Create()
+                {
+                    return new BackupInvitationOpenedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override BackupInvitationOpenedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new BackupInvitationOpenedDetails(global::Dropbox.Api.TeamLog.BackupInvitationOpenedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -29325,6 +38894,186 @@ namespace Dropbox.Api.TeamLog
                 public override PendingSecondaryEmailAddedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new PendingSecondaryEmailAddedDetails(global::Dropbox.Api.TeamLog.PendingSecondaryEmailAddedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The product assigned to member details object</para>
+        /// </summary>
+        public sealed class ProductAssignedToMemberDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProductAssignedToMemberDetails> Encoder = new ProductAssignedToMemberDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProductAssignedToMemberDetails> Decoder = new ProductAssignedToMemberDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProductAssignedToMemberDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProductAssignedToMemberDetails(global::Dropbox.Api.TeamLog.ProductAssignedToMemberDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProductAssignedToMemberDetails" /> class.</para>
+            /// </summary>
+            private ProductAssignedToMemberDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProductAssignedToMemberDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProductAssignedToMemberDetails" />.</para>
+            /// </summary>
+            private class ProductAssignedToMemberDetailsEncoder : enc.StructEncoder<ProductAssignedToMemberDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProductAssignedToMemberDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("product_assigned_to_member_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProductAssignedToMemberDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProductAssignedToMemberDetails" />.</para>
+            /// </summary>
+            private class ProductAssignedToMemberDetailsDecoder : enc.StructDecoder<ProductAssignedToMemberDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProductAssignedToMemberDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProductAssignedToMemberDetails Create()
+                {
+                    return new ProductAssignedToMemberDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProductAssignedToMemberDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProductAssignedToMemberDetails(global::Dropbox.Api.TeamLog.ProductAssignedToMemberDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The product removed from member details object</para>
+        /// </summary>
+        public sealed class ProductRemovedFromMemberDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProductRemovedFromMemberDetails> Encoder = new ProductRemovedFromMemberDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProductRemovedFromMemberDetails> Decoder = new ProductRemovedFromMemberDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProductRemovedFromMemberDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProductRemovedFromMemberDetails(global::Dropbox.Api.TeamLog.ProductRemovedFromMemberDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProductRemovedFromMemberDetails" /> class.</para>
+            /// </summary>
+            private ProductRemovedFromMemberDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProductRemovedFromMemberDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProductRemovedFromMemberDetails" />.</para>
+            /// </summary>
+            private class ProductRemovedFromMemberDetailsEncoder : enc.StructEncoder<ProductRemovedFromMemberDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProductRemovedFromMemberDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("product_removed_from_member_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProductRemovedFromMemberDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProductRemovedFromMemberDetails" />.</para>
+            /// </summary>
+            private class ProductRemovedFromMemberDetailsDecoder : enc.StructDecoder<ProductRemovedFromMemberDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProductRemovedFromMemberDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProductRemovedFromMemberDetails Create()
+                {
+                    return new ProductRemovedFromMemberDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProductRemovedFromMemberDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProductRemovedFromMemberDetails(global::Dropbox.Api.TeamLog.ProductRemovedFromMemberDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -34284,6 +44033,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The protect internal domains changed details object</para>
+        /// </summary>
+        public sealed class ProtectInternalDomainsChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectInternalDomainsChangedDetails> Encoder = new ProtectInternalDomainsChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectInternalDomainsChangedDetails> Decoder = new ProtectInternalDomainsChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectInternalDomainsChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectInternalDomainsChangedDetails(global::Dropbox.Api.TeamLog.ProtectInternalDomainsChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectInternalDomainsChangedDetails" /> class.</para>
+            /// </summary>
+            private ProtectInternalDomainsChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectInternalDomainsChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectInternalDomainsChangedDetails" />.</para>
+            /// </summary>
+            private class ProtectInternalDomainsChangedDetailsEncoder : enc.StructEncoder<ProtectInternalDomainsChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectInternalDomainsChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_internal_domains_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectInternalDomainsChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectInternalDomainsChangedDetails" />.</para>
+            /// </summary>
+            private class ProtectInternalDomainsChangedDetailsDecoder : enc.StructDecoder<ProtectInternalDomainsChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProtectInternalDomainsChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectInternalDomainsChangedDetails Create()
+                {
+                    return new ProtectInternalDomainsChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectInternalDomainsChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectInternalDomainsChangedDetails(global::Dropbox.Api.TeamLog.ProtectInternalDomainsChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The classification create report details object</para>
         /// </summary>
         public sealed class ClassificationCreateReportDetails : EventDetails
@@ -34997,6 +44836,190 @@ namespace Dropbox.Api.TeamLog
                 public override ExternalSharingReportFailedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new ExternalSharingReportFailedDetails(global::Dropbox.Api.TeamLog.ExternalSharingReportFailedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The member access details create report details object</para>
+        /// </summary>
+        public sealed class MemberAccessDetailsCreateReportDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MemberAccessDetailsCreateReportDetails> Encoder = new MemberAccessDetailsCreateReportDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MemberAccessDetailsCreateReportDetails> Decoder = new MemberAccessDetailsCreateReportDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MemberAccessDetailsCreateReportDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MemberAccessDetailsCreateReportDetails(global::Dropbox.Api.TeamLog.MemberAccessDetailsCreateReportDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MemberAccessDetailsCreateReportDetails" /> class.</para>
+            /// </summary>
+            private MemberAccessDetailsCreateReportDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MemberAccessDetailsCreateReportDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MemberAccessDetailsCreateReportDetails"
+            /// />.</para>
+            /// </summary>
+            private class MemberAccessDetailsCreateReportDetailsEncoder : enc.StructEncoder<MemberAccessDetailsCreateReportDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MemberAccessDetailsCreateReportDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("member_access_details_create_report_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberAccessDetailsCreateReportDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MemberAccessDetailsCreateReportDetails"
+            /// />.</para>
+            /// </summary>
+            private class MemberAccessDetailsCreateReportDetailsDecoder : enc.StructDecoder<MemberAccessDetailsCreateReportDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MemberAccessDetailsCreateReportDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MemberAccessDetailsCreateReportDetails Create()
+                {
+                    return new MemberAccessDetailsCreateReportDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MemberAccessDetailsCreateReportDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MemberAccessDetailsCreateReportDetails(global::Dropbox.Api.TeamLog.MemberAccessDetailsCreateReportDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The member access details create report failed details object</para>
+        /// </summary>
+        public sealed class MemberAccessDetailsCreateReportFailedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MemberAccessDetailsCreateReportFailedDetails> Encoder = new MemberAccessDetailsCreateReportFailedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MemberAccessDetailsCreateReportFailedDetails> Decoder = new MemberAccessDetailsCreateReportFailedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MemberAccessDetailsCreateReportFailedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MemberAccessDetailsCreateReportFailedDetails(global::Dropbox.Api.TeamLog.MemberAccessDetailsCreateReportFailedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MemberAccessDetailsCreateReportFailedDetails" /> class.</para>
+            /// </summary>
+            private MemberAccessDetailsCreateReportFailedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MemberAccessDetailsCreateReportFailedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MemberAccessDetailsCreateReportFailedDetails"
+            /// />.</para>
+            /// </summary>
+            private class MemberAccessDetailsCreateReportFailedDetailsEncoder : enc.StructEncoder<MemberAccessDetailsCreateReportFailedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MemberAccessDetailsCreateReportFailedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("member_access_details_create_report_failed_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberAccessDetailsCreateReportFailedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MemberAccessDetailsCreateReportFailedDetails"
+            /// />.</para>
+            /// </summary>
+            private class MemberAccessDetailsCreateReportFailedDetailsDecoder : enc.StructDecoder<MemberAccessDetailsCreateReportFailedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MemberAccessDetailsCreateReportFailedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MemberAccessDetailsCreateReportFailedDetails Create()
+                {
+                    return new MemberAccessDetailsCreateReportFailedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MemberAccessDetailsCreateReportFailedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MemberAccessDetailsCreateReportFailedDetails(global::Dropbox.Api.TeamLog.MemberAccessDetailsCreateReportFailedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -35818,6 +45841,370 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The ransomware alert create report details object</para>
+        /// </summary>
+        public sealed class RansomwareAlertCreateReportDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<RansomwareAlertCreateReportDetails> Encoder = new RansomwareAlertCreateReportDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<RansomwareAlertCreateReportDetails> Decoder = new RansomwareAlertCreateReportDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="RansomwareAlertCreateReportDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public RansomwareAlertCreateReportDetails(global::Dropbox.Api.TeamLog.RansomwareAlertCreateReportDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="RansomwareAlertCreateReportDetails" /> class.</para>
+            /// </summary>
+            private RansomwareAlertCreateReportDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.RansomwareAlertCreateReportDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="RansomwareAlertCreateReportDetails" />.</para>
+            /// </summary>
+            private class RansomwareAlertCreateReportDetailsEncoder : enc.StructEncoder<RansomwareAlertCreateReportDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(RansomwareAlertCreateReportDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("ransomware_alert_create_report_details", value.Value, writer, global::Dropbox.Api.TeamLog.RansomwareAlertCreateReportDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="RansomwareAlertCreateReportDetails" />.</para>
+            /// </summary>
+            private class RansomwareAlertCreateReportDetailsDecoder : enc.StructDecoder<RansomwareAlertCreateReportDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="RansomwareAlertCreateReportDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override RansomwareAlertCreateReportDetails Create()
+                {
+                    return new RansomwareAlertCreateReportDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override RansomwareAlertCreateReportDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new RansomwareAlertCreateReportDetails(global::Dropbox.Api.TeamLog.RansomwareAlertCreateReportDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The ransomware alert create report failed details object</para>
+        /// </summary>
+        public sealed class RansomwareAlertCreateReportFailedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<RansomwareAlertCreateReportFailedDetails> Encoder = new RansomwareAlertCreateReportFailedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<RansomwareAlertCreateReportFailedDetails> Decoder = new RansomwareAlertCreateReportFailedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="RansomwareAlertCreateReportFailedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public RansomwareAlertCreateReportFailedDetails(global::Dropbox.Api.TeamLog.RansomwareAlertCreateReportFailedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="RansomwareAlertCreateReportFailedDetails" /> class.</para>
+            /// </summary>
+            private RansomwareAlertCreateReportFailedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.RansomwareAlertCreateReportFailedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="RansomwareAlertCreateReportFailedDetails"
+            /// />.</para>
+            /// </summary>
+            private class RansomwareAlertCreateReportFailedDetailsEncoder : enc.StructEncoder<RansomwareAlertCreateReportFailedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(RansomwareAlertCreateReportFailedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("ransomware_alert_create_report_failed_details", value.Value, writer, global::Dropbox.Api.TeamLog.RansomwareAlertCreateReportFailedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="RansomwareAlertCreateReportFailedDetails"
+            /// />.</para>
+            /// </summary>
+            private class RansomwareAlertCreateReportFailedDetailsDecoder : enc.StructDecoder<RansomwareAlertCreateReportFailedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="RansomwareAlertCreateReportFailedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override RansomwareAlertCreateReportFailedDetails Create()
+                {
+                    return new RansomwareAlertCreateReportFailedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override RansomwareAlertCreateReportFailedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new RansomwareAlertCreateReportFailedDetails(global::Dropbox.Api.TeamLog.RansomwareAlertCreateReportFailedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The shared folders create report details object</para>
+        /// </summary>
+        public sealed class SharedFoldersCreateReportDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SharedFoldersCreateReportDetails> Encoder = new SharedFoldersCreateReportDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SharedFoldersCreateReportDetails> Decoder = new SharedFoldersCreateReportDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharedFoldersCreateReportDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SharedFoldersCreateReportDetails(global::Dropbox.Api.TeamLog.SharedFoldersCreateReportDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharedFoldersCreateReportDetails" /> class.</para>
+            /// </summary>
+            private SharedFoldersCreateReportDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SharedFoldersCreateReportDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SharedFoldersCreateReportDetails" />.</para>
+            /// </summary>
+            private class SharedFoldersCreateReportDetailsEncoder : enc.StructEncoder<SharedFoldersCreateReportDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SharedFoldersCreateReportDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("shared_folders_create_report_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedFoldersCreateReportDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SharedFoldersCreateReportDetails" />.</para>
+            /// </summary>
+            private class SharedFoldersCreateReportDetailsDecoder : enc.StructDecoder<SharedFoldersCreateReportDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SharedFoldersCreateReportDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SharedFoldersCreateReportDetails Create()
+                {
+                    return new SharedFoldersCreateReportDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SharedFoldersCreateReportDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SharedFoldersCreateReportDetails(global::Dropbox.Api.TeamLog.SharedFoldersCreateReportDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The shared folders create report failed details object</para>
+        /// </summary>
+        public sealed class SharedFoldersCreateReportFailedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SharedFoldersCreateReportFailedDetails> Encoder = new SharedFoldersCreateReportFailedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SharedFoldersCreateReportFailedDetails> Decoder = new SharedFoldersCreateReportFailedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharedFoldersCreateReportFailedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SharedFoldersCreateReportFailedDetails(global::Dropbox.Api.TeamLog.SharedFoldersCreateReportFailedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharedFoldersCreateReportFailedDetails" /> class.</para>
+            /// </summary>
+            private SharedFoldersCreateReportFailedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SharedFoldersCreateReportFailedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SharedFoldersCreateReportFailedDetails"
+            /// />.</para>
+            /// </summary>
+            private class SharedFoldersCreateReportFailedDetailsEncoder : enc.StructEncoder<SharedFoldersCreateReportFailedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SharedFoldersCreateReportFailedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("shared_folders_create_report_failed_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedFoldersCreateReportFailedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SharedFoldersCreateReportFailedDetails"
+            /// />.</para>
+            /// </summary>
+            private class SharedFoldersCreateReportFailedDetailsDecoder : enc.StructDecoder<SharedFoldersCreateReportFailedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SharedFoldersCreateReportFailedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SharedFoldersCreateReportFailedDetails Create()
+                {
+                    return new SharedFoldersCreateReportFailedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SharedFoldersCreateReportFailedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SharedFoldersCreateReportFailedDetails(global::Dropbox.Api.TeamLog.SharedFoldersCreateReportFailedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The smart sync create admin privilege report details object</para>
         /// </summary>
         public sealed class SmartSyncCreateAdminPrivilegeReportDetails : EventDetails
@@ -36083,6 +46470,366 @@ namespace Dropbox.Api.TeamLog
                 public override TeamActivityCreateReportFailDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new TeamActivityCreateReportFailDetails(global::Dropbox.Api.TeamLog.TeamActivityCreateReportFailDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team folders create report details object</para>
+        /// </summary>
+        public sealed class TeamFoldersCreateReportDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamFoldersCreateReportDetails> Encoder = new TeamFoldersCreateReportDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamFoldersCreateReportDetails> Decoder = new TeamFoldersCreateReportDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamFoldersCreateReportDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamFoldersCreateReportDetails(global::Dropbox.Api.TeamLog.TeamFoldersCreateReportDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamFoldersCreateReportDetails" /> class.</para>
+            /// </summary>
+            private TeamFoldersCreateReportDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamFoldersCreateReportDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamFoldersCreateReportDetails" />.</para>
+            /// </summary>
+            private class TeamFoldersCreateReportDetailsEncoder : enc.StructEncoder<TeamFoldersCreateReportDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamFoldersCreateReportDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_folders_create_report_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamFoldersCreateReportDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamFoldersCreateReportDetails" />.</para>
+            /// </summary>
+            private class TeamFoldersCreateReportDetailsDecoder : enc.StructDecoder<TeamFoldersCreateReportDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamFoldersCreateReportDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamFoldersCreateReportDetails Create()
+                {
+                    return new TeamFoldersCreateReportDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamFoldersCreateReportDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamFoldersCreateReportDetails(global::Dropbox.Api.TeamLog.TeamFoldersCreateReportDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team folders create report failed details object</para>
+        /// </summary>
+        public sealed class TeamFoldersCreateReportFailedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamFoldersCreateReportFailedDetails> Encoder = new TeamFoldersCreateReportFailedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamFoldersCreateReportFailedDetails> Decoder = new TeamFoldersCreateReportFailedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamFoldersCreateReportFailedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamFoldersCreateReportFailedDetails(global::Dropbox.Api.TeamLog.TeamFoldersCreateReportFailedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamFoldersCreateReportFailedDetails" /> class.</para>
+            /// </summary>
+            private TeamFoldersCreateReportFailedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamFoldersCreateReportFailedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamFoldersCreateReportFailedDetails" />.</para>
+            /// </summary>
+            private class TeamFoldersCreateReportFailedDetailsEncoder : enc.StructEncoder<TeamFoldersCreateReportFailedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamFoldersCreateReportFailedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_folders_create_report_failed_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamFoldersCreateReportFailedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamFoldersCreateReportFailedDetails" />.</para>
+            /// </summary>
+            private class TeamFoldersCreateReportFailedDetailsDecoder : enc.StructDecoder<TeamFoldersCreateReportFailedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamFoldersCreateReportFailedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamFoldersCreateReportFailedDetails Create()
+                {
+                    return new TeamFoldersCreateReportFailedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamFoldersCreateReportFailedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamFoldersCreateReportFailedDetails(global::Dropbox.Api.TeamLog.TeamFoldersCreateReportFailedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team storage create report details object</para>
+        /// </summary>
+        public sealed class TeamStorageCreateReportDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamStorageCreateReportDetails> Encoder = new TeamStorageCreateReportDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamStorageCreateReportDetails> Decoder = new TeamStorageCreateReportDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamStorageCreateReportDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamStorageCreateReportDetails(global::Dropbox.Api.TeamLog.TeamStorageCreateReportDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamStorageCreateReportDetails" /> class.</para>
+            /// </summary>
+            private TeamStorageCreateReportDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamStorageCreateReportDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamStorageCreateReportDetails" />.</para>
+            /// </summary>
+            private class TeamStorageCreateReportDetailsEncoder : enc.StructEncoder<TeamStorageCreateReportDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamStorageCreateReportDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_storage_create_report_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamStorageCreateReportDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamStorageCreateReportDetails" />.</para>
+            /// </summary>
+            private class TeamStorageCreateReportDetailsDecoder : enc.StructDecoder<TeamStorageCreateReportDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamStorageCreateReportDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamStorageCreateReportDetails Create()
+                {
+                    return new TeamStorageCreateReportDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamStorageCreateReportDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamStorageCreateReportDetails(global::Dropbox.Api.TeamLog.TeamStorageCreateReportDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team storage create report failed details object</para>
+        /// </summary>
+        public sealed class TeamStorageCreateReportFailedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamStorageCreateReportFailedDetails> Encoder = new TeamStorageCreateReportFailedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamStorageCreateReportFailedDetails> Decoder = new TeamStorageCreateReportFailedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamStorageCreateReportFailedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamStorageCreateReportFailedDetails(global::Dropbox.Api.TeamLog.TeamStorageCreateReportFailedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamStorageCreateReportFailedDetails" /> class.</para>
+            /// </summary>
+            private TeamStorageCreateReportFailedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamStorageCreateReportFailedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamStorageCreateReportFailedDetails" />.</para>
+            /// </summary>
+            private class TeamStorageCreateReportFailedDetailsEncoder : enc.StructEncoder<TeamStorageCreateReportFailedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamStorageCreateReportFailedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_storage_create_report_failed_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamStorageCreateReportFailedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamStorageCreateReportFailedDetails" />.</para>
+            /// </summary>
+            private class TeamStorageCreateReportFailedDetailsDecoder : enc.StructDecoder<TeamStorageCreateReportFailedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamStorageCreateReportFailedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamStorageCreateReportFailedDetails Create()
+                {
+                    return new TeamStorageCreateReportFailedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamStorageCreateReportFailedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamStorageCreateReportFailedDetails(global::Dropbox.Api.TeamLog.TeamStorageCreateReportFailedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -37163,6 +47910,1088 @@ namespace Dropbox.Api.TeamLog
                 public override OpenNoteSharedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new OpenNoteSharedDetails(global::Dropbox.Api.TeamLog.OpenNoteSharedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The replay file shared link created details object</para>
+        /// </summary>
+        public sealed class ReplayFileSharedLinkCreatedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ReplayFileSharedLinkCreatedDetails> Encoder = new ReplayFileSharedLinkCreatedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ReplayFileSharedLinkCreatedDetails> Decoder = new ReplayFileSharedLinkCreatedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ReplayFileSharedLinkCreatedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ReplayFileSharedLinkCreatedDetails(global::Dropbox.Api.TeamLog.ReplayFileSharedLinkCreatedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ReplayFileSharedLinkCreatedDetails" /> class.</para>
+            /// </summary>
+            private ReplayFileSharedLinkCreatedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ReplayFileSharedLinkCreatedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ReplayFileSharedLinkCreatedDetails" />.</para>
+            /// </summary>
+            private class ReplayFileSharedLinkCreatedDetailsEncoder : enc.StructEncoder<ReplayFileSharedLinkCreatedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ReplayFileSharedLinkCreatedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("replay_file_shared_link_created_details", value.Value, writer, global::Dropbox.Api.TeamLog.ReplayFileSharedLinkCreatedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ReplayFileSharedLinkCreatedDetails" />.</para>
+            /// </summary>
+            private class ReplayFileSharedLinkCreatedDetailsDecoder : enc.StructDecoder<ReplayFileSharedLinkCreatedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ReplayFileSharedLinkCreatedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ReplayFileSharedLinkCreatedDetails Create()
+                {
+                    return new ReplayFileSharedLinkCreatedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ReplayFileSharedLinkCreatedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ReplayFileSharedLinkCreatedDetails(global::Dropbox.Api.TeamLog.ReplayFileSharedLinkCreatedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The replay file shared link modified details object</para>
+        /// </summary>
+        public sealed class ReplayFileSharedLinkModifiedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ReplayFileSharedLinkModifiedDetails> Encoder = new ReplayFileSharedLinkModifiedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ReplayFileSharedLinkModifiedDetails> Decoder = new ReplayFileSharedLinkModifiedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ReplayFileSharedLinkModifiedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ReplayFileSharedLinkModifiedDetails(global::Dropbox.Api.TeamLog.ReplayFileSharedLinkModifiedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ReplayFileSharedLinkModifiedDetails" /> class.</para>
+            /// </summary>
+            private ReplayFileSharedLinkModifiedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ReplayFileSharedLinkModifiedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ReplayFileSharedLinkModifiedDetails" />.</para>
+            /// </summary>
+            private class ReplayFileSharedLinkModifiedDetailsEncoder : enc.StructEncoder<ReplayFileSharedLinkModifiedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ReplayFileSharedLinkModifiedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("replay_file_shared_link_modified_details", value.Value, writer, global::Dropbox.Api.TeamLog.ReplayFileSharedLinkModifiedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ReplayFileSharedLinkModifiedDetails" />.</para>
+            /// </summary>
+            private class ReplayFileSharedLinkModifiedDetailsDecoder : enc.StructDecoder<ReplayFileSharedLinkModifiedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ReplayFileSharedLinkModifiedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ReplayFileSharedLinkModifiedDetails Create()
+                {
+                    return new ReplayFileSharedLinkModifiedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ReplayFileSharedLinkModifiedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ReplayFileSharedLinkModifiedDetails(global::Dropbox.Api.TeamLog.ReplayFileSharedLinkModifiedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The replay project team add details object</para>
+        /// </summary>
+        public sealed class ReplayProjectTeamAddDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ReplayProjectTeamAddDetails> Encoder = new ReplayProjectTeamAddDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ReplayProjectTeamAddDetails> Decoder = new ReplayProjectTeamAddDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ReplayProjectTeamAddDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ReplayProjectTeamAddDetails(global::Dropbox.Api.TeamLog.ReplayProjectTeamAddDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ReplayProjectTeamAddDetails"
+            /// /> class.</para>
+            /// </summary>
+            private ReplayProjectTeamAddDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ReplayProjectTeamAddDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ReplayProjectTeamAddDetails" />.</para>
+            /// </summary>
+            private class ReplayProjectTeamAddDetailsEncoder : enc.StructEncoder<ReplayProjectTeamAddDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ReplayProjectTeamAddDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("replay_project_team_add_details", value.Value, writer, global::Dropbox.Api.TeamLog.ReplayProjectTeamAddDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ReplayProjectTeamAddDetails" />.</para>
+            /// </summary>
+            private class ReplayProjectTeamAddDetailsDecoder : enc.StructDecoder<ReplayProjectTeamAddDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ReplayProjectTeamAddDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ReplayProjectTeamAddDetails Create()
+                {
+                    return new ReplayProjectTeamAddDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ReplayProjectTeamAddDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ReplayProjectTeamAddDetails(global::Dropbox.Api.TeamLog.ReplayProjectTeamAddDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The replay project team delete details object</para>
+        /// </summary>
+        public sealed class ReplayProjectTeamDeleteDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ReplayProjectTeamDeleteDetails> Encoder = new ReplayProjectTeamDeleteDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ReplayProjectTeamDeleteDetails> Decoder = new ReplayProjectTeamDeleteDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ReplayProjectTeamDeleteDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ReplayProjectTeamDeleteDetails(global::Dropbox.Api.TeamLog.ReplayProjectTeamDeleteDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ReplayProjectTeamDeleteDetails" /> class.</para>
+            /// </summary>
+            private ReplayProjectTeamDeleteDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ReplayProjectTeamDeleteDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ReplayProjectTeamDeleteDetails" />.</para>
+            /// </summary>
+            private class ReplayProjectTeamDeleteDetailsEncoder : enc.StructEncoder<ReplayProjectTeamDeleteDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ReplayProjectTeamDeleteDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("replay_project_team_delete_details", value.Value, writer, global::Dropbox.Api.TeamLog.ReplayProjectTeamDeleteDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ReplayProjectTeamDeleteDetails" />.</para>
+            /// </summary>
+            private class ReplayProjectTeamDeleteDetailsDecoder : enc.StructDecoder<ReplayProjectTeamDeleteDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ReplayProjectTeamDeleteDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ReplayProjectTeamDeleteDetails Create()
+                {
+                    return new ReplayProjectTeamDeleteDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ReplayProjectTeamDeleteDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ReplayProjectTeamDeleteDetails(global::Dropbox.Api.TeamLog.ReplayProjectTeamDeleteDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The send and track file added details object</para>
+        /// </summary>
+        public sealed class SendAndTrackFileAddedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SendAndTrackFileAddedDetails> Encoder = new SendAndTrackFileAddedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SendAndTrackFileAddedDetails> Decoder = new SendAndTrackFileAddedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackFileAddedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SendAndTrackFileAddedDetails(global::Dropbox.Api.TeamLog.SendAndTrackFileAddedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackFileAddedDetails" /> class.</para>
+            /// </summary>
+            private SendAndTrackFileAddedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SendAndTrackFileAddedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SendAndTrackFileAddedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackFileAddedDetailsEncoder : enc.StructEncoder<SendAndTrackFileAddedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SendAndTrackFileAddedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("send_and_track_file_added_details", value.Value, writer, global::Dropbox.Api.TeamLog.SendAndTrackFileAddedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SendAndTrackFileAddedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackFileAddedDetailsDecoder : enc.StructDecoder<SendAndTrackFileAddedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SendAndTrackFileAddedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SendAndTrackFileAddedDetails Create()
+                {
+                    return new SendAndTrackFileAddedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SendAndTrackFileAddedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SendAndTrackFileAddedDetails(global::Dropbox.Api.TeamLog.SendAndTrackFileAddedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The send and track file renamed details object</para>
+        /// </summary>
+        public sealed class SendAndTrackFileRenamedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SendAndTrackFileRenamedDetails> Encoder = new SendAndTrackFileRenamedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SendAndTrackFileRenamedDetails> Decoder = new SendAndTrackFileRenamedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackFileRenamedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SendAndTrackFileRenamedDetails(global::Dropbox.Api.TeamLog.SendAndTrackFileRenamedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackFileRenamedDetails" /> class.</para>
+            /// </summary>
+            private SendAndTrackFileRenamedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SendAndTrackFileRenamedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SendAndTrackFileRenamedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackFileRenamedDetailsEncoder : enc.StructEncoder<SendAndTrackFileRenamedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SendAndTrackFileRenamedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("send_and_track_file_renamed_details", value.Value, writer, global::Dropbox.Api.TeamLog.SendAndTrackFileRenamedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SendAndTrackFileRenamedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackFileRenamedDetailsDecoder : enc.StructDecoder<SendAndTrackFileRenamedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SendAndTrackFileRenamedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SendAndTrackFileRenamedDetails Create()
+                {
+                    return new SendAndTrackFileRenamedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SendAndTrackFileRenamedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SendAndTrackFileRenamedDetails(global::Dropbox.Api.TeamLog.SendAndTrackFileRenamedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The send and track file updated details object</para>
+        /// </summary>
+        public sealed class SendAndTrackFileUpdatedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SendAndTrackFileUpdatedDetails> Encoder = new SendAndTrackFileUpdatedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SendAndTrackFileUpdatedDetails> Decoder = new SendAndTrackFileUpdatedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackFileUpdatedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SendAndTrackFileUpdatedDetails(global::Dropbox.Api.TeamLog.SendAndTrackFileUpdatedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackFileUpdatedDetails" /> class.</para>
+            /// </summary>
+            private SendAndTrackFileUpdatedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SendAndTrackFileUpdatedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SendAndTrackFileUpdatedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackFileUpdatedDetailsEncoder : enc.StructEncoder<SendAndTrackFileUpdatedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SendAndTrackFileUpdatedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("send_and_track_file_updated_details", value.Value, writer, global::Dropbox.Api.TeamLog.SendAndTrackFileUpdatedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SendAndTrackFileUpdatedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackFileUpdatedDetailsDecoder : enc.StructDecoder<SendAndTrackFileUpdatedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SendAndTrackFileUpdatedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SendAndTrackFileUpdatedDetails Create()
+                {
+                    return new SendAndTrackFileUpdatedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SendAndTrackFileUpdatedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SendAndTrackFileUpdatedDetails(global::Dropbox.Api.TeamLog.SendAndTrackFileUpdatedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The send and track link created details object</para>
+        /// </summary>
+        public sealed class SendAndTrackLinkCreatedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SendAndTrackLinkCreatedDetails> Encoder = new SendAndTrackLinkCreatedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SendAndTrackLinkCreatedDetails> Decoder = new SendAndTrackLinkCreatedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackLinkCreatedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SendAndTrackLinkCreatedDetails(global::Dropbox.Api.TeamLog.SendAndTrackLinkCreatedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackLinkCreatedDetails" /> class.</para>
+            /// </summary>
+            private SendAndTrackLinkCreatedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SendAndTrackLinkCreatedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SendAndTrackLinkCreatedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackLinkCreatedDetailsEncoder : enc.StructEncoder<SendAndTrackLinkCreatedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SendAndTrackLinkCreatedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("send_and_track_link_created_details", value.Value, writer, global::Dropbox.Api.TeamLog.SendAndTrackLinkCreatedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SendAndTrackLinkCreatedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackLinkCreatedDetailsDecoder : enc.StructDecoder<SendAndTrackLinkCreatedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SendAndTrackLinkCreatedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SendAndTrackLinkCreatedDetails Create()
+                {
+                    return new SendAndTrackLinkCreatedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SendAndTrackLinkCreatedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SendAndTrackLinkCreatedDetails(global::Dropbox.Api.TeamLog.SendAndTrackLinkCreatedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The send and track link deleted details object</para>
+        /// </summary>
+        public sealed class SendAndTrackLinkDeletedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SendAndTrackLinkDeletedDetails> Encoder = new SendAndTrackLinkDeletedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SendAndTrackLinkDeletedDetails> Decoder = new SendAndTrackLinkDeletedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackLinkDeletedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SendAndTrackLinkDeletedDetails(global::Dropbox.Api.TeamLog.SendAndTrackLinkDeletedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackLinkDeletedDetails" /> class.</para>
+            /// </summary>
+            private SendAndTrackLinkDeletedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SendAndTrackLinkDeletedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SendAndTrackLinkDeletedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackLinkDeletedDetailsEncoder : enc.StructEncoder<SendAndTrackLinkDeletedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SendAndTrackLinkDeletedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("send_and_track_link_deleted_details", value.Value, writer, global::Dropbox.Api.TeamLog.SendAndTrackLinkDeletedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SendAndTrackLinkDeletedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackLinkDeletedDetailsDecoder : enc.StructDecoder<SendAndTrackLinkDeletedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SendAndTrackLinkDeletedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SendAndTrackLinkDeletedDetails Create()
+                {
+                    return new SendAndTrackLinkDeletedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SendAndTrackLinkDeletedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SendAndTrackLinkDeletedDetails(global::Dropbox.Api.TeamLog.SendAndTrackLinkDeletedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The send and track link updated details object</para>
+        /// </summary>
+        public sealed class SendAndTrackLinkUpdatedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SendAndTrackLinkUpdatedDetails> Encoder = new SendAndTrackLinkUpdatedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SendAndTrackLinkUpdatedDetails> Decoder = new SendAndTrackLinkUpdatedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackLinkUpdatedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SendAndTrackLinkUpdatedDetails(global::Dropbox.Api.TeamLog.SendAndTrackLinkUpdatedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackLinkUpdatedDetails" /> class.</para>
+            /// </summary>
+            private SendAndTrackLinkUpdatedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SendAndTrackLinkUpdatedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SendAndTrackLinkUpdatedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackLinkUpdatedDetailsEncoder : enc.StructEncoder<SendAndTrackLinkUpdatedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SendAndTrackLinkUpdatedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("send_and_track_link_updated_details", value.Value, writer, global::Dropbox.Api.TeamLog.SendAndTrackLinkUpdatedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SendAndTrackLinkUpdatedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackLinkUpdatedDetailsDecoder : enc.StructDecoder<SendAndTrackLinkUpdatedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SendAndTrackLinkUpdatedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SendAndTrackLinkUpdatedDetails Create()
+                {
+                    return new SendAndTrackLinkUpdatedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SendAndTrackLinkUpdatedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SendAndTrackLinkUpdatedDetails(global::Dropbox.Api.TeamLog.SendAndTrackLinkUpdatedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The send and track link viewed details object</para>
+        /// </summary>
+        public sealed class SendAndTrackLinkViewedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SendAndTrackLinkViewedDetails> Encoder = new SendAndTrackLinkViewedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SendAndTrackLinkViewedDetails> Decoder = new SendAndTrackLinkViewedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackLinkViewedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SendAndTrackLinkViewedDetails(global::Dropbox.Api.TeamLog.SendAndTrackLinkViewedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackLinkViewedDetails" /> class.</para>
+            /// </summary>
+            private SendAndTrackLinkViewedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SendAndTrackLinkViewedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SendAndTrackLinkViewedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackLinkViewedDetailsEncoder : enc.StructEncoder<SendAndTrackLinkViewedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SendAndTrackLinkViewedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("send_and_track_link_viewed_details", value.Value, writer, global::Dropbox.Api.TeamLog.SendAndTrackLinkViewedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SendAndTrackLinkViewedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackLinkViewedDetailsDecoder : enc.StructDecoder<SendAndTrackLinkViewedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SendAndTrackLinkViewedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SendAndTrackLinkViewedDetails Create()
+                {
+                    return new SendAndTrackLinkViewedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SendAndTrackLinkViewedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SendAndTrackLinkViewedDetails(global::Dropbox.Api.TeamLog.SendAndTrackLinkViewedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The send and track removed file and associated links details object</para>
+        /// </summary>
+        public sealed class SendAndTrackRemovedFileAndAssociatedLinksDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SendAndTrackRemovedFileAndAssociatedLinksDetails> Encoder = new SendAndTrackRemovedFileAndAssociatedLinksDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SendAndTrackRemovedFileAndAssociatedLinksDetails> Decoder = new SendAndTrackRemovedFileAndAssociatedLinksDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackRemovedFileAndAssociatedLinksDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SendAndTrackRemovedFileAndAssociatedLinksDetails(global::Dropbox.Api.TeamLog.SendAndTrackRemovedFileAndAssociatedLinksDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackRemovedFileAndAssociatedLinksDetails" /> class.</para>
+            /// </summary>
+            private SendAndTrackRemovedFileAndAssociatedLinksDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SendAndTrackRemovedFileAndAssociatedLinksDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SendAndTrackRemovedFileAndAssociatedLinksDetails"
+            /// />.</para>
+            /// </summary>
+            private class SendAndTrackRemovedFileAndAssociatedLinksDetailsEncoder : enc.StructEncoder<SendAndTrackRemovedFileAndAssociatedLinksDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SendAndTrackRemovedFileAndAssociatedLinksDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("send_and_track_removed_file_and_associated_links_details", value.Value, writer, global::Dropbox.Api.TeamLog.SendAndTrackRemovedFileAndAssociatedLinksDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SendAndTrackRemovedFileAndAssociatedLinksDetails"
+            /// />.</para>
+            /// </summary>
+            private class SendAndTrackRemovedFileAndAssociatedLinksDetailsDecoder : enc.StructDecoder<SendAndTrackRemovedFileAndAssociatedLinksDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SendAndTrackRemovedFileAndAssociatedLinksDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SendAndTrackRemovedFileAndAssociatedLinksDetails Create()
+                {
+                    return new SendAndTrackRemovedFileAndAssociatedLinksDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SendAndTrackRemovedFileAndAssociatedLinksDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SendAndTrackRemovedFileAndAssociatedLinksDetails(global::Dropbox.Api.TeamLog.SendAndTrackRemovedFileAndAssociatedLinksDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -42140,6 +53969,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The shared link remove visitor details object</para>
+        /// </summary>
+        public sealed class SharedLinkRemoveVisitorDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SharedLinkRemoveVisitorDetails> Encoder = new SharedLinkRemoveVisitorDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SharedLinkRemoveVisitorDetails> Decoder = new SharedLinkRemoveVisitorDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharedLinkRemoveVisitorDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SharedLinkRemoveVisitorDetails(global::Dropbox.Api.TeamLog.SharedLinkRemoveVisitorDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharedLinkRemoveVisitorDetails" /> class.</para>
+            /// </summary>
+            private SharedLinkRemoveVisitorDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SharedLinkRemoveVisitorDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SharedLinkRemoveVisitorDetails" />.</para>
+            /// </summary>
+            private class SharedLinkRemoveVisitorDetailsEncoder : enc.StructEncoder<SharedLinkRemoveVisitorDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SharedLinkRemoveVisitorDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("shared_link_remove_visitor_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedLinkRemoveVisitorDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SharedLinkRemoveVisitorDetails" />.</para>
+            /// </summary>
+            private class SharedLinkRemoveVisitorDetailsDecoder : enc.StructDecoder<SharedLinkRemoveVisitorDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SharedLinkRemoveVisitorDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SharedLinkRemoveVisitorDetails Create()
+                {
+                    return new SharedLinkRemoveVisitorDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SharedLinkRemoveVisitorDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SharedLinkRemoveVisitorDetails(global::Dropbox.Api.TeamLog.SharedLinkRemoveVisitorDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The shared link settings add expiration details object</para>
         /// </summary>
         public sealed class SharedLinkSettingsAddExpirationDetails : EventDetails
@@ -45666,6 +57585,818 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The sign signature request canceled details object</para>
+        /// </summary>
+        public sealed class SignSignatureRequestCanceledDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SignSignatureRequestCanceledDetails> Encoder = new SignSignatureRequestCanceledDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SignSignatureRequestCanceledDetails> Decoder = new SignSignatureRequestCanceledDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignSignatureRequestCanceledDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SignSignatureRequestCanceledDetails(global::Dropbox.Api.TeamLog.SignSignatureRequestCanceledDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignSignatureRequestCanceledDetails" /> class.</para>
+            /// </summary>
+            private SignSignatureRequestCanceledDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SignSignatureRequestCanceledDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SignSignatureRequestCanceledDetails" />.</para>
+            /// </summary>
+            private class SignSignatureRequestCanceledDetailsEncoder : enc.StructEncoder<SignSignatureRequestCanceledDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SignSignatureRequestCanceledDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("sign_signature_request_canceled_details", value.Value, writer, global::Dropbox.Api.TeamLog.SignSignatureRequestCanceledDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SignSignatureRequestCanceledDetails" />.</para>
+            /// </summary>
+            private class SignSignatureRequestCanceledDetailsDecoder : enc.StructDecoder<SignSignatureRequestCanceledDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SignSignatureRequestCanceledDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SignSignatureRequestCanceledDetails Create()
+                {
+                    return new SignSignatureRequestCanceledDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SignSignatureRequestCanceledDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SignSignatureRequestCanceledDetails(global::Dropbox.Api.TeamLog.SignSignatureRequestCanceledDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The sign signature request completed details object</para>
+        /// </summary>
+        public sealed class SignSignatureRequestCompletedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SignSignatureRequestCompletedDetails> Encoder = new SignSignatureRequestCompletedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SignSignatureRequestCompletedDetails> Decoder = new SignSignatureRequestCompletedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignSignatureRequestCompletedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SignSignatureRequestCompletedDetails(global::Dropbox.Api.TeamLog.SignSignatureRequestCompletedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignSignatureRequestCompletedDetails" /> class.</para>
+            /// </summary>
+            private SignSignatureRequestCompletedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SignSignatureRequestCompletedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SignSignatureRequestCompletedDetails" />.</para>
+            /// </summary>
+            private class SignSignatureRequestCompletedDetailsEncoder : enc.StructEncoder<SignSignatureRequestCompletedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SignSignatureRequestCompletedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("sign_signature_request_completed_details", value.Value, writer, global::Dropbox.Api.TeamLog.SignSignatureRequestCompletedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SignSignatureRequestCompletedDetails" />.</para>
+            /// </summary>
+            private class SignSignatureRequestCompletedDetailsDecoder : enc.StructDecoder<SignSignatureRequestCompletedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SignSignatureRequestCompletedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SignSignatureRequestCompletedDetails Create()
+                {
+                    return new SignSignatureRequestCompletedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SignSignatureRequestCompletedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SignSignatureRequestCompletedDetails(global::Dropbox.Api.TeamLog.SignSignatureRequestCompletedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The sign signature request declined details object</para>
+        /// </summary>
+        public sealed class SignSignatureRequestDeclinedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SignSignatureRequestDeclinedDetails> Encoder = new SignSignatureRequestDeclinedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SignSignatureRequestDeclinedDetails> Decoder = new SignSignatureRequestDeclinedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignSignatureRequestDeclinedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SignSignatureRequestDeclinedDetails(global::Dropbox.Api.TeamLog.SignSignatureRequestDeclinedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignSignatureRequestDeclinedDetails" /> class.</para>
+            /// </summary>
+            private SignSignatureRequestDeclinedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SignSignatureRequestDeclinedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SignSignatureRequestDeclinedDetails" />.</para>
+            /// </summary>
+            private class SignSignatureRequestDeclinedDetailsEncoder : enc.StructEncoder<SignSignatureRequestDeclinedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SignSignatureRequestDeclinedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("sign_signature_request_declined_details", value.Value, writer, global::Dropbox.Api.TeamLog.SignSignatureRequestDeclinedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SignSignatureRequestDeclinedDetails" />.</para>
+            /// </summary>
+            private class SignSignatureRequestDeclinedDetailsDecoder : enc.StructDecoder<SignSignatureRequestDeclinedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SignSignatureRequestDeclinedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SignSignatureRequestDeclinedDetails Create()
+                {
+                    return new SignSignatureRequestDeclinedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SignSignatureRequestDeclinedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SignSignatureRequestDeclinedDetails(global::Dropbox.Api.TeamLog.SignSignatureRequestDeclinedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The sign signature request opened details object</para>
+        /// </summary>
+        public sealed class SignSignatureRequestOpenedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SignSignatureRequestOpenedDetails> Encoder = new SignSignatureRequestOpenedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SignSignatureRequestOpenedDetails> Decoder = new SignSignatureRequestOpenedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignSignatureRequestOpenedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SignSignatureRequestOpenedDetails(global::Dropbox.Api.TeamLog.SignSignatureRequestOpenedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignSignatureRequestOpenedDetails" /> class.</para>
+            /// </summary>
+            private SignSignatureRequestOpenedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SignSignatureRequestOpenedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SignSignatureRequestOpenedDetails" />.</para>
+            /// </summary>
+            private class SignSignatureRequestOpenedDetailsEncoder : enc.StructEncoder<SignSignatureRequestOpenedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SignSignatureRequestOpenedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("sign_signature_request_opened_details", value.Value, writer, global::Dropbox.Api.TeamLog.SignSignatureRequestOpenedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SignSignatureRequestOpenedDetails" />.</para>
+            /// </summary>
+            private class SignSignatureRequestOpenedDetailsDecoder : enc.StructDecoder<SignSignatureRequestOpenedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SignSignatureRequestOpenedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SignSignatureRequestOpenedDetails Create()
+                {
+                    return new SignSignatureRequestOpenedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SignSignatureRequestOpenedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SignSignatureRequestOpenedDetails(global::Dropbox.Api.TeamLog.SignSignatureRequestOpenedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The sign signature request reminder sent details object</para>
+        /// </summary>
+        public sealed class SignSignatureRequestReminderSentDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SignSignatureRequestReminderSentDetails> Encoder = new SignSignatureRequestReminderSentDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SignSignatureRequestReminderSentDetails> Decoder = new SignSignatureRequestReminderSentDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignSignatureRequestReminderSentDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SignSignatureRequestReminderSentDetails(global::Dropbox.Api.TeamLog.SignSignatureRequestReminderSentDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignSignatureRequestReminderSentDetails" /> class.</para>
+            /// </summary>
+            private SignSignatureRequestReminderSentDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SignSignatureRequestReminderSentDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SignSignatureRequestReminderSentDetails"
+            /// />.</para>
+            /// </summary>
+            private class SignSignatureRequestReminderSentDetailsEncoder : enc.StructEncoder<SignSignatureRequestReminderSentDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SignSignatureRequestReminderSentDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("sign_signature_request_reminder_sent_details", value.Value, writer, global::Dropbox.Api.TeamLog.SignSignatureRequestReminderSentDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SignSignatureRequestReminderSentDetails"
+            /// />.</para>
+            /// </summary>
+            private class SignSignatureRequestReminderSentDetailsDecoder : enc.StructDecoder<SignSignatureRequestReminderSentDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SignSignatureRequestReminderSentDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SignSignatureRequestReminderSentDetails Create()
+                {
+                    return new SignSignatureRequestReminderSentDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SignSignatureRequestReminderSentDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SignSignatureRequestReminderSentDetails(global::Dropbox.Api.TeamLog.SignSignatureRequestReminderSentDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The sign signature request sent details object</para>
+        /// </summary>
+        public sealed class SignSignatureRequestSentDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SignSignatureRequestSentDetails> Encoder = new SignSignatureRequestSentDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SignSignatureRequestSentDetails> Decoder = new SignSignatureRequestSentDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignSignatureRequestSentDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SignSignatureRequestSentDetails(global::Dropbox.Api.TeamLog.SignSignatureRequestSentDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignSignatureRequestSentDetails" /> class.</para>
+            /// </summary>
+            private SignSignatureRequestSentDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SignSignatureRequestSentDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SignSignatureRequestSentDetails" />.</para>
+            /// </summary>
+            private class SignSignatureRequestSentDetailsEncoder : enc.StructEncoder<SignSignatureRequestSentDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SignSignatureRequestSentDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("sign_signature_request_sent_details", value.Value, writer, global::Dropbox.Api.TeamLog.SignSignatureRequestSentDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SignSignatureRequestSentDetails" />.</para>
+            /// </summary>
+            private class SignSignatureRequestSentDetailsDecoder : enc.StructDecoder<SignSignatureRequestSentDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SignSignatureRequestSentDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SignSignatureRequestSentDetails Create()
+                {
+                    return new SignSignatureRequestSentDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SignSignatureRequestSentDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SignSignatureRequestSentDetails(global::Dropbox.Api.TeamLog.SignSignatureRequestSentDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The sign template created details object</para>
+        /// </summary>
+        public sealed class SignTemplateCreatedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SignTemplateCreatedDetails> Encoder = new SignTemplateCreatedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SignTemplateCreatedDetails> Decoder = new SignTemplateCreatedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SignTemplateCreatedDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SignTemplateCreatedDetails(global::Dropbox.Api.TeamLog.SignTemplateCreatedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SignTemplateCreatedDetails"
+            /// /> class.</para>
+            /// </summary>
+            private SignTemplateCreatedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SignTemplateCreatedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SignTemplateCreatedDetails" />.</para>
+            /// </summary>
+            private class SignTemplateCreatedDetailsEncoder : enc.StructEncoder<SignTemplateCreatedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SignTemplateCreatedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("sign_template_created_details", value.Value, writer, global::Dropbox.Api.TeamLog.SignTemplateCreatedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SignTemplateCreatedDetails" />.</para>
+            /// </summary>
+            private class SignTemplateCreatedDetailsDecoder : enc.StructDecoder<SignTemplateCreatedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="SignTemplateCreatedDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SignTemplateCreatedDetails Create()
+                {
+                    return new SignTemplateCreatedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SignTemplateCreatedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SignTemplateCreatedDetails(global::Dropbox.Api.TeamLog.SignTemplateCreatedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The sign template shared details object</para>
+        /// </summary>
+        public sealed class SignTemplateSharedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SignTemplateSharedDetails> Encoder = new SignTemplateSharedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SignTemplateSharedDetails> Decoder = new SignTemplateSharedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SignTemplateSharedDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SignTemplateSharedDetails(global::Dropbox.Api.TeamLog.SignTemplateSharedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="SignTemplateSharedDetails"
+            /// /> class.</para>
+            /// </summary>
+            private SignTemplateSharedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SignTemplateSharedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SignTemplateSharedDetails" />.</para>
+            /// </summary>
+            private class SignTemplateSharedDetailsEncoder : enc.StructEncoder<SignTemplateSharedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SignTemplateSharedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("sign_template_shared_details", value.Value, writer, global::Dropbox.Api.TeamLog.SignTemplateSharedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SignTemplateSharedDetails" />.</para>
+            /// </summary>
+            private class SignTemplateSharedDetailsDecoder : enc.StructDecoder<SignTemplateSharedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="SignTemplateSharedDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SignTemplateSharedDetails Create()
+                {
+                    return new SignTemplateSharedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SignTemplateSharedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SignTemplateSharedDetails(global::Dropbox.Api.TeamLog.SignTemplateSharedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The risc security event details object</para>
+        /// </summary>
+        public sealed class RiscSecurityEventDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<RiscSecurityEventDetails> Encoder = new RiscSecurityEventDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<RiscSecurityEventDetails> Decoder = new RiscSecurityEventDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="RiscSecurityEventDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public RiscSecurityEventDetails(global::Dropbox.Api.TeamLog.RiscSecurityEventDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="RiscSecurityEventDetails" />
+            /// class.</para>
+            /// </summary>
+            private RiscSecurityEventDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.RiscSecurityEventDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="RiscSecurityEventDetails" />.</para>
+            /// </summary>
+            private class RiscSecurityEventDetailsEncoder : enc.StructEncoder<RiscSecurityEventDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(RiscSecurityEventDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("risc_security_event_details", value.Value, writer, global::Dropbox.Api.TeamLog.RiscSecurityEventDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="RiscSecurityEventDetails" />.</para>
+            /// </summary>
+            private class RiscSecurityEventDetailsDecoder : enc.StructDecoder<RiscSecurityEventDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="RiscSecurityEventDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override RiscSecurityEventDetails Create()
+                {
+                    return new RiscSecurityEventDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override RiscSecurityEventDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new RiscSecurityEventDetails(global::Dropbox.Api.TeamLog.RiscSecurityEventDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The sso add cert details object</para>
         /// </summary>
         public sealed class SsoAddCertDetails : EventDetails
@@ -47016,6 +59747,282 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The team folder space limits change caps type details object</para>
+        /// </summary>
+        public sealed class TeamFolderSpaceLimitsChangeCapsTypeDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamFolderSpaceLimitsChangeCapsTypeDetails> Encoder = new TeamFolderSpaceLimitsChangeCapsTypeDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamFolderSpaceLimitsChangeCapsTypeDetails> Decoder = new TeamFolderSpaceLimitsChangeCapsTypeDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamFolderSpaceLimitsChangeCapsTypeDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamFolderSpaceLimitsChangeCapsTypeDetails(global::Dropbox.Api.TeamLog.TeamFolderSpaceLimitsChangeCapsTypeDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamFolderSpaceLimitsChangeCapsTypeDetails" /> class.</para>
+            /// </summary>
+            private TeamFolderSpaceLimitsChangeCapsTypeDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamFolderSpaceLimitsChangeCapsTypeDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamFolderSpaceLimitsChangeCapsTypeDetails"
+            /// />.</para>
+            /// </summary>
+            private class TeamFolderSpaceLimitsChangeCapsTypeDetailsEncoder : enc.StructEncoder<TeamFolderSpaceLimitsChangeCapsTypeDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamFolderSpaceLimitsChangeCapsTypeDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_folder_space_limits_change_caps_type_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamFolderSpaceLimitsChangeCapsTypeDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamFolderSpaceLimitsChangeCapsTypeDetails"
+            /// />.</para>
+            /// </summary>
+            private class TeamFolderSpaceLimitsChangeCapsTypeDetailsDecoder : enc.StructDecoder<TeamFolderSpaceLimitsChangeCapsTypeDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamFolderSpaceLimitsChangeCapsTypeDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamFolderSpaceLimitsChangeCapsTypeDetails Create()
+                {
+                    return new TeamFolderSpaceLimitsChangeCapsTypeDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamFolderSpaceLimitsChangeCapsTypeDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamFolderSpaceLimitsChangeCapsTypeDetails(global::Dropbox.Api.TeamLog.TeamFolderSpaceLimitsChangeCapsTypeDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team folder space limits change limit details object</para>
+        /// </summary>
+        public sealed class TeamFolderSpaceLimitsChangeLimitDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamFolderSpaceLimitsChangeLimitDetails> Encoder = new TeamFolderSpaceLimitsChangeLimitDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamFolderSpaceLimitsChangeLimitDetails> Decoder = new TeamFolderSpaceLimitsChangeLimitDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamFolderSpaceLimitsChangeLimitDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamFolderSpaceLimitsChangeLimitDetails(global::Dropbox.Api.TeamLog.TeamFolderSpaceLimitsChangeLimitDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamFolderSpaceLimitsChangeLimitDetails" /> class.</para>
+            /// </summary>
+            private TeamFolderSpaceLimitsChangeLimitDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamFolderSpaceLimitsChangeLimitDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamFolderSpaceLimitsChangeLimitDetails"
+            /// />.</para>
+            /// </summary>
+            private class TeamFolderSpaceLimitsChangeLimitDetailsEncoder : enc.StructEncoder<TeamFolderSpaceLimitsChangeLimitDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamFolderSpaceLimitsChangeLimitDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_folder_space_limits_change_limit_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamFolderSpaceLimitsChangeLimitDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamFolderSpaceLimitsChangeLimitDetails"
+            /// />.</para>
+            /// </summary>
+            private class TeamFolderSpaceLimitsChangeLimitDetailsDecoder : enc.StructDecoder<TeamFolderSpaceLimitsChangeLimitDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamFolderSpaceLimitsChangeLimitDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamFolderSpaceLimitsChangeLimitDetails Create()
+                {
+                    return new TeamFolderSpaceLimitsChangeLimitDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamFolderSpaceLimitsChangeLimitDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamFolderSpaceLimitsChangeLimitDetails(global::Dropbox.Api.TeamLog.TeamFolderSpaceLimitsChangeLimitDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team folder space limits change notification target details object</para>
+        /// </summary>
+        public sealed class TeamFolderSpaceLimitsChangeNotificationTargetDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamFolderSpaceLimitsChangeNotificationTargetDetails> Encoder = new TeamFolderSpaceLimitsChangeNotificationTargetDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamFolderSpaceLimitsChangeNotificationTargetDetails> Decoder = new TeamFolderSpaceLimitsChangeNotificationTargetDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamFolderSpaceLimitsChangeNotificationTargetDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamFolderSpaceLimitsChangeNotificationTargetDetails(global::Dropbox.Api.TeamLog.TeamFolderSpaceLimitsChangeNotificationTargetDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamFolderSpaceLimitsChangeNotificationTargetDetails" /> class.</para>
+            /// </summary>
+            private TeamFolderSpaceLimitsChangeNotificationTargetDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamFolderSpaceLimitsChangeNotificationTargetDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see
+            /// cref="TeamFolderSpaceLimitsChangeNotificationTargetDetails" />.</para>
+            /// </summary>
+            private class TeamFolderSpaceLimitsChangeNotificationTargetDetailsEncoder : enc.StructEncoder<TeamFolderSpaceLimitsChangeNotificationTargetDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamFolderSpaceLimitsChangeNotificationTargetDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_folder_space_limits_change_notification_target_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamFolderSpaceLimitsChangeNotificationTargetDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see
+            /// cref="TeamFolderSpaceLimitsChangeNotificationTargetDetails" />.</para>
+            /// </summary>
+            private class TeamFolderSpaceLimitsChangeNotificationTargetDetailsDecoder : enc.StructDecoder<TeamFolderSpaceLimitsChangeNotificationTargetDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamFolderSpaceLimitsChangeNotificationTargetDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamFolderSpaceLimitsChangeNotificationTargetDetails Create()
+                {
+                    return new TeamFolderSpaceLimitsChangeNotificationTargetDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamFolderSpaceLimitsChangeNotificationTargetDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamFolderSpaceLimitsChangeNotificationTargetDetails(global::Dropbox.Api.TeamLog.TeamFolderSpaceLimitsChangeNotificationTargetDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The team selective sync settings changed details object</para>
         /// </summary>
         public sealed class TeamSelectiveSyncSettingsChangedDetails : EventDetails
@@ -47288,6 +60295,98 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The ai third party sharing dropbox base policy changed details object</para>
+        /// </summary>
+        public sealed class AiThirdPartySharingDropboxBasePolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AiThirdPartySharingDropboxBasePolicyChangedDetails> Encoder = new AiThirdPartySharingDropboxBasePolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AiThirdPartySharingDropboxBasePolicyChangedDetails> Decoder = new AiThirdPartySharingDropboxBasePolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="AiThirdPartySharingDropboxBasePolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public AiThirdPartySharingDropboxBasePolicyChangedDetails(global::Dropbox.Api.TeamLog.AiThirdPartySharingDropboxBasePolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="AiThirdPartySharingDropboxBasePolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private AiThirdPartySharingDropboxBasePolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.AiThirdPartySharingDropboxBasePolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see
+            /// cref="AiThirdPartySharingDropboxBasePolicyChangedDetails" />.</para>
+            /// </summary>
+            private class AiThirdPartySharingDropboxBasePolicyChangedDetailsEncoder : enc.StructEncoder<AiThirdPartySharingDropboxBasePolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AiThirdPartySharingDropboxBasePolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("ai_third_party_sharing_dropbox_base_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.AiThirdPartySharingDropboxBasePolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see
+            /// cref="AiThirdPartySharingDropboxBasePolicyChangedDetails" />.</para>
+            /// </summary>
+            private class AiThirdPartySharingDropboxBasePolicyChangedDetailsDecoder : enc.StructDecoder<AiThirdPartySharingDropboxBasePolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="AiThirdPartySharingDropboxBasePolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AiThirdPartySharingDropboxBasePolicyChangedDetails Create()
+                {
+                    return new AiThirdPartySharingDropboxBasePolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override AiThirdPartySharingDropboxBasePolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new AiThirdPartySharingDropboxBasePolicyChangedDetails(global::Dropbox.Api.TeamLog.AiThirdPartySharingDropboxBasePolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The allow download disabled details object</para>
         /// </summary>
         public sealed class AllowDownloadDisabledDetails : EventDetails
@@ -47468,6 +60567,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The apple login change policy details object</para>
+        /// </summary>
+        public sealed class AppleLoginChangePolicyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AppleLoginChangePolicyDetails> Encoder = new AppleLoginChangePolicyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AppleLoginChangePolicyDetails> Decoder = new AppleLoginChangePolicyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="AppleLoginChangePolicyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public AppleLoginChangePolicyDetails(global::Dropbox.Api.TeamLog.AppleLoginChangePolicyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="AppleLoginChangePolicyDetails" /> class.</para>
+            /// </summary>
+            private AppleLoginChangePolicyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.AppleLoginChangePolicyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AppleLoginChangePolicyDetails" />.</para>
+            /// </summary>
+            private class AppleLoginChangePolicyDetailsEncoder : enc.StructEncoder<AppleLoginChangePolicyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AppleLoginChangePolicyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("apple_login_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.AppleLoginChangePolicyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AppleLoginChangePolicyDetails" />.</para>
+            /// </summary>
+            private class AppleLoginChangePolicyDetailsDecoder : enc.StructDecoder<AppleLoginChangePolicyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="AppleLoginChangePolicyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AppleLoginChangePolicyDetails Create()
+                {
+                    return new AppleLoginChangePolicyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override AppleLoginChangePolicyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new AppleLoginChangePolicyDetails(global::Dropbox.Api.TeamLog.AppleLoginChangePolicyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The app permissions changed details object</para>
         /// </summary>
         public sealed class AppPermissionsChangedDetails : EventDetails
@@ -47641,6 +60830,96 @@ namespace Dropbox.Api.TeamLog
                 public override CameraUploadsPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new CameraUploadsPolicyChangedDetails(global::Dropbox.Api.TeamLog.CameraUploadsPolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The capture team space policy changed details object</para>
+        /// </summary>
+        public sealed class CaptureTeamSpacePolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CaptureTeamSpacePolicyChangedDetails> Encoder = new CaptureTeamSpacePolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CaptureTeamSpacePolicyChangedDetails> Decoder = new CaptureTeamSpacePolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="CaptureTeamSpacePolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public CaptureTeamSpacePolicyChangedDetails(global::Dropbox.Api.TeamLog.CaptureTeamSpacePolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="CaptureTeamSpacePolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private CaptureTeamSpacePolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.CaptureTeamSpacePolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CaptureTeamSpacePolicyChangedDetails" />.</para>
+            /// </summary>
+            private class CaptureTeamSpacePolicyChangedDetailsEncoder : enc.StructEncoder<CaptureTeamSpacePolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CaptureTeamSpacePolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("capture_team_space_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.CaptureTeamSpacePolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CaptureTeamSpacePolicyChangedDetails" />.</para>
+            /// </summary>
+            private class CaptureTeamSpacePolicyChangedDetailsDecoder : enc.StructDecoder<CaptureTeamSpacePolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="CaptureTeamSpacePolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CaptureTeamSpacePolicyChangedDetails Create()
+                {
+                    return new CaptureTeamSpacePolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override CaptureTeamSpacePolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new CaptureTeamSpacePolicyChangedDetails(global::Dropbox.Api.TeamLog.CaptureTeamSpacePolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -48003,6 +61282,190 @@ namespace Dropbox.Api.TeamLog
                 public override ContentAdministrationPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new ContentAdministrationPolicyChangedDetails(global::Dropbox.Api.TeamLog.ContentAdministrationPolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The content deletion protection change policy details object</para>
+        /// </summary>
+        public sealed class ContentDeletionProtectionChangePolicyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ContentDeletionProtectionChangePolicyDetails> Encoder = new ContentDeletionProtectionChangePolicyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ContentDeletionProtectionChangePolicyDetails> Decoder = new ContentDeletionProtectionChangePolicyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ContentDeletionProtectionChangePolicyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ContentDeletionProtectionChangePolicyDetails(global::Dropbox.Api.TeamLog.ContentDeletionProtectionChangePolicyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ContentDeletionProtectionChangePolicyDetails" /> class.</para>
+            /// </summary>
+            private ContentDeletionProtectionChangePolicyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ContentDeletionProtectionChangePolicyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ContentDeletionProtectionChangePolicyDetails"
+            /// />.</para>
+            /// </summary>
+            private class ContentDeletionProtectionChangePolicyDetailsEncoder : enc.StructEncoder<ContentDeletionProtectionChangePolicyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ContentDeletionProtectionChangePolicyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("content_deletion_protection_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.ContentDeletionProtectionChangePolicyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ContentDeletionProtectionChangePolicyDetails"
+            /// />.</para>
+            /// </summary>
+            private class ContentDeletionProtectionChangePolicyDetailsDecoder : enc.StructDecoder<ContentDeletionProtectionChangePolicyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ContentDeletionProtectionChangePolicyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ContentDeletionProtectionChangePolicyDetails Create()
+                {
+                    return new ContentDeletionProtectionChangePolicyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ContentDeletionProtectionChangePolicyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ContentDeletionProtectionChangePolicyDetails(global::Dropbox.Api.TeamLog.ContentDeletionProtectionChangePolicyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dash external sharing policy changed details object</para>
+        /// </summary>
+        public sealed class DashExternalSharingPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DashExternalSharingPolicyChangedDetails> Encoder = new DashExternalSharingPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DashExternalSharingPolicyChangedDetails> Decoder = new DashExternalSharingPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashExternalSharingPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DashExternalSharingPolicyChangedDetails(global::Dropbox.Api.TeamLog.DashExternalSharingPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DashExternalSharingPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private DashExternalSharingPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DashExternalSharingPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DashExternalSharingPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class DashExternalSharingPolicyChangedDetailsEncoder : enc.StructEncoder<DashExternalSharingPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DashExternalSharingPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dash_external_sharing_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.DashExternalSharingPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DashExternalSharingPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class DashExternalSharingPolicyChangedDetailsDecoder : enc.StructDecoder<DashExternalSharingPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DashExternalSharingPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DashExternalSharingPolicyChangedDetails Create()
+                {
+                    return new DashExternalSharingPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DashExternalSharingPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DashExternalSharingPolicyChangedDetails(global::Dropbox.Api.TeamLog.DashExternalSharingPolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -50194,6 +63657,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The flexible file names policy changed details object</para>
+        /// </summary>
+        public sealed class FlexibleFileNamesPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FlexibleFileNamesPolicyChangedDetails> Encoder = new FlexibleFileNamesPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FlexibleFileNamesPolicyChangedDetails> Decoder = new FlexibleFileNamesPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="FlexibleFileNamesPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public FlexibleFileNamesPolicyChangedDetails(global::Dropbox.Api.TeamLog.FlexibleFileNamesPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="FlexibleFileNamesPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private FlexibleFileNamesPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.FlexibleFileNamesPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FlexibleFileNamesPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class FlexibleFileNamesPolicyChangedDetailsEncoder : enc.StructEncoder<FlexibleFileNamesPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FlexibleFileNamesPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("flexible_file_names_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.FlexibleFileNamesPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FlexibleFileNamesPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class FlexibleFileNamesPolicyChangedDetailsDecoder : enc.StructDecoder<FlexibleFileNamesPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="FlexibleFileNamesPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FlexibleFileNamesPolicyChangedDetails Create()
+                {
+                    return new FlexibleFileNamesPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override FlexibleFileNamesPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new FlexibleFileNamesPolicyChangedDetails(global::Dropbox.Api.TeamLog.FlexibleFileNamesPolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The folder link restriction policy changed details object</para>
         /// </summary>
         public sealed class FolderLinkRestrictionPolicyChangedDetails : EventDetails
@@ -51284,6 +64837,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The microsoft login change policy details object</para>
+        /// </summary>
+        public sealed class MicrosoftLoginChangePolicyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MicrosoftLoginChangePolicyDetails> Encoder = new MicrosoftLoginChangePolicyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MicrosoftLoginChangePolicyDetails> Decoder = new MicrosoftLoginChangePolicyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MicrosoftLoginChangePolicyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MicrosoftLoginChangePolicyDetails(global::Dropbox.Api.TeamLog.MicrosoftLoginChangePolicyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MicrosoftLoginChangePolicyDetails" /> class.</para>
+            /// </summary>
+            private MicrosoftLoginChangePolicyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MicrosoftLoginChangePolicyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MicrosoftLoginChangePolicyDetails" />.</para>
+            /// </summary>
+            private class MicrosoftLoginChangePolicyDetailsEncoder : enc.StructEncoder<MicrosoftLoginChangePolicyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MicrosoftLoginChangePolicyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("microsoft_login_change_policy_details", value.Value, writer, global::Dropbox.Api.TeamLog.MicrosoftLoginChangePolicyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MicrosoftLoginChangePolicyDetails" />.</para>
+            /// </summary>
+            private class MicrosoftLoginChangePolicyDetailsDecoder : enc.StructDecoder<MicrosoftLoginChangePolicyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MicrosoftLoginChangePolicyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MicrosoftLoginChangePolicyDetails Create()
+                {
+                    return new MicrosoftLoginChangePolicyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MicrosoftLoginChangePolicyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MicrosoftLoginChangePolicyDetails(global::Dropbox.Api.TeamLog.MicrosoftLoginChangePolicyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The microsoft office addin change policy details object</para>
         /// </summary>
         public sealed class MicrosoftOfficeAddinChangePolicyDetails : EventDetails
@@ -52188,6 +65831,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The passkey login policy changed details object</para>
+        /// </summary>
+        public sealed class PasskeyLoginPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PasskeyLoginPolicyChangedDetails> Encoder = new PasskeyLoginPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PasskeyLoginPolicyChangedDetails> Decoder = new PasskeyLoginPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="PasskeyLoginPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public PasskeyLoginPolicyChangedDetails(global::Dropbox.Api.TeamLog.PasskeyLoginPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="PasskeyLoginPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private PasskeyLoginPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.PasskeyLoginPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PasskeyLoginPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class PasskeyLoginPolicyChangedDetailsEncoder : enc.StructEncoder<PasskeyLoginPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PasskeyLoginPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("passkey_login_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.PasskeyLoginPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PasskeyLoginPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class PasskeyLoginPolicyChangedDetailsDecoder : enc.StructDecoder<PasskeyLoginPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="PasskeyLoginPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PasskeyLoginPolicyChangedDetails Create()
+                {
+                    return new PasskeyLoginPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override PasskeyLoginPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new PasskeyLoginPolicyChangedDetails(global::Dropbox.Api.TeamLog.PasskeyLoginPolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The password strength requirements change policy details object</para>
         /// </summary>
         public sealed class PasswordStrengthRequirementsChangePolicyDetails : EventDetails
@@ -52363,6 +66096,278 @@ namespace Dropbox.Api.TeamLog
                 public override PermanentDeleteChangePolicyDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new PermanentDeleteChangePolicyDetails(global::Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The previews ai policy changed details object</para>
+        /// </summary>
+        public sealed class PreviewsAiPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PreviewsAiPolicyChangedDetails> Encoder = new PreviewsAiPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PreviewsAiPolicyChangedDetails> Decoder = new PreviewsAiPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="PreviewsAiPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public PreviewsAiPolicyChangedDetails(global::Dropbox.Api.TeamLog.PreviewsAiPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="PreviewsAiPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private PreviewsAiPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.PreviewsAiPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PreviewsAiPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class PreviewsAiPolicyChangedDetailsEncoder : enc.StructEncoder<PreviewsAiPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PreviewsAiPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("previews_ai_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.PreviewsAiPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PreviewsAiPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class PreviewsAiPolicyChangedDetailsDecoder : enc.StructDecoder<PreviewsAiPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="PreviewsAiPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PreviewsAiPolicyChangedDetails Create()
+                {
+                    return new PreviewsAiPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override PreviewsAiPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new PreviewsAiPolicyChangedDetails(global::Dropbox.Api.TeamLog.PreviewsAiPolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The replay adding people policy changed details object</para>
+        /// </summary>
+        public sealed class ReplayAddingPeoplePolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ReplayAddingPeoplePolicyChangedDetails> Encoder = new ReplayAddingPeoplePolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ReplayAddingPeoplePolicyChangedDetails> Decoder = new ReplayAddingPeoplePolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ReplayAddingPeoplePolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ReplayAddingPeoplePolicyChangedDetails(global::Dropbox.Api.TeamLog.ReplayAddingPeoplePolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ReplayAddingPeoplePolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private ReplayAddingPeoplePolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ReplayAddingPeoplePolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ReplayAddingPeoplePolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class ReplayAddingPeoplePolicyChangedDetailsEncoder : enc.StructEncoder<ReplayAddingPeoplePolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ReplayAddingPeoplePolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("replay_adding_people_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.ReplayAddingPeoplePolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ReplayAddingPeoplePolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class ReplayAddingPeoplePolicyChangedDetailsDecoder : enc.StructDecoder<ReplayAddingPeoplePolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ReplayAddingPeoplePolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ReplayAddingPeoplePolicyChangedDetails Create()
+                {
+                    return new ReplayAddingPeoplePolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ReplayAddingPeoplePolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ReplayAddingPeoplePolicyChangedDetails(global::Dropbox.Api.TeamLog.ReplayAddingPeoplePolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The replay sharing policy changed details object</para>
+        /// </summary>
+        public sealed class ReplaySharingPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ReplaySharingPolicyChangedDetails> Encoder = new ReplaySharingPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ReplaySharingPolicyChangedDetails> Decoder = new ReplaySharingPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ReplaySharingPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ReplaySharingPolicyChangedDetails(global::Dropbox.Api.TeamLog.ReplaySharingPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ReplaySharingPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private ReplaySharingPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ReplaySharingPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ReplaySharingPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class ReplaySharingPolicyChangedDetailsEncoder : enc.StructEncoder<ReplaySharingPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ReplaySharingPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("replay_sharing_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.ReplaySharingPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ReplaySharingPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class ReplaySharingPolicyChangedDetailsDecoder : enc.StructDecoder<ReplaySharingPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ReplaySharingPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ReplaySharingPolicyChangedDetails Create()
+                {
+                    return new ReplaySharingPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ReplaySharingPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ReplaySharingPolicyChangedDetails(global::Dropbox.Api.TeamLog.ReplaySharingPolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -52550,6 +66555,188 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The send and track policy changed details object</para>
+        /// </summary>
+        public sealed class SendAndTrackPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SendAndTrackPolicyChangedDetails> Encoder = new SendAndTrackPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SendAndTrackPolicyChangedDetails> Decoder = new SendAndTrackPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SendAndTrackPolicyChangedDetails(global::Dropbox.Api.TeamLog.SendAndTrackPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendAndTrackPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private SendAndTrackPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SendAndTrackPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SendAndTrackPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackPolicyChangedDetailsEncoder : enc.StructEncoder<SendAndTrackPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SendAndTrackPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("send_and_track_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.SendAndTrackPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SendAndTrackPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class SendAndTrackPolicyChangedDetailsDecoder : enc.StructDecoder<SendAndTrackPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SendAndTrackPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SendAndTrackPolicyChangedDetails Create()
+                {
+                    return new SendAndTrackPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SendAndTrackPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SendAndTrackPolicyChangedDetails(global::Dropbox.Api.TeamLog.SendAndTrackPolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The send external sharing policy changed details object</para>
+        /// </summary>
+        public sealed class SendExternalSharingPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SendExternalSharingPolicyChangedDetails> Encoder = new SendExternalSharingPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SendExternalSharingPolicyChangedDetails> Decoder = new SendExternalSharingPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendExternalSharingPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SendExternalSharingPolicyChangedDetails(global::Dropbox.Api.TeamLog.SendExternalSharingPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SendExternalSharingPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private SendExternalSharingPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SendExternalSharingPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SendExternalSharingPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class SendExternalSharingPolicyChangedDetailsEncoder : enc.StructEncoder<SendExternalSharingPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SendExternalSharingPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("send_external_sharing_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.SendExternalSharingPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SendExternalSharingPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class SendExternalSharingPolicyChangedDetailsDecoder : enc.StructDecoder<SendExternalSharingPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SendExternalSharingPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SendExternalSharingPolicyChangedDetails Create()
+                {
+                    return new SendExternalSharingPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SendExternalSharingPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SendExternalSharingPolicyChangedDetails(global::Dropbox.Api.TeamLog.SendExternalSharingPolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The send for signature policy changed details object</para>
         /// </summary>
         public sealed class SendForSignaturePolicyChangedDetails : EventDetails
@@ -52633,6 +66820,98 @@ namespace Dropbox.Api.TeamLog
                 public override SendForSignaturePolicyChangedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new SendForSignaturePolicyChangedDetails(global::Dropbox.Api.TeamLog.SendForSignaturePolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The shared link default permissions policy changed details object</para>
+        /// </summary>
+        public sealed class SharedLinkDefaultPermissionsPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SharedLinkDefaultPermissionsPolicyChangedDetails> Encoder = new SharedLinkDefaultPermissionsPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SharedLinkDefaultPermissionsPolicyChangedDetails> Decoder = new SharedLinkDefaultPermissionsPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharedLinkDefaultPermissionsPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SharedLinkDefaultPermissionsPolicyChangedDetails(global::Dropbox.Api.TeamLog.SharedLinkDefaultPermissionsPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharedLinkDefaultPermissionsPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private SharedLinkDefaultPermissionsPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SharedLinkDefaultPermissionsPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SharedLinkDefaultPermissionsPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class SharedLinkDefaultPermissionsPolicyChangedDetailsEncoder : enc.StructEncoder<SharedLinkDefaultPermissionsPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SharedLinkDefaultPermissionsPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("shared_link_default_permissions_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.SharedLinkDefaultPermissionsPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SharedLinkDefaultPermissionsPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class SharedLinkDefaultPermissionsPolicyChangedDetailsDecoder : enc.StructDecoder<SharedLinkDefaultPermissionsPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SharedLinkDefaultPermissionsPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SharedLinkDefaultPermissionsPolicyChangedDetails Create()
+                {
+                    return new SharedLinkDefaultPermissionsPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SharedLinkDefaultPermissionsPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SharedLinkDefaultPermissionsPolicyChangedDetails(global::Dropbox.Api.TeamLog.SharedLinkDefaultPermissionsPolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -53458,6 +67737,190 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The sign external sharing policy changed details object</para>
+        /// </summary>
+        public sealed class SignExternalSharingPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SignExternalSharingPolicyChangedDetails> Encoder = new SignExternalSharingPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SignExternalSharingPolicyChangedDetails> Decoder = new SignExternalSharingPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignExternalSharingPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SignExternalSharingPolicyChangedDetails(global::Dropbox.Api.TeamLog.SignExternalSharingPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignExternalSharingPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private SignExternalSharingPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SignExternalSharingPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SignExternalSharingPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class SignExternalSharingPolicyChangedDetailsEncoder : enc.StructEncoder<SignExternalSharingPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SignExternalSharingPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("sign_external_sharing_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.SignExternalSharingPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SignExternalSharingPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class SignExternalSharingPolicyChangedDetailsDecoder : enc.StructDecoder<SignExternalSharingPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SignExternalSharingPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SignExternalSharingPolicyChangedDetails Create()
+                {
+                    return new SignExternalSharingPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SignExternalSharingPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SignExternalSharingPolicyChangedDetails(global::Dropbox.Api.TeamLog.SignExternalSharingPolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The sign template creation permission changed details object</para>
+        /// </summary>
+        public sealed class SignTemplateCreationPermissionChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SignTemplateCreationPermissionChangedDetails> Encoder = new SignTemplateCreationPermissionChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SignTemplateCreationPermissionChangedDetails> Decoder = new SignTemplateCreationPermissionChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignTemplateCreationPermissionChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SignTemplateCreationPermissionChangedDetails(global::Dropbox.Api.TeamLog.SignTemplateCreationPermissionChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SignTemplateCreationPermissionChangedDetails" /> class.</para>
+            /// </summary>
+            private SignTemplateCreationPermissionChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.SignTemplateCreationPermissionChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SignTemplateCreationPermissionChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class SignTemplateCreationPermissionChangedDetailsEncoder : enc.StructEncoder<SignTemplateCreationPermissionChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SignTemplateCreationPermissionChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("sign_template_creation_permission_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.SignTemplateCreationPermissionChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SignTemplateCreationPermissionChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class SignTemplateCreationPermissionChangedDetailsDecoder : enc.StructDecoder<SignTemplateCreationPermissionChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SignTemplateCreationPermissionChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SignTemplateCreationPermissionChangedDetails Create()
+                {
+                    return new SignTemplateCreationPermissionChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SignTemplateCreationPermissionChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SignTemplateCreationPermissionChangedDetails(global::Dropbox.Api.TeamLog.SignTemplateCreationPermissionChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The smarter smart sync policy changed details object</para>
         /// </summary>
         public sealed class SmarterSmartSyncPolicyChangedDetails : EventDetails
@@ -53908,6 +68371,98 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The stack cross team access policy changed details object</para>
+        /// </summary>
+        public sealed class StackCrossTeamAccessPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<StackCrossTeamAccessPolicyChangedDetails> Encoder = new StackCrossTeamAccessPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<StackCrossTeamAccessPolicyChangedDetails> Decoder = new StackCrossTeamAccessPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="StackCrossTeamAccessPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public StackCrossTeamAccessPolicyChangedDetails(global::Dropbox.Api.TeamLog.StackCrossTeamAccessPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="StackCrossTeamAccessPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private StackCrossTeamAccessPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.StackCrossTeamAccessPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="StackCrossTeamAccessPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class StackCrossTeamAccessPolicyChangedDetailsEncoder : enc.StructEncoder<StackCrossTeamAccessPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(StackCrossTeamAccessPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("stack_cross_team_access_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.StackCrossTeamAccessPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="StackCrossTeamAccessPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class StackCrossTeamAccessPolicyChangedDetailsDecoder : enc.StructDecoder<StackCrossTeamAccessPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="StackCrossTeamAccessPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override StackCrossTeamAccessPolicyChangedDetails Create()
+                {
+                    return new StackCrossTeamAccessPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override StackCrossTeamAccessPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new StackCrossTeamAccessPolicyChangedDetails(global::Dropbox.Api.TeamLog.StackCrossTeamAccessPolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The team branding policy changed details object</para>
         /// </summary>
         public sealed class TeamBrandingPolicyChangedDetails : EventDetails
@@ -54081,6 +68636,98 @@ namespace Dropbox.Api.TeamLog
                 public override TeamExtensionsPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new TeamExtensionsPolicyChangedDetails(global::Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team member storage request policy changed details object</para>
+        /// </summary>
+        public sealed class TeamMemberStorageRequestPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamMemberStorageRequestPolicyChangedDetails> Encoder = new TeamMemberStorageRequestPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamMemberStorageRequestPolicyChangedDetails> Decoder = new TeamMemberStorageRequestPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamMemberStorageRequestPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TeamMemberStorageRequestPolicyChangedDetails(global::Dropbox.Api.TeamLog.TeamMemberStorageRequestPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamMemberStorageRequestPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private TeamMemberStorageRequestPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TeamMemberStorageRequestPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamMemberStorageRequestPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class TeamMemberStorageRequestPolicyChangedDetailsEncoder : enc.StructEncoder<TeamMemberStorageRequestPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamMemberStorageRequestPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("team_member_storage_request_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.TeamMemberStorageRequestPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamMemberStorageRequestPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class TeamMemberStorageRequestPolicyChangedDetailsDecoder : enc.StructDecoder<TeamMemberStorageRequestPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamMemberStorageRequestPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamMemberStorageRequestPolicyChangedDetails Create()
+                {
+                    return new TeamMemberStorageRequestPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TeamMemberStorageRequestPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TeamMemberStorageRequestPolicyChangedDetails(global::Dropbox.Api.TeamLog.TeamMemberStorageRequestPolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -54533,6 +69180,96 @@ namespace Dropbox.Api.TeamLog
                 public override TfaRemoveExceptionDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new TfaRemoveExceptionDetails(global::Dropbox.Api.TeamLog.TfaRemoveExceptionDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The top level content policy changed details object</para>
+        /// </summary>
+        public sealed class TopLevelContentPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TopLevelContentPolicyChangedDetails> Encoder = new TopLevelContentPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TopLevelContentPolicyChangedDetails> Decoder = new TopLevelContentPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TopLevelContentPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TopLevelContentPolicyChangedDetails(global::Dropbox.Api.TeamLog.TopLevelContentPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TopLevelContentPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private TopLevelContentPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.TopLevelContentPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TopLevelContentPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class TopLevelContentPolicyChangedDetailsEncoder : enc.StructEncoder<TopLevelContentPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TopLevelContentPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("top_level_content_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.TopLevelContentPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TopLevelContentPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class TopLevelContentPolicyChangedDetailsDecoder : enc.StructDecoder<TopLevelContentPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TopLevelContentPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TopLevelContentPolicyChangedDetails Create()
+                {
+                    return new TopLevelContentPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override TopLevelContentPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new TopLevelContentPolicyChangedDetails(global::Dropbox.Api.TeamLog.TopLevelContentPolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -56165,6 +70902,186 @@ namespace Dropbox.Api.TeamLog
                 public override TeamProfileRemoveLogoDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new TeamProfileRemoveLogoDetails(global::Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The passkey add details object</para>
+        /// </summary>
+        public sealed class PasskeyAddDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PasskeyAddDetails> Encoder = new PasskeyAddDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PasskeyAddDetails> Decoder = new PasskeyAddDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PasskeyAddDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public PasskeyAddDetails(global::Dropbox.Api.TeamLog.PasskeyAddDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PasskeyAddDetails" />
+            /// class.</para>
+            /// </summary>
+            private PasskeyAddDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.PasskeyAddDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PasskeyAddDetails" />.</para>
+            /// </summary>
+            private class PasskeyAddDetailsEncoder : enc.StructEncoder<PasskeyAddDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PasskeyAddDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("passkey_add_details", value.Value, writer, global::Dropbox.Api.TeamLog.PasskeyAddDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PasskeyAddDetails" />.</para>
+            /// </summary>
+            private class PasskeyAddDetailsDecoder : enc.StructDecoder<PasskeyAddDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PasskeyAddDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PasskeyAddDetails Create()
+                {
+                    return new PasskeyAddDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override PasskeyAddDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new PasskeyAddDetails(global::Dropbox.Api.TeamLog.PasskeyAddDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The passkey remove details object</para>
+        /// </summary>
+        public sealed class PasskeyRemoveDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PasskeyRemoveDetails> Encoder = new PasskeyRemoveDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PasskeyRemoveDetails> Decoder = new PasskeyRemoveDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PasskeyRemoveDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public PasskeyRemoveDetails(global::Dropbox.Api.TeamLog.PasskeyRemoveDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PasskeyRemoveDetails" />
+            /// class.</para>
+            /// </summary>
+            private PasskeyRemoveDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.PasskeyRemoveDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PasskeyRemoveDetails" />.</para>
+            /// </summary>
+            private class PasskeyRemoveDetailsEncoder : enc.StructEncoder<PasskeyRemoveDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PasskeyRemoveDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("passkey_remove_details", value.Value, writer, global::Dropbox.Api.TeamLog.PasskeyRemoveDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PasskeyRemoveDetails" />.</para>
+            /// </summary>
+            private class PasskeyRemoveDetailsDecoder : enc.StructDecoder<PasskeyRemoveDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PasskeyRemoveDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PasskeyRemoveDetails Create()
+                {
+                    return new PasskeyRemoveDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override PasskeyRemoveDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new PasskeyRemoveDetails(global::Dropbox.Api.TeamLog.PasskeyRemoveDetails.Decoder.DecodeFields(reader));
                 }
             }
 

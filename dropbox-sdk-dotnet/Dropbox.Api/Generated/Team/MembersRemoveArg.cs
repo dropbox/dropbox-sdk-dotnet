@@ -42,7 +42,7 @@ namespace Dropbox.Api.Team
         /// be sent via email to this user. If the transfer_dest_id argument was provided, then
         /// this argument must be provided as well.</param>
         /// <param name="keepAccount">Downgrade the member to a Basic account. The user will
-        /// retain the email address associated with their Dropbox  account and data in their
+        /// retain the email address associated with their Dropbox account and data in their
         /// account that is not restricted to team members. In order to keep the account the
         /// argument <paramref name="wipeData" /> should be set to <c>false</c>.</param>
         /// <param name="retainTeamShares">If provided, allows removed users to keep access to
@@ -52,18 +52,23 @@ namespace Dropbox.Api.Team
         /// sharing relationships, the arguments <paramref name="wipeData" /> should be set to
         /// <c>false</c> and <paramref name="keepAccount" /> should be set to
         /// <c>true</c>.</param>
+        /// <param name="permanentlyDeleteFiles">Permanently delete the data in the deleted
+        /// member's account. After permanent deletion, the data is no longer available to be
+        /// transferred to a different user.</param>
         public MembersRemoveArg(UserSelectorArg user,
                                 bool wipeData = true,
                                 UserSelectorArg transferDestId = null,
                                 UserSelectorArg transferAdminId = null,
                                 bool keepAccount = false,
-                                bool retainTeamShares = false)
+                                bool retainTeamShares = false,
+                                bool permanentlyDeleteFiles = false)
             : base(user, wipeData)
         {
             this.TransferDestId = transferDestId;
             this.TransferAdminId = transferAdminId;
             this.KeepAccount = keepAccount;
             this.RetainTeamShares = retainTeamShares;
+            this.PermanentlyDeleteFiles = permanentlyDeleteFiles;
         }
 
         /// <summary>
@@ -77,6 +82,7 @@ namespace Dropbox.Api.Team
         {
             this.KeepAccount = false;
             this.RetainTeamShares = false;
+            this.PermanentlyDeleteFiles = false;
         }
 
         /// <summary>
@@ -94,8 +100,8 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>Downgrade the member to a Basic account. The user will retain the email
-        /// address associated with their Dropbox  account and data in their account that is
-        /// not restricted to team members. In order to keep the account the argument <see
+        /// address associated with their Dropbox account and data in their account that is not
+        /// restricted to team members. In order to keep the account the argument <see
         /// cref="WipeData" /> should be set to <c>false</c>.</para>
         /// </summary>
         public bool KeepAccount { get; protected set; }
@@ -109,6 +115,13 @@ namespace Dropbox.Api.Team
         /// cref="KeepAccount" /> should be set to <c>true</c>.</para>
         /// </summary>
         public bool RetainTeamShares { get; protected set; }
+
+        /// <summary>
+        /// <para>Permanently delete the data in the deleted member's account. After permanent
+        /// deletion, the data is no longer available to be transferred to a different
+        /// user.</para>
+        /// </summary>
+        public bool PermanentlyDeleteFiles { get; protected set; }
 
         #region Encoder class
 
@@ -136,6 +149,7 @@ namespace Dropbox.Api.Team
                 }
                 WriteProperty("keep_account", value.KeepAccount, writer, enc.BooleanEncoder.Instance);
                 WriteProperty("retain_team_shares", value.RetainTeamShares, writer, enc.BooleanEncoder.Instance);
+                WriteProperty("permanently_delete_files", value.PermanentlyDeleteFiles, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -185,6 +199,9 @@ namespace Dropbox.Api.Team
                         break;
                     case "retain_team_shares":
                         value.RetainTeamShares = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "permanently_delete_files":
+                        value.PermanentlyDeleteFiles = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

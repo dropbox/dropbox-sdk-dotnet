@@ -34,10 +34,10 @@ namespace Dropbox.Api.Sharing
         /// class.</para>
         /// </summary>
         /// <param name="files">Files for which to return members.</param>
-        /// <param name="limit">Number of members to return max per query. Defaults to 10 if no
-        /// limit is specified.</param>
+        /// <param name="limit">Number of members to return max per query. Defaults to 1000 if
+        /// no limit is specified.</param>
         public ListFileMembersBatchArg(col.IEnumerable<string> files,
-                                       uint limit = 10)
+                                       uint limit = 1000)
         {
             var filesList = enc.Util.ToList(files);
 
@@ -50,9 +50,9 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentOutOfRangeException("files", "List should at at most 100 items");
             }
 
-            if (limit > 20U)
+            if (limit > 3000U)
             {
-                throw new sys.ArgumentOutOfRangeException("limit", "Value should be less of equal than 20");
+                throw new sys.ArgumentOutOfRangeException("limit", "Value should be less of equal than 3000");
             }
 
             this.Files = filesList;
@@ -68,7 +68,7 @@ namespace Dropbox.Api.Sharing
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public ListFileMembersBatchArg()
         {
-            this.Limit = 10;
+            this.Limit = 1000;
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace Dropbox.Api.Sharing
         public col.IList<string> Files { get; protected set; }
 
         /// <summary>
-        /// <para>Number of members to return max per query. Defaults to 10 if no limit is
+        /// <para>Number of members to return max per query. Defaults to 1000 if no limit is
         /// specified.</para>
         /// </summary>
         public uint Limit { get; protected set; }

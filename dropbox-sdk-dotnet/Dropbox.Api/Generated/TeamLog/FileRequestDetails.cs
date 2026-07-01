@@ -34,11 +34,15 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="assetIndex">Asset position in the Assets list.</param>
         /// <param name="deadline">File request deadline.</param>
+        /// <param name="hasPassword">Flag represents if this file request has
+        /// password.</param>
         public FileRequestDetails(ulong assetIndex,
-                                  FileRequestDeadline deadline = null)
+                                  FileRequestDeadline deadline = null,
+                                  bool? hasPassword = null)
         {
             this.AssetIndex = assetIndex;
             this.Deadline = deadline;
+            this.HasPassword = hasPassword;
         }
 
         /// <summary>
@@ -62,6 +66,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public FileRequestDeadline Deadline { get; protected set; }
 
+        /// <summary>
+        /// <para>Flag represents if this file request has password.</para>
+        /// </summary>
+        public bool? HasPassword { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -80,6 +89,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.Deadline != null)
                 {
                     WriteProperty("deadline", value.Deadline, writer, global::Dropbox.Api.TeamLog.FileRequestDeadline.Encoder);
+                }
+                if (value.HasPassword != null)
+                {
+                    WriteProperty("has_password", value.HasPassword.Value, writer, enc.BooleanEncoder.Instance);
                 }
             }
         }
@@ -118,6 +131,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "deadline":
                         value.Deadline = global::Dropbox.Api.TeamLog.FileRequestDeadline.Decoder.Decode(reader);
+                        break;
+                    case "has_password":
+                        value.HasPassword = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

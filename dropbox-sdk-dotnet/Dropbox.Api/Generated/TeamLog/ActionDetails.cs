@@ -306,7 +306,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>Additional information relevant when someone is invited to the team.</para>
+        /// <para>Additional information relevant when someone is invited to the team</para>
         /// </summary>
         public sealed class TeamInviteDetails : ActionDetails
         {

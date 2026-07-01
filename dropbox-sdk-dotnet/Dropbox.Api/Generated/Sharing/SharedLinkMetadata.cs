@@ -42,9 +42,9 @@ namespace Dropbox.Api.Sharing
         /// expire.</param>
         /// <param name="pathLower">The lowercased full path in the user's Dropbox. This always
         /// starts with a slash. This field will only be present only if the linked file is in
-        /// the authenticated user's  dropbox.</param>
+        /// the authenticated user's dropbox and the user is the owner of the link.</param>
         /// <param name="teamMemberInfo">The team membership information of the link's owner.
-        /// This field will only be present  if the link's owner is a team member.</param>
+        /// This field will only be present if the link's owner is a team member.</param>
         /// <param name="contentOwnerTeamInfo">The team information of the content's owner.
         /// This field will only be present if the content's owner is a team member and the
         /// content's owner team is different from the link's owner team.</param>
@@ -176,13 +176,13 @@ namespace Dropbox.Api.Sharing
         /// <summary>
         /// <para>The lowercased full path in the user's Dropbox. This always starts with a
         /// slash. This field will only be present only if the linked file is in the
-        /// authenticated user's  dropbox.</para>
+        /// authenticated user's dropbox and the user is the owner of the link.</para>
         /// </summary>
         public string PathLower { get; protected set; }
 
         /// <summary>
         /// <para>The team membership information of the link's owner.  This field will only be
-        /// present  if the link's owner is a team member.</para>
+        /// present if the link's owner is a team member.</para>
         /// </summary>
         public TeamMemberInfo TeamMemberInfo { get; protected set; }
 

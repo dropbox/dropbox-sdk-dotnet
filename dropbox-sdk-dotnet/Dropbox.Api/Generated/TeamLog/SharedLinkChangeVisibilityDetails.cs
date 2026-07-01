@@ -34,8 +34,11 @@ namespace Dropbox.Api.TeamLog
         /// <param name="newValue">New shared link visibility.</param>
         /// <param name="previousValue">Previous shared link visibility. Might be missing due
         /// to historical data gap.</param>
+        /// <param name="isConsolidationAction">Indicates whether this was a consolidation
+        /// action by system.</param>
         public SharedLinkChangeVisibilityDetails(SharedLinkVisibility newValue,
-                                                 SharedLinkVisibility previousValue = null)
+                                                 SharedLinkVisibility previousValue = null,
+                                                 bool? isConsolidationAction = null)
         {
             if (newValue == null)
             {
@@ -44,6 +47,7 @@ namespace Dropbox.Api.TeamLog
 
             this.NewValue = newValue;
             this.PreviousValue = previousValue;
+            this.IsConsolidationAction = isConsolidationAction;
         }
 
         /// <summary>
@@ -68,6 +72,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public SharedLinkVisibility PreviousValue { get; protected set; }
 
+        /// <summary>
+        /// <para>Indicates whether this was a consolidation action by system.</para>
+        /// </summary>
+        public bool? IsConsolidationAction { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -86,6 +95,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.PreviousValue != null)
                 {
                     WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.SharedLinkVisibility.Encoder);
+                }
+                if (value.IsConsolidationAction != null)
+                {
+                    WriteProperty("is_consolidation_action", value.IsConsolidationAction.Value, writer, enc.BooleanEncoder.Instance);
                 }
             }
         }
@@ -125,6 +138,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "previous_value":
                         value.PreviousValue = global::Dropbox.Api.TeamLog.SharedLinkVisibility.Decoder.Decode(reader);
+                        break;
+                    case "is_consolidation_action":
+                        value.IsConsolidationAction = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -74,7 +74,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="accessLevel">AccessLevel union object, describing what access level we
         /// want to give new members.</param>
         /// <param name="addMessageAsComment">If the custom message should be added as a
-        /// comment on the file.</param>
+        /// comment on the file. Only meant for Paper files.</param>
+        /// <param name="fpSealedResult">The FingerprintJS Sealed Client Result value</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -85,14 +86,16 @@ namespace Dropbox.Api.Sharing.Routes
                                                                            string customMessage = null,
                                                                            bool quiet = false,
                                                                            AccessLevel accessLevel = null,
-                                                                           bool addMessageAsComment = false)
+                                                                           bool addMessageAsComment = false,
+                                                                           string fpSealedResult = null)
         {
             var addFileMemberArgs = new AddFileMemberArgs(file,
                                                           members,
                                                           customMessage,
                                                           quiet,
                                                           accessLevel,
-                                                          addMessageAsComment);
+                                                          addMessageAsComment,
+                                                          fpSealedResult);
 
             return this.AddFileMemberAsync(addFileMemberArgs);
         }
@@ -111,7 +114,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="accessLevel">AccessLevel union object, describing what access level we
         /// want to give new members.</param>
         /// <param name="addMessageAsComment">If the custom message should be added as a
-        /// comment on the file.</param>
+        /// comment on the file. Only meant for Paper files.</param>
+        /// <param name="fpSealedResult">The FingerprintJS Sealed Client Result value</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -123,6 +127,7 @@ namespace Dropbox.Api.Sharing.Routes
                                                    bool quiet = false,
                                                    AccessLevel accessLevel = null,
                                                    bool addMessageAsComment = false,
+                                                   string fpSealedResult = null,
                                                    sys.AsyncCallback callback = null,
                                                    object callbackState = null)
         {
@@ -131,7 +136,8 @@ namespace Dropbox.Api.Sharing.Routes
                                                           customMessage,
                                                           quiet,
                                                           accessLevel,
-                                                          addMessageAsComment);
+                                                          addMessageAsComment,
+                                                          fpSealedResult);
 
             return this.BeginAddFileMember(addFileMemberArgs, callback, callbackState);
         }
@@ -159,9 +165,8 @@ namespace Dropbox.Api.Sharing.Routes
 
         /// <summary>
         /// <para>Allows an owner or editor (if the ACL update policy allows) of a shared
-        /// folder to add another member.</para>
-        /// <para>For the new member to get access to all the functionality for this folder,
-        /// you will need to call <see
+        /// folder to add another member. For the new member to get access to all the
+        /// functionality for this folder, you will need to call <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.MountFolderAsync" /> on their
         /// behalf.</para>
         /// </summary>
@@ -193,9 +198,8 @@ namespace Dropbox.Api.Sharing.Routes
 
         /// <summary>
         /// <para>Allows an owner or editor (if the ACL update policy allows) of a shared
-        /// folder to add another member.</para>
-        /// <para>For the new member to get access to all the functionality for this folder,
-        /// you will need to call <see
+        /// folder to add another member. For the new member to get access to all the
+        /// functionality for this folder, you will need to call <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.MountFolderAsync" /> on their
         /// behalf.</para>
         /// </summary>
@@ -206,6 +210,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// notifications of their invite.</param>
         /// <param name="customMessage">Optional message to display to added members in their
         /// invitation.</param>
+        /// <param name="fpSealedResult">The FingerprintJS Sealed Client Result value</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
@@ -213,12 +218,14 @@ namespace Dropbox.Api.Sharing.Routes
         public t.Task AddFolderMemberAsync(string sharedFolderId,
                                            col.IEnumerable<AddMember> members,
                                            bool quiet = false,
-                                           string customMessage = null)
+                                           string customMessage = null,
+                                           string fpSealedResult = null)
         {
             var addFolderMemberArg = new AddFolderMemberArg(sharedFolderId,
                                                             members,
                                                             quiet,
-                                                            customMessage);
+                                                            customMessage,
+                                                            fpSealedResult);
 
             return this.AddFolderMemberAsync(addFolderMemberArg);
         }
@@ -233,6 +240,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// notifications of their invite.</param>
         /// <param name="customMessage">Optional message to display to added members in their
         /// invitation.</param>
+        /// <param name="fpSealedResult">The FingerprintJS Sealed Client Result value</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -242,13 +250,15 @@ namespace Dropbox.Api.Sharing.Routes
                                                      col.IEnumerable<AddMember> members,
                                                      bool quiet = false,
                                                      string customMessage = null,
+                                                     string fpSealedResult = null,
                                                      sys.AsyncCallback callback = null,
                                                      object callbackState = null)
         {
             var addFolderMemberArg = new AddFolderMemberArg(sharedFolderId,
                                                             members,
                                                             quiet,
-                                                            customMessage);
+                                                            customMessage,
+                                                            fpSealedResult);
 
             return this.BeginAddFolderMember(addFolderMemberArg, callback, callbackState);
         }
@@ -535,15 +545,12 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Create a shared link.</para>
-        /// <para>If a shared link already exists for the given path, that link is
-        /// returned.</para>
-        /// <para>Previously, it was technically possible to break a shared link by moving or
-        /// renaming the corresponding file or folder. In the future, this will no longer be
-        /// the case, so your app shouldn't rely on this behavior. Instead, if your app needs
-        /// to revoke a shared link, use <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.RevokeSharedLinkAsync"
-        /// />.</para>
+        /// <para>Create a shared link. If a shared link already exists for the given path,
+        /// that link is returned. Previously, it was technically possible to break a shared
+        /// link by moving or renaming the corresponding file or folder. In the future, this
+        /// will no longer be the case, so your app shouldn't rely on this behavior. Instead,
+        /// if your app needs to revoke a shared link, use revoke_shared_link. DEPRECATED: Use
+        /// create_shared_link_with_settings instead.</para>
         /// </summary>
         /// <param name="createSharedLinkArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -551,7 +558,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateSharedLinkError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CreateSharedLinkWithSettingsAsync instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<PathLinkMetadata> CreateSharedLinkAsync(CreateSharedLinkArg createSharedLinkArg)
         {
             return this.Transport.SendRpcRequestAsync<CreateSharedLinkArg, PathLinkMetadata, CreateSharedLinkError>(createSharedLinkArg, "api", "/sharing/create_shared_link", "user", global::Dropbox.Api.Sharing.CreateSharedLinkArg.Encoder, global::Dropbox.Api.Sharing.PathLinkMetadata.Decoder, global::Dropbox.Api.Sharing.CreateSharedLinkError.Decoder);
@@ -566,7 +573,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCreateSharedLinkWithSettings instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginCreateSharedLink(CreateSharedLinkArg createSharedLinkArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.CreateSharedLinkAsync(createSharedLinkArg);
@@ -575,18 +582,15 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Create a shared link.</para>
-        /// <para>If a shared link already exists for the given path, that link is
-        /// returned.</para>
-        /// <para>Previously, it was technically possible to break a shared link by moving or
-        /// renaming the corresponding file or folder. In the future, this will no longer be
-        /// the case, so your app shouldn't rely on this behavior. Instead, if your app needs
-        /// to revoke a shared link, use <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.RevokeSharedLinkAsync"
-        /// />.</para>
+        /// <para>Create a shared link. If a shared link already exists for the given path,
+        /// that link is returned. Previously, it was technically possible to break a shared
+        /// link by moving or renaming the corresponding file or folder. In the future, this
+        /// will no longer be the case, so your app shouldn't rely on this behavior. Instead,
+        /// if your app needs to revoke a shared link, use revoke_shared_link. DEPRECATED: Use
+        /// create_shared_link_with_settings instead.</para>
         /// </summary>
         /// <param name="path">The path to share.</param>
-        /// <param name="shortUrl">The short url</param>
+        /// <param name="shortUrl">Field is deprecated. None</param>
         /// <param name="pendingUpload">If it's okay to share a path that does not yet exist,
         /// set this to either <see cref="Dropbox.Api.Sharing.PendingUploadMode.File" /> or
         /// <see cref="Dropbox.Api.Sharing.PendingUploadMode.Folder" /> to indicate whether to
@@ -596,7 +600,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateSharedLinkError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use CreateSharedLinkWithSettingsAsync instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<PathLinkMetadata> CreateSharedLinkAsync(string path,
                                                               bool shortUrl = false,
                                                               PendingUploadMode pendingUpload = null)
@@ -612,7 +616,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Begins an asynchronous send to the create shared link route.</para>
         /// </summary>
         /// <param name="path">The path to share.</param>
-        /// <param name="shortUrl">The short url</param>
+        /// <param name="shortUrl">Field is deprecated. None</param>
         /// <param name="pendingUpload">If it's okay to share a path that does not yet exist,
         /// set this to either <see cref="Dropbox.Api.Sharing.PendingUploadMode.File" /> or
         /// <see cref="Dropbox.Api.Sharing.PendingUploadMode.Folder" /> to indicate whether to
@@ -622,7 +626,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginCreateSharedLinkWithSettings instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginCreateSharedLink(string path,
                                                       bool shortUrl = false,
                                                       PendingUploadMode pendingUpload = null,
@@ -646,7 +650,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="CreateSharedLinkError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndCreateSharedLinkWithSettings instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public PathLinkMetadata EndCreateSharedLink(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<PathLinkMetadata>;
@@ -660,9 +664,8 @@ namespace Dropbox.Api.Sharing.Routes
 
         /// <summary>
         /// <para>Create a shared link with custom settings. If no settings are given then the
-        /// default visibility is <see cref="Dropbox.Api.Sharing.RequestedVisibility.Public" />
-        /// (The resolved visibility, though, may depend on other aspects such as team and
-        /// shared folder settings).</para>
+        /// default visibility is RequestedVisibility.public (The resolved visibility, though,
+        /// may depend on other aspects such as team and shared folder settings).</para>
         /// </summary>
         /// <param name="createSharedLinkWithSettingsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -694,9 +697,8 @@ namespace Dropbox.Api.Sharing.Routes
 
         /// <summary>
         /// <para>Create a shared link with custom settings. If no settings are given then the
-        /// default visibility is <see cref="Dropbox.Api.Sharing.RequestedVisibility.Public" />
-        /// (The resolved visibility, though, may depend on other aspects such as team and
-        /// shared folder settings).</para>
+        /// default visibility is RequestedVisibility.public (The resolved visibility, though,
+        /// may depend on other aspects such as team and shared folder settings).</para>
         /// </summary>
         /// <param name="path">The path to be shared by the shared link.</param>
         /// <param name="settings">The requested settings for the newly created shared
@@ -794,9 +796,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="file">The file to query.</param>
         /// <param name="actions">A list of `FileAction`s corresponding to `FilePermission`s
-        /// that should appear in the  response's <see
+        /// that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the file.</param>
+        /// actions the authenticated user can perform on the file.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -816,9 +818,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="file">The file to query.</param>
         /// <param name="actions">A list of `FileAction`s corresponding to `FilePermission`s
-        /// that should appear in the  response's <see
+        /// that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the file.</param>
+        /// actions the authenticated user can perform on the file.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -891,9 +893,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="files">The files to query.</param>
         /// <param name="actions">A list of `FileAction`s corresponding to `FilePermission`s
-        /// that should appear in the  response's <see
+        /// that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the file.</param>
+        /// actions the authenticated user can perform on the file.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -913,9 +915,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="files">The files to query.</param>
         /// <param name="actions">A list of `FileAction`s corresponding to `FilePermission`s
-        /// that should appear in the  response's <see
+        /// that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the file.</param>
+        /// actions the authenticated user can perform on the file.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -988,9 +990,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
-        /// `FolderPermission`s that should appear in the  response's <see
+        /// `FolderPermission`s that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the folder.</param>
+        /// actions the authenticated user can perform on the folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1010,9 +1012,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
-        /// `FolderPermission`s that should appear in the  response's <see
+        /// `FolderPermission`s that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the folder.</param>
+        /// actions the authenticated user can perform on the folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1051,7 +1053,8 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Download the shared link's file from a user's Dropbox.</para>
+        /// <para>Download the shared link's file from a user's Dropbox. This is a
+        /// download-style endpoint that returns the file content.</para>
         /// </summary>
         /// <param name="getSharedLinkMetadataArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1081,7 +1084,8 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Download the shared link's file from a user's Dropbox.</para>
+        /// <para>Download the shared link's file from a user's Dropbox. This is a
+        /// download-style endpoint that returns the file content.</para>
         /// </summary>
         /// <param name="url">URL of the shared link.</param>
         /// <param name="path">If the shared link is to a folder, this parameter can be used to
@@ -1161,10 +1165,10 @@ namespace Dropbox.Api.Sharing.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="SharedLinkError"/>.</exception>
+        /// cref="SharedLinkMetadataError"/>.</exception>
         public t.Task<SharedLinkMetadata> GetSharedLinkMetadataAsync(GetSharedLinkMetadataArg getSharedLinkMetadataArg)
         {
-            return this.Transport.SendRpcRequestAsync<GetSharedLinkMetadataArg, SharedLinkMetadata, SharedLinkError>(getSharedLinkMetadataArg, "api", "/sharing/get_shared_link_metadata", "user", global::Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.SharedLinkError.Decoder);
+            return this.Transport.SendRpcRequestAsync<GetSharedLinkMetadataArg, SharedLinkMetadata, SharedLinkMetadataError>(getSharedLinkMetadataArg, "api", "/sharing/get_shared_link_metadata", "user", global::Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Encoder, global::Dropbox.Api.Sharing.SharedLinkMetadata.Decoder, global::Dropbox.Api.Sharing.SharedLinkMetadataError.Decoder);
         }
 
         /// <summary>
@@ -1196,7 +1200,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="SharedLinkError"/>.</exception>
+        /// cref="SharedLinkMetadataError"/>.</exception>
         public t.Task<SharedLinkMetadata> GetSharedLinkMetadataAsync(string url,
                                                                      string path = null,
                                                                      string linkPassword = null)
@@ -1244,7 +1248,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="SharedLinkError"/>.</exception>
+        /// cref="SharedLinkMetadataError"/>.</exception>
         public SharedLinkMetadata EndGetSharedLinkMetadata(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<SharedLinkMetadata>;
@@ -1257,12 +1261,12 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Returns a list of <see cref="LinkMetadata" /> objects for this user,
-        /// including collection links.</para>
-        /// <para>If no path is given, returns a list of all shared links for the current user,
-        /// including collection links, up to a maximum of 1000 links.</para>
-        /// <para>If a non-empty path is given, returns a list of all shared links that allow
-        /// access to the given path.  Collection links are never returned in this case.</para>
+        /// <para>DEPRECATED: Use list_shared_links instead. This endpoint will be retired in
+        /// October 2026. Returns a list of <see cref="LinkMetadata" /> objects for this user,
+        /// including collection links. If no path is given, returns a list of all shared links
+        /// for the current user, including collection links, up to a maximum of 1000 links. If
+        /// a non-empty path is given, returns a list of all shared links that allow access to
+        /// the given path. Collection links are never returned in this case.</para>
         /// </summary>
         /// <param name="getSharedLinksArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1270,7 +1274,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetSharedLinksError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use ListSharedLinksAsync instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetSharedLinksResult> GetSharedLinksAsync(GetSharedLinksArg getSharedLinksArg)
         {
             return this.Transport.SendRpcRequestAsync<GetSharedLinksArg, GetSharedLinksResult, GetSharedLinksError>(getSharedLinksArg, "api", "/sharing/get_shared_links", "user", global::Dropbox.Api.Sharing.GetSharedLinksArg.Encoder, global::Dropbox.Api.Sharing.GetSharedLinksResult.Decoder, global::Dropbox.Api.Sharing.GetSharedLinksError.Decoder);
@@ -1285,7 +1289,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginListSharedLinks instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetSharedLinks(GetSharedLinksArg getSharedLinksArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.GetSharedLinksAsync(getSharedLinksArg);
@@ -1294,12 +1298,12 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Returns a list of <see cref="LinkMetadata" /> objects for this user,
-        /// including collection links.</para>
-        /// <para>If no path is given, returns a list of all shared links for the current user,
-        /// including collection links, up to a maximum of 1000 links.</para>
-        /// <para>If a non-empty path is given, returns a list of all shared links that allow
-        /// access to the given path.  Collection links are never returned in this case.</para>
+        /// <para>DEPRECATED: Use list_shared_links instead. This endpoint will be retired in
+        /// October 2026. Returns a list of <see cref="LinkMetadata" /> objects for this user,
+        /// including collection links. If no path is given, returns a list of all shared links
+        /// for the current user, including collection links, up to a maximum of 1000 links. If
+        /// a non-empty path is given, returns a list of all shared links that allow access to
+        /// the given path. Collection links are never returned in this case.</para>
         /// </summary>
         /// <param name="path">See <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetSharedLinksAsync" />
@@ -1309,7 +1313,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetSharedLinksError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use ListSharedLinksAsync instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetSharedLinksResult> GetSharedLinksAsync(string path = null)
         {
             var getSharedLinksArg = new GetSharedLinksArg(path);
@@ -1328,7 +1332,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginListSharedLinks instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetSharedLinks(string path = null,
                                                     sys.AsyncCallback callback = null,
                                                     object callbackState = null)
@@ -1348,7 +1352,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetSharedLinksError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndListSharedLinks instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public GetSharedLinksResult EndGetSharedLinks(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GetSharedLinksResult>;
@@ -1474,9 +1478,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Get members of multiple files at once. The arguments to this route are more
         /// limited, and the limit on query result size per file is more strict. To customize
-        /// the results more, use the individual file endpoint.</para>
-        /// <para>Inherited users and groups are not included in the result, and permissions
-        /// are not returned for this endpoint.</para>
+        /// the results more, use the individual file endpoint. Inherited users and groups are
+        /// not included in the result, and permissions are not returned for this
+        /// endpoint.</para>
         /// </summary>
         /// <param name="listFileMembersBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1508,20 +1512,20 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Get members of multiple files at once. The arguments to this route are more
         /// limited, and the limit on query result size per file is more strict. To customize
-        /// the results more, use the individual file endpoint.</para>
-        /// <para>Inherited users and groups are not included in the result, and permissions
-        /// are not returned for this endpoint.</para>
+        /// the results more, use the individual file endpoint. Inherited users and groups are
+        /// not included in the result, and permissions are not returned for this
+        /// endpoint.</para>
         /// </summary>
         /// <param name="files">Files for which to return members.</param>
-        /// <param name="limit">Number of members to return max per query. Defaults to 10 if no
-        /// limit is specified.</param>
+        /// <param name="limit">Number of members to return max per query. Defaults to 1000 if
+        /// no limit is specified.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SharingUserError"/>.</exception>
         public t.Task<col.List<ListFileMembersBatchResult>> ListFileMembersBatchAsync(col.IEnumerable<string> files,
-                                                                                      uint limit = 10)
+                                                                                      uint limit = 1000)
         {
             var listFileMembersBatchArg = new ListFileMembersBatchArg(files,
                                                                       limit);
@@ -1533,15 +1537,15 @@ namespace Dropbox.Api.Sharing.Routes
         /// <para>Begins an asynchronous send to the list file members batch route.</para>
         /// </summary>
         /// <param name="files">Files for which to return members.</param>
-        /// <param name="limit">Number of members to return max per query. Defaults to 10 if no
-        /// limit is specified.</param>
+        /// <param name="limit">Number of members to return max per query. Defaults to 1000 if
+        /// no limit is specified.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListFileMembersBatch(col.IEnumerable<string> files,
-                                                          uint limit = 10,
+                                                          uint limit = 1000,
                                                           sys.AsyncCallback callback = null,
                                                           object callbackState = null)
         {
@@ -1706,13 +1710,17 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Returns shared folder membership by its folder ID.</para>
         /// </summary>
-        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="sharedFolderId">The ID for the shared folder. When path is provided,
+        /// the folder ID will be extracted from the path instead.</param>
         /// <param name="actions">This is a list indicating whether each returned member will
         /// include a boolean value <see cref="Dropbox.Api.Sharing.MemberPermission.Allow" />
         /// that describes whether the current user can perform the MemberAction on the
         /// member.</param>
         /// <param name="limit">The maximum number of results that include members, groups and
         /// invitees to return per request.</param>
+        /// <param name="path">Optional path to get inherited members. When omitted, uses
+        /// shared_folder_id to return direct members. When provided, extracts folder ID from
+        /// this path and returns users who have access through parent shared folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -1720,11 +1728,13 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="SharedFolderAccessError"/>.</exception>
         public t.Task<SharedFolderMembers> ListFolderMembersAsync(string sharedFolderId,
                                                                   col.IEnumerable<MemberAction> actions = null,
-                                                                  uint limit = 1000)
+                                                                  uint limit = 1000,
+                                                                  string path = null)
         {
             var listFolderMembersArgs = new ListFolderMembersArgs(sharedFolderId,
                                                                   actions,
-                                                                  limit);
+                                                                  limit,
+                                                                  path);
 
             return this.ListFolderMembersAsync(listFolderMembersArgs);
         }
@@ -1732,13 +1742,17 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the list folder members route.</para>
         /// </summary>
-        /// <param name="sharedFolderId">The ID for the shared folder.</param>
+        /// <param name="sharedFolderId">The ID for the shared folder. When path is provided,
+        /// the folder ID will be extracted from the path instead.</param>
         /// <param name="actions">This is a list indicating whether each returned member will
         /// include a boolean value <see cref="Dropbox.Api.Sharing.MemberPermission.Allow" />
         /// that describes whether the current user can perform the MemberAction on the
         /// member.</param>
         /// <param name="limit">The maximum number of results that include members, groups and
         /// invitees to return per request.</param>
+        /// <param name="path">Optional path to get inherited members. When omitted, uses
+        /// shared_folder_id to return direct members. When provided, extracts folder ID from
+        /// this path and returns users who have access through parent shared folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1747,12 +1761,14 @@ namespace Dropbox.Api.Sharing.Routes
         public sys.IAsyncResult BeginListFolderMembers(string sharedFolderId,
                                                        col.IEnumerable<MemberAction> actions = null,
                                                        uint limit = 1000,
+                                                       string path = null,
                                                        sys.AsyncCallback callback = null,
                                                        object callbackState = null)
         {
             var listFolderMembersArgs = new ListFolderMembersArgs(sharedFolderId,
                                                                   actions,
-                                                                  limit);
+                                                                  limit,
+                                                                  path);
 
             return this.BeginListFolderMembers(listFolderMembersArgs, callback, callbackState);
         }
@@ -1907,9 +1923,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="limit">The maximum number of results to return per request.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
-        /// `FolderPermission`s that should appear in the  response's <see
+        /// `FolderPermission`s that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the folder.</param>
+        /// actions the authenticated user can perform on the folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         public t.Task<ListFoldersResult> ListFoldersAsync(uint limit = 1000,
@@ -1926,9 +1942,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="limit">The maximum number of results to return per request.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
-        /// `FolderPermission`s that should appear in the  response's <see
+        /// `FolderPermission`s that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the folder.</param>
+        /// actions the authenticated user can perform on the folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -2094,9 +2110,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="limit">The maximum number of results to return per request.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
-        /// `FolderPermission`s that should appear in the  response's <see
+        /// `FolderPermission`s that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the folder.</param>
+        /// actions the authenticated user can perform on the folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         public t.Task<ListFoldersResult> ListMountableFoldersAsync(uint limit = 1000,
@@ -2113,9 +2129,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// </summary>
         /// <param name="limit">The maximum number of results to return per request.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
-        /// `FolderPermission`s that should appear in the  response's <see
+        /// `FolderPermission`s that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the folder.</param>
+        /// actions the authenticated user can perform on the folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -2255,8 +2271,6 @@ namespace Dropbox.Api.Sharing.Routes
 
         /// <summary>
         /// <para>Returns a list of all files shared with current user.</para>
-        /// <para> Does not include files the user has received via shared folders, and does
-        /// not include unclaimed invitations.</para>
         /// </summary>
         /// <param name="listFilesArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2287,15 +2301,13 @@ namespace Dropbox.Api.Sharing.Routes
 
         /// <summary>
         /// <para>Returns a list of all files shared with current user.</para>
-        /// <para> Does not include files the user has received via shared folders, and does
-        /// not include unclaimed invitations.</para>
         /// </summary>
         /// <param name="limit">Number of files to return max per query. Defaults to 100 if no
         /// limit is specified.</param>
         /// <param name="actions">A list of `FileAction`s corresponding to `FilePermission`s
-        /// that should appear in the  response's <see
+        /// that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the file.</param>
+        /// actions the authenticated user can perform on the file.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -2316,9 +2328,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="limit">Number of files to return max per query. Defaults to 100 if no
         /// limit is specified.</param>
         /// <param name="actions">A list of `FileAction`s corresponding to `FilePermission`s
-        /// that should appear in the  response's <see
+        /// that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the file.</param>
+        /// actions the authenticated user can perform on the file.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -2448,17 +2460,13 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>List shared links of this user.</para>
-        /// <para>If no path is given, returns a list of all shared links for the current user.
-        /// For members of business teams using team space and member folders, returns all
-        /// shared links in the team member's home folder unless the team space ID is specified
-        /// in the request header. For more information, refer to the <a
-        /// href="https://www.dropbox.com/developers/reference/namespace-guide">Namespace
-        /// Guide</a>.</para>
-        /// <para>If a non-empty path is given, returns a list of all shared links that allow
-        /// access to the given path - direct links to the given path and links to parent
-        /// folders of the given path. Links to parent folders can be suppressed by setting
-        /// direct_only to true.</para>
+        /// <para>List shared links of this user. If no path is given, returns a list of all
+        /// shared links for the current user. For members of business teams using team space
+        /// and member folders, returns all shared links in the team member's home folder
+        /// unless the team space ID is specified in the request header. If a non-empty path is
+        /// given, returns a list of all shared links that allow access to the given path -
+        /// direct links to the given path and links to parent folders of the given path. Links
+        /// to parent folders can be suppressed by setting direct_only to true.</para>
         /// </summary>
         /// <param name="listSharedLinksArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2488,17 +2496,13 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>List shared links of this user.</para>
-        /// <para>If no path is given, returns a list of all shared links for the current user.
-        /// For members of business teams using team space and member folders, returns all
-        /// shared links in the team member's home folder unless the team space ID is specified
-        /// in the request header. For more information, refer to the <a
-        /// href="https://www.dropbox.com/developers/reference/namespace-guide">Namespace
-        /// Guide</a>.</para>
-        /// <para>If a non-empty path is given, returns a list of all shared links that allow
-        /// access to the given path - direct links to the given path and links to parent
-        /// folders of the given path. Links to parent folders can be suppressed by setting
-        /// direct_only to true.</para>
+        /// <para>List shared links of this user. If no path is given, returns a list of all
+        /// shared links for the current user. For members of business teams using team space
+        /// and member folders, returns all shared links in the team member's home folder
+        /// unless the team space ID is specified in the request header. If a non-empty path is
+        /// given, returns a list of all shared links that allow access to the given path -
+        /// direct links to the given path and links to parent folders of the given path. Links
+        /// to parent folders can be suppressed by setting direct_only to true.</para>
         /// </summary>
         /// <param name="path">See <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" />
@@ -2577,14 +2581,12 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Modify the shared link's settings.</para>
-        /// <para>If the requested visibility conflict with the shared links policy of the team
-        /// or the shared folder (in case the linked file is part of a shared folder) then the
-        /// <see cref="Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility" /> of the
-        /// returned <see cref="SharedLinkMetadata" /> will reflect the actual visibility of
-        /// the shared link and the <see
-        /// cref="Dropbox.Api.Sharing.LinkPermissions.RequestedVisibility" /> will reflect the
-        /// requested visibility.</para>
+        /// <para>Modify the shared link's settings. If the requested visibility conflict with
+        /// the shared links policy of the team or the shared folder (in case the linked file
+        /// is part of a shared folder) then the LinkPermissions.resolved_visibility of the
+        /// returned SharedLinkMetadata will reflect the actual visibility of the shared link
+        /// and the LinkPermissions.requested_visibility will reflect the requested
+        /// visibility.</para>
         /// </summary>
         /// <param name="modifySharedLinkSettingsArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2614,14 +2616,12 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Modify the shared link's settings.</para>
-        /// <para>If the requested visibility conflict with the shared links policy of the team
-        /// or the shared folder (in case the linked file is part of a shared folder) then the
-        /// <see cref="Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility" /> of the
-        /// returned <see cref="SharedLinkMetadata" /> will reflect the actual visibility of
-        /// the shared link and the <see
-        /// cref="Dropbox.Api.Sharing.LinkPermissions.RequestedVisibility" /> will reflect the
-        /// requested visibility.</para>
+        /// <para>Modify the shared link's settings. If the requested visibility conflict with
+        /// the shared links policy of the team or the shared folder (in case the linked file
+        /// is part of a shared folder) then the LinkPermissions.resolved_visibility of the
+        /// returned SharedLinkMetadata will reflect the actual visibility of the shared link
+        /// and the LinkPermissions.requested_visibility will reflect the requested
+        /// visibility.</para>
         /// </summary>
         /// <param name="url">URL of the shared link to change its settings.</param>
         /// <param name="settings">Set of settings for the shared link.</param>
@@ -2690,9 +2690,9 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>The current user mounts the designated folder.</para>
-        /// <para>Mount a shared folder for a user after they have been added as a member. Once
-        /// mounted, the shared folder will appear in their Dropbox.</para>
+        /// <para>The current user mounts the designated folder. Mount a shared folder for a
+        /// user after they have been added as a member. Once mounted, the shared folder will
+        /// appear in their Dropbox.</para>
         /// </summary>
         /// <param name="mountFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2722,9 +2722,9 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>The current user mounts the designated folder.</para>
-        /// <para>Mount a shared folder for a user after they have been added as a member. Once
-        /// mounted, the shared folder will appear in their Dropbox.</para>
+        /// <para>The current user mounts the designated folder. Mount a shared folder for a
+        /// user after they have been added as a member. Once mounted, the shared folder will
+        /// appear in their Dropbox.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID of the shared folder to mount.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2779,9 +2779,96 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>The current user relinquishes their membership in the designated file. Note
-        /// that the current user may still have inherited access to this file through the
-        /// parent folder.</para>
+        /// <para>Removes all self-removable access from a file or folder for the current user.
+        /// Best-effort and idempotent: attempts to drop link-visitor associations and explicit
+        /// ACL membership.</para>
+        /// </summary>
+        /// <param name="relinquishAccessArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelinquishAccessError"/>.</exception>
+        public t.Task<RelinquishAccessResult> RelinquishAccessAsync(RelinquishAccessArg relinquishAccessArg)
+        {
+            return this.Transport.SendRpcRequestAsync<RelinquishAccessArg, RelinquishAccessResult, RelinquishAccessError>(relinquishAccessArg, "api", "/sharing/relinquish_access", "user", global::Dropbox.Api.Sharing.RelinquishAccessArg.Encoder, global::Dropbox.Api.Sharing.RelinquishAccessResult.Decoder, global::Dropbox.Api.Sharing.RelinquishAccessError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the relinquish access route.</para>
+        /// </summary>
+        /// <param name="relinquishAccessArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginRelinquishAccess(RelinquishAccessArg relinquishAccessArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.RelinquishAccessAsync(relinquishAccessArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Removes all self-removable access from a file or folder for the current user.
+        /// Best-effort and idempotent: attempts to drop link-visitor associations and explicit
+        /// ACL membership.</para>
+        /// </summary>
+        /// <param name="fileId">The id for the file or folder.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelinquishAccessError"/>.</exception>
+        public t.Task<RelinquishAccessResult> RelinquishAccessAsync(string fileId)
+        {
+            var relinquishAccessArg = new RelinquishAccessArg(fileId);
+
+            return this.RelinquishAccessAsync(relinquishAccessArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the relinquish access route.</para>
+        /// </summary>
+        /// <param name="fileId">The id for the file or folder.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginRelinquishAccess(string fileId,
+                                                      sys.AsyncCallback callback,
+                                                      object callbackState = null)
+        {
+            var relinquishAccessArg = new RelinquishAccessArg(fileId);
+
+            return this.BeginRelinquishAccess(relinquishAccessArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the relinquish access route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RelinquishAccessError"/>.</exception>
+        public RelinquishAccessResult EndRelinquishAccess(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<RelinquishAccessResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>The current user relinquishes their membership in the designated file.</para>
         /// </summary>
         /// <param name="relinquishFileMembershipArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -2810,9 +2897,7 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>The current user relinquishes their membership in the designated file. Note
-        /// that the current user may still have inherited access to this file through the
-        /// parent folder.</para>
+        /// <para>The current user relinquishes their membership in the designated file.</para>
         /// </summary>
         /// <param name="file">The path or id for the file.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -2865,9 +2950,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>The current user relinquishes their membership in the designated shared
         /// folder and will no longer have access to the folder.  A folder owner cannot
-        /// relinquish membership in their own folder.</para>
-        /// <para>This will run synchronously if leave_a_copy is false, and asynchronously if
-        /// leave_a_copy is true.</para>
+        /// relinquish membership in their own folder. This will run synchronously if
+        /// leave_a_copy is false, and asynchronously if leave_a_copy is true.</para>
         /// </summary>
         /// <param name="relinquishFolderMembershipArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2899,9 +2983,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>The current user relinquishes their membership in the designated shared
         /// folder and will no longer have access to the folder.  A folder owner cannot
-        /// relinquish membership in their own folder.</para>
-        /// <para>This will run synchronously if leave_a_copy is false, and asynchronously if
-        /// leave_a_copy is true.</para>
+        /// relinquish membership in their own folder. This will run synchronously if
+        /// leave_a_copy is false, and asynchronously if leave_a_copy is true.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="leaveACopy">Keep a copy of the folder's contents upon relinquishing
@@ -2974,7 +3057,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RemoveFileMemberError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use RemoveFileMember2Async instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<FileMemberActionIndividualResult> RemoveFileMemberAsync(RemoveFileMemberArg removeFileMemberArg)
         {
             return this.Transport.SendRpcRequestAsync<RemoveFileMemberArg, FileMemberActionIndividualResult, RemoveFileMemberError>(removeFileMemberArg, "api", "/sharing/remove_file_member", "user", global::Dropbox.Api.Sharing.RemoveFileMemberArg.Encoder, global::Dropbox.Api.Sharing.FileMemberActionIndividualResult.Decoder, global::Dropbox.Api.Sharing.RemoveFileMemberError.Decoder);
@@ -2989,7 +3072,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginRemoveFileMember2 instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginRemoveFileMember(RemoveFileMemberArg removeFileMemberArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.RemoveFileMemberAsync(removeFileMemberArg);
@@ -3009,7 +3092,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RemoveFileMemberError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use RemoveFileMember2Async instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<FileMemberActionIndividualResult> RemoveFileMemberAsync(string file,
                                                                               MemberSelector member)
         {
@@ -3031,7 +3114,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginRemoveFileMember2 instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginRemoveFileMember(string file,
                                                       MemberSelector member,
                                                       sys.AsyncCallback callback,
@@ -3053,7 +3136,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="RemoveFileMemberError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndRemoveFileMember2 instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public FileMemberActionIndividualResult EndRemoveFileMember(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<FileMemberActionIndividualResult>;
@@ -3266,12 +3349,10 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Revoke a shared link.</para>
-        /// <para>Note that even after revoking a shared link to a file, the file may be
-        /// accessible if there are shared links leading to any of the file parent folders. To
-        /// list all shared links that enable access to a specific file, you can use the <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" /> with
-        /// the file as the <see cref="Dropbox.Api.Sharing.ListSharedLinksArg.Path" />
+        /// <para>Revoke a shared link. Note that even after revoking a shared link to a file,
+        /// the file may be accessible if there are shared links leading to any of the file
+        /// parent folders. To list all shared links that enable access to a specific file, you
+        /// can use the list_shared_links with the file as the ListSharedLinksArg.path
         /// argument.</para>
         /// </summary>
         /// <param name="revokeSharedLinkArg">The request parameters</param>
@@ -3301,12 +3382,10 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Revoke a shared link.</para>
-        /// <para>Note that even after revoking a shared link to a file, the file may be
-        /// accessible if there are shared links leading to any of the file parent folders. To
-        /// list all shared links that enable access to a specific file, you can use the <see
-        /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync" /> with
-        /// the file as the <see cref="Dropbox.Api.Sharing.ListSharedLinksArg.Path" />
+        /// <para>Revoke a shared link. Note that even after revoking a shared link to a file,
+        /// the file may be accessible if there are shared links leading to any of the file
+        /// parent folders. To list all shared links that enable access to a specific file, you
+        /// can use the list_shared_links with the file as the ListSharedLinksArg.path
         /// argument.</para>
         /// </summary>
         /// <param name="url">URL of the shared link.</param>
@@ -3359,9 +3438,9 @@ namespace Dropbox.Api.Sharing.Routes
 
         /// <summary>
         /// <para>Change the inheritance policy of an existing Shared Folder. Only permitted
-        /// for shared folders in a shared team root.</para>
-        /// <para>If a <see cref="Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId" /> is
-        /// returned, you'll need to call <see
+        /// for shared folders in a shared team root. If a <see
+        /// cref="Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId" /> is returned, you'll need
+        /// to call <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.CheckShareJobStatusAsync" />
         /// until the action completes to get the metadata for the folder.</para>
         /// </summary>
@@ -3394,9 +3473,9 @@ namespace Dropbox.Api.Sharing.Routes
 
         /// <summary>
         /// <para>Change the inheritance policy of an existing Shared Folder. Only permitted
-        /// for shared folders in a shared team root.</para>
-        /// <para>If a <see cref="Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId" /> is
-        /// returned, you'll need to call <see
+        /// for shared folders in a shared team root. If a <see
+        /// cref="Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId" /> is returned, you'll need
+        /// to call <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.CheckShareJobStatusAsync" />
         /// until the action completes to get the metadata for the folder.</para>
         /// </summary>
@@ -3461,12 +3540,11 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Share a folder with collaborators.</para>
-        /// <para>Most sharing will be completed synchronously. Large folders will be completed
-        /// asynchronously. To make testing the async case repeatable, set
-        /// `ShareFolderArg.force_async`.</para>
-        /// <para>If a <see cref="Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId" /> is
-        /// returned, you'll need to call <see
+        /// <para>Share a folder with collaborators. Most sharing will be completed
+        /// synchronously. Large folders will be completed asynchronously. To make testing the
+        /// async case repeatable, set `ShareFolderArg.force_async`. If a <see
+        /// cref="Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId" /> is returned, you'll need
+        /// to call <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.CheckShareJobStatusAsync" />
         /// until the action completes to get the metadata for the folder.</para>
         /// </summary>
@@ -3498,17 +3576,16 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Share a folder with collaborators.</para>
-        /// <para>Most sharing will be completed synchronously. Large folders will be completed
-        /// asynchronously. To make testing the async case repeatable, set
-        /// `ShareFolderArg.force_async`.</para>
-        /// <para>If a <see cref="Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId" /> is
-        /// returned, you'll need to call <see
+        /// <para>Share a folder with collaborators. Most sharing will be completed
+        /// synchronously. Large folders will be completed asynchronously. To make testing the
+        /// async case repeatable, set `ShareFolderArg.force_async`. If a <see
+        /// cref="Dropbox.Api.Sharing.ShareFolderLaunch.AsyncJobId" /> is returned, you'll need
+        /// to call <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.CheckShareJobStatusAsync" />
         /// until the action completes to get the metadata for the folder.</para>
         /// </summary>
-        /// <param name="path">The path to the folder to share. If it does not exist, then a
-        /// new one is created.</param>
+        /// <param name="path">The path or the file id to the folder to share. If it does not
+        /// exist, then a new one is created.</param>
         /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
         /// folder.</param>
         /// <param name="forceAsync">Whether to force the share to happen
@@ -3523,9 +3600,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="accessInheritance">The access inheritance settings for the
         /// folder.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
-        /// `FolderPermission`s that should appear in the  response's <see
+        /// `FolderPermission`s that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the folder.</param>
+        /// actions the authenticated user can perform on the folder.</param>
         /// <param name="linkSettings">Settings on the link for this folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -3558,8 +3635,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the share folder route.</para>
         /// </summary>
-        /// <param name="path">The path to the folder to share. If it does not exist, then a
-        /// new one is created.</param>
+        /// <param name="path">The path or the file id to the folder to share. If it does not
+        /// exist, then a new one is created.</param>
         /// <param name="aclUpdatePolicy">Who can add and remove members of this shared
         /// folder.</param>
         /// <param name="forceAsync">Whether to force the share to happen
@@ -3574,9 +3651,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="accessInheritance">The access inheritance settings for the
         /// folder.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
-        /// `FolderPermission`s that should appear in the  response's <see
+        /// `FolderPermission`s that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the folder.</param>
+        /// actions the authenticated user can perform on the folder.</param>
         /// <param name="linkSettings">Settings on the link for this folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -3630,10 +3707,9 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Transfer ownership of a shared folder to a member of the shared
-        /// folder.</para>
-        /// <para>User must have <see cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> access to
-        /// the shared folder to perform a transfer.</para>
+        /// <para>Transfer ownership of a shared folder to a member of the shared folder. User
+        /// must have <see cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> access to the shared
+        /// folder to perform a transfer.</para>
         /// </summary>
         /// <param name="transferFolderArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -3662,10 +3738,9 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Transfer ownership of a shared folder to a member of the shared
-        /// folder.</para>
-        /// <para>User must have <see cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> access to
-        /// the shared folder to perform a transfer.</para>
+        /// <para>Transfer ownership of a shared folder to a member of the shared folder. User
+        /// must have <see cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> access to the shared
+        /// folder to perform a transfer.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="toDropboxId">A account or team member ID to transfer ownership
@@ -3888,8 +3963,9 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Allows a shared folder owner to unshare the folder.</para>
-        /// <para>You'll need to call <see
+        /// <para>Allows a shared folder owner to unshare the folder. Unshare will not work in
+        /// following cases: The shared folder contains shared folders OR the shared folder is
+        /// inside another shared folder. You'll need to call <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.CheckJobStatusAsync" /> to
         /// determine if the action has completed successfully.</para>
         /// </summary>
@@ -3921,8 +3997,9 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Allows a shared folder owner to unshare the folder.</para>
-        /// <para>You'll need to call <see
+        /// <para>Allows a shared folder owner to unshare the folder. Unshare will not work in
+        /// following cases: The shared folder contains shared folders OR the shared folder is
+        /// inside another shared folder. You'll need to call <see
         /// cref="Dropbox.Api.Sharing.Routes.SharingUserRoutes.CheckJobStatusAsync" /> to
         /// determine if the action has completed successfully.</para>
         /// </summary>
@@ -4086,6 +4163,119 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
+        /// <para>Update the viewer info policy of a file.</para>
+        /// </summary>
+        /// <param name="updateFilePolicyArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="UpdateFilePolicyError"/>.</exception>
+        public t.Task<SharedFileMetadata> UpdateFilePolicyAsync(UpdateFilePolicyArg updateFilePolicyArg)
+        {
+            return this.Transport.SendRpcRequestAsync<UpdateFilePolicyArg, SharedFileMetadata, UpdateFilePolicyError>(updateFilePolicyArg, "api", "/sharing/update_file_policy", "user", global::Dropbox.Api.Sharing.UpdateFilePolicyArg.Encoder, global::Dropbox.Api.Sharing.SharedFileMetadata.Decoder, global::Dropbox.Api.Sharing.UpdateFilePolicyError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the update file policy route.</para>
+        /// </summary>
+        /// <param name="updateFilePolicyArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUpdateFilePolicy(UpdateFilePolicyArg updateFilePolicyArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.UpdateFilePolicyAsync(updateFilePolicyArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Update the viewer info policy of a file.</para>
+        /// </summary>
+        /// <param name="file">File that we are changing the policy for.</param>
+        /// <param name="actions">A list of `FileAction`s corresponding to `FilePermission`s
+        /// that should appear in the response's <see
+        /// cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" /> field describing the
+        /// actions the authenticated user can perform on the file.</param>
+        /// <param name="linkSettings">Field is deprecated. Settings on the link for the
+        /// file.</param>
+        /// <param name="viewerInfoPolicy">The presence and seen state policy on the
+        /// file.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="UpdateFilePolicyError"/>.</exception>
+        public t.Task<SharedFileMetadata> UpdateFilePolicyAsync(string file,
+                                                                col.IEnumerable<FileAction> actions = null,
+                                                                LinkSettings linkSettings = null,
+                                                                ViewerInfoPolicy viewerInfoPolicy = null)
+        {
+            var updateFilePolicyArg = new UpdateFilePolicyArg(file,
+                                                              actions,
+                                                              linkSettings,
+                                                              viewerInfoPolicy);
+
+            return this.UpdateFilePolicyAsync(updateFilePolicyArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the update file policy route.</para>
+        /// </summary>
+        /// <param name="file">File that we are changing the policy for.</param>
+        /// <param name="actions">A list of `FileAction`s corresponding to `FilePermission`s
+        /// that should appear in the response's <see
+        /// cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" /> field describing the
+        /// actions the authenticated user can perform on the file.</param>
+        /// <param name="linkSettings">Field is deprecated. Settings on the link for the
+        /// file.</param>
+        /// <param name="viewerInfoPolicy">The presence and seen state policy on the
+        /// file.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUpdateFilePolicy(string file,
+                                                      col.IEnumerable<FileAction> actions = null,
+                                                      LinkSettings linkSettings = null,
+                                                      ViewerInfoPolicy viewerInfoPolicy = null,
+                                                      sys.AsyncCallback callback = null,
+                                                      object callbackState = null)
+        {
+            var updateFilePolicyArg = new UpdateFilePolicyArg(file,
+                                                              actions,
+                                                              linkSettings,
+                                                              viewerInfoPolicy);
+
+            return this.BeginUpdateFilePolicy(updateFilePolicyArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the update file policy route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="UpdateFilePolicyError"/>.</exception>
+        public SharedFileMetadata EndUpdateFilePolicy(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<SharedFileMetadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Allows an owner or editor of a shared folder to update another member's
         /// permissions.</para>
         /// </summary>
@@ -4191,9 +4381,9 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Update the sharing policies for a shared folder.</para>
-        /// <para>User must have <see cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> access to
-        /// the shared folder to update its policies.</para>
+        /// <para>Update the sharing policies for a shared folder. User must have <see
+        /// cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> access to the shared folder to
+        /// update its policies.</para>
         /// </summary>
         /// <param name="updateFolderPolicyArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -4223,9 +4413,9 @@ namespace Dropbox.Api.Sharing.Routes
         }
 
         /// <summary>
-        /// <para>Update the sharing policies for a shared folder.</para>
-        /// <para>User must have <see cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> access to
-        /// the shared folder to update its policies.</para>
+        /// <para>Update the sharing policies for a shared folder. User must have <see
+        /// cref="Dropbox.Api.Sharing.AccessLevel.Owner" /> access to the shared folder to
+        /// update its policies.</para>
         /// </summary>
         /// <param name="sharedFolderId">The ID for the shared folder.</param>
         /// <param name="memberPolicy">Who can be a member of this shared folder. Only
@@ -4239,9 +4429,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
         /// <param name="linkSettings">Settings on the link for this folder.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
-        /// `FolderPermission`s that should appear in the  response's <see
+        /// `FolderPermission`s that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the folder.</param>
+        /// actions the authenticated user can perform on the folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -4281,9 +4471,9 @@ namespace Dropbox.Api.Sharing.Routes
         /// policy to <see cref="Dropbox.Api.Sharing.SharedLinkPolicy.Members" />.</param>
         /// <param name="linkSettings">Settings on the link for this folder.</param>
         /// <param name="actions">A list of `FolderAction`s corresponding to
-        /// `FolderPermission`s that should appear in the  response's <see
+        /// `FolderPermission`s that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
-        /// actions the  authenticated user can perform on the folder.</param>
+        /// actions the authenticated user can perform on the folder.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send

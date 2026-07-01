@@ -277,7 +277,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Links can be shared with anyone on the same team as the owner.</para>
+        /// <para>Field is deprecated. Links can be shared with anyone on the same team as the
+        /// owner.</para>
         /// </summary>
         public sealed class Team : SharedLinkPolicy
         {

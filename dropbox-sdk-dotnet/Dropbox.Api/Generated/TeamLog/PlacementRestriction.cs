@@ -58,6 +58,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is CanadaOnly</para>
+        /// </summary>
+        public bool IsCanadaOnly
+        {
+            get
+            {
+                return this is CanadaOnly;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CanadaOnly, or <c>null</c>.</para>
+        /// </summary>
+        public CanadaOnly AsCanadaOnly
+        {
+            get
+            {
+                return this as CanadaOnly;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is EuropeOnly</para>
         /// </summary>
         public bool IsEuropeOnly
@@ -209,6 +231,12 @@ namespace Dropbox.Api.TeamLog
                     AustraliaOnly.Encoder.EncodeFields((AustraliaOnly)value, writer);
                     return;
                 }
+                if (value is CanadaOnly)
+                {
+                    WriteProperty(".tag", "canada_only", writer, enc.StringEncoder.Instance);
+                    CanadaOnly.Encoder.EncodeFields((CanadaOnly)value, writer);
+                    return;
+                }
                 if (value is EuropeOnly)
                 {
                     WriteProperty(".tag", "europe_only", writer, enc.StringEncoder.Instance);
@@ -279,6 +307,8 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "australia_only":
                         return AustraliaOnly.Decoder.DecodeFields(reader);
+                    case "canada_only":
+                        return CanadaOnly.Decoder.DecodeFields(reader);
                     case "europe_only":
                         return EuropeOnly.Decoder.DecodeFields(reader);
                     case "japan_only":
@@ -360,6 +390,75 @@ namespace Dropbox.Api.TeamLog
                 protected override AustraliaOnly Create()
                 {
                     return AustraliaOnly.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The canada only object</para>
+        /// </summary>
+        public sealed class CanadaOnly : PlacementRestriction
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CanadaOnly> Encoder = new CanadaOnlyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CanadaOnly> Decoder = new CanadaOnlyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="CanadaOnly" /> class.</para>
+            /// </summary>
+            private CanadaOnly()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CanadaOnly</para>
+            /// </summary>
+            public static readonly CanadaOnly Instance = new CanadaOnly();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CanadaOnly" />.</para>
+            /// </summary>
+            private class CanadaOnlyEncoder : enc.StructEncoder<CanadaOnly>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CanadaOnly value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CanadaOnly" />.</para>
+            /// </summary>
+            private class CanadaOnlyDecoder : enc.StructDecoder<CanadaOnly>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="CanadaOnly" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CanadaOnly Create()
+                {
+                    return CanadaOnly.Instance;
                 }
 
             }

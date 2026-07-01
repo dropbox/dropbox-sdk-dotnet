@@ -106,6 +106,30 @@ namespace Dropbox.Api.Team
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// CannotKeepAccountAndPermanentlyDelete</para>
+        /// </summary>
+        public bool IsCannotKeepAccountAndPermanentlyDelete
+        {
+            get
+            {
+                return this is CannotKeepAccountAndPermanentlyDelete;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CannotKeepAccountAndPermanentlyDelete, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public CannotKeepAccountAndPermanentlyDelete AsCannotKeepAccountAndPermanentlyDelete
+        {
+            get
+            {
+                return this as CannotKeepAccountAndPermanentlyDelete;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// EmailAddressTooLongToBeDisabled</para>
         /// </summary>
         public bool IsEmailAddressTooLongToBeDisabled
@@ -290,6 +314,53 @@ namespace Dropbox.Api.Team
             get
             {
                 return this as CannotKeepAccountRequiredToSignTos;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// CannotPermanentlyDeleteAndTransfer</para>
+        /// </summary>
+        public bool IsCannotPermanentlyDeleteAndTransfer
+        {
+            get
+            {
+                return this is CannotPermanentlyDeleteAndTransfer;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CannotPermanentlyDeleteAndTransfer, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public CannotPermanentlyDeleteAndTransfer AsCannotPermanentlyDeleteAndTransfer
+        {
+            get
+            {
+                return this as CannotPermanentlyDeleteAndTransfer;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MemberIsTransferDestination</para>
+        /// </summary>
+        public bool IsMemberIsTransferDestination
+        {
+            get
+            {
+                return this is MemberIsTransferDestination;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MemberIsTransferDestination, or <c>null</c>.</para>
+        /// </summary>
+        public MemberIsTransferDestination AsMemberIsTransferDestination
+        {
+            get
+            {
+                return this as MemberIsTransferDestination;
             }
         }
 
@@ -502,6 +573,73 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TransferInProgress</para>
+        /// </summary>
+        public bool IsTransferInProgress
+        {
+            get
+            {
+                return this is TransferInProgress;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TransferInProgress, or <c>null</c>.</para>
+        /// </summary>
+        public TransferInProgress AsTransferInProgress
+        {
+            get
+            {
+                return this as TransferInProgress;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is AlreadyTransferred</para>
+        /// </summary>
+        public bool IsAlreadyTransferred
+        {
+            get
+            {
+                return this is AlreadyTransferred;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AlreadyTransferred, or <c>null</c>.</para>
+        /// </summary>
+        public AlreadyTransferred AsAlreadyTransferred
+        {
+            get
+            {
+                return this as AlreadyTransferred;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// AlreadyTransferredOrDeleted</para>
+        /// </summary>
+        public bool IsAlreadyTransferredOrDeleted
+        {
+            get
+            {
+                return this is AlreadyTransferredOrDeleted;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AlreadyTransferredOrDeleted, or <c>null</c>.</para>
+        /// </summary>
+        public AlreadyTransferredOrDeleted AsAlreadyTransferredOrDeleted
+        {
+            get
+            {
+                return this as AlreadyTransferredOrDeleted;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is UserNotInTeam</para>
         /// </summary>
         public bool IsUserNotInTeam
@@ -599,6 +737,12 @@ namespace Dropbox.Api.Team
                     CannotKeepAccountAndDeleteData.Encoder.EncodeFields((CannotKeepAccountAndDeleteData)value, writer);
                     return;
                 }
+                if (value is CannotKeepAccountAndPermanentlyDelete)
+                {
+                    WriteProperty(".tag", "cannot_keep_account_and_permanently_delete", writer, enc.StringEncoder.Instance);
+                    CannotKeepAccountAndPermanentlyDelete.Encoder.EncodeFields((CannotKeepAccountAndPermanentlyDelete)value, writer);
+                    return;
+                }
                 if (value is EmailAddressTooLongToBeDisabled)
                 {
                     WriteProperty(".tag", "email_address_too_long_to_be_disabled", writer, enc.StringEncoder.Instance);
@@ -645,6 +789,18 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty(".tag", "cannot_keep_account_required_to_sign_tos", writer, enc.StringEncoder.Instance);
                     CannotKeepAccountRequiredToSignTos.Encoder.EncodeFields((CannotKeepAccountRequiredToSignTos)value, writer);
+                    return;
+                }
+                if (value is CannotPermanentlyDeleteAndTransfer)
+                {
+                    WriteProperty(".tag", "cannot_permanently_delete_and_transfer", writer, enc.StringEncoder.Instance);
+                    CannotPermanentlyDeleteAndTransfer.Encoder.EncodeFields((CannotPermanentlyDeleteAndTransfer)value, writer);
+                    return;
+                }
+                if (value is MemberIsTransferDestination)
+                {
+                    WriteProperty(".tag", "member_is_transfer_destination", writer, enc.StringEncoder.Instance);
+                    MemberIsTransferDestination.Encoder.EncodeFields((MemberIsTransferDestination)value, writer);
                     return;
                 }
                 if (value is RemovedAndTransferDestShouldDiffer)
@@ -699,6 +855,24 @@ namespace Dropbox.Api.Team
                 {
                     WriteProperty(".tag", "recipient_not_verified", writer, enc.StringEncoder.Instance);
                     RecipientNotVerified.Encoder.EncodeFields((RecipientNotVerified)value, writer);
+                    return;
+                }
+                if (value is TransferInProgress)
+                {
+                    WriteProperty(".tag", "transfer_in_progress", writer, enc.StringEncoder.Instance);
+                    TransferInProgress.Encoder.EncodeFields((TransferInProgress)value, writer);
+                    return;
+                }
+                if (value is AlreadyTransferred)
+                {
+                    WriteProperty(".tag", "already_transferred", writer, enc.StringEncoder.Instance);
+                    AlreadyTransferred.Encoder.EncodeFields((AlreadyTransferred)value, writer);
+                    return;
+                }
+                if (value is AlreadyTransferredOrDeleted)
+                {
+                    WriteProperty(".tag", "already_transferred_or_deleted", writer, enc.StringEncoder.Instance);
+                    AlreadyTransferredOrDeleted.Encoder.EncodeFields((AlreadyTransferredOrDeleted)value, writer);
                     return;
                 }
                 if (value is UserNotInTeam)
@@ -757,6 +931,8 @@ namespace Dropbox.Api.Team
                         return CannotKeepAccountAndTransfer.Decoder.DecodeFields(reader);
                     case "cannot_keep_account_and_delete_data":
                         return CannotKeepAccountAndDeleteData.Decoder.DecodeFields(reader);
+                    case "cannot_keep_account_and_permanently_delete":
+                        return CannotKeepAccountAndPermanentlyDelete.Decoder.DecodeFields(reader);
                     case "email_address_too_long_to_be_disabled":
                         return EmailAddressTooLongToBeDisabled.Decoder.DecodeFields(reader);
                     case "cannot_keep_invited_user_account":
@@ -773,6 +949,10 @@ namespace Dropbox.Api.Team
                         return CannotKeepAccountUnderLegalHold.Decoder.DecodeFields(reader);
                     case "cannot_keep_account_required_to_sign_tos":
                         return CannotKeepAccountRequiredToSignTos.Decoder.DecodeFields(reader);
+                    case "cannot_permanently_delete_and_transfer":
+                        return CannotPermanentlyDeleteAndTransfer.Decoder.DecodeFields(reader);
+                    case "member_is_transfer_destination":
+                        return MemberIsTransferDestination.Decoder.DecodeFields(reader);
                     case "removed_and_transfer_dest_should_differ":
                         return RemovedAndTransferDestShouldDiffer.Decoder.DecodeFields(reader);
                     case "removed_and_transfer_admin_should_differ":
@@ -791,6 +971,12 @@ namespace Dropbox.Api.Team
                         return TransferAdminIsNotAdmin.Decoder.DecodeFields(reader);
                     case "recipient_not_verified":
                         return RecipientNotVerified.Decoder.DecodeFields(reader);
+                    case "transfer_in_progress":
+                        return TransferInProgress.Decoder.DecodeFields(reader);
+                    case "already_transferred":
+                        return AlreadyTransferred.Decoder.DecodeFields(reader);
+                    case "already_transferred_or_deleted":
+                        return AlreadyTransferredOrDeleted.Decoder.DecodeFields(reader);
                     case "user_not_in_team":
                         return UserNotInTeam.Decoder.DecodeFields(reader);
                     case "other":
@@ -1013,6 +1199,79 @@ namespace Dropbox.Api.Team
                 protected override CannotKeepAccountAndDeleteData Create()
                 {
                     return CannotKeepAccountAndDeleteData.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Cannot keep account and permanently delete the data at the same time. To keep
+        /// the account the argument permanently_delete_files should be set to
+        /// <c>false</c>.</para>
+        /// </summary>
+        public sealed class CannotKeepAccountAndPermanentlyDelete : MembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CannotKeepAccountAndPermanentlyDelete> Encoder = new CannotKeepAccountAndPermanentlyDeleteEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CannotKeepAccountAndPermanentlyDelete> Decoder = new CannotKeepAccountAndPermanentlyDeleteDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="CannotKeepAccountAndPermanentlyDelete" /> class.</para>
+            /// </summary>
+            private CannotKeepAccountAndPermanentlyDelete()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CannotKeepAccountAndPermanentlyDelete</para>
+            /// </summary>
+            public static readonly CannotKeepAccountAndPermanentlyDelete Instance = new CannotKeepAccountAndPermanentlyDelete();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CannotKeepAccountAndPermanentlyDelete" />.</para>
+            /// </summary>
+            private class CannotKeepAccountAndPermanentlyDeleteEncoder : enc.StructEncoder<CannotKeepAccountAndPermanentlyDelete>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CannotKeepAccountAndPermanentlyDelete value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CannotKeepAccountAndPermanentlyDelete" />.</para>
+            /// </summary>
+            private class CannotKeepAccountAndPermanentlyDeleteDecoder : enc.StructDecoder<CannotKeepAccountAndPermanentlyDelete>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="CannotKeepAccountAndPermanentlyDelete" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CannotKeepAccountAndPermanentlyDelete Create()
+                {
+                    return CannotKeepAccountAndPermanentlyDelete.Instance;
                 }
 
             }
@@ -1589,6 +1848,150 @@ namespace Dropbox.Api.Team
                 protected override CannotKeepAccountRequiredToSignTos Create()
                 {
                     return CannotKeepAccountRequiredToSignTos.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Cannot permanently delete files and transfer the data to another user at the
+        /// same time.</para>
+        /// </summary>
+        public sealed class CannotPermanentlyDeleteAndTransfer : MembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CannotPermanentlyDeleteAndTransfer> Encoder = new CannotPermanentlyDeleteAndTransferEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CannotPermanentlyDeleteAndTransfer> Decoder = new CannotPermanentlyDeleteAndTransferDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="CannotPermanentlyDeleteAndTransfer" /> class.</para>
+            /// </summary>
+            private CannotPermanentlyDeleteAndTransfer()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of CannotPermanentlyDeleteAndTransfer</para>
+            /// </summary>
+            public static readonly CannotPermanentlyDeleteAndTransfer Instance = new CannotPermanentlyDeleteAndTransfer();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CannotPermanentlyDeleteAndTransfer" />.</para>
+            /// </summary>
+            private class CannotPermanentlyDeleteAndTransferEncoder : enc.StructEncoder<CannotPermanentlyDeleteAndTransfer>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CannotPermanentlyDeleteAndTransfer value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CannotPermanentlyDeleteAndTransfer" />.</para>
+            /// </summary>
+            private class CannotPermanentlyDeleteAndTransferDecoder : enc.StructDecoder<CannotPermanentlyDeleteAndTransfer>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="CannotPermanentlyDeleteAndTransfer" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CannotPermanentlyDeleteAndTransfer Create()
+                {
+                    return CannotPermanentlyDeleteAndTransfer.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>This user is the active destination of an in-progress file transfer. Wait for
+        /// the transfer to complete before removing this member.</para>
+        /// </summary>
+        public sealed class MemberIsTransferDestination : MembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MemberIsTransferDestination> Encoder = new MemberIsTransferDestinationEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MemberIsTransferDestination> Decoder = new MemberIsTransferDestinationDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MemberIsTransferDestination"
+            /// /> class.</para>
+            /// </summary>
+            private MemberIsTransferDestination()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MemberIsTransferDestination</para>
+            /// </summary>
+            public static readonly MemberIsTransferDestination Instance = new MemberIsTransferDestination();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MemberIsTransferDestination" />.</para>
+            /// </summary>
+            private class MemberIsTransferDestinationEncoder : enc.StructEncoder<MemberIsTransferDestination>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MemberIsTransferDestination value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MemberIsTransferDestination" />.</para>
+            /// </summary>
+            private class MemberIsTransferDestinationDecoder : enc.StructDecoder<MemberIsTransferDestination>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MemberIsTransferDestination"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MemberIsTransferDestination Create()
+                {
+                    return MemberIsTransferDestination.Instance;
                 }
 
             }
@@ -2229,6 +2632,220 @@ namespace Dropbox.Api.Team
                 protected override RecipientNotVerified Create()
                 {
                     return RecipientNotVerified.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Cannot permanently delete files while it's being transferred.</para>
+        /// </summary>
+        public sealed class TransferInProgress : MembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TransferInProgress> Encoder = new TransferInProgressEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TransferInProgress> Decoder = new TransferInProgressDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TransferInProgress" />
+            /// class.</para>
+            /// </summary>
+            private TransferInProgress()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TransferInProgress</para>
+            /// </summary>
+            public static readonly TransferInProgress Instance = new TransferInProgress();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TransferInProgress" />.</para>
+            /// </summary>
+            private class TransferInProgressEncoder : enc.StructEncoder<TransferInProgress>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TransferInProgress value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TransferInProgress" />.</para>
+            /// </summary>
+            private class TransferInProgressDecoder : enc.StructDecoder<TransferInProgress>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TransferInProgress"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TransferInProgress Create()
+                {
+                    return TransferInProgress.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Cannot permanently delete files that have already been transferred.</para>
+        /// </summary>
+        public sealed class AlreadyTransferred : MembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AlreadyTransferred> Encoder = new AlreadyTransferredEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AlreadyTransferred> Decoder = new AlreadyTransferredDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AlreadyTransferred" />
+            /// class.</para>
+            /// </summary>
+            private AlreadyTransferred()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of AlreadyTransferred</para>
+            /// </summary>
+            public static readonly AlreadyTransferred Instance = new AlreadyTransferred();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AlreadyTransferred" />.</para>
+            /// </summary>
+            private class AlreadyTransferredEncoder : enc.StructEncoder<AlreadyTransferred>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AlreadyTransferred value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AlreadyTransferred" />.</para>
+            /// </summary>
+            private class AlreadyTransferredDecoder : enc.StructDecoder<AlreadyTransferred>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AlreadyTransferred"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AlreadyTransferred Create()
+                {
+                    return AlreadyTransferred.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Cannot permanently delete files that have already been transferred or
+        /// deleted.</para>
+        /// </summary>
+        public sealed class AlreadyTransferredOrDeleted : MembersRemoveError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AlreadyTransferredOrDeleted> Encoder = new AlreadyTransferredOrDeletedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AlreadyTransferredOrDeleted> Decoder = new AlreadyTransferredOrDeletedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AlreadyTransferredOrDeleted"
+            /// /> class.</para>
+            /// </summary>
+            private AlreadyTransferredOrDeleted()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of AlreadyTransferredOrDeleted</para>
+            /// </summary>
+            public static readonly AlreadyTransferredOrDeleted Instance = new AlreadyTransferredOrDeleted();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AlreadyTransferredOrDeleted" />.</para>
+            /// </summary>
+            private class AlreadyTransferredOrDeletedEncoder : enc.StructEncoder<AlreadyTransferredOrDeleted>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AlreadyTransferredOrDeleted value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AlreadyTransferredOrDeleted" />.</para>
+            /// </summary>
+            private class AlreadyTransferredOrDeletedDecoder : enc.StructDecoder<AlreadyTransferredOrDeleted>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AlreadyTransferredOrDeleted"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AlreadyTransferredOrDeleted Create()
+                {
+                    return AlreadyTransferredOrDeleted.Instance;
                 }
 
             }

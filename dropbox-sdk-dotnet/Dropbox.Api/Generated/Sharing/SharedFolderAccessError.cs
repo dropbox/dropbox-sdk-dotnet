@@ -80,6 +80,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InvalidMember</para>
+        /// </summary>
+        public bool IsInvalidMember
+        {
+            get
+            {
+                return this is InvalidMember;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InvalidMember, or <c>null</c>.</para>
+        /// </summary>
+        public InvalidMember AsInvalidMember
+        {
+            get
+            {
+                return this as InvalidMember;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is EmailUnverified</para>
         /// </summary>
         public bool IsEmailUnverified
@@ -171,6 +193,12 @@ namespace Dropbox.Api.Sharing
                     NotAMember.Encoder.EncodeFields((NotAMember)value, writer);
                     return;
                 }
+                if (value is InvalidMember)
+                {
+                    WriteProperty(".tag", "invalid_member", writer, enc.StringEncoder.Instance);
+                    InvalidMember.Encoder.EncodeFields((InvalidMember)value, writer);
+                    return;
+                }
                 if (value is EmailUnverified)
                 {
                     WriteProperty(".tag", "email_unverified", writer, enc.StringEncoder.Instance);
@@ -226,6 +254,8 @@ namespace Dropbox.Api.Sharing
                         return InvalidId.Decoder.DecodeFields(reader);
                     case "not_a_member":
                         return NotAMember.Decoder.DecodeFields(reader);
+                    case "invalid_member":
+                        return InvalidMember.Decoder.DecodeFields(reader);
                     case "email_unverified":
                         return EmailUnverified.Decoder.DecodeFields(reader);
                     case "unmounted":
@@ -377,7 +407,77 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Never set.</para>
+        /// <para>The user does not exist or their account is disabled.</para>
+        /// </summary>
+        public sealed class InvalidMember : SharedFolderAccessError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InvalidMember> Encoder = new InvalidMemberEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InvalidMember> Decoder = new InvalidMemberDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidMember" />
+            /// class.</para>
+            /// </summary>
+            private InvalidMember()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InvalidMember</para>
+            /// </summary>
+            public static readonly InvalidMember Instance = new InvalidMember();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InvalidMember" />.</para>
+            /// </summary>
+            private class InvalidMemberEncoder : enc.StructEncoder<InvalidMember>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InvalidMember value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InvalidMember" />.</para>
+            /// </summary>
+            private class InvalidMemberDecoder : enc.StructDecoder<InvalidMember>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InvalidMember" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InvalidMember Create()
+                {
+                    return InvalidMember.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Field is deprecated. Never set.</para>
         /// </summary>
         public sealed class EmailUnverified : SharedFolderAccessError
         {

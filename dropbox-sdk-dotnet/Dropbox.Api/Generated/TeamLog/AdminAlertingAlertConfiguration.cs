@@ -37,17 +37,20 @@ namespace Dropbox.Api.TeamLog
         /// <param name="recipientsSettings">Recipient settings.</param>
         /// <param name="text">Text.</param>
         /// <param name="excludedFileExtensions">Excluded file extensions.</param>
+        /// <param name="malwareExclusionState">Malware exclusion list state.</param>
         public AdminAlertingAlertConfiguration(AdminAlertingAlertStatePolicy alertState = null,
                                                AdminAlertingAlertSensitivity sensitivityLevel = null,
                                                RecipientsConfiguration recipientsSettings = null,
                                                string text = null,
-                                               string excludedFileExtensions = null)
+                                               string excludedFileExtensions = null,
+                                               MalwareExclusionState malwareExclusionState = null)
         {
             this.AlertState = alertState;
             this.SensitivityLevel = sensitivityLevel;
             this.RecipientsSettings = recipientsSettings;
             this.Text = text;
             this.ExcludedFileExtensions = excludedFileExtensions;
+            this.MalwareExclusionState = malwareExclusionState;
         }
 
         /// <summary>
@@ -86,6 +89,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public string ExcludedFileExtensions { get; protected set; }
 
+        /// <summary>
+        /// <para>Malware exclusion list state.</para>
+        /// </summary>
+        public MalwareExclusionState MalwareExclusionState { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -119,6 +127,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.ExcludedFileExtensions != null)
                 {
                     WriteProperty("excluded_file_extensions", value.ExcludedFileExtensions, writer, enc.StringEncoder.Instance);
+                }
+                if (value.MalwareExclusionState != null)
+                {
+                    WriteProperty("malware_exclusion_state", value.MalwareExclusionState, writer, global::Dropbox.Api.TeamLog.MalwareExclusionState.Encoder);
                 }
             }
         }
@@ -167,6 +179,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "excluded_file_extensions":
                         value.ExcludedFileExtensions = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "malware_exclusion_state":
+                        value.MalwareExclusionState = global::Dropbox.Api.TeamLog.MalwareExclusionState.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

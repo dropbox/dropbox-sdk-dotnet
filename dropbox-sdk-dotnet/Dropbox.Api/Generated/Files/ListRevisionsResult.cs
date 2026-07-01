@@ -32,12 +32,17 @@ namespace Dropbox.Api.Files
         /// class.</para>
         /// </summary>
         /// <param name="isDeleted">If the file identified by the latest revision in the
-        /// response is either deleted or moved.</param>
+        /// response is either deleted or moved. If before_rev is set, this refers to the
+        /// latest revision of the file older than before_rev.</param>
         /// <param name="entries">The revisions for the file. Only revisions that are not
         /// deleted will show up here.</param>
+        /// <param name="hasMore">If true, then there are more entries available. Call
+        /// list_revisions again with before_rev equal to the revision of the last returned
+        /// entry to retrieve the rest.</param>
         /// <param name="serverDeleted">The time of deletion if the file was deleted.</param>
         public ListRevisionsResult(bool isDeleted,
                                    col.IEnumerable<FileMetadata> entries,
+                                   bool hasMore,
                                    sys.DateTime? serverDeleted = null)
         {
             var entriesList = enc.Util.ToList(entries);
@@ -49,6 +54,7 @@ namespace Dropbox.Api.Files
 
             this.IsDeleted = isDeleted;
             this.Entries = entriesList;
+            this.HasMore = hasMore;
             this.ServerDeleted = serverDeleted;
         }
 
@@ -65,7 +71,8 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>If the file identified by the latest revision in the response is either
-        /// deleted or moved.</para>
+        /// deleted or moved. If before_rev is set, this refers to the latest revision of the
+        /// file older than before_rev.</para>
         /// </summary>
         public bool IsDeleted { get; protected set; }
 
@@ -74,6 +81,13 @@ namespace Dropbox.Api.Files
         /// here.</para>
         /// </summary>
         public col.IList<FileMetadata> Entries { get; protected set; }
+
+        /// <summary>
+        /// <para>If true, then there are more entries available. Call list_revisions again
+        /// with before_rev equal to the revision of the last returned entry to retrieve the
+        /// rest.</para>
+        /// </summary>
+        public bool HasMore { get; protected set; }
 
         /// <summary>
         /// <para>The time of deletion if the file was deleted.</para>
@@ -96,6 +110,7 @@ namespace Dropbox.Api.Files
             {
                 WriteProperty("is_deleted", value.IsDeleted, writer, enc.BooleanEncoder.Instance);
                 WriteListProperty("entries", value.Entries, writer, global::Dropbox.Api.Files.FileMetadata.Encoder);
+                WriteProperty("has_more", value.HasMore, writer, enc.BooleanEncoder.Instance);
                 if (value.ServerDeleted != null)
                 {
                     WriteProperty("server_deleted", value.ServerDeleted.Value, writer, enc.DateTimeEncoder.Instance);
@@ -137,6 +152,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "entries":
                         value.Entries = ReadList<FileMetadata>(reader, global::Dropbox.Api.Files.FileMetadata.Decoder);
+                        break;
+                    case "has_more":
+                        value.HasMore = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     case "server_deleted":
                         value.ServerDeleted = enc.DateTimeDecoder.Instance.Decode(reader);

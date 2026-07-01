@@ -149,7 +149,8 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>Use <see cref="Dropbox.Api.Files.DeleteError.TooManyWriteOperations" />. <see
+        /// <para>Field is deprecated. Use <see
+        /// cref="Dropbox.Api.Files.DeleteError.TooManyWriteOperations" />. <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.DeleteBatchAsync" /> now provides
         /// smaller granularity about which entry has failed because of this.</para>
         /// </summary>

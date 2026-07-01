@@ -52,6 +52,8 @@ namespace Dropbox.Api.Sharing
         /// the folder is not owned by a team.</param>
         /// <param name="parentSharedFolderId">The ID of the parent shared folder. This field
         /// is present only if the folder is contained within another shared folder.</param>
+        /// <param name="pathDisplay">The full path of this shared folder. Absent for unmounted
+        /// folders.</param>
         /// <param name="pathLower">The lower-cased full path of this shared folder. Absent for
         /// unmounted folders.</param>
         /// <param name="parentFolderName">Display name for the parent folder.</param>
@@ -63,6 +65,7 @@ namespace Dropbox.Api.Sharing
         /// request.</param>
         /// <param name="accessInheritance">Whether the folder inherits its members from its
         /// parent.</param>
+        /// <param name="folderId">The ID of the content.</param>
         public SharedFolderMetadata(AccessLevel accessType,
                                     bool isInsideTeamFolder,
                                     bool isTeamFolder,
@@ -74,12 +77,14 @@ namespace Dropbox.Api.Sharing
                                     col.IEnumerable<string> ownerDisplayNames = null,
                                     global::Dropbox.Api.Users.Team ownerTeam = null,
                                     string parentSharedFolderId = null,
+                                    string pathDisplay = null,
                                     string pathLower = null,
                                     string parentFolderName = null,
                                     SharedContentLinkMetadata linkMetadata = null,
                                     col.IEnumerable<FolderPermission> permissions = null,
-                                    AccessInheritance accessInheritance = null)
-            : base(accessType, isInsideTeamFolder, isTeamFolder, ownerDisplayNames, ownerTeam, parentSharedFolderId, pathLower, parentFolderName)
+                                    AccessInheritance accessInheritance = null,
+                                    string folderId = null)
+            : base(accessType, isInsideTeamFolder, isTeamFolder, ownerDisplayNames, ownerTeam, parentSharedFolderId, pathDisplay, pathLower, parentFolderName)
         {
             if (name == null)
             {
@@ -111,6 +116,18 @@ namespace Dropbox.Api.Sharing
             {
                 accessInheritance = global::Dropbox.Api.Sharing.AccessInheritance.Inherit.Instance;
             }
+            if (folderId != null)
+            {
+                if (folderId.Length < 4)
+                {
+                    throw new sys.ArgumentOutOfRangeException("folderId", "Length should be at least 4");
+                }
+                if (!re.Regex.IsMatch(folderId, @"\A(?:id:.+)\z"))
+                {
+                    throw new sys.ArgumentOutOfRangeException("folderId", @"Value should match pattern '\A(?:id:.+)\z'");
+                }
+            }
+
             this.Name = name;
             this.Policy = policy;
             this.PreviewUrl = previewUrl;
@@ -119,6 +136,7 @@ namespace Dropbox.Api.Sharing
             this.LinkMetadata = linkMetadata;
             this.Permissions = permissionsList;
             this.AccessInheritance = accessInheritance;
+            this.FolderId = folderId;
         }
 
         /// <summary>
@@ -177,6 +195,11 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public AccessInheritance AccessInheritance { get; protected set; }
 
+        /// <summary>
+        /// <para>The ID of the content.</para>
+        /// </summary>
+        public string FolderId { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -211,6 +234,10 @@ namespace Dropbox.Api.Sharing
                 {
                     WriteProperty("parent_shared_folder_id", value.ParentSharedFolderId, writer, enc.StringEncoder.Instance);
                 }
+                if (value.PathDisplay != null)
+                {
+                    WriteProperty("path_display", value.PathDisplay, writer, enc.StringEncoder.Instance);
+                }
                 if (value.PathLower != null)
                 {
                     WriteProperty("path_lower", value.PathLower, writer, enc.StringEncoder.Instance);
@@ -228,6 +255,10 @@ namespace Dropbox.Api.Sharing
                     WriteListProperty("permissions", value.Permissions, writer, global::Dropbox.Api.Sharing.FolderPermission.Encoder);
                 }
                 WriteProperty("access_inheritance", value.AccessInheritance, writer, global::Dropbox.Api.Sharing.AccessInheritance.Encoder);
+                if (value.FolderId != null)
+                {
+                    WriteProperty("folder_id", value.FolderId, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -293,6 +324,9 @@ namespace Dropbox.Api.Sharing
                     case "parent_shared_folder_id":
                         value.ParentSharedFolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
+                    case "path_display":
+                        value.PathDisplay = enc.StringDecoder.Instance.Decode(reader);
+                        break;
                     case "path_lower":
                         value.PathLower = enc.StringDecoder.Instance.Decode(reader);
                         break;
@@ -307,6 +341,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "access_inheritance":
                         value.AccessInheritance = global::Dropbox.Api.Sharing.AccessInheritance.Decoder.Decode(reader);
+                        break;
+                    case "folder_id":
+                        value.FolderId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

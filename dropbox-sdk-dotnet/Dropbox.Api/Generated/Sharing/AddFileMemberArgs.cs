@@ -43,13 +43,15 @@ namespace Dropbox.Api.Sharing
         /// <param name="accessLevel">AccessLevel union object, describing what access level we
         /// want to give new members.</param>
         /// <param name="addMessageAsComment">If the custom message should be added as a
-        /// comment on the file.</param>
+        /// comment on the file. Only meant for Paper files.</param>
+        /// <param name="fpSealedResult">The FingerprintJS Sealed Client Result value</param>
         public AddFileMemberArgs(string file,
                                  col.IEnumerable<MemberSelector> members,
                                  string customMessage = null,
                                  bool quiet = false,
                                  AccessLevel accessLevel = null,
-                                 bool addMessageAsComment = false)
+                                 bool addMessageAsComment = false,
+                                 string fpSealedResult = null)
         {
             if (file == null)
             {
@@ -71,16 +73,13 @@ namespace Dropbox.Api.Sharing
                 throw new sys.ArgumentNullException("members");
             }
 
-            if (accessLevel == null)
-            {
-                accessLevel = global::Dropbox.Api.Sharing.AccessLevel.Viewer.Instance;
-            }
             this.File = file;
             this.Members = membersList;
             this.CustomMessage = customMessage;
             this.Quiet = quiet;
             this.AccessLevel = accessLevel;
             this.AddMessageAsComment = addMessageAsComment;
+            this.FpSealedResult = fpSealedResult;
         }
 
         /// <summary>
@@ -93,7 +92,6 @@ namespace Dropbox.Api.Sharing
         public AddFileMemberArgs()
         {
             this.Quiet = false;
-            this.AccessLevel = global::Dropbox.Api.Sharing.AccessLevel.Viewer.Instance;
             this.AddMessageAsComment = false;
         }
 
@@ -127,9 +125,15 @@ namespace Dropbox.Api.Sharing
         public AccessLevel AccessLevel { get; protected set; }
 
         /// <summary>
-        /// <para>If the custom message should be added as a comment on the file.</para>
+        /// <para>If the custom message should be added as a comment on the file. Only meant
+        /// for Paper files.</para>
         /// </summary>
         public bool AddMessageAsComment { get; protected set; }
+
+        /// <summary>
+        /// <para>The FingerprintJS Sealed Client Result value</para>
+        /// </summary>
+        public string FpSealedResult { get; protected set; }
 
         #region Encoder class
 
@@ -152,8 +156,15 @@ namespace Dropbox.Api.Sharing
                     WriteProperty("custom_message", value.CustomMessage, writer, enc.StringEncoder.Instance);
                 }
                 WriteProperty("quiet", value.Quiet, writer, enc.BooleanEncoder.Instance);
-                WriteProperty("access_level", value.AccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
+                if (value.AccessLevel != null)
+                {
+                    WriteProperty("access_level", value.AccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
+                }
                 WriteProperty("add_message_as_comment", value.AddMessageAsComment, writer, enc.BooleanEncoder.Instance);
+                if (value.FpSealedResult != null)
+                {
+                    WriteProperty("fp_sealed_result", value.FpSealedResult, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -203,6 +214,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "add_message_as_comment":
                         value.AddMessageAsComment = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "fp_sealed_result":
+                        value.FpSealedResult = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

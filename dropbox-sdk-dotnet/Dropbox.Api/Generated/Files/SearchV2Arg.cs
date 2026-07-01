@@ -34,8 +34,8 @@ namespace Dropbox.Api.Files
         /// based on the request arguments.</param>
         /// <param name="options">Options for more targeted search results.</param>
         /// <param name="matchFieldOptions">Options for search results match fields.</param>
-        /// <param name="includeHighlights">Deprecated and moved this option to
-        /// SearchMatchFieldOptions.</param>
+        /// <param name="includeHighlights">Field is deprecated. Deprecated and moved this
+        /// option to SearchMatchFieldOptions.</param>
         public SearchV2Arg(string query,
                            SearchOptions options = null,
                            SearchMatchFieldOptions matchFieldOptions = null,
@@ -83,7 +83,8 @@ namespace Dropbox.Api.Files
         public SearchMatchFieldOptions MatchFieldOptions { get; protected set; }
 
         /// <summary>
-        /// <para>Deprecated and moved this option to SearchMatchFieldOptions.</para>
+        /// <para>Field is deprecated. Deprecated and moved this option to
+        /// SearchMatchFieldOptions.</para>
         /// </summary>
         public bool? IncludeHighlights { get; protected set; }
 

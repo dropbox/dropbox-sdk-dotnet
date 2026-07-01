@@ -102,6 +102,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is InvalidGroup</para>
+        /// </summary>
+        public bool IsInvalidGroup
+        {
+            get
+            {
+                return this is InvalidGroup;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a InvalidGroup, or <c>null</c>.</para>
+        /// </summary>
+        public InvalidGroup AsInvalidGroup
+        {
+            get
+            {
+                return this as InvalidGroup;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is UnverifiedDropboxId</para>
         /// </summary>
         public bool IsUnverifiedDropboxId
@@ -221,6 +243,12 @@ namespace Dropbox.Api.Sharing
                     InvalidEmail.Encoder.EncodeFields((InvalidEmail)value, writer);
                     return;
                 }
+                if (value is InvalidGroup)
+                {
+                    WriteProperty(".tag", "invalid_group", writer, enc.StringEncoder.Instance);
+                    InvalidGroup.Encoder.EncodeFields((InvalidGroup)value, writer);
+                    return;
+                }
                 if (value is UnverifiedDropboxId)
                 {
                     WriteProperty(".tag", "unverified_dropbox_id", writer, enc.StringEncoder.Instance);
@@ -284,6 +312,8 @@ namespace Dropbox.Api.Sharing
                         return InvalidDropboxId.Decoder.DecodeFields(reader);
                     case "invalid_email":
                         return InvalidEmail.Decoder.DecodeFields(reader);
+                    case "invalid_group":
+                        return InvalidGroup.Decoder.DecodeFields(reader);
                     case "unverified_dropbox_id":
                         return UnverifiedDropboxId.Decoder.DecodeFields(reader);
                     case "group_deleted":
@@ -559,6 +589,76 @@ namespace Dropbox.Api.Sharing
                             break;
                     }
                 }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Provided group is invalid.</para>
+        /// </summary>
+        public sealed class InvalidGroup : AddMemberSelectorError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<InvalidGroup> Encoder = new InvalidGroupEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<InvalidGroup> Decoder = new InvalidGroupDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="InvalidGroup" />
+            /// class.</para>
+            /// </summary>
+            private InvalidGroup()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of InvalidGroup</para>
+            /// </summary>
+            public static readonly InvalidGroup Instance = new InvalidGroup();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="InvalidGroup" />.</para>
+            /// </summary>
+            private class InvalidGroupEncoder : enc.StructEncoder<InvalidGroup>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(InvalidGroup value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="InvalidGroup" />.</para>
+            /// </summary>
+            private class InvalidGroupDecoder : enc.StructDecoder<InvalidGroup>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="InvalidGroup" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override InvalidGroup Create()
+                {
+                    return InvalidGroup.Instance;
+                }
+
             }
 
             #endregion

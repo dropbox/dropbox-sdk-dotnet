@@ -139,8 +139,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>List all device sessions of a team.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>List all device sessions of a team. Permission : Team member file
+        /// access.</para>
         /// </summary>
         /// <param name="listMembersDevicesArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -170,8 +170,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>List all device sessions of a team.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>List all device sessions of a team. Permission : Team member file
+        /// access.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListMembersDevicesAsync" /> the
@@ -258,8 +258,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>List all device sessions of a team.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>List all device sessions of a team. Permission : Team member file
+        /// access.</para>
         /// </summary>
         /// <param name="listTeamDevicesArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -267,7 +267,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamDevicesError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use DevicesListMembersDevicesAsync instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListTeamDevicesResult> DevicesListTeamDevicesAsync(ListTeamDevicesArg listTeamDevicesArg)
         {
             return this.Transport.SendRpcRequestAsync<ListTeamDevicesArg, ListTeamDevicesResult, ListTeamDevicesError>(listTeamDevicesArg, "api", "/team/devices/list_team_devices", "team", global::Dropbox.Api.Team.ListTeamDevicesArg.Encoder, global::Dropbox.Api.Team.ListTeamDevicesResult.Decoder, global::Dropbox.Api.Team.ListTeamDevicesError.Decoder);
@@ -282,7 +282,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginDevicesListMembersDevices instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDevicesListTeamDevices(ListTeamDevicesArg listTeamDevicesArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.DevicesListTeamDevicesAsync(listTeamDevicesArg);
@@ -291,8 +291,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>List all device sessions of a team.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>List all device sessions of a team. Permission : Team member file
+        /// access.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListTeamDevicesAsync" /> the
@@ -310,7 +310,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamDevicesError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use DevicesListMembersDevicesAsync instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListTeamDevicesResult> DevicesListTeamDevicesAsync(string cursor = null,
                                                                          bool includeWebSessions = true,
                                                                          bool includeDesktopClients = true,
@@ -343,7 +343,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginDevicesListMembersDevices instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginDevicesListTeamDevices(string cursor = null,
                                                             bool includeWebSessions = true,
                                                             bool includeDesktopClients = true,
@@ -369,7 +369,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamDevicesError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndDevicesListMembersDevices instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public ListTeamDevicesResult EndDevicesListTeamDevices(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<ListTeamDevicesResult>;
@@ -517,10 +517,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Get the values for one or more featues. This route allows you to check your
+        /// <para>Get the values for one or more features. This route allows you to check your
         /// account's capability for what feature you can access or what value you have for
-        /// certain features.</para>
-        /// <para>Permission : Team information.</para>
+        /// certain features. Permission : Team information.</para>
         /// </summary>
         /// <param name="featuresGetValuesBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -550,10 +549,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Get the values for one or more featues. This route allows you to check your
+        /// <para>Get the values for one or more features. This route allows you to check your
         /// account's capability for what feature you can access or what value you have for
-        /// certain features.</para>
-        /// <para>Permission : Team information.</para>
+        /// certain features. Permission : Team information.</para>
         /// </summary>
         /// <param name="features">A list of features in <see cref="Feature" />. If the list is
         /// empty, this route will return <see cref="FeaturesGetValuesBatchError" />.</param>
@@ -653,8 +651,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Creates a new, empty group, with a requested name.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Creates a new, empty group, with a requested name. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="groupCreateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -684,8 +682,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Creates a new, empty group, with a requested name.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Creates a new, empty group, with a requested name. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="groupName">Group name.</param>
         /// <param name="addCreatorAsOwner">Automatically add the creator of the group.</param>
@@ -762,12 +760,11 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Deletes a group.</para>
-        /// <para>The group is deleted immediately. However the revoking of group-owned
-        /// resources may take additional time. Use the <see
+        /// <para>Deletes a group. The group is deleted immediately. However the revoking of
+        /// group-owned resources may take additional time. Use the <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsJobStatusGetAsync" /> to
-        /// determine whether this process has completed.</para>
-        /// <para>Permission : Team member management.</para>
+        /// determine whether this process has completed. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="groupSelector">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -820,8 +817,7 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Retrieves information about one or more groups. Note that the optional field
         /// <see cref="Dropbox.Api.Team.GroupFullInfo.Members" /> is not returned for
-        /// system-managed groups.</para>
-        /// <para>Permission : Team Information.</para>
+        /// system-managed groups. Permission : Team Information.</para>
         /// </summary>
         /// <param name="groupsSelector">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -877,8 +873,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersAddAsync" /> , or <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersRemoveAsync" /> use this
         /// method to poll the status of granting/revoking group members' access to group-owned
-        /// resources.</para>
-        /// <para>Permission : Team member management.</para>
+        /// resources. Permission : Team member management.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -913,8 +908,7 @@ namespace Dropbox.Api.Team.Routes
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersAddAsync" /> , or <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersRemoveAsync" /> use this
         /// method to poll the status of granting/revoking group members' access to group-owned
-        /// resources.</para>
-        /// <para>Permission : Team member management.</para>
+        /// resources. Permission : Team member management.</para>
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
@@ -971,8 +965,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Lists groups on a team.</para>
-        /// <para>Permission : Team Information.</para>
+        /// <para>Lists groups on a team. Permission : Team Information.</para>
         /// </summary>
         /// <param name="groupsListArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -999,8 +992,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Lists groups on a team.</para>
-        /// <para>Permission : Team Information.</para>
+        /// <para>Lists groups on a team. Permission : Team Information.</para>
         /// </summary>
         /// <param name="limit">Number of results to return per call.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1051,8 +1043,7 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsListAsync" />, use this to
-        /// paginate through all groups.</para>
-        /// <para>Permission : Team Information.</para>
+        /// paginate through all groups. Permission : Team Information.</para>
         /// </summary>
         /// <param name="groupsListContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1084,8 +1075,7 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsListAsync" />, use this to
-        /// paginate through all groups.</para>
-        /// <para>Permission : Team Information.</para>
+        /// paginate through all groups. Permission : Team Information.</para>
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of
         /// groups.</param>
@@ -1142,12 +1132,11 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Adds members to a group.</para>
-        /// <para>The members are added immediately. However the granting of group-owned
-        /// resources may take additional time. Use the <see
+        /// <para>Adds members to a group. The members are added immediately. However the
+        /// granting of group-owned resources may take additional time. Use the <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsJobStatusGetAsync" /> to
-        /// determine whether this process has completed.</para>
-        /// <para>Permission : Team member management.</para>
+        /// determine whether this process has completed. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="groupMembersAddArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1177,17 +1166,16 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Adds members to a group.</para>
-        /// <para>The members are added immediately. However the granting of group-owned
-        /// resources may take additional time. Use the <see
+        /// <para>Adds members to a group. The members are added immediately. However the
+        /// granting of group-owned resources may take additional time. Use the <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsJobStatusGetAsync" /> to
-        /// determine whether this process has completed.</para>
-        /// <para>Permission : Team member management.</para>
+        /// determine whether this process has completed. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="group">Group to which users will be added.</param>
         /// <param name="members">List of users to be added to the group.</param>
         /// <param name="returnMembers">Whether to return the list of members in the group.
-        /// Note that the default value will cause all the group members  to be returned in the
+        /// Note that the default value will cause all the group members to be returned in the
         /// response. This may take a long time for large groups.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -1211,7 +1199,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="group">Group to which users will be added.</param>
         /// <param name="members">List of users to be added to the group.</param>
         /// <param name="returnMembers">Whether to return the list of members in the group.
-        /// Note that the default value will cause all the group members  to be returned in the
+        /// Note that the default value will cause all the group members to be returned in the
         /// response. This may take a long time for large groups.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -1253,8 +1241,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Lists members of a group.</para>
-        /// <para>Permission : Team Information.</para>
+        /// <para>Lists members of a group. Permission : Team Information.</para>
         /// </summary>
         /// <param name="groupsMembersListArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1284,8 +1271,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Lists members of a group.</para>
-        /// <para>Permission : Team Information.</para>
+        /// <para>Lists members of a group. Permission : Team Information.</para>
         /// </summary>
         /// <param name="group">The group whose members are to be listed.</param>
         /// <param name="limit">Number of results to return per call.</param>
@@ -1348,8 +1334,7 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersListAsync" />, use this
-        /// to paginate through all members of the group.</para>
-        /// <para>Permission : Team information.</para>
+        /// to paginate through all members of the group. Permission : Team information.</para>
         /// </summary>
         /// <param name="groupsMembersListContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1381,8 +1366,7 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsMembersListAsync" />, use this
-        /// to paginate through all members of the group.</para>
-        /// <para>Permission : Team information.</para>
+        /// to paginate through all members of the group. Permission : Team information.</para>
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of
         /// groups.</param>
@@ -1439,14 +1423,12 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Removes members from a group.</para>
-        /// <para>The members are removed immediately. However the revoking of group-owned
-        /// resources may take additional time. Use the <see
+        /// <para>Removes members from a group. The members are removed immediately. However
+        /// the revoking of group-owned resources may take additional time. Use the <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsJobStatusGetAsync" /> to
-        /// determine whether this process has completed.</para>
-        /// <para>This method permits removing the only owner of a group, even in cases where
-        /// this is not possible via the web client.</para>
-        /// <para>Permission : Team member management.</para>
+        /// determine whether this process has completed. This method permits removing the only
+        /// owner of a group, even in cases where this is not possible via the web client.
+        /// Permission : Team member management.</para>
         /// </summary>
         /// <param name="groupMembersRemoveArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1476,19 +1458,17 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Removes members from a group.</para>
-        /// <para>The members are removed immediately. However the revoking of group-owned
-        /// resources may take additional time. Use the <see
+        /// <para>Removes members from a group. The members are removed immediately. However
+        /// the revoking of group-owned resources may take additional time. Use the <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsJobStatusGetAsync" /> to
-        /// determine whether this process has completed.</para>
-        /// <para>This method permits removing the only owner of a group, even in cases where
-        /// this is not possible via the web client.</para>
-        /// <para>Permission : Team member management.</para>
+        /// determine whether this process has completed. This method permits removing the only
+        /// owner of a group, even in cases where this is not possible via the web client.
+        /// Permission : Team member management.</para>
         /// </summary>
         /// <param name="group">Group from which users will be removed.</param>
         /// <param name="users">List of users to be removed from the group.</param>
         /// <param name="returnMembers">Whether to return the list of members in the group.
-        /// Note that the default value will cause all the group members  to be returned in the
+        /// Note that the default value will cause all the group members to be returned in the
         /// response. This may take a long time for large groups.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -1512,7 +1492,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="group">Group from which users will be removed.</param>
         /// <param name="users">List of users to be removed from the group.</param>
         /// <param name="returnMembers">Whether to return the list of members in the group.
-        /// Note that the default value will cause all the group members  to be returned in the
+        /// Note that the default value will cause all the group members to be returned in the
         /// response. This may take a long time for large groups.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -1554,8 +1534,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Sets a member's access type in a group.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Sets a member's access type in a group. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="groupMembersSetAccessTypeArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1586,15 +1566,15 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Sets a member's access type in a group.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Sets a member's access type in a group. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="group">Specify a group.</param>
         /// <param name="user">Identity of a user that is a member of <paramref name="group"
         /// />.</param>
         /// <param name="accessType">New group access type the user will have.</param>
         /// <param name="returnMembers">Whether to return the list of members in the group.
-        /// Note that the default value will cause all the group members  to be returned in the
+        /// Note that the default value will cause all the group members to be returned in the
         /// response. This may take a long time for large groups.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -1623,7 +1603,7 @@ namespace Dropbox.Api.Team.Routes
         /// />.</param>
         /// <param name="accessType">New group access type the user will have.</param>
         /// <param name="returnMembers">Whether to return the list of members in the group.
-        /// Note that the default value will cause all the group members  to be returned in the
+        /// Note that the default value will cause all the group members to be returned in the
         /// response. This may take a long time for large groups.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -1667,8 +1647,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Updates a group's name and/or external ID.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Updates a group's name and/or external ID. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="groupUpdateArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1698,12 +1678,12 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Updates a group's name and/or external ID.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Updates a group's name and/or external ID. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="group">Specify a group.</param>
         /// <param name="returnMembers">Whether to return the list of members in the group.
-        /// Note that the default value will cause all the group members  to be returned in the
+        /// Note that the default value will cause all the group members to be returned in the
         /// response. This may take a long time for large groups.</param>
         /// <param name="newGroupName">Optional argument. Set group name to this if
         /// provided.</param>
@@ -1737,7 +1717,7 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="group">Specify a group.</param>
         /// <param name="returnMembers">Whether to return the list of members in the group.
-        /// Note that the default value will cause all the group members  to be returned in the
+        /// Note that the default value will cause all the group members to be returned in the
         /// response. This may take a long time for large groups.</param>
         /// <param name="newGroupName">Optional argument. Set group name to this if
         /// provided.</param>
@@ -1791,8 +1771,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Creates new legal hold policy. Note: Legal Holds is a paid add-on. Not all
-        /// teams have the feature.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// teams have the feature. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsPolicyCreateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1823,8 +1802,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Creates new legal hold policy. Note: Legal Holds is a paid add-on. Not all
-        /// teams have the feature.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// teams have the feature. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="name">Policy name.</param>
         /// <param name="members">List of team member IDs added to the hold.</param>
@@ -1904,8 +1882,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Gets a legal hold by Id. Note: Legal Holds is a paid add-on. Not all teams
-        /// have the feature.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// have the feature. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsGetPolicyArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1936,8 +1913,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Gets a legal hold by Id. Note: Legal Holds is a paid add-on. Not all teams
-        /// have the feature.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// have the feature. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1993,8 +1969,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>List the file metadata that's under the hold. Note: Legal Holds is a paid
-        /// add-on. Not all teams have the feature.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// add-on. Not all teams have the feature. Permission : Team member file
+        /// access.</para>
         /// </summary>
         /// <param name="legalHoldsListHeldRevisionsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2026,8 +2002,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>List the file metadata that's under the hold. Note: Legal Holds is a paid
-        /// add-on. Not all teams have the feature.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// add-on. Not all teams have the feature. Permission : Team member file
+        /// access.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2084,8 +2060,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Continue listing the file metadata that's under the hold. Note: Legal Holds
-        /// is a paid add-on. Not all teams have the feature.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// is a paid add-on. Not all teams have the feature. Permission : Team member file
+        /// access.</para>
         /// </summary>
         /// <param name="legalHoldsListHeldRevisionsContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2118,8 +2094,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Continue listing the file metadata that's under the hold. Note: Legal Holds
-        /// is a paid add-on. Not all teams have the feature.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// is a paid add-on. Not all teams have the feature. Permission : Team member file
+        /// access.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
         /// <param name="cursor">The cursor idicates where to continue reading file metadata
@@ -2186,8 +2162,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Lists legal holds on a team. Note: Legal Holds is a paid add-on. Not all
-        /// teams have the feature.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// teams have the feature. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsListPoliciesArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2218,8 +2193,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Lists legal holds on a team. Note: Legal Holds is a paid add-on. Not all
-        /// teams have the feature.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// teams have the feature. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="includeReleased">Whether to return holds that were released.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2275,8 +2249,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Releases a legal hold by Id. Note: Legal Holds is a paid add-on. Not all
-        /// teams have the feature.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// teams have the feature. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsPolicyReleaseArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -2306,8 +2279,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Releases a legal hold by Id. Note: Legal Holds is a paid add-on. Not all
-        /// teams have the feature.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// teams have the feature. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -2359,8 +2331,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Updates a legal hold. Note: Legal Holds is a paid add-on. Not all teams have
-        /// the feature.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// the feature. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="legalHoldsPolicyUpdateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2391,8 +2362,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Updates a legal hold. Note: Legal Holds is a paid add-on. Not all teams have
-        /// the feature.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// the feature. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="id">The legal hold Id.</param>
         /// <param name="name">Policy new name.</param>
@@ -2465,8 +2435,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>List all linked applications of the team member.</para>
-        /// <para>Note, this endpoint does not list any team-linked applications.</para>
+        /// <para>List all linked applications of the team member. Note, this endpoint does not
+        /// list any team-linked applications.</para>
         /// </summary>
         /// <param name="listMemberAppsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2497,8 +2467,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>List all linked applications of the team member.</para>
-        /// <para>Note, this endpoint does not list any team-linked applications.</para>
+        /// <para>List all linked applications of the team member. Note, this endpoint does not
+        /// list any team-linked applications.</para>
         /// </summary>
         /// <param name="teamMemberId">The team member id.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2554,8 +2524,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>List all applications linked to the team members' accounts.</para>
-        /// <para>Note, this endpoint does not list any team-linked applications.</para>
+        /// <para>List all applications linked to the team members' accounts. Note, this
+        /// endpoint does not list any team-linked applications.</para>
         /// </summary>
         /// <param name="listMembersAppsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2586,8 +2556,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>List all applications linked to the team members' accounts.</para>
-        /// <para>Note, this endpoint does not list any team-linked applications.</para>
+        /// <para>List all applications linked to the team members' accounts. Note, this
+        /// endpoint does not list any team-linked applications.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListMembersLinkedAppsAsync"
@@ -2651,8 +2621,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>List all applications linked to the team members' accounts.</para>
-        /// <para>Note, this endpoint doesn't list any team-linked applications.</para>
+        /// <para>List all applications linked to the team members' accounts. Note, this
+        /// endpoint doesn't list any team-linked applications.</para>
         /// </summary>
         /// <param name="listTeamAppsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2660,7 +2630,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamAppsError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use LinkedAppsListMembersLinkedAppsAsync instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListTeamAppsResult> LinkedAppsListTeamLinkedAppsAsync(ListTeamAppsArg listTeamAppsArg)
         {
             return this.Transport.SendRpcRequestAsync<ListTeamAppsArg, ListTeamAppsResult, ListTeamAppsError>(listTeamAppsArg, "api", "/team/linked_apps/list_team_linked_apps", "team", global::Dropbox.Api.Team.ListTeamAppsArg.Encoder, global::Dropbox.Api.Team.ListTeamAppsResult.Decoder, global::Dropbox.Api.Team.ListTeamAppsError.Decoder);
@@ -2676,7 +2646,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginLinkedAppsListMembersLinkedApps instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginLinkedAppsListTeamLinkedApps(ListTeamAppsArg listTeamAppsArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.LinkedAppsListTeamLinkedAppsAsync(listTeamAppsArg);
@@ -2685,8 +2655,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>List all applications linked to the team members' accounts.</para>
-        /// <para>Note, this endpoint doesn't list any team-linked applications.</para>
+        /// <para>List all applications linked to the team members' accounts. Note, this
+        /// endpoint doesn't list any team-linked applications.</para>
         /// </summary>
         /// <param name="cursor">At the first call to the <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync" />
@@ -2698,7 +2668,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamAppsError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use LinkedAppsListMembersLinkedAppsAsync instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<ListTeamAppsResult> LinkedAppsListTeamLinkedAppsAsync(string cursor = null)
         {
             var listTeamAppsArg = new ListTeamAppsArg(cursor);
@@ -2720,7 +2690,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginLinkedAppsListMembersLinkedApps instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginLinkedAppsListTeamLinkedApps(string cursor = null,
                                                                   sys.AsyncCallback callback = null,
                                                                   object callbackState = null)
@@ -2740,7 +2710,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListTeamAppsError"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndLinkedAppsListMembersLinkedApps instead.")]
+        [sys.Obsolete("This function is deprecated")]
         public ListTeamAppsResult EndLinkedAppsListTeamLinkedApps(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<ListTeamAppsResult>;
@@ -2787,8 +2757,9 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="appId">The application's unique id.</param>
         /// <param name="teamMemberId">The unique id of the member owning the device.</param>
-        /// <param name="keepAppFolder">This flag is not longer supported, the application
-        /// dedicated folder (in case the application uses  one) will be kept.</param>
+        /// <param name="keepAppFolder">Field is deprecated. This flag is not longer supported,
+        /// the application dedicated folder (in case the application uses one) will be
+        /// kept.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
@@ -2810,8 +2781,9 @@ namespace Dropbox.Api.Team.Routes
         /// </summary>
         /// <param name="appId">The application's unique id.</param>
         /// <param name="teamMemberId">The unique id of the member owning the device.</param>
-        /// <param name="keepAppFolder">This flag is not longer supported, the application
-        /// dedicated folder (in case the application uses  one) will be kept.</param>
+        /// <param name="keepAppFolder">Field is deprecated. This flag is not longer supported,
+        /// the application dedicated folder (in case the application uses one) will be
+        /// kept.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -3286,8 +3258,10 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Get users custom quota. Returns none as the custom quota if none was set. A
-        /// maximum of 1000 members can be specified in a single call.</para>
+        /// <para>Get users custom quota. A maximum of 1000 members can be specified in a
+        /// single call. Note: to apply a custom space limit, a team admin needs to set a
+        /// member space limit for the team first. (the team admin can check the settings here:
+        /// https://www.dropbox.com/team/admin/settings/space).</para>
         /// </summary>
         /// <param name="customQuotaUsersArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3318,8 +3292,10 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Get users custom quota. Returns none as the custom quota if none was set. A
-        /// maximum of 1000 members can be specified in a single call.</para>
+        /// <para>Get users custom quota. A maximum of 1000 members can be specified in a
+        /// single call. Note: to apply a custom space limit, a team admin needs to set a
+        /// member space limit for the team first. (the team admin can check the settings here:
+        /// https://www.dropbox.com/team/admin/settings/space).</para>
         /// </summary>
         /// <param name="users">List of users.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3376,7 +3352,9 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Remove users custom quota. A maximum of 1000 members can be specified in a
-        /// single call.</para>
+        /// single call. Note: to apply a custom space limit, a team admin needs to set a
+        /// member space limit for the team first. (the team admin can check the settings here:
+        /// https://www.dropbox.com/team/admin/settings/space).</para>
         /// </summary>
         /// <param name="customQuotaUsersArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3408,7 +3386,9 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Remove users custom quota. A maximum of 1000 members can be specified in a
-        /// single call.</para>
+        /// single call. Note: to apply a custom space limit, a team admin needs to set a
+        /// member space limit for the team first. (the team admin can check the settings here:
+        /// https://www.dropbox.com/team/admin/settings/space).</para>
         /// </summary>
         /// <param name="users">List of users.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3464,8 +3444,11 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Set users custom quota. Custom quota has to be at least 15GB. A maximum of
-        /// 1000 members can be specified in a single call.</para>
+        /// <para>Set users custom quota. Custom quota has to be at least 2GB. A maximum of
+        /// 1000 members can be specified in a single call. Note: to apply a custom space
+        /// limit, a team admin needs to set a member space limit for the team first. (the team
+        /// admin can check the settings here:
+        /// https://www.dropbox.com/team/admin/settings/space).</para>
         /// </summary>
         /// <param name="setCustomQuotaArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3496,8 +3479,11 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Set users custom quota. Custom quota has to be at least 15GB. A maximum of
-        /// 1000 members can be specified in a single call.</para>
+        /// <para>Set users custom quota. Custom quota has to be at least 2GB. A maximum of
+        /// 1000 members can be specified in a single call. Note: to apply a custom space
+        /// limit, a team admin needs to set a member space limit for the team first. (the team
+        /// admin can check the settings here:
+        /// https://www.dropbox.com/team/admin/settings/space).</para>
         /// </summary>
         /// <param name="usersAndQuotas">List of users and their custom quotas.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3553,125 +3539,16 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Adds members to a team.</para>
-        /// <para>Permission : Team member management</para>
-        /// <para>A maximum of 20 members can be specified in a single call.</para>
-        /// <para>If no Dropbox account exists with the email address specified, a new Dropbox
-        /// account will be created with the given email address, and that account will be
-        /// invited to the team.</para>
-        /// <para>If a personal Dropbox account exists with the email address specified in the
-        /// call, this call will create a placeholder Dropbox account for the user on the team
-        /// and send an email inviting the user to migrate their existing personal account onto
-        /// the team.</para>
-        /// <para>Team member management apps are required to set an initial given_name and
-        /// surname for a user to use in the team invitation and for 'Perform as team member'
-        /// actions taken on the user before they become 'active'.</para>
-        /// </summary>
-        /// <param name="membersAddV2Arg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        public t.Task<MembersAddLaunchV2Result> MembersAddV2Async(MembersAddV2Arg membersAddV2Arg)
-        {
-            return this.Transport.SendRpcRequestAsync<MembersAddV2Arg, MembersAddLaunchV2Result, enc.Empty>(membersAddV2Arg, "api", "/team/members/add_v2", "team", global::Dropbox.Api.Team.MembersAddV2Arg.Encoder, global::Dropbox.Api.Team.MembersAddLaunchV2Result.Decoder, enc.EmptyDecoder.Instance);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the members add route.</para>
-        /// </summary>
-        /// <param name="membersAddV2Arg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersAddV2(MembersAddV2Arg membersAddV2Arg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.MembersAddV2Async(membersAddV2Arg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Adds members to a team.</para>
-        /// <para>Permission : Team member management</para>
-        /// <para>A maximum of 20 members can be specified in a single call.</para>
-        /// <para>If no Dropbox account exists with the email address specified, a new Dropbox
-        /// account will be created with the given email address, and that account will be
-        /// invited to the team.</para>
-        /// <para>If a personal Dropbox account exists with the email address specified in the
-        /// call, this call will create a placeholder Dropbox account for the user on the team
-        /// and send an email inviting the user to migrate their existing personal account onto
-        /// the team.</para>
-        /// <para>Team member management apps are required to set an initial given_name and
-        /// surname for a user to use in the team invitation and for 'Perform as team member'
-        /// actions taken on the user before they become 'active'.</para>
-        /// </summary>
-        /// <param name="newMembers">Details of new members to be added to the team.</param>
-        /// <param name="forceAsync">Whether to force the add to happen asynchronously.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        public t.Task<MembersAddLaunchV2Result> MembersAddV2Async(col.IEnumerable<MemberAddV2Arg> newMembers,
-                                                                  bool forceAsync = false)
-        {
-            var membersAddV2Arg = new MembersAddV2Arg(newMembers,
-                                                      forceAsync);
-
-            return this.MembersAddV2Async(membersAddV2Arg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the members add route.</para>
-        /// </summary>
-        /// <param name="newMembers">Details of new members to be added to the team.</param>
-        /// <param name="forceAsync">Whether to force the add to happen asynchronously.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersAddV2(col.IEnumerable<MemberAddV2Arg> newMembers,
-                                                  bool forceAsync = false,
-                                                  sys.AsyncCallback callback = null,
-                                                  object callbackState = null)
-        {
-            var membersAddV2Arg = new MembersAddV2Arg(newMembers,
-                                                      forceAsync);
-
-            return this.BeginMembersAddV2(membersAddV2Arg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the members add route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        public MembersAddLaunchV2Result EndMembersAddV2(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<MembersAddLaunchV2Result>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Adds members to a team.</para>
-        /// <para>Permission : Team member management</para>
-        /// <para>A maximum of 20 members can be specified in a single call.</para>
-        /// <para>If no Dropbox account exists with the email address specified, a new Dropbox
-        /// account will be created with the given email address, and that account will be
-        /// invited to the team.</para>
-        /// <para>If a personal Dropbox account exists with the email address specified in the
-        /// call, this call will create a placeholder Dropbox account for the user on the team
-        /// and send an email inviting the user to migrate their existing personal account onto
-        /// the team.</para>
-        /// <para>Team member management apps are required to set an initial given_name and
-        /// surname for a user to use in the team invitation and for 'Perform as team member'
-        /// actions taken on the user before they become 'active'.</para>
+        /// <para>Adds members to a team. Permission : Team member management A maximum of 20
+        /// members can be specified in a single call. If no Dropbox account exists with the
+        /// email address specified, a new Dropbox account will be created with the given email
+        /// address, and that account will be invited to the team. If a personal Dropbox
+        /// account exists with the email address specified in the call, this call will create
+        /// a placeholder Dropbox account for the user on the team and send an email inviting
+        /// the user to migrate their existing personal account onto the team. Team member
+        /// management apps are required to set an initial given_name and surname for a user to
+        /// use in the team invitation and for 'Perform as team member' actions taken on the
+        /// user before they become 'active'.</para>
         /// </summary>
         /// <param name="membersAddArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3698,19 +3575,16 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Adds members to a team.</para>
-        /// <para>Permission : Team member management</para>
-        /// <para>A maximum of 20 members can be specified in a single call.</para>
-        /// <para>If no Dropbox account exists with the email address specified, a new Dropbox
-        /// account will be created with the given email address, and that account will be
-        /// invited to the team.</para>
-        /// <para>If a personal Dropbox account exists with the email address specified in the
-        /// call, this call will create a placeholder Dropbox account for the user on the team
-        /// and send an email inviting the user to migrate their existing personal account onto
-        /// the team.</para>
-        /// <para>Team member management apps are required to set an initial given_name and
-        /// surname for a user to use in the team invitation and for 'Perform as team member'
-        /// actions taken on the user before they become 'active'.</para>
+        /// <para>Adds members to a team. Permission : Team member management A maximum of 20
+        /// members can be specified in a single call. If no Dropbox account exists with the
+        /// email address specified, a new Dropbox account will be created with the given email
+        /// address, and that account will be invited to the team. If a personal Dropbox
+        /// account exists with the email address specified in the call, this call will create
+        /// a placeholder Dropbox account for the user on the team and send an email inviting
+        /// the user to migrate their existing personal account onto the team. Team member
+        /// management apps are required to set an initial given_name and surname for a user to
+        /// use in the team invitation and for 'Perform as team member' actions taken on the
+        /// user before they become 'active'.</para>
         /// </summary>
         /// <param name="newMembers">Details of new members to be added to the team.</param>
         /// <param name="forceAsync">Whether to force the add to happen asynchronously.</param>
@@ -3765,90 +3639,91 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Once an async_job_id is returned from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddV2Async" /> , use this to
-        /// poll the status of the asynchronous request.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Adds members to a team. Permission : Team member management A maximum of 20
+        /// members can be specified in a single call. If no Dropbox account exists with the
+        /// email address specified, a new Dropbox account will be created with the given email
+        /// address, and that account will be invited to the team. If a personal Dropbox
+        /// account exists with the email address specified in the call, this call will create
+        /// a placeholder Dropbox account for the user on the team and send an email inviting
+        /// the user to migrate their existing personal account onto the team.</para>
         /// </summary>
-        /// <param name="pollArg">The request parameters</param>
+        /// <param name="membersAddV2Arg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<MembersAddJobStatusV2Result> MembersAddJobStatusGetV2Async(global::Dropbox.Api.Async.PollArg pollArg)
+        public t.Task<MembersAddLaunchV2Result> MembersAddV2Async(MembersAddV2Arg membersAddV2Arg)
         {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, MembersAddJobStatusV2Result, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/add/job_status/get_v2", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Team.MembersAddJobStatusV2Result.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersAddV2Arg, MembersAddLaunchV2Result, enc.Empty>(membersAddV2Arg, "api", "/team/members/add_v2", "team", global::Dropbox.Api.Team.MembersAddV2Arg.Encoder, global::Dropbox.Api.Team.MembersAddLaunchV2Result.Decoder, enc.EmptyDecoder.Instance);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the members add job status get route.</para>
+        /// <para>Begins an asynchronous send to the members add route.</para>
         /// </summary>
-        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="membersAddV2Arg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersAddJobStatusGetV2(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginMembersAddV2(MembersAddV2Arg membersAddV2Arg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.MembersAddJobStatusGetV2Async(pollArg);
+            var task = this.MembersAddV2Async(membersAddV2Arg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Once an async_job_id is returned from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddV2Async" /> , use this to
-        /// poll the status of the asynchronous request.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Adds members to a team. Permission : Team member management A maximum of 20
+        /// members can be specified in a single call. If no Dropbox account exists with the
+        /// email address specified, a new Dropbox account will be created with the given email
+        /// address, and that account will be invited to the team. If a personal Dropbox
+        /// account exists with the email address specified in the call, this call will create
+        /// a placeholder Dropbox account for the user on the team and send an email inviting
+        /// the user to migrate their existing personal account onto the team.</para>
         /// </summary>
-        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
-        /// response returned from the method that launched the job.</param>
+        /// <param name="newMembers">Details of new members to be added to the team.</param>
+        /// <param name="forceAsync">Whether to force the add to happen asynchronously.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<MembersAddJobStatusV2Result> MembersAddJobStatusGetV2Async(string asyncJobId)
+        public t.Task<MembersAddLaunchV2Result> MembersAddV2Async(col.IEnumerable<MemberAddV2Arg> newMembers,
+                                                                  bool forceAsync = false)
         {
-            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+            var membersAddV2Arg = new MembersAddV2Arg(newMembers,
+                                                      forceAsync);
 
-            return this.MembersAddJobStatusGetV2Async(pollArg);
+            return this.MembersAddV2Async(membersAddV2Arg);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the members add job status get route.</para>
+        /// <para>Begins an asynchronous send to the members add route.</para>
         /// </summary>
-        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
-        /// response returned from the method that launched the job.</param>
+        /// <param name="newMembers">Details of new members to be added to the team.</param>
+        /// <param name="forceAsync">Whether to force the add to happen asynchronously.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersAddJobStatusGetV2(string asyncJobId,
-                                                              sys.AsyncCallback callback,
-                                                              object callbackState = null)
+        public sys.IAsyncResult BeginMembersAddV2(col.IEnumerable<MemberAddV2Arg> newMembers,
+                                                  bool forceAsync = false,
+                                                  sys.AsyncCallback callback = null,
+                                                  object callbackState = null)
         {
-            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+            var membersAddV2Arg = new MembersAddV2Arg(newMembers,
+                                                      forceAsync);
 
-            return this.BeginMembersAddJobStatusGetV2(pollArg, callback, callbackState);
+            return this.BeginMembersAddV2(membersAddV2Arg, callback, callbackState);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the members add job status get
-        /// route to complete</para>
+        /// <para>Waits for the pending asynchronous send to the members add route to
+        /// complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public MembersAddJobStatusV2Result EndMembersAddJobStatusGetV2(sys.IAsyncResult asyncResult)
+        public MembersAddLaunchV2Result EndMembersAddV2(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<MembersAddJobStatusV2Result>;
+            var task = asyncResult as t.Task<MembersAddLaunchV2Result>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -3860,8 +3735,7 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Once an async_job_id is returned from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddAsync" /> , use this to poll
-        /// the status of the asynchronous request.</para>
-        /// <para>Permission : Team member management.</para>
+        /// the status of the asynchronous request. Permission : Team member management.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -3893,8 +3767,7 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Once an async_job_id is returned from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddAsync" /> , use this to poll
-        /// the status of the asynchronous request.</para>
-        /// <para>Permission : Team member management.</para>
+        /// the status of the asynchronous request. Permission : Team member management.</para>
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
@@ -3951,75 +3824,79 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Deletes a team member's profile photo.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Once an async_job_id is returned from <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddV2Async" /> , use this to
+        /// poll the status of the asynchronous request. Permission : Team member
+        /// management.</para>
         /// </summary>
-        /// <param name="membersDeleteProfilePhotoArg">The request parameters</param>
+        /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="MembersDeleteProfilePhotoError"/>.</exception>
-        public t.Task<TeamMemberInfoV2Result> MembersDeleteProfilePhotoV2Async(MembersDeleteProfilePhotoArg membersDeleteProfilePhotoArg)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<MembersAddJobStatusV2Result> MembersAddJobStatusGetV2Async(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<MembersDeleteProfilePhotoArg, TeamMemberInfoV2Result, MembersDeleteProfilePhotoError>(membersDeleteProfilePhotoArg, "api", "/team/members/delete_profile_photo_v2", "team", global::Dropbox.Api.Team.MembersDeleteProfilePhotoArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfoV2Result.Decoder, global::Dropbox.Api.Team.MembersDeleteProfilePhotoError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, MembersAddJobStatusV2Result, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/add/job_status/get_v2", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Team.MembersAddJobStatusV2Result.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the members delete profile photo route.</para>
+        /// <para>Begins an asynchronous send to the members add job status get route.</para>
         /// </summary>
-        /// <param name="membersDeleteProfilePhotoArg">The request parameters.</param>
+        /// <param name="pollArg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersDeleteProfilePhotoV2(MembersDeleteProfilePhotoArg membersDeleteProfilePhotoArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginMembersAddJobStatusGetV2(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.MembersDeleteProfilePhotoV2Async(membersDeleteProfilePhotoArg);
+            var task = this.MembersAddJobStatusGetV2Async(pollArg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Deletes a team member's profile photo.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Once an async_job_id is returned from <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddV2Async" /> , use this to
+        /// poll the status of the asynchronous request. Permission : Team member
+        /// management.</para>
         /// </summary>
-        /// <param name="user">Identity of the user whose profile photo will be
-        /// deleted.</param>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="MembersDeleteProfilePhotoError"/>.</exception>
-        public t.Task<TeamMemberInfoV2Result> MembersDeleteProfilePhotoV2Async(UserSelectorArg user)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<MembersAddJobStatusV2Result> MembersAddJobStatusGetV2Async(string asyncJobId)
         {
-            var membersDeleteProfilePhotoArg = new MembersDeleteProfilePhotoArg(user);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
-            return this.MembersDeleteProfilePhotoV2Async(membersDeleteProfilePhotoArg);
+            return this.MembersAddJobStatusGetV2Async(pollArg);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the members delete profile photo route.</para>
+        /// <para>Begins an asynchronous send to the members add job status get route.</para>
         /// </summary>
-        /// <param name="user">Identity of the user whose profile photo will be
-        /// deleted.</param>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersDeleteProfilePhotoV2(UserSelectorArg user,
-                                                                 sys.AsyncCallback callback,
-                                                                 object callbackState = null)
+        public sys.IAsyncResult BeginMembersAddJobStatusGetV2(string asyncJobId,
+                                                              sys.AsyncCallback callback,
+                                                              object callbackState = null)
         {
-            var membersDeleteProfilePhotoArg = new MembersDeleteProfilePhotoArg(user);
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
-            return this.BeginMembersDeleteProfilePhotoV2(membersDeleteProfilePhotoArg, callback, callbackState);
+            return this.BeginMembersAddJobStatusGetV2(pollArg, callback, callbackState);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the members delete profile photo
+        /// <para>Waits for the pending asynchronous send to the members add job status get
         /// route to complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
@@ -4027,10 +3904,10 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="MembersDeleteProfilePhotoError"/>.</exception>
-        public TeamMemberInfoV2Result EndMembersDeleteProfilePhotoV2(sys.IAsyncResult asyncResult)
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public MembersAddJobStatusV2Result EndMembersAddJobStatusGetV2(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<TeamMemberInfoV2Result>;
+            var task = asyncResult as t.Task<MembersAddJobStatusV2Result>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -4040,8 +3917,100 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Deletes a team member's profile photo.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Permanently delete the files of a user who has been removed from the team.
+        /// After permanent deletion, those files will not be available to be transferred to
+        /// another team member. Permission : Team member management Exactly one of
+        /// team_member_id, email, or external_id must be provided to identify the user
+        /// account.</para>
+        /// </summary>
+        /// <param name="membersFormerMemberArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersDeleteFormerMemberFilesError"/>.</exception>
+        public t.Task MembersDeleteFormerMemberFilesAsync(MembersFormerMemberArg membersFormerMemberArg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersFormerMemberArg, enc.Empty, MembersDeleteFormerMemberFilesError>(membersFormerMemberArg, "api", "/team/members/delete_former_member_files", "team", global::Dropbox.Api.Team.MembersFormerMemberArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.MembersDeleteFormerMemberFilesError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members delete former member files
+        /// route.</para>
+        /// </summary>
+        /// <param name="membersFormerMemberArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersDeleteFormerMemberFiles(MembersFormerMemberArg membersFormerMemberArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersDeleteFormerMemberFilesAsync(membersFormerMemberArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Permanently delete the files of a user who has been removed from the team.
+        /// After permanent deletion, those files will not be available to be transferred to
+        /// another team member. Permission : Team member management Exactly one of
+        /// team_member_id, email, or external_id must be provided to identify the user
+        /// account.</para>
+        /// </summary>
+        /// <param name="user">Identity of user whose files will be permanently
+        /// deleted.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersDeleteFormerMemberFilesError"/>.</exception>
+        public t.Task MembersDeleteFormerMemberFilesAsync(UserSelectorArg user)
+        {
+            var membersFormerMemberArg = new MembersFormerMemberArg(user);
+
+            return this.MembersDeleteFormerMemberFilesAsync(membersFormerMemberArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members delete former member files
+        /// route.</para>
+        /// </summary>
+        /// <param name="user">Identity of user whose files will be permanently
+        /// deleted.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersDeleteFormerMemberFiles(UserSelectorArg user,
+                                                                    sys.AsyncCallback callback,
+                                                                    object callbackState = null)
+        {
+            var membersFormerMemberArg = new MembersFormerMemberArg(user);
+
+            return this.BeginMembersDeleteFormerMemberFiles(membersFormerMemberArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members delete former member
+        /// files route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersDeleteFormerMemberFilesError"/>.</exception>
+        public void EndMembersDeleteFormerMemberFiles(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+        }
+
+        /// <summary>
+        /// <para>Deletes a team member's profile photo. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="membersDeleteProfilePhotoArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -4071,8 +4040,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Deletes a team member's profile photo.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Deletes a team member's profile photo. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="user">Identity of the user whose profile photo will be
         /// deleted.</param>
@@ -4129,10 +4098,98 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
+        /// <para>Deletes a team member's profile photo. Permission : Team member
+        /// management.</para>
+        /// </summary>
+        /// <param name="membersDeleteProfilePhotoArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersDeleteProfilePhotoError"/>.</exception>
+        public t.Task<TeamMemberInfoV2Result> MembersDeleteProfilePhotoV2Async(MembersDeleteProfilePhotoArg membersDeleteProfilePhotoArg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersDeleteProfilePhotoArg, TeamMemberInfoV2Result, MembersDeleteProfilePhotoError>(membersDeleteProfilePhotoArg, "api", "/team/members/delete_profile_photo_v2", "team", global::Dropbox.Api.Team.MembersDeleteProfilePhotoArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfoV2Result.Decoder, global::Dropbox.Api.Team.MembersDeleteProfilePhotoError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members delete profile photo route.</para>
+        /// </summary>
+        /// <param name="membersDeleteProfilePhotoArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersDeleteProfilePhotoV2(MembersDeleteProfilePhotoArg membersDeleteProfilePhotoArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersDeleteProfilePhotoV2Async(membersDeleteProfilePhotoArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Deletes a team member's profile photo. Permission : Team member
+        /// management.</para>
+        /// </summary>
+        /// <param name="user">Identity of the user whose profile photo will be
+        /// deleted.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersDeleteProfilePhotoError"/>.</exception>
+        public t.Task<TeamMemberInfoV2Result> MembersDeleteProfilePhotoV2Async(UserSelectorArg user)
+        {
+            var membersDeleteProfilePhotoArg = new MembersDeleteProfilePhotoArg(user);
+
+            return this.MembersDeleteProfilePhotoV2Async(membersDeleteProfilePhotoArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members delete profile photo route.</para>
+        /// </summary>
+        /// <param name="user">Identity of the user whose profile photo will be
+        /// deleted.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersDeleteProfilePhotoV2(UserSelectorArg user,
+                                                                 sys.AsyncCallback callback,
+                                                                 object callbackState = null)
+        {
+            var membersDeleteProfilePhotoArg = new MembersDeleteProfilePhotoArg(user);
+
+            return this.BeginMembersDeleteProfilePhotoV2(membersDeleteProfilePhotoArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members delete profile photo
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersDeleteProfilePhotoError"/>.</exception>
+        public TeamMemberInfoV2Result EndMembersDeleteProfilePhotoV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamMemberInfoV2Result>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Get available TeamMemberRoles for the connected team. To be used with <see
-        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersSetAdminPermissionsV2Async"
-        /// />.</para>
-        /// <para>Permission : Team member management.</para>
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersSetAdminPermissionsV2Async" />.
+        /// Permission : Team member management.</para>
         /// </summary>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -4176,102 +4233,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Returns information about multiple team members.</para>
-        /// <para>Permission : Team information</para>
-        /// <para>This endpoint will return <see
-        /// cref="Dropbox.Api.Team.MembersGetInfoItem.IdNotFound" />, for IDs (or emails) that
-        /// cannot be matched to a valid team member.</para>
-        /// </summary>
-        /// <param name="membersGetInfoV2Arg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="MembersGetInfoError"/>.</exception>
-        public t.Task<MembersGetInfoV2Result> MembersGetInfoV2Async(MembersGetInfoV2Arg membersGetInfoV2Arg)
-        {
-            return this.Transport.SendRpcRequestAsync<MembersGetInfoV2Arg, MembersGetInfoV2Result, MembersGetInfoError>(membersGetInfoV2Arg, "api", "/team/members/get_info_v2", "team", global::Dropbox.Api.Team.MembersGetInfoV2Arg.Encoder, global::Dropbox.Api.Team.MembersGetInfoV2Result.Decoder, global::Dropbox.Api.Team.MembersGetInfoError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the members get info route.</para>
-        /// </summary>
-        /// <param name="membersGetInfoV2Arg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersGetInfoV2(MembersGetInfoV2Arg membersGetInfoV2Arg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.MembersGetInfoV2Async(membersGetInfoV2Arg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Returns information about multiple team members.</para>
-        /// <para>Permission : Team information</para>
-        /// <para>This endpoint will return <see
-        /// cref="Dropbox.Api.Team.MembersGetInfoItem.IdNotFound" />, for IDs (or emails) that
-        /// cannot be matched to a valid team member.</para>
-        /// </summary>
-        /// <param name="members">List of team members.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="MembersGetInfoError"/>.</exception>
-        public t.Task<MembersGetInfoV2Result> MembersGetInfoV2Async(col.IEnumerable<UserSelectorArg> members)
-        {
-            var membersGetInfoV2Arg = new MembersGetInfoV2Arg(members);
-
-            return this.MembersGetInfoV2Async(membersGetInfoV2Arg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the members get info route.</para>
-        /// </summary>
-        /// <param name="members">List of team members.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersGetInfoV2(col.IEnumerable<UserSelectorArg> members,
-                                                      sys.AsyncCallback callback,
-                                                      object callbackState = null)
-        {
-            var membersGetInfoV2Arg = new MembersGetInfoV2Arg(members);
-
-            return this.BeginMembersGetInfoV2(membersGetInfoV2Arg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the members get info route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="MembersGetInfoError"/>.</exception>
-        public MembersGetInfoV2Result EndMembersGetInfoV2(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<MembersGetInfoV2Result>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Returns information about multiple team members.</para>
-        /// <para>Permission : Team information</para>
-        /// <para>This endpoint will return <see
+        /// <para>Returns information about multiple team members. Permission : Team
+        /// information This endpoint will return <see
         /// cref="Dropbox.Api.Team.MembersGetInfoItem.IdNotFound" />, for IDs (or emails) that
         /// cannot be matched to a valid team member.</para>
         /// </summary>
@@ -4303,9 +4266,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Returns information about multiple team members.</para>
-        /// <para>Permission : Team information</para>
-        /// <para>This endpoint will return <see
+        /// <para>Returns information about multiple team members. Permission : Team
+        /// information This endpoint will return <see
         /// cref="Dropbox.Api.Team.MembersGetInfoItem.IdNotFound" />, for IDs (or emails) that
         /// cannot be matched to a valid team member.</para>
         /// </summary>
@@ -4362,79 +4324,77 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Lists members of a team.</para>
-        /// <para>Permission : Team information.</para>
+        /// <para>Returns information about multiple team members. Permission : Team
+        /// information This endpoint will return <see
+        /// cref="Dropbox.Api.Team.MembersGetInfoItem.IdNotFound" />, for IDs (or emails) that
+        /// cannot be matched to a valid team member.</para>
         /// </summary>
-        /// <param name="membersListArg">The request parameters</param>
+        /// <param name="membersGetInfoV2Arg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="MembersListError"/>.</exception>
-        public t.Task<MembersListV2Result> MembersListV2Async(MembersListArg membersListArg)
+        /// cref="MembersGetInfoError"/>.</exception>
+        public t.Task<MembersGetInfoV2Result> MembersGetInfoV2Async(MembersGetInfoV2Arg membersGetInfoV2Arg)
         {
-            return this.Transport.SendRpcRequestAsync<MembersListArg, MembersListV2Result, MembersListError>(membersListArg, "api", "/team/members/list_v2", "team", global::Dropbox.Api.Team.MembersListArg.Encoder, global::Dropbox.Api.Team.MembersListV2Result.Decoder, global::Dropbox.Api.Team.MembersListError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersGetInfoV2Arg, MembersGetInfoV2Result, MembersGetInfoError>(membersGetInfoV2Arg, "api", "/team/members/get_info_v2", "team", global::Dropbox.Api.Team.MembersGetInfoV2Arg.Encoder, global::Dropbox.Api.Team.MembersGetInfoV2Result.Decoder, global::Dropbox.Api.Team.MembersGetInfoError.Decoder);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the members list route.</para>
+        /// <para>Begins an asynchronous send to the members get info route.</para>
         /// </summary>
-        /// <param name="membersListArg">The request parameters.</param>
+        /// <param name="membersGetInfoV2Arg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersListV2(MembersListArg membersListArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginMembersGetInfoV2(MembersGetInfoV2Arg membersGetInfoV2Arg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.MembersListV2Async(membersListArg);
+            var task = this.MembersGetInfoV2Async(membersGetInfoV2Arg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Lists members of a team.</para>
-        /// <para>Permission : Team information.</para>
+        /// <para>Returns information about multiple team members. Permission : Team
+        /// information This endpoint will return <see
+        /// cref="Dropbox.Api.Team.MembersGetInfoItem.IdNotFound" />, for IDs (or emails) that
+        /// cannot be matched to a valid team member.</para>
         /// </summary>
-        /// <param name="limit">Number of results to return per call.</param>
-        /// <param name="includeRemoved">Whether to return removed members.</param>
+        /// <param name="members">List of team members.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="MembersListError"/>.</exception>
-        public t.Task<MembersListV2Result> MembersListV2Async(uint limit = 1000,
-                                                              bool includeRemoved = false)
+        /// cref="MembersGetInfoError"/>.</exception>
+        public t.Task<MembersGetInfoV2Result> MembersGetInfoV2Async(col.IEnumerable<UserSelectorArg> members)
         {
-            var membersListArg = new MembersListArg(limit,
-                                                    includeRemoved);
+            var membersGetInfoV2Arg = new MembersGetInfoV2Arg(members);
 
-            return this.MembersListV2Async(membersListArg);
+            return this.MembersGetInfoV2Async(membersGetInfoV2Arg);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the members list route.</para>
+        /// <para>Begins an asynchronous send to the members get info route.</para>
         /// </summary>
-        /// <param name="limit">Number of results to return per call.</param>
-        /// <param name="includeRemoved">Whether to return removed members.</param>
+        /// <param name="members">List of team members.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersListV2(uint limit = 1000,
-                                                   bool includeRemoved = false,
-                                                   sys.AsyncCallback callback = null,
-                                                   object callbackState = null)
+        public sys.IAsyncResult BeginMembersGetInfoV2(col.IEnumerable<UserSelectorArg> members,
+                                                      sys.AsyncCallback callback,
+                                                      object callbackState = null)
         {
-            var membersListArg = new MembersListArg(limit,
-                                                    includeRemoved);
+            var membersGetInfoV2Arg = new MembersGetInfoV2Arg(members);
 
-            return this.BeginMembersListV2(membersListArg, callback, callbackState);
+            return this.BeginMembersGetInfoV2(membersGetInfoV2Arg, callback, callbackState);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the members list route to
+        /// <para>Waits for the pending asynchronous send to the members get info route to
         /// complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
@@ -4442,10 +4402,10 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="MembersListError"/>.</exception>
-        public MembersListV2Result EndMembersListV2(sys.IAsyncResult asyncResult)
+        /// cref="MembersGetInfoError"/>.</exception>
+        public MembersGetInfoV2Result EndMembersGetInfoV2(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<MembersListV2Result>;
+            var task = asyncResult as t.Task<MembersGetInfoV2Result>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
@@ -4455,8 +4415,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Lists members of a team.</para>
-        /// <para>Permission : Team information.</para>
+        /// <para>Lists members of a team. Permission : Team information.</para>
         /// </summary>
         /// <param name="membersListArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -4486,8 +4445,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Lists members of a team.</para>
-        /// <para>Permission : Team information.</para>
+        /// <para>Lists members of a team. Permission : Team information.</para>
         /// </summary>
         /// <param name="limit">Number of results to return per call.</param>
         /// <param name="includeRemoved">Whether to return removed members.</param>
@@ -4548,79 +4506,77 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Once a cursor has been retrieved from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersListV2Async" />, use this to
-        /// paginate through all team members.</para>
-        /// <para>Permission : Team information.</para>
+        /// <para>Lists members of a team. Permission : Team information.</para>
         /// </summary>
-        /// <param name="membersListContinueArg">The request parameters</param>
+        /// <param name="membersListArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="MembersListContinueError"/>.</exception>
-        public t.Task<MembersListV2Result> MembersListContinueV2Async(MembersListContinueArg membersListContinueArg)
+        /// cref="MembersListError"/>.</exception>
+        public t.Task<MembersListV2Result> MembersListV2Async(MembersListArg membersListArg)
         {
-            return this.Transport.SendRpcRequestAsync<MembersListContinueArg, MembersListV2Result, MembersListContinueError>(membersListContinueArg, "api", "/team/members/list/continue_v2", "team", global::Dropbox.Api.Team.MembersListContinueArg.Encoder, global::Dropbox.Api.Team.MembersListV2Result.Decoder, global::Dropbox.Api.Team.MembersListContinueError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersListArg, MembersListV2Result, MembersListError>(membersListArg, "api", "/team/members/list_v2", "team", global::Dropbox.Api.Team.MembersListArg.Encoder, global::Dropbox.Api.Team.MembersListV2Result.Decoder, global::Dropbox.Api.Team.MembersListError.Decoder);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the members list continue route.</para>
+        /// <para>Begins an asynchronous send to the members list route.</para>
         /// </summary>
-        /// <param name="membersListContinueArg">The request parameters.</param>
+        /// <param name="membersListArg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersListContinueV2(MembersListContinueArg membersListContinueArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginMembersListV2(MembersListArg membersListArg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.MembersListContinueV2Async(membersListContinueArg);
+            var task = this.MembersListV2Async(membersListArg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Once a cursor has been retrieved from <see
-        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersListV2Async" />, use this to
-        /// paginate through all team members.</para>
-        /// <para>Permission : Team information.</para>
+        /// <para>Lists members of a team. Permission : Team information.</para>
         /// </summary>
-        /// <param name="cursor">Indicates from what point to get the next set of
-        /// members.</param>
+        /// <param name="limit">Number of results to return per call.</param>
+        /// <param name="includeRemoved">Whether to return removed members.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="MembersListContinueError"/>.</exception>
-        public t.Task<MembersListV2Result> MembersListContinueV2Async(string cursor)
+        /// cref="MembersListError"/>.</exception>
+        public t.Task<MembersListV2Result> MembersListV2Async(uint limit = 1000,
+                                                              bool includeRemoved = false)
         {
-            var membersListContinueArg = new MembersListContinueArg(cursor);
+            var membersListArg = new MembersListArg(limit,
+                                                    includeRemoved);
 
-            return this.MembersListContinueV2Async(membersListContinueArg);
+            return this.MembersListV2Async(membersListArg);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the members list continue route.</para>
+        /// <para>Begins an asynchronous send to the members list route.</para>
         /// </summary>
-        /// <param name="cursor">Indicates from what point to get the next set of
-        /// members.</param>
+        /// <param name="limit">Number of results to return per call.</param>
+        /// <param name="includeRemoved">Whether to return removed members.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersListContinueV2(string cursor,
-                                                           sys.AsyncCallback callback,
-                                                           object callbackState = null)
+        public sys.IAsyncResult BeginMembersListV2(uint limit = 1000,
+                                                   bool includeRemoved = false,
+                                                   sys.AsyncCallback callback = null,
+                                                   object callbackState = null)
         {
-            var membersListContinueArg = new MembersListContinueArg(cursor);
+            var membersListArg = new MembersListArg(limit,
+                                                    includeRemoved);
 
-            return this.BeginMembersListContinueV2(membersListContinueArg, callback, callbackState);
+            return this.BeginMembersListV2(membersListArg, callback, callbackState);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the members list continue route to
+        /// <para>Waits for the pending asynchronous send to the members list route to
         /// complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
@@ -4628,8 +4584,8 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="MembersListContinueError"/>.</exception>
-        public MembersListV2Result EndMembersListContinueV2(sys.IAsyncResult asyncResult)
+        /// cref="MembersListError"/>.</exception>
+        public MembersListV2Result EndMembersListV2(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<MembersListV2Result>;
             if (task == null)
@@ -4643,8 +4599,7 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersListAsync" />, use this to
-        /// paginate through all team members.</para>
-        /// <para>Permission : Team information.</para>
+        /// paginate through all team members. Permission : Team information.</para>
         /// </summary>
         /// <param name="membersListContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -4676,8 +4631,7 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersListAsync" />, use this to
-        /// paginate through all team members.</para>
-        /// <para>Permission : Team information.</para>
+        /// paginate through all team members. Permission : Team information.</para>
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of
         /// members.</param>
@@ -4734,12 +4688,102 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
+        /// <para>Once a cursor has been retrieved from <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersListV2Async" />, use this to
+        /// paginate through all team members. Permission : Team information.</para>
+        /// </summary>
+        /// <param name="membersListContinueArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersListContinueError"/>.</exception>
+        public t.Task<MembersListV2Result> MembersListContinueV2Async(MembersListContinueArg membersListContinueArg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersListContinueArg, MembersListV2Result, MembersListContinueError>(membersListContinueArg, "api", "/team/members/list/continue_v2", "team", global::Dropbox.Api.Team.MembersListContinueArg.Encoder, global::Dropbox.Api.Team.MembersListV2Result.Decoder, global::Dropbox.Api.Team.MembersListContinueError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members list continue route.</para>
+        /// </summary>
+        /// <param name="membersListContinueArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersListContinueV2(MembersListContinueArg membersListContinueArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersListContinueV2Async(membersListContinueArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Once a cursor has been retrieved from <see
+        /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersListV2Async" />, use this to
+        /// paginate through all team members. Permission : Team information.</para>
+        /// </summary>
+        /// <param name="cursor">Indicates from what point to get the next set of
+        /// members.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersListContinueError"/>.</exception>
+        public t.Task<MembersListV2Result> MembersListContinueV2Async(string cursor)
+        {
+            var membersListContinueArg = new MembersListContinueArg(cursor);
+
+            return this.MembersListContinueV2Async(membersListContinueArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members list continue route.</para>
+        /// </summary>
+        /// <param name="cursor">Indicates from what point to get the next set of
+        /// members.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersListContinueV2(string cursor,
+                                                           sys.AsyncCallback callback,
+                                                           object callbackState = null)
+        {
+            var membersListContinueArg = new MembersListContinueArg(cursor);
+
+            return this.BeginMembersListContinueV2(membersListContinueArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members list continue route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersListContinueError"/>.</exception>
+        public MembersListV2Result EndMembersListContinueV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<MembersListV2Result>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Moves removed member's files to a different member. This endpoint initiates
         /// an asynchronous job. To obtain the final result of the job, the client should
         /// periodically poll <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersMoveFormerMemberFilesJobStatusCheckAsync"
-        /// />.</para>
-        /// <para>Permission : Team member management.</para>
+        /// />. Permission : Team member management.</para>
         /// </summary>
         /// <param name="membersDataTransferArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -4774,8 +4818,7 @@ namespace Dropbox.Api.Team.Routes
         /// an asynchronous job. To obtain the final result of the job, the client should
         /// periodically poll <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersMoveFormerMemberFilesJobStatusCheckAsync"
-        /// />.</para>
-        /// <para>Permission : Team member management.</para>
+        /// />. Permission : Team member management.</para>
         /// </summary>
         /// <param name="user">Identity of user to remove/suspend/have their files
         /// moved.</param>
@@ -4851,8 +4894,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Once an async_job_id is returned from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersMoveFormerMemberFilesAsync" />
-        /// , use this to poll the status of the asynchronous request.</para>
-        /// <para>Permission : Team member management.</para>
+        /// , use this to poll the status of the asynchronous request. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -4885,8 +4928,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Once an async_job_id is returned from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersMoveFormerMemberFilesAsync" />
-        /// , use this to poll the status of the asynchronous request.</para>
-        /// <para>Permission : Team member management.</para>
+        /// , use this to poll the status of the asynchronous request. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
@@ -4944,10 +4987,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Recover a deleted member.</para>
-        /// <para>Permission : Team member management</para>
-        /// <para>Exactly one of team_member_id, email, or external_id must be provided to
-        /// identify the user account.</para>
+        /// <para>Recover a deleted member. Permission : Team member management Exactly one of
+        /// team_member_id, email, or external_id must be provided to identify the user
+        /// account.</para>
         /// </summary>
         /// <param name="membersRecoverArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -4976,10 +5018,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Recover a deleted member.</para>
-        /// <para>Permission : Team member management</para>
-        /// <para>Exactly one of team_member_id, email, or external_id must be provided to
-        /// identify the user account.</para>
+        /// <para>Recover a deleted member. Permission : Team member management Exactly one of
+        /// team_member_id, email, or external_id must be provided to identify the user
+        /// account.</para>
         /// </summary>
         /// <param name="user">Identity of user to recover.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -5030,22 +5071,20 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Removes a member from a team.</para>
-        /// <para>Permission : Team member management</para>
-        /// <para>Exactly one of team_member_id, email, or external_id must be provided to
-        /// identify the user account.</para>
-        /// <para>Accounts can be recovered via <see
+        /// <para>Removes a member from a team. Permission : Team member management Exactly one
+        /// of team_member_id, email, or external_id must be provided to identify the user
+        /// account. Accounts can be recovered via <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersRecoverAsync" /> for a 7 day
         /// period or until the account has been permanently deleted or transferred to another
         /// account (whichever comes first). Calling <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddAsync" /> while a user is
         /// still recoverable on your team will return with <see
-        /// cref="Dropbox.Api.Team.MemberAddResult.UserAlreadyOnTeam" />.</para>
-        /// <para>Accounts can have their files transferred via the admin console for a limited
-        /// time, based on the version history length associated with the team (180 days for
-        /// most teams).</para>
-        /// <para>This endpoint may initiate an asynchronous job. To obtain the final result of
-        /// the job, the client should periodically poll <see
+        /// cref="Dropbox.Api.Team.MemberAddResult.UserAlreadyOnTeam" />. Accounts can have
+        /// their files transferred via the admin console for a limited time, based on the
+        /// version history length associated with the team (180 days for most teams). Accounts
+        /// can have their stacks transferred through the admin console. This only transfers
+        /// stacks that they have created. This endpoint may initiate an asynchronous job. To
+        /// obtain the final result of the job, the client should periodically poll <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersRemoveJobStatusGetAsync"
         /// />.</para>
         /// </summary>
@@ -5077,22 +5116,20 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Removes a member from a team.</para>
-        /// <para>Permission : Team member management</para>
-        /// <para>Exactly one of team_member_id, email, or external_id must be provided to
-        /// identify the user account.</para>
-        /// <para>Accounts can be recovered via <see
+        /// <para>Removes a member from a team. Permission : Team member management Exactly one
+        /// of team_member_id, email, or external_id must be provided to identify the user
+        /// account. Accounts can be recovered via <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersRecoverAsync" /> for a 7 day
         /// period or until the account has been permanently deleted or transferred to another
         /// account (whichever comes first). Calling <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddAsync" /> while a user is
         /// still recoverable on your team will return with <see
-        /// cref="Dropbox.Api.Team.MemberAddResult.UserAlreadyOnTeam" />.</para>
-        /// <para>Accounts can have their files transferred via the admin console for a limited
-        /// time, based on the version history length associated with the team (180 days for
-        /// most teams).</para>
-        /// <para>This endpoint may initiate an asynchronous job. To obtain the final result of
-        /// the job, the client should periodically poll <see
+        /// cref="Dropbox.Api.Team.MemberAddResult.UserAlreadyOnTeam" />. Accounts can have
+        /// their files transferred via the admin console for a limited time, based on the
+        /// version history length associated with the team (180 days for most teams). Accounts
+        /// can have their stacks transferred through the admin console. This only transfers
+        /// stacks that they have created. This endpoint may initiate an asynchronous job. To
+        /// obtain the final result of the job, the client should periodically poll <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersRemoveJobStatusGetAsync"
         /// />.</para>
         /// </summary>
@@ -5106,7 +5143,7 @@ namespace Dropbox.Api.Team.Routes
         /// be sent via email to this user. If the transfer_dest_id argument was provided, then
         /// this argument must be provided as well.</param>
         /// <param name="keepAccount">Downgrade the member to a Basic account. The user will
-        /// retain the email address associated with their Dropbox  account and data in their
+        /// retain the email address associated with their Dropbox account and data in their
         /// account that is not restricted to team members. In order to keep the account the
         /// argument <paramref name="wipeData" /> should be set to <c>false</c>.</param>
         /// <param name="retainTeamShares">If provided, allows removed users to keep access to
@@ -5116,6 +5153,9 @@ namespace Dropbox.Api.Team.Routes
         /// sharing relationships, the arguments <paramref name="wipeData" /> should be set to
         /// <c>false</c> and <paramref name="keepAccount" /> should be set to
         /// <c>true</c>.</param>
+        /// <param name="permanentlyDeleteFiles">Permanently delete the data in the deleted
+        /// member's account. After permanent deletion, the data is no longer available to be
+        /// transferred to a different user.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -5126,14 +5166,16 @@ namespace Dropbox.Api.Team.Routes
                                                                                       UserSelectorArg transferDestId = null,
                                                                                       UserSelectorArg transferAdminId = null,
                                                                                       bool keepAccount = false,
-                                                                                      bool retainTeamShares = false)
+                                                                                      bool retainTeamShares = false,
+                                                                                      bool permanentlyDeleteFiles = false)
         {
             var membersRemoveArg = new MembersRemoveArg(user,
                                                         wipeData,
                                                         transferDestId,
                                                         transferAdminId,
                                                         keepAccount,
-                                                        retainTeamShares);
+                                                        retainTeamShares,
+                                                        permanentlyDeleteFiles);
 
             return this.MembersRemoveAsync(membersRemoveArg);
         }
@@ -5151,7 +5193,7 @@ namespace Dropbox.Api.Team.Routes
         /// be sent via email to this user. If the transfer_dest_id argument was provided, then
         /// this argument must be provided as well.</param>
         /// <param name="keepAccount">Downgrade the member to a Basic account. The user will
-        /// retain the email address associated with their Dropbox  account and data in their
+        /// retain the email address associated with their Dropbox account and data in their
         /// account that is not restricted to team members. In order to keep the account the
         /// argument <paramref name="wipeData" /> should be set to <c>false</c>.</param>
         /// <param name="retainTeamShares">If provided, allows removed users to keep access to
@@ -5161,6 +5203,9 @@ namespace Dropbox.Api.Team.Routes
         /// sharing relationships, the arguments <paramref name="wipeData" /> should be set to
         /// <c>false</c> and <paramref name="keepAccount" /> should be set to
         /// <c>true</c>.</param>
+        /// <param name="permanentlyDeleteFiles">Permanently delete the data in the deleted
+        /// member's account. After permanent deletion, the data is no longer available to be
+        /// transferred to a different user.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -5172,6 +5217,7 @@ namespace Dropbox.Api.Team.Routes
                                                    UserSelectorArg transferAdminId = null,
                                                    bool keepAccount = false,
                                                    bool retainTeamShares = false,
+                                                   bool permanentlyDeleteFiles = false,
                                                    sys.AsyncCallback callback = null,
                                                    object callbackState = null)
         {
@@ -5180,7 +5226,8 @@ namespace Dropbox.Api.Team.Routes
                                                         transferDestId,
                                                         transferAdminId,
                                                         keepAccount,
-                                                        retainTeamShares);
+                                                        retainTeamShares,
+                                                        permanentlyDeleteFiles);
 
             return this.BeginMembersRemove(membersRemoveArg, callback, callbackState);
         }
@@ -5209,8 +5256,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Once an async_job_id is returned from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersRemoveAsync" /> , use this to
-        /// poll the status of the asynchronous request.</para>
-        /// <para>Permission : Team member management.</para>
+        /// poll the status of the asynchronous request. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -5243,8 +5290,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Once an async_job_id is returned from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersRemoveAsync" /> , use this to
-        /// poll the status of the asynchronous request.</para>
-        /// <para>Permission : Team member management.</para>
+        /// poll the status of the asynchronous request. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
@@ -5302,10 +5349,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Add secondary emails to users.</para>
-        /// <para>Permission : Team member management.</para>
-        /// <para>Emails that are on verified domains will be verified automatically. For each
-        /// email address not on a verified domain a verification email will be sent.</para>
+        /// <para>Add secondary emails to users. Permission : Team member management. Emails
+        /// that are on verified domains will be verified automatically. For each email address
+        /// not on a verified domain a verification email will be sent.</para>
         /// </summary>
         /// <param name="addSecondaryEmailsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -5335,10 +5381,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Add secondary emails to users.</para>
-        /// <para>Permission : Team member management.</para>
-        /// <para>Emails that are on verified domains will be verified automatically. For each
-        /// email address not on a verified domain a verification email will be sent.</para>
+        /// <para>Add secondary emails to users. Permission : Team member management. Emails
+        /// that are on verified domains will be verified automatically. For each email address
+        /// not on a verified domain a verification email will be sent.</para>
         /// </summary>
         /// <param name="newSecondaryEmails">List of users and secondary emails to add.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -5393,10 +5438,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Delete secondary emails from users</para>
-        /// <para>Permission : Team member management.</para>
-        /// <para>Users will be notified of deletions of verified secondary emails at both the
-        /// secondary email and their primary email.</para>
+        /// <para>Delete secondary emails from users Permission : Team member management. Users
+        /// will be notified of deletions of verified secondary emails at both the secondary
+        /// email and their primary email.</para>
         /// </summary>
         /// <param name="deleteSecondaryEmailsArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -5424,10 +5468,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Delete secondary emails from users</para>
-        /// <para>Permission : Team member management.</para>
-        /// <para>Users will be notified of deletions of verified secondary emails at both the
-        /// secondary email and their primary email.</para>
+        /// <para>Delete secondary emails from users Permission : Team member management. Users
+        /// will be notified of deletions of verified secondary emails at both the secondary
+        /// email and their primary email.</para>
         /// </summary>
         /// <param name="emailsToDelete">List of users and their secondary emails to
         /// delete.</param>
@@ -5479,8 +5522,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Resend secondary email verification emails.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Resend secondary email verification emails. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="resendVerificationEmailArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -5508,8 +5551,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Resend secondary email verification emails.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Resend secondary email verification emails. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="emailsToResend">List of users and secondary emails to resend
         /// verification emails to.</param>
@@ -5561,11 +5604,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Sends welcome email to pending team member.</para>
-        /// <para>Permission : Team member management</para>
-        /// <para>Exactly one of team_member_id, email, or external_id must be provided to
-        /// identify the user account.</para>
-        /// <para>No-op if team member is not pending.</para>
+        /// <para>Sends welcome email to pending team member. Permission : Team member
+        /// management Exactly one of team_member_id, email, or external_id must be provided to
+        /// identify the user account. No-op if team member is not pending.</para>
         /// </summary>
         /// <param name="userSelectorArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -5612,8 +5653,103 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Updates a team member's permissions.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Updates a team member's permissions. Permission : Team member
+        /// management.</para>
+        /// </summary>
+        /// <param name="membersSetPermissionsArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetPermissionsError"/>.</exception>
+        public t.Task<MembersSetPermissionsResult> MembersSetAdminPermissionsAsync(MembersSetPermissionsArg membersSetPermissionsArg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersSetPermissionsArg, MembersSetPermissionsResult, MembersSetPermissionsError>(membersSetPermissionsArg, "api", "/team/members/set_admin_permissions", "team", global::Dropbox.Api.Team.MembersSetPermissionsArg.Encoder, global::Dropbox.Api.Team.MembersSetPermissionsResult.Decoder, global::Dropbox.Api.Team.MembersSetPermissionsError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members set admin permissions
+        /// route.</para>
+        /// </summary>
+        /// <param name="membersSetPermissionsArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSetAdminPermissions(MembersSetPermissionsArg membersSetPermissionsArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersSetAdminPermissionsAsync(membersSetPermissionsArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Updates a team member's permissions. Permission : Team member
+        /// management.</para>
+        /// </summary>
+        /// <param name="user">Identity of user whose role will be set.</param>
+        /// <param name="newRole">The new role of the member.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetPermissionsError"/>.</exception>
+        public t.Task<MembersSetPermissionsResult> MembersSetAdminPermissionsAsync(UserSelectorArg user,
+                                                                                   AdminTier newRole)
+        {
+            var membersSetPermissionsArg = new MembersSetPermissionsArg(user,
+                                                                        newRole);
+
+            return this.MembersSetAdminPermissionsAsync(membersSetPermissionsArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members set admin permissions
+        /// route.</para>
+        /// </summary>
+        /// <param name="user">Identity of user whose role will be set.</param>
+        /// <param name="newRole">The new role of the member.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSetAdminPermissions(UserSelectorArg user,
+                                                                AdminTier newRole,
+                                                                sys.AsyncCallback callback,
+                                                                object callbackState = null)
+        {
+            var membersSetPermissionsArg = new MembersSetPermissionsArg(user,
+                                                                        newRole);
+
+            return this.BeginMembersSetAdminPermissions(membersSetPermissionsArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members set admin permissions
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetPermissionsError"/>.</exception>
+        public MembersSetPermissionsResult EndMembersSetAdminPermissions(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<MembersSetPermissionsResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Updates a team member's permissions. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="membersSetPermissions2Arg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -5644,8 +5780,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Updates a team member's permissions.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Updates a team member's permissions. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="user">Identity of user whose role will be set.</param>
         /// <param name="newRoles">The new roles for the member. Send empty list to make user
@@ -5709,230 +5845,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Updates a team member's permissions.</para>
-        /// <para>Permission : Team member management.</para>
-        /// </summary>
-        /// <param name="membersSetPermissionsArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="MembersSetPermissionsError"/>.</exception>
-        public t.Task<MembersSetPermissionsResult> MembersSetAdminPermissionsAsync(MembersSetPermissionsArg membersSetPermissionsArg)
-        {
-            return this.Transport.SendRpcRequestAsync<MembersSetPermissionsArg, MembersSetPermissionsResult, MembersSetPermissionsError>(membersSetPermissionsArg, "api", "/team/members/set_admin_permissions", "team", global::Dropbox.Api.Team.MembersSetPermissionsArg.Encoder, global::Dropbox.Api.Team.MembersSetPermissionsResult.Decoder, global::Dropbox.Api.Team.MembersSetPermissionsError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the members set admin permissions
-        /// route.</para>
-        /// </summary>
-        /// <param name="membersSetPermissionsArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersSetAdminPermissions(MembersSetPermissionsArg membersSetPermissionsArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.MembersSetAdminPermissionsAsync(membersSetPermissionsArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Updates a team member's permissions.</para>
-        /// <para>Permission : Team member management.</para>
-        /// </summary>
-        /// <param name="user">Identity of user whose role will be set.</param>
-        /// <param name="newRole">The new role of the member.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="MembersSetPermissionsError"/>.</exception>
-        public t.Task<MembersSetPermissionsResult> MembersSetAdminPermissionsAsync(UserSelectorArg user,
-                                                                                   AdminTier newRole)
-        {
-            var membersSetPermissionsArg = new MembersSetPermissionsArg(user,
-                                                                        newRole);
-
-            return this.MembersSetAdminPermissionsAsync(membersSetPermissionsArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the members set admin permissions
-        /// route.</para>
-        /// </summary>
-        /// <param name="user">Identity of user whose role will be set.</param>
-        /// <param name="newRole">The new role of the member.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersSetAdminPermissions(UserSelectorArg user,
-                                                                AdminTier newRole,
-                                                                sys.AsyncCallback callback,
-                                                                object callbackState = null)
-        {
-            var membersSetPermissionsArg = new MembersSetPermissionsArg(user,
-                                                                        newRole);
-
-            return this.BeginMembersSetAdminPermissions(membersSetPermissionsArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the members set admin permissions
-        /// route to complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="MembersSetPermissionsError"/>.</exception>
-        public MembersSetPermissionsResult EndMembersSetAdminPermissions(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<MembersSetPermissionsResult>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Updates a team member's profile.</para>
-        /// <para>Permission : Team member management.</para>
-        /// </summary>
-        /// <param name="membersSetProfileArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="MembersSetProfileError"/>.</exception>
-        public t.Task<TeamMemberInfoV2Result> MembersSetProfileV2Async(MembersSetProfileArg membersSetProfileArg)
-        {
-            return this.Transport.SendRpcRequestAsync<MembersSetProfileArg, TeamMemberInfoV2Result, MembersSetProfileError>(membersSetProfileArg, "api", "/team/members/set_profile_v2", "team", global::Dropbox.Api.Team.MembersSetProfileArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfoV2Result.Decoder, global::Dropbox.Api.Team.MembersSetProfileError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the members set profile route.</para>
-        /// </summary>
-        /// <param name="membersSetProfileArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersSetProfileV2(MembersSetProfileArg membersSetProfileArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.MembersSetProfileV2Async(membersSetProfileArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Updates a team member's profile.</para>
-        /// <para>Permission : Team member management.</para>
-        /// </summary>
-        /// <param name="user">Identity of user whose profile will be set.</param>
-        /// <param name="newEmail">New email for member.</param>
-        /// <param name="newExternalId">New external ID for member.</param>
-        /// <param name="newGivenName">New given name for member.</param>
-        /// <param name="newSurname">New surname for member.</param>
-        /// <param name="newPersistentId">New persistent ID. This field only available to teams
-        /// using persistent ID SAML configuration.</param>
-        /// <param name="newIsDirectoryRestricted">New value for whether the user is a
-        /// directory restricted user.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="MembersSetProfileError"/>.</exception>
-        public t.Task<TeamMemberInfoV2Result> MembersSetProfileV2Async(UserSelectorArg user,
-                                                                       string newEmail = null,
-                                                                       string newExternalId = null,
-                                                                       string newGivenName = null,
-                                                                       string newSurname = null,
-                                                                       string newPersistentId = null,
-                                                                       bool? newIsDirectoryRestricted = null)
-        {
-            var membersSetProfileArg = new MembersSetProfileArg(user,
-                                                                newEmail,
-                                                                newExternalId,
-                                                                newGivenName,
-                                                                newSurname,
-                                                                newPersistentId,
-                                                                newIsDirectoryRestricted);
-
-            return this.MembersSetProfileV2Async(membersSetProfileArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the members set profile route.</para>
-        /// </summary>
-        /// <param name="user">Identity of user whose profile will be set.</param>
-        /// <param name="newEmail">New email for member.</param>
-        /// <param name="newExternalId">New external ID for member.</param>
-        /// <param name="newGivenName">New given name for member.</param>
-        /// <param name="newSurname">New surname for member.</param>
-        /// <param name="newPersistentId">New persistent ID. This field only available to teams
-        /// using persistent ID SAML configuration.</param>
-        /// <param name="newIsDirectoryRestricted">New value for whether the user is a
-        /// directory restricted user.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersSetProfileV2(UserSelectorArg user,
-                                                         string newEmail = null,
-                                                         string newExternalId = null,
-                                                         string newGivenName = null,
-                                                         string newSurname = null,
-                                                         string newPersistentId = null,
-                                                         bool? newIsDirectoryRestricted = null,
-                                                         sys.AsyncCallback callback = null,
-                                                         object callbackState = null)
-        {
-            var membersSetProfileArg = new MembersSetProfileArg(user,
-                                                                newEmail,
-                                                                newExternalId,
-                                                                newGivenName,
-                                                                newSurname,
-                                                                newPersistentId,
-                                                                newIsDirectoryRestricted);
-
-            return this.BeginMembersSetProfileV2(membersSetProfileArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the members set profile route to
-        /// complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="MembersSetProfileError"/>.</exception>
-        public TeamMemberInfoV2Result EndMembersSetProfileV2(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<TeamMemberInfoV2Result>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Updates a team member's profile.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Updates a team member's profile. Permission : Team member management.</para>
         /// </summary>
         /// <param name="membersSetProfileArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -5962,8 +5875,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Updates a team member's profile.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Updates a team member's profile. Permission : Team member management.</para>
         /// </summary>
         /// <param name="user">Identity of user whose profile will be set.</param>
         /// <param name="newEmail">New email for member.</param>
@@ -6058,88 +5970,120 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Updates a team member's profile photo.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Updates a team member's profile. Permission : Team member management.</para>
         /// </summary>
-        /// <param name="membersSetProfilePhotoArg">The request parameters</param>
+        /// <param name="membersSetProfileArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="MembersSetProfilePhotoError"/>.</exception>
-        public t.Task<TeamMemberInfoV2Result> MembersSetProfilePhotoV2Async(MembersSetProfilePhotoArg membersSetProfilePhotoArg)
+        /// cref="MembersSetProfileError"/>.</exception>
+        public t.Task<TeamMemberInfoV2Result> MembersSetProfileV2Async(MembersSetProfileArg membersSetProfileArg)
         {
-            return this.Transport.SendRpcRequestAsync<MembersSetProfilePhotoArg, TeamMemberInfoV2Result, MembersSetProfilePhotoError>(membersSetProfilePhotoArg, "api", "/team/members/set_profile_photo_v2", "team", global::Dropbox.Api.Team.MembersSetProfilePhotoArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfoV2Result.Decoder, global::Dropbox.Api.Team.MembersSetProfilePhotoError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersSetProfileArg, TeamMemberInfoV2Result, MembersSetProfileError>(membersSetProfileArg, "api", "/team/members/set_profile_v2", "team", global::Dropbox.Api.Team.MembersSetProfileArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfoV2Result.Decoder, global::Dropbox.Api.Team.MembersSetProfileError.Decoder);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the members set profile photo route.</para>
+        /// <para>Begins an asynchronous send to the members set profile route.</para>
         /// </summary>
-        /// <param name="membersSetProfilePhotoArg">The request parameters.</param>
+        /// <param name="membersSetProfileArg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersSetProfilePhotoV2(MembersSetProfilePhotoArg membersSetProfilePhotoArg, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginMembersSetProfileV2(MembersSetProfileArg membersSetProfileArg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.MembersSetProfilePhotoV2Async(membersSetProfilePhotoArg);
+            var task = this.MembersSetProfileV2Async(membersSetProfileArg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Updates a team member's profile photo.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Updates a team member's profile. Permission : Team member management.</para>
         /// </summary>
-        /// <param name="user">Identity of the user whose profile photo will be set.</param>
-        /// <param name="photo">Image to set as the member's new profile photo.</param>
+        /// <param name="user">Identity of user whose profile will be set.</param>
+        /// <param name="newEmail">New email for member.</param>
+        /// <param name="newExternalId">New external ID for member.</param>
+        /// <param name="newGivenName">New given name for member.</param>
+        /// <param name="newSurname">New surname for member.</param>
+        /// <param name="newPersistentId">New persistent ID. This field only available to teams
+        /// using persistent ID SAML configuration.</param>
+        /// <param name="newIsDirectoryRestricted">New value for whether the user is a
+        /// directory restricted user.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="MembersSetProfilePhotoError"/>.</exception>
-        public t.Task<TeamMemberInfoV2Result> MembersSetProfilePhotoV2Async(UserSelectorArg user,
-                                                                            global::Dropbox.Api.Account.PhotoSourceArg photo)
+        /// cref="MembersSetProfileError"/>.</exception>
+        public t.Task<TeamMemberInfoV2Result> MembersSetProfileV2Async(UserSelectorArg user,
+                                                                       string newEmail = null,
+                                                                       string newExternalId = null,
+                                                                       string newGivenName = null,
+                                                                       string newSurname = null,
+                                                                       string newPersistentId = null,
+                                                                       bool? newIsDirectoryRestricted = null)
         {
-            var membersSetProfilePhotoArg = new MembersSetProfilePhotoArg(user,
-                                                                          photo);
+            var membersSetProfileArg = new MembersSetProfileArg(user,
+                                                                newEmail,
+                                                                newExternalId,
+                                                                newGivenName,
+                                                                newSurname,
+                                                                newPersistentId,
+                                                                newIsDirectoryRestricted);
 
-            return this.MembersSetProfilePhotoV2Async(membersSetProfilePhotoArg);
+            return this.MembersSetProfileV2Async(membersSetProfileArg);
         }
 
         /// <summary>
-        /// <para>Begins an asynchronous send to the members set profile photo route.</para>
+        /// <para>Begins an asynchronous send to the members set profile route.</para>
         /// </summary>
-        /// <param name="user">Identity of the user whose profile photo will be set.</param>
-        /// <param name="photo">Image to set as the member's new profile photo.</param>
+        /// <param name="user">Identity of user whose profile will be set.</param>
+        /// <param name="newEmail">New email for member.</param>
+        /// <param name="newExternalId">New external ID for member.</param>
+        /// <param name="newGivenName">New given name for member.</param>
+        /// <param name="newSurname">New surname for member.</param>
+        /// <param name="newPersistentId">New persistent ID. This field only available to teams
+        /// using persistent ID SAML configuration.</param>
+        /// <param name="newIsDirectoryRestricted">New value for whether the user is a
+        /// directory restricted user.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersSetProfilePhotoV2(UserSelectorArg user,
-                                                              global::Dropbox.Api.Account.PhotoSourceArg photo,
-                                                              sys.AsyncCallback callback,
-                                                              object callbackState = null)
+        public sys.IAsyncResult BeginMembersSetProfileV2(UserSelectorArg user,
+                                                         string newEmail = null,
+                                                         string newExternalId = null,
+                                                         string newGivenName = null,
+                                                         string newSurname = null,
+                                                         string newPersistentId = null,
+                                                         bool? newIsDirectoryRestricted = null,
+                                                         sys.AsyncCallback callback = null,
+                                                         object callbackState = null)
         {
-            var membersSetProfilePhotoArg = new MembersSetProfilePhotoArg(user,
-                                                                          photo);
+            var membersSetProfileArg = new MembersSetProfileArg(user,
+                                                                newEmail,
+                                                                newExternalId,
+                                                                newGivenName,
+                                                                newSurname,
+                                                                newPersistentId,
+                                                                newIsDirectoryRestricted);
 
-            return this.BeginMembersSetProfilePhotoV2(membersSetProfilePhotoArg, callback, callbackState);
+            return this.BeginMembersSetProfileV2(membersSetProfileArg, callback, callbackState);
         }
 
         /// <summary>
-        /// <para>Waits for the pending asynchronous send to the members set profile photo
-        /// route to complete</para>
+        /// <para>Waits for the pending asynchronous send to the members set profile route to
+        /// complete</para>
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="MembersSetProfilePhotoError"/>.</exception>
-        public TeamMemberInfoV2Result EndMembersSetProfilePhotoV2(sys.IAsyncResult asyncResult)
+        /// cref="MembersSetProfileError"/>.</exception>
+        public TeamMemberInfoV2Result EndMembersSetProfileV2(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<TeamMemberInfoV2Result>;
             if (task == null)
@@ -6151,8 +6095,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Updates a team member's profile photo.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Updates a team member's profile photo. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="membersSetProfilePhotoArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -6182,8 +6126,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Updates a team member's profile photo.</para>
-        /// <para>Permission : Team member management.</para>
+        /// <para>Updates a team member's profile photo. Permission : Team member
+        /// management.</para>
         /// </summary>
         /// <param name="user">Identity of the user whose profile photo will be set.</param>
         /// <param name="photo">Image to set as the member's new profile photo.</param>
@@ -6244,10 +6188,102 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Suspend a member from a team.</para>
-        /// <para>Permission : Team member management</para>
-        /// <para>Exactly one of team_member_id, email, or external_id must be provided to
-        /// identify the user account.</para>
+        /// <para>Updates a team member's profile photo. Permission : Team member
+        /// management.</para>
+        /// </summary>
+        /// <param name="membersSetProfilePhotoArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetProfilePhotoError"/>.</exception>
+        public t.Task<TeamMemberInfoV2Result> MembersSetProfilePhotoV2Async(MembersSetProfilePhotoArg membersSetProfilePhotoArg)
+        {
+            return this.Transport.SendRpcRequestAsync<MembersSetProfilePhotoArg, TeamMemberInfoV2Result, MembersSetProfilePhotoError>(membersSetProfilePhotoArg, "api", "/team/members/set_profile_photo_v2", "team", global::Dropbox.Api.Team.MembersSetProfilePhotoArg.Encoder, global::Dropbox.Api.Team.TeamMemberInfoV2Result.Decoder, global::Dropbox.Api.Team.MembersSetProfilePhotoError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members set profile photo route.</para>
+        /// </summary>
+        /// <param name="membersSetProfilePhotoArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSetProfilePhotoV2(MembersSetProfilePhotoArg membersSetProfilePhotoArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersSetProfilePhotoV2Async(membersSetProfilePhotoArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Updates a team member's profile photo. Permission : Team member
+        /// management.</para>
+        /// </summary>
+        /// <param name="user">Identity of the user whose profile photo will be set.</param>
+        /// <param name="photo">Image to set as the member's new profile photo.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetProfilePhotoError"/>.</exception>
+        public t.Task<TeamMemberInfoV2Result> MembersSetProfilePhotoV2Async(UserSelectorArg user,
+                                                                            global::Dropbox.Api.Account.PhotoSourceArg photo)
+        {
+            var membersSetProfilePhotoArg = new MembersSetProfilePhotoArg(user,
+                                                                          photo);
+
+            return this.MembersSetProfilePhotoV2Async(membersSetProfilePhotoArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members set profile photo route.</para>
+        /// </summary>
+        /// <param name="user">Identity of the user whose profile photo will be set.</param>
+        /// <param name="photo">Image to set as the member's new profile photo.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersSetProfilePhotoV2(UserSelectorArg user,
+                                                              global::Dropbox.Api.Account.PhotoSourceArg photo,
+                                                              sys.AsyncCallback callback,
+                                                              object callbackState = null)
+        {
+            var membersSetProfilePhotoArg = new MembersSetProfilePhotoArg(user,
+                                                                          photo);
+
+            return this.BeginMembersSetProfilePhotoV2(membersSetProfilePhotoArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members set profile photo
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="MembersSetProfilePhotoError"/>.</exception>
+        public TeamMemberInfoV2Result EndMembersSetProfilePhotoV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamMemberInfoV2Result>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Suspend a member from a team. Permission : Team member management Exactly one
+        /// of team_member_id, email, or external_id must be provided to identify the user
+        /// account.</para>
         /// </summary>
         /// <param name="membersDeactivateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -6276,10 +6312,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Suspend a member from a team.</para>
-        /// <para>Permission : Team member management</para>
-        /// <para>Exactly one of team_member_id, email, or external_id must be provided to
-        /// identify the user account.</para>
+        /// <para>Suspend a member from a team. Permission : Team member management Exactly one
+        /// of team_member_id, email, or external_id must be provided to identify the user
+        /// account.</para>
         /// </summary>
         /// <param name="user">Identity of user to remove/suspend/have their files
         /// moved.</param>
@@ -6340,10 +6375,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Unsuspend a member from a team.</para>
-        /// <para>Permission : Team member management</para>
-        /// <para>Exactly one of team_member_id, email, or external_id must be provided to
-        /// identify the user account.</para>
+        /// <para>Unsuspend a member from a team. Permission : Team member management Exactly
+        /// one of team_member_id, email, or external_id must be provided to identify the user
+        /// account.</para>
         /// </summary>
         /// <param name="membersUnsuspendArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -6372,10 +6406,9 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Unsuspend a member from a team.</para>
-        /// <para>Permission : Team member management</para>
-        /// <para>Exactly one of team_member_id, email, or external_id must be provided to
-        /// identify the user account.</para>
+        /// <para>Unsuspend a member from a team. Permission : Team member management Exactly
+        /// one of team_member_id, email, or external_id must be provided to identify the user
+        /// account.</para>
         /// </summary>
         /// <param name="user">Identity of user to unsuspend.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -6466,7 +6499,8 @@ namespace Dropbox.Api.Team.Routes
         /// team or members of the team, but shared folders may be owned by other users or
         /// other teams. Duplicates may occur in the list.</para>
         /// </summary>
-        /// <param name="limit">Specifying a value here has no effect.</param>
+        /// <param name="limit">Field is deprecated. Specifying a value here has no
+        /// effect.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -6482,7 +6516,8 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Begins an asynchronous send to the namespaces list route.</para>
         /// </summary>
-        /// <param name="limit">Specifying a value here has no effect.</param>
+        /// <param name="limit">Field is deprecated. Specifying a value here has no
+        /// effect.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -6820,181 +6855,6 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Permission : Team member file access. The scope for the route is
-        /// files.team_metadata.write.</para>
-        /// </summary>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
-        [sys.Obsolete("This function is deprecated")]
-        public t.Task<global::Dropbox.Api.FileProperties.ListTemplateResult> PropertiesTemplateListAsync()
-        {
-            return this.Transport.SendRpcRequestAsync<enc.Empty, global::Dropbox.Api.FileProperties.ListTemplateResult, global::Dropbox.Api.FileProperties.TemplateError>(enc.Empty.Instance, "api", "/team/properties/template/list", "team", enc.EmptyEncoder.Instance, global::Dropbox.Api.FileProperties.ListTemplateResult.Decoder, global::Dropbox.Api.FileProperties.TemplateError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the properties template list route.</para>
-        /// </summary>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated")]
-        public sys.IAsyncResult BeginPropertiesTemplateList(sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.PropertiesTemplateListAsync();
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the properties template list route
-        /// to complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.FileProperties.TemplateError"/>.</exception>
-        [sys.Obsolete("This function is deprecated")]
-        public global::Dropbox.Api.FileProperties.ListTemplateResult EndPropertiesTemplateList(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<global::Dropbox.Api.FileProperties.ListTemplateResult>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
-        /// <para>Permission : Team member file access.</para>
-        /// </summary>
-        /// <param name="updateTemplateArg">The request parameters</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.FileProperties.ModifyTemplateError"/>.</exception>
-        [sys.Obsolete("This function is deprecated")]
-        public t.Task<global::Dropbox.Api.FileProperties.UpdateTemplateResult> PropertiesTemplateUpdateAsync(global::Dropbox.Api.FileProperties.UpdateTemplateArg updateTemplateArg)
-        {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.FileProperties.UpdateTemplateArg, global::Dropbox.Api.FileProperties.UpdateTemplateResult, global::Dropbox.Api.FileProperties.ModifyTemplateError>(updateTemplateArg, "api", "/team/properties/template/update", "team", global::Dropbox.Api.FileProperties.UpdateTemplateArg.Encoder, global::Dropbox.Api.FileProperties.UpdateTemplateResult.Decoder, global::Dropbox.Api.FileProperties.ModifyTemplateError.Decoder);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the properties template update route.</para>
-        /// </summary>
-        /// <param name="updateTemplateArg">The request parameters.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="state">A user provided object that distinguished this send from other
-        /// send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated")]
-        public sys.IAsyncResult BeginPropertiesTemplateUpdate(global::Dropbox.Api.FileProperties.UpdateTemplateArg updateTemplateArg, sys.AsyncCallback callback, object state = null)
-        {
-            var task = this.PropertiesTemplateUpdateAsync(updateTemplateArg);
-
-            return enc.Util.ToApm(task, callback, state);
-        }
-
-        /// <summary>
-        /// <para>Permission : Team member file access.</para>
-        /// </summary>
-        /// <param name="templateId">An identifier for template added by  See <see
-        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
-        /// /> or <see
-        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
-        /// />.</param>
-        /// <param name="name">A display name for the template. template names can be up to 256
-        /// bytes.</param>
-        /// <param name="description">Description for the new template. Template descriptions
-        /// can be up to 1024 bytes.</param>
-        /// <param name="addFields">Property field templates to be added to the group template.
-        /// There can be up to 32 properties in a single template.</param>
-        /// <returns>The task that represents the asynchronous send operation. The TResult
-        /// parameter contains the response from the server.</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.FileProperties.ModifyTemplateError"/>.</exception>
-        [sys.Obsolete("This function is deprecated")]
-        public t.Task<global::Dropbox.Api.FileProperties.UpdateTemplateResult> PropertiesTemplateUpdateAsync(string templateId,
-                                                                                                             string name = null,
-                                                                                                             string description = null,
-                                                                                                             col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyFieldTemplate> addFields = null)
-        {
-            var updateTemplateArg = new global::Dropbox.Api.FileProperties.UpdateTemplateArg(templateId,
-                                                                                             name,
-                                                                                             description,
-                                                                                             addFields);
-
-            return this.PropertiesTemplateUpdateAsync(updateTemplateArg);
-        }
-
-        /// <summary>
-        /// <para>Begins an asynchronous send to the properties template update route.</para>
-        /// </summary>
-        /// <param name="templateId">An identifier for template added by  See <see
-        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync"
-        /// /> or <see
-        /// cref="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync"
-        /// />.</param>
-        /// <param name="name">A display name for the template. template names can be up to 256
-        /// bytes.</param>
-        /// <param name="description">Description for the new template. Template descriptions
-        /// can be up to 1024 bytes.</param>
-        /// <param name="addFields">Property field templates to be added to the group template.
-        /// There can be up to 32 properties in a single template.</param>
-        /// <param name="callback">The method to be called when the asynchronous send is
-        /// completed.</param>
-        /// <param name="callbackState">A user provided object that distinguished this send
-        /// from other send requests.</param>
-        /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated")]
-        public sys.IAsyncResult BeginPropertiesTemplateUpdate(string templateId,
-                                                              string name = null,
-                                                              string description = null,
-                                                              col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyFieldTemplate> addFields = null,
-                                                              sys.AsyncCallback callback = null,
-                                                              object callbackState = null)
-        {
-            var updateTemplateArg = new global::Dropbox.Api.FileProperties.UpdateTemplateArg(templateId,
-                                                                                             name,
-                                                                                             description,
-                                                                                             addFields);
-
-            return this.BeginPropertiesTemplateUpdate(updateTemplateArg, callback, callbackState);
-        }
-
-        /// <summary>
-        /// <para>Waits for the pending asynchronous send to the properties template update
-        /// route to complete</para>
-        /// </summary>
-        /// <param name="asyncResult">The reference to the pending asynchronous send
-        /// request</param>
-        /// <returns>The response to the send request</returns>
-        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="global::Dropbox.Api.FileProperties.ModifyTemplateError"/>.</exception>
-        [sys.Obsolete("This function is deprecated")]
-        public global::Dropbox.Api.FileProperties.UpdateTemplateResult EndPropertiesTemplateUpdate(sys.IAsyncResult asyncResult)
-        {
-            var task = asyncResult as t.Task<global::Dropbox.Api.FileProperties.UpdateTemplateResult>;
-            if (task == null)
-            {
-                throw new sys.InvalidOperationException();
-            }
-
-            return task.Result;
-        }
-
-        /// <summary>
         /// <para>Retrieves reporting data about a team's user activity. Deprecated: Will be
         /// removed on July 1st 2021.</para>
         /// </summary>
@@ -7032,7 +6892,7 @@ namespace Dropbox.Api.Team.Routes
         /// removed on July 1st 2021.</para>
         /// </summary>
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
-        /// or too long ago, this field will  be set to 6 months ago.</param>
+        /// or too long ago, this field will be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -7053,7 +6913,7 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Begins an asynchronous send to the reports get activity route.</para>
         /// </summary>
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
-        /// or too long ago, this field will  be set to 6 months ago.</param>
+        /// or too long ago, this field will be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -7132,7 +6992,7 @@ namespace Dropbox.Api.Team.Routes
         /// removed on July 1st 2021.</para>
         /// </summary>
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
-        /// or too long ago, this field will  be set to 6 months ago.</param>
+        /// or too long ago, this field will be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -7153,7 +7013,7 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Begins an asynchronous send to the reports get devices route.</para>
         /// </summary>
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
-        /// or too long ago, this field will  be set to 6 months ago.</param>
+        /// or too long ago, this field will be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -7232,7 +7092,7 @@ namespace Dropbox.Api.Team.Routes
         /// removed on July 1st 2021.</para>
         /// </summary>
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
-        /// or too long ago, this field will  be set to 6 months ago.</param>
+        /// or too long ago, this field will be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -7253,7 +7113,7 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Begins an asynchronous send to the reports get membership route.</para>
         /// </summary>
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
-        /// or too long ago, this field will  be set to 6 months ago.</param>
+        /// or too long ago, this field will be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -7332,7 +7192,7 @@ namespace Dropbox.Api.Team.Routes
         /// removed on July 1st 2021.</para>
         /// </summary>
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
-        /// or too long ago, this field will  be set to 6 months ago.</param>
+        /// or too long ago, this field will be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -7353,7 +7213,7 @@ namespace Dropbox.Api.Team.Routes
         /// <para>Begins an asynchronous send to the reports get storage route.</para>
         /// </summary>
         /// <param name="startDate">Optional starting date (inclusive). If start_date is None
-        /// or too long ago, this field will  be set to 6 months ago.</param>
+        /// or too long ago, this field will be set to 6 months ago.</param>
         /// <param name="endDate">Optional ending date (exclusive).</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -7791,8 +7651,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Sets an archived team folder's status to active.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>Sets an archived team folder's status to active. Permission : Team member
+        /// file access.</para>
         /// </summary>
         /// <param name="teamFolderIdArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -7822,8 +7682,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Sets an archived team folder's status to active.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>Sets an archived team folder's status to active. Permission : Team member
+        /// file access.</para>
         /// </summary>
         /// <param name="teamFolderId">The ID of the team folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -7879,9 +7739,10 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Sets an active team folder's status to archived and removes all folder and
-        /// file members. This endpoint cannot be used for teams that have a shared team
-        /// space.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// file members. This endpoint cannot be used for teams that have a shared team space.
+        /// This route will either finish synchronously, or return a job ID and do the async
+        /// archive job in background. Please use team_folder/archive/check to check the job
+        /// status. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderArchiveArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -7912,9 +7773,10 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Sets an active team folder's status to archived and removes all folder and
-        /// file members. This endpoint cannot be used for teams that have a shared team
-        /// space.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// file members. This endpoint cannot be used for teams that have a shared team space.
+        /// This route will either finish synchronously, or return a job ID and do the async
+        /// archive job in background. Please use team_folder/archive/check to check the job
+        /// status. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderId">The ID of the team folder.</param>
         /// <param name="forceAsyncOff">Whether to force the archive to happen
@@ -7977,8 +7839,12 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Returns the status of an asynchronous job for archiving a team folder.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>Returns the status of an asynchronous job for archiving a team folder. The
+        /// job may show '.tag' as complete, but the team folder could still be in the process
+        /// of archiving (indicated by <see cref="Dropbox.Api.Team.TeamFolderMetadata.Status"
+        /// /> with 'archive_in_progress'). To confirm that the team folder is fully archived,
+        /// check the field <see cref="Dropbox.Api.Team.TeamFolderMetadata.Status" /> in the
+        /// response for the value 'archived'. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -8008,8 +7874,12 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Returns the status of an asynchronous job for archiving a team folder.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>Returns the status of an asynchronous job for archiving a team folder. The
+        /// job may show '.tag' as complete, but the team folder could still be in the process
+        /// of archiving (indicated by <see cref="Dropbox.Api.Team.TeamFolderMetadata.Status"
+        /// /> with 'archive_in_progress'). To confirm that the team folder is fully archived,
+        /// check the field <see cref="Dropbox.Api.Team.TeamFolderMetadata.Status" /> in the
+        /// response for the value 'archived'. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
@@ -8067,8 +7937,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Creates a new, active, team folder with no members. This endpoint can only be
-        /// used for teams that do not already have a shared team space.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// used for teams that do not already have a shared team space. Permission : Team
+        /// member file access.</para>
         /// </summary>
         /// <param name="teamFolderCreateArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -8099,8 +7969,8 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Creates a new, active, team folder with no members. This endpoint can only be
-        /// used for teams that do not already have a shared team space.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// used for teams that do not already have a shared team space. Permission : Team
+        /// member file access.</para>
         /// </summary>
         /// <param name="name">Name for the new team folder.</param>
         /// <param name="syncSetting">The sync setting to apply to this team folder. Only
@@ -8163,8 +8033,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Retrieves metadata for team folders.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>Retrieves metadata for team folders. Permission : Team member file
+        /// access.</para>
         /// </summary>
         /// <param name="teamFolderIdListArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -8191,8 +8061,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Retrieves metadata for team folders.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>Retrieves metadata for team folders. Permission : Team member file
+        /// access.</para>
         /// </summary>
         /// <param name="teamFolderIds">The list of team folder IDs.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -8241,8 +8111,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Lists all team folders.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>Lists all team folders. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderListArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -8272,8 +8141,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Lists all team folders.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>Lists all team folders. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="limit">The maximum number of results to return per request.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -8330,8 +8198,7 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.TeamFolderListAsync" />, use this to
-        /// paginate through all team folders.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// paginate through all team folders. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderListContinueArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -8363,8 +8230,7 @@ namespace Dropbox.Api.Team.Routes
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
         /// cref="Dropbox.Api.Team.Routes.TeamTeamRoutes.TeamFolderListAsync" />, use this to
-        /// paginate through all team folders.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// paginate through all team folders. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="cursor">Indicates from what point to get the next set of team
         /// folders.</param>
@@ -8422,8 +8288,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Permanently deletes an archived team folder. This endpoint cannot be used for
-        /// teams that have a shared team space.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// teams that have a shared team space. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderIdArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -8454,8 +8319,7 @@ namespace Dropbox.Api.Team.Routes
 
         /// <summary>
         /// <para>Permanently deletes an archived team folder. This endpoint cannot be used for
-        /// teams that have a shared team space.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// teams that have a shared team space. Permission : Team member file access.</para>
         /// </summary>
         /// <param name="teamFolderId">The ID of the team folder.</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -8507,8 +8371,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Changes an active team folder's name.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>Changes an active team folder's name. Permission : Team member file
+        /// access.</para>
         /// </summary>
         /// <param name="teamFolderRenameArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -8538,8 +8402,8 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Changes an active team folder's name.</para>
-        /// <para>Permission : Team member file access.</para>
+        /// <para>Changes an active team folder's name. Permission : Team member file
+        /// access.</para>
         /// </summary>
         /// <param name="teamFolderId">The ID of the team folder.</param>
         /// <param name="name">New team folder name.</param>
@@ -8589,6 +8453,93 @@ namespace Dropbox.Api.Team.Routes
         /// processing the request; This will contain a <see
         /// cref="TeamFolderRenameError"/>.</exception>
         public TeamFolderMetadata EndTeamFolderRename(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamFolderMetadata>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Sets an inactive team folder's status to active. Permission: Team member file
+        /// access.</para>
+        /// </summary>
+        /// <param name="teamFolderIdArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderRestoreError"/>.</exception>
+        public t.Task<TeamFolderMetadata> TeamFolderRestoreAsync(TeamFolderIdArg teamFolderIdArg)
+        {
+            return this.Transport.SendRpcRequestAsync<TeamFolderIdArg, TeamFolderMetadata, TeamFolderRestoreError>(teamFolderIdArg, "api", "/team/team_folder/restore", "team", global::Dropbox.Api.Team.TeamFolderIdArg.Encoder, global::Dropbox.Api.Team.TeamFolderMetadata.Decoder, global::Dropbox.Api.Team.TeamFolderRestoreError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder restore route.</para>
+        /// </summary>
+        /// <param name="teamFolderIdArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderRestore(TeamFolderIdArg teamFolderIdArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TeamFolderRestoreAsync(teamFolderIdArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Sets an inactive team folder's status to active. Permission: Team member file
+        /// access.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderRestoreError"/>.</exception>
+        public t.Task<TeamFolderMetadata> TeamFolderRestoreAsync(string teamFolderId)
+        {
+            var teamFolderIdArg = new TeamFolderIdArg(teamFolderId);
+
+            return this.TeamFolderRestoreAsync(teamFolderIdArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder restore route.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderRestore(string teamFolderId,
+                                                       sys.AsyncCallback callback,
+                                                       object callbackState = null)
+        {
+            var teamFolderIdArg = new TeamFolderIdArg(teamFolderId);
+
+            return this.BeginTeamFolderRestore(teamFolderIdArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the team folder restore route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderRestoreError"/>.</exception>
+        public TeamFolderMetadata EndTeamFolderRestore(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<TeamFolderMetadata>;
             if (task == null)

@@ -41,9 +41,9 @@ namespace Dropbox.Api.Team
                 throw new sys.ArgumentNullException("user");
             }
 
-            if (quotaGb < 15U)
+            if (quotaGb < 2U)
             {
-                throw new sys.ArgumentOutOfRangeException("quotaGb", "Value should be greater or equal than 15");
+                throw new sys.ArgumentOutOfRangeException("quotaGb", "Value should be greater or equal than 2");
             }
 
             this.User = user;

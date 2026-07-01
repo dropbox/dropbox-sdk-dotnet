@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed two-step verification setting for team.</para>
+    /// <para>Changed two-factor authentication setting for team.</para>
     /// </summary>
     public class TfaChangePolicyDetails
     {

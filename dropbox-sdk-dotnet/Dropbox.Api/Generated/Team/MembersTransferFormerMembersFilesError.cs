@@ -335,6 +335,73 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TransferInProgress</para>
+        /// </summary>
+        public bool IsTransferInProgress
+        {
+            get
+            {
+                return this is TransferInProgress;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TransferInProgress, or <c>null</c>.</para>
+        /// </summary>
+        public TransferInProgress AsTransferInProgress
+        {
+            get
+            {
+                return this as TransferInProgress;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is AlreadyTransferred</para>
+        /// </summary>
+        public bool IsAlreadyTransferred
+        {
+            get
+            {
+                return this is AlreadyTransferred;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AlreadyTransferred, or <c>null</c>.</para>
+        /// </summary>
+        public AlreadyTransferred AsAlreadyTransferred
+        {
+            get
+            {
+                return this as AlreadyTransferred;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// AlreadyTransferredOrDeleted</para>
+        /// </summary>
+        public bool IsAlreadyTransferredOrDeleted
+        {
+            get
+            {
+                return this is AlreadyTransferredOrDeleted;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a AlreadyTransferredOrDeleted, or <c>null</c>.</para>
+        /// </summary>
+        public AlreadyTransferredOrDeleted AsAlreadyTransferredOrDeleted
+        {
+            get
+            {
+                return this as AlreadyTransferredOrDeleted;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is UserNotInTeam</para>
         /// </summary>
         public bool IsUserNotInTeam
@@ -492,6 +559,24 @@ namespace Dropbox.Api.Team
                     RecipientNotVerified.Encoder.EncodeFields((RecipientNotVerified)value, writer);
                     return;
                 }
+                if (value is TransferInProgress)
+                {
+                    WriteProperty(".tag", "transfer_in_progress", writer, enc.StringEncoder.Instance);
+                    TransferInProgress.Encoder.EncodeFields((TransferInProgress)value, writer);
+                    return;
+                }
+                if (value is AlreadyTransferred)
+                {
+                    WriteProperty(".tag", "already_transferred", writer, enc.StringEncoder.Instance);
+                    AlreadyTransferred.Encoder.EncodeFields((AlreadyTransferred)value, writer);
+                    return;
+                }
+                if (value is AlreadyTransferredOrDeleted)
+                {
+                    WriteProperty(".tag", "already_transferred_or_deleted", writer, enc.StringEncoder.Instance);
+                    AlreadyTransferredOrDeleted.Encoder.EncodeFields((AlreadyTransferredOrDeleted)value, writer);
+                    return;
+                }
                 if (value is UserNotInTeam)
                 {
                     WriteProperty(".tag", "user_not_in_team", writer, enc.StringEncoder.Instance);
@@ -569,6 +654,12 @@ namespace Dropbox.Api.Team
                         return TransferAdminIsNotAdmin.Decoder.DecodeFields(reader);
                     case "recipient_not_verified":
                         return RecipientNotVerified.Decoder.DecodeFields(reader);
+                    case "transfer_in_progress":
+                        return TransferInProgress.Decoder.DecodeFields(reader);
+                    case "already_transferred":
+                        return AlreadyTransferred.Decoder.DecodeFields(reader);
+                    case "already_transferred_or_deleted":
+                        return AlreadyTransferredOrDeleted.Decoder.DecodeFields(reader);
                     case "user_not_in_team":
                         return UserNotInTeam.Decoder.DecodeFields(reader);
                     case "other":
@@ -1500,6 +1591,220 @@ namespace Dropbox.Api.Team
                 protected override RecipientNotVerified Create()
                 {
                     return RecipientNotVerified.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Cannot permanently delete files while it's being transferred.</para>
+        /// </summary>
+        public sealed class TransferInProgress : MembersTransferFormerMembersFilesError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TransferInProgress> Encoder = new TransferInProgressEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TransferInProgress> Decoder = new TransferInProgressDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TransferInProgress" />
+            /// class.</para>
+            /// </summary>
+            private TransferInProgress()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TransferInProgress</para>
+            /// </summary>
+            public static readonly TransferInProgress Instance = new TransferInProgress();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TransferInProgress" />.</para>
+            /// </summary>
+            private class TransferInProgressEncoder : enc.StructEncoder<TransferInProgress>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TransferInProgress value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TransferInProgress" />.</para>
+            /// </summary>
+            private class TransferInProgressDecoder : enc.StructDecoder<TransferInProgress>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TransferInProgress"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TransferInProgress Create()
+                {
+                    return TransferInProgress.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Cannot permanently delete files that have already been transferred.</para>
+        /// </summary>
+        public sealed class AlreadyTransferred : MembersTransferFormerMembersFilesError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AlreadyTransferred> Encoder = new AlreadyTransferredEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AlreadyTransferred> Decoder = new AlreadyTransferredDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AlreadyTransferred" />
+            /// class.</para>
+            /// </summary>
+            private AlreadyTransferred()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of AlreadyTransferred</para>
+            /// </summary>
+            public static readonly AlreadyTransferred Instance = new AlreadyTransferred();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AlreadyTransferred" />.</para>
+            /// </summary>
+            private class AlreadyTransferredEncoder : enc.StructEncoder<AlreadyTransferred>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AlreadyTransferred value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AlreadyTransferred" />.</para>
+            /// </summary>
+            private class AlreadyTransferredDecoder : enc.StructDecoder<AlreadyTransferred>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AlreadyTransferred"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AlreadyTransferred Create()
+                {
+                    return AlreadyTransferred.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Cannot permanently delete files that have already been transferred or
+        /// deleted.</para>
+        /// </summary>
+        public sealed class AlreadyTransferredOrDeleted : MembersTransferFormerMembersFilesError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<AlreadyTransferredOrDeleted> Encoder = new AlreadyTransferredOrDeletedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<AlreadyTransferredOrDeleted> Decoder = new AlreadyTransferredOrDeletedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="AlreadyTransferredOrDeleted"
+            /// /> class.</para>
+            /// </summary>
+            private AlreadyTransferredOrDeleted()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of AlreadyTransferredOrDeleted</para>
+            /// </summary>
+            public static readonly AlreadyTransferredOrDeleted Instance = new AlreadyTransferredOrDeleted();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="AlreadyTransferredOrDeleted" />.</para>
+            /// </summary>
+            private class AlreadyTransferredOrDeletedEncoder : enc.StructEncoder<AlreadyTransferredOrDeleted>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(AlreadyTransferredOrDeleted value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="AlreadyTransferredOrDeleted" />.</para>
+            /// </summary>
+            private class AlreadyTransferredOrDeletedDecoder : enc.StructDecoder<AlreadyTransferredOrDeleted>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="AlreadyTransferredOrDeleted"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override AlreadyTransferredOrDeleted Create()
+                {
+                    return AlreadyTransferredOrDeleted.Instance;
                 }
 
             }

@@ -34,7 +34,7 @@ namespace Dropbox.Api.Team
         /// </summary>
         /// <param name="group">Specify a group.</param>
         /// <param name="returnMembers">Whether to return the list of members in the group.
-        /// Note that the default value will cause all the group members  to be returned in the
+        /// Note that the default value will cause all the group members to be returned in the
         /// response. This may take a long time for large groups.</param>
         /// <param name="newGroupName">Optional argument. Set group name to this if
         /// provided.</param>

@@ -1039,7 +1039,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Use create_view_link and create_edit_link instead.</para>
+        /// <para>Field is deprecated. Use create_view_link and create_edit_link
+        /// instead.</para>
         /// </summary>
         public sealed class ShareLink : FileAction
         {
@@ -1108,7 +1109,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Use create_view_link and create_edit_link instead.</para>
+        /// <para>Field is deprecated. Use create_view_link and create_edit_link
+        /// instead.</para>
         /// </summary>
         public sealed class CreateLink : FileAction
         {

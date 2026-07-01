@@ -101,6 +101,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is EncryptedContent</para>
+        /// </summary>
+        public bool IsEncryptedContent
+        {
+            get
+            {
+                return this is EncryptedContent;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EncryptedContent, or <c>null</c>.</para>
+        /// </summary>
+        public EncryptedContent AsEncryptedContent
+        {
+            get
+            {
+                return this as EncryptedContent;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is ConversionError</para>
         /// </summary>
         public bool IsConversionError
@@ -154,6 +176,12 @@ namespace Dropbox.Api.Files
                     UnsupportedImage.Encoder.EncodeFields((UnsupportedImage)value, writer);
                     return;
                 }
+                if (value is EncryptedContent)
+                {
+                    WriteProperty(".tag", "encrypted_content", writer, enc.StringEncoder.Instance);
+                    EncryptedContent.Encoder.EncodeFields((EncryptedContent)value, writer);
+                    return;
+                }
                 if (value is ConversionError)
                 {
                     WriteProperty(".tag", "conversion_error", writer, enc.StringEncoder.Instance);
@@ -198,6 +226,8 @@ namespace Dropbox.Api.Files
                         return UnsupportedExtension.Decoder.DecodeFields(reader);
                     case "unsupported_image":
                         return UnsupportedImage.Decoder.DecodeFields(reader);
+                    case "encrypted_content":
+                        return EncryptedContent.Decoder.DecodeFields(reader);
                     case "conversion_error":
                         return ConversionError.Decoder.DecodeFields(reader);
                     default:
@@ -438,6 +468,76 @@ namespace Dropbox.Api.Files
                 protected override UnsupportedImage Create()
                 {
                     return UnsupportedImage.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Encrypted content cannot be converted to a thumbnail.</para>
+        /// </summary>
+        public sealed class EncryptedContent : ThumbnailError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EncryptedContent> Encoder = new EncryptedContentEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EncryptedContent> Decoder = new EncryptedContentDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="EncryptedContent" />
+            /// class.</para>
+            /// </summary>
+            private EncryptedContent()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of EncryptedContent</para>
+            /// </summary>
+            public static readonly EncryptedContent Instance = new EncryptedContent();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EncryptedContent" />.</para>
+            /// </summary>
+            private class EncryptedContentEncoder : enc.StructEncoder<EncryptedContent>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EncryptedContent value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EncryptedContent" />.</para>
+            /// </summary>
+            private class EncryptedContentDecoder : enc.StructDecoder<EncryptedContent>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="EncryptedContent" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EncryptedContent Create()
+                {
+                    return EncryptedContent.Instance;
                 }
 
             }

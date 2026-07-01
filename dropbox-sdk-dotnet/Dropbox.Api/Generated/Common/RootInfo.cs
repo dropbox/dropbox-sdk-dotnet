@@ -34,7 +34,8 @@ namespace Dropbox.Api.Common
         /// </summary>
         /// <param name="rootNamespaceId">The namespace ID for user's root namespace. It will
         /// be the namespace ID of the shared team root if the user is member of a team with a
-        /// separate team root. Otherwise it will be same as <see
+        /// separate team root, or the user root if user is member of a team with separate
+        /// distinct roots for users. Otherwise it will be the same as <see
         /// cref="Dropbox.Api.Common.RootInfo.HomeNamespaceId" />.</param>
         /// <param name="homeNamespaceId">The namespace ID for user's home namespace.</param>
         protected RootInfo(string rootNamespaceId,
@@ -118,8 +119,9 @@ namespace Dropbox.Api.Common
 
         /// <summary>
         /// <para>The namespace ID for user's root namespace. It will be the namespace ID of
-        /// the shared team root if the user is member of a team with a separate team root.
-        /// Otherwise it will be same as <see
+        /// the shared team root if the user is member of a team with a separate team root, or
+        /// the user root if user is member of a team with separate distinct roots for users.
+        /// Otherwise it will be the same as <see
         /// cref="Dropbox.Api.Common.RootInfo.HomeNamespaceId" />.</para>
         /// </summary>
         public string RootNamespaceId { get; protected set; }

@@ -477,8 +477,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Use `require_password` instead. A link-specific password is required to
-        /// access the link. Login is not required.</para>
+        /// <para>Field is deprecated. Use `require_password` instead. A link-specific password
+        /// is required to access the link. Login is not required.</para>
         /// </summary>
         public sealed class Password : LinkAudience
         {
@@ -547,7 +547,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>Link is accessible only by members of the content.</para>
+        /// <para>Field is deprecated. Link is accessible only by members of the
+        /// content.</para>
         /// </summary>
         public sealed class Members : LinkAudience
         {
