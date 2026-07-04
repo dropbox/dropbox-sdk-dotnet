@@ -211,7 +211,7 @@ namespace SimpleBusinessDashboard.Controllers
                 this.Flash("This account has been connected to Dropbox.", FlashLevel.Success);
                 return RedirectToAction("Index");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 var message = string.Format(
                     "code: {0}\nAppKey: {1}\nAppSecret: {2}\nRedirectUri: {3}\nException : {4}",

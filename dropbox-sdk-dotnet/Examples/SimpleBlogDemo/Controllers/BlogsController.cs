@@ -56,7 +56,7 @@ namespace SimpleBlogDemo.Controllers
                 {
                     return View("Display", Tuple.Create(article, articles, blogname, isEditable));
                 }
-           }
+            }
         }
     }
 

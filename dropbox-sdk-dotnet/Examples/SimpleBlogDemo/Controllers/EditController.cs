@@ -88,7 +88,7 @@ namespace SimpleBlogDemo.Controllers
                             var reason = uploadError.Value.Reason;
                             var id = filename.Split('.')[0];
 
-                            var message = string.Format( "Unable to update {0}. Reason: {1}", id, reason);
+                            var message = string.Format("Unable to update {0}. Reason: {1}", id, reason);
 
                             this.Flash(message, FlashLevel.Warning);
                             return RedirectToAction("Index", new { id = id });

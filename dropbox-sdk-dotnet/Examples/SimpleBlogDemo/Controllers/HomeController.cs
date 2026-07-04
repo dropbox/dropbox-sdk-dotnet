@@ -207,7 +207,7 @@ namespace SimpleBlogDemo.Controllers
                 this.Flash("This account has been connected to Dropbox.", FlashLevel.Success);
                 return RedirectToAction("Profile");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 var message = string.Format(
                     "code: {0}\nAppKey: {1}\nAppSecret: {2}\nRedirectUri: {3}\nException : {4}",
@@ -234,7 +234,7 @@ namespace SimpleBlogDemo.Controllers
         }
 
         // GET: /Home/SignIn
-        public ActionResult SignIn(string returnUrl=null)
+        public ActionResult SignIn(string returnUrl = null)
         {
             if (WebSecurity.IsAuthenticated)
             {
@@ -275,7 +275,7 @@ namespace SimpleBlogDemo.Controllers
                 {
                     Response.Cookies.Get(".ASPXAUTH").Expires = DateTime.UtcNow.AddDays(30);
                 }
-           }
+            }
 
             if (!string.IsNullOrEmpty(returnUrl))
             {
