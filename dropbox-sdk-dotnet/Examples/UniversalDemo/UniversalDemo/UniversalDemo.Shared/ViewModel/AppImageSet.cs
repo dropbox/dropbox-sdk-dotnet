@@ -204,5 +204,5 @@ namespace UniversalDemo.ViewModel
             });
         }
 
-     }
+    }
 }

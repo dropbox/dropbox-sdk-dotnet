@@ -224,7 +224,7 @@ namespace SimpleBlogDemo.Helpers
             };
         }
     }
- 
+
     public class Article
     {
         public Article(string name, ArticleMetadata metadata, HtmlString content)

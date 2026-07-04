@@ -236,7 +236,7 @@ namespace UniversalDemo
 #endif
             base.OnWindowCreated(args);
         }
- 
+
         /// <summary>
         /// Sets the new dropbox client.
         /// </summary>
@@ -273,5 +273,5 @@ namespace UniversalDemo
             // TODO: Save application state and stop any background activity
             deferral.Complete();
         }
-   }
+    }
 }

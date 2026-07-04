@@ -30,7 +30,8 @@ namespace SimpleBlogDemo.Helpers
 
             flashStack = flashStackObject as List<FlashItem>;
 
-            flashStack.Add(new FlashItem {
+            flashStack.Add(new FlashItem
+            {
                 Message = message,
                 Level = level
             });
@@ -58,7 +59,7 @@ namespace SimpleBlogDemo.Helpers
 
             var level = top.Level.ToString().ToLowerInvariant();
             var message = HttpUtility.HtmlEncode(top.Message).Replace("\r", "").Replace("\n", "<br />\n").Replace("'", "@squo;");
-            
+
             var builder = new StringBuilder();
             builder.AppendFormat("<div class=\"margin-top-10 alert alert-{0}\">", level).AppendLine();
             builder.AppendLine("  <span class=\"close\" data-dismiss=\"alert\">&times;</span>");

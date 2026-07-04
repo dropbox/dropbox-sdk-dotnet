@@ -24,7 +24,6 @@ namespace UniversalDemo
             this.Root = root;
             this.ImageSet = imageSet;
 
-           
             this.Root.ManipulationMode = ManipulationModes.TranslateX;
             this.Root.ManipulationDelta += this.OnManipulationDelta;
             this.Root.ManipulationCompleted += this.OnManipulationCompleted;
