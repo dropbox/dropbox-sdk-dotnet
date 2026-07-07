@@ -174,6 +174,42 @@ namespace Dropbox.Api.Tests
         }
 
         /// <summary>
+        /// Tests that the token refresh uses the caller-supplied HttpClient.
+        /// </summary>
+        /// <returns>The <see cref="Task" />.</returns>
+        [TestMethod]
+        public async Task TestRefreshUsesSuppliedHttpClient()
+        {
+            var refreshRequests = 0;
+            var mockHandler = new MockHttpMessageHandler((r, s) =>
+            {
+                if (r.RequestUri.AbsoluteUri.Contains("oauth2/token"))
+                {
+                    refreshRequests++;
+                }
+
+                return s(r);
+            });
+
+            var mockClient = new HttpClient(mockHandler);
+            var config = new DropboxClientConfig { HttpClient = mockClient };
+
+            // Past expiry forces a refresh; SDK compares against DateTime.Now.
+            var client = new DropboxClient(
+                "expired-access-token",
+                userRefreshToken,
+                DateTime.Now.AddMinutes(-5),
+                appKey,
+                appSecret,
+                config);
+
+            var result = await client.Users.GetCurrentAccountAsync();
+
+            Assert.IsNotNull(result.Email);
+            Assert.AreEqual(1, refreshRequests, "The refresh request should flow through the supplied HttpClient.");
+        }
+
+        /// <summary>
         /// Test get metadata.
         /// </summary>
         /// <returns>The <see cref="Task"/>.</returns>
