@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup Python environment
-        uses: actions/setup-python@v2.2.2
+        uses: actions/setup-python@v6.3.0
         with:
           python-version: 3.7
       - name: Get current time
