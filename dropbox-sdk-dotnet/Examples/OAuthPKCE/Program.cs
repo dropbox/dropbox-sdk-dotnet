@@ -185,7 +185,10 @@ namespace OauthPKCE
 
                     http.Start();
 
-                    System.Diagnostics.Process.Start(authorizeUri.ToString());
+                    // UseShellExecute must be true to open a URL with the default
+                    // browser; on .NET Core the default is false, which throws
+                    // "The system cannot find the file specified" (issue #334).
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(authorizeUri.ToString()) { UseShellExecute = true });
 
                     // Handle OAuth redirect and send URL fragment to local server using JS.
                     await HandleOAuth2Redirect(http);
