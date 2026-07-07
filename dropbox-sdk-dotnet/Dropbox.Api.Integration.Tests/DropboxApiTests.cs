@@ -27,7 +27,7 @@ namespace Dropbox.Api.Tests
     [TestClass]
     public class DropboxApiTests
     {
-        private static readonly string TestingPath = "/Testing/Dropbox.Api.Tests";
+        private static string testingPath;
 
         /// <summary>
         /// The user access token.
@@ -77,6 +77,9 @@ namespace Dropbox.Api.Tests
                 .AddEnvironmentVariables(prefix: "DROPBOX_INTEGRATION_")
                 .Build();
 
+            // Unique folder per run so concurrent runs don't race on shared files.
+            testingPath = "/Testing/Dropbox.Api.Tests-" + Guid.NewGuid().ToString("N");
+
             appKey = config["appKey"];
             appSecret = config["appSecret"];
 
@@ -91,6 +94,22 @@ namespace Dropbox.Api.Tests
         }
 
         /// <summary>
+        /// Removes the per-run test folder created in <see cref="ClassInitialize"/>.
+        /// </summary>
+        [ClassCleanup]
+        public static void ClassCleanup()
+        {
+            try
+            {
+                client.Files.DeleteV2Async(testingPath).Wait();
+            }
+            catch (AggregateException ex) when (ex.InnerException is ApiException<DeleteError>)
+            {
+                // The folder may not exist if no test created it; ignore.
+            }
+        }
+
+        /// <summary>
         /// Ensure that the rest folder exissts and is empty before test execution.
         /// </summary>
         /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
@@ -99,14 +118,14 @@ namespace Dropbox.Api.Tests
         {
             try
             {
-                var result = await client.Files.ListFolderAsync(TestingPath);
+                var result = await client.Files.ListFolderAsync(testingPath);
                 Assert.AreEqual(0, result.Entries.Count);
             }
             catch (ApiException<ListFolderError>)
             {
                 // create folder if it doesn't exist
-                var result = client.Files.CreateFolderV2Async(TestingPath).Result;
-                Assert.AreEqual(TestingPath, result.Metadata.PathDisplay);
+                var result = client.Files.CreateFolderV2Async(testingPath).Result;
+                Assert.AreEqual(testingPath, result.Metadata.PathDisplay);
             }
         }
 
@@ -116,11 +135,28 @@ namespace Dropbox.Api.Tests
         [TestCleanup]
         public void Cleanup()
         {
-            var result = client.Files.ListFolderAsync(TestingPath).Result;
+            ListFolderResult result;
+            try
+            {
+                result = client.Files.ListFolderAsync(testingPath).Result;
+            }
+            catch (AggregateException ex) when (ex.InnerException is ApiException<ListFolderError>)
+            {
+                // Folder is already gone; nothing to clean up. The whole
+                // per-run folder is removed in ClassCleanup regardless.
+                return;
+            }
 
             foreach (var entry in result.Entries)
             {
-                client.Files.DeleteV2Async(entry.PathLower).Wait();
+                try
+                {
+                    client.Files.DeleteV2Async(entry.PathLower).Wait();
+                }
+                catch (AggregateException ex) when (ex.InnerException is ApiException<DeleteError>)
+                {
+                    // Entry was already removed; ignore.
+                }
             }
         }
 
@@ -144,11 +180,11 @@ namespace Dropbox.Api.Tests
         [TestMethod]
         public async Task TestGetMetadata()
         {
-            await client.Files.UploadAsync(TestingPath + "/Foo.txt", body: GetStream("abc"));
-            var metadata = await client.Files.GetMetadataAsync(TestingPath + "/Foo.txt");
+            await client.Files.UploadAsync(testingPath + "/Foo.txt", body: GetStream("abc"));
+            var metadata = await client.Files.GetMetadataAsync(testingPath + "/Foo.txt");
             Assert.AreEqual("Foo.txt", metadata.Name);
-            Assert.AreEqual(TestingPath.ToLower() + "/foo.txt", metadata.PathLower);
-            Assert.AreEqual(TestingPath + "/Foo.txt", metadata.PathDisplay);
+            Assert.AreEqual(testingPath.ToLower() + "/foo.txt", metadata.PathLower);
+            Assert.AreEqual(testingPath + "/Foo.txt", metadata.PathDisplay);
             Assert.IsTrue(metadata.IsFile);
 
             var file = metadata.AsFile;
@@ -165,10 +201,10 @@ namespace Dropbox.Api.Tests
             var files = new HashSet<string> { "a.txt", "b.txt", "c.txt" };
             foreach (var file in files)
             {
-                await client.Files.UploadAsync(TestingPath + "/" + file, body: GetStream("abc"));
+                await client.Files.UploadAsync(testingPath + "/" + file, body: GetStream("abc"));
             }
 
-            var response = await client.Files.ListFolderAsync(TestingPath);
+            var response = await client.Files.ListFolderAsync(testingPath);
             Assert.AreEqual(files.Count, response.Entries.Count);
             foreach (var entry in response.Entries)
             {
@@ -186,11 +222,11 @@ namespace Dropbox.Api.Tests
         [TestMethod]
         public async Task TestUpload()
         {
-            var response = await client.Files.UploadAsync(TestingPath + "/Foo.txt", body: GetStream("abc"));
+            var response = await client.Files.UploadAsync(testingPath + "/Foo.txt", body: GetStream("abc"));
             Assert.AreEqual(response.Name, "Foo.txt");
-            Assert.AreEqual(response.PathLower, TestingPath.ToLower() + "/foo.txt");
-            Assert.AreEqual(response.PathDisplay, TestingPath + "/Foo.txt");
-            var downloadResponse = await client.Files.DownloadAsync(TestingPath + "/Foo.txt");
+            Assert.AreEqual(response.PathLower, testingPath.ToLower() + "/foo.txt");
+            Assert.AreEqual(response.PathDisplay, testingPath + "/Foo.txt");
+            var downloadResponse = await client.Files.DownloadAsync(testingPath + "/Foo.txt");
             var content = await downloadResponse.GetContentAsStringAsync();
             Assert.AreEqual("abc", content);
         }
@@ -224,8 +260,8 @@ namespace Dropbox.Api.Tests
                 userAccessToken,
                 new DropboxClientConfig { HttpClient = mockClient, MaxRetriesOnError = 10 });
 
-            var response = await client.Files.UploadAsync(TestingPath + "/Foo.txt", body: GetStream("abc"));
-            var downloadResponse = await DropboxApiTests.client.Files.DownloadAsync(TestingPath + "/Foo.txt");
+            var response = await client.Files.UploadAsync(testingPath + "/Foo.txt", body: GetStream("abc"));
+            var downloadResponse = await DropboxApiTests.client.Files.DownloadAsync(testingPath + "/Foo.txt");
             var content = await downloadResponse.GetContentAsStringAsync();
             Assert.AreEqual("abc", content);
         }
@@ -237,14 +273,14 @@ namespace Dropbox.Api.Tests
         [TestMethod]
         public async Task TestDownload()
         {
-            await client.Files.UploadAsync(TestingPath + "/Foo.txt", body: GetStream("abc"));
-            var downloadResponse = await client.Files.DownloadAsync(TestingPath + "/Foo.txt");
+            await client.Files.UploadAsync(testingPath + "/Foo.txt", body: GetStream("abc"));
+            var downloadResponse = await client.Files.DownloadAsync(testingPath + "/Foo.txt");
             var content = await downloadResponse.GetContentAsStringAsync();
             Assert.AreEqual("abc", content);
             var response = downloadResponse.Response;
             Assert.AreEqual(response.Name, "Foo.txt");
-            Assert.AreEqual(response.PathLower, TestingPath.ToLower() + "/foo.txt");
-            Assert.AreEqual(response.PathDisplay, TestingPath + "/Foo.txt");
+            Assert.AreEqual(response.PathLower, testingPath.ToLower() + "/foo.txt");
+            Assert.AreEqual(response.PathDisplay, testingPath + "/Foo.txt");
         }
 
         /// <summary>
@@ -267,7 +303,7 @@ namespace Dropbox.Api.Tests
             var client = new DropboxClient("dummy", new DropboxClientConfig { HttpClient = mockClient });
             try
             {
-                await client.Files.GetMetadataAsync(TestingPath + "/a.txt");
+                await client.Files.GetMetadataAsync(testingPath + "/a.txt");
             }
             catch (RateLimitException ex)
             {
@@ -354,18 +390,18 @@ namespace Dropbox.Api.Tests
         [TestMethod]
         public async Task TestPathRoot()
         {
-            await client.Files.UploadAsync(TestingPath + "/Foo.txt", body: GetStream("abc"));
+            await client.Files.UploadAsync(testingPath + "/Foo.txt", body: GetStream("abc"));
 
             var pathRootClient = client.WithPathRoot(PathRoot.Home.Instance);
-            var metadata = await pathRootClient.Files.GetMetadataAsync(TestingPath + "/Foo.txt");
-            Assert.AreEqual(TestingPath.ToLower() + "/foo.txt", metadata.PathLower);
+            var metadata = await pathRootClient.Files.GetMetadataAsync(testingPath + "/Foo.txt");
+            Assert.AreEqual(testingPath.ToLower() + "/foo.txt", metadata.PathLower);
             pathRootClient = client.WithPathRoot(new PathRoot.Root("123"));
 
             var exceptionRaised = false;
 
             try
             {
-                await pathRootClient.Files.GetMetadataAsync(TestingPath + "/Foo.txt");
+                await pathRootClient.Files.GetMetadataAsync(testingPath + "/Foo.txt");
             }
             catch (PathRootException e)
             {
@@ -404,7 +440,7 @@ namespace Dropbox.Api.Tests
             var cursor = result.Cursor;
 
             var task = client.Files.ListFolderLongpollAsync(cursor);
-            await client.Files.UploadAsync(TestingPath + "/foo.txt", body: GetStream("abc"));
+            await client.Files.UploadAsync(testingPath + "/foo.txt", body: GetStream("abc"));
             var response = await task;
             Assert.IsTrue(response.Changes);
         }
@@ -501,11 +537,11 @@ namespace Dropbox.Api.Tests
         public async Task TestUploadWithDateName()
         {
             var fileNameWithDateFormat = DateTime.Now.ToString("s");
-            var response = await client.Files.UploadAsync($"{TestingPath}/{fileNameWithDateFormat}", body: GetStream("abc"));
+            var response = await client.Files.UploadAsync($"{testingPath}/{fileNameWithDateFormat}", body: GetStream("abc"));
             Assert.AreEqual(response.Name, fileNameWithDateFormat);
-            Assert.AreEqual(response.PathLower, $"{TestingPath.ToLower()}/{fileNameWithDateFormat.ToLowerInvariant()}");
-            Assert.AreEqual(response.PathDisplay, $"{TestingPath}/{fileNameWithDateFormat}");
-            var downloadResponse = await client.Files.DownloadAsync($"{TestingPath}/{fileNameWithDateFormat}");
+            Assert.AreEqual(response.PathLower, $"{testingPath.ToLower()}/{fileNameWithDateFormat.ToLowerInvariant()}");
+            Assert.AreEqual(response.PathDisplay, $"{testingPath}/{fileNameWithDateFormat}");
+            var downloadResponse = await client.Files.DownloadAsync($"{testingPath}/{fileNameWithDateFormat}");
             var content = await downloadResponse.GetContentAsStringAsync();
             Assert.AreEqual("abc", content);
         }
@@ -518,11 +554,11 @@ namespace Dropbox.Api.Tests
         public async Task TestCreateFolderWithDateFormat()
         {
             var folderNameWithDateFormat = DateTime.Now.ToString("s");
-            var response = await client.Files.CreateFolderAsync($"{TestingPath}/{folderNameWithDateFormat}");
+            var response = await client.Files.CreateFolderAsync($"{testingPath}/{folderNameWithDateFormat}");
             Assert.AreEqual(response.Name, folderNameWithDateFormat);
-            Assert.AreEqual(response.PathLower, $"{TestingPath.ToLower()}/{folderNameWithDateFormat.ToLowerInvariant()}");
-            Assert.AreEqual(response.PathDisplay, $"{TestingPath}/{folderNameWithDateFormat}");
-            var folders = await client.Files.ListFolderAsync($"/{TestingPath}");
+            Assert.AreEqual(response.PathLower, $"{testingPath.ToLower()}/{folderNameWithDateFormat.ToLowerInvariant()}");
+            Assert.AreEqual(response.PathDisplay, $"{testingPath}/{folderNameWithDateFormat}");
+            var folders = await client.Files.ListFolderAsync($"/{testingPath}");
             Assert.IsTrue(folders.Entries.Any(f => f.Name == folderNameWithDateFormat));
         }
 
