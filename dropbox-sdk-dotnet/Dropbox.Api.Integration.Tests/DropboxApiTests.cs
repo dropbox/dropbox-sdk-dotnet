@@ -174,6 +174,30 @@ namespace Dropbox.Api.Tests
         }
 
         /// <summary>
+        /// Tests that ProcessCodeFlowAsync returns the state passed to it.
+        /// </summary>
+        /// <returns>The <see cref="Task" />.</returns>
+        [TestMethod]
+        public async Task TestProcessCodeFlowReturnsState()
+        {
+            const string state = "my-state-value";
+            var tokenJson = "{\"access_token\":\"token\",\"token_type\":\"bearer\",\"uid\":\"123\"}";
+
+            var mockHandler = new MockHttpMessageHandler((r, s) =>
+                Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK)
+                {
+                    Content = new StringContent(tokenJson, Encoding.UTF8, "application/json"),
+                }));
+            var mockClient = new HttpClient(mockHandler);
+
+            var responseUri = new Uri("https://localhost/token?code=the-code&state=" + state);
+            var response = await DropboxOAuth2Helper.ProcessCodeFlowAsync(
+                responseUri, "appKey", "appSecret", null, state, mockClient);
+
+            Assert.AreEqual(state, response.State);
+        }
+
+        /// <summary>
         /// Tests that the token refresh uses the caller-supplied HttpClient.
         /// </summary>
         /// <returns>The <see cref="Task" />.</returns>

@@ -497,8 +497,9 @@ namespace Dropbox.Api
         /// again.</param>
         /// <param name="client">An optional http client instance used to make requests.</param>
         /// <param name="codeVerifier">The code verifier for PKCE flow.  If using PKCE, please us the PKCEOauthFlow object.</param>
+        /// <param name="state">The state to return on the response, if any.</param>
         /// <returns>The authorization response, containing the access token and uid of the authorized user.</returns>
-        public static async Task<OAuth2Response> ProcessCodeFlowAsync(string code, string appKey, string appSecret = null, string redirectUri = null, HttpClient client = null, string codeVerifier = null)
+        public static async Task<OAuth2Response> ProcessCodeFlowAsync(string code, string appKey, string appSecret = null, string redirectUri = null, HttpClient client = null, string codeVerifier = null, string state = null)
         {
             if (string.IsNullOrEmpty(code))
             {
@@ -573,7 +574,7 @@ namespace Dropbox.Api
                     return new OAuth2Response(
                         json["access_token"].ToString(),
                         json["uid"].ToString(),
-                        null,
+                        state,
                         json["token_type"].ToString());
                 }
 
@@ -581,7 +582,7 @@ namespace Dropbox.Api
                     json["access_token"].ToString(),
                     refreshToken,
                     json["uid"].ToString(),
-                    null,
+                    state,
                     json["token_type"].ToString(),
                     expiresIn,
                     scopeList);
@@ -665,7 +666,7 @@ namespace Dropbox.Api
                 throw new ArgumentException("The responseUri is missing a code value in the query component.", "responseUri");
             }
 
-            return ProcessCodeFlowAsync(code, appKey, appSecret, redirectUri, client, codeVerifier);
+            return ProcessCodeFlowAsync(code, appKey, appSecret, redirectUri, client, codeVerifier, state);
         }
     }
 
