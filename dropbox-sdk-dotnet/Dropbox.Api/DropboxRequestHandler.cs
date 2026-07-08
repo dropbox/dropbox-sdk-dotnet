@@ -431,7 +431,10 @@ namespace Dropbox.Api
             }
             finally
             {
-                body?.Dispose();
+                if (this.options.DisposeUploadStream)
+                {
+                    body?.Dispose();
+                }
             }
         }
 
@@ -934,7 +937,8 @@ namespace Dropbox.Api
             DefaultApiContentDomain,
             DefaultApiNotifyDomain,
             config.HttpClient,
-            config.LongPollHttpClient)
+            config.LongPollHttpClient,
+            config.DisposeUploadStream)
         {
         }
 
@@ -958,6 +962,7 @@ namespace Dropbox.Api
         /// http client will be created.</param>
         /// <param name="longPollHttpClient">The custom http client for long poll. If not provided, a default
         /// http client with longer timeout will be created.</param>
+        /// <param name="disposeUploadStream">Whether to dispose the upload stream after the request.</param>
         public DropboxRequestHandlerOptions(
             string oauth2AccessToken,
             string oauth2RefreshToken,
@@ -970,7 +975,8 @@ namespace Dropbox.Api
             string apiContentHostname,
             string apiNotifyHostname,
             HttpClient httpClient,
-            HttpClient longPollHttpClient)
+            HttpClient longPollHttpClient,
+            bool disposeUploadStream = true)
         {
             var type = typeof(DropboxRequestHandlerOptions);
 #if PORTABLE40
@@ -987,6 +993,7 @@ namespace Dropbox.Api
 
             this.HttpClient = httpClient;
             this.LongPollHttpClient = longPollHttpClient;
+            this.DisposeUploadStream = disposeUploadStream;
             this.OAuth2AccessToken = oauth2AccessToken;
             this.OAuth2RefreshToken = oauth2RefreshToken;
             this.OAuth2AccessTokenExpiresAt = oauth2AccessTokenExpiresAt;
@@ -1040,6 +1047,11 @@ namespace Dropbox.Api
         /// Gets the HTTP client use to send long poll requests to the server.
         /// </summary>
         public HttpClient LongPollHttpClient { get; private set; }
+
+        /// <summary>
+        /// Gets a value indicating whether to dispose the upload stream after the request.
+        /// </summary>
+        public bool DisposeUploadStream { get; private set; }
 
         /// <summary>
         /// Gets the user agent string.

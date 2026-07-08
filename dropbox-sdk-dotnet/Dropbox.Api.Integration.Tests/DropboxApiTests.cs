@@ -210,6 +210,36 @@ namespace Dropbox.Api.Tests
         }
 
         /// <summary>
+        /// Tests that upload disposes the stream by default.
+        /// </summary>
+        /// <returns>The <see cref="Task" />.</returns>
+        [TestMethod]
+        public async Task TestUploadDisposesStreamByDefault()
+        {
+            var stream = GetStream("abc");
+            await client.Files.UploadAsync(testingPath + "/Foo.txt", body: stream);
+
+            Assert.ThrowsException<ObjectDisposedException>(() => stream.Position);
+        }
+
+        /// <summary>
+        /// Tests that upload keeps the stream open when DisposeUploadStream is false.
+        /// </summary>
+        /// <returns>The <see cref="Task" />.</returns>
+        [TestMethod]
+        public async Task TestUploadKeepsStreamOpenWhenConfigured()
+        {
+            var config = new DropboxClientConfig { DisposeUploadStream = false };
+            var keepOpenClient = new DropboxClient(userAccessToken, config);
+
+            var stream = GetStream("abc");
+            await keepOpenClient.Files.UploadAsync(testingPath + "/Bar.txt", body: stream);
+
+            stream.Seek(0, SeekOrigin.Begin);
+            Assert.AreEqual(3, stream.Length);
+        }
+
+        /// <summary>
         /// Test get metadata.
         /// </summary>
         /// <returns>The <see cref="Task"/>.</returns>
