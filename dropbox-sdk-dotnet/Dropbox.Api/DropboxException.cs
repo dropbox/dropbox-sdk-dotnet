@@ -120,6 +120,19 @@ namespace Dropbox.Api
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="AuthException"/> class.
+        /// </summary>
+        /// <param name="requestId">The Dropbox request ID.</param>
+        /// <param name="message">The error message.</param>
+        /// <param name="statusCode">The HTTP status code that prompted this exception.</param>
+        internal AuthException(string requestId, string message, int statusCode)
+            : base(requestId, message)
+        {
+            this.StatusCode = statusCode;
+            this.RequestUri = null;
+        }
+
+        /// <summary>
         /// Gets the HTTP status code that prompted this exception.
         /// </summary>
         /// <value>

@@ -275,14 +275,14 @@ namespace Dropbox.Api
             // Honor a caller-supplied HttpClient here too.
             var response = await this.GetHttpClient(HostType.Api).PostAsync(url, bodyContent).ConfigureAwait(false);
 
-            // if response is an invalid grant, we want to throw this exception rather than the one thrown in
-            // response.EnsureSuccessStatusCode();
-            if (response.StatusCode == HttpStatusCode.Unauthorized)
+            // A revoked or invalid refresh token returns invalid_grant (as 400 or
+            // 401); surface it as an AuthException instead of a generic error.
+            if (!response.IsSuccessStatusCode)
             {
                 var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                if (reason == "invalid_grant")
+                if (this.TryParseOAuthError(reason, out var error, out var description) && error == "invalid_grant")
                 {
-                    throw AuthException.Decode(reason, () => new AuthException(this.GetRequestId(response)));
+                    throw new AuthException(this.GetRequestId(response), description ?? error, (int)response.StatusCode);
                 }
             }
 
@@ -653,6 +653,33 @@ namespace Dropbox.Api
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Parses an OAuth token endpoint error body of the form
+        /// <c>{ "error": "...", "error_description": "..." }</c>.
+        /// </summary>
+        /// <param name="body">The response body.</param>
+        /// <param name="error">The parsed error code, if any.</param>
+        /// <param name="description">The parsed error description, if any.</param>
+        /// <returns><c>true</c> if an error code was found.</returns>
+        private bool TryParseOAuthError(string body, out string error, out string description)
+        {
+            error = null;
+            description = null;
+
+            try
+            {
+                var json = JObject.Parse(body);
+                error = (string)json["error"];
+                description = (string)json["error_description"];
+            }
+            catch (Newtonsoft.Json.JsonException)
+            {
+                return false;
+            }
+
+            return error != null;
         }
 
         /// <summary>

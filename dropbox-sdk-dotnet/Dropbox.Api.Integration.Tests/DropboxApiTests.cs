@@ -174,6 +174,28 @@ namespace Dropbox.Api.Tests
         }
 
         /// <summary>
+        /// Tests that a revoked or invalid refresh token surfaces as an AuthException.
+        /// </summary>
+        /// <returns>The <see cref="Task" />.</returns>
+        [TestMethod]
+        public async Task TestRevokedRefreshTokenThrowsAuthException()
+        {
+            var badClient = new DropboxClient("invalid-or-revoked-refresh-token", appKey, appSecret);
+
+            var ex = await Assert.ThrowsExceptionAsync<AuthException>(
+                () => badClient.Users.GetCurrentAccountAsync());
+
+            // The message should carry the OAuth error detail, not raw JSON.
+            Assert.IsFalse(string.IsNullOrEmpty(ex.Message));
+            Assert.IsFalse(ex.Message.TrimStart().StartsWith("{"), "Message should not be raw JSON.");
+
+            // The status code should reflect the actual response (400 for invalid_grant).
+#pragma warning disable CS0618
+            Assert.AreEqual(400, ex.StatusCode);
+#pragma warning restore CS0618
+        }
+
+        /// <summary>
         /// Tests that ProcessCodeFlowAsync returns the state passed to it.
         /// </summary>
         /// <returns>The <see cref="Task" />.</returns>
