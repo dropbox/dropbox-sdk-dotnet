@@ -33,8 +33,9 @@ jobs:
           directory: dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests/TestResults/
   IntegrationTests:
     concurrency:
-      group: integration-tests
+      group: ${{ github.workflow }}-integration-tests
       cancel-in-progress: false
+      queue: max
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
