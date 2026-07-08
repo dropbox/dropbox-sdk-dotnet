@@ -29,6 +29,17 @@ namespace Dropbox.Api
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="StructuredException{TError}"/> class.
+        /// </summary>
+        /// <param name="requestId">The Dropbox request id.</param>
+        /// <param name="message">The error message.</param>
+        protected internal StructuredException(string requestId, string message)
+            : base(requestId, message)
+        {
+            this.ErrorMessage = message;
+        }
+
+        /// <summary>
         /// Gets the error response.
         /// </summary>
         /// <value>
