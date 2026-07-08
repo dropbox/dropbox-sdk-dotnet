@@ -37,6 +37,38 @@ We provide [Examples][examples] to help get you started with a lot of the basic 
     - [Simple Business Dashboard](https://github.com/dropbox/dropbox-sdk-dotnet/tree/main/dropbox-sdk-dotnet/Examples/SimpleBusinessDashboard) - This is a demo of a business dashboard
     - [Universal Demo](https://github.com/dropbox/dropbox-sdk-dotnet/tree/main/dropbox-sdk-dotnet/Examples/UniversalDemo/UniversalDemo) - This is an example of how to use the SDK across multiple platforms
 
+## Upload integrity
+
+For file upload calls whose request type includes `ContentHash`, the SDK automatically computes and sends a Dropbox `content_hash` when the upload stream is seekable. The server rejects the upload if the hash does not match the bytes it receives.
+
+Because `content_hash` is part of the request header, this default-on validation reads the stream once to compute the hash, seeks back to the original position, and then reads it again for the upload body. That is 2x read I/O for seekable uploads. For local files the second read is often served from OS cache; for slow, network-backed, or encrypted streams it can materially increase upload time. Non-seekable streams are uploaded without automatic hashing. A manually supplied `contentHash` argument always wins. If a seekable stream has unusual read or rewind behavior, disable automatic hashing for that upload or client.
+
+To compute a Dropbox content hash manually:
+
+```csharp
+using (var stream = File.OpenRead("local-file.txt"))
+{
+    var contentHash = ContentHasher.ComputeHash(stream);
+}
+```
+
+To disable automatic hashing for one upload, wrap the stream:
+
+```csharp
+await client.Files.UploadAsync(
+    new UploadArg("/remote-file.txt"),
+    ContentHasher.WithoutAutoContentHash(stream));
+```
+
+To disable automatic hashing for a client:
+
+```csharp
+var config = new DropboxClientConfig
+{
+    AutoContentHash = false,
+};
+```
+
 ## Getting Help
 
 If you find a bug, please see [CONTRIBUTING.md][contributing] for information on how to report it.

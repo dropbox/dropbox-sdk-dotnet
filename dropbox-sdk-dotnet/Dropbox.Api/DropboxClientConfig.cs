@@ -73,5 +73,11 @@ namespace Dropbox.Api
         /// backwards compatibility; set to <c>false</c> to keep the stream open.
         /// </summary>
         public bool DisposeUploadStream { get; set; } = true;
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the SDK automatically computes and sends
+        /// Dropbox content hashes for upload requests when possible. Default is <c>true</c>.
+        /// </summary>
+        public bool AutoContentHash { get; set; } = true;
     }
 }

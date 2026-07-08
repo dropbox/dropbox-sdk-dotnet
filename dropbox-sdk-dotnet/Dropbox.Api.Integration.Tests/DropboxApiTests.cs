@@ -286,6 +286,60 @@ namespace Dropbox.Api.Tests
         }
 
         /// <summary>
+        /// Tests that an auto-hashed upload is accepted by the server and round-trips.
+        /// </summary>
+        /// <returns>The <see cref="Task" />.</returns>
+        [TestMethod]
+        public async Task TestAutoContentHashUploadRoundTrip()
+        {
+            var content = "auto-content-hash-roundtrip";
+            var expectedHash = ContentHasher.ComputeHash(GetStream(content));
+
+            // Upload with auto content hash enabled (the default). The server
+            // rejects the upload if the hash the SDK sent does not match.
+            var uploaded = await client.Files.UploadAsync(testingPath + "/Hash.txt", body: GetStream(content));
+            Assert.AreEqual(expectedHash, uploaded.ContentHash);
+
+            // Metadata and downloaded content should match too.
+            var metadata = await client.Files.GetMetadataAsync(testingPath + "/Hash.txt");
+            Assert.AreEqual(expectedHash, metadata.AsFile.ContentHash);
+
+            var download = await client.Files.DownloadAsync(testingPath + "/Hash.txt");
+            var downloaded = await download.GetContentAsStringAsync();
+            Assert.AreEqual(content, downloaded);
+        }
+
+        /// <summary>
+        /// Tests that a chunked upload session with auto content hashes round-trips.
+        /// </summary>
+        /// <returns>The <see cref="Task" />.</returns>
+        [TestMethod]
+        public async Task TestAutoContentHashUploadSession()
+        {
+            var chunk1 = "chunk-one-";
+            var chunk2 = "chunk-two-";
+            var chunk3 = "chunk-three";
+            var full = chunk1 + chunk2 + chunk3;
+            var path = testingPath + "/Session.txt";
+
+            // Each session call hashes its own chunk; the server rejects a mismatch.
+            var start = await client.Files.UploadSessionStartAsync(body: GetStream(chunk1));
+            var appendCursor = new UploadSessionCursor(start.SessionId, (ulong)chunk1.Length);
+
+            await client.Files.UploadSessionAppendV2Async(appendCursor, body: GetStream(chunk2));
+            var finishCursor = new UploadSessionCursor(start.SessionId, (ulong)(chunk1.Length + chunk2.Length));
+
+            var uploaded = await client.Files.UploadSessionFinishAsync(
+                finishCursor, new CommitInfo(path), body: GetStream(chunk3));
+
+            Assert.AreEqual(ContentHasher.ComputeHash(GetStream(full)), uploaded.ContentHash);
+
+            var download = await client.Files.DownloadAsync(path);
+            var downloaded = await download.GetContentAsStringAsync();
+            Assert.AreEqual(full, downloaded);
+        }
+
+        /// <summary>
         /// Test get metadata.
         /// </summary>
         /// <returns>The <see cref="Task"/>.</returns>

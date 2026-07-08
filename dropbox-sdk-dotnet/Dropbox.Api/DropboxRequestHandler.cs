@@ -7,6 +7,7 @@
 namespace Dropbox.Api
 {
     using System;
+    using System.Collections.Concurrent;
     using System.Collections.Generic;
     using System.Globalization;
     using System.IO;
@@ -42,6 +43,12 @@ namespace Dropbox.Api
         /// The dropbox API result header.
         /// </summary>
         private const string DropboxApiResultHeader = "Dropbox-API-Result";
+
+        private static readonly ConcurrentDictionary<Type, ContentHashAccessor> ContentHashAccessorCache =
+            new ConcurrentDictionary<Type, ContentHashAccessor>();
+
+        private static readonly MethodInfo MemberwiseCloneMethod =
+            typeof(object).GetMethod("MemberwiseClone", BindingFlags.Instance | BindingFlags.NonPublic);
 
         /// <summary>
         /// The member id of the selected user.
@@ -185,6 +192,7 @@ namespace Dropbox.Api
             IDecoder<TResponse> responseDecoder,
             IDecoder<TError> errorDecoder)
         {
+            request = await this.AddAutoContentHashAsync(request, body).ConfigureAwait(false);
             var serializedArg = JsonWriter.Write(request, requestEncoder, true);
             var res = await this.RequestJsonStringWithRetry(host, route, auth, RouteStyle.Upload, serializedArg, body)
                 .ConfigureAwait(false);
@@ -329,6 +337,92 @@ namespace Dropbox.Api
                 pathRoot: pathRoot);
         }
 
+        private static ContentHashAccessor CreateContentHashAccessor(Type requestType)
+        {
+            var contentHashProperty = requestType.GetProperty("ContentHash", BindingFlags.Instance | BindingFlags.Public);
+            if (contentHashProperty == null || contentHashProperty.PropertyType != typeof(string))
+            {
+                return ContentHashAccessor.None;
+            }
+
+            var getter = contentHashProperty.GetGetMethod();
+            var setter = contentHashProperty.GetSetMethod(true);
+            if (getter == null || setter == null)
+            {
+                return ContentHashAccessor.None;
+            }
+
+            return new ContentHashAccessor(getter, setter);
+        }
+
+        private async Task<TRequest> AddAutoContentHashAsync<TRequest>(TRequest request, Stream body)
+        {
+            if (!this.options.AutoContentHash ||
+                request == null ||
+                body == null ||
+                global::Dropbox.Api.Files.ContentHasher.IsAutoContentHashDisabled(body))
+            {
+                return request;
+            }
+
+            var contentHashAccessor = ContentHashAccessorCache.GetOrAdd(request.GetType(), CreateContentHashAccessor);
+            if (!contentHashAccessor.CanAccess)
+            {
+                return request;
+            }
+
+            var existingHash = contentHashAccessor.GetValue(request);
+            if (!string.IsNullOrEmpty(existingHash) || !body.CanSeek)
+            {
+                return request;
+            }
+
+            long originalPosition;
+            try
+            {
+                originalPosition = body.Position;
+            }
+            catch (Exception)
+            {
+                return request;
+            }
+
+            string contentHash = null;
+            Exception computeException = null;
+            try
+            {
+                contentHash = await global::Dropbox.Api.Files.ContentHasher.ComputeHashAsync(body).ConfigureAwait(false);
+            }
+            catch (Exception e)
+            {
+                computeException = e;
+            }
+
+            Exception restoreException = null;
+            try
+            {
+                body.Position = originalPosition;
+            }
+            catch (Exception e)
+            {
+                restoreException = e;
+            }
+
+            if (computeException != null)
+            {
+                throw new IOException("Failed to compute Dropbox content hash for upload.", computeException);
+            }
+
+            if (restoreException != null)
+            {
+                throw new IOException("Failed to restore upload stream position after computing Dropbox content hash.", restoreException);
+            }
+
+            var requestCopy = (TRequest)MemberwiseCloneMethod.Invoke(request, null);
+            contentHashAccessor.SetValue(requestCopy, contentHash);
+            return requestCopy;
+        }
+
         /// <summary>
         /// Requests the JSON string with retry.
         /// </summary>
@@ -352,6 +446,7 @@ namespace Dropbox.Api
             var hasRefreshed = false;
             var maxRetries = this.options.MaxClientRetries;
             var r = new Random();
+            long? uploadStartPosition = null;
 
             if (routeStyle == RouteStyle.Upload)
             {
@@ -365,6 +460,17 @@ namespace Dropbox.Api
                 if (!body.CanSeek)
                 {
                     maxRetries = 0;
+                }
+                else
+                {
+                    try
+                    {
+                        uploadStartPosition = body.Position;
+                    }
+                    catch (Exception)
+                    {
+                        maxRetries = 0;
+                    }
                 }
             }
 
@@ -423,9 +529,9 @@ namespace Dropbox.Api
 #else
                     await Task.Delay(backoff).ConfigureAwait(false);
 #endif
-                    if (body != null)
+                    if (uploadStartPosition.HasValue)
                     {
-                        body.Position = 0;
+                        body.Position = uploadStartPosition.Value;
                     }
                 }
             }
@@ -743,6 +849,39 @@ namespace Dropbox.Api
             }
         }
 
+        private sealed class ContentHashAccessor
+        {
+            public static readonly ContentHashAccessor None = new ContentHashAccessor(null, null);
+
+            private readonly MethodInfo getter;
+
+            private readonly MethodInfo setter;
+
+            public ContentHashAccessor(MethodInfo getter, MethodInfo setter)
+            {
+                this.getter = getter;
+                this.setter = setter;
+            }
+
+            public bool CanAccess
+            {
+                get
+                {
+                    return this.getter != null && this.setter != null;
+                }
+            }
+
+            public string GetValue(object request)
+            {
+                return (string)this.getter.Invoke(request, null);
+            }
+
+            public void SetValue(object request, string contentHash)
+            {
+                this.setter.Invoke(request, new object[] { contentHash });
+            }
+        }
+
         /// <summary>
         /// Used to return un-typed result information to the layer that can interpret the
         /// object types.
@@ -965,7 +1104,8 @@ namespace Dropbox.Api
             DefaultApiNotifyDomain,
             config.HttpClient,
             config.LongPollHttpClient,
-            config.DisposeUploadStream)
+            config.DisposeUploadStream,
+            config.AutoContentHash)
         {
         }
 
@@ -990,6 +1130,7 @@ namespace Dropbox.Api
         /// <param name="longPollHttpClient">The custom http client for long poll. If not provided, a default
         /// http client with longer timeout will be created.</param>
         /// <param name="disposeUploadStream">Whether to dispose the upload stream after the request.</param>
+        /// <param name="autoContentHash">Whether to automatically compute Dropbox content hashes for upload requests.</param>
         public DropboxRequestHandlerOptions(
             string oauth2AccessToken,
             string oauth2RefreshToken,
@@ -1003,7 +1144,8 @@ namespace Dropbox.Api
             string apiNotifyHostname,
             HttpClient httpClient,
             HttpClient longPollHttpClient,
-            bool disposeUploadStream = true)
+            bool disposeUploadStream = true,
+            bool autoContentHash = true)
         {
             var type = typeof(DropboxRequestHandlerOptions);
 #if PORTABLE40
@@ -1021,6 +1163,7 @@ namespace Dropbox.Api
             this.HttpClient = httpClient;
             this.LongPollHttpClient = longPollHttpClient;
             this.DisposeUploadStream = disposeUploadStream;
+            this.AutoContentHash = autoContentHash;
             this.OAuth2AccessToken = oauth2AccessToken;
             this.OAuth2RefreshToken = oauth2RefreshToken;
             this.OAuth2AccessTokenExpiresAt = oauth2AccessTokenExpiresAt;
@@ -1079,6 +1222,12 @@ namespace Dropbox.Api
         /// Gets a value indicating whether to dispose the upload stream after the request.
         /// </summary>
         public bool DisposeUploadStream { get; private set; }
+
+        /// <summary>
+        /// Gets a value indicating whether to automatically compute Dropbox content hashes
+        /// for upload requests.
+        /// </summary>
+        public bool AutoContentHash { get; private set; }
 
         /// <summary>
         /// Gets the user agent string.
