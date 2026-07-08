@@ -66,5 +66,12 @@ namespace Dropbox.Api
         /// http client with a longer timeout (480 seconds) will be created.
         /// </summary>
         public HttpClient LongPollHttpClient { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether an upload stream is disposed by
+        /// the SDK after the request completes. Default is <c>true</c> for
+        /// backwards compatibility; set to <c>false</c> to keep the stream open.
+        /// </summary>
+        public bool DisposeUploadStream { get; set; } = true;
     }
 }
