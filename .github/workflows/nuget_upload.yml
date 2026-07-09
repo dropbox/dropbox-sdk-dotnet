@@ -13,10 +13,6 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
-      # The IAM role and Secrets Manager secret are provisioned for this repo in
-      # rSERVER: configs/aws/secrets/account_configs/aws_dropbox_stone/secrets_config.py
-      # The role is repository-wide so the release-triggered publish (a tag ref)
-      # can assume it.
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
