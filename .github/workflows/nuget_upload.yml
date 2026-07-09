@@ -8,8 +8,26 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:  # required for OIDC authentication
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v4
+      # The IAM role and Secrets Manager secret are provisioned for this repo in
+      # rSERVER: configs/aws/secrets/account_configs/aws_dropbox_stone/secrets_config.py
+      # The role is repository-wide so the release-triggered publish (a tag ref)
+      # can assume it.
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::082972943155:role/oidc-github-dropbox-dropbox-sdk-dotnet-repo
+          aws-region: us-west-2
+      - name: Get NuGet token from AWS Secrets Manager
+        uses: aws-actions/aws-secretsmanager-get-secrets@v2
+        with:
+          secret-ids: |
+            NUGET_TOKEN,nuget-api-token-dropbox-sdk-dotnet
+          parse-json-secrets: false
       - name: Pack
         run: |
           dotnet pack \
@@ -23,4 +41,4 @@ jobs:
           dotnet nuget push \
           dropbox-sdk-dotnet/Dropbox.Api/bin/Release/Dropbox.Api.$(echo "${{ github.event.release.tag_name }}" | cut -c 2-).nupkg \
           --source https://api.nuget.org/v3/index.json \
-          --api-key ${{ secrets.NUGET_TOKEN }}
+          --api-key ${{ env.NUGET_TOKEN }}

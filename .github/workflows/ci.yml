@@ -13,6 +13,9 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
+    permissions:  # required for OIDC authentication (coverage upload token)
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET 8
@@ -23,15 +26,36 @@ jobs:
         # We don't have a good cross-platform way of splitting long lines
         run: |
           dotnet test dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests --collect:"XPlat Code Coverage" -- 'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
+      # Coverage upload needs the Codecov token from AWS Secrets Manager, which
+      # requires OIDC. Fork PRs cannot assume the role (GitHub withholds
+      # id-token from fork runs), so the coverage-upload steps are gated to
+      # same-repo runs; unit tests themselves still run everywhere.
+      - name: Configure AWS credentials (OIDC)
+        if: matrix.os == 'ubuntu-latest' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::082972943155:role/oidc-github-dropbox-dropbox-sdk-dotnet-repo
+          aws-region: us-west-2
+      - name: Get Codecov token from AWS Secrets Manager
+        if: matrix.os == 'ubuntu-latest' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
+        uses: aws-actions/aws-secretsmanager-get-secrets@v2
+        with:
+          secret-ids: |
+            CODECOV_TOKEN,codecov-token-dropbox-sdk-dotnet
+          parse-json-secrets: false
       - name: Publish Coverage
         uses: codecov/codecov-action@v4
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'ubuntu-latest' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
         with:
           flags: unit
-          token: ${{ secrets.CODECOV_TOKEN }}
+          token: ${{ env.CODECOV_TOKEN }}
           fail_ci_if_error: true
           directory: dropbox-sdk-dotnet/Dropbox.Api.Unit.Tests/TestResults/
   IntegrationTests:
+    # Integration tests require Dropbox app credentials fetched from AWS Secrets
+    # Manager via OIDC. Fork PRs cannot assume the role, so skip the job on fork
+    # PRs (it still runs on same-repo PRs, push to main, and the nightly cron).
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     concurrency:
       group: ${{ github.workflow }}-integration-tests
       cancel-in-progress: false
@@ -41,28 +65,47 @@ jobs:
         os: [macos-latest, ubuntu-latest, windows-latest]
       max-parallel: 1
     runs-on: ${{ matrix.os }}
+    permissions:  # required for OIDC authentication
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET 8
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.x'
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::082972943155:role/oidc-github-dropbox-dropbox-sdk-dotnet-repo
+          aws-region: us-west-2
+      # The integration credentials are stored as a single JSON secret; with
+      # parse-json-secrets each JSON key is exposed as env var CREDS_<KEY>
+      # (e.g. CREDS_LEGACY_APP_KEY). The Codecov token is a plain-string secret
+      # in the same fetch.
+      - name: Get integration credentials from AWS Secrets Manager
+        uses: aws-actions/aws-secretsmanager-get-secrets@v2
+        with:
+          secret-ids: |
+            CREDS,dotnet-integration-test-creds
+            CODECOV_TOKEN,codecov-token-dropbox-sdk-dotnet
+          parse-json-secrets: true
       - name: Test Legacy User
         env:
-          DROPBOX_INTEGRATION_appKey: ${{ secrets.LEGACY_APP_KEY }}
-          DROPBOX_INTEGRATION_appSecret: ${{ secrets.LEGACY_APP_SECRET }}
-          DROPBOX_INTEGRATION_userAccessToken: ${{ secrets.LEGACY_APP_ACCESS_TOKEN }}
-          DROPBOX_INTEGRATION_userRefreshToken: ${{ secrets.LEGACY_APP_REFRESH_TOKEN }}
-          DROPBOX_INTEGRATION_teamAccessToken: ${{ secrets.TEAM_APP_ACCESS_TOKEN }}
+          DROPBOX_INTEGRATION_appKey: ${{ env.CREDS_LEGACY_APP_KEY }}
+          DROPBOX_INTEGRATION_appSecret: ${{ env.CREDS_LEGACY_APP_SECRET }}
+          DROPBOX_INTEGRATION_userAccessToken: ${{ env.CREDS_LEGACY_APP_ACCESS_TOKEN }}
+          DROPBOX_INTEGRATION_userRefreshToken: ${{ env.CREDS_LEGACY_APP_REFRESH_TOKEN }}
+          DROPBOX_INTEGRATION_teamAccessToken: ${{ env.CREDS_TEAM_APP_ACCESS_TOKEN }}
         run: |
           dotnet test dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests --collect:"XPlat Code Coverage" -- 'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
       - name: Test Scoped User
         env:
-          DROPBOX_INTEGRATION_appKey: ${{ secrets.SCOPED_APP_KEY }}
-          DROPBOX_INTEGRATION_appSecret: ${{ secrets.SCOPED_APP_SECRET }}
-          DROPBOX_INTEGRATION_userAccessToken: ${{ secrets.SCOPED_APP_ACCESS_TOKEN }}
-          DROPBOX_INTEGRATION_userRefreshToken: ${{ secrets.SCOPED_APP_REFRESH_TOKEN }}
-          DROPBOX_INTEGRATION_teamAccessToken: ${{ secrets.TEAM_APP_ACCESS_TOKEN }}
+          DROPBOX_INTEGRATION_appKey: ${{ env.CREDS_SCOPED_APP_KEY }}
+          DROPBOX_INTEGRATION_appSecret: ${{ env.CREDS_SCOPED_APP_SECRET }}
+          DROPBOX_INTEGRATION_userAccessToken: ${{ env.CREDS_SCOPED_APP_ACCESS_TOKEN }}
+          DROPBOX_INTEGRATION_userRefreshToken: ${{ env.CREDS_SCOPED_APP_REFRESH_TOKEN }}
+          DROPBOX_INTEGRATION_teamAccessToken: ${{ env.CREDS_TEAM_APP_ACCESS_TOKEN }}
         run: |
           dotnet test dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests --collect:"XPlat Code Coverage" -- 'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
       - name: Publish Coverage
@@ -70,7 +113,7 @@ jobs:
         if: matrix.os == 'ubuntu-latest'
         with:
           flags: integration
-          token: ${{ secrets.CODECOV_TOKEN }}
+          token: ${{ env.CODECOV_TOKEN }}
           fail_ci_if_error: true
           directory: dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests/TestResults/
   Linter:
