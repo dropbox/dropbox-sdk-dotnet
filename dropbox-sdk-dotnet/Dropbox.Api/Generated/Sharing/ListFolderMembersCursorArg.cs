@@ -39,7 +39,7 @@ namespace Dropbox.Api.Sharing
         /// <param name="limit">The maximum number of results that include members, groups and
         /// invitees to return per request.</param>
         public ListFolderMembersCursorArg(col.IEnumerable<MemberAction> actions = null,
-                                          uint limit = 1000)
+                                          uint limit = 1000U)
         {
             var actionsList = enc.Util.ToList(actions);
 
@@ -65,7 +65,7 @@ namespace Dropbox.Api.Sharing
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public ListFolderMembersCursorArg()
         {
-            this.Limit = 1000;
+            this.Limit = 1000U;
         }
 
         /// <summary>

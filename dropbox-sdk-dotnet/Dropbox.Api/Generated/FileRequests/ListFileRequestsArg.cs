@@ -34,7 +34,7 @@ namespace Dropbox.Api.FileRequests
         /// </summary>
         /// <param name="limit">The maximum number of file requests that should be returned per
         /// request.</param>
-        public ListFileRequestsArg(ulong limit = 1000)
+        public ListFileRequestsArg(ulong limit = 1000UL)
         {
             this.Limit = limit;
         }
@@ -48,7 +48,7 @@ namespace Dropbox.Api.FileRequests
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public ListFileRequestsArg()
         {
-            this.Limit = 1000;
+            this.Limit = 1000UL;
         }
 
         /// <summary>

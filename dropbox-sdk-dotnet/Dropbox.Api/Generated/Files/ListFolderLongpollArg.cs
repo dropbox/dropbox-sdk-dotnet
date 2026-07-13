@@ -43,7 +43,7 @@ namespace Dropbox.Api.Files
         /// thundering herd problem. Care should be taken when using this parameter, as some
         /// network infrastructure does not support long timeouts.</param>
         public ListFolderLongpollArg(string cursor,
-                                     ulong timeout = 30)
+                                     ulong timeout = 30UL)
         {
             if (cursor == null)
             {
@@ -76,7 +76,7 @@ namespace Dropbox.Api.Files
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public ListFolderLongpollArg()
         {
-            this.Timeout = 30;
+            this.Timeout = 30UL;
         }
 
         /// <summary>

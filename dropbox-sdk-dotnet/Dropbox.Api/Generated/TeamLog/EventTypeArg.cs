@@ -3380,6 +3380,29 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubFileDownloaded</para>
+        /// </summary>
+        public bool IsMediaHubFileDownloaded
+        {
+            get
+            {
+                return this is MediaHubFileDownloaded;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubFileDownloaded, or <c>null</c>.</para>
+        /// </summary>
+        public MediaHubFileDownloaded AsMediaHubFileDownloaded
+        {
+            get
+            {
+                return this as MediaHubFileDownloaded;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is ObjectLabelAdded</para>
         /// </summary>
         public bool IsObjectLabelAdded
@@ -7129,6 +7152,170 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as FileTransfersTransferView;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubProjectTeamAdd</para>
+        /// </summary>
+        public bool IsMediaHubProjectTeamAdd
+        {
+            get
+            {
+                return this is MediaHubProjectTeamAdd;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubProjectTeamAdd, or <c>null</c>.</para>
+        /// </summary>
+        public MediaHubProjectTeamAdd AsMediaHubProjectTeamAdd
+        {
+            get
+            {
+                return this as MediaHubProjectTeamAdd;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubProjectTeamDelete</para>
+        /// </summary>
+        public bool IsMediaHubProjectTeamDelete
+        {
+            get
+            {
+                return this is MediaHubProjectTeamDelete;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubProjectTeamDelete, or <c>null</c>.</para>
+        /// </summary>
+        public MediaHubProjectTeamDelete AsMediaHubProjectTeamDelete
+        {
+            get
+            {
+                return this as MediaHubProjectTeamDelete;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubProjectTeamRoleChanged</para>
+        /// </summary>
+        public bool IsMediaHubProjectTeamRoleChanged
+        {
+            get
+            {
+                return this is MediaHubProjectTeamRoleChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubProjectTeamRoleChanged, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MediaHubProjectTeamRoleChanged AsMediaHubProjectTeamRoleChanged
+        {
+            get
+            {
+                return this as MediaHubProjectTeamRoleChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubSharedLinkAudienceChanged</para>
+        /// </summary>
+        public bool IsMediaHubSharedLinkAudienceChanged
+        {
+            get
+            {
+                return this is MediaHubSharedLinkAudienceChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubSharedLinkAudienceChanged, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MediaHubSharedLinkAudienceChanged AsMediaHubSharedLinkAudienceChanged
+        {
+            get
+            {
+                return this as MediaHubSharedLinkAudienceChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubSharedLinkCreated</para>
+        /// </summary>
+        public bool IsMediaHubSharedLinkCreated
+        {
+            get
+            {
+                return this is MediaHubSharedLinkCreated;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubSharedLinkCreated, or <c>null</c>.</para>
+        /// </summary>
+        public MediaHubSharedLinkCreated AsMediaHubSharedLinkCreated
+        {
+            get
+            {
+                return this as MediaHubSharedLinkCreated;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubSharedLinkDownloadSettingChanged</para>
+        /// </summary>
+        public bool IsMediaHubSharedLinkDownloadSettingChanged
+        {
+            get
+            {
+                return this is MediaHubSharedLinkDownloadSettingChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubSharedLinkDownloadSettingChanged, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MediaHubSharedLinkDownloadSettingChanged AsMediaHubSharedLinkDownloadSettingChanged
+        {
+            get
+            {
+                return this as MediaHubSharedLinkDownloadSettingChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubSharedLinkRevoked</para>
+        /// </summary>
+        public bool IsMediaHubSharedLinkRevoked
+        {
+            get
+            {
+                return this is MediaHubSharedLinkRevoked;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubSharedLinkRevoked, or <c>null</c>.</para>
+        /// </summary>
+        public MediaHubSharedLinkRevoked AsMediaHubSharedLinkRevoked
+        {
+            get
+            {
+                return this as MediaHubSharedLinkRevoked;
             }
         }
 
@@ -11382,6 +11569,77 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// MediaHubAddingPeoplePolicyChanged</para>
+        /// </summary>
+        public bool IsMediaHubAddingPeoplePolicyChanged
+        {
+            get
+            {
+                return this is MediaHubAddingPeoplePolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubAddingPeoplePolicyChanged, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MediaHubAddingPeoplePolicyChanged AsMediaHubAddingPeoplePolicyChanged
+        {
+            get
+            {
+                return this as MediaHubAddingPeoplePolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubDownloadPolicyChanged</para>
+        /// </summary>
+        public bool IsMediaHubDownloadPolicyChanged
+        {
+            get
+            {
+                return this is MediaHubDownloadPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubDownloadPolicyChanged, or <c>null</c>.</para>
+        /// </summary>
+        public MediaHubDownloadPolicyChanged AsMediaHubDownloadPolicyChanged
+        {
+            get
+            {
+                return this as MediaHubDownloadPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubLinkSharingPolicyChanged</para>
+        /// </summary>
+        public bool IsMediaHubLinkSharingPolicyChanged
+        {
+            get
+            {
+                return this is MediaHubLinkSharingPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubLinkSharingPolicyChanged, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MediaHubLinkSharingPolicyChanged AsMediaHubLinkSharingPolicyChanged
+        {
+            get
+            {
+                return this as MediaHubLinkSharingPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// MemberRequestsChangePolicy</para>
         /// </summary>
         public bool IsMemberRequestsChangePolicy
@@ -11587,6 +11845,30 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as MicrosoftOfficeAddinChangePolicy;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MultiTeamIdentityPolicyChanged</para>
+        /// </summary>
+        public bool IsMultiTeamIdentityPolicyChanged
+        {
+            get
+            {
+                return this is MultiTeamIdentityPolicyChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MultiTeamIdentityPolicyChanged, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MultiTeamIdentityPolicyChanged AsMultiTeamIdentityPolicyChanged
+        {
+            get
+            {
+                return this as MultiTeamIdentityPolicyChanged;
             }
         }
 
@@ -14791,6 +15073,12 @@ namespace Dropbox.Api.TeamLog
                     FolderOverviewItemUnpinned.Encoder.EncodeFields((FolderOverviewItemUnpinned)value, writer);
                     return;
                 }
+                if (value is MediaHubFileDownloaded)
+                {
+                    WriteProperty(".tag", "media_hub_file_downloaded", writer, enc.StringEncoder.Instance);
+                    MediaHubFileDownloaded.Encoder.EncodeFields((MediaHubFileDownloaded)value, writer);
+                    return;
+                }
                 if (value is ObjectLabelAdded)
                 {
                     WriteProperty(".tag", "object_label_added", writer, enc.StringEncoder.Instance);
@@ -15785,6 +16073,48 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "file_transfers_transfer_view", writer, enc.StringEncoder.Instance);
                     FileTransfersTransferView.Encoder.EncodeFields((FileTransfersTransferView)value, writer);
+                    return;
+                }
+                if (value is MediaHubProjectTeamAdd)
+                {
+                    WriteProperty(".tag", "media_hub_project_team_add", writer, enc.StringEncoder.Instance);
+                    MediaHubProjectTeamAdd.Encoder.EncodeFields((MediaHubProjectTeamAdd)value, writer);
+                    return;
+                }
+                if (value is MediaHubProjectTeamDelete)
+                {
+                    WriteProperty(".tag", "media_hub_project_team_delete", writer, enc.StringEncoder.Instance);
+                    MediaHubProjectTeamDelete.Encoder.EncodeFields((MediaHubProjectTeamDelete)value, writer);
+                    return;
+                }
+                if (value is MediaHubProjectTeamRoleChanged)
+                {
+                    WriteProperty(".tag", "media_hub_project_team_role_changed", writer, enc.StringEncoder.Instance);
+                    MediaHubProjectTeamRoleChanged.Encoder.EncodeFields((MediaHubProjectTeamRoleChanged)value, writer);
+                    return;
+                }
+                if (value is MediaHubSharedLinkAudienceChanged)
+                {
+                    WriteProperty(".tag", "media_hub_shared_link_audience_changed", writer, enc.StringEncoder.Instance);
+                    MediaHubSharedLinkAudienceChanged.Encoder.EncodeFields((MediaHubSharedLinkAudienceChanged)value, writer);
+                    return;
+                }
+                if (value is MediaHubSharedLinkCreated)
+                {
+                    WriteProperty(".tag", "media_hub_shared_link_created", writer, enc.StringEncoder.Instance);
+                    MediaHubSharedLinkCreated.Encoder.EncodeFields((MediaHubSharedLinkCreated)value, writer);
+                    return;
+                }
+                if (value is MediaHubSharedLinkDownloadSettingChanged)
+                {
+                    WriteProperty(".tag", "media_hub_shared_link_download_setting_changed", writer, enc.StringEncoder.Instance);
+                    MediaHubSharedLinkDownloadSettingChanged.Encoder.EncodeFields((MediaHubSharedLinkDownloadSettingChanged)value, writer);
+                    return;
+                }
+                if (value is MediaHubSharedLinkRevoked)
+                {
+                    WriteProperty(".tag", "media_hub_shared_link_revoked", writer, enc.StringEncoder.Instance);
+                    MediaHubSharedLinkRevoked.Encoder.EncodeFields((MediaHubSharedLinkRevoked)value, writer);
                     return;
                 }
                 if (value is NoteAclInviteOnly)
@@ -16903,6 +17233,24 @@ namespace Dropbox.Api.TeamLog
                     InviteAcceptanceEmailPolicyChanged.Encoder.EncodeFields((InviteAcceptanceEmailPolicyChanged)value, writer);
                     return;
                 }
+                if (value is MediaHubAddingPeoplePolicyChanged)
+                {
+                    WriteProperty(".tag", "media_hub_adding_people_policy_changed", writer, enc.StringEncoder.Instance);
+                    MediaHubAddingPeoplePolicyChanged.Encoder.EncodeFields((MediaHubAddingPeoplePolicyChanged)value, writer);
+                    return;
+                }
+                if (value is MediaHubDownloadPolicyChanged)
+                {
+                    WriteProperty(".tag", "media_hub_download_policy_changed", writer, enc.StringEncoder.Instance);
+                    MediaHubDownloadPolicyChanged.Encoder.EncodeFields((MediaHubDownloadPolicyChanged)value, writer);
+                    return;
+                }
+                if (value is MediaHubLinkSharingPolicyChanged)
+                {
+                    WriteProperty(".tag", "media_hub_link_sharing_policy_changed", writer, enc.StringEncoder.Instance);
+                    MediaHubLinkSharingPolicyChanged.Encoder.EncodeFields((MediaHubLinkSharingPolicyChanged)value, writer);
+                    return;
+                }
                 if (value is MemberRequestsChangePolicy)
                 {
                     WriteProperty(".tag", "member_requests_change_policy", writer, enc.StringEncoder.Instance);
@@ -16955,6 +17303,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "microsoft_office_addin_change_policy", writer, enc.StringEncoder.Instance);
                     MicrosoftOfficeAddinChangePolicy.Encoder.EncodeFields((MicrosoftOfficeAddinChangePolicy)value, writer);
+                    return;
+                }
+                if (value is MultiTeamIdentityPolicyChanged)
+                {
+                    WriteProperty(".tag", "multi_team_identity_policy_changed", writer, enc.StringEncoder.Instance);
+                    MultiTeamIdentityPolicyChanged.Encoder.EncodeFields((MultiTeamIdentityPolicyChanged)value, writer);
                     return;
                 }
                 if (value is NetworkControlChangePolicy)
@@ -17881,6 +18235,8 @@ namespace Dropbox.Api.TeamLog
                         return FolderOverviewItemPinned.Decoder.DecodeFields(reader);
                     case "folder_overview_item_unpinned":
                         return FolderOverviewItemUnpinned.Decoder.DecodeFields(reader);
+                    case "media_hub_file_downloaded":
+                        return MediaHubFileDownloaded.Decoder.DecodeFields(reader);
                     case "object_label_added":
                         return ObjectLabelAdded.Decoder.DecodeFields(reader);
                     case "object_label_removed":
@@ -18213,6 +18569,20 @@ namespace Dropbox.Api.TeamLog
                         return FileTransfersTransferSend.Decoder.DecodeFields(reader);
                     case "file_transfers_transfer_view":
                         return FileTransfersTransferView.Decoder.DecodeFields(reader);
+                    case "media_hub_project_team_add":
+                        return MediaHubProjectTeamAdd.Decoder.DecodeFields(reader);
+                    case "media_hub_project_team_delete":
+                        return MediaHubProjectTeamDelete.Decoder.DecodeFields(reader);
+                    case "media_hub_project_team_role_changed":
+                        return MediaHubProjectTeamRoleChanged.Decoder.DecodeFields(reader);
+                    case "media_hub_shared_link_audience_changed":
+                        return MediaHubSharedLinkAudienceChanged.Decoder.DecodeFields(reader);
+                    case "media_hub_shared_link_created":
+                        return MediaHubSharedLinkCreated.Decoder.DecodeFields(reader);
+                    case "media_hub_shared_link_download_setting_changed":
+                        return MediaHubSharedLinkDownloadSettingChanged.Decoder.DecodeFields(reader);
+                    case "media_hub_shared_link_revoked":
+                        return MediaHubSharedLinkRevoked.Decoder.DecodeFields(reader);
                     case "note_acl_invite_only":
                         return NoteAclInviteOnly.Decoder.DecodeFields(reader);
                     case "note_acl_link":
@@ -18585,6 +18955,12 @@ namespace Dropbox.Api.TeamLog
                         return IntegrationPolicyChanged.Decoder.DecodeFields(reader);
                     case "invite_acceptance_email_policy_changed":
                         return InviteAcceptanceEmailPolicyChanged.Decoder.DecodeFields(reader);
+                    case "media_hub_adding_people_policy_changed":
+                        return MediaHubAddingPeoplePolicyChanged.Decoder.DecodeFields(reader);
+                    case "media_hub_download_policy_changed":
+                        return MediaHubDownloadPolicyChanged.Decoder.DecodeFields(reader);
+                    case "media_hub_link_sharing_policy_changed":
+                        return MediaHubLinkSharingPolicyChanged.Decoder.DecodeFields(reader);
                     case "member_requests_change_policy":
                         return MemberRequestsChangePolicy.Decoder.DecodeFields(reader);
                     case "member_send_invite_policy_changed":
@@ -18603,6 +18979,8 @@ namespace Dropbox.Api.TeamLog
                         return MicrosoftLoginChangePolicy.Decoder.DecodeFields(reader);
                     case "microsoft_office_addin_change_policy":
                         return MicrosoftOfficeAddinChangePolicy.Decoder.DecodeFields(reader);
+                    case "multi_team_identity_policy_changed":
+                        return MultiTeamIdentityPolicyChanged.Decoder.DecodeFields(reader);
                     case "network_control_change_policy":
                         return NetworkControlChangePolicy.Decoder.DecodeFields(reader);
                     case "paper_change_deployment_policy":
@@ -29150,6 +29528,77 @@ namespace Dropbox.Api.TeamLog
                 protected override FolderOverviewItemUnpinned Create()
                 {
                     return FolderOverviewItemUnpinned.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(file_operations) Downloaded files in Media Hub</para>
+        /// </summary>
+        public sealed class MediaHubFileDownloaded : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubFileDownloaded> Encoder = new MediaHubFileDownloadedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubFileDownloaded> Decoder = new MediaHubFileDownloadedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MediaHubFileDownloaded" />
+            /// class.</para>
+            /// </summary>
+            private MediaHubFileDownloaded()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MediaHubFileDownloaded</para>
+            /// </summary>
+            public static readonly MediaHubFileDownloaded Instance = new MediaHubFileDownloaded();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubFileDownloaded" />.</para>
+            /// </summary>
+            private class MediaHubFileDownloadedEncoder : enc.StructEncoder<MediaHubFileDownloaded>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubFileDownloaded value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubFileDownloaded" />.</para>
+            /// </summary>
+            private class MediaHubFileDownloadedDecoder : enc.StructDecoder<MediaHubFileDownloaded>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MediaHubFileDownloaded"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubFileDownloaded Create()
+                {
+                    return MediaHubFileDownloaded.Instance;
                 }
 
             }
@@ -40912,6 +41361,505 @@ namespace Dropbox.Api.TeamLog
                 protected override FileTransfersTransferView Create()
                 {
                     return FileTransfersTransferView.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(sharing) Added member to Media Hub project</para>
+        /// </summary>
+        public sealed class MediaHubProjectTeamAdd : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubProjectTeamAdd> Encoder = new MediaHubProjectTeamAddEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubProjectTeamAdd> Decoder = new MediaHubProjectTeamAddDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MediaHubProjectTeamAdd" />
+            /// class.</para>
+            /// </summary>
+            private MediaHubProjectTeamAdd()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MediaHubProjectTeamAdd</para>
+            /// </summary>
+            public static readonly MediaHubProjectTeamAdd Instance = new MediaHubProjectTeamAdd();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubProjectTeamAdd" />.</para>
+            /// </summary>
+            private class MediaHubProjectTeamAddEncoder : enc.StructEncoder<MediaHubProjectTeamAdd>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubProjectTeamAdd value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubProjectTeamAdd" />.</para>
+            /// </summary>
+            private class MediaHubProjectTeamAddDecoder : enc.StructDecoder<MediaHubProjectTeamAdd>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MediaHubProjectTeamAdd"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubProjectTeamAdd Create()
+                {
+                    return MediaHubProjectTeamAdd.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(sharing) Removed member from Media Hub project</para>
+        /// </summary>
+        public sealed class MediaHubProjectTeamDelete : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubProjectTeamDelete> Encoder = new MediaHubProjectTeamDeleteEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubProjectTeamDelete> Decoder = new MediaHubProjectTeamDeleteDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MediaHubProjectTeamDelete"
+            /// /> class.</para>
+            /// </summary>
+            private MediaHubProjectTeamDelete()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MediaHubProjectTeamDelete</para>
+            /// </summary>
+            public static readonly MediaHubProjectTeamDelete Instance = new MediaHubProjectTeamDelete();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubProjectTeamDelete" />.</para>
+            /// </summary>
+            private class MediaHubProjectTeamDeleteEncoder : enc.StructEncoder<MediaHubProjectTeamDelete>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubProjectTeamDelete value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubProjectTeamDelete" />.</para>
+            /// </summary>
+            private class MediaHubProjectTeamDeleteDecoder : enc.StructDecoder<MediaHubProjectTeamDelete>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MediaHubProjectTeamDelete"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubProjectTeamDelete Create()
+                {
+                    return MediaHubProjectTeamDelete.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(sharing) Changed member role in Media Hub project</para>
+        /// </summary>
+        public sealed class MediaHubProjectTeamRoleChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubProjectTeamRoleChanged> Encoder = new MediaHubProjectTeamRoleChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubProjectTeamRoleChanged> Decoder = new MediaHubProjectTeamRoleChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubProjectTeamRoleChanged" /> class.</para>
+            /// </summary>
+            private MediaHubProjectTeamRoleChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MediaHubProjectTeamRoleChanged</para>
+            /// </summary>
+            public static readonly MediaHubProjectTeamRoleChanged Instance = new MediaHubProjectTeamRoleChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubProjectTeamRoleChanged" />.</para>
+            /// </summary>
+            private class MediaHubProjectTeamRoleChangedEncoder : enc.StructEncoder<MediaHubProjectTeamRoleChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubProjectTeamRoleChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubProjectTeamRoleChanged" />.</para>
+            /// </summary>
+            private class MediaHubProjectTeamRoleChangedDecoder : enc.StructDecoder<MediaHubProjectTeamRoleChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubProjectTeamRoleChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubProjectTeamRoleChanged Create()
+                {
+                    return MediaHubProjectTeamRoleChanged.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(sharing) Changed Media Hub shared link audience</para>
+        /// </summary>
+        public sealed class MediaHubSharedLinkAudienceChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubSharedLinkAudienceChanged> Encoder = new MediaHubSharedLinkAudienceChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubSharedLinkAudienceChanged> Decoder = new MediaHubSharedLinkAudienceChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubSharedLinkAudienceChanged" /> class.</para>
+            /// </summary>
+            private MediaHubSharedLinkAudienceChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MediaHubSharedLinkAudienceChanged</para>
+            /// </summary>
+            public static readonly MediaHubSharedLinkAudienceChanged Instance = new MediaHubSharedLinkAudienceChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubSharedLinkAudienceChanged" />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkAudienceChangedEncoder : enc.StructEncoder<MediaHubSharedLinkAudienceChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubSharedLinkAudienceChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubSharedLinkAudienceChanged" />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkAudienceChangedDecoder : enc.StructDecoder<MediaHubSharedLinkAudienceChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubSharedLinkAudienceChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubSharedLinkAudienceChanged Create()
+                {
+                    return MediaHubSharedLinkAudienceChanged.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(sharing) Created Media Hub shared link</para>
+        /// </summary>
+        public sealed class MediaHubSharedLinkCreated : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubSharedLinkCreated> Encoder = new MediaHubSharedLinkCreatedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubSharedLinkCreated> Decoder = new MediaHubSharedLinkCreatedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MediaHubSharedLinkCreated"
+            /// /> class.</para>
+            /// </summary>
+            private MediaHubSharedLinkCreated()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MediaHubSharedLinkCreated</para>
+            /// </summary>
+            public static readonly MediaHubSharedLinkCreated Instance = new MediaHubSharedLinkCreated();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubSharedLinkCreated" />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkCreatedEncoder : enc.StructEncoder<MediaHubSharedLinkCreated>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubSharedLinkCreated value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubSharedLinkCreated" />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkCreatedDecoder : enc.StructDecoder<MediaHubSharedLinkCreated>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MediaHubSharedLinkCreated"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubSharedLinkCreated Create()
+                {
+                    return MediaHubSharedLinkCreated.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(sharing) Changed Media Hub shared link download setting</para>
+        /// </summary>
+        public sealed class MediaHubSharedLinkDownloadSettingChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubSharedLinkDownloadSettingChanged> Encoder = new MediaHubSharedLinkDownloadSettingChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubSharedLinkDownloadSettingChanged> Decoder = new MediaHubSharedLinkDownloadSettingChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubSharedLinkDownloadSettingChanged" /> class.</para>
+            /// </summary>
+            private MediaHubSharedLinkDownloadSettingChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MediaHubSharedLinkDownloadSettingChanged</para>
+            /// </summary>
+            public static readonly MediaHubSharedLinkDownloadSettingChanged Instance = new MediaHubSharedLinkDownloadSettingChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubSharedLinkDownloadSettingChanged"
+            /// />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkDownloadSettingChangedEncoder : enc.StructEncoder<MediaHubSharedLinkDownloadSettingChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubSharedLinkDownloadSettingChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubSharedLinkDownloadSettingChanged"
+            /// />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkDownloadSettingChangedDecoder : enc.StructDecoder<MediaHubSharedLinkDownloadSettingChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubSharedLinkDownloadSettingChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubSharedLinkDownloadSettingChanged Create()
+                {
+                    return MediaHubSharedLinkDownloadSettingChanged.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(sharing) Revoked Media Hub shared link</para>
+        /// </summary>
+        public sealed class MediaHubSharedLinkRevoked : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubSharedLinkRevoked> Encoder = new MediaHubSharedLinkRevokedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubSharedLinkRevoked> Decoder = new MediaHubSharedLinkRevokedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="MediaHubSharedLinkRevoked"
+            /// /> class.</para>
+            /// </summary>
+            private MediaHubSharedLinkRevoked()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MediaHubSharedLinkRevoked</para>
+            /// </summary>
+            public static readonly MediaHubSharedLinkRevoked Instance = new MediaHubSharedLinkRevoked();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubSharedLinkRevoked" />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkRevokedEncoder : enc.StructEncoder<MediaHubSharedLinkRevoked>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubSharedLinkRevoked value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubSharedLinkRevoked" />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkRevokedDecoder : enc.StructDecoder<MediaHubSharedLinkRevoked>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="MediaHubSharedLinkRevoked"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubSharedLinkRevoked Create()
+                {
+                    return MediaHubSharedLinkRevoked.Instance;
                 }
 
             }
@@ -54145,6 +55093,220 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>(team_policies) Changed the policy for adding people to Media Hub
+        /// content</para>
+        /// </summary>
+        public sealed class MediaHubAddingPeoplePolicyChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubAddingPeoplePolicyChanged> Encoder = new MediaHubAddingPeoplePolicyChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubAddingPeoplePolicyChanged> Decoder = new MediaHubAddingPeoplePolicyChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubAddingPeoplePolicyChanged" /> class.</para>
+            /// </summary>
+            private MediaHubAddingPeoplePolicyChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MediaHubAddingPeoplePolicyChanged</para>
+            /// </summary>
+            public static readonly MediaHubAddingPeoplePolicyChanged Instance = new MediaHubAddingPeoplePolicyChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubAddingPeoplePolicyChanged" />.</para>
+            /// </summary>
+            private class MediaHubAddingPeoplePolicyChangedEncoder : enc.StructEncoder<MediaHubAddingPeoplePolicyChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubAddingPeoplePolicyChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubAddingPeoplePolicyChanged" />.</para>
+            /// </summary>
+            private class MediaHubAddingPeoplePolicyChangedDecoder : enc.StructDecoder<MediaHubAddingPeoplePolicyChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubAddingPeoplePolicyChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubAddingPeoplePolicyChanged Create()
+                {
+                    return MediaHubAddingPeoplePolicyChanged.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed the policy for downloading Media Hub content</para>
+        /// </summary>
+        public sealed class MediaHubDownloadPolicyChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubDownloadPolicyChanged> Encoder = new MediaHubDownloadPolicyChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubDownloadPolicyChanged> Decoder = new MediaHubDownloadPolicyChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubDownloadPolicyChanged" /> class.</para>
+            /// </summary>
+            private MediaHubDownloadPolicyChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MediaHubDownloadPolicyChanged</para>
+            /// </summary>
+            public static readonly MediaHubDownloadPolicyChanged Instance = new MediaHubDownloadPolicyChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubDownloadPolicyChanged" />.</para>
+            /// </summary>
+            private class MediaHubDownloadPolicyChangedEncoder : enc.StructEncoder<MediaHubDownloadPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubDownloadPolicyChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubDownloadPolicyChanged" />.</para>
+            /// </summary>
+            private class MediaHubDownloadPolicyChangedDecoder : enc.StructDecoder<MediaHubDownloadPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubDownloadPolicyChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubDownloadPolicyChanged Create()
+                {
+                    return MediaHubDownloadPolicyChanged.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed the policy for sharing Media Hub content</para>
+        /// </summary>
+        public sealed class MediaHubLinkSharingPolicyChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubLinkSharingPolicyChanged> Encoder = new MediaHubLinkSharingPolicyChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubLinkSharingPolicyChanged> Decoder = new MediaHubLinkSharingPolicyChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubLinkSharingPolicyChanged" /> class.</para>
+            /// </summary>
+            private MediaHubLinkSharingPolicyChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MediaHubLinkSharingPolicyChanged</para>
+            /// </summary>
+            public static readonly MediaHubLinkSharingPolicyChanged Instance = new MediaHubLinkSharingPolicyChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubLinkSharingPolicyChanged" />.</para>
+            /// </summary>
+            private class MediaHubLinkSharingPolicyChangedEncoder : enc.StructEncoder<MediaHubLinkSharingPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubLinkSharingPolicyChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubLinkSharingPolicyChanged" />.</para>
+            /// </summary>
+            private class MediaHubLinkSharingPolicyChangedDecoder : enc.StructDecoder<MediaHubLinkSharingPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubLinkSharingPolicyChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubLinkSharingPolicyChanged Create()
+                {
+                    return MediaHubLinkSharingPolicyChanged.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>(team_policies) Changed whether users can find team when not invited</para>
         /// </summary>
         public sealed class MemberRequestsChangePolicy : EventTypeArg
@@ -54777,6 +55939,77 @@ namespace Dropbox.Api.TeamLog
                 protected override MicrosoftOfficeAddinChangePolicy Create()
                 {
                     return MicrosoftOfficeAddinChangePolicy.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed multi-team identity policy for team</para>
+        /// </summary>
+        public sealed class MultiTeamIdentityPolicyChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MultiTeamIdentityPolicyChanged> Encoder = new MultiTeamIdentityPolicyChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MultiTeamIdentityPolicyChanged> Decoder = new MultiTeamIdentityPolicyChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MultiTeamIdentityPolicyChanged" /> class.</para>
+            /// </summary>
+            private MultiTeamIdentityPolicyChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MultiTeamIdentityPolicyChanged</para>
+            /// </summary>
+            public static readonly MultiTeamIdentityPolicyChanged Instance = new MultiTeamIdentityPolicyChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MultiTeamIdentityPolicyChanged" />.</para>
+            /// </summary>
+            private class MultiTeamIdentityPolicyChangedEncoder : enc.StructEncoder<MultiTeamIdentityPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MultiTeamIdentityPolicyChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MultiTeamIdentityPolicyChanged" />.</para>
+            /// </summary>
+            private class MultiTeamIdentityPolicyChangedDecoder : enc.StructDecoder<MultiTeamIdentityPolicyChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MultiTeamIdentityPolicyChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MultiTeamIdentityPolicyChanged Create()
+                {
+                    return MultiTeamIdentityPolicyChanged.Instance;
                 }
 
             }

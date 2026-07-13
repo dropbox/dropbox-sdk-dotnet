@@ -42,7 +42,7 @@ namespace Dropbox.Api.Team
                                  string namespaceId,
                                  NamespaceType namespaceType,
                                  string teamMemberId = null,
-                                 long quotaLimit = 0)
+                                 long quotaLimit = 0L)
         {
             if (name == null)
             {
@@ -79,7 +79,7 @@ namespace Dropbox.Api.Team
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public NamespaceMetadata()
         {
-            this.QuotaLimit = 0;
+            this.QuotaLimit = 0L;
         }
 
         /// <summary>

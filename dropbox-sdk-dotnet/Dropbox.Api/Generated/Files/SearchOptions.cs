@@ -43,7 +43,7 @@ namespace Dropbox.Api.Files
         /// specified. Only supported for active file search.</param>
         /// <param name="accountId">Restricts results to the given account id.</param>
         public SearchOptions(string path = null,
-                             ulong maxResults = 100,
+                             ulong maxResults = 100UL,
                              SearchOrderBy orderBy = null,
                              FileStatus fileStatus = null,
                              bool filenameOnly = false,
@@ -106,7 +106,7 @@ namespace Dropbox.Api.Files
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public SearchOptions()
         {
-            this.MaxResults = 100;
+            this.MaxResults = 100UL;
             this.FileStatus = global::Dropbox.Api.Files.FileStatus.Active.Instance;
             this.FilenameOnly = false;
         }

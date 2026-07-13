@@ -34,7 +34,7 @@ namespace Dropbox.Api.Team
         /// <param name="group">The group whose members are to be listed.</param>
         /// <param name="limit">Number of results to return per call.</param>
         public GroupsMembersListArg(GroupSelector @group,
-                                    uint limit = 1000)
+                                    uint limit = 1000U)
         {
             if (@group == null)
             {
@@ -63,7 +63,7 @@ namespace Dropbox.Api.Team
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public GroupsMembersListArg()
         {
-            this.Limit = 1000;
+            this.Limit = 1000U;
         }
 
         /// <summary>

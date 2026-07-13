@@ -44,8 +44,8 @@ namespace Dropbox.Api.Files
         /// Business accounts.</param>
         public SearchArg(string path,
                          string query,
-                         ulong start = 0,
-                         ulong maxResults = 100,
+                         ulong start = 0UL,
+                         ulong maxResults = 100UL,
                          SearchMode mode = null)
         {
             if (path == null)
@@ -99,8 +99,8 @@ namespace Dropbox.Api.Files
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public SearchArg()
         {
-            this.Start = 0;
-            this.MaxResults = 100;
+            this.Start = 0UL;
+            this.MaxResults = 100UL;
             this.Mode = global::Dropbox.Api.Files.SearchMode.Filename.Instance;
         }
 

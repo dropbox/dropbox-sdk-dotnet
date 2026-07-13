@@ -38,7 +38,7 @@ namespace Dropbox.Api.Files
         /// start an upload with this link longer than this period of time after link creation
         /// will result in an error.</param>
         public GetTemporaryUploadLinkArg(CommitInfo commitInfo,
-                                         double duration = 14400.0)
+                                         double duration = 14400.0D)
         {
             if (commitInfo == null)
             {
@@ -67,7 +67,7 @@ namespace Dropbox.Api.Files
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public GetTemporaryUploadLinkArg()
         {
-            this.Duration = 14400.0;
+            this.Duration = 14400.0D;
         }
 
         /// <summary>

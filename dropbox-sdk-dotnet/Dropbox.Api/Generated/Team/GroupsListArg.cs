@@ -31,7 +31,7 @@ namespace Dropbox.Api.Team
         /// <para>Initializes a new instance of the <see cref="GroupsListArg" /> class.</para>
         /// </summary>
         /// <param name="limit">Number of results to return per call.</param>
-        public GroupsListArg(uint limit = 1000)
+        public GroupsListArg(uint limit = 1000U)
         {
             if (limit < 1U)
             {
@@ -53,7 +53,7 @@ namespace Dropbox.Api.Team
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public GroupsListArg()
         {
-            this.Limit = 1000;
+            this.Limit = 1000U;
         }
 
         /// <summary>

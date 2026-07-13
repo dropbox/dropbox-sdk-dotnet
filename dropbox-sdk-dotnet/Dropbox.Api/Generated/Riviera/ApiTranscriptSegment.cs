@@ -35,8 +35,8 @@ namespace Dropbox.Api.Riviera
         /// <param name="startTime">The start time</param>
         /// <param name="endTime">The end time</param>
         public ApiTranscriptSegment(string text = "",
-                                    double startTime = 0.0,
-                                    double endTime = 0.0)
+                                    double startTime = 0.0D,
+                                    double endTime = 0.0D)
         {
             if (text == null)
             {
@@ -58,8 +58,8 @@ namespace Dropbox.Api.Riviera
         public ApiTranscriptSegment()
         {
             this.Text = "";
-            this.StartTime = 0.0;
-            this.EndTime = 0.0;
+            this.StartTime = 0.0D;
+            this.EndTime = 0.0D;
         }
 
         /// <summary>

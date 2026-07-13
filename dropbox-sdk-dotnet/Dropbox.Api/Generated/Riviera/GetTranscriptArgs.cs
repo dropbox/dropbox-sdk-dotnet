@@ -56,8 +56,8 @@ namespace Dropbox.Api.Riviera
         /// to preserve in the transcript output, e.g. `"uh, ah, uhm"`. By default these
         /// fillers are stripped. Unrecognized tokens are ignored. Leave empty to use the
         /// default filtering behavior.</param>
-        /// <param name="audioLanguage">Optional BCP-47 language tag hinting the spoken
-        /// language of the source audio (e.g. "en-US", "ja-JP"). When empty, the service
+        /// <param name="audioLanguage">Optional ISO 639-1 two-letter language code hinting the
+        /// spoken language of the source audio (e.g. "en", "ja"). When empty, the service
         /// auto-detects the language; supplying a hint improves accuracy and latency for short
         /// or ambiguous clips. Unsupported languages fall back to auto-detection.</param>
         public GetTranscriptArgs(FileIdOrUrl fileIdOrUrl = null,
@@ -134,10 +134,10 @@ namespace Dropbox.Api.Riviera
         public string IncludedSpecialWords { get; protected set; }
 
         /// <summary>
-        /// <para>Optional BCP-47 language tag hinting the spoken language of the source audio
-        /// (e.g. "en-US", "ja-JP"). When empty, the service auto-detects the language;
-        /// supplying a hint improves accuracy and latency for short or ambiguous clips.
-        /// Unsupported languages fall back to auto-detection.</para>
+        /// <para>Optional ISO 639-1 two-letter language code hinting the spoken language of
+        /// the source audio (e.g. "en", "ja"). When empty, the service auto-detects the
+        /// language; supplying a hint improves accuracy and latency for short or ambiguous
+        /// clips. Unsupported languages fall back to auto-detection.</para>
         /// </summary>
         public string AudioLanguage { get; protected set; }
 

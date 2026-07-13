@@ -1,1 +1,1 @@
-stone
+stone==3.5.1

@@ -32,7 +32,7 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="limit">Number of results to return per call.</param>
-        public ExcludedUsersListArg(uint limit = 1000)
+        public ExcludedUsersListArg(uint limit = 1000U)
         {
             if (limit < 1U)
             {
@@ -55,7 +55,7 @@ namespace Dropbox.Api.Team
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public ExcludedUsersListArg()
         {
-            this.Limit = 1000;
+            this.Limit = 1000U;
         }
 
         /// <summary>

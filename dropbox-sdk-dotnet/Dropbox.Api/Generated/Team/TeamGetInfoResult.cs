@@ -44,7 +44,7 @@ namespace Dropbox.Api.Team
                                  uint numLicensedUsers,
                                  uint numProvisionedUsers,
                                  global::Dropbox.Api.TeamPolicies.TeamMemberPolicies policies,
-                                 uint numUsedLicenses = 0)
+                                 uint numUsedLicenses = 0U)
         {
             if (name == null)
             {
@@ -78,7 +78,7 @@ namespace Dropbox.Api.Team
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public TeamGetInfoResult()
         {
-            this.NumUsedLicenses = 0;
+            this.NumUsedLicenses = 0U;
         }
 
         /// <summary>

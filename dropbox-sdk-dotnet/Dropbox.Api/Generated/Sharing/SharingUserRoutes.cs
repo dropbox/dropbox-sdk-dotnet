@@ -75,7 +75,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// want to give new members.</param>
         /// <param name="addMessageAsComment">If the custom message should be added as a
         /// comment on the file. Only meant for Paper files.</param>
-        /// <param name="fpSealedResult">The FingerprintJS Sealed Client Result value</param>
+        /// <param name="fpSealedResult">Field is only returned for "internal" callers. The
+        /// FingerprintJS Sealed Client Result value</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -115,7 +116,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// want to give new members.</param>
         /// <param name="addMessageAsComment">If the custom message should be added as a
         /// comment on the file. Only meant for Paper files.</param>
-        /// <param name="fpSealedResult">The FingerprintJS Sealed Client Result value</param>
+        /// <param name="fpSealedResult">Field is only returned for "internal" callers. The
+        /// FingerprintJS Sealed Client Result value</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -210,7 +212,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// notifications of their invite.</param>
         /// <param name="customMessage">Optional message to display to added members in their
         /// invitation.</param>
-        /// <param name="fpSealedResult">The FingerprintJS Sealed Client Result value</param>
+        /// <param name="fpSealedResult">Field is only returned for "internal" callers. The
+        /// FingerprintJS Sealed Client Result value</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
@@ -240,7 +243,8 @@ namespace Dropbox.Api.Sharing.Routes
         /// notifications of their invite.</param>
         /// <param name="customMessage">Optional message to display to added members in their
         /// invitation.</param>
-        /// <param name="fpSealedResult">The FingerprintJS Sealed Client Result value</param>
+        /// <param name="fpSealedResult">Field is only returned for "internal" callers. The
+        /// FingerprintJS Sealed Client Result value</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1414,7 +1418,7 @@ namespace Dropbox.Api.Sharing.Routes
         public t.Task<SharedFileMembers> ListFileMembersAsync(string file,
                                                               col.IEnumerable<MemberAction> actions = null,
                                                               bool includeInherited = true,
-                                                              uint limit = 100)
+                                                              uint limit = 100U)
         {
             var listFileMembersArg = new ListFileMembersArg(file,
                                                             actions,
@@ -1442,7 +1446,7 @@ namespace Dropbox.Api.Sharing.Routes
         public sys.IAsyncResult BeginListFileMembers(string file,
                                                      col.IEnumerable<MemberAction> actions = null,
                                                      bool includeInherited = true,
-                                                     uint limit = 100,
+                                                     uint limit = 100U,
                                                      sys.AsyncCallback callback = null,
                                                      object callbackState = null)
         {
@@ -1525,7 +1529,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// processing the request; This will contain a <see
         /// cref="SharingUserError"/>.</exception>
         public t.Task<col.List<ListFileMembersBatchResult>> ListFileMembersBatchAsync(col.IEnumerable<string> files,
-                                                                                      uint limit = 1000)
+                                                                                      uint limit = 1000U)
         {
             var listFileMembersBatchArg = new ListFileMembersBatchArg(files,
                                                                       limit);
@@ -1545,7 +1549,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListFileMembersBatch(col.IEnumerable<string> files,
-                                                          uint limit = 1000,
+                                                          uint limit = 1000U,
                                                           sys.AsyncCallback callback = null,
                                                           object callbackState = null)
         {
@@ -1728,7 +1732,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// cref="SharedFolderAccessError"/>.</exception>
         public t.Task<SharedFolderMembers> ListFolderMembersAsync(string sharedFolderId,
                                                                   col.IEnumerable<MemberAction> actions = null,
-                                                                  uint limit = 1000,
+                                                                  uint limit = 1000U,
                                                                   string path = null)
         {
             var listFolderMembersArgs = new ListFolderMembersArgs(sharedFolderId,
@@ -1760,7 +1764,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListFolderMembers(string sharedFolderId,
                                                        col.IEnumerable<MemberAction> actions = null,
-                                                       uint limit = 1000,
+                                                       uint limit = 1000U,
                                                        string path = null,
                                                        sys.AsyncCallback callback = null,
                                                        object callbackState = null)
@@ -1928,7 +1932,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// actions the authenticated user can perform on the folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<ListFoldersResult> ListFoldersAsync(uint limit = 1000,
+        public t.Task<ListFoldersResult> ListFoldersAsync(uint limit = 1000U,
                                                           col.IEnumerable<FolderAction> actions = null)
         {
             var listFoldersArgs = new ListFoldersArgs(limit,
@@ -1950,7 +1954,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginListFolders(uint limit = 1000,
+        public sys.IAsyncResult BeginListFolders(uint limit = 1000U,
                                                  col.IEnumerable<FolderAction> actions = null,
                                                  sys.AsyncCallback callback = null,
                                                  object callbackState = null)
@@ -2115,7 +2119,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// actions the authenticated user can perform on the folder.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<ListFoldersResult> ListMountableFoldersAsync(uint limit = 1000,
+        public t.Task<ListFoldersResult> ListMountableFoldersAsync(uint limit = 1000U,
                                                                    col.IEnumerable<FolderAction> actions = null)
         {
             var listFoldersArgs = new ListFoldersArgs(limit,
@@ -2137,7 +2141,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginListMountableFolders(uint limit = 1000,
+        public sys.IAsyncResult BeginListMountableFolders(uint limit = 1000U,
                                                           col.IEnumerable<FolderAction> actions = null,
                                                           sys.AsyncCallback callback = null,
                                                           object callbackState = null)
@@ -2313,7 +2317,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SharingUserError"/>.</exception>
-        public t.Task<ListFilesResult> ListReceivedFilesAsync(uint limit = 100,
+        public t.Task<ListFilesResult> ListReceivedFilesAsync(uint limit = 100U,
                                                               col.IEnumerable<FileAction> actions = null)
         {
             var listFilesArg = new ListFilesArg(limit,
@@ -2336,7 +2340,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginListReceivedFiles(uint limit = 100,
+        public sys.IAsyncResult BeginListReceivedFiles(uint limit = 100U,
                                                        col.IEnumerable<FileAction> actions = null,
                                                        sys.AsyncCallback callback = null,
                                                        object callbackState = null)

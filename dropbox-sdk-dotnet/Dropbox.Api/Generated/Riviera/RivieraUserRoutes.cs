@@ -238,6 +238,199 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
+        /// <para>Asynchronous file metadata extraction for supported file formats.</para>
+        /// </summary>
+        /// <param name="getMetadataArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetMetadataAsyncAsync(GetMetadataArgs getMetadataArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<GetMetadataArgs, global::Dropbox.Api.Async.LaunchResultBase, enc.Empty>(getMetadataArgs, "api", "/riviera/get_metadata_async", "user", global::Dropbox.Api.Riviera.GetMetadataArgs.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get metadata async route.</para>
+        /// </summary>
+        /// <param name="getMetadataArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetMetadataAsync(GetMetadataArgs getMetadataArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetMetadataAsyncAsync(getMetadataArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Asynchronous file metadata extraction for supported file formats.</para>
+        /// </summary>
+        /// <param name="fileIdOrUrl">Identifier of the file to extract metadata from. Callers
+        /// must set exactly one of the oneof variants: - file_id: a Dropbox-issued file id
+        /// (format: "id:<id>") for a file the authenticated user has access to. - path: an
+        /// absolute Dropbox path, e.g. "/folder/photo.jpg". - url: either a Dropbox shared
+        /// link (www.dropbox.com) or an external HTTPS URL pointing to a supported file. -
+        /// Dropbox shared links are resolved internally using the caller's authenticated
+        /// identity and the link's visibility / download settings. They therefore require an
+        /// authenticated user context (anonymous `url` requests against Dropbox links are
+        /// rejected with an `ACCESS_ERROR`). Links protected by a password are rejected with
+        /// `shared_link_password_protected`; links with downloads disabled are rejected with
+        /// `link_download_disabled_error`. - External URLs are fetched over HTTPS through the
+        /// backend's egress proxy and must point at a supported file extension. The kind of
+        /// metadata returned is determined by the file type: image files return EXIF metadata,
+        /// audio/video files return media metadata, PDFs return PDF metadata, and MS Office
+        /// documents (docx, pptx, xlsx) return Office metadata. Requests against unsupported
+        /// formats return `unsupported_format_error`.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetMetadataAsyncAsync(FileIdOrUrl fileIdOrUrl = null)
+        {
+            var getMetadataArgs = new GetMetadataArgs(fileIdOrUrl);
+
+            return this.GetMetadataAsyncAsync(getMetadataArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get metadata async route.</para>
+        /// </summary>
+        /// <param name="fileIdOrUrl">Identifier of the file to extract metadata from. Callers
+        /// must set exactly one of the oneof variants: - file_id: a Dropbox-issued file id
+        /// (format: "id:<id>") for a file the authenticated user has access to. - path: an
+        /// absolute Dropbox path, e.g. "/folder/photo.jpg". - url: either a Dropbox shared
+        /// link (www.dropbox.com) or an external HTTPS URL pointing to a supported file. -
+        /// Dropbox shared links are resolved internally using the caller's authenticated
+        /// identity and the link's visibility / download settings. They therefore require an
+        /// authenticated user context (anonymous `url` requests against Dropbox links are
+        /// rejected with an `ACCESS_ERROR`). Links protected by a password are rejected with
+        /// `shared_link_password_protected`; links with downloads disabled are rejected with
+        /// `link_download_disabled_error`. - External URLs are fetched over HTTPS through the
+        /// backend's egress proxy and must point at a supported file extension. The kind of
+        /// metadata returned is determined by the file type: image files return EXIF metadata,
+        /// audio/video files return media metadata, PDFs return PDF metadata, and MS Office
+        /// documents (docx, pptx, xlsx) return Office metadata. Requests against unsupported
+        /// formats return `unsupported_format_error`.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetMetadataAsync(FileIdOrUrl fileIdOrUrl = null,
+                                                      sys.AsyncCallback callback = null,
+                                                      object callbackState = null)
+        {
+            var getMetadataArgs = new GetMetadataArgs(fileIdOrUrl);
+
+            return this.BeginGetMetadataAsync(getMetadataArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get metadata async route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public global::Dropbox.Api.Async.LaunchResultBase EndGetMetadataAsync(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchResultBase>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns the status or result of specified get_metadata_async task.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<GetMetadataAsyncCheckResult> GetMetadataAsyncCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, GetMetadataAsyncCheckResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/riviera/get_metadata_async/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get metadata async check route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetMetadataAsyncCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetMetadataAsyncCheckAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the status or result of specified get_metadata_async task.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<GetMetadataAsyncCheckResult> GetMetadataAsyncCheckAsync(string asyncJobId)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.GetMetadataAsyncCheckAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get metadata async check route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetMetadataAsyncCheck(string asyncJobId,
+                                                           sys.AsyncCallback callback,
+                                                           object callbackState = null)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginGetMetadataAsyncCheck(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get metadata async check route
+        /// to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public GetMetadataAsyncCheckResult EndGetMetadataAsyncCheck(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<GetMetadataAsyncCheckResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Asynchronous transcript generation for audio and video files.</para>
         /// </summary>
         /// <param name="getTranscriptArgs">The request parameters</param>
@@ -290,8 +483,8 @@ namespace Dropbox.Api.Riviera.Routes
         /// to preserve in the transcript output, e.g. `"uh, ah, uhm"`. By default these
         /// fillers are stripped. Unrecognized tokens are ignored. Leave empty to use the
         /// default filtering behavior.</param>
-        /// <param name="audioLanguage">Optional BCP-47 language tag hinting the spoken
-        /// language of the source audio (e.g. "en-US", "ja-JP"). When empty, the service
+        /// <param name="audioLanguage">Optional ISO 639-1 two-letter language code hinting the
+        /// spoken language of the source audio (e.g. "en", "ja"). When empty, the service
         /// auto-detects the language; supplying a hint improves accuracy and latency for short
         /// or ambiguous clips. Unsupported languages fall back to auto-detection.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -335,8 +528,8 @@ namespace Dropbox.Api.Riviera.Routes
         /// to preserve in the transcript output, e.g. `"uh, ah, uhm"`. By default these
         /// fillers are stripped. Unrecognized tokens are ignored. Leave empty to use the
         /// default filtering behavior.</param>
-        /// <param name="audioLanguage">Optional BCP-47 language tag hinting the spoken
-        /// language of the source audio (e.g. "en-US", "ja-JP"). When empty, the service
+        /// <param name="audioLanguage">Optional ISO 639-1 two-letter language code hinting the
+        /// spoken language of the source audio (e.g. "en", "ja"). When empty, the service
         /// auto-detects the language; supplying a hint improves accuracy and latency for short
         /// or ambiguous clips. Unsupported languages fall back to auto-detection.</param>
         /// <param name="callback">The method to be called when the asynchronous send is

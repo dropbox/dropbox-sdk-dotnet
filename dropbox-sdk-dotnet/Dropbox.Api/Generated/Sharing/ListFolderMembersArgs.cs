@@ -45,7 +45,7 @@ namespace Dropbox.Api.Sharing
         /// this path and returns users who have access through parent shared folder.</param>
         public ListFolderMembersArgs(string sharedFolderId,
                                      col.IEnumerable<MemberAction> actions = null,
-                                     uint limit = 1000,
+                                     uint limit = 1000U,
                                      string path = null)
             : base(actions, limit)
         {

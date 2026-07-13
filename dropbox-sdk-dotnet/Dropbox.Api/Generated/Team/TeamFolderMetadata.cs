@@ -47,7 +47,7 @@ namespace Dropbox.Api.Team
                                   bool isTeamSharedDropbox,
                                   global::Dropbox.Api.Files.SyncSetting syncSetting,
                                   col.IEnumerable<global::Dropbox.Api.Files.ContentSyncSetting> contentSyncSettings,
-                                  long quotaLimit = 0)
+                                  long quotaLimit = 0L)
         {
             if (teamFolderId == null)
             {
@@ -98,7 +98,7 @@ namespace Dropbox.Api.Team
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public TeamFolderMetadata()
         {
-            this.QuotaLimit = 0;
+            this.QuotaLimit = 0L;
         }
 
         /// <summary>

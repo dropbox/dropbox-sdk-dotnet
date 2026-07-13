@@ -518,7 +518,7 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ListFileRequestsError"/>.</exception>
-        public t.Task<ListFileRequestsV2Result> ListV2Async(ulong limit = 1000)
+        public t.Task<ListFileRequestsV2Result> ListV2Async(ulong limit = 1000UL)
         {
             var listFileRequestsArg = new ListFileRequestsArg(limit);
 
@@ -535,7 +535,7 @@ namespace Dropbox.Api.FileRequests.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginListV2(ulong limit = 1000,
+        public sys.IAsyncResult BeginListV2(ulong limit = 1000UL,
                                             sys.AsyncCallback callback = null,
                                             object callbackState = null)
         {
