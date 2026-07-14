@@ -37,7 +37,7 @@ namespace Dropbox.Api.Sharing
         /// <param name="limit">Number of members to return max per query. Defaults to 1000 if
         /// no limit is specified.</param>
         public ListFileMembersBatchArg(col.IEnumerable<string> files,
-                                       uint limit = 1000)
+                                       uint limit = 1000U)
         {
             var filesList = enc.Util.ToList(files);
 
@@ -68,7 +68,7 @@ namespace Dropbox.Api.Sharing
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public ListFileMembersBatchArg()
         {
-            this.Limit = 1000;
+            this.Limit = 1000U;
         }
 
         /// <summary>

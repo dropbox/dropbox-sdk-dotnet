@@ -124,6 +124,29 @@ namespace Dropbox.Api.Team
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// FolderCountLimitExceeded</para>
+        /// </summary>
+        public bool IsFolderCountLimitExceeded
+        {
+            get
+            {
+                return this is FolderCountLimitExceeded;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FolderCountLimitExceeded, or <c>null</c>.</para>
+        /// </summary>
+        public FolderCountLimitExceeded AsFolderCountLimitExceeded
+        {
+            get
+            {
+                return this as FolderCountLimitExceeded;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -183,6 +206,12 @@ namespace Dropbox.Api.Team
                     SyncSettingsError.Encoder.EncodeFields((SyncSettingsError)value, writer);
                     return;
                 }
+                if (value is FolderCountLimitExceeded)
+                {
+                    WriteProperty(".tag", "folder_count_limit_exceeded", writer, enc.StringEncoder.Instance);
+                    FolderCountLimitExceeded.Encoder.EncodeFields((FolderCountLimitExceeded)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -230,6 +259,8 @@ namespace Dropbox.Api.Team
                         return FolderNameReserved.Decoder.DecodeFields(reader);
                     case "sync_settings_error":
                         return SyncSettingsError.Decoder.DecodeFields(reader);
+                    case "folder_count_limit_exceeded":
+                        return FolderCountLimitExceeded.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -545,6 +576,78 @@ namespace Dropbox.Api.Team
                             break;
                     }
                 }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The team has reached the maximum number of team folders allowed by its
+        /// plan.</para>
+        /// </summary>
+        public sealed class FolderCountLimitExceeded : TeamFolderCreateError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FolderCountLimitExceeded> Encoder = new FolderCountLimitExceededEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FolderCountLimitExceeded> Decoder = new FolderCountLimitExceededDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FolderCountLimitExceeded" />
+            /// class.</para>
+            /// </summary>
+            private FolderCountLimitExceeded()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FolderCountLimitExceeded</para>
+            /// </summary>
+            public static readonly FolderCountLimitExceeded Instance = new FolderCountLimitExceeded();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FolderCountLimitExceeded" />.</para>
+            /// </summary>
+            private class FolderCountLimitExceededEncoder : enc.StructEncoder<FolderCountLimitExceeded>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FolderCountLimitExceeded value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FolderCountLimitExceeded" />.</para>
+            /// </summary>
+            private class FolderCountLimitExceededDecoder : enc.StructDecoder<FolderCountLimitExceeded>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FolderCountLimitExceeded"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FolderCountLimitExceeded Create()
+                {
+                    return FolderCountLimitExceeded.Instance;
+                }
+
             }
 
             #endregion

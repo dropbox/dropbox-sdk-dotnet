@@ -75,7 +75,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
-        /// <param name="quality">Quality of the thumbnail image.</param>
+        /// <param name="quality">Field is only returned for "internal" callers. Quality of the
+        /// thumbnail image.</param>
         /// <param name="excludeMediaInfo">Normally, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
         /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
@@ -115,7 +116,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
-        /// <param name="quality">Quality of the thumbnail image.</param>
+        /// <param name="quality">Field is only returned for "internal" callers. Quality of the
+        /// thumbnail image.</param>
         /// <param name="excludeMediaInfo">Normally, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
         /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not

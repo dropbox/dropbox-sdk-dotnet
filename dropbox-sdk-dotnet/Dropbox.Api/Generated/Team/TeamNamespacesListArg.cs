@@ -33,7 +33,7 @@ namespace Dropbox.Api.Team
         /// </summary>
         /// <param name="limit">Field is deprecated. Specifying a value here has no
         /// effect.</param>
-        public TeamNamespacesListArg(uint limit = 1000)
+        public TeamNamespacesListArg(uint limit = 1000U)
         {
             if (limit < 1U)
             {
@@ -56,7 +56,7 @@ namespace Dropbox.Api.Team
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public TeamNamespacesListArg()
         {
-            this.Limit = 1000;
+            this.Limit = 1000U;
         }
 
         /// <summary>

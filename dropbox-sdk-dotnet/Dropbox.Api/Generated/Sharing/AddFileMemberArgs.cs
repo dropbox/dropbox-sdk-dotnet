@@ -44,7 +44,8 @@ namespace Dropbox.Api.Sharing
         /// want to give new members.</param>
         /// <param name="addMessageAsComment">If the custom message should be added as a
         /// comment on the file. Only meant for Paper files.</param>
-        /// <param name="fpSealedResult">The FingerprintJS Sealed Client Result value</param>
+        /// <param name="fpSealedResult">Field is only returned for "internal" callers. The
+        /// FingerprintJS Sealed Client Result value</param>
         public AddFileMemberArgs(string file,
                                  col.IEnumerable<MemberSelector> members,
                                  string customMessage = null,
@@ -131,7 +132,8 @@ namespace Dropbox.Api.Sharing
         public bool AddMessageAsComment { get; protected set; }
 
         /// <summary>
-        /// <para>The FingerprintJS Sealed Client Result value</para>
+        /// <para>Field is only returned for "internal" callers. The FingerprintJS Sealed
+        /// Client Result value</para>
         /// </summary>
         public string FpSealedResult { get; protected set; }
 

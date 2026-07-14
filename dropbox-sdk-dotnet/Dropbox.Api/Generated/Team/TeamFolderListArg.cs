@@ -32,7 +32,7 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="limit">The maximum number of results to return per request.</param>
-        public TeamFolderListArg(uint limit = 1000)
+        public TeamFolderListArg(uint limit = 1000U)
         {
             if (limit < 1U)
             {
@@ -55,7 +55,7 @@ namespace Dropbox.Api.Team
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public TeamFolderListArg()
         {
-            this.Limit = 1000;
+            this.Limit = 1000U;
         }
 
         /// <summary>

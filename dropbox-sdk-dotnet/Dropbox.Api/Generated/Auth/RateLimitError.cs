@@ -34,7 +34,7 @@ namespace Dropbox.Api.Auth
         /// <param name="retryAfter">The number of seconds that the app should wait before
         /// making another request.</param>
         public RateLimitError(RateLimitReason reason,
-                              ulong retryAfter = 1)
+                              ulong retryAfter = 1UL)
         {
             if (reason == null)
             {
@@ -53,7 +53,7 @@ namespace Dropbox.Api.Auth
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public RateLimitError()
         {
-            this.RetryAfter = 1;
+            this.RetryAfter = 1UL;
         }
 
         /// <summary>

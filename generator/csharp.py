@@ -647,18 +647,22 @@ class _CSharpGenerator(CodeBackend):
 
             return typename + suffix
 
-    @staticmethod
-    def _process_literal(literal):
+    def _process_literal(self, literal, data_type=None):
         """
         Translate literal values used in defaults
 
         Args:
             literal: The literal value.
+            data_type (stone.data_type.DataType): The type of the literal, used
+                to append the numeric suffix (e.g. 'F' for float) so the emitted
+                C# literal has the correct type.
         """
         if isinstance(literal, bool):
             return 'true' if literal else 'false'
         elif isinstance(literal, str):
             return '\"{}\"'.format(literal)
+        if data_type is not None:
+            return '{}{}'.format(literal, self._type_literal_suffix(data_type))
         return literal
 
     @staticmethod
@@ -1113,7 +1117,7 @@ class _CSharpGenerator(CodeBackend):
         elif isinstance(data_type, UInt64):
             return 'UInt64'
         elif isinstance(data_type, Float32):
-            return 'Float'
+            return 'Single'
         elif isinstance(data_type, Float64):
             return 'Double'
         elif is_timestamp_type(data_type):
@@ -1307,7 +1311,7 @@ class _CSharpGenerator(CodeBackend):
                     # we'll populate the real default when we check constraints
                     arg = '{} {} = null'.format(fieldtype, arg_name)
                 else:
-                    arg = '{} {} = {}'.format(fieldtype, arg_name, self._process_literal(field.default))
+                    arg = '{} {} = {}'.format(fieldtype, arg_name, self._process_literal(field.default, field.data_type))
             elif is_nullable_type(field.data_type):
                 arg = '{} {} = null'.format(fieldtype, arg_name)
             else:
@@ -1443,7 +1447,7 @@ class _CSharpGenerator(CodeBackend):
                         self._process_composite_default(field, include_null_check=False)
                     else:
                         self.emit('this.{} = {};'.format(
-                            self._public_name(field.name), self._process_literal(field.default)))
+                            self._public_name(field.name), self._process_literal(field.default, field.data_type)))
 
     def _generate_struct_strunion_is_as(self, struct):
         """

@@ -42,7 +42,7 @@ namespace Dropbox.Api.Sharing
         public ListFileMembersArg(string file,
                                   col.IEnumerable<MemberAction> actions = null,
                                   bool includeInherited = true,
-                                  uint limit = 100)
+                                  uint limit = 100U)
         {
             if (file == null)
             {
@@ -84,7 +84,7 @@ namespace Dropbox.Api.Sharing
         public ListFileMembersArg()
         {
             this.IncludeInherited = true;
-            this.Limit = 100;
+            this.Limit = 100U;
         }
 
         /// <summary>

@@ -32,7 +32,7 @@ namespace Dropbox.Api.Team
         /// </summary>
         /// <param name="limit">Number of results to return per call.</param>
         /// <param name="includeRemoved">Whether to return removed members.</param>
-        public MembersListArg(uint limit = 1000,
+        public MembersListArg(uint limit = 1000U,
                               bool includeRemoved = false)
         {
             if (limit < 1U)
@@ -56,7 +56,7 @@ namespace Dropbox.Api.Team
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public MembersListArg()
         {
-            this.Limit = 1000;
+            this.Limit = 1000U;
             this.IncludeRemoved = false;
         }
 

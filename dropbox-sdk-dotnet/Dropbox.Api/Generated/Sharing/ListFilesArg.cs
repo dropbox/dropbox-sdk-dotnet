@@ -37,7 +37,7 @@ namespace Dropbox.Api.Sharing
         /// that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" /> field describing the
         /// actions the authenticated user can perform on the file.</param>
-        public ListFilesArg(uint limit = 100,
+        public ListFilesArg(uint limit = 100U,
                             col.IEnumerable<FileAction> actions = null)
         {
             if (limit < 1U)
@@ -63,7 +63,7 @@ namespace Dropbox.Api.Sharing
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public ListFilesArg()
         {
-            this.Limit = 100;
+            this.Limit = 100U;
         }
 
         /// <summary>

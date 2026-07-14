@@ -43,7 +43,7 @@ namespace Dropbox.Api.Files
         /// whether that revision can be restored.</param>
         public ListRevisionsArg(string path,
                                 ListRevisionsMode mode = null,
-                                ulong limit = 10,
+                                ulong limit = 10UL,
                                 string beforeRev = null,
                                 bool includeRestorableInfo = false)
         {
@@ -98,7 +98,7 @@ namespace Dropbox.Api.Files
         public ListRevisionsArg()
         {
             this.Mode = global::Dropbox.Api.Files.ListRevisionsMode.Path.Instance;
-            this.Limit = 10;
+            this.Limit = 10UL;
             this.IncludeRestorableInfo = false;
         }
 

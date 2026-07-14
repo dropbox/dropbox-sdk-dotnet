@@ -38,7 +38,8 @@ namespace Dropbox.Api.Sharing
         /// notifications of their invite.</param>
         /// <param name="customMessage">Optional message to display to added members in their
         /// invitation.</param>
-        /// <param name="fpSealedResult">The FingerprintJS Sealed Client Result value</param>
+        /// <param name="fpSealedResult">Field is only returned for "internal" callers. The
+        /// FingerprintJS Sealed Client Result value</param>
         public AddFolderMemberArg(string sharedFolderId,
                                   col.IEnumerable<AddMember> members,
                                   bool quiet = false,
@@ -111,7 +112,8 @@ namespace Dropbox.Api.Sharing
         public string CustomMessage { get; protected set; }
 
         /// <summary>
-        /// <para>The FingerprintJS Sealed Client Result value</para>
+        /// <para>Field is only returned for "internal" callers. The FingerprintJS Sealed
+        /// Client Result value</para>
         /// </summary>
         public string FpSealedResult { get; protected set; }
 

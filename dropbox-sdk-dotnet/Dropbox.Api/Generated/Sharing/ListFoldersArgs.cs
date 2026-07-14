@@ -36,7 +36,7 @@ namespace Dropbox.Api.Sharing
         /// `FolderPermission`s that should appear in the response's <see
         /// cref="Dropbox.Api.Sharing.SharedFolderMetadata.Permissions" /> field describing the
         /// actions the authenticated user can perform on the folder.</param>
-        public ListFoldersArgs(uint limit = 1000,
+        public ListFoldersArgs(uint limit = 1000U,
                                col.IEnumerable<FolderAction> actions = null)
         {
             if (limit < 1U)
@@ -63,7 +63,7 @@ namespace Dropbox.Api.Sharing
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public ListFoldersArgs()
         {
-            this.Limit = 1000;
+            this.Limit = 1000U;
         }
 
         /// <summary>

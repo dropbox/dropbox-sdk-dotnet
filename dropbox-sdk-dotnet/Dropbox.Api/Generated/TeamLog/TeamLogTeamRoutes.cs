@@ -103,7 +103,7 @@ namespace Dropbox.Api.TeamLog.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="GetTeamEventsError"/>.</exception>
-        public t.Task<GetTeamEventsResult> GetEventsAsync(uint limit = 1000,
+        public t.Task<GetTeamEventsResult> GetEventsAsync(uint limit = 1000U,
                                                           string accountId = null,
                                                           global::Dropbox.Api.TeamCommon.TimeRange time = null,
                                                           EventCategory category = null,
@@ -139,7 +139,7 @@ namespace Dropbox.Api.TeamLog.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginGetEvents(uint limit = 1000,
+        public sys.IAsyncResult BeginGetEvents(uint limit = 1000U,
                                                string accountId = null,
                                                global::Dropbox.Api.TeamCommon.TimeRange time = null,
                                                EventCategory category = null,

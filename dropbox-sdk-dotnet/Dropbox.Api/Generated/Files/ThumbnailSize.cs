@@ -1010,7 +1010,7 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>3200 by 2400 px.</para>
+        /// <para>Field is only returned for "internal" callers. 3200 by 2400 px.</para>
         /// </summary>
         public sealed class W3200h2400 : ThumbnailSize
         {

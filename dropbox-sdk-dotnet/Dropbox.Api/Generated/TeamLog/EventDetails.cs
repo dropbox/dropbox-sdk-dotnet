@@ -3465,6 +3465,29 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// MediaHubFileDownloadedDetails</para>
+        /// </summary>
+        public bool IsMediaHubFileDownloadedDetails
+        {
+            get
+            {
+                return this is MediaHubFileDownloadedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubFileDownloadedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public MediaHubFileDownloadedDetails AsMediaHubFileDownloadedDetails
+        {
+            get
+            {
+                return this as MediaHubFileDownloadedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// ObjectLabelAddedDetails</para>
         /// </summary>
         public bool IsObjectLabelAddedDetails
@@ -7328,6 +7351,173 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as FileTransfersTransferViewDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubProjectTeamAddDetails</para>
+        /// </summary>
+        public bool IsMediaHubProjectTeamAddDetails
+        {
+            get
+            {
+                return this is MediaHubProjectTeamAddDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubProjectTeamAddDetails, or <c>null</c>.</para>
+        /// </summary>
+        public MediaHubProjectTeamAddDetails AsMediaHubProjectTeamAddDetails
+        {
+            get
+            {
+                return this as MediaHubProjectTeamAddDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubProjectTeamDeleteDetails</para>
+        /// </summary>
+        public bool IsMediaHubProjectTeamDeleteDetails
+        {
+            get
+            {
+                return this is MediaHubProjectTeamDeleteDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubProjectTeamDeleteDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MediaHubProjectTeamDeleteDetails AsMediaHubProjectTeamDeleteDetails
+        {
+            get
+            {
+                return this as MediaHubProjectTeamDeleteDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubProjectTeamRoleChangedDetails</para>
+        /// </summary>
+        public bool IsMediaHubProjectTeamRoleChangedDetails
+        {
+            get
+            {
+                return this is MediaHubProjectTeamRoleChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubProjectTeamRoleChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MediaHubProjectTeamRoleChangedDetails AsMediaHubProjectTeamRoleChangedDetails
+        {
+            get
+            {
+                return this as MediaHubProjectTeamRoleChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubSharedLinkAudienceChangedDetails</para>
+        /// </summary>
+        public bool IsMediaHubSharedLinkAudienceChangedDetails
+        {
+            get
+            {
+                return this is MediaHubSharedLinkAudienceChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubSharedLinkAudienceChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MediaHubSharedLinkAudienceChangedDetails AsMediaHubSharedLinkAudienceChangedDetails
+        {
+            get
+            {
+                return this as MediaHubSharedLinkAudienceChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubSharedLinkCreatedDetails</para>
+        /// </summary>
+        public bool IsMediaHubSharedLinkCreatedDetails
+        {
+            get
+            {
+                return this is MediaHubSharedLinkCreatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubSharedLinkCreatedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MediaHubSharedLinkCreatedDetails AsMediaHubSharedLinkCreatedDetails
+        {
+            get
+            {
+                return this as MediaHubSharedLinkCreatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubSharedLinkDownloadSettingChangedDetails</para>
+        /// </summary>
+        public bool IsMediaHubSharedLinkDownloadSettingChangedDetails
+        {
+            get
+            {
+                return this is MediaHubSharedLinkDownloadSettingChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubSharedLinkDownloadSettingChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MediaHubSharedLinkDownloadSettingChangedDetails AsMediaHubSharedLinkDownloadSettingChangedDetails
+        {
+            get
+            {
+                return this as MediaHubSharedLinkDownloadSettingChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubSharedLinkRevokedDetails</para>
+        /// </summary>
+        public bool IsMediaHubSharedLinkRevokedDetails
+        {
+            get
+            {
+                return this is MediaHubSharedLinkRevokedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubSharedLinkRevokedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MediaHubSharedLinkRevokedDetails AsMediaHubSharedLinkRevokedDetails
+        {
+            get
+            {
+                return this as MediaHubSharedLinkRevokedDetails;
             }
         }
 
@@ -11693,6 +11883,78 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// MediaHubAddingPeoplePolicyChangedDetails</para>
+        /// </summary>
+        public bool IsMediaHubAddingPeoplePolicyChangedDetails
+        {
+            get
+            {
+                return this is MediaHubAddingPeoplePolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubAddingPeoplePolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MediaHubAddingPeoplePolicyChangedDetails AsMediaHubAddingPeoplePolicyChangedDetails
+        {
+            get
+            {
+                return this as MediaHubAddingPeoplePolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubDownloadPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsMediaHubDownloadPolicyChangedDetails
+        {
+            get
+            {
+                return this is MediaHubDownloadPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubDownloadPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MediaHubDownloadPolicyChangedDetails AsMediaHubDownloadPolicyChangedDetails
+        {
+            get
+            {
+                return this as MediaHubDownloadPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MediaHubLinkSharingPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsMediaHubLinkSharingPolicyChangedDetails
+        {
+            get
+            {
+                return this is MediaHubLinkSharingPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MediaHubLinkSharingPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MediaHubLinkSharingPolicyChangedDetails AsMediaHubLinkSharingPolicyChangedDetails
+        {
+            get
+            {
+                return this as MediaHubLinkSharingPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// MemberRequestsChangePolicyDetails</para>
         /// </summary>
         public bool IsMemberRequestsChangePolicyDetails
@@ -11904,6 +12166,30 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as MicrosoftOfficeAddinChangePolicyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MultiTeamIdentityPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsMultiTeamIdentityPolicyChangedDetails
+        {
+            get
+            {
+                return this is MultiTeamIdentityPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MultiTeamIdentityPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MultiTeamIdentityPolicyChangedDetails AsMultiTeamIdentityPolicyChangedDetails
+        {
+            get
+            {
+                return this as MultiTeamIdentityPolicyChangedDetails;
             }
         }
 
@@ -15186,6 +15472,12 @@ namespace Dropbox.Api.TeamLog
                     FolderOverviewItemUnpinnedDetails.Encoder.EncodeFields((FolderOverviewItemUnpinnedDetails)value, writer);
                     return;
                 }
+                if (value is MediaHubFileDownloadedDetails)
+                {
+                    WriteProperty(".tag", "media_hub_file_downloaded_details", writer, enc.StringEncoder.Instance);
+                    MediaHubFileDownloadedDetails.Encoder.EncodeFields((MediaHubFileDownloadedDetails)value, writer);
+                    return;
+                }
                 if (value is ObjectLabelAddedDetails)
                 {
                     WriteProperty(".tag", "object_label_added_details", writer, enc.StringEncoder.Instance);
@@ -16180,6 +16472,48 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "file_transfers_transfer_view_details", writer, enc.StringEncoder.Instance);
                     FileTransfersTransferViewDetails.Encoder.EncodeFields((FileTransfersTransferViewDetails)value, writer);
+                    return;
+                }
+                if (value is MediaHubProjectTeamAddDetails)
+                {
+                    WriteProperty(".tag", "media_hub_project_team_add_details", writer, enc.StringEncoder.Instance);
+                    MediaHubProjectTeamAddDetails.Encoder.EncodeFields((MediaHubProjectTeamAddDetails)value, writer);
+                    return;
+                }
+                if (value is MediaHubProjectTeamDeleteDetails)
+                {
+                    WriteProperty(".tag", "media_hub_project_team_delete_details", writer, enc.StringEncoder.Instance);
+                    MediaHubProjectTeamDeleteDetails.Encoder.EncodeFields((MediaHubProjectTeamDeleteDetails)value, writer);
+                    return;
+                }
+                if (value is MediaHubProjectTeamRoleChangedDetails)
+                {
+                    WriteProperty(".tag", "media_hub_project_team_role_changed_details", writer, enc.StringEncoder.Instance);
+                    MediaHubProjectTeamRoleChangedDetails.Encoder.EncodeFields((MediaHubProjectTeamRoleChangedDetails)value, writer);
+                    return;
+                }
+                if (value is MediaHubSharedLinkAudienceChangedDetails)
+                {
+                    WriteProperty(".tag", "media_hub_shared_link_audience_changed_details", writer, enc.StringEncoder.Instance);
+                    MediaHubSharedLinkAudienceChangedDetails.Encoder.EncodeFields((MediaHubSharedLinkAudienceChangedDetails)value, writer);
+                    return;
+                }
+                if (value is MediaHubSharedLinkCreatedDetails)
+                {
+                    WriteProperty(".tag", "media_hub_shared_link_created_details", writer, enc.StringEncoder.Instance);
+                    MediaHubSharedLinkCreatedDetails.Encoder.EncodeFields((MediaHubSharedLinkCreatedDetails)value, writer);
+                    return;
+                }
+                if (value is MediaHubSharedLinkDownloadSettingChangedDetails)
+                {
+                    WriteProperty(".tag", "media_hub_shared_link_download_setting_changed_details", writer, enc.StringEncoder.Instance);
+                    MediaHubSharedLinkDownloadSettingChangedDetails.Encoder.EncodeFields((MediaHubSharedLinkDownloadSettingChangedDetails)value, writer);
+                    return;
+                }
+                if (value is MediaHubSharedLinkRevokedDetails)
+                {
+                    WriteProperty(".tag", "media_hub_shared_link_revoked_details", writer, enc.StringEncoder.Instance);
+                    MediaHubSharedLinkRevokedDetails.Encoder.EncodeFields((MediaHubSharedLinkRevokedDetails)value, writer);
                     return;
                 }
                 if (value is NoteAclInviteOnlyDetails)
@@ -17298,6 +17632,24 @@ namespace Dropbox.Api.TeamLog
                     InviteAcceptanceEmailPolicyChangedDetails.Encoder.EncodeFields((InviteAcceptanceEmailPolicyChangedDetails)value, writer);
                     return;
                 }
+                if (value is MediaHubAddingPeoplePolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "media_hub_adding_people_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    MediaHubAddingPeoplePolicyChangedDetails.Encoder.EncodeFields((MediaHubAddingPeoplePolicyChangedDetails)value, writer);
+                    return;
+                }
+                if (value is MediaHubDownloadPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "media_hub_download_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    MediaHubDownloadPolicyChangedDetails.Encoder.EncodeFields((MediaHubDownloadPolicyChangedDetails)value, writer);
+                    return;
+                }
+                if (value is MediaHubLinkSharingPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "media_hub_link_sharing_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    MediaHubLinkSharingPolicyChangedDetails.Encoder.EncodeFields((MediaHubLinkSharingPolicyChangedDetails)value, writer);
+                    return;
+                }
                 if (value is MemberRequestsChangePolicyDetails)
                 {
                     WriteProperty(".tag", "member_requests_change_policy_details", writer, enc.StringEncoder.Instance);
@@ -17350,6 +17702,12 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "microsoft_office_addin_change_policy_details", writer, enc.StringEncoder.Instance);
                     MicrosoftOfficeAddinChangePolicyDetails.Encoder.EncodeFields((MicrosoftOfficeAddinChangePolicyDetails)value, writer);
+                    return;
+                }
+                if (value is MultiTeamIdentityPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "multi_team_identity_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    MultiTeamIdentityPolicyChangedDetails.Encoder.EncodeFields((MultiTeamIdentityPolicyChangedDetails)value, writer);
                     return;
                 }
                 if (value is NetworkControlChangePolicyDetails)
@@ -18282,6 +18640,8 @@ namespace Dropbox.Api.TeamLog
                         return FolderOverviewItemPinnedDetails.Decoder.DecodeFields(reader);
                     case "folder_overview_item_unpinned_details":
                         return FolderOverviewItemUnpinnedDetails.Decoder.DecodeFields(reader);
+                    case "media_hub_file_downloaded_details":
+                        return MediaHubFileDownloadedDetails.Decoder.DecodeFields(reader);
                     case "object_label_added_details":
                         return ObjectLabelAddedDetails.Decoder.DecodeFields(reader);
                     case "object_label_removed_details":
@@ -18614,6 +18974,20 @@ namespace Dropbox.Api.TeamLog
                         return FileTransfersTransferSendDetails.Decoder.DecodeFields(reader);
                     case "file_transfers_transfer_view_details":
                         return FileTransfersTransferViewDetails.Decoder.DecodeFields(reader);
+                    case "media_hub_project_team_add_details":
+                        return MediaHubProjectTeamAddDetails.Decoder.DecodeFields(reader);
+                    case "media_hub_project_team_delete_details":
+                        return MediaHubProjectTeamDeleteDetails.Decoder.DecodeFields(reader);
+                    case "media_hub_project_team_role_changed_details":
+                        return MediaHubProjectTeamRoleChangedDetails.Decoder.DecodeFields(reader);
+                    case "media_hub_shared_link_audience_changed_details":
+                        return MediaHubSharedLinkAudienceChangedDetails.Decoder.DecodeFields(reader);
+                    case "media_hub_shared_link_created_details":
+                        return MediaHubSharedLinkCreatedDetails.Decoder.DecodeFields(reader);
+                    case "media_hub_shared_link_download_setting_changed_details":
+                        return MediaHubSharedLinkDownloadSettingChangedDetails.Decoder.DecodeFields(reader);
+                    case "media_hub_shared_link_revoked_details":
+                        return MediaHubSharedLinkRevokedDetails.Decoder.DecodeFields(reader);
                     case "note_acl_invite_only_details":
                         return NoteAclInviteOnlyDetails.Decoder.DecodeFields(reader);
                     case "note_acl_link_details":
@@ -18986,6 +19360,12 @@ namespace Dropbox.Api.TeamLog
                         return IntegrationPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "invite_acceptance_email_policy_changed_details":
                         return InviteAcceptanceEmailPolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "media_hub_adding_people_policy_changed_details":
+                        return MediaHubAddingPeoplePolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "media_hub_download_policy_changed_details":
+                        return MediaHubDownloadPolicyChangedDetails.Decoder.DecodeFields(reader);
+                    case "media_hub_link_sharing_policy_changed_details":
+                        return MediaHubLinkSharingPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "member_requests_change_policy_details":
                         return MemberRequestsChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "member_send_invite_policy_changed_details":
@@ -19004,6 +19384,8 @@ namespace Dropbox.Api.TeamLog
                         return MicrosoftLoginChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "microsoft_office_addin_change_policy_details":
                         return MicrosoftOfficeAddinChangePolicyDetails.Decoder.DecodeFields(reader);
+                    case "multi_team_identity_policy_changed_details":
+                        return MultiTeamIdentityPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "network_control_change_policy_details":
                         return NetworkControlChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "paper_change_deployment_policy_details":
@@ -32404,6 +32786,96 @@ namespace Dropbox.Api.TeamLog
                 public override FolderOverviewItemUnpinnedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new FolderOverviewItemUnpinnedDetails(global::Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The media hub file downloaded details object</para>
+        /// </summary>
+        public sealed class MediaHubFileDownloadedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubFileDownloadedDetails> Encoder = new MediaHubFileDownloadedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubFileDownloadedDetails> Decoder = new MediaHubFileDownloadedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubFileDownloadedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MediaHubFileDownloadedDetails(global::Dropbox.Api.TeamLog.MediaHubFileDownloadedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubFileDownloadedDetails" /> class.</para>
+            /// </summary>
+            private MediaHubFileDownloadedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MediaHubFileDownloadedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubFileDownloadedDetails" />.</para>
+            /// </summary>
+            private class MediaHubFileDownloadedDetailsEncoder : enc.StructEncoder<MediaHubFileDownloadedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubFileDownloadedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("media_hub_file_downloaded_details", value.Value, writer, global::Dropbox.Api.TeamLog.MediaHubFileDownloadedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubFileDownloadedDetails" />.</para>
+            /// </summary>
+            private class MediaHubFileDownloadedDetailsDecoder : enc.StructDecoder<MediaHubFileDownloadedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubFileDownloadedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubFileDownloadedDetails Create()
+                {
+                    return new MediaHubFileDownloadedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MediaHubFileDownloadedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MediaHubFileDownloadedDetails(global::Dropbox.Api.TeamLog.MediaHubFileDownloadedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -47370,6 +47842,640 @@ namespace Dropbox.Api.TeamLog
                 public override FileTransfersTransferViewDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new FileTransfersTransferViewDetails(global::Dropbox.Api.TeamLog.FileTransfersTransferViewDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The media hub project team add details object</para>
+        /// </summary>
+        public sealed class MediaHubProjectTeamAddDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubProjectTeamAddDetails> Encoder = new MediaHubProjectTeamAddDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubProjectTeamAddDetails> Decoder = new MediaHubProjectTeamAddDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubProjectTeamAddDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MediaHubProjectTeamAddDetails(global::Dropbox.Api.TeamLog.MediaHubProjectTeamAddDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubProjectTeamAddDetails" /> class.</para>
+            /// </summary>
+            private MediaHubProjectTeamAddDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MediaHubProjectTeamAddDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubProjectTeamAddDetails" />.</para>
+            /// </summary>
+            private class MediaHubProjectTeamAddDetailsEncoder : enc.StructEncoder<MediaHubProjectTeamAddDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubProjectTeamAddDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("media_hub_project_team_add_details", value.Value, writer, global::Dropbox.Api.TeamLog.MediaHubProjectTeamAddDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubProjectTeamAddDetails" />.</para>
+            /// </summary>
+            private class MediaHubProjectTeamAddDetailsDecoder : enc.StructDecoder<MediaHubProjectTeamAddDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubProjectTeamAddDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubProjectTeamAddDetails Create()
+                {
+                    return new MediaHubProjectTeamAddDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MediaHubProjectTeamAddDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MediaHubProjectTeamAddDetails(global::Dropbox.Api.TeamLog.MediaHubProjectTeamAddDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The media hub project team delete details object</para>
+        /// </summary>
+        public sealed class MediaHubProjectTeamDeleteDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubProjectTeamDeleteDetails> Encoder = new MediaHubProjectTeamDeleteDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubProjectTeamDeleteDetails> Decoder = new MediaHubProjectTeamDeleteDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubProjectTeamDeleteDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MediaHubProjectTeamDeleteDetails(global::Dropbox.Api.TeamLog.MediaHubProjectTeamDeleteDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubProjectTeamDeleteDetails" /> class.</para>
+            /// </summary>
+            private MediaHubProjectTeamDeleteDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MediaHubProjectTeamDeleteDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubProjectTeamDeleteDetails" />.</para>
+            /// </summary>
+            private class MediaHubProjectTeamDeleteDetailsEncoder : enc.StructEncoder<MediaHubProjectTeamDeleteDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubProjectTeamDeleteDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("media_hub_project_team_delete_details", value.Value, writer, global::Dropbox.Api.TeamLog.MediaHubProjectTeamDeleteDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubProjectTeamDeleteDetails" />.</para>
+            /// </summary>
+            private class MediaHubProjectTeamDeleteDetailsDecoder : enc.StructDecoder<MediaHubProjectTeamDeleteDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubProjectTeamDeleteDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubProjectTeamDeleteDetails Create()
+                {
+                    return new MediaHubProjectTeamDeleteDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MediaHubProjectTeamDeleteDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MediaHubProjectTeamDeleteDetails(global::Dropbox.Api.TeamLog.MediaHubProjectTeamDeleteDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The media hub project team role changed details object</para>
+        /// </summary>
+        public sealed class MediaHubProjectTeamRoleChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubProjectTeamRoleChangedDetails> Encoder = new MediaHubProjectTeamRoleChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubProjectTeamRoleChangedDetails> Decoder = new MediaHubProjectTeamRoleChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubProjectTeamRoleChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MediaHubProjectTeamRoleChangedDetails(global::Dropbox.Api.TeamLog.MediaHubProjectTeamRoleChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubProjectTeamRoleChangedDetails" /> class.</para>
+            /// </summary>
+            private MediaHubProjectTeamRoleChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MediaHubProjectTeamRoleChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubProjectTeamRoleChangedDetails" />.</para>
+            /// </summary>
+            private class MediaHubProjectTeamRoleChangedDetailsEncoder : enc.StructEncoder<MediaHubProjectTeamRoleChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubProjectTeamRoleChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("media_hub_project_team_role_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.MediaHubProjectTeamRoleChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubProjectTeamRoleChangedDetails" />.</para>
+            /// </summary>
+            private class MediaHubProjectTeamRoleChangedDetailsDecoder : enc.StructDecoder<MediaHubProjectTeamRoleChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubProjectTeamRoleChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubProjectTeamRoleChangedDetails Create()
+                {
+                    return new MediaHubProjectTeamRoleChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MediaHubProjectTeamRoleChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MediaHubProjectTeamRoleChangedDetails(global::Dropbox.Api.TeamLog.MediaHubProjectTeamRoleChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The media hub shared link audience changed details object</para>
+        /// </summary>
+        public sealed class MediaHubSharedLinkAudienceChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubSharedLinkAudienceChangedDetails> Encoder = new MediaHubSharedLinkAudienceChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubSharedLinkAudienceChangedDetails> Decoder = new MediaHubSharedLinkAudienceChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubSharedLinkAudienceChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MediaHubSharedLinkAudienceChangedDetails(global::Dropbox.Api.TeamLog.MediaHubSharedLinkAudienceChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubSharedLinkAudienceChangedDetails" /> class.</para>
+            /// </summary>
+            private MediaHubSharedLinkAudienceChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MediaHubSharedLinkAudienceChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubSharedLinkAudienceChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkAudienceChangedDetailsEncoder : enc.StructEncoder<MediaHubSharedLinkAudienceChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubSharedLinkAudienceChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("media_hub_shared_link_audience_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.MediaHubSharedLinkAudienceChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubSharedLinkAudienceChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkAudienceChangedDetailsDecoder : enc.StructDecoder<MediaHubSharedLinkAudienceChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubSharedLinkAudienceChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubSharedLinkAudienceChangedDetails Create()
+                {
+                    return new MediaHubSharedLinkAudienceChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MediaHubSharedLinkAudienceChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MediaHubSharedLinkAudienceChangedDetails(global::Dropbox.Api.TeamLog.MediaHubSharedLinkAudienceChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The media hub shared link created details object</para>
+        /// </summary>
+        public sealed class MediaHubSharedLinkCreatedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubSharedLinkCreatedDetails> Encoder = new MediaHubSharedLinkCreatedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubSharedLinkCreatedDetails> Decoder = new MediaHubSharedLinkCreatedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubSharedLinkCreatedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MediaHubSharedLinkCreatedDetails(global::Dropbox.Api.TeamLog.MediaHubSharedLinkCreatedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubSharedLinkCreatedDetails" /> class.</para>
+            /// </summary>
+            private MediaHubSharedLinkCreatedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MediaHubSharedLinkCreatedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubSharedLinkCreatedDetails" />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkCreatedDetailsEncoder : enc.StructEncoder<MediaHubSharedLinkCreatedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubSharedLinkCreatedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("media_hub_shared_link_created_details", value.Value, writer, global::Dropbox.Api.TeamLog.MediaHubSharedLinkCreatedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubSharedLinkCreatedDetails" />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkCreatedDetailsDecoder : enc.StructDecoder<MediaHubSharedLinkCreatedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubSharedLinkCreatedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubSharedLinkCreatedDetails Create()
+                {
+                    return new MediaHubSharedLinkCreatedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MediaHubSharedLinkCreatedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MediaHubSharedLinkCreatedDetails(global::Dropbox.Api.TeamLog.MediaHubSharedLinkCreatedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The media hub shared link download setting changed details object</para>
+        /// </summary>
+        public sealed class MediaHubSharedLinkDownloadSettingChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubSharedLinkDownloadSettingChangedDetails> Encoder = new MediaHubSharedLinkDownloadSettingChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubSharedLinkDownloadSettingChangedDetails> Decoder = new MediaHubSharedLinkDownloadSettingChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubSharedLinkDownloadSettingChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MediaHubSharedLinkDownloadSettingChangedDetails(global::Dropbox.Api.TeamLog.MediaHubSharedLinkDownloadSettingChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubSharedLinkDownloadSettingChangedDetails" /> class.</para>
+            /// </summary>
+            private MediaHubSharedLinkDownloadSettingChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MediaHubSharedLinkDownloadSettingChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubSharedLinkDownloadSettingChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkDownloadSettingChangedDetailsEncoder : enc.StructEncoder<MediaHubSharedLinkDownloadSettingChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubSharedLinkDownloadSettingChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("media_hub_shared_link_download_setting_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.MediaHubSharedLinkDownloadSettingChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubSharedLinkDownloadSettingChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkDownloadSettingChangedDetailsDecoder : enc.StructDecoder<MediaHubSharedLinkDownloadSettingChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubSharedLinkDownloadSettingChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubSharedLinkDownloadSettingChangedDetails Create()
+                {
+                    return new MediaHubSharedLinkDownloadSettingChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MediaHubSharedLinkDownloadSettingChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MediaHubSharedLinkDownloadSettingChangedDetails(global::Dropbox.Api.TeamLog.MediaHubSharedLinkDownloadSettingChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The media hub shared link revoked details object</para>
+        /// </summary>
+        public sealed class MediaHubSharedLinkRevokedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubSharedLinkRevokedDetails> Encoder = new MediaHubSharedLinkRevokedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubSharedLinkRevokedDetails> Decoder = new MediaHubSharedLinkRevokedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubSharedLinkRevokedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MediaHubSharedLinkRevokedDetails(global::Dropbox.Api.TeamLog.MediaHubSharedLinkRevokedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubSharedLinkRevokedDetails" /> class.</para>
+            /// </summary>
+            private MediaHubSharedLinkRevokedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MediaHubSharedLinkRevokedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubSharedLinkRevokedDetails" />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkRevokedDetailsEncoder : enc.StructEncoder<MediaHubSharedLinkRevokedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubSharedLinkRevokedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("media_hub_shared_link_revoked_details", value.Value, writer, global::Dropbox.Api.TeamLog.MediaHubSharedLinkRevokedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubSharedLinkRevokedDetails" />.</para>
+            /// </summary>
+            private class MediaHubSharedLinkRevokedDetailsDecoder : enc.StructDecoder<MediaHubSharedLinkRevokedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubSharedLinkRevokedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubSharedLinkRevokedDetails Create()
+                {
+                    return new MediaHubSharedLinkRevokedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MediaHubSharedLinkRevokedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MediaHubSharedLinkRevokedDetails(global::Dropbox.Api.TeamLog.MediaHubSharedLinkRevokedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -64203,6 +65309,280 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The media hub adding people policy changed details object</para>
+        /// </summary>
+        public sealed class MediaHubAddingPeoplePolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubAddingPeoplePolicyChangedDetails> Encoder = new MediaHubAddingPeoplePolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubAddingPeoplePolicyChangedDetails> Decoder = new MediaHubAddingPeoplePolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubAddingPeoplePolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MediaHubAddingPeoplePolicyChangedDetails(global::Dropbox.Api.TeamLog.MediaHubAddingPeoplePolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubAddingPeoplePolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private MediaHubAddingPeoplePolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MediaHubAddingPeoplePolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubAddingPeoplePolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class MediaHubAddingPeoplePolicyChangedDetailsEncoder : enc.StructEncoder<MediaHubAddingPeoplePolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubAddingPeoplePolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("media_hub_adding_people_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.MediaHubAddingPeoplePolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubAddingPeoplePolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class MediaHubAddingPeoplePolicyChangedDetailsDecoder : enc.StructDecoder<MediaHubAddingPeoplePolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubAddingPeoplePolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubAddingPeoplePolicyChangedDetails Create()
+                {
+                    return new MediaHubAddingPeoplePolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MediaHubAddingPeoplePolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MediaHubAddingPeoplePolicyChangedDetails(global::Dropbox.Api.TeamLog.MediaHubAddingPeoplePolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The media hub download policy changed details object</para>
+        /// </summary>
+        public sealed class MediaHubDownloadPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubDownloadPolicyChangedDetails> Encoder = new MediaHubDownloadPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubDownloadPolicyChangedDetails> Decoder = new MediaHubDownloadPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubDownloadPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MediaHubDownloadPolicyChangedDetails(global::Dropbox.Api.TeamLog.MediaHubDownloadPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubDownloadPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private MediaHubDownloadPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MediaHubDownloadPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubDownloadPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class MediaHubDownloadPolicyChangedDetailsEncoder : enc.StructEncoder<MediaHubDownloadPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubDownloadPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("media_hub_download_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.MediaHubDownloadPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubDownloadPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class MediaHubDownloadPolicyChangedDetailsDecoder : enc.StructDecoder<MediaHubDownloadPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubDownloadPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubDownloadPolicyChangedDetails Create()
+                {
+                    return new MediaHubDownloadPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MediaHubDownloadPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MediaHubDownloadPolicyChangedDetails(global::Dropbox.Api.TeamLog.MediaHubDownloadPolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The media hub link sharing policy changed details object</para>
+        /// </summary>
+        public sealed class MediaHubLinkSharingPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MediaHubLinkSharingPolicyChangedDetails> Encoder = new MediaHubLinkSharingPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MediaHubLinkSharingPolicyChangedDetails> Decoder = new MediaHubLinkSharingPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubLinkSharingPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MediaHubLinkSharingPolicyChangedDetails(global::Dropbox.Api.TeamLog.MediaHubLinkSharingPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MediaHubLinkSharingPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private MediaHubLinkSharingPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MediaHubLinkSharingPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MediaHubLinkSharingPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class MediaHubLinkSharingPolicyChangedDetailsEncoder : enc.StructEncoder<MediaHubLinkSharingPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MediaHubLinkSharingPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("media_hub_link_sharing_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.MediaHubLinkSharingPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MediaHubLinkSharingPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class MediaHubLinkSharingPolicyChangedDetailsDecoder : enc.StructDecoder<MediaHubLinkSharingPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MediaHubLinkSharingPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MediaHubLinkSharingPolicyChangedDetails Create()
+                {
+                    return new MediaHubLinkSharingPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MediaHubLinkSharingPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MediaHubLinkSharingPolicyChangedDetails(global::Dropbox.Api.TeamLog.MediaHubLinkSharingPolicyChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The member requests change policy details object</para>
         /// </summary>
         public sealed class MemberRequestsChangePolicyDetails : EventDetails
@@ -65012,6 +66392,96 @@ namespace Dropbox.Api.TeamLog
                 public override MicrosoftOfficeAddinChangePolicyDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new MicrosoftOfficeAddinChangePolicyDetails(global::Dropbox.Api.TeamLog.MicrosoftOfficeAddinChangePolicyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The multi team identity policy changed details object</para>
+        /// </summary>
+        public sealed class MultiTeamIdentityPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MultiTeamIdentityPolicyChangedDetails> Encoder = new MultiTeamIdentityPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MultiTeamIdentityPolicyChangedDetails> Decoder = new MultiTeamIdentityPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MultiTeamIdentityPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MultiTeamIdentityPolicyChangedDetails(global::Dropbox.Api.TeamLog.MultiTeamIdentityPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MultiTeamIdentityPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private MultiTeamIdentityPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MultiTeamIdentityPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MultiTeamIdentityPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class MultiTeamIdentityPolicyChangedDetailsEncoder : enc.StructEncoder<MultiTeamIdentityPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MultiTeamIdentityPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("multi_team_identity_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.MultiTeamIdentityPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MultiTeamIdentityPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class MultiTeamIdentityPolicyChangedDetailsDecoder : enc.StructDecoder<MultiTeamIdentityPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MultiTeamIdentityPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MultiTeamIdentityPolicyChangedDetails Create()
+                {
+                    return new MultiTeamIdentityPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MultiTeamIdentityPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MultiTeamIdentityPolicyChangedDetails(global::Dropbox.Api.TeamLog.MultiTeamIdentityPolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 

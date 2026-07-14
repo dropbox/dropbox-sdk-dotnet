@@ -44,7 +44,7 @@ namespace Dropbox.Api.TeamLog
         /// category shouldn't be provided together with event_type.</param>
         /// <param name="eventType">Filter the returned events to a single event type. Note
         /// that event_type shouldn't be provided together with category.</param>
-        public GetTeamEventsArg(uint limit = 1000,
+        public GetTeamEventsArg(uint limit = 1000U,
                                 string accountId = null,
                                 global::Dropbox.Api.TeamCommon.TimeRange time = null,
                                 EventCategory category = null,
@@ -87,7 +87,7 @@ namespace Dropbox.Api.TeamLog
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public GetTeamEventsArg()
         {
-            this.Limit = 1000;
+            this.Limit = 1000U;
         }
 
         /// <summary>

@@ -2726,7 +2726,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         public t.Task<GetTemporaryUploadLinkResult> GetTemporaryUploadLinkAsync(CommitInfo commitInfo,
-                                                                                double duration = 14400.0)
+                                                                                double duration = 14400.0D)
         {
             var getTemporaryUploadLinkArg = new GetTemporaryUploadLinkArg(commitInfo,
                                                                           duration);
@@ -2749,7 +2749,7 @@ namespace Dropbox.Api.Files.Routes
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginGetTemporaryUploadLink(CommitInfo commitInfo,
-                                                            double duration = 14400.0,
+                                                            double duration = 14400.0D,
                                                             sys.AsyncCallback callback = null,
                                                             object callbackState = null)
         {
@@ -2821,7 +2821,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
-        /// <param name="quality">Quality of the thumbnail image.</param>
+        /// <param name="quality">Field is only returned for "internal" callers. Quality of the
+        /// thumbnail image.</param>
         /// <param name="excludeMediaInfo">Normally, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
         /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
@@ -2859,7 +2860,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
-        /// <param name="quality">Quality of the thumbnail image.</param>
+        /// <param name="quality">Field is only returned for "internal" callers. Quality of the
+        /// thumbnail image.</param>
         /// <param name="excludeMediaInfo">Normally, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
         /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
@@ -2956,7 +2958,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
-        /// <param name="quality">Quality of the thumbnail image.</param>
+        /// <param name="quality">Field is only returned for "internal" callers. Quality of the
+        /// thumbnail image.</param>
         /// <param name="excludeMediaInfo">Normally, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
         /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
@@ -2996,7 +2999,8 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
-        /// <param name="quality">Quality of the thumbnail image.</param>
+        /// <param name="quality">Field is only returned for "internal" callers. Quality of the
+        /// thumbnail image.</param>
         /// <param name="excludeMediaInfo">Normally, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
         /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
@@ -3743,7 +3747,7 @@ namespace Dropbox.Api.Files.Routes
         /// processing the request; This will contain a <see
         /// cref="ListFolderLongpollError"/>.</exception>
         public t.Task<ListFolderLongpollResult> ListFolderLongpollAsync(string cursor,
-                                                                        ulong timeout = 30)
+                                                                        ulong timeout = 30UL)
         {
             var listFolderLongpollArg = new ListFolderLongpollArg(cursor,
                                                                   timeout);
@@ -3771,7 +3775,7 @@ namespace Dropbox.Api.Files.Routes
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListFolderLongpoll(string cursor,
-                                                        ulong timeout = 30,
+                                                        ulong timeout = 30UL,
                                                         sys.AsyncCallback callback = null,
                                                         object callbackState = null)
         {
@@ -3866,7 +3870,7 @@ namespace Dropbox.Api.Files.Routes
         /// cref="ListRevisionsError"/>.</exception>
         public t.Task<ListRevisionsResult> ListRevisionsAsync(string path,
                                                               ListRevisionsMode mode = null,
-                                                              ulong limit = 10,
+                                                              ulong limit = 10UL,
                                                               string beforeRev = null,
                                                               bool includeRestorableInfo = false)
         {
@@ -3899,7 +3903,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginListRevisions(string path,
                                                    ListRevisionsMode mode = null,
-                                                   ulong limit = 10,
+                                                   ulong limit = 10UL,
                                                    string beforeRev = null,
                                                    bool includeRestorableInfo = false,
                                                    sys.AsyncCallback callback = null,
@@ -5615,8 +5619,8 @@ namespace Dropbox.Api.Files.Routes
         [sys.Obsolete("This function is deprecated")]
         public t.Task<SearchResult> SearchAsync(string path,
                                                 string query,
-                                                ulong start = 0,
-                                                ulong maxResults = 100,
+                                                ulong start = 0UL,
+                                                ulong maxResults = 100UL,
                                                 SearchMode mode = null)
         {
             var searchArg = new SearchArg(path,
@@ -5651,8 +5655,8 @@ namespace Dropbox.Api.Files.Routes
         [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginSearch(string path,
                                             string query,
-                                            ulong start = 0,
-                                            ulong maxResults = 100,
+                                            ulong start = 0UL,
+                                            ulong maxResults = 100UL,
                                             SearchMode mode = null,
                                             sys.AsyncCallback callback = null,
                                             object callbackState = null)

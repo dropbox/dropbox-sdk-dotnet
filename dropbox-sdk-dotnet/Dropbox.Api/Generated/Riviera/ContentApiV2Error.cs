@@ -192,6 +192,50 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is NotFoundError</para>
+        /// </summary>
+        public bool IsNotFoundError
+        {
+            get
+            {
+                return this is NotFoundError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a NotFoundError, or <c>null</c>.</para>
+        /// </summary>
+        public NotFoundError AsNotFoundError
+        {
+            get
+            {
+                return this as NotFoundError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is IsAFolderError</para>
+        /// </summary>
+        public bool IsIsAFolderError
+        {
+            get
+            {
+                return this is IsAFolderError;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a IsAFolderError, or <c>null</c>.</para>
+        /// </summary>
+        public IsAFolderError AsIsAFolderError
+        {
+            get
+            {
+                return this as IsAFolderError;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -269,6 +313,18 @@ namespace Dropbox.Api.Riviera
                     LimitExceededError.Encoder.EncodeFields((LimitExceededError)value, writer);
                     return;
                 }
+                if (value is NotFoundError)
+                {
+                    WriteProperty(".tag", "not_found_error", writer, enc.StringEncoder.Instance);
+                    NotFoundError.Encoder.EncodeFields((NotFoundError)value, writer);
+                    return;
+                }
+                if (value is IsAFolderError)
+                {
+                    WriteProperty(".tag", "is_a_folder_error", writer, enc.StringEncoder.Instance);
+                    IsAFolderError.Encoder.EncodeFields((IsAFolderError)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -321,6 +377,10 @@ namespace Dropbox.Api.Riviera
                         return SharedLinkPasswordProtected.Decoder.DecodeFields(reader);
                     case "limit_exceeded_error":
                         return LimitExceededError.Decoder.DecodeFields(reader);
+                    case "not_found_error":
+                        return NotFoundError.Decoder.DecodeFields(reader);
+                    case "is_a_folder_error":
+                        return IsAFolderError.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -889,6 +949,146 @@ namespace Dropbox.Api.Riviera
                 protected override LimitExceededError Create()
                 {
                     return LimitExceededError.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The referenced file does not exist or is not accessible.</para>
+        /// </summary>
+        public sealed class NotFoundError : ContentApiV2Error
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<NotFoundError> Encoder = new NotFoundErrorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<NotFoundError> Decoder = new NotFoundErrorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="NotFoundError" />
+            /// class.</para>
+            /// </summary>
+            private NotFoundError()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of NotFoundError</para>
+            /// </summary>
+            public static readonly NotFoundError Instance = new NotFoundError();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="NotFoundError" />.</para>
+            /// </summary>
+            private class NotFoundErrorEncoder : enc.StructEncoder<NotFoundError>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(NotFoundError value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="NotFoundError" />.</para>
+            /// </summary>
+            private class NotFoundErrorDecoder : enc.StructDecoder<NotFoundError>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="NotFoundError" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override NotFoundError Create()
+                {
+                    return NotFoundError.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The target is a folder, not a file.</para>
+        /// </summary>
+        public sealed class IsAFolderError : ContentApiV2Error
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<IsAFolderError> Encoder = new IsAFolderErrorEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<IsAFolderError> Decoder = new IsAFolderErrorDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="IsAFolderError" />
+            /// class.</para>
+            /// </summary>
+            private IsAFolderError()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of IsAFolderError</para>
+            /// </summary>
+            public static readonly IsAFolderError Instance = new IsAFolderError();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="IsAFolderError" />.</para>
+            /// </summary>
+            private class IsAFolderErrorEncoder : enc.StructEncoder<IsAFolderError>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(IsAFolderError value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="IsAFolderError" />.</para>
+            /// </summary>
+            private class IsAFolderErrorDecoder : enc.StructDecoder<IsAFolderError>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="IsAFolderError" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override IsAFolderError Create()
+                {
+                    return IsAFolderError.Instance;
                 }
 
             }

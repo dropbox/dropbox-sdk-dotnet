@@ -997,7 +997,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="limit">Number of results to return per call.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
-        public t.Task<GroupsListResult> GroupsListAsync(uint limit = 1000)
+        public t.Task<GroupsListResult> GroupsListAsync(uint limit = 1000U)
         {
             var groupsListArg = new GroupsListArg(limit);
 
@@ -1013,7 +1013,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginGroupsList(uint limit = 1000,
+        public sys.IAsyncResult BeginGroupsList(uint limit = 1000U,
                                                 sys.AsyncCallback callback = null,
                                                 object callbackState = null)
         {
@@ -1281,7 +1281,7 @@ namespace Dropbox.Api.Team.Routes
         /// processing the request; This will contain a <see
         /// cref="GroupSelectorError"/>.</exception>
         public t.Task<GroupsMembersListResult> GroupsMembersListAsync(GroupSelector @group,
-                                                                      uint limit = 1000)
+                                                                      uint limit = 1000U)
         {
             var groupsMembersListArg = new GroupsMembersListArg(@group,
                                                                 limit);
@@ -1300,7 +1300,7 @@ namespace Dropbox.Api.Team.Routes
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginGroupsMembersList(GroupSelector @group,
-                                                       uint limit = 1000,
+                                                       uint limit = 1000U,
                                                        sys.AsyncCallback callback = null,
                                                        object callbackState = null)
         {
@@ -3034,7 +3034,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="ExcludedUsersListError"/>.</exception>
-        public t.Task<ExcludedUsersListResult> MemberSpaceLimitsExcludedUsersListAsync(uint limit = 1000)
+        public t.Task<ExcludedUsersListResult> MemberSpaceLimitsExcludedUsersListAsync(uint limit = 1000U)
         {
             var excludedUsersListArg = new ExcludedUsersListArg(limit);
 
@@ -3051,7 +3051,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMemberSpaceLimitsExcludedUsersList(uint limit = 1000,
+        public sys.IAsyncResult BeginMemberSpaceLimitsExcludedUsersList(uint limit = 1000U,
                                                                         sys.AsyncCallback callback = null,
                                                                         object callbackState = null)
         {
@@ -4454,7 +4454,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersListError"/>.</exception>
-        public t.Task<MembersListResult> MembersListAsync(uint limit = 1000,
+        public t.Task<MembersListResult> MembersListAsync(uint limit = 1000U,
                                                           bool includeRemoved = false)
         {
             var membersListArg = new MembersListArg(limit,
@@ -4473,7 +4473,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersList(uint limit = 1000,
+        public sys.IAsyncResult BeginMembersList(uint limit = 1000U,
                                                  bool includeRemoved = false,
                                                  sys.AsyncCallback callback = null,
                                                  object callbackState = null)
@@ -4545,7 +4545,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="MembersListError"/>.</exception>
-        public t.Task<MembersListV2Result> MembersListV2Async(uint limit = 1000,
+        public t.Task<MembersListV2Result> MembersListV2Async(uint limit = 1000U,
                                                               bool includeRemoved = false)
         {
             var membersListArg = new MembersListArg(limit,
@@ -4564,7 +4564,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersListV2(uint limit = 1000,
+        public sys.IAsyncResult BeginMembersListV2(uint limit = 1000U,
                                                    bool includeRemoved = false,
                                                    sys.AsyncCallback callback = null,
                                                    object callbackState = null)
@@ -6506,7 +6506,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamNamespacesListError"/>.</exception>
-        public t.Task<TeamNamespacesListResult> NamespacesListAsync(uint limit = 1000)
+        public t.Task<TeamNamespacesListResult> NamespacesListAsync(uint limit = 1000U)
         {
             var teamNamespacesListArg = new TeamNamespacesListArg(limit);
 
@@ -6523,7 +6523,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginNamespacesList(uint limit = 1000,
+        public sys.IAsyncResult BeginNamespacesList(uint limit = 1000U,
                                                     sys.AsyncCallback callback = null,
                                                     object callbackState = null)
         {
@@ -7404,7 +7404,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="SharingAllowlistListError"/>.</exception>
-        public t.Task<SharingAllowlistListResponse> SharingAllowlistListAsync(uint limit = 1000)
+        public t.Task<SharingAllowlistListResponse> SharingAllowlistListAsync(uint limit = 1000U)
         {
             var sharingAllowlistListArg = new SharingAllowlistListArg(limit);
 
@@ -7420,7 +7420,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginSharingAllowlistList(uint limit = 1000,
+        public sys.IAsyncResult BeginSharingAllowlistList(uint limit = 1000U,
                                                           sys.AsyncCallback callback = null,
                                                           object callbackState = null)
         {
@@ -8149,7 +8149,7 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="TeamFolderListError"/>.</exception>
-        public t.Task<TeamFolderListResult> TeamFolderListAsync(uint limit = 1000)
+        public t.Task<TeamFolderListResult> TeamFolderListAsync(uint limit = 1000U)
         {
             var teamFolderListArg = new TeamFolderListArg(limit);
 
@@ -8165,7 +8165,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginTeamFolderList(uint limit = 1000,
+        public sys.IAsyncResult BeginTeamFolderList(uint limit = 1000U,
                                                     sys.AsyncCallback callback = null,
                                                     object callbackState = null)
         {

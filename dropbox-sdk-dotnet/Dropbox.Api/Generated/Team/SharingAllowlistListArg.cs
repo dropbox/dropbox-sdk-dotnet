@@ -32,7 +32,7 @@ namespace Dropbox.Api.Team
         /// class.</para>
         /// </summary>
         /// <param name="limit">The number of entries to fetch at one time.</param>
-        public SharingAllowlistListArg(uint limit = 1000)
+        public SharingAllowlistListArg(uint limit = 1000U)
         {
             if (limit < 1U)
             {
@@ -55,7 +55,7 @@ namespace Dropbox.Api.Team
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public SharingAllowlistListArg()
         {
-            this.Limit = 1000;
+            this.Limit = 1000U;
         }
 
         /// <summary>
