@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.yml"
+        ],
+        "src": "gh-pages/obj/api",
+        "dest": "gh-pages/obj/api"
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default"
+    ],
+    "globalMetadata": {
+      "_appName": "Dropbox .NET SDK",
+      "_appTitle": "Dropbox .NET SDK API Reference",
+      "_appFooter": "Dropbox .NET SDK",
+      "_appLogoPath": "images/icon.png",
+      "_enableSearch": false
+    }
+  }
+}

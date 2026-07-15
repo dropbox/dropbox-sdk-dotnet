@@ -45,6 +45,7 @@ App_Data/
 
 ## Generated docs
 /doc/Help
+/_site/
 
 ## App Packages
 AppPackages/
