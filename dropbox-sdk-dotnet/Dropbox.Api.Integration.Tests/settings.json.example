@@ -1,7 +1,8 @@
 {
     "appKey": "",
     "appSecret": "",
-    "userAccessToken": "",
     "userRefreshToken": "",
-    "teamAccessToken": ""
+    "teamAppKey": "",
+    "teamAppSecret": "",
+    "teamRefreshToken": ""
 }

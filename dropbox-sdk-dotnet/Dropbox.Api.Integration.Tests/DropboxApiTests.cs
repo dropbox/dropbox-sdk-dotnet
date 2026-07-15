@@ -84,11 +84,13 @@ namespace Dropbox.Api.Tests
             appSecret = config["appSecret"];
 
             userRefreshToken = config["userRefreshToken"];
-            userAccessToken = config["userAccessToken"];
+            userAccessToken = GetAccessTokenFromRefreshToken(userRefreshToken, appKey, appSecret);
             client = new DropboxClient(userAccessToken);
 
-            var teamToken = config["teamAccessToken"];
-            teamClient = new DropboxTeamClient(teamToken);
+            var teamRefreshToken = config["teamRefreshToken"];
+            var teamAppKey = config["teamAppKey"];
+            var teamAppSecret = config["teamAppSecret"];
+            teamClient = new DropboxTeamClient(teamRefreshToken, teamAppKey, teamAppSecret);
 
             appClient = new DropboxAppClient(appKey, appSecret);
         }
@@ -737,6 +739,36 @@ namespace Dropbox.Api.Tests
         {
             var buffer = Encoding.UTF8.GetBytes(content);
             return new MemoryStream(buffer);
+        }
+
+        /// <summary>
+        /// Exchanges a refresh token for a short-lived access token so tests do not
+        /// need a stored access token.
+        /// </summary>
+        /// <param name="refreshToken">The OAuth2 refresh token.</param>
+        /// <param name="key">The app key.</param>
+        /// <param name="secret">The app secret.</param>
+        /// <returns>A fresh OAuth2 access token.</returns>
+        private static string GetAccessTokenFromRefreshToken(string refreshToken, string key, string secret)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                var parameters = new Dictionary<string, string>
+                {
+                    { "grant_type", "refresh_token" },
+                    { "refresh_token", refreshToken },
+                    { "client_id", key },
+                    { "client_secret", secret },
+                };
+
+                var response = httpClient.PostAsync(
+                    "https://api.dropbox.com/oauth2/token",
+                    new FormUrlEncodedContent(parameters)).Result;
+                response.EnsureSuccessStatusCode();
+
+                var json = Newtonsoft.Json.Linq.JObject.Parse(response.Content.ReadAsStringAsync().Result);
+                return json["access_token"].ToString();
+            }
         }
     }
 }

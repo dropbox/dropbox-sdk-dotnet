@@ -79,33 +79,29 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::082972943155:role/oidc-github-dropbox-dropbox-sdk-dotnet-repo
           aws-region: us-west-2
-      # The integration credentials are stored as a single JSON secret; with
-      # parse-json-secrets each JSON key is exposed as env var CREDS_<KEY>
-      # (e.g. CREDS_LEGACY_APP_KEY). The Codecov token is a plain-string secret
-      # in the same fetch.
+      # The integration credentials are shared by the SDK repositories as a
+      # single JSON secret. With parse-json-secrets each JSON key is exposed as
+      # an env var named CREDS_<KEY> (e.g. CREDS_SCOPED_USER_CLIENT_ID).
       - name: Get integration credentials from AWS Secrets Manager
         uses: aws-actions/aws-secretsmanager-get-secrets@v3
         with:
           secret-ids: |
-            CREDS,dotnet-integration-test-creds
-            CODECOV_TOKEN,codecov-token-dropbox-sdk-dotnet
+            CREDS,api-sdk-integration-test-creds
           parse-json-secrets: true
-      - name: Test Legacy User
+      - name: Get Codecov token from AWS Secrets Manager
+        uses: aws-actions/aws-secretsmanager-get-secrets@v3
+        with:
+          secret-ids: |
+            CODECOV_TOKEN,codecov-token-dropbox-sdk-dotnet
+          parse-json-secrets: false
+      - name: Test Scoped User and Team
         env:
-          DROPBOX_INTEGRATION_appKey: ${{ env.CREDS_LEGACY_APP_KEY }}
-          DROPBOX_INTEGRATION_appSecret: ${{ env.CREDS_LEGACY_APP_SECRET }}
-          DROPBOX_INTEGRATION_userAccessToken: ${{ env.CREDS_LEGACY_APP_ACCESS_TOKEN }}
-          DROPBOX_INTEGRATION_userRefreshToken: ${{ env.CREDS_LEGACY_APP_REFRESH_TOKEN }}
-          DROPBOX_INTEGRATION_teamAccessToken: ${{ env.CREDS_TEAM_APP_ACCESS_TOKEN }}
-        run: |
-          dotnet test dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests --collect:"XPlat Code Coverage" -- 'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
-      - name: Test Scoped User
-        env:
-          DROPBOX_INTEGRATION_appKey: ${{ env.CREDS_SCOPED_APP_KEY }}
-          DROPBOX_INTEGRATION_appSecret: ${{ env.CREDS_SCOPED_APP_SECRET }}
-          DROPBOX_INTEGRATION_userAccessToken: ${{ env.CREDS_SCOPED_APP_ACCESS_TOKEN }}
-          DROPBOX_INTEGRATION_userRefreshToken: ${{ env.CREDS_SCOPED_APP_REFRESH_TOKEN }}
-          DROPBOX_INTEGRATION_teamAccessToken: ${{ env.CREDS_TEAM_APP_ACCESS_TOKEN }}
+          DROPBOX_INTEGRATION_appKey: ${{ env.CREDS_SCOPED_USER_CLIENT_ID }}
+          DROPBOX_INTEGRATION_appSecret: ${{ env.CREDS_SCOPED_USER_CLIENT_SECRET }}
+          DROPBOX_INTEGRATION_userRefreshToken: ${{ env.CREDS_SCOPED_USER_REFRESH_TOKEN }}
+          DROPBOX_INTEGRATION_teamAppKey: ${{ env.CREDS_SCOPED_TEAM_CLIENT_ID }}
+          DROPBOX_INTEGRATION_teamAppSecret: ${{ env.CREDS_SCOPED_TEAM_CLIENT_SECRET }}
+          DROPBOX_INTEGRATION_teamRefreshToken: ${{ env.CREDS_SCOPED_TEAM_REFRESH_TOKEN }}
         run: |
           dotnet test dropbox-sdk-dotnet/Dropbox.Api.Integration.Tests --collect:"XPlat Code Coverage" -- 'DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Generated/**/*.cs'
       - name: Publish Coverage
