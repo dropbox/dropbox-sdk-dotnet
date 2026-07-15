@@ -1,0 +1,210 @@
+name: Documentation
+
+on:
+  push:
+    branches:
+      - main
+  release:
+    types: [created]
+  workflow_dispatch:
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: |
+            8.x
+            10.x
+      - name: Restore tools and SDK dependencies
+        run: |
+          dotnet tool restore
+          dotnet restore dropbox-sdk-dotnet/Dropbox.Api
+      - name: Publish SDK documentation inputs
+        run: |
+          output="dropbox-sdk-dotnet/Dropbox.Api/bin/Release/netstandard2.0"
+          dotnet publish dropbox-sdk-dotnet/Dropbox.Api --configuration Release --no-restore --output "$output"
+          ref_dir=$(find "$HOME/.nuget/packages/netstandard.library" -path '*/build/netstandard2.0/ref' -type d -print -quit)
+          test -n "$ref_dir"
+          mkdir -p "$output/docfx-ref"
+          cp "$ref_dir"/*.dll "$output/docfx-ref/"
+          cp "$ref_dir"/*.dll "$output/"
+          runtime_ref_dir=$(find /usr/share/dotnet/packs/Microsoft.NETCore.App.Ref -path '*/ref/net10.0' -type d -print -quit)
+          test -n "$runtime_ref_dir"
+          cp "$runtime_ref_dir/mscorlib.dll" "$output/docfx-ref/"
+          cp "$runtime_ref_dir/mscorlib.dll" "$output/"
+      - name: Generate API metadata
+        run: dotnet "$HOME/.nuget/packages/docfx/2.78.5/tools/net10.0/any/docfx.dll" metadata docfx.json
+      - name: Upload API metadata
+        uses: actions/upload-artifact@v7
+        with:
+          name: docfx-metadata
+          path: gh-pages/obj/api
+          if-no-files-found: error
+
+  build-api:
+    needs: prepare
+    strategy:
+      fail-fast: false
+      matrix:
+        partition: [0, 1, 2, 3, 4]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.x
+      - name: Restore DocFX tool
+        run: dotnet tool restore
+      - name: Download API metadata
+        uses: actions/download-artifact@v8
+        with:
+          name: docfx-metadata
+          path: gh-pages/obj/api
+      - name: Select API partition
+        shell: bash
+        env:
+          PARTITION: ${{ matrix.partition }}
+        run: |
+          set -euo pipefail
+          mkdir -p partition/gh-pages/obj/api
+          case "$PARTITION" in
+            0) e_half=0 ;;
+            1) patterns=(
+              "Dropbox.Api.TeamLog.A*.yml" "Dropbox.Api.TeamLog.B*.yml"
+              "Dropbox.Api.TeamLog.C*.yml" "Dropbox.Api.TeamLog.D*.yml"
+              "Dropbox.Api.TeamLog.F*.yml" "Dropbox.Api.TeamLog.G*.yml"
+              "Dropbox.Api.TeamLog.I*.yml" "Dropbox.Api.TeamLog.J*.yml"
+              "Dropbox.Api.TeamLog.L*.yml" "Dropbox.Api.TeamLog.M*.yml"
+            ) ;;
+            2) patterns=(
+              "Dropbox.Api.TeamLog.N*.yml" "Dropbox.Api.TeamLog.O*.yml"
+              "Dropbox.Api.TeamLog.P*.yml" "Dropbox.Api.TeamLog.Q*.yml"
+              "Dropbox.Api.TeamLog.R*.yml" "Dropbox.Api.TeamLog.S*.yml"
+              "Dropbox.Api.TeamLog.T*.yml" "Dropbox.Api.TeamLog.U*.yml"
+              "Dropbox.Api.TeamLog.V*.yml" "Dropbox.Api.TeamLog.W*.yml"
+            ) ;;
+            3) ;;
+            4) e_half=1 ;;
+          esac
+          if [[ "$PARTITION" == 0 || "$PARTITION" == 4 ]]; then
+            index=0
+            while IFS= read -r file; do
+              if (( index % 2 == e_half )); then
+                cp "$file" partition/gh-pages/obj/api/
+              fi
+              index=$((index + 1))
+            done < <(find gh-pages/obj/api -maxdepth 1 -type f -name 'Dropbox.Api.TeamLog.E*.yml' -print | sort)
+          elif [[ "$PARTITION" == 3 ]]; then
+            find gh-pages/obj/api -maxdepth 1 -type f -name '*.yml' ! -name 'toc.yml' ! -name 'Dropbox.Api.TeamLog.yml' ! -name 'Dropbox.Api.TeamLog.*.yml' -exec cp {} partition/gh-pages/obj/api/ \;
+            cp gh-pages/obj/api/toc.yml partition/gh-pages/obj/api/
+          else
+            for pattern in "${patterns[@]}"; do
+              find gh-pages/obj/api -maxdepth 1 -type f -name "$pattern" -exec cp {} partition/gh-pages/obj/api/ \;
+            done
+          fi
+          cp docfx-api.json partition/
+      - name: Build API partition
+        working-directory: partition
+        run: dotnet "$HOME/.nuget/packages/docfx/2.78.5/tools/net10.0/any/docfx.dll" build docfx-api.json
+      - name: Upload API partition
+        uses: actions/upload-artifact@v7
+        with:
+          name: docfx-api-${{ matrix.partition }}
+          path: partition/_site/gh-pages/obj/api
+          if-no-files-found: error
+
+  build-content:
+    needs: prepare
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.x
+      - name: Restore DocFX tool
+        run: dotnet tool restore
+      - name: Build conceptual documentation
+        run: dotnet "$HOME/.nuget/packages/docfx/2.78.5/tools/net10.0/any/docfx.dll" build docfx-content.json
+      - name: Upload conceptual documentation
+        uses: actions/upload-artifact@v7
+        with:
+          name: docfx-content
+          path: _site
+          if-no-files-found: error
+
+  build:
+    needs: [build-api, build-content]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - name: Download conceptual documentation
+        uses: actions/download-artifact@v8
+        with:
+          name: docfx-content
+          path: _site
+      - name: Download API documentation
+        uses: actions/download-artifact@v8
+        with:
+          pattern: docfx-api-*
+          path: _site/gh-pages/obj/api
+          merge-multiple: true
+      - name: Verify generated API documentation
+        shell: bash
+        run: |
+          page="_site/gh-pages/obj/api/Dropbox.Api.Users.UserFeature.html"
+          test -f "$page"
+          for symbol in \
+            TeamSharedDropbox \
+            DistinctMemberHome \
+            IsTeamSharedDropbox \
+            AsTeamSharedDropbox \
+            IsDistinctMemberHome \
+            AsDistinctMemberHome
+          do
+            grep -q "$symbol" "$page"
+          done
+      - name: Upload documentation site
+        if: github.event_name == 'release' || github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v7
+        with:
+          name: documentation-site
+          path: _site
+          if-no-files-found: error
+
+  deploy:
+    if: github.event_name == 'release' || github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - name: Download documentation site
+        uses: actions/download-artifact@v8
+        with:
+          name: documentation-site
+          path: _site
+      - name: Publish documentation
+        uses: JamesIves/github-pages-deploy-action@v4.8.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages-holder
+          folder: _site
+          clean: true

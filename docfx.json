@@ -1,0 +1,53 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "dropbox-sdk-dotnet/Dropbox.Api/bin/Release/netstandard2.0/Dropbox.Api.dll"
+          ]
+        }
+      ],
+      "dest": "gh-pages/obj/api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "src": "docs"
+      },
+      {
+        "files": [
+          "**/*.yml"
+        ],
+        "src": "gh-pages/obj/api"
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "icon.png"
+        ],
+        "dest": "images"
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default"
+    ],
+    "globalMetadata": {
+      "_appName": "Dropbox .NET SDK",
+      "_appTitle": "Dropbox .NET SDK API Reference",
+      "_appFooter": "Dropbox .NET SDK",
+      "_appLogoPath": "images/icon.png",
+      "_enableSearch": false
+    },
+    "sitemap": {
+      "baseUrl": "https://dropbox.github.io/dropbox-sdk-dotnet/"
+    }
+  }
+}
