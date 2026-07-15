@@ -182,7 +182,7 @@ namespace Dropbox.Api.Tests
         {
             var badClient = new DropboxClient("invalid-or-revoked-refresh-token", appKey, appSecret);
 
-            var ex = await Assert.ThrowsExceptionAsync<AuthException>(
+            var ex = await Assert.ThrowsExactlyAsync<AuthException>(
                 () => badClient.Users.GetCurrentAccountAsync());
 
             // The message should carry the OAuth error detail, not raw JSON.
@@ -265,7 +265,7 @@ namespace Dropbox.Api.Tests
             var stream = GetStream("abc");
             await client.Files.UploadAsync(testingPath + "/Foo.txt", body: stream);
 
-            Assert.ThrowsException<ObjectDisposedException>(() => stream.Position);
+            Assert.ThrowsExactly<ObjectDisposedException>(() => stream.Position);
         }
 
         /// <summary>
@@ -389,8 +389,8 @@ namespace Dropbox.Api.Tests
         public async Task TestUpload()
         {
             var response = await client.Files.UploadAsync(testingPath + "/Foo.txt", body: GetStream("abc"));
-            Assert.AreEqual(response.Name, "Foo.txt");
-            Assert.AreEqual(response.PathLower, testingPath.ToLower() + "/foo.txt");
+            Assert.AreEqual("Foo.txt", response.Name);
+            Assert.AreEqual(testingPath.ToLower() + "/foo.txt", response.PathLower);
             Assert.AreEqual(response.PathDisplay, testingPath + "/Foo.txt");
             var downloadResponse = await client.Files.DownloadAsync(testingPath + "/Foo.txt");
             var content = await downloadResponse.GetContentAsStringAsync();
@@ -444,8 +444,8 @@ namespace Dropbox.Api.Tests
             var content = await downloadResponse.GetContentAsStringAsync();
             Assert.AreEqual("abc", content);
             var response = downloadResponse.Response;
-            Assert.AreEqual(response.Name, "Foo.txt");
-            Assert.AreEqual(response.PathLower, testingPath.ToLower() + "/foo.txt");
+            Assert.AreEqual("Foo.txt", response.Name);
+            Assert.AreEqual(testingPath.ToLower() + "/foo.txt", response.PathLower);
             Assert.AreEqual(response.PathDisplay, testingPath + "/Foo.txt");
         }
 
@@ -473,8 +473,8 @@ namespace Dropbox.Api.Tests
             }
             catch (RateLimitException ex)
             {
-                Assert.AreEqual((int)ex.ErrorResponse.RetryAfter, 100);
-                Assert.AreEqual(ex.RetryAfter, 100);
+                Assert.AreEqual(100, (int)ex.ErrorResponse.RetryAfter);
+                Assert.AreEqual(100, ex.RetryAfter);
                 Assert.IsTrue(ex.ErrorResponse.Reason.IsTooManyRequests);
             }
         }
@@ -624,8 +624,8 @@ namespace Dropbox.Api.Tests
             result = client.Users.BeginGetAccountBatch(new string[] { accountId }, null);
             var accounts = client.Users.EndGetAccountBatch(result);
 
-            Assert.AreEqual(accounts.Count, 1);
-            Assert.AreEqual(accounts[0].AccountId, accountId);
+            Assert.AreEqual(1, accounts.Count);
+            Assert.AreEqual(accountId, accounts[0].AccountId);
         }
 
         /// <summary>
