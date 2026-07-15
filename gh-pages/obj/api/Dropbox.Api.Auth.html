@@ -1,23 +1,21 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace Dropbox.Api.Auth
-   </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace Dropbox.Api.Auth
-   ">
-    <meta name="generator" content="docfx 2.58.4.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Namespace Dropbox.Api.Auth | Dropbox .NET SDK API Reference </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Namespace Dropbox.Api.Auth | Dropbox .NET SDK API Reference ">
     
-    <link rel="shortcut icon" href="../../../favicon.ico">
-    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    
+      <link rel="shortcut icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../../styles/docfx.css">
+      <link rel="stylesheet" href="../../../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
     
     
     
@@ -25,7 +23,7 @@
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -35,9 +33,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../index.html">
-                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+                <img id="logo" class="svg" src="../../../images/icon.png" alt="Dropbox .NET SDK">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -49,7 +47,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -59,7 +57,7 @@
         </div>
       </header>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -69,26 +67,32 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="Dropbox.Api.Auth">
-  
-  <h1 id="Dropbox_Api_Auth" data-uid="Dropbox.Api.Auth" class="text-break">Namespace Dropbox.Api.Auth
-  </h1>
+
+  <h1 id="Dropbox_Api_Auth" data-uid="Dropbox.Api.Auth" class="text-break">Namespace Dropbox.Api.Auth</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
+    <h3 id="classes">
+Classes
+</h3>
       <h4><a class="xref" href="Dropbox.Api.Auth.AccessError.html">AccessError</a></h4>
-      <section><p>Error occurred because the account doesn&apos;t have permission to access the
+      <section><p>Error occurred because the account doesn't have permission to access the
 resource.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.AccessError.InvalidAccountType.html">AccessError.InvalidAccountType</a></h4>
       <section><p>Current account type cannot access the resource.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Auth.AccessError.NoPermission.html">AccessError.NoPermission</a></h4>
+      <section><p>Caller does not have permission to access the resource.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.AccessError.Other.html">AccessError.Other</a></h4>
       <section><p>The other object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.AccessError.PaperAccessDenied.html">AccessError.PaperAccessDenied</a></h4>
       <section><p>Current account cannot access Paper.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Auth.AccessError.TeamAccessDenied.html">AccessError.TeamAccessDenied</a></h4>
+      <section><p>Team doesn't have permission to access.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.AuthError.html">AuthError</a></h4>
       <section><p>Errors occurred during authentication.</p>
@@ -100,11 +104,11 @@ resource.</p>
       <section><p>The access token is invalid.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.AuthError.InvalidSelectAdmin.html">AuthError.InvalidSelectAdmin</a></h4>
-      <section><p>The user specified in &apos;Dropbox-API-Select-Admin&apos; is not a Dropbox Business
+      <section><p>The user specified in 'Dropbox-API-Select-Admin' is not a Dropbox Business
 team admin.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.AuthError.InvalidSelectUser.html">AuthError.InvalidSelectUser</a></h4>
-      <section><p>The user specified in &apos;Dropbox-API-Select-User&apos; is no longer on the
+      <section><p>The user specified in 'Dropbox-API-Select-User' is no longer on the
 team.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.AuthError.MissingScope.html">AuthError.MissingScope</a></h4>
@@ -123,14 +127,24 @@ team.</p>
       <section><p>The invalid account type error object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.InvalidAccountTypeError.Endpoint.html">InvalidAccountTypeError.Endpoint</a></h4>
-      <section><p>Current account type doesn&apos;t have permission to access this route
+      <section><p>Current account type doesn't have permission to access this route
 endpoint.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.InvalidAccountTypeError.Feature.html">InvalidAccountTypeError.Feature</a></h4>
-      <section><p>Current account type doesn&apos;t have permission to access this feature.</p>
+      <section><p>Current account type doesn't have permission to access this feature.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.InvalidAccountTypeError.Other.html">InvalidAccountTypeError.Other</a></h4>
       <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Auth.NoPermissionError.html">NoPermissionError</a></h4>
+      <section><p>The no permission error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Auth.NoPermissionError.Other.html">NoPermissionError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Auth.NoPermissionError.UnauthorizedAccountIdUsage.html">NoPermissionError.UnauthorizedAccountIdUsage</a></h4>
+      <section><p>Current caller does not have permission to access the account information for
+one or more of the specified account IDs.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.PaperAccessError.html">PaperAccessError</a></h4>
       <section><p>The paper access error object</p>
@@ -157,7 +171,7 @@ endpoint.</p>
       <section><p>You are making too many requests in the past few minutes.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.RateLimitReason.TooManyWriteOperations.html">RateLimitReason.TooManyWriteOperations</a></h4>
-      <section><p>There are currently too many write operations happening in the user&apos;s
+      <section><p>There are currently too many write operations happening in the user's
 Dropbox.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.TokenFromOAuth1Arg.html">TokenFromOAuth1Arg</a></h4>
@@ -182,9 +196,14 @@ token.</p>
       <h4><a class="xref" href="Dropbox.Api.Auth.TokenScopeError.html">TokenScopeError</a></h4>
       <section><p>The token scope error object</p>
 </section>
+      <h4><a class="xref" href="Dropbox.Api.Auth.UnauthorizedAccountIdUsageError.html">UnauthorizedAccountIdUsageError</a></h4>
+      <section><p>The unauthorized account id usage error object</p>
+</section>
+
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
@@ -192,14 +211,14 @@ token.</p>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -207,14 +226,14 @@ token.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span>
+      Dropbox .NET SDK
+      
           </div>
         </div>
       </footer>
     </div>
-    
-    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+
+    <script type="text/javascript" src="../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
