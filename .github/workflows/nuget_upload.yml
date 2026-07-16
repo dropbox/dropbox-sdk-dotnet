@@ -5,6 +5,9 @@ on:
   release:
     types: [created]
 
+permissions:  # least privilege; the deploy job overrides this for OIDC
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -25,16 +28,22 @@ jobs:
             NUGET_TOKEN,nuget-api-token-dropbox-sdk-dotnet
           parse-json-secrets: false
       - name: Pack
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
         run: |
+          version=$(echo "$RELEASE_TAG" | cut -c 2-)
           dotnet pack \
           dropbox-sdk-dotnet/Dropbox.Api \
           -p:Configuration=Release \
-          -p:Version=$(echo "${{ github.event.release.tag_name }}" | cut -c 2-) \
+          -p:Version="$version" \
           -p:AssemblyOriginatorKeyFile=dropbox_api_key.snk \
           -p:SignAssembly=true
       - name: Push
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
         run: |
+          version=$(echo "$RELEASE_TAG" | cut -c 2-)
           dotnet nuget push \
-          dropbox-sdk-dotnet/Dropbox.Api/bin/Release/Dropbox.Api.$(echo "${{ github.event.release.tag_name }}" | cut -c 2-).nupkg \
+          "dropbox-sdk-dotnet/Dropbox.Api/bin/Release/Dropbox.Api.$version.nupkg" \
           --source https://api.nuget.org/v3/index.json \
-          --api-key ${{ env.NUGET_TOKEN }}
+          --api-key "$NUGET_TOKEN"
