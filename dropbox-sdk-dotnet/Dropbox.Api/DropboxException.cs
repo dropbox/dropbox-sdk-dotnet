@@ -33,6 +33,17 @@ namespace Dropbox.Api
         }
 
         /// <summary>
+        /// Gets the Dropbox request ID associated with this exception.
+        /// </summary>
+        /// <remarks>
+        /// This value may be <see langword="null"/> when no response was received from Dropbox.
+        /// </remarks>
+        public string RequestId
+        {
+            get { return this.requestId; }
+        }
+
+        /// <summary>
         ///  The ToString().
         /// </summary>
         /// <returns>A string that represents the current <see cref="DropboxException"/>.</returns>
