@@ -1164,8 +1164,8 @@ namespace Dropbox.Api
             this.LongPollHttpClient = longPollHttpClient;
             this.DisposeUploadStream = disposeUploadStream;
             this.AutoContentHash = autoContentHash;
-            this.OAuth2AccessToken = oauth2AccessToken;
-            this.OAuth2RefreshToken = oauth2RefreshToken;
+            this.OAuth2AccessToken = string.IsNullOrEmpty(oauth2AccessToken) ? null : oauth2AccessToken;
+            this.OAuth2RefreshToken = string.IsNullOrEmpty(oauth2RefreshToken) ? null : oauth2RefreshToken;
             this.OAuth2AccessTokenExpiresAt = oauth2AccessTokenExpiresAt;
             this.AppKey = appKey;
             this.AppSecret = appSecret;

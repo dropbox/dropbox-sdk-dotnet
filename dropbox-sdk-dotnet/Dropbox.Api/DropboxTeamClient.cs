@@ -132,9 +132,9 @@ namespace Dropbox.Api
         public DropboxTeamClient(string oauth2AccessToken, string oauth2RefreshToken, DateTime oauth2AccessTokenExpiresAt, string appKey, DropboxClientConfig config)
             : this(new DropboxRequestHandlerOptions(config, oauth2AccessToken, oauth2RefreshToken, oauth2AccessTokenExpiresAt, appKey, null))
         {
-            if (oauth2AccessToken == null && oauth2RefreshToken == null)
+            if (string.IsNullOrEmpty(oauth2AccessToken) && string.IsNullOrEmpty(oauth2RefreshToken))
             {
-                throw new ArgumentException("Cannot pass in both null access and refresh token");
+                throw new ArgumentException("Access token and refresh token cannot both be null or empty.");
             }
         }
 
@@ -162,9 +162,9 @@ namespace Dropbox.Api
         public DropboxTeamClient(string oauth2AccessToken, string oauth2RefreshToken, DateTime oauth2AccessTokenExpiresAt, string appKey, string appSecret, DropboxClientConfig config)
             : this(new DropboxRequestHandlerOptions(config, oauth2AccessToken, oauth2RefreshToken, oauth2AccessTokenExpiresAt, appKey, appSecret))
         {
-            if (oauth2AccessToken == null && oauth2RefreshToken == null)
+            if (string.IsNullOrEmpty(oauth2AccessToken) && string.IsNullOrEmpty(oauth2RefreshToken))
             {
-                throw new ArgumentException("Cannot pass in both null access and refresh token");
+                throw new ArgumentException("Access token and refresh token cannot both be null or empty.");
             }
         }
 
@@ -179,9 +179,9 @@ namespace Dropbox.Api
         public DropboxTeamClient(string oauth2AccessToken, string oauth2RefreshToken, string appKey, string appSecret, DropboxClientConfig config)
             : this(new DropboxRequestHandlerOptions(config, oauth2AccessToken, oauth2RefreshToken, null, appKey, appSecret))
         {
-            if (oauth2AccessToken == null && oauth2RefreshToken == null)
+            if (string.IsNullOrEmpty(oauth2AccessToken) && string.IsNullOrEmpty(oauth2RefreshToken))
             {
-                throw new ArgumentException("Cannot pass in both null access and refresh token");
+                throw new ArgumentException("Access token and refresh token cannot both be null or empty.");
             }
         }
 
