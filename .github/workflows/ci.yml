@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Setup .NET 8
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@v6
         with:
           dotnet-version: '8.x'
       - name: Run Unit Tests
@@ -74,7 +74,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Setup .NET 8
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@v6
         with:
           dotnet-version: '8.x'
       - name: Configure AWS credentials (OIDC)
@@ -123,7 +123,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Setup .NET 8
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@v6
         with:
           dotnet-version: '8.x'
       - name: Run Linter
