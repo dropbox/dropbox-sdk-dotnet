@@ -494,7 +494,7 @@ namespace SimpleTest
 
                         else
                         {
-                            UploadSessionCursor cursor = new UploadSessionCursor(sessionId, (ulong)(chunkSize * idx));
+                            UploadSessionCursor cursor = new UploadSessionCursor(sessionId, (ulong)chunkSize * (ulong)idx);
 
                             if (idx == numChunks - 1)
                             {
