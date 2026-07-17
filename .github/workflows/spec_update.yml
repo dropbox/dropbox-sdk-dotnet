@@ -4,30 +4,37 @@ on:
   repository_dispatch:
     types: [spec_update]
 
-permissions:  # least privilege; the Update job overrides this for OIDC
+permissions:
+  id-token: write
   contents: read
 
 jobs:
   Update:
     runs-on: ubuntu-latest
-    permissions:  # required for OIDC authentication
-      id-token: write
-      contents: read
     steps:
-      - uses: actions/checkout@v7
-      - name: Configure AWS credentials (OIDC)
+      - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: arn:aws:iam::082972943155:role/oidc-github-dropbox-dropbox-sdk-dotnet-repo
           aws-region: us-west-2
-      - name: Get spec-update token from AWS Secrets Manager
+
+      - name: Fetch GitHub App credentials from Secrets Manager
         uses: aws-actions/aws-secretsmanager-get-secrets@v3
         with:
           secret-ids: |
-            SPEC_UPDATE_TOKEN,spec-update-token-dropbox-sdk-dotnet
-          parse-json-secrets: false
+            SDK_UPDATER,sdk-updater-github-app
+          parse-json-secrets: true
+
+      - name: Generate GitHub App installation token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ env.SDK_UPDATER_CLIENT_ID }}
+          private-key: ${{ env.SDK_UPDATER_PRIVATE_KEY }}
+
+      - uses: actions/checkout@v7
       - name: Setup Python environment
-        uses: actions/setup-python@v6.3.0
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
       - name: Get current time
@@ -64,30 +71,69 @@ jobs:
           cd spec
           gitdiff=$(git log -n "$NUM_DIFF" --pretty="format:%n %H %n%n %b")
           commit="Automated Spec Update $gitdiff"
+          while true; do
+            delimiter="SPEC_UPDATE_EOF_$(python -c 'import uuid; print(uuid.uuid4())')"
+            if ! grep -Fxq "$delimiter" <<< "$commit"; then
+              break
+            fi
+          done
           {
-            echo "commit<<SPEC_UPDATE_EOF"
-            echo "$commit"
-            echo "SPEC_UPDATE_EOF"
+            printf 'commit<<%s\n' "$delimiter"
+            printf '%s\n' "$commit"
+            printf '%s\n' "$delimiter"
           } >> "$GITHUB_OUTPUT"
+          cd ..
       - name: Generate New Routes
         run: |
           python generator/generate_routes.py
           git add dropbox-sdk-dotnet/Dropbox.Api/Generated
           git add spec
+
+      - name: Close Old Pull Requests
+        id: close-old-prs
+        if: steps.git-diff-num.outputs.num-diff != 0
+        run: |
+          closed=""
+          while read -r pr_num; do
+            echo "Closing old PR #$pr_num"
+            gh pr close "$pr_num" --delete-branch
+            closed="${closed:+$closed,}$pr_num"
+          done < <(gh pr list --label "automated-spec-update" --state open --json number --jq '.[].number')
+          echo "closed=$closed" >> "$GITHUB_OUTPUT"
+        shell: bash
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v8.1.1
+        id: create-pr
+        uses: peter-evans/create-pull-request@v8
         if: steps.git-diff-num.outputs.num-diff != 0
         with:
-          token: ${{ env.SPEC_UPDATE_TOKEN }}
+          token: ${{ steps.app-token.outputs.token }}
           commit-message: |
             ${{ steps.git-diff.outputs.commit}}
           branch: ${{ steps.git-branch.outputs.branch }}
           delete-branch: true
-          title: 'Automated Spec Update'
+          title: 'Automated Spec Update - ${{ steps.current-time.outputs.formattedTime }}'
           body: |
             ${{ steps.git-diff.outputs.commit}}
           base: 'main'
-          team-reviewers: |
-            owners
-            maintainers
+          labels: |
+            automated-spec-update
           draft: false
+
+      - name: Comment on closed PRs
+        if: steps.create-pr.outputs.pull-request-number && steps.close-old-prs.outputs.closed
+        run: |
+          IFS=',' read -ra prs <<< "${{ steps.close-old-prs.outputs.closed }}"
+          for pr_num in "${prs[@]}"; do
+            gh pr comment "$pr_num" --body "Superseded by #${{ steps.create-pr.outputs.pull-request-number }}"
+          done
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+
+      # - name: Enable Pull Request Automerge
+      #   if: steps.create-pr.outputs.pull-request-number
+      #   run: gh pr merge --merge --auto "${{ steps.create-pr.outputs.pull-request-number }}"
+      #   env:
+      #     GH_TOKEN: ${{ steps.app-token.outputs.token }}
