@@ -385,7 +385,7 @@ namespace Dropbox.Api.Riviera
             /// <para>Initializes a new instance of the <see cref="Failed" /> class.</para>
             /// </summary>
             /// <param name="value">The value</param>
-            public Failed(GetMetadataAsyncError value)
+            public Failed(MetadataExtractionApiV2Error value)
             {
                 this.Value = value;
             }
@@ -399,7 +399,7 @@ namespace Dropbox.Api.Riviera
             /// <summary>
             /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public GetMetadataAsyncError Value { get; private set; }
+            public MetadataExtractionApiV2Error Value { get; private set; }
 
             #region Encoder class
 
@@ -415,7 +415,7 @@ namespace Dropbox.Api.Riviera
                 /// <param name="writer">The writer.</param>
                 public override void EncodeFields(Failed value, enc.IJsonWriter writer)
                 {
-                    WriteProperty("failed", value.Value, writer, global::Dropbox.Api.Riviera.GetMetadataAsyncError.Encoder);
+                    WriteProperty("failed", value.Value, writer, global::Dropbox.Api.Riviera.MetadataExtractionApiV2Error.Encoder);
                 }
             }
 
@@ -438,13 +438,22 @@ namespace Dropbox.Api.Riviera
                 }
 
                 /// <summary>
-                /// <para>Decode fields without ensuring start and end object.</para>
+                /// <para>Set given field.</para>
                 /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
                 /// <param name="reader">The json reader.</param>
-                /// <returns>The decoded object.</returns>
-                public override Failed DecodeFields(enc.IJsonReader reader)
+                protected override void SetField(Failed value, string fieldName, enc.IJsonReader reader)
                 {
-                    return new Failed(global::Dropbox.Api.Riviera.GetMetadataAsyncError.Decoder.DecodeFields(reader));
+                    switch (fieldName)
+                    {
+                        case "failed":
+                            value.Value = global::Dropbox.Api.Riviera.MetadataExtractionApiV2Error.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
                 }
             }
 

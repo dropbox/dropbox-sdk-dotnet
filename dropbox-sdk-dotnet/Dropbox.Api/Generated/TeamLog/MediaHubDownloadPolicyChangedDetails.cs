@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed the policy for downloading Media Hub content.</para>
+    /// <para>Changed the policy for downloading Replay content.</para>
     /// </summary>
     public class MediaHubDownloadPolicyChangedDetails
     {

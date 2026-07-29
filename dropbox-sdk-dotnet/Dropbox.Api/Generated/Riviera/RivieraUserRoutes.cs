@@ -31,8 +31,10 @@ namespace Dropbox.Api.Riviera.Routes
         internal enc.ITransport Transport { get; private set; }
 
         /// <summary>
-        /// <para>Asynchronous document-to-markdown conversion for supported file
-        /// formats.</para>
+        /// <para>Asynchronous document-to-markdown conversion for supported file formats.
+        /// Supported formats: .binder, .docx, .html, .paper, .papert, .pptx, .xlsx, .gsheet,
+        /// .ods, .pdf. Unsupported formats return an `unsupported_format_error`. Size limit:
+        /// the source file must be at most 50 MB. Larger files are rejected.</para>
         /// </summary>
         /// <param name="getMarkdownArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -59,22 +61,14 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous document-to-markdown conversion for supported file
-        /// formats.</para>
+        /// <para>Asynchronous document-to-markdown conversion for supported file formats.
+        /// Supported formats: .binder, .docx, .html, .paper, .papert, .pptx, .xlsx, .gsheet,
+        /// .ods, .pdf. Unsupported formats return an `unsupported_format_error`. Size limit:
+        /// the source file must be at most 50 MB. Larger files are rejected.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the document to convert. Callers must set
-        /// exactly one of the oneof variants: - file_id: a Dropbox-issued file id (format:
-        /// "id:<id>") for a file the authenticated user has access to. - path: an absolute
-        /// Dropbox path, e.g. "/folder/report.docx". - url: either a Dropbox shared link
-        /// (www.dropbox.com) or an external HTTPS URL pointing to a supported document file. -
-        /// Dropbox shared links are resolved internally using the caller's authenticated
-        /// identity and the link's visibility / download settings. They therefore require an
-        /// authenticated user context (anonymous `url` requests against Dropbox links are
-        /// rejected with an `ACCESS_ERROR`). Links protected by a password are rejected with
-        /// `shared_link_password_protected`; links with downloads disabled are rejected with
-        /// `link_download_disabled_error`. - External URLs are fetched over HTTPS through the
-        /// backend's egress proxy and must point at a supported document file extension. The
-        /// referenced file must be a document in a supported format; requests against
+        /// exactly one of the `FileIdOrUrl` variants. The referenced file must be a document
+        /// in a supported format (see the route description for the list); requests against
         /// unsupported formats return `unsupported_format_error`.</param>
         /// <param name="enableOcr">Enable OCR for PDF documents. Processing is slower when
         /// enabled.</param>
@@ -97,18 +91,8 @@ namespace Dropbox.Api.Riviera.Routes
         /// <para>Begins an asynchronous send to the get markdown async route.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the document to convert. Callers must set
-        /// exactly one of the oneof variants: - file_id: a Dropbox-issued file id (format:
-        /// "id:<id>") for a file the authenticated user has access to. - path: an absolute
-        /// Dropbox path, e.g. "/folder/report.docx". - url: either a Dropbox shared link
-        /// (www.dropbox.com) or an external HTTPS URL pointing to a supported document file. -
-        /// Dropbox shared links are resolved internally using the caller's authenticated
-        /// identity and the link's visibility / download settings. They therefore require an
-        /// authenticated user context (anonymous `url` requests against Dropbox links are
-        /// rejected with an `ACCESS_ERROR`). Links protected by a password are rejected with
-        /// `shared_link_password_protected`; links with downloads disabled are rejected with
-        /// `link_download_disabled_error`. - External URLs are fetched over HTTPS through the
-        /// backend's egress proxy and must point at a supported document file extension. The
-        /// referenced file must be a document in a supported format; requests against
+        /// exactly one of the `FileIdOrUrl` variants. The referenced file must be a document
+        /// in a supported format (see the route description for the list); requests against
         /// unsupported formats return `unsupported_format_error`.</param>
         /// <param name="enableOcr">Enable OCR for PDF documents. Processing is slower when
         /// enabled.</param>
@@ -238,7 +222,16 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous file metadata extraction for supported file formats.</para>
+        /// <para>Asynchronous file metadata extraction for supported file formats. The kind of
+        /// metadata returned depends on the file type: - Image (EXIF) formats: .3fr, .arw,
+        /// .avif, .bmp, .cr2, .cr3, .crw, .dcr, .dcs, .dng, .erf, .gif, .heic, .j2c, .j2k,
+        /// .jp2, .jpc, .jpeg, .jpf, .jpg, .jpg2, .jpm, .jpx, .kdc, .mef, .mos, .mrw, .nef,
+        /// .nrw, .orf, .pef, .png, .ppm, .r3d, .raf, .rw2, .rwl, .sr2, .tga, .tif, .tiff,
+        /// .wbmp, .web, .webp, .x3f. - Audio/video (media) formats: .aac, .aif, .aiff, .flac,
+        /// .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma, .3gp, .3gpp, .3gpp2, .asf, .avi, .dv,
+        /// .flv, .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora,
+        /// .ogv, .rm, .ts, .vob, .webm, .wmv. - PDF format: .pdf. - MS Office formats: .docx,
+        /// .pptx, .xlsx. Unsupported formats return an `unsupported_format_error`.</para>
         /// </summary>
         /// <param name="getMetadataArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -265,24 +258,24 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous file metadata extraction for supported file formats.</para>
+        /// <para>Asynchronous file metadata extraction for supported file formats. The kind of
+        /// metadata returned depends on the file type: - Image (EXIF) formats: .3fr, .arw,
+        /// .avif, .bmp, .cr2, .cr3, .crw, .dcr, .dcs, .dng, .erf, .gif, .heic, .j2c, .j2k,
+        /// .jp2, .jpc, .jpeg, .jpf, .jpg, .jpg2, .jpm, .jpx, .kdc, .mef, .mos, .mrw, .nef,
+        /// .nrw, .orf, .pef, .png, .ppm, .r3d, .raf, .rw2, .rwl, .sr2, .tga, .tif, .tiff,
+        /// .wbmp, .web, .webp, .x3f. - Audio/video (media) formats: .aac, .aif, .aiff, .flac,
+        /// .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma, .3gp, .3gpp, .3gpp2, .asf, .avi, .dv,
+        /// .flv, .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora,
+        /// .ogv, .rm, .ts, .vob, .webm, .wmv. - PDF format: .pdf. - MS Office formats: .docx,
+        /// .pptx, .xlsx. Unsupported formats return an `unsupported_format_error`.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the file to extract metadata from. Callers
-        /// must set exactly one of the oneof variants: - file_id: a Dropbox-issued file id
-        /// (format: "id:<id>") for a file the authenticated user has access to. - path: an
-        /// absolute Dropbox path, e.g. "/folder/photo.jpg". - url: either a Dropbox shared
-        /// link (www.dropbox.com) or an external HTTPS URL pointing to a supported file. -
-        /// Dropbox shared links are resolved internally using the caller's authenticated
-        /// identity and the link's visibility / download settings. They therefore require an
-        /// authenticated user context (anonymous `url` requests against Dropbox links are
-        /// rejected with an `ACCESS_ERROR`). Links protected by a password are rejected with
-        /// `shared_link_password_protected`; links with downloads disabled are rejected with
-        /// `link_download_disabled_error`. - External URLs are fetched over HTTPS through the
-        /// backend's egress proxy and must point at a supported file extension. The kind of
-        /// metadata returned is determined by the file type: image files return EXIF metadata,
-        /// audio/video files return media metadata, PDFs return PDF metadata, and MS Office
-        /// documents (docx, pptx, xlsx) return Office metadata. Requests against unsupported
-        /// formats return `unsupported_format_error`.</param>
+        /// must set exactly one of the `FileIdOrUrl` variants. The kind of metadata returned
+        /// is determined by the file type: image files return EXIF metadata, audio/video files
+        /// return media metadata, PDFs return PDF metadata, and MS Office documents (docx,
+        /// pptx, xlsx) return Office metadata. See the route description for the supported
+        /// formats. Requests against unsupported formats return
+        /// `unsupported_format_error`.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetMetadataAsyncAsync(FileIdOrUrl fileIdOrUrl = null)
@@ -296,21 +289,12 @@ namespace Dropbox.Api.Riviera.Routes
         /// <para>Begins an asynchronous send to the get metadata async route.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the file to extract metadata from. Callers
-        /// must set exactly one of the oneof variants: - file_id: a Dropbox-issued file id
-        /// (format: "id:<id>") for a file the authenticated user has access to. - path: an
-        /// absolute Dropbox path, e.g. "/folder/photo.jpg". - url: either a Dropbox shared
-        /// link (www.dropbox.com) or an external HTTPS URL pointing to a supported file. -
-        /// Dropbox shared links are resolved internally using the caller's authenticated
-        /// identity and the link's visibility / download settings. They therefore require an
-        /// authenticated user context (anonymous `url` requests against Dropbox links are
-        /// rejected with an `ACCESS_ERROR`). Links protected by a password are rejected with
-        /// `shared_link_password_protected`; links with downloads disabled are rejected with
-        /// `link_download_disabled_error`. - External URLs are fetched over HTTPS through the
-        /// backend's egress proxy and must point at a supported file extension. The kind of
-        /// metadata returned is determined by the file type: image files return EXIF metadata,
-        /// audio/video files return media metadata, PDFs return PDF metadata, and MS Office
-        /// documents (docx, pptx, xlsx) return Office metadata. Requests against unsupported
-        /// formats return `unsupported_format_error`.</param>
+        /// must set exactly one of the `FileIdOrUrl` variants. The kind of metadata returned
+        /// is determined by the file type: image files return EXIF metadata, audio/video files
+        /// return media metadata, PDFs return PDF metadata, and MS Office documents (docx,
+        /// pptx, xlsx) return Office metadata. See the route description for the supported
+        /// formats. Requests against unsupported formats return
+        /// `unsupported_format_error`.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -431,7 +415,13 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous transcript generation for audio and video files.</para>
+        /// <para>Asynchronous transcript generation for audio and video files. Supported audio
+        /// formats: .aac, .aif, .aiff, .flac, .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma.
+        /// Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv, .m2t, .m2ts,
+        /// .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv, .rm, .ts, .vob,
+        /// .webm, .wmv. Unsupported formats return an `unsupported_format_error`. Size limits:
+        /// the source file must be at most 10 GB and its audio track at most 1 hour in
+        /// duration. Files exceeding these limits are rejected.</para>
         /// </summary>
         /// <param name="getTranscriptArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -458,27 +448,23 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous transcript generation for audio and video files.</para>
+        /// <para>Asynchronous transcript generation for audio and video files. Supported audio
+        /// formats: .aac, .aif, .aiff, .flac, .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma.
+        /// Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv, .m2t, .m2ts,
+        /// .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv, .rm, .ts, .vob,
+        /// .webm, .wmv. Unsupported formats return an `unsupported_format_error`. Size limits:
+        /// the source file must be at most 10 GB and its audio track at most 1 hour in
+        /// duration. Files exceeding these limits are rejected.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the media asset to transcribe. Callers must
-        /// set exactly one of the oneof variants: - file_id: a Dropbox-issued file id (format:
-        /// "id:<id>") for a file the authenticated user has access to. - path: an absolute
-        /// Dropbox path, e.g. "/folder/recording.mp4". - url: either a Dropbox shared link
-        /// (www.dropbox.com) or an external HTTPS URL pointing to a supported audio/video
-        /// file. - Dropbox shared links are resolved internally using the caller's
-        /// authenticated identity and the link's visibility / download settings. They
-        /// therefore require an authenticated user context (anonymous `url` requests against
-        /// Dropbox links are rejected with an `ACCESS_ERROR`). Links protected by a password
-        /// are rejected with `shared_link_password_protected`; links with downloads disabled
-        /// are rejected with `link_download_disabled_error`. - External URLs are fetched over
-        /// HTTPS through the backend's egress proxy and must point at a supported audio/video
-        /// file extension. The referenced asset must be an audio or video file in a supported
-        /// format; requests against files with no audio track return a
-        /// `no_audio_error`.</param>
+        /// set exactly one of the `FileIdOrUrl` variants. The referenced asset must be an
+        /// audio or video file in a supported format (see the route description for the list);
+        /// requests against files with no audio track return a `no_audio_error`.</param>
         /// <param name="timestampLevel">Granularity of the time offsets returned for each
-        /// transcript segment. Defaults to `SENTENCE. - SENTENCE: one segment per spoken
-        /// sentence (recommended). - WORD: one segment per word, useful for fine-grained
-        /// alignment such as captioning or highlight-as-you-listen experiences.</param>
+        /// transcript segment. Defaults to `SENTENCE` when the field is omitted. - SENTENCE:
+        /// one segment per spoken sentence (recommended). - WORD: one segment per word, useful
+        /// for fine-grained alignment such as captioning or highlight-as-you-listen
+        /// experiences.</param>
         /// <param name="includedSpecialWords">Comma-delimited list of non-lexical filler words
         /// to preserve in the transcript output, e.g. `"uh, ah, uhm"`. By default these
         /// fillers are stripped. Unrecognized tokens are ignored. Leave empty to use the
@@ -506,24 +492,14 @@ namespace Dropbox.Api.Riviera.Routes
         /// <para>Begins an asynchronous send to the get transcript async route.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the media asset to transcribe. Callers must
-        /// set exactly one of the oneof variants: - file_id: a Dropbox-issued file id (format:
-        /// "id:<id>") for a file the authenticated user has access to. - path: an absolute
-        /// Dropbox path, e.g. "/folder/recording.mp4". - url: either a Dropbox shared link
-        /// (www.dropbox.com) or an external HTTPS URL pointing to a supported audio/video
-        /// file. - Dropbox shared links are resolved internally using the caller's
-        /// authenticated identity and the link's visibility / download settings. They
-        /// therefore require an authenticated user context (anonymous `url` requests against
-        /// Dropbox links are rejected with an `ACCESS_ERROR`). Links protected by a password
-        /// are rejected with `shared_link_password_protected`; links with downloads disabled
-        /// are rejected with `link_download_disabled_error`. - External URLs are fetched over
-        /// HTTPS through the backend's egress proxy and must point at a supported audio/video
-        /// file extension. The referenced asset must be an audio or video file in a supported
-        /// format; requests against files with no audio track return a
-        /// `no_audio_error`.</param>
+        /// set exactly one of the `FileIdOrUrl` variants. The referenced asset must be an
+        /// audio or video file in a supported format (see the route description for the list);
+        /// requests against files with no audio track return a `no_audio_error`.</param>
         /// <param name="timestampLevel">Granularity of the time offsets returned for each
-        /// transcript segment. Defaults to `SENTENCE. - SENTENCE: one segment per spoken
-        /// sentence (recommended). - WORD: one segment per word, useful for fine-grained
-        /// alignment such as captioning or highlight-as-you-listen experiences.</param>
+        /// transcript segment. Defaults to `SENTENCE` when the field is omitted. - SENTENCE:
+        /// one segment per spoken sentence (recommended). - WORD: one segment per word, useful
+        /// for fine-grained alignment such as captioning or highlight-as-you-listen
+        /// experiences.</param>
         /// <param name="includedSpecialWords">Comma-delimited list of non-lexical filler words
         /// to preserve in the transcript output, e.g. `"uh, ah, uhm"`. By default these
         /// fillers are stripped. Unrecognized tokens are ignored. Leave empty to use the

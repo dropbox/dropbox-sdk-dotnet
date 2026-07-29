@@ -4914,6 +4914,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// MemberFolderContentsAccessedDetails</para>
+        /// </summary>
+        public bool IsMemberFolderContentsAccessedDetails
+        {
+            get
+            {
+                return this is MemberFolderContentsAccessedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MemberFolderContentsAccessedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public MemberFolderContentsAccessedDetails AsMemberFolderContentsAccessedDetails
+        {
+            get
+            {
+                return this as MemberFolderContentsAccessedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// MemberPermanentlyDeleteAccountContentsDetails</para>
         /// </summary>
         public bool IsMemberPermanentlyDeleteAccountContentsDetails
@@ -6468,6 +6492,171 @@ namespace Dropbox.Api.TeamLog
             get
             {
                 return this as PasswordResetAllDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectActionAddCollaboratorDetails</para>
+        /// </summary>
+        public bool IsProtectActionAddCollaboratorDetails
+        {
+            get
+            {
+                return this is ProtectActionAddCollaboratorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectActionAddCollaboratorDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ProtectActionAddCollaboratorDetails AsProtectActionAddCollaboratorDetails
+        {
+            get
+            {
+                return this as ProtectActionAddCollaboratorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectActionAddLinkDetails</para>
+        /// </summary>
+        public bool IsProtectActionAddLinkDetails
+        {
+            get
+            {
+                return this is ProtectActionAddLinkDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectActionAddLinkDetails, or <c>null</c>.</para>
+        /// </summary>
+        public ProtectActionAddLinkDetails AsProtectActionAddLinkDetails
+        {
+            get
+            {
+                return this as ProtectActionAddLinkDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectActionDeleteDetails</para>
+        /// </summary>
+        public bool IsProtectActionDeleteDetails
+        {
+            get
+            {
+                return this is ProtectActionDeleteDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectActionDeleteDetails, or <c>null</c>.</para>
+        /// </summary>
+        public ProtectActionDeleteDetails AsProtectActionDeleteDetails
+        {
+            get
+            {
+                return this as ProtectActionDeleteDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectActionExportDetails</para>
+        /// </summary>
+        public bool IsProtectActionExportDetails
+        {
+            get
+            {
+                return this is ProtectActionExportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectActionExportDetails, or <c>null</c>.</para>
+        /// </summary>
+        public ProtectActionExportDetails AsProtectActionExportDetails
+        {
+            get
+            {
+                return this as ProtectActionExportDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectActionRemoveCollaboratorDetails</para>
+        /// </summary>
+        public bool IsProtectActionRemoveCollaboratorDetails
+        {
+            get
+            {
+                return this is ProtectActionRemoveCollaboratorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectActionRemoveCollaboratorDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ProtectActionRemoveCollaboratorDetails AsProtectActionRemoveCollaboratorDetails
+        {
+            get
+            {
+                return this as ProtectActionRemoveCollaboratorDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectActionRemoveLinkDetails</para>
+        /// </summary>
+        public bool IsProtectActionRemoveLinkDetails
+        {
+            get
+            {
+                return this is ProtectActionRemoveLinkDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectActionRemoveLinkDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ProtectActionRemoveLinkDetails AsProtectActionRemoveLinkDetails
+        {
+            get
+            {
+                return this as ProtectActionRemoveLinkDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectActionStopSharingDetails</para>
+        /// </summary>
+        public bool IsProtectActionStopSharingDetails
+        {
+            get
+            {
+                return this is ProtectActionStopSharingDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectActionStopSharingDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ProtectActionStopSharingDetails AsProtectActionStopSharingDetails
+        {
+            get
+            {
+                return this as ProtectActionStopSharingDetails;
             }
         }
 
@@ -15850,6 +16039,12 @@ namespace Dropbox.Api.TeamLog
                     MemberDeleteProfilePhotoDetails.Encoder.EncodeFields((MemberDeleteProfilePhotoDetails)value, writer);
                     return;
                 }
+                if (value is MemberFolderContentsAccessedDetails)
+                {
+                    WriteProperty(".tag", "member_folder_contents_accessed_details", writer, enc.StringEncoder.Instance);
+                    MemberFolderContentsAccessedDetails.Encoder.EncodeFields((MemberFolderContentsAccessedDetails)value, writer);
+                    return;
+                }
                 if (value is MemberPermanentlyDeleteAccountContentsDetails)
                 {
                     WriteProperty(".tag", "member_permanently_delete_account_contents_details", writer, enc.StringEncoder.Instance);
@@ -16250,6 +16445,48 @@ namespace Dropbox.Api.TeamLog
                 {
                     WriteProperty(".tag", "password_reset_all_details", writer, enc.StringEncoder.Instance);
                     PasswordResetAllDetails.Encoder.EncodeFields((PasswordResetAllDetails)value, writer);
+                    return;
+                }
+                if (value is ProtectActionAddCollaboratorDetails)
+                {
+                    WriteProperty(".tag", "protect_action_add_collaborator_details", writer, enc.StringEncoder.Instance);
+                    ProtectActionAddCollaboratorDetails.Encoder.EncodeFields((ProtectActionAddCollaboratorDetails)value, writer);
+                    return;
+                }
+                if (value is ProtectActionAddLinkDetails)
+                {
+                    WriteProperty(".tag", "protect_action_add_link_details", writer, enc.StringEncoder.Instance);
+                    ProtectActionAddLinkDetails.Encoder.EncodeFields((ProtectActionAddLinkDetails)value, writer);
+                    return;
+                }
+                if (value is ProtectActionDeleteDetails)
+                {
+                    WriteProperty(".tag", "protect_action_delete_details", writer, enc.StringEncoder.Instance);
+                    ProtectActionDeleteDetails.Encoder.EncodeFields((ProtectActionDeleteDetails)value, writer);
+                    return;
+                }
+                if (value is ProtectActionExportDetails)
+                {
+                    WriteProperty(".tag", "protect_action_export_details", writer, enc.StringEncoder.Instance);
+                    ProtectActionExportDetails.Encoder.EncodeFields((ProtectActionExportDetails)value, writer);
+                    return;
+                }
+                if (value is ProtectActionRemoveCollaboratorDetails)
+                {
+                    WriteProperty(".tag", "protect_action_remove_collaborator_details", writer, enc.StringEncoder.Instance);
+                    ProtectActionRemoveCollaboratorDetails.Encoder.EncodeFields((ProtectActionRemoveCollaboratorDetails)value, writer);
+                    return;
+                }
+                if (value is ProtectActionRemoveLinkDetails)
+                {
+                    WriteProperty(".tag", "protect_action_remove_link_details", writer, enc.StringEncoder.Instance);
+                    ProtectActionRemoveLinkDetails.Encoder.EncodeFields((ProtectActionRemoveLinkDetails)value, writer);
+                    return;
+                }
+                if (value is ProtectActionStopSharingDetails)
+                {
+                    WriteProperty(".tag", "protect_action_stop_sharing_details", writer, enc.StringEncoder.Instance);
+                    ProtectActionStopSharingDetails.Encoder.EncodeFields((ProtectActionStopSharingDetails)value, writer);
                     return;
                 }
                 if (value is ProtectInternalDomainsChangedDetails)
@@ -18766,6 +19003,8 @@ namespace Dropbox.Api.TeamLog
                         return MemberDeleteManualContactsDetails.Decoder.DecodeFields(reader);
                     case "member_delete_profile_photo_details":
                         return MemberDeleteProfilePhotoDetails.Decoder.DecodeFields(reader);
+                    case "member_folder_contents_accessed_details":
+                        return MemberFolderContentsAccessedDetails.Decoder.DecodeFields(reader);
                     case "member_permanently_delete_account_contents_details":
                         return MemberPermanentlyDeleteAccountContentsDetails.Decoder.DecodeFields(reader);
                     case "member_remove_external_id_details":
@@ -18900,6 +19139,20 @@ namespace Dropbox.Api.TeamLog
                         return PasswordResetDetails.Decoder.DecodeFields(reader);
                     case "password_reset_all_details":
                         return PasswordResetAllDetails.Decoder.DecodeFields(reader);
+                    case "protect_action_add_collaborator_details":
+                        return ProtectActionAddCollaboratorDetails.Decoder.DecodeFields(reader);
+                    case "protect_action_add_link_details":
+                        return ProtectActionAddLinkDetails.Decoder.DecodeFields(reader);
+                    case "protect_action_delete_details":
+                        return ProtectActionDeleteDetails.Decoder.DecodeFields(reader);
+                    case "protect_action_export_details":
+                        return ProtectActionExportDetails.Decoder.DecodeFields(reader);
+                    case "protect_action_remove_collaborator_details":
+                        return ProtectActionRemoveCollaboratorDetails.Decoder.DecodeFields(reader);
+                    case "protect_action_remove_link_details":
+                        return ProtectActionRemoveLinkDetails.Decoder.DecodeFields(reader);
+                    case "protect_action_stop_sharing_details":
+                        return ProtectActionStopSharingDetails.Decoder.DecodeFields(reader);
                     case "protect_internal_domains_changed_details":
                         return ProtectInternalDomainsChangedDetails.Decoder.DecodeFields(reader);
                     case "classification_create_report_details":
@@ -38465,6 +38718,96 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>The member folder contents accessed details object</para>
+        /// </summary>
+        public sealed class MemberFolderContentsAccessedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MemberFolderContentsAccessedDetails> Encoder = new MemberFolderContentsAccessedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MemberFolderContentsAccessedDetails> Decoder = new MemberFolderContentsAccessedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MemberFolderContentsAccessedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public MemberFolderContentsAccessedDetails(global::Dropbox.Api.TeamLog.MemberFolderContentsAccessedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MemberFolderContentsAccessedDetails" /> class.</para>
+            /// </summary>
+            private MemberFolderContentsAccessedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.MemberFolderContentsAccessedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MemberFolderContentsAccessedDetails" />.</para>
+            /// </summary>
+            private class MemberFolderContentsAccessedDetailsEncoder : enc.StructEncoder<MemberFolderContentsAccessedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MemberFolderContentsAccessedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("member_folder_contents_accessed_details", value.Value, writer, global::Dropbox.Api.TeamLog.MemberFolderContentsAccessedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MemberFolderContentsAccessedDetails" />.</para>
+            /// </summary>
+            private class MemberFolderContentsAccessedDetailsDecoder : enc.StructDecoder<MemberFolderContentsAccessedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MemberFolderContentsAccessedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MemberFolderContentsAccessedDetails Create()
+                {
+                    return new MemberFolderContentsAccessedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override MemberFolderContentsAccessedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new MemberFolderContentsAccessedDetails(global::Dropbox.Api.TeamLog.MemberFolderContentsAccessedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
         /// <para>The member permanently delete account contents details object</para>
         /// </summary>
         public sealed class MemberPermanentlyDeleteAccountContentsDetails : EventDetails
@@ -44498,6 +44841,638 @@ namespace Dropbox.Api.TeamLog
                 public override PasswordResetAllDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new PasswordResetAllDetails(global::Dropbox.Api.TeamLog.PasswordResetAllDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect action add collaborator details object</para>
+        /// </summary>
+        public sealed class ProtectActionAddCollaboratorDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectActionAddCollaboratorDetails> Encoder = new ProtectActionAddCollaboratorDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectActionAddCollaboratorDetails> Decoder = new ProtectActionAddCollaboratorDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectActionAddCollaboratorDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectActionAddCollaboratorDetails(global::Dropbox.Api.TeamLog.ProtectActionAddCollaboratorDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectActionAddCollaboratorDetails" /> class.</para>
+            /// </summary>
+            private ProtectActionAddCollaboratorDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectActionAddCollaboratorDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectActionAddCollaboratorDetails" />.</para>
+            /// </summary>
+            private class ProtectActionAddCollaboratorDetailsEncoder : enc.StructEncoder<ProtectActionAddCollaboratorDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectActionAddCollaboratorDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_action_add_collaborator_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectActionAddCollaboratorDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectActionAddCollaboratorDetails" />.</para>
+            /// </summary>
+            private class ProtectActionAddCollaboratorDetailsDecoder : enc.StructDecoder<ProtectActionAddCollaboratorDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProtectActionAddCollaboratorDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectActionAddCollaboratorDetails Create()
+                {
+                    return new ProtectActionAddCollaboratorDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectActionAddCollaboratorDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectActionAddCollaboratorDetails(global::Dropbox.Api.TeamLog.ProtectActionAddCollaboratorDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect action add link details object</para>
+        /// </summary>
+        public sealed class ProtectActionAddLinkDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectActionAddLinkDetails> Encoder = new ProtectActionAddLinkDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectActionAddLinkDetails> Decoder = new ProtectActionAddLinkDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectActionAddLinkDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectActionAddLinkDetails(global::Dropbox.Api.TeamLog.ProtectActionAddLinkDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectActionAddLinkDetails"
+            /// /> class.</para>
+            /// </summary>
+            private ProtectActionAddLinkDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectActionAddLinkDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectActionAddLinkDetails" />.</para>
+            /// </summary>
+            private class ProtectActionAddLinkDetailsEncoder : enc.StructEncoder<ProtectActionAddLinkDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectActionAddLinkDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_action_add_link_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectActionAddLinkDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectActionAddLinkDetails" />.</para>
+            /// </summary>
+            private class ProtectActionAddLinkDetailsDecoder : enc.StructDecoder<ProtectActionAddLinkDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ProtectActionAddLinkDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectActionAddLinkDetails Create()
+                {
+                    return new ProtectActionAddLinkDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectActionAddLinkDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectActionAddLinkDetails(global::Dropbox.Api.TeamLog.ProtectActionAddLinkDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect action delete details object</para>
+        /// </summary>
+        public sealed class ProtectActionDeleteDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectActionDeleteDetails> Encoder = new ProtectActionDeleteDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectActionDeleteDetails> Decoder = new ProtectActionDeleteDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectActionDeleteDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectActionDeleteDetails(global::Dropbox.Api.TeamLog.ProtectActionDeleteDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectActionDeleteDetails"
+            /// /> class.</para>
+            /// </summary>
+            private ProtectActionDeleteDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectActionDeleteDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectActionDeleteDetails" />.</para>
+            /// </summary>
+            private class ProtectActionDeleteDetailsEncoder : enc.StructEncoder<ProtectActionDeleteDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectActionDeleteDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_action_delete_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectActionDeleteDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectActionDeleteDetails" />.</para>
+            /// </summary>
+            private class ProtectActionDeleteDetailsDecoder : enc.StructDecoder<ProtectActionDeleteDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ProtectActionDeleteDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectActionDeleteDetails Create()
+                {
+                    return new ProtectActionDeleteDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectActionDeleteDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectActionDeleteDetails(global::Dropbox.Api.TeamLog.ProtectActionDeleteDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect action export details object</para>
+        /// </summary>
+        public sealed class ProtectActionExportDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectActionExportDetails> Encoder = new ProtectActionExportDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectActionExportDetails> Decoder = new ProtectActionExportDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectActionExportDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectActionExportDetails(global::Dropbox.Api.TeamLog.ProtectActionExportDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectActionExportDetails"
+            /// /> class.</para>
+            /// </summary>
+            private ProtectActionExportDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectActionExportDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectActionExportDetails" />.</para>
+            /// </summary>
+            private class ProtectActionExportDetailsEncoder : enc.StructEncoder<ProtectActionExportDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectActionExportDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_action_export_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectActionExportDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectActionExportDetails" />.</para>
+            /// </summary>
+            private class ProtectActionExportDetailsDecoder : enc.StructDecoder<ProtectActionExportDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ProtectActionExportDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectActionExportDetails Create()
+                {
+                    return new ProtectActionExportDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectActionExportDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectActionExportDetails(global::Dropbox.Api.TeamLog.ProtectActionExportDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect action remove collaborator details object</para>
+        /// </summary>
+        public sealed class ProtectActionRemoveCollaboratorDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectActionRemoveCollaboratorDetails> Encoder = new ProtectActionRemoveCollaboratorDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectActionRemoveCollaboratorDetails> Decoder = new ProtectActionRemoveCollaboratorDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectActionRemoveCollaboratorDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectActionRemoveCollaboratorDetails(global::Dropbox.Api.TeamLog.ProtectActionRemoveCollaboratorDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectActionRemoveCollaboratorDetails" /> class.</para>
+            /// </summary>
+            private ProtectActionRemoveCollaboratorDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectActionRemoveCollaboratorDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectActionRemoveCollaboratorDetails"
+            /// />.</para>
+            /// </summary>
+            private class ProtectActionRemoveCollaboratorDetailsEncoder : enc.StructEncoder<ProtectActionRemoveCollaboratorDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectActionRemoveCollaboratorDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_action_remove_collaborator_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectActionRemoveCollaboratorDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectActionRemoveCollaboratorDetails"
+            /// />.</para>
+            /// </summary>
+            private class ProtectActionRemoveCollaboratorDetailsDecoder : enc.StructDecoder<ProtectActionRemoveCollaboratorDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProtectActionRemoveCollaboratorDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectActionRemoveCollaboratorDetails Create()
+                {
+                    return new ProtectActionRemoveCollaboratorDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectActionRemoveCollaboratorDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectActionRemoveCollaboratorDetails(global::Dropbox.Api.TeamLog.ProtectActionRemoveCollaboratorDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect action remove link details object</para>
+        /// </summary>
+        public sealed class ProtectActionRemoveLinkDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectActionRemoveLinkDetails> Encoder = new ProtectActionRemoveLinkDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectActionRemoveLinkDetails> Decoder = new ProtectActionRemoveLinkDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectActionRemoveLinkDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectActionRemoveLinkDetails(global::Dropbox.Api.TeamLog.ProtectActionRemoveLinkDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectActionRemoveLinkDetails" /> class.</para>
+            /// </summary>
+            private ProtectActionRemoveLinkDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectActionRemoveLinkDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectActionRemoveLinkDetails" />.</para>
+            /// </summary>
+            private class ProtectActionRemoveLinkDetailsEncoder : enc.StructEncoder<ProtectActionRemoveLinkDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectActionRemoveLinkDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_action_remove_link_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectActionRemoveLinkDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectActionRemoveLinkDetails" />.</para>
+            /// </summary>
+            private class ProtectActionRemoveLinkDetailsDecoder : enc.StructDecoder<ProtectActionRemoveLinkDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProtectActionRemoveLinkDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectActionRemoveLinkDetails Create()
+                {
+                    return new ProtectActionRemoveLinkDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectActionRemoveLinkDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectActionRemoveLinkDetails(global::Dropbox.Api.TeamLog.ProtectActionRemoveLinkDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect action stop sharing details object</para>
+        /// </summary>
+        public sealed class ProtectActionStopSharingDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectActionStopSharingDetails> Encoder = new ProtectActionStopSharingDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectActionStopSharingDetails> Decoder = new ProtectActionStopSharingDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectActionStopSharingDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectActionStopSharingDetails(global::Dropbox.Api.TeamLog.ProtectActionStopSharingDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectActionStopSharingDetails" /> class.</para>
+            /// </summary>
+            private ProtectActionStopSharingDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectActionStopSharingDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectActionStopSharingDetails" />.</para>
+            /// </summary>
+            private class ProtectActionStopSharingDetailsEncoder : enc.StructEncoder<ProtectActionStopSharingDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectActionStopSharingDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_action_stop_sharing_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectActionStopSharingDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectActionStopSharingDetails" />.</para>
+            /// </summary>
+            private class ProtectActionStopSharingDetailsDecoder : enc.StructDecoder<ProtectActionStopSharingDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProtectActionStopSharingDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectActionStopSharingDetails Create()
+                {
+                    return new ProtectActionStopSharingDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectActionStopSharingDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectActionStopSharingDetails(global::Dropbox.Api.TeamLog.ProtectActionStopSharingDetails.Decoder.DecodeFields(reader));
                 }
             }
 

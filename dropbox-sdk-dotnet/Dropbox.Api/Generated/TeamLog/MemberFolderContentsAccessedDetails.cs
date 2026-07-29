@@ -11,43 +11,43 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Downloaded files in Replay.</para>
+    /// <para>Admin browsed a team member's folder contents.</para>
     /// </summary>
-    public class MediaHubFileDownloadedDetails
+    public class MemberFolderContentsAccessedDetails
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<MediaHubFileDownloadedDetails> Encoder = new MediaHubFileDownloadedDetailsEncoder();
+        internal static enc.StructEncoder<MemberFolderContentsAccessedDetails> Encoder = new MemberFolderContentsAccessedDetailsEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<MediaHubFileDownloadedDetails> Decoder = new MediaHubFileDownloadedDetailsDecoder();
+        internal static enc.StructDecoder<MemberFolderContentsAccessedDetails> Decoder = new MemberFolderContentsAccessedDetailsDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="MediaHubFileDownloadedDetails"
-        /// /> class.</para>
+        /// <para>Initializes a new instance of the <see
+        /// cref="MemberFolderContentsAccessedDetails" /> class.</para>
         /// </summary>
-        public MediaHubFileDownloadedDetails()
+        public MemberFolderContentsAccessedDetails()
         {
         }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="MediaHubFileDownloadedDetails" />.</para>
+        /// <para>Encoder for  <see cref="MemberFolderContentsAccessedDetails" />.</para>
         /// </summary>
-        private class MediaHubFileDownloadedDetailsEncoder : enc.StructEncoder<MediaHubFileDownloadedDetails>
+        private class MemberFolderContentsAccessedDetailsEncoder : enc.StructEncoder<MemberFolderContentsAccessedDetails>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(MediaHubFileDownloadedDetails value, enc.IJsonWriter writer)
+            public override void EncodeFields(MemberFolderContentsAccessedDetails value, enc.IJsonWriter writer)
             {
             }
         }
@@ -58,18 +58,18 @@ namespace Dropbox.Api.TeamLog
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="MediaHubFileDownloadedDetails" />.</para>
+        /// <para>Decoder for  <see cref="MemberFolderContentsAccessedDetails" />.</para>
         /// </summary>
-        private class MediaHubFileDownloadedDetailsDecoder : enc.StructDecoder<MediaHubFileDownloadedDetails>
+        private class MemberFolderContentsAccessedDetailsDecoder : enc.StructDecoder<MemberFolderContentsAccessedDetails>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="MediaHubFileDownloadedDetails"
-            /// />.</para>
+            /// <para>Create a new instance of type <see
+            /// cref="MemberFolderContentsAccessedDetails" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override MediaHubFileDownloadedDetails Create()
+            protected override MemberFolderContentsAccessedDetails Create()
             {
-                return new MediaHubFileDownloadedDetails();
+                return new MemberFolderContentsAccessedDetails();
             }
 
             /// <summary>
@@ -78,7 +78,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(MediaHubFileDownloadedDetails value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(MemberFolderContentsAccessedDetails value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {

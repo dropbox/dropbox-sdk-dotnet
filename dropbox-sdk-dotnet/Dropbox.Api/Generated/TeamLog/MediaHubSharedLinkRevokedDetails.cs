@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Revoked Media Hub shared link.</para>
+    /// <para>Revoked Replay shared link.</para>
     /// </summary>
     public class MediaHubSharedLinkRevokedDetails
     {
@@ -32,7 +32,9 @@ namespace Dropbox.Api.TeamLog
         /// cref="MediaHubSharedLinkRevokedDetails" /> class.</para>
         /// </summary>
         /// <param name="targetType">Media Hub shared link target type.</param>
-        public MediaHubSharedLinkRevokedDetails(MediaHubSharedLinkTargetType targetType)
+        /// <param name="project">Replay project.</param>
+        public MediaHubSharedLinkRevokedDetails(MediaHubSharedLinkTargetType targetType,
+                                                MediaHubProjectLogInfo project = null)
         {
             if (targetType == null)
             {
@@ -40,6 +42,7 @@ namespace Dropbox.Api.TeamLog
             }
 
             this.TargetType = targetType;
+            this.Project = project;
         }
 
         /// <summary>
@@ -58,6 +61,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public MediaHubSharedLinkTargetType TargetType { get; protected set; }
 
+        /// <summary>
+        /// <para>Replay project.</para>
+        /// </summary>
+        public MediaHubProjectLogInfo Project { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -73,6 +81,10 @@ namespace Dropbox.Api.TeamLog
             public override void EncodeFields(MediaHubSharedLinkRevokedDetails value, enc.IJsonWriter writer)
             {
                 WriteProperty("target_type", value.TargetType, writer, global::Dropbox.Api.TeamLog.MediaHubSharedLinkTargetType.Encoder);
+                if (value.Project != null)
+                {
+                    WriteProperty("project", value.Project, writer, global::Dropbox.Api.TeamLog.MediaHubProjectLogInfo.Encoder);
+                }
             }
         }
 
@@ -108,6 +120,9 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "target_type":
                         value.TargetType = global::Dropbox.Api.TeamLog.MediaHubSharedLinkTargetType.Decoder.Decode(reader);
+                        break;
+                    case "project":
+                        value.Project = global::Dropbox.Api.TeamLog.MediaHubProjectLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();
