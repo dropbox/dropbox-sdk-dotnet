@@ -3917,6 +3917,184 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
+        /// <para>Launch a bulk suspend job. The server enforces a maximum of 500
+        /// members.</para>
+        /// </summary>
+        /// <param name="bulkSuspendArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="BulkSuspendError"/>.</exception>
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> MembersBulkSuspendAsync(BulkSuspendArg bulkSuspendArg)
+        {
+            return this.Transport.SendRpcRequestAsync<BulkSuspendArg, global::Dropbox.Api.Async.LaunchResultBase, BulkSuspendError>(bulkSuspendArg, "api", "/team/members/bulk_suspend", "team", global::Dropbox.Api.Team.BulkSuspendArg.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, global::Dropbox.Api.Team.BulkSuspendError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members bulk suspend route.</para>
+        /// </summary>
+        /// <param name="bulkSuspendArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersBulkSuspend(BulkSuspendArg bulkSuspendArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersBulkSuspendAsync(bulkSuspendArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Launch a bulk suspend job. The server enforces a maximum of 500
+        /// members.</para>
+        /// </summary>
+        /// <param name="members">Must contain between 1 and 500 targets. The launch handler
+        /// also rejects duplicate client item IDs and duplicate member selectors.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="BulkSuspendError"/>.</exception>
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> MembersBulkSuspendAsync(col.IEnumerable<BulkSuspendMemberTarget> members)
+        {
+            var bulkSuspendArg = new BulkSuspendArg(members);
+
+            return this.MembersBulkSuspendAsync(bulkSuspendArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members bulk suspend route.</para>
+        /// </summary>
+        /// <param name="members">Must contain between 1 and 500 targets. The launch handler
+        /// also rejects duplicate client item IDs and duplicate member selectors.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersBulkSuspend(col.IEnumerable<BulkSuspendMemberTarget> members,
+                                                        sys.AsyncCallback callback,
+                                                        object callbackState = null)
+        {
+            var bulkSuspendArg = new BulkSuspendArg(members);
+
+            return this.BeginMembersBulkSuspend(bulkSuspendArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members bulk suspend route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="BulkSuspendError"/>.</exception>
+        public global::Dropbox.Api.Async.LaunchResultBase EndMembersBulkSuspend(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchResultBase>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Poll a previously launched bulk suspend job.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<BulkSuspendJobStatus> MembersBulkSuspendJobStatusCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, BulkSuspendJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/bulk_suspend/job_status/check", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Team.BulkSuspendJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members bulk suspend job status check
+        /// route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersBulkSuspendJobStatusCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.MembersBulkSuspendJobStatusCheckAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Poll a previously launched bulk suspend job.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<BulkSuspendJobStatus> MembersBulkSuspendJobStatusCheckAsync(string asyncJobId)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.MembersBulkSuspendJobStatusCheckAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the members bulk suspend job status check
+        /// route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginMembersBulkSuspendJobStatusCheck(string asyncJobId,
+                                                                      sys.AsyncCallback callback,
+                                                                      object callbackState = null)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginMembersBulkSuspendJobStatusCheck(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the members bulk suspend job
+        /// status check route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public BulkSuspendJobStatus EndMembersBulkSuspendJobStatusCheck(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<BulkSuspendJobStatus>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Permanently delete the files of a user who has been removed from the team.
         /// After permanent deletion, those files will not be available to be transferred to
         /// another team member. Permission : Team member management Exactly one of

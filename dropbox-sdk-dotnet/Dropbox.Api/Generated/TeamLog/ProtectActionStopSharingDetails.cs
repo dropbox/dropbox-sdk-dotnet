@@ -11,66 +11,68 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Added member to Replay project.</para>
+    /// <para>Stopped sharing content via Dropbox Protect.</para>
     /// </summary>
-    public class MediaHubProjectTeamAddDetails
+    public class ProtectActionStopSharingDetails
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<MediaHubProjectTeamAddDetails> Encoder = new MediaHubProjectTeamAddDetailsEncoder();
+        internal static enc.StructEncoder<ProtectActionStopSharingDetails> Encoder = new ProtectActionStopSharingDetailsEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<MediaHubProjectTeamAddDetails> Decoder = new MediaHubProjectTeamAddDetailsDecoder();
+        internal static enc.StructDecoder<ProtectActionStopSharingDetails> Decoder = new ProtectActionStopSharingDetailsDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="MediaHubProjectTeamAddDetails"
+        /// <para>Initializes a new instance of the <see cref="ProtectActionStopSharingDetails"
         /// /> class.</para>
         /// </summary>
-        /// <param name="project">Replay project.</param>
-        public MediaHubProjectTeamAddDetails(MediaHubProjectLogInfo project = null)
+        /// <param name="actionId">Action ID.</param>
+        public ProtectActionStopSharingDetails(string actionId)
         {
-            this.Project = project;
+            if (actionId == null)
+            {
+                throw new sys.ArgumentNullException("actionId");
+            }
+
+            this.ActionId = actionId;
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="MediaHubProjectTeamAddDetails"
+        /// <para>Initializes a new instance of the <see cref="ProtectActionStopSharingDetails"
         /// /> class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
-        public MediaHubProjectTeamAddDetails()
+        public ProtectActionStopSharingDetails()
         {
         }
 
         /// <summary>
-        /// <para>Replay project.</para>
+        /// <para>Action ID.</para>
         /// </summary>
-        public MediaHubProjectLogInfo Project { get; protected set; }
+        public string ActionId { get; protected set; }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="MediaHubProjectTeamAddDetails" />.</para>
+        /// <para>Encoder for  <see cref="ProtectActionStopSharingDetails" />.</para>
         /// </summary>
-        private class MediaHubProjectTeamAddDetailsEncoder : enc.StructEncoder<MediaHubProjectTeamAddDetails>
+        private class ProtectActionStopSharingDetailsEncoder : enc.StructEncoder<ProtectActionStopSharingDetails>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(MediaHubProjectTeamAddDetails value, enc.IJsonWriter writer)
+            public override void EncodeFields(ProtectActionStopSharingDetails value, enc.IJsonWriter writer)
             {
-                if (value.Project != null)
-                {
-                    WriteProperty("project", value.Project, writer, global::Dropbox.Api.TeamLog.MediaHubProjectLogInfo.Encoder);
-                }
+                WriteProperty("action_id", value.ActionId, writer, enc.StringEncoder.Instance);
             }
         }
 
@@ -80,18 +82,18 @@ namespace Dropbox.Api.TeamLog
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="MediaHubProjectTeamAddDetails" />.</para>
+        /// <para>Decoder for  <see cref="ProtectActionStopSharingDetails" />.</para>
         /// </summary>
-        private class MediaHubProjectTeamAddDetailsDecoder : enc.StructDecoder<MediaHubProjectTeamAddDetails>
+        private class ProtectActionStopSharingDetailsDecoder : enc.StructDecoder<ProtectActionStopSharingDetails>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="MediaHubProjectTeamAddDetails"
+            /// <para>Create a new instance of type <see cref="ProtectActionStopSharingDetails"
             /// />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override MediaHubProjectTeamAddDetails Create()
+            protected override ProtectActionStopSharingDetails Create()
             {
-                return new MediaHubProjectTeamAddDetails();
+                return new ProtectActionStopSharingDetails();
             }
 
             /// <summary>
@@ -100,12 +102,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(MediaHubProjectTeamAddDetails value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(ProtectActionStopSharingDetails value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
-                    case "project":
-                        value.Project = global::Dropbox.Api.TeamLog.MediaHubProjectLogInfo.Decoder.Decode(reader);
+                    case "action_id":
+                        value.ActionId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

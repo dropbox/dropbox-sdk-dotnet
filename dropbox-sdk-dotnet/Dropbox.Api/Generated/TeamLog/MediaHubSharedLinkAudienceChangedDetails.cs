@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed Media Hub shared link audience.</para>
+    /// <para>Changed Replay shared link audience.</para>
     /// </summary>
     public class MediaHubSharedLinkAudienceChangedDetails
     {
@@ -34,9 +34,11 @@ namespace Dropbox.Api.TeamLog
         /// <param name="targetType">Media Hub shared link target type.</param>
         /// <param name="previousValue">Previous Media Hub shared link audience.</param>
         /// <param name="newValue">New Media Hub shared link audience.</param>
+        /// <param name="project">Replay project.</param>
         public MediaHubSharedLinkAudienceChangedDetails(MediaHubSharedLinkTargetType targetType,
                                                         MediaHubSharedLinkAudience previousValue,
-                                                        MediaHubSharedLinkAudience newValue)
+                                                        MediaHubSharedLinkAudience newValue,
+                                                        MediaHubProjectLogInfo project = null)
         {
             if (targetType == null)
             {
@@ -56,6 +58,7 @@ namespace Dropbox.Api.TeamLog
             this.TargetType = targetType;
             this.PreviousValue = previousValue;
             this.NewValue = newValue;
+            this.Project = project;
         }
 
         /// <summary>
@@ -84,6 +87,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public MediaHubSharedLinkAudience NewValue { get; protected set; }
 
+        /// <summary>
+        /// <para>Replay project.</para>
+        /// </summary>
+        public MediaHubProjectLogInfo Project { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -101,6 +109,10 @@ namespace Dropbox.Api.TeamLog
                 WriteProperty("target_type", value.TargetType, writer, global::Dropbox.Api.TeamLog.MediaHubSharedLinkTargetType.Encoder);
                 WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.MediaHubSharedLinkAudience.Encoder);
                 WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.MediaHubSharedLinkAudience.Encoder);
+                if (value.Project != null)
+                {
+                    WriteProperty("project", value.Project, writer, global::Dropbox.Api.TeamLog.MediaHubProjectLogInfo.Encoder);
+                }
             }
         }
 
@@ -142,6 +154,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "new_value":
                         value.NewValue = global::Dropbox.Api.TeamLog.MediaHubSharedLinkAudience.Decoder.Decode(reader);
+                        break;
+                    case "project":
+                        value.Project = global::Dropbox.Api.TeamLog.MediaHubProjectLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

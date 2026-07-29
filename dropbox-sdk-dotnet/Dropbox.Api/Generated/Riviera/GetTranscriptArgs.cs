@@ -34,24 +34,14 @@ namespace Dropbox.Api.Riviera
         /// class.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the media asset to transcribe. Callers must
-        /// set exactly one of the oneof variants: - file_id: a Dropbox-issued file id (format:
-        /// "id:<id>") for a file the authenticated user has access to. - path: an absolute
-        /// Dropbox path, e.g. "/folder/recording.mp4". - url: either a Dropbox shared link
-        /// (www.dropbox.com) or an external HTTPS URL pointing to a supported audio/video
-        /// file. - Dropbox shared links are resolved internally using the caller's
-        /// authenticated identity and the link's visibility / download settings. They
-        /// therefore require an authenticated user context (anonymous `url` requests against
-        /// Dropbox links are rejected with an `ACCESS_ERROR`). Links protected by a password
-        /// are rejected with `shared_link_password_protected`; links with downloads disabled
-        /// are rejected with `link_download_disabled_error`. - External URLs are fetched over
-        /// HTTPS through the backend's egress proxy and must point at a supported audio/video
-        /// file extension. The referenced asset must be an audio or video file in a supported
-        /// format; requests against files with no audio track return a
-        /// `no_audio_error`.</param>
+        /// set exactly one of the `FileIdOrUrl` variants. The referenced asset must be an
+        /// audio or video file in a supported format (see the route description for the list);
+        /// requests against files with no audio track return a `no_audio_error`.</param>
         /// <param name="timestampLevel">Granularity of the time offsets returned for each
-        /// transcript segment. Defaults to `SENTENCE. - SENTENCE: one segment per spoken
-        /// sentence (recommended). - WORD: one segment per word, useful for fine-grained
-        /// alignment such as captioning or highlight-as-you-listen experiences.</param>
+        /// transcript segment. Defaults to `SENTENCE` when the field is omitted. - SENTENCE:
+        /// one segment per spoken sentence (recommended). - WORD: one segment per word, useful
+        /// for fine-grained alignment such as captioning or highlight-as-you-listen
+        /// experiences.</param>
         /// <param name="includedSpecialWords">Comma-delimited list of non-lexical filler words
         /// to preserve in the transcript output, e.g. `"uh, ah, uhm"`. By default these
         /// fillers are stripped. Unrecognized tokens are ignored. Leave empty to use the
@@ -67,7 +57,7 @@ namespace Dropbox.Api.Riviera
         {
             if (timestampLevel == null)
             {
-                timestampLevel = global::Dropbox.Api.Riviera.TimestampLevel.Unknown.Instance;
+                timestampLevel = global::Dropbox.Api.Riviera.TimestampLevel.Sentence.Instance;
             }
             if (includedSpecialWords == null)
             {
@@ -94,34 +84,25 @@ namespace Dropbox.Api.Riviera
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
         public GetTranscriptArgs()
         {
-            this.TimestampLevel = global::Dropbox.Api.Riviera.TimestampLevel.Unknown.Instance;
+            this.TimestampLevel = global::Dropbox.Api.Riviera.TimestampLevel.Sentence.Instance;
             this.IncludedSpecialWords = "";
             this.AudioLanguage = "";
         }
 
         /// <summary>
         /// <para>Identifier of the media asset to transcribe. Callers must set exactly one of
-        /// the oneof variants: - file_id: a Dropbox-issued file id (format: "id:<id>") for a
-        /// file the authenticated user has access to. - path: an absolute Dropbox path, e.g.
-        /// "/folder/recording.mp4". - url: either a Dropbox shared link (www.dropbox.com) or
-        /// an external HTTPS URL pointing to a supported audio/video file. - Dropbox shared
-        /// links are resolved internally using the caller's authenticated identity and the
-        /// link's visibility / download settings. They therefore require an authenticated user
-        /// context (anonymous `url` requests against Dropbox links are rejected with an
-        /// `ACCESS_ERROR`). Links protected by a password are rejected with
-        /// `shared_link_password_protected`; links with downloads disabled are rejected with
-        /// `link_download_disabled_error`. - External URLs are fetched over HTTPS through the
-        /// backend's egress proxy and must point at a supported audio/video file extension.
-        /// The referenced asset must be an audio or video file in a supported format; requests
-        /// against files with no audio track return a `no_audio_error`.</para>
+        /// the `FileIdOrUrl` variants. The referenced asset must be an audio or video file in
+        /// a supported format (see the route description for the list); requests against files
+        /// with no audio track return a `no_audio_error`.</para>
         /// </summary>
         public FileIdOrUrl FileIdOrUrl { get; protected set; }
 
         /// <summary>
         /// <para>Granularity of the time offsets returned for each transcript segment.
-        /// Defaults to `SENTENCE. - SENTENCE: one segment per spoken sentence (recommended). -
-        /// WORD: one segment per word, useful for fine-grained alignment such as captioning or
-        /// highlight-as-you-listen experiences.</para>
+        /// Defaults to `SENTENCE` when the field is omitted. - SENTENCE: one segment per
+        /// spoken sentence (recommended). - WORD: one segment per word, useful for
+        /// fine-grained alignment such as captioning or highlight-as-you-listen
+        /// experiences.</para>
         /// </summary>
         public TimestampLevel TimestampLevel { get; protected set; }
 

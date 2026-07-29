@@ -11,66 +11,68 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Removed member from Replay project.</para>
+    /// <para>Added collaborators via Dropbox Protect.</para>
     /// </summary>
-    public class MediaHubProjectTeamDeleteDetails
+    public class ProtectActionAddCollaboratorDetails
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<MediaHubProjectTeamDeleteDetails> Encoder = new MediaHubProjectTeamDeleteDetailsEncoder();
+        internal static enc.StructEncoder<ProtectActionAddCollaboratorDetails> Encoder = new ProtectActionAddCollaboratorDetailsEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<MediaHubProjectTeamDeleteDetails> Decoder = new MediaHubProjectTeamDeleteDetailsDecoder();
+        internal static enc.StructDecoder<ProtectActionAddCollaboratorDetails> Decoder = new ProtectActionAddCollaboratorDetailsDecoder();
 
         /// <summary>
         /// <para>Initializes a new instance of the <see
-        /// cref="MediaHubProjectTeamDeleteDetails" /> class.</para>
+        /// cref="ProtectActionAddCollaboratorDetails" /> class.</para>
         /// </summary>
-        /// <param name="project">Replay project.</param>
-        public MediaHubProjectTeamDeleteDetails(MediaHubProjectLogInfo project = null)
+        /// <param name="actionId">Action ID.</param>
+        public ProtectActionAddCollaboratorDetails(string actionId)
         {
-            this.Project = project;
+            if (actionId == null)
+            {
+                throw new sys.ArgumentNullException("actionId");
+            }
+
+            this.ActionId = actionId;
         }
 
         /// <summary>
         /// <para>Initializes a new instance of the <see
-        /// cref="MediaHubProjectTeamDeleteDetails" /> class.</para>
+        /// cref="ProtectActionAddCollaboratorDetails" /> class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
-        public MediaHubProjectTeamDeleteDetails()
+        public ProtectActionAddCollaboratorDetails()
         {
         }
 
         /// <summary>
-        /// <para>Replay project.</para>
+        /// <para>Action ID.</para>
         /// </summary>
-        public MediaHubProjectLogInfo Project { get; protected set; }
+        public string ActionId { get; protected set; }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="MediaHubProjectTeamDeleteDetails" />.</para>
+        /// <para>Encoder for  <see cref="ProtectActionAddCollaboratorDetails" />.</para>
         /// </summary>
-        private class MediaHubProjectTeamDeleteDetailsEncoder : enc.StructEncoder<MediaHubProjectTeamDeleteDetails>
+        private class ProtectActionAddCollaboratorDetailsEncoder : enc.StructEncoder<ProtectActionAddCollaboratorDetails>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(MediaHubProjectTeamDeleteDetails value, enc.IJsonWriter writer)
+            public override void EncodeFields(ProtectActionAddCollaboratorDetails value, enc.IJsonWriter writer)
             {
-                if (value.Project != null)
-                {
-                    WriteProperty("project", value.Project, writer, global::Dropbox.Api.TeamLog.MediaHubProjectLogInfo.Encoder);
-                }
+                WriteProperty("action_id", value.ActionId, writer, enc.StringEncoder.Instance);
             }
         }
 
@@ -80,18 +82,18 @@ namespace Dropbox.Api.TeamLog
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="MediaHubProjectTeamDeleteDetails" />.</para>
+        /// <para>Decoder for  <see cref="ProtectActionAddCollaboratorDetails" />.</para>
         /// </summary>
-        private class MediaHubProjectTeamDeleteDetailsDecoder : enc.StructDecoder<MediaHubProjectTeamDeleteDetails>
+        private class ProtectActionAddCollaboratorDetailsDecoder : enc.StructDecoder<ProtectActionAddCollaboratorDetails>
         {
             /// <summary>
             /// <para>Create a new instance of type <see
-            /// cref="MediaHubProjectTeamDeleteDetails" />.</para>
+            /// cref="ProtectActionAddCollaboratorDetails" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override MediaHubProjectTeamDeleteDetails Create()
+            protected override ProtectActionAddCollaboratorDetails Create()
             {
-                return new MediaHubProjectTeamDeleteDetails();
+                return new ProtectActionAddCollaboratorDetails();
             }
 
             /// <summary>
@@ -100,12 +102,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(MediaHubProjectTeamDeleteDetails value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(ProtectActionAddCollaboratorDetails value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
-                    case "project":
-                        value.Project = global::Dropbox.Api.TeamLog.MediaHubProjectLogInfo.Decoder.Decode(reader);
+                    case "action_id":
+                        value.ActionId = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();
