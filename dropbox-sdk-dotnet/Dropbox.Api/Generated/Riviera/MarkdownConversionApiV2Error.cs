@@ -11,7 +11,10 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The markdown conversion api v2 error object</para>
+    /// <para>Reason a markdown conversion job failed. Returned in the `failed` variant of
+    /// `GetMarkdownAsyncCheckResult`. This is a semantic error union: the HTTP status of the
+    /// poll request itself is unaffected (a poll that surfaces a failed job is still a normal
+    /// successful poll response). Callers should branch on the variant.</para>
     /// </summary>
     public class MarkdownConversionApiV2Error
     {
@@ -393,7 +396,8 @@ namespace Dropbox.Api.Riviera
         #endregion
 
         /// <summary>
-        /// <para>The server error object</para>
+        /// <para>An unexpected, typically transient, server-side failure. The string is a
+        /// human-readable message; retrying with backoff may succeed.</para>
         /// </summary>
         public sealed class ServerError : MarkdownConversionApiV2Error
         {
@@ -491,7 +495,9 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The user error object</para>
+        /// <para>The request could not be processed as supplied (a problem with the caller's
+        /// input). The string is a human-readable message; retrying the same request will not
+        /// help.</para>
         /// </summary>
         public sealed class UserError : MarkdownConversionApiV2Error
         {

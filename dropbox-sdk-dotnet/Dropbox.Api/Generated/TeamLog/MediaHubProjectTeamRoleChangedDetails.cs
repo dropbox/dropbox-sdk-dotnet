@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed member role in Media Hub project.</para>
+    /// <para>Changed member role in Replay project.</para>
     /// </summary>
     public class MediaHubProjectTeamRoleChangedDetails
     {
@@ -33,8 +33,10 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="previousRole">Previous Media Hub project role.</param>
         /// <param name="newRole">New Media Hub project role.</param>
+        /// <param name="project">Replay project.</param>
         public MediaHubProjectTeamRoleChangedDetails(MediaHubProjectRole previousRole,
-                                                     MediaHubProjectRole newRole)
+                                                     MediaHubProjectRole newRole,
+                                                     MediaHubProjectLogInfo project = null)
         {
             if (previousRole == null)
             {
@@ -48,6 +50,7 @@ namespace Dropbox.Api.TeamLog
 
             this.PreviousRole = previousRole;
             this.NewRole = newRole;
+            this.Project = project;
         }
 
         /// <summary>
@@ -71,6 +74,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public MediaHubProjectRole NewRole { get; protected set; }
 
+        /// <summary>
+        /// <para>Replay project.</para>
+        /// </summary>
+        public MediaHubProjectLogInfo Project { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -87,6 +95,10 @@ namespace Dropbox.Api.TeamLog
             {
                 WriteProperty("previous_role", value.PreviousRole, writer, global::Dropbox.Api.TeamLog.MediaHubProjectRole.Encoder);
                 WriteProperty("new_role", value.NewRole, writer, global::Dropbox.Api.TeamLog.MediaHubProjectRole.Encoder);
+                if (value.Project != null)
+                {
+                    WriteProperty("project", value.Project, writer, global::Dropbox.Api.TeamLog.MediaHubProjectLogInfo.Encoder);
+                }
             }
         }
 
@@ -125,6 +137,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "new_role":
                         value.NewRole = global::Dropbox.Api.TeamLog.MediaHubProjectRole.Decoder.Decode(reader);
+                        break;
+                    case "project":
+                        value.Project = global::Dropbox.Api.TeamLog.MediaHubProjectLogInfo.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

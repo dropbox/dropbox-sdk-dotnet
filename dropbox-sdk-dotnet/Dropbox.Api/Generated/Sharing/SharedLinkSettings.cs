@@ -42,7 +42,7 @@ namespace Dropbox.Api.Sharing
         /// specified by the link's access level specified in the `link_access_level` field of
         /// `LinkPermissions`. This is used in conjunction with team policies and shared folder
         /// policies to determine the final effective audience type in the `effective_audience`
-        /// field of `LinkPermissions.</param>
+        /// field of `LinkPermissions`.</param>
         /// <param name="access">Requested access level you want the audience to gain from this
         /// link. Note, modifying access level for an existing link is not supported.</param>
         /// <param name="requestedVisibility">Field is deprecated. Use <paramref
@@ -98,7 +98,7 @@ namespace Dropbox.Api.Sharing
         /// link's access level specified in the `link_access_level` field of
         /// `LinkPermissions`. This is used in conjunction with team policies and shared folder
         /// policies to determine the final effective audience type in the `effective_audience`
-        /// field of `LinkPermissions.</para>
+        /// field of `LinkPermissions`.</para>
         /// </summary>
         public LinkAudience Audience { get; protected set; }
 

@@ -207,7 +207,8 @@ namespace Dropbox.Api.Riviera
         #endregion
 
         /// <summary>
-        /// <para>The file id object</para>
+        /// <para>A Dropbox-issued file id (format: "id:<id>") for a file the authenticated
+        /// user has access to.</para>
         /// </summary>
         public sealed class FileId : FileIdOrUrl
         {
@@ -303,7 +304,15 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The url object</para>
+        /// <para>Either a Dropbox shared link (www.dropbox.com) or an external HTTP or HTTPS
+        /// URL pointing to a supported file. - Dropbox shared links are resolved internally
+        /// using the caller's authenticated identity and the link's visibility / download
+        /// settings. They therefore require an authenticated user context (anonymous `url`
+        /// requests against Dropbox links are rejected with an `access_error`). Links
+        /// protected by a password are rejected with `shared_link_password_protected`; links
+        /// with downloads disabled are rejected with `link_download_disabled_error`. -
+        /// External URLs are fetched through the backend's egress proxy and must point at a
+        /// supported file extension.</para>
         /// </summary>
         public sealed class Url : FileIdOrUrl
         {
@@ -399,7 +408,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The path object</para>
+        /// <para>An absolute Dropbox path, e.g. "/folder/example.pdf".</para>
         /// </summary>
         public sealed class Path : FileIdOrUrl
         {
