@@ -106,7 +106,10 @@ PowerPoint, `words`/`pages` for Word).</p>
       <section><p>Transcript segment for APIv2</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.html">ContentApiV2Error</a></h4>
-      <section><p>The content api v2 error object</p>
+      <section><p>Reason a transcript job failed. Returned in the `failed` variant of
+`GetTranscriptAsyncCheckResult`. This is a semantic error union: the HTTP status of the
+poll request itself is unaffected (a poll that surfaces a failed job is still a normal
+successful poll response). Callers should branch on the variant.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.IsAFolderError.html">ContentApiV2Error.IsAFolderError</a></h4>
       <section><p>The target is a folder, not a file.</p>
@@ -130,52 +133,38 @@ PowerPoint, `words`/`pages` for Word).</p>
       <section><p>The other object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.ServerError.html">ContentApiV2Error.ServerError</a></h4>
-      <section><p>The server error object</p>
+      <section><p>An unexpected, typically transient, server-side failure. The string is a
+human-readable message; retrying with backoff may succeed.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.SharedLinkPasswordProtected.html">ContentApiV2Error.SharedLinkPasswordProtected</a></h4>
       <section><p>The shared link password protected object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.UserError.html">ContentApiV2Error.UserError</a></h4>
-      <section><p>The user error object</p>
-</section>
-      <h4><a class="xref" href="Dropbox.Api.Riviera.ErrorCode.html">ErrorCode</a></h4>
-      <section><p>The error code object</p>
-</section>
-      <h4><a class="xref" href="Dropbox.Api.Riviera.ErrorCode.AccessError.html">ErrorCode.AccessError</a></h4>
-      <section><p>403</p>
-</section>
-      <h4><a class="xref" href="Dropbox.Api.Riviera.ErrorCode.ApiError.html">ErrorCode.ApiError</a></h4>
-      <section><p>409</p>
-</section>
-      <h4><a class="xref" href="Dropbox.Api.Riviera.ErrorCode.BadRequest.html">ErrorCode.BadRequest</a></h4>
-      <section><p>400</p>
-</section>
-      <h4><a class="xref" href="Dropbox.Api.Riviera.ErrorCode.Other.html">ErrorCode.Other</a></h4>
-      <section><p>The other object</p>
-</section>
-      <h4><a class="xref" href="Dropbox.Api.Riviera.ErrorCode.RatelimitError.html">ErrorCode.RatelimitError</a></h4>
-      <section><p>429</p>
-</section>
-      <h4><a class="xref" href="Dropbox.Api.Riviera.ErrorCode.Unavailable.html">ErrorCode.Unavailable</a></h4>
-      <section><p>503</p>
-</section>
-      <h4><a class="xref" href="Dropbox.Api.Riviera.ErrorCode.UnknownError.html">ErrorCode.UnknownError</a></h4>
-      <section><p>The unknown error object</p>
+      <section><p>The request could not be processed as supplied (a problem with the caller's
+input). The string is a human-readable message; retrying the same request will not
+help.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></h4>
       <section><p>The file id or url object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.FileId.html">FileIdOrUrl.FileId</a></h4>
-      <section><p>The file id object</p>
-</section>
+      <section></section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Other.html">FileIdOrUrl.Other</a></h4>
       <section><p>The other object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Path.html">FileIdOrUrl.Path</a></h4>
-      <section><p>The path object</p>
+      <section><p>An absolute Dropbox path, e.g. "/folder/example.pdf".</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a></h4>
-      <section><p>The url object</p>
+      <section><p>Either a Dropbox shared link (www.dropbox.com) or an external HTTP or HTTPS
+URL pointing to a supported file. - Dropbox shared links are resolved internally
+using the caller's authenticated identity and the link's visibility / download
+settings. They therefore require an authenticated user context (anonymous `url`
+requests against Dropbox links are rejected with an `access_error`). Links
+protected by a password are rejected with `shared_link_password_protected`; links
+with downloads disabled are rejected with `link_download_disabled_error`. -
+External URLs are fetched through the backend's egress proxy and must point at a
+supported file extension.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMarkdownArgs.html">GetMarkdownArgs</a></h4>
       <section><p>Arguments for the asynchronous `get_markdown_async` route. Exactly one of
@@ -196,9 +185,6 @@ document to convert to markdown.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.Other.html">GetMarkdownAsyncCheckResult.Other</a></h4>
       <section><p>The other object</p>
-</section>
-      <h4><a class="xref" href="Dropbox.Api.Riviera.GetMarkdownAsyncError.html">GetMarkdownAsyncError</a></h4>
-      <section><p>The get markdown async error object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMarkdownResult.html">GetMarkdownResult</a></h4>
       <section><p>The get markdown result object</p>
@@ -223,9 +209,6 @@ whose metadata should be extracted.</p>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Other.html">GetMetadataAsyncCheckResult.Other</a></h4>
       <section><p>The other object</p>
 </section>
-      <h4><a class="xref" href="Dropbox.Api.Riviera.GetMetadataAsyncError.html">GetMetadataAsyncError</a></h4>
-      <section><p>The get metadata async error object</p>
-</section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMetadataResult.html">GetMetadataResult</a></h4>
       <section><p>The get metadata result object</p>
 </section>
@@ -249,14 +232,14 @@ or video asset to transcribe.</p>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Other.html">GetTranscriptAsyncCheckResult.Other</a></h4>
       <section><p>The other object</p>
 </section>
-      <h4><a class="xref" href="Dropbox.Api.Riviera.GetTranscriptAsyncError.html">GetTranscriptAsyncError</a></h4>
-      <section><p>The get transcript async error object</p>
-</section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetTranscriptResult.html">GetTranscriptResult</a></h4>
       <section><p>The get transcript result object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.html">MarkdownConversionApiV2Error</a></h4>
-      <section><p>The markdown conversion api v2 error object</p>
+      <section><p>Reason a markdown conversion job failed. Returned in the `failed` variant of
+`GetMarkdownAsyncCheckResult`. This is a semantic error union: the HTTP status of the
+poll request itself is unaffected (a poll that surfaces a failed job is still a normal
+successful poll response). Callers should branch on the variant.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.ConversionFailureError.html">MarkdownConversionApiV2Error.ConversionFailureError</a></h4>
       <section><p>The conversion failure error object</p>
@@ -277,7 +260,8 @@ or video asset to transcribe.</p>
       <section><p>The other object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.ServerError.html">MarkdownConversionApiV2Error.ServerError</a></h4>
-      <section><p>The server error object</p>
+      <section><p>An unexpected, typically transient, server-side failure. The string is a
+human-readable message; retrying with backoff may succeed.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.SharedLinkPasswordProtected.html">MarkdownConversionApiV2Error.SharedLinkPasswordProtected</a></h4>
       <section><p>The shared link password protected object</p>
@@ -286,13 +270,18 @@ or video asset to transcribe.</p>
       <section><p>The unsupported format error object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError.html">MarkdownConversionApiV2Error.UserError</a></h4>
-      <section><p>The user error object</p>
+      <section><p>The request could not be processed as supplied (a problem with the caller's
+input). The string is a human-readable message; retrying the same request will not
+help.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MediaDurationError.html">MediaDurationError</a></h4>
       <section><p>The media duration error object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.html">MetadataExtractionApiV2Error</a></h4>
-      <section><p>The metadata extraction api v2 error object</p>
+      <section><p>Reason a metadata extraction job failed. Returned in the `failed` variant of
+`GetMetadataAsyncCheckResult`. This is a semantic error union: the HTTP status of the
+poll request itself is unaffected (a poll that surfaces a failed job is still a normal
+successful poll response). Callers should branch on the variant.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.ConversionFailureError.html">MetadataExtractionApiV2Error.ConversionFailureError</a></h4>
       <section><p>The conversion failure error object</p>
@@ -313,7 +302,8 @@ or video asset to transcribe.</p>
       <section><p>The other object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.ServerError.html">MetadataExtractionApiV2Error.ServerError</a></h4>
-      <section><p>The server error object</p>
+      <section><p>An unexpected, typically transient, server-side failure. The string is a
+human-readable message; retrying with backoff may succeed.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.SharedLinkPasswordProtected.html">MetadataExtractionApiV2Error.SharedLinkPasswordProtected</a></h4>
       <section><p>The shared link password protected object</p>
@@ -322,7 +312,9 @@ or video asset to transcribe.</p>
       <section><p>The unsupported format error object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError.html">MetadataExtractionApiV2Error.UserError</a></h4>
-      <section><p>The user error object</p>
+      <section><p>The request could not be processed as supplied (a problem with the caller's
+input). The string is a human-readable message; retrying the same request will not
+help.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataType.html">MetadataType</a></h4>
       <section><p>Which metadata variant is populated in a `GetMetadataResult`, derived from the
@@ -391,9 +383,6 @@ result.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.Sentence.html">TimestampLevel.Sentence</a></h4>
       <section><p>The sentence object</p>
-</section>
-      <h4><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.Unknown.html">TimestampLevel.Unknown</a></h4>
-      <section><p>The unknown object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.Word.html">TimestampLevel.Word</a></h4>
       <section><p>The word object</p>

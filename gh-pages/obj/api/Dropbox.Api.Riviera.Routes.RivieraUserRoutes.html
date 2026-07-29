@@ -117,7 +117,8 @@
   </span>
   <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginGetMarkdownAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginGetMarkdownAsync*"></a>
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginGetMarkdownAsync_Dropbox_Api_Riviera_FileIdOrUrl_System_Boolean_System_Boolean_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginGetMarkdownAsync(Dropbox.Api.Riviera.FileIdOrUrl,System.Boolean,System.Boolean,System.AsyncCallback,System.Object)">BeginGetMarkdownAsync(FileIdOrUrl, bool, bool, AsyncCallback, object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the get markdown async route.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -136,27 +137,39 @@
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
-        <td></td>
+        <td><p>Identifier of the document to convert. Callers must set
+exactly one of the <code>FileIdOrUrl</code> variants. The referenced file must be a document
+in a supported format (see the route description for the list); requests against
+unsupported formats return <code>unsupported_format_error</code>.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">enableOcr</span></td>
-        <td></td>
+        <td><p>Enable OCR for PDF documents. Processing is slower when
+enabled.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">embedImages</span></td>
-        <td></td>
+        <td><p>When true, embed images as base64 data URIs in the
+markdown output. This can significantly increase output size.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></td>
         <td><span class="parametername">callback</span></td>
-        <td></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td><span class="parametername">callbackState</span></td>
-        <td></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -171,7 +184,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
-        <td></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -365,7 +379,8 @@ from other send requests.</p>
   </span>
   <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginGetMetadataAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginGetMetadataAsync*"></a>
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginGetMetadataAsync_Dropbox_Api_Riviera_FileIdOrUrl_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginGetMetadataAsync(Dropbox.Api.Riviera.FileIdOrUrl,System.AsyncCallback,System.Object)">BeginGetMetadataAsync(FileIdOrUrl, AsyncCallback, object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the get metadata async route.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -384,17 +399,28 @@ from other send requests.</p>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
-        <td></td>
+        <td><p>Identifier of the file to extract metadata from. Callers
+must set exactly one of the <code>FileIdOrUrl</code> variants. The kind of metadata returned
+is determined by the file type: image files return EXIF metadata, audio/video files
+return media metadata, PDFs return PDF metadata, and MS Office documents (docx,
+pptx, xlsx) return Office metadata. See the route description for the supported
+formats. Requests against unsupported formats return
+<code>unsupported_format_error</code>.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></td>
         <td><span class="parametername">callback</span></td>
-        <td></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td><span class="parametername">callbackState</span></td>
-        <td></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -409,7 +435,8 @@ from other send requests.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
-        <td></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -603,7 +630,8 @@ from other send requests.</p>
   </span>
   <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginGetTranscriptAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginGetTranscriptAsync*"></a>
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginGetTranscriptAsync_Dropbox_Api_Riviera_FileIdOrUrl_Dropbox_Api_Riviera_TimestampLevel_System_String_System_String_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginGetTranscriptAsync(Dropbox.Api.Riviera.FileIdOrUrl,Dropbox.Api.Riviera.TimestampLevel,System.String,System.String,System.AsyncCallback,System.Object)">BeginGetTranscriptAsync(FileIdOrUrl, TimestampLevel, string, string, AsyncCallback, object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the get transcript async route.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -622,32 +650,53 @@ from other send requests.</p>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
-        <td></td>
+        <td><p>Identifier of the media asset to transcribe. Callers must
+set exactly one of the <code>FileIdOrUrl</code> variants. The referenced asset must be an
+audio or video file in a supported format (see the route description for the list);
+requests against files with no audio track return a <code>no_audio_error</code>.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.html">TimestampLevel</a></td>
         <td><span class="parametername">timestampLevel</span></td>
-        <td></td>
+        <td><p>Granularity of the time offsets returned for each
+transcript segment. Defaults to <code>SENTENCE</code> when the field is omitted. - SENTENCE:
+one segment per spoken sentence (recommended). - WORD: one segment per word, useful
+for fine-grained alignment such as captioning or highlight-as-you-listen
+experiences.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">includedSpecialWords</span></td>
-        <td></td>
+        <td><p>Comma-delimited list of non-lexical filler words
+to preserve in the transcript output, e.g. <code>&quot;uh, ah, uhm&quot;</code>. By default these
+fillers are stripped. Unrecognized tokens are ignored. Leave empty to use the
+default filtering behavior.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">audioLanguage</span></td>
-        <td></td>
+        <td><p>Optional ISO 639-1 two-letter language code hinting the
+spoken language of the source audio (e.g. &quot;en&quot;, &quot;ja&quot;). When empty, the service
+auto-detects the language; supplying a hint improves accuracy and latency for short
+or ambiguous clips. Unsupported languages fall back to auto-detection.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></td>
         <td><span class="parametername">callback</span></td>
-        <td></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
         <td><span class="parametername">callbackState</span></td>
-        <td></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -662,7 +711,8 @@ from other send requests.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
-        <td></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1201,7 +1251,11 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
   </span>
   <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMarkdownAsyncAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMarkdownAsyncAsync*"></a>
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMarkdownAsyncAsync_Dropbox_Api_Riviera_FileIdOrUrl_System_Boolean_System_Boolean_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMarkdownAsyncAsync(Dropbox.Api.Riviera.FileIdOrUrl,System.Boolean,System.Boolean)">GetMarkdownAsyncAsync(FileIdOrUrl, bool, bool)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Asynchronous document-to-markdown conversion for supported file formats.
+Supported formats: .binder, .docx, .html, .paper, .papert, .pptx, .xlsx, .gsheet,
+.ods, .pdf. Unsupported formats return an `unsupported_format_error`. Size limit:
+the source file must be at most 50 MB. Larger files are rejected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -1220,17 +1274,25 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
-        <td></td>
+        <td><p>Identifier of the document to convert. Callers must set
+exactly one of the <code>FileIdOrUrl</code> variants. The referenced file must be a document
+in a supported format (see the route description for the list); requests against
+unsupported formats return <code>unsupported_format_error</code>.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">enableOcr</span></td>
-        <td></td>
+        <td><p>Enable OCR for PDF documents. Processing is slower when
+enabled.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">embedImages</span></td>
-        <td></td>
+        <td><p>When true, embed images as base64 data URIs in the
+markdown output. This can significantly increase output size.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1245,7 +1307,9 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Async.LaunchResultBase.html">LaunchResultBase</a>&gt;</td>
-        <td></td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1255,8 +1319,10 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
   </span>
   <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMarkdownAsyncAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMarkdownAsyncAsync*"></a>
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMarkdownAsyncAsync_Dropbox_Api_Riviera_GetMarkdownArgs_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMarkdownAsyncAsync(Dropbox.Api.Riviera.GetMarkdownArgs)">GetMarkdownAsyncAsync(GetMarkdownArgs)</h4>
-  <div class="markdown level1 summary"><p>Asynchronous document-to-markdown conversion for supported file
-formats.</p>
+  <div class="markdown level1 summary"><p>Asynchronous document-to-markdown conversion for supported file formats.
+Supported formats: .binder, .docx, .html, .paper, .papert, .pptx, .xlsx, .gsheet,
+.ods, .pdf. Unsupported formats return an `unsupported_format_error`. Size limit:
+the source file must be at most 50 MB. Larger files are rejected.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -1435,7 +1501,17 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
   </span>
   <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMetadataAsyncAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMetadataAsyncAsync*"></a>
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMetadataAsyncAsync_Dropbox_Api_Riviera_FileIdOrUrl_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMetadataAsyncAsync(Dropbox.Api.Riviera.FileIdOrUrl)">GetMetadataAsyncAsync(FileIdOrUrl)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Asynchronous file metadata extraction for supported file formats. The kind of
+metadata returned depends on the file type: - Image (EXIF) formats: .3fr, .arw,
+.avif, .bmp, .cr2, .cr3, .crw, .dcr, .dcs, .dng, .erf, .gif, .heic, .j2c, .j2k,
+.jp2, .jpc, .jpeg, .jpf, .jpg, .jpg2, .jpm, .jpx, .kdc, .mef, .mos, .mrw, .nef,
+.nrw, .orf, .pef, .png, .ppm, .r3d, .raf, .rw2, .rwl, .sr2, .tga, .tif, .tiff,
+.wbmp, .web, .webp, .x3f. - Audio/video (media) formats: .aac, .aif, .aiff, .flac,
+.m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma, .3gp, .3gpp, .3gpp2, .asf, .avi, .dv,
+.flv, .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora,
+.ogv, .rm, .ts, .vob, .webm, .wmv. - PDF format: .pdf. - MS Office formats: .docx,
+.pptx, .xlsx. Unsupported formats return an `unsupported_format_error`.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -1454,7 +1530,14 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
-        <td></td>
+        <td><p>Identifier of the file to extract metadata from. Callers
+must set exactly one of the <code>FileIdOrUrl</code> variants. The kind of metadata returned
+is determined by the file type: image files return EXIF metadata, audio/video files
+return media metadata, PDFs return PDF metadata, and MS Office documents (docx,
+pptx, xlsx) return Office metadata. See the route description for the supported
+formats. Requests against unsupported formats return
+<code>unsupported_format_error</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1469,7 +1552,9 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Async.LaunchResultBase.html">LaunchResultBase</a>&gt;</td>
-        <td></td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1479,7 +1564,16 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
   </span>
   <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMetadataAsyncAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMetadataAsyncAsync*"></a>
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMetadataAsyncAsync_Dropbox_Api_Riviera_GetMetadataArgs_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMetadataAsyncAsync(Dropbox.Api.Riviera.GetMetadataArgs)">GetMetadataAsyncAsync(GetMetadataArgs)</h4>
-  <div class="markdown level1 summary"><p>Asynchronous file metadata extraction for supported file formats.</p>
+  <div class="markdown level1 summary"><p>Asynchronous file metadata extraction for supported file formats. The kind of
+metadata returned depends on the file type: - Image (EXIF) formats: .3fr, .arw,
+.avif, .bmp, .cr2, .cr3, .crw, .dcr, .dcs, .dng, .erf, .gif, .heic, .j2c, .j2k,
+.jp2, .jpc, .jpeg, .jpf, .jpg, .jpg2, .jpm, .jpx, .kdc, .mef, .mos, .mrw, .nef,
+.nrw, .orf, .pef, .png, .ppm, .r3d, .raf, .rw2, .rwl, .sr2, .tga, .tif, .tiff,
+.wbmp, .web, .webp, .x3f. - Audio/video (media) formats: .aac, .aif, .aiff, .flac,
+.m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma, .3gp, .3gpp, .3gpp2, .asf, .avi, .dv,
+.flv, .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora,
+.ogv, .rm, .ts, .vob, .webm, .wmv. - PDF format: .pdf. - MS Office formats: .docx,
+.pptx, .xlsx. Unsupported formats return an `unsupported_format_error`.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -1658,7 +1752,14 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
   </span>
   <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetTranscriptAsyncAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetTranscriptAsyncAsync*"></a>
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetTranscriptAsyncAsync_Dropbox_Api_Riviera_FileIdOrUrl_Dropbox_Api_Riviera_TimestampLevel_System_String_System_String_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetTranscriptAsyncAsync(Dropbox.Api.Riviera.FileIdOrUrl,Dropbox.Api.Riviera.TimestampLevel,System.String,System.String)">GetTranscriptAsyncAsync(FileIdOrUrl, TimestampLevel, string, string)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Asynchronous transcript generation for audio and video files. Supported audio
+formats: .aac, .aif, .aiff, .flac, .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma.
+Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv, .m2t, .m2ts,
+.m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv, .rm, .ts, .vob,
+.webm, .wmv. Unsupported formats return an `unsupported_format_error`. Size limits:
+the source file must be at most 10 GB and its audio track at most 1 hour in
+duration. Files exceeding these limits are rejected.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -1677,22 +1778,39 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
-        <td></td>
+        <td><p>Identifier of the media asset to transcribe. Callers must
+set exactly one of the <code>FileIdOrUrl</code> variants. The referenced asset must be an
+audio or video file in a supported format (see the route description for the list);
+requests against files with no audio track return a <code>no_audio_error</code>.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.html">TimestampLevel</a></td>
         <td><span class="parametername">timestampLevel</span></td>
-        <td></td>
+        <td><p>Granularity of the time offsets returned for each
+transcript segment. Defaults to <code>SENTENCE</code> when the field is omitted. - SENTENCE:
+one segment per spoken sentence (recommended). - WORD: one segment per word, useful
+for fine-grained alignment such as captioning or highlight-as-you-listen
+experiences.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">includedSpecialWords</span></td>
-        <td></td>
+        <td><p>Comma-delimited list of non-lexical filler words
+to preserve in the transcript output, e.g. <code>&quot;uh, ah, uhm&quot;</code>. By default these
+fillers are stripped. Unrecognized tokens are ignored. Leave empty to use the
+default filtering behavior.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">audioLanguage</span></td>
-        <td></td>
+        <td><p>Optional ISO 639-1 two-letter language code hinting the
+spoken language of the source audio (e.g. &quot;en&quot;, &quot;ja&quot;). When empty, the service
+auto-detects the language; supplying a hint improves accuracy and latency for short
+or ambiguous clips. Unsupported languages fall back to auto-detection.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1707,7 +1825,9 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Async.LaunchResultBase.html">LaunchResultBase</a>&gt;</td>
-        <td></td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1717,7 +1837,13 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
   </span>
   <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetTranscriptAsyncAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetTranscriptAsyncAsync*"></a>
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetTranscriptAsyncAsync_Dropbox_Api_Riviera_GetTranscriptArgs_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetTranscriptAsyncAsync(Dropbox.Api.Riviera.GetTranscriptArgs)">GetTranscriptAsyncAsync(GetTranscriptArgs)</h4>
-  <div class="markdown level1 summary"><p>Asynchronous transcript generation for audio and video files.</p>
+  <div class="markdown level1 summary"><p>Asynchronous transcript generation for audio and video files. Supported audio
+formats: .aac, .aif, .aiff, .flac, .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma.
+Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv, .m2t, .m2ts,
+.m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv, .rm, .ts, .vob,
+.webm, .wmv. Unsupported formats return an `unsupported_format_error`. Size limits:
+the source file must be at most 10 GB and its audio track at most 1 hour in
+duration. Files exceeding these limits are rejected.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class MetadataExtractionApiV2Error | Dropbox .NET SDK API Reference ">
     
-    <meta name="description" content="The metadata extraction api v2 error object">
+    <meta name="description" content="Reason a metadata extraction job failed. Returned in the `failed` variant of `GetMetadataAsyncCheckResult`. This is a semantic error union: the HTTP status of the poll request itself is unaffected (a poll that surfaces a failed job is still a normal successful poll response). Callers should branch on the variant.">
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
@@ -71,7 +71,10 @@
 
 
   <h1 id="Dropbox_Api_Riviera_MetadataExtractionApiV2Error" data-uid="Dropbox.Api.Riviera.MetadataExtractionApiV2Error" class="text-break">Class MetadataExtractionApiV2Error</h1>
-  <div class="markdown level0 summary"><p>The metadata extraction api v2 error object</p>
+  <div class="markdown level0 summary"><p>Reason a metadata extraction job failed. Returned in the `failed` variant of
+`GetMetadataAsyncCheckResult`. This is a semantic error union: the HTTP status of the
+poll request itself is unaffected (a poll that surfaces a failed job is still a normal
+successful poll response). Callers should branch on the variant.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

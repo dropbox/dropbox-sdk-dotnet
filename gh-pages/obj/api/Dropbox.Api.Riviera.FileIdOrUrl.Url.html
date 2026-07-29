@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class FileIdOrUrl.Url | Dropbox .NET SDK API Reference ">
     
-    <meta name="description" content="The url object">
+    <meta name="description" content="Either a Dropbox shared link (www.dropbox.com) or an external HTTP or HTTPS URL pointing to a supported file. - Dropbox shared links are resolved internally using the caller&#39;s authenticated identity and the link&#39;s visibility / download settings. They therefore require an authenticated user context (anonymous `url` requests against Dropbox links are rejected with an `access_error`). Links protected by a password are rejected with `shared_link_password_protected`; links with downloads disabled are rejected with `link_download_disabled_error`. - External URLs are fetched through the backend&#39;s egress proxy and must point at a supported file extension.">
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
@@ -71,7 +71,15 @@
 
 
   <h1 id="Dropbox_Api_Riviera_FileIdOrUrl_Url" data-uid="Dropbox.Api.Riviera.FileIdOrUrl.Url" class="text-break">Class FileIdOrUrl.Url</h1>
-  <div class="markdown level0 summary"><p>The url object</p>
+  <div class="markdown level0 summary"><p>Either a Dropbox shared link (www.dropbox.com) or an external HTTP or HTTPS
+URL pointing to a supported file. - Dropbox shared links are resolved internally
+using the caller's authenticated identity and the link's visibility / download
+settings. They therefore require an authenticated user context (anonymous `url`
+requests against Dropbox links are rejected with an `access_error`). Links
+protected by a password are rejected with `shared_link_password_protected`; links
+with downloads disabled are rejected with `link_download_disabled_error`. -
+External URLs are fetched through the backend's egress proxy and must point at a
+supported file extension.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">

@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class MediaHubSharedLinkCreatedDetails | Dropbox .NET SDK API Reference ">
     
-    <meta name="description" content="Created Media Hub shared link.">
+    <meta name="description" content="Created Replay shared link.">
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
@@ -64,7 +64,7 @@
 
 
   <h1 id="Dropbox_Api_TeamLog_MediaHubSharedLinkCreatedDetails" data-uid="Dropbox.Api.TeamLog.MediaHubSharedLinkCreatedDetails" class="text-break">Class MediaHubSharedLinkCreatedDetails</h1>
-  <div class="markdown level0 summary"><p>Created Media Hub shared link.</p>
+  <div class="markdown level0 summary"><p>Created Replay shared link.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -109,13 +109,13 @@
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MediaHubSharedLinkCreatedDetails.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_TeamLog_MediaHubSharedLinkCreatedDetails__ctor_" data-uid="Dropbox.Api.TeamLog.MediaHubSharedLinkCreatedDetails.#ctor*"></a>
-  <h4 id="Dropbox_Api_TeamLog_MediaHubSharedLinkCreatedDetails__ctor_Dropbox_Api_TeamLog_MediaHubSharedLinkTargetType_Dropbox_Api_TeamLog_MediaHubSharedLinkAudience_" data-uid="Dropbox.Api.TeamLog.MediaHubSharedLinkCreatedDetails.#ctor(Dropbox.Api.TeamLog.MediaHubSharedLinkTargetType,Dropbox.Api.TeamLog.MediaHubSharedLinkAudience)">MediaHubSharedLinkCreatedDetails(MediaHubSharedLinkTargetType, MediaHubSharedLinkAudience)</h4>
+  <h4 id="Dropbox_Api_TeamLog_MediaHubSharedLinkCreatedDetails__ctor_Dropbox_Api_TeamLog_MediaHubSharedLinkTargetType_Dropbox_Api_TeamLog_MediaHubSharedLinkAudience_Dropbox_Api_TeamLog_MediaHubProjectLogInfo_" data-uid="Dropbox.Api.TeamLog.MediaHubSharedLinkCreatedDetails.#ctor(Dropbox.Api.TeamLog.MediaHubSharedLinkTargetType,Dropbox.Api.TeamLog.MediaHubSharedLinkAudience,Dropbox.Api.TeamLog.MediaHubProjectLogInfo)">MediaHubSharedLinkCreatedDetails(MediaHubSharedLinkTargetType, MediaHubSharedLinkAudience, MediaHubProjectLogInfo)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.TeamLog.MediaHubSharedLinkCreatedDetails.html">MediaHubSharedLinkCreatedDetails</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MediaHubSharedLinkCreatedDetails(MediaHubSharedLinkTargetType targetType, MediaHubSharedLinkAudience audience)</code></pre>
+    <pre><code class="lang-csharp hljs">public MediaHubSharedLinkCreatedDetails(MediaHubSharedLinkTargetType targetType, MediaHubSharedLinkAudience audience, MediaHubProjectLogInfo project = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -137,6 +137,12 @@
         <td><a class="xref" href="Dropbox.Api.TeamLog.MediaHubSharedLinkAudience.html">MediaHubSharedLinkAudience</a></td>
         <td><span class="parametername">audience</span></td>
         <td><p>Media Hub shared link audience.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.MediaHubProjectLogInfo.html">MediaHubProjectLogInfo</a></td>
+        <td><span class="parametername">project</span></td>
+        <td><p>Replay project.</p>
 </td>
       </tr>
     </tbody>
@@ -167,6 +173,34 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Dropbox.Api.TeamLog.MediaHubSharedLinkAudience.html">MediaHubSharedLinkAudience</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MediaHubSharedLinkCreatedDetails.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_MediaHubSharedLinkCreatedDetails_Project_" data-uid="Dropbox.Api.TeamLog.MediaHubSharedLinkCreatedDetails.Project*"></a>
+  <h4 id="Dropbox_Api_TeamLog_MediaHubSharedLinkCreatedDetails_Project" data-uid="Dropbox.Api.TeamLog.MediaHubSharedLinkCreatedDetails.Project">Project</h4>
+  <div class="markdown level1 summary"><p>Replay project.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MediaHubProjectLogInfo Project { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.TeamLog.MediaHubProjectLogInfo.html">MediaHubProjectLogInfo</a></td>
         <td></td>
       </tr>
     </tbody>

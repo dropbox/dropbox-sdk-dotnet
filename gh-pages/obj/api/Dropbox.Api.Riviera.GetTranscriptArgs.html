@@ -119,7 +119,9 @@ or video asset to transcribe.</p>
   </span>
   <a id="Dropbox_Api_Riviera_GetTranscriptArgs__ctor_" data-uid="Dropbox.Api.Riviera.GetTranscriptArgs.#ctor*"></a>
   <h4 id="Dropbox_Api_Riviera_GetTranscriptArgs__ctor_Dropbox_Api_Riviera_FileIdOrUrl_Dropbox_Api_Riviera_TimestampLevel_System_String_System_String_" data-uid="Dropbox.Api.Riviera.GetTranscriptArgs.#ctor(Dropbox.Api.Riviera.FileIdOrUrl,Dropbox.Api.Riviera.TimestampLevel,System.String,System.String)">GetTranscriptArgs(FileIdOrUrl, TimestampLevel, string, string)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Riviera.GetTranscriptArgs.html">GetTranscriptArgs</a>
+class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -138,22 +140,39 @@ or video asset to transcribe.</p>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
-        <td></td>
+        <td><p>Identifier of the media asset to transcribe. Callers must
+set exactly one of the <code>FileIdOrUrl</code> variants. The referenced asset must be an
+audio or video file in a supported format (see the route description for the list);
+requests against files with no audio track return a <code>no_audio_error</code>.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.html">TimestampLevel</a></td>
         <td><span class="parametername">timestampLevel</span></td>
-        <td></td>
+        <td><p>Granularity of the time offsets returned for each
+transcript segment. Defaults to <code>SENTENCE</code> when the field is omitted. - SENTENCE:
+one segment per spoken sentence (recommended). - WORD: one segment per word, useful
+for fine-grained alignment such as captioning or highlight-as-you-listen
+experiences.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">includedSpecialWords</span></td>
-        <td></td>
+        <td><p>Comma-delimited list of non-lexical filler words
+to preserve in the transcript output, e.g. <code>&quot;uh, ah, uhm&quot;</code>. By default these
+fillers are stripped. Unrecognized tokens are ignored. Leave empty to use the
+default filtering behavior.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">audioLanguage</span></td>
-        <td></td>
+        <td><p>Optional ISO 639-1 two-letter language code hinting the
+spoken language of the source audio (e.g. &quot;en&quot;, &quot;ja&quot;). When empty, the service
+auto-detects the language; supplying a hint improves accuracy and latency for short
+or ambiguous clips. Unsupported languages fall back to auto-detection.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -196,7 +215,11 @@ clips. Unsupported languages fall back to auto-detection.</p>
   </span>
   <a id="Dropbox_Api_Riviera_GetTranscriptArgs_FileIdOrUrl_" data-uid="Dropbox.Api.Riviera.GetTranscriptArgs.FileIdOrUrl*"></a>
   <h4 id="Dropbox_Api_Riviera_GetTranscriptArgs_FileIdOrUrl" data-uid="Dropbox.Api.Riviera.GetTranscriptArgs.FileIdOrUrl">FileIdOrUrl</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Identifier of the media asset to transcribe. Callers must set exactly one of
+the `FileIdOrUrl` variants. The referenced asset must be an audio or video file in
+a supported format (see the route description for the list); requests against files
+with no audio track return a `no_audio_error`.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -255,9 +278,10 @@ behavior.</p>
   <a id="Dropbox_Api_Riviera_GetTranscriptArgs_TimestampLevel_" data-uid="Dropbox.Api.Riviera.GetTranscriptArgs.TimestampLevel*"></a>
   <h4 id="Dropbox_Api_Riviera_GetTranscriptArgs_TimestampLevel" data-uid="Dropbox.Api.Riviera.GetTranscriptArgs.TimestampLevel">TimestampLevel</h4>
   <div class="markdown level1 summary"><p>Granularity of the time offsets returned for each transcript segment.
-Defaults to `SENTENCE. - SENTENCE: one segment per spoken sentence (recommended). -
-WORD: one segment per word, useful for fine-grained alignment such as captioning or
-highlight-as-you-listen experiences.</p>
+Defaults to `SENTENCE` when the field is omitted. - SENTENCE: one segment per
+spoken sentence (recommended). - WORD: one segment per word, useful for
+fine-grained alignment such as captioning or highlight-as-you-listen
+experiences.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

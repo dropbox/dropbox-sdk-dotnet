@@ -119,7 +119,9 @@ document to convert to markdown.</p>
   </span>
   <a id="Dropbox_Api_Riviera_GetMarkdownArgs__ctor_" data-uid="Dropbox.Api.Riviera.GetMarkdownArgs.#ctor*"></a>
   <h4 id="Dropbox_Api_Riviera_GetMarkdownArgs__ctor_Dropbox_Api_Riviera_FileIdOrUrl_System_Boolean_System_Boolean_" data-uid="Dropbox.Api.Riviera.GetMarkdownArgs.#ctor(Dropbox.Api.Riviera.FileIdOrUrl,System.Boolean,System.Boolean)">GetMarkdownArgs(FileIdOrUrl, bool, bool)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Riviera.GetMarkdownArgs.html">GetMarkdownArgs</a>
+class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -138,17 +140,25 @@ document to convert to markdown.</p>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
-        <td></td>
+        <td><p>Identifier of the document to convert. Callers must set
+exactly one of the <code>FileIdOrUrl</code> variants. The referenced file must be a document
+in a supported format (see the route description for the list); requests against
+unsupported formats return <code>unsupported_format_error</code>.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">enableOcr</span></td>
-        <td></td>
+        <td><p>Enable OCR for PDF documents. Processing is slower when
+enabled.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">embedImages</span></td>
-        <td></td>
+        <td><p>When true, embed images as base64 data URIs in the
+markdown output. This can significantly increase output size.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -217,7 +227,11 @@ significantly increase output size.</p>
   </span>
   <a id="Dropbox_Api_Riviera_GetMarkdownArgs_FileIdOrUrl_" data-uid="Dropbox.Api.Riviera.GetMarkdownArgs.FileIdOrUrl*"></a>
   <h4 id="Dropbox_Api_Riviera_GetMarkdownArgs_FileIdOrUrl" data-uid="Dropbox.Api.Riviera.GetMarkdownArgs.FileIdOrUrl">FileIdOrUrl</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Identifier of the document to convert. Callers must set exactly one of the
+`FileIdOrUrl` variants. The referenced file must be a document in a supported
+format (see the route description for the list); requests against unsupported
+formats return `unsupported_format_error`.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
