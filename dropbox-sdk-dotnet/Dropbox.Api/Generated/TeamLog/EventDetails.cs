@@ -6686,6 +6686,76 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// ProtectPolicyActivatedDetails</para>
+        /// </summary>
+        public bool IsProtectPolicyActivatedDetails
+        {
+            get
+            {
+                return this is ProtectPolicyActivatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectPolicyActivatedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public ProtectPolicyActivatedDetails AsProtectPolicyActivatedDetails
+        {
+            get
+            {
+                return this as ProtectPolicyActivatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectPolicyDeactivatedDetails</para>
+        /// </summary>
+        public bool IsProtectPolicyDeactivatedDetails
+        {
+            get
+            {
+                return this is ProtectPolicyDeactivatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectPolicyDeactivatedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ProtectPolicyDeactivatedDetails AsProtectPolicyDeactivatedDetails
+        {
+            get
+            {
+                return this as ProtectPolicyDeactivatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectPolicyUpdatedDetails</para>
+        /// </summary>
+        public bool IsProtectPolicyUpdatedDetails
+        {
+            get
+            {
+                return this is ProtectPolicyUpdatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectPolicyUpdatedDetails, or <c>null</c>.</para>
+        /// </summary>
+        public ProtectPolicyUpdatedDetails AsProtectPolicyUpdatedDetails
+        {
+            get
+            {
+                return this as ProtectPolicyUpdatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// ClassificationCreateReportDetails</para>
         /// </summary>
         public bool IsClassificationCreateReportDetails
@@ -16495,6 +16565,24 @@ namespace Dropbox.Api.TeamLog
                     ProtectInternalDomainsChangedDetails.Encoder.EncodeFields((ProtectInternalDomainsChangedDetails)value, writer);
                     return;
                 }
+                if (value is ProtectPolicyActivatedDetails)
+                {
+                    WriteProperty(".tag", "protect_policy_activated_details", writer, enc.StringEncoder.Instance);
+                    ProtectPolicyActivatedDetails.Encoder.EncodeFields((ProtectPolicyActivatedDetails)value, writer);
+                    return;
+                }
+                if (value is ProtectPolicyDeactivatedDetails)
+                {
+                    WriteProperty(".tag", "protect_policy_deactivated_details", writer, enc.StringEncoder.Instance);
+                    ProtectPolicyDeactivatedDetails.Encoder.EncodeFields((ProtectPolicyDeactivatedDetails)value, writer);
+                    return;
+                }
+                if (value is ProtectPolicyUpdatedDetails)
+                {
+                    WriteProperty(".tag", "protect_policy_updated_details", writer, enc.StringEncoder.Instance);
+                    ProtectPolicyUpdatedDetails.Encoder.EncodeFields((ProtectPolicyUpdatedDetails)value, writer);
+                    return;
+                }
                 if (value is ClassificationCreateReportDetails)
                 {
                     WriteProperty(".tag", "classification_create_report_details", writer, enc.StringEncoder.Instance);
@@ -19155,6 +19243,12 @@ namespace Dropbox.Api.TeamLog
                         return ProtectActionStopSharingDetails.Decoder.DecodeFields(reader);
                     case "protect_internal_domains_changed_details":
                         return ProtectInternalDomainsChangedDetails.Decoder.DecodeFields(reader);
+                    case "protect_policy_activated_details":
+                        return ProtectPolicyActivatedDetails.Decoder.DecodeFields(reader);
+                    case "protect_policy_deactivated_details":
+                        return ProtectPolicyDeactivatedDetails.Decoder.DecodeFields(reader);
+                    case "protect_policy_updated_details":
+                        return ProtectPolicyUpdatedDetails.Decoder.DecodeFields(reader);
                     case "classification_create_report_details":
                         return ClassificationCreateReportDetails.Decoder.DecodeFields(reader);
                     case "classification_create_report_fail_details":
@@ -45563,6 +45657,276 @@ namespace Dropbox.Api.TeamLog
                 public override ProtectInternalDomainsChangedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new ProtectInternalDomainsChangedDetails(global::Dropbox.Api.TeamLog.ProtectInternalDomainsChangedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect policy activated details object</para>
+        /// </summary>
+        public sealed class ProtectPolicyActivatedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectPolicyActivatedDetails> Encoder = new ProtectPolicyActivatedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectPolicyActivatedDetails> Decoder = new ProtectPolicyActivatedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectPolicyActivatedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectPolicyActivatedDetails(global::Dropbox.Api.TeamLog.ProtectPolicyActivatedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectPolicyActivatedDetails" /> class.</para>
+            /// </summary>
+            private ProtectPolicyActivatedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectPolicyActivatedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectPolicyActivatedDetails" />.</para>
+            /// </summary>
+            private class ProtectPolicyActivatedDetailsEncoder : enc.StructEncoder<ProtectPolicyActivatedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectPolicyActivatedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_policy_activated_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectPolicyActivatedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectPolicyActivatedDetails" />.</para>
+            /// </summary>
+            private class ProtectPolicyActivatedDetailsDecoder : enc.StructDecoder<ProtectPolicyActivatedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProtectPolicyActivatedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectPolicyActivatedDetails Create()
+                {
+                    return new ProtectPolicyActivatedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectPolicyActivatedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectPolicyActivatedDetails(global::Dropbox.Api.TeamLog.ProtectPolicyActivatedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect policy deactivated details object</para>
+        /// </summary>
+        public sealed class ProtectPolicyDeactivatedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectPolicyDeactivatedDetails> Encoder = new ProtectPolicyDeactivatedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectPolicyDeactivatedDetails> Decoder = new ProtectPolicyDeactivatedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectPolicyDeactivatedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectPolicyDeactivatedDetails(global::Dropbox.Api.TeamLog.ProtectPolicyDeactivatedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectPolicyDeactivatedDetails" /> class.</para>
+            /// </summary>
+            private ProtectPolicyDeactivatedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectPolicyDeactivatedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectPolicyDeactivatedDetails" />.</para>
+            /// </summary>
+            private class ProtectPolicyDeactivatedDetailsEncoder : enc.StructEncoder<ProtectPolicyDeactivatedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectPolicyDeactivatedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_policy_deactivated_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectPolicyDeactivatedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectPolicyDeactivatedDetails" />.</para>
+            /// </summary>
+            private class ProtectPolicyDeactivatedDetailsDecoder : enc.StructDecoder<ProtectPolicyDeactivatedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProtectPolicyDeactivatedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectPolicyDeactivatedDetails Create()
+                {
+                    return new ProtectPolicyDeactivatedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectPolicyDeactivatedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectPolicyDeactivatedDetails(global::Dropbox.Api.TeamLog.ProtectPolicyDeactivatedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect policy updated details object</para>
+        /// </summary>
+        public sealed class ProtectPolicyUpdatedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectPolicyUpdatedDetails> Encoder = new ProtectPolicyUpdatedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectPolicyUpdatedDetails> Decoder = new ProtectPolicyUpdatedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectPolicyUpdatedDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectPolicyUpdatedDetails(global::Dropbox.Api.TeamLog.ProtectPolicyUpdatedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectPolicyUpdatedDetails"
+            /// /> class.</para>
+            /// </summary>
+            private ProtectPolicyUpdatedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectPolicyUpdatedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectPolicyUpdatedDetails" />.</para>
+            /// </summary>
+            private class ProtectPolicyUpdatedDetailsEncoder : enc.StructEncoder<ProtectPolicyUpdatedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectPolicyUpdatedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_policy_updated_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectPolicyUpdatedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectPolicyUpdatedDetails" />.</para>
+            /// </summary>
+            private class ProtectPolicyUpdatedDetailsDecoder : enc.StructDecoder<ProtectPolicyUpdatedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ProtectPolicyUpdatedDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectPolicyUpdatedDetails Create()
+                {
+                    return new ProtectPolicyUpdatedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectPolicyUpdatedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectPolicyUpdatedDetails(global::Dropbox.Api.TeamLog.ProtectPolicyUpdatedDetails.Decoder.DecodeFields(reader));
                 }
             }
 

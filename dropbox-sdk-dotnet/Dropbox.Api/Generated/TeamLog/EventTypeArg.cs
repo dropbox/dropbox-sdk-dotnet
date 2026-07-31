@@ -6506,6 +6506,74 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// ProtectPolicyActivated</para>
+        /// </summary>
+        public bool IsProtectPolicyActivated
+        {
+            get
+            {
+                return this is ProtectPolicyActivated;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectPolicyActivated, or <c>null</c>.</para>
+        /// </summary>
+        public ProtectPolicyActivated AsProtectPolicyActivated
+        {
+            get
+            {
+                return this as ProtectPolicyActivated;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectPolicyDeactivated</para>
+        /// </summary>
+        public bool IsProtectPolicyDeactivated
+        {
+            get
+            {
+                return this is ProtectPolicyDeactivated;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectPolicyDeactivated, or <c>null</c>.</para>
+        /// </summary>
+        public ProtectPolicyDeactivated AsProtectPolicyDeactivated
+        {
+            get
+            {
+                return this as ProtectPolicyDeactivated;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is ProtectPolicyUpdated</para>
+        /// </summary>
+        public bool IsProtectPolicyUpdated
+        {
+            get
+            {
+                return this is ProtectPolicyUpdated;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectPolicyUpdated, or <c>null</c>.</para>
+        /// </summary>
+        public ProtectPolicyUpdated AsProtectPolicyUpdated
+        {
+            get
+            {
+                return this as ProtectPolicyUpdated;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// ClassificationCreateReport</para>
         /// </summary>
         public bool IsClassificationCreateReport
@@ -16089,6 +16157,24 @@ namespace Dropbox.Api.TeamLog
                     ProtectInternalDomainsChanged.Encoder.EncodeFields((ProtectInternalDomainsChanged)value, writer);
                     return;
                 }
+                if (value is ProtectPolicyActivated)
+                {
+                    WriteProperty(".tag", "protect_policy_activated", writer, enc.StringEncoder.Instance);
+                    ProtectPolicyActivated.Encoder.EncodeFields((ProtectPolicyActivated)value, writer);
+                    return;
+                }
+                if (value is ProtectPolicyDeactivated)
+                {
+                    WriteProperty(".tag", "protect_policy_deactivated", writer, enc.StringEncoder.Instance);
+                    ProtectPolicyDeactivated.Encoder.EncodeFields((ProtectPolicyDeactivated)value, writer);
+                    return;
+                }
+                if (value is ProtectPolicyUpdated)
+                {
+                    WriteProperty(".tag", "protect_policy_updated", writer, enc.StringEncoder.Instance);
+                    ProtectPolicyUpdated.Encoder.EncodeFields((ProtectPolicyUpdated)value, writer);
+                    return;
+                }
                 if (value is ClassificationCreateReport)
                 {
                     WriteProperty(".tag", "classification_create_report", writer, enc.StringEncoder.Instance);
@@ -18743,6 +18829,12 @@ namespace Dropbox.Api.TeamLog
                         return ProtectActionStopSharing.Decoder.DecodeFields(reader);
                     case "protect_internal_domains_changed":
                         return ProtectInternalDomainsChanged.Decoder.DecodeFields(reader);
+                    case "protect_policy_activated":
+                        return ProtectPolicyActivated.Decoder.DecodeFields(reader);
+                    case "protect_policy_deactivated":
+                        return ProtectPolicyDeactivated.Decoder.DecodeFields(reader);
+                    case "protect_policy_updated":
+                        return ProtectPolicyUpdated.Decoder.DecodeFields(reader);
                     case "classification_create_report":
                         return ClassificationCreateReport.Decoder.DecodeFields(reader);
                     case "classification_create_report_fail":
@@ -39620,6 +39712,219 @@ namespace Dropbox.Api.TeamLog
                 protected override ProtectInternalDomainsChanged Create()
                 {
                     return ProtectInternalDomainsChanged.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(protect) Activated a Dropbox Protect policy</para>
+        /// </summary>
+        public sealed class ProtectPolicyActivated : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectPolicyActivated> Encoder = new ProtectPolicyActivatedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectPolicyActivated> Decoder = new ProtectPolicyActivatedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectPolicyActivated" />
+            /// class.</para>
+            /// </summary>
+            private ProtectPolicyActivated()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ProtectPolicyActivated</para>
+            /// </summary>
+            public static readonly ProtectPolicyActivated Instance = new ProtectPolicyActivated();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectPolicyActivated" />.</para>
+            /// </summary>
+            private class ProtectPolicyActivatedEncoder : enc.StructEncoder<ProtectPolicyActivated>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectPolicyActivated value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectPolicyActivated" />.</para>
+            /// </summary>
+            private class ProtectPolicyActivatedDecoder : enc.StructDecoder<ProtectPolicyActivated>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ProtectPolicyActivated"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectPolicyActivated Create()
+                {
+                    return ProtectPolicyActivated.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(protect) Deactivated a Dropbox Protect policy</para>
+        /// </summary>
+        public sealed class ProtectPolicyDeactivated : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectPolicyDeactivated> Encoder = new ProtectPolicyDeactivatedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectPolicyDeactivated> Decoder = new ProtectPolicyDeactivatedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectPolicyDeactivated" />
+            /// class.</para>
+            /// </summary>
+            private ProtectPolicyDeactivated()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ProtectPolicyDeactivated</para>
+            /// </summary>
+            public static readonly ProtectPolicyDeactivated Instance = new ProtectPolicyDeactivated();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectPolicyDeactivated" />.</para>
+            /// </summary>
+            private class ProtectPolicyDeactivatedEncoder : enc.StructEncoder<ProtectPolicyDeactivated>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectPolicyDeactivated value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectPolicyDeactivated" />.</para>
+            /// </summary>
+            private class ProtectPolicyDeactivatedDecoder : enc.StructDecoder<ProtectPolicyDeactivated>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ProtectPolicyDeactivated"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectPolicyDeactivated Create()
+                {
+                    return ProtectPolicyDeactivated.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(protect) Updated a Dropbox Protect policy</para>
+        /// </summary>
+        public sealed class ProtectPolicyUpdated : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectPolicyUpdated> Encoder = new ProtectPolicyUpdatedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectPolicyUpdated> Decoder = new ProtectPolicyUpdatedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectPolicyUpdated" />
+            /// class.</para>
+            /// </summary>
+            private ProtectPolicyUpdated()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ProtectPolicyUpdated</para>
+            /// </summary>
+            public static readonly ProtectPolicyUpdated Instance = new ProtectPolicyUpdated();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectPolicyUpdated" />.</para>
+            /// </summary>
+            private class ProtectPolicyUpdatedEncoder : enc.StructEncoder<ProtectPolicyUpdated>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectPolicyUpdated value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectPolicyUpdated" />.</para>
+            /// </summary>
+            private class ProtectPolicyUpdatedDecoder : enc.StructDecoder<ProtectPolicyUpdated>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ProtectPolicyUpdated"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectPolicyUpdated Create()
+                {
+                    return ProtectPolicyUpdated.Instance;
                 }
 
             }
