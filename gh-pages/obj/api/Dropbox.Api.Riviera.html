@@ -212,6 +212,29 @@ whose metadata should be extracted.</p>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMetadataResult.html">GetMetadataResult</a></h4>
       <section><p>The get metadata result object</p>
 </section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetTextArgs.html">GetTextArgs</a></h4>
+      <section><p>Arguments for the asynchronous `get_text_async` route. Exactly one of `file_id`,
+`path`, or `url` must be supplied via `file_id_or_url` to identify the document whose
+plain-text content should be extracted.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetTextAsyncCheckResult.html">GetTextAsyncCheckResult</a></h4>
+      <section><p>Result type for EventBus async check - must end in "CheckResult"</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetTextAsyncCheckResult.Complete.html">GetTextAsyncCheckResult.Complete</a></h4>
+      <section><p>The complete object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetTextAsyncCheckResult.Failed.html">GetTextAsyncCheckResult.Failed</a></h4>
+      <section><p>The failed object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetTextAsyncCheckResult.InProgress.html">GetTextAsyncCheckResult.InProgress</a></h4>
+      <section><p>The in progress object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetTextAsyncCheckResult.Other.html">GetTextAsyncCheckResult.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetTextResult.html">GetTextResult</a></h4>
+      <section><p>The get text result object</p>
+</section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetTranscriptArgs.html">GetTranscriptArgs</a></h4>
       <section><p>Arguments for the asynchronous `get_transcript_async` route. Exactly one of
 `file_id`, `path`, or `url` must be supplied via `file_id_or_url` to identify the audio
@@ -374,6 +397,45 @@ result.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OfficeFileType.Other.html">OfficeFileType.Other</a></h4>
       <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.html">TextExtractionApiV2Error</a></h4>
+      <section><p>Reason a text extraction job failed. Returned in the `failed` variant of
+`GetTextAsyncCheckResult`. This is a semantic error union: the HTTP status of the poll
+request itself is unaffected (a poll that surfaces a failed job is still a normal
+successful poll response). Callers should branch on the variant.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.ConversionFailureError.html">TextExtractionApiV2Error.ConversionFailureError</a></h4>
+      <section><p>The conversion failure error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.IsAFolderError.html">TextExtractionApiV2Error.IsAFolderError</a></h4>
+      <section><p>The target is a folder, not a file.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.LimitExceededError.html">TextExtractionApiV2Error.LimitExceededError</a></h4>
+      <section><p>The limit exceeded error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.LinkDownloadDisabledError.html">TextExtractionApiV2Error.LinkDownloadDisabledError</a></h4>
+      <section><p>The link download disabled error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.NotFoundError.html">TextExtractionApiV2Error.NotFoundError</a></h4>
+      <section><p>The referenced file does not exist or is not accessible.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.Other.html">TextExtractionApiV2Error.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.ServerError.html">TextExtractionApiV2Error.ServerError</a></h4>
+      <section><p>An unexpected, typically transient, server-side failure. The string is a
+human-readable message; retrying with backoff may succeed.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.SharedLinkPasswordProtected.html">TextExtractionApiV2Error.SharedLinkPasswordProtected</a></h4>
+      <section><p>The shared link password protected object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.UnsupportedFormatError.html">TextExtractionApiV2Error.UnsupportedFormatError</a></h4>
+      <section><p>The unsupported format error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.UserError.html">TextExtractionApiV2Error.UserError</a></h4>
+      <section><p>The request could not be processed as supplied (a problem with the caller's
+input). The string is a human-readable message; retrying the same request will not
+help.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.html">TimestampLevel</a></h4>
       <section><p>The timestamp level object</p>
