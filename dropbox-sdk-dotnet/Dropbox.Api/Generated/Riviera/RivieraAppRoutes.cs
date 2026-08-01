@@ -415,6 +415,195 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
+        /// <para>Asynchronous plain-text extraction from documents. Supported formats include:
+        /// - Word processing: .doc, .docx, .docm, .rtf. - Presentations: .ppt, .pptx, .pptm. -
+        /// Spreadsheets: .xls, .xlsx, .xlsm. - PDF: .pdf. - Dropbox document types: .paper,
+        /// .papert, .binder, .gdoc, .gsheet, .gslides. - Plain text / subtitles: .txt, .vtt.
+        /// Unsupported formats return an `unsupported_format_error`. For the `url` variant
+        /// only Dropbox shared links are supported; external URLs return
+        /// `unsupported_format_error`.</para>
+        /// </summary>
+        /// <param name="getTextArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetTextAsyncAsync(GetTextArgs getTextArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<GetTextArgs, global::Dropbox.Api.Async.LaunchResultBase, enc.Empty>(getTextArgs, "api", "/riviera/get_text_async", "app", global::Dropbox.Api.Riviera.GetTextArgs.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get text async route.</para>
+        /// </summary>
+        /// <param name="getTextArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetTextAsync(GetTextArgs getTextArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetTextAsyncAsync(getTextArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Asynchronous plain-text extraction from documents. Supported formats include:
+        /// - Word processing: .doc, .docx, .docm, .rtf. - Presentations: .ppt, .pptx, .pptm. -
+        /// Spreadsheets: .xls, .xlsx, .xlsm. - PDF: .pdf. - Dropbox document types: .paper,
+        /// .papert, .binder, .gdoc, .gsheet, .gslides. - Plain text / subtitles: .txt, .vtt.
+        /// Unsupported formats return an `unsupported_format_error`. For the `url` variant
+        /// only Dropbox shared links are supported; external URLs return
+        /// `unsupported_format_error`.</para>
+        /// </summary>
+        /// <param name="fileIdOrUrl">Identifier of the document to extract text from. Callers
+        /// must set exactly one of the `FileIdOrUrl` variants. Text extraction is supported
+        /// for common document formats (Word, PowerPoint, Excel, PDF, RTF, and Dropbox
+        /// document types); see the route description for the supported formats. Requests
+        /// against unsupported formats return `unsupported_format_error`. NOTE: for the `url`
+        /// variant, only Dropbox shared links (www.dropbox.com) are supported. External
+        /// (non-Dropbox) URLs are not supported and return `unsupported_format_error`; import
+        /// the file into Dropbox and reference it by `file_id` or `path` instead.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetTextAsyncAsync(FileIdOrUrl fileIdOrUrl = null)
+        {
+            var getTextArgs = new GetTextArgs(fileIdOrUrl);
+
+            return this.GetTextAsyncAsync(getTextArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get text async route.</para>
+        /// </summary>
+        /// <param name="fileIdOrUrl">Identifier of the document to extract text from. Callers
+        /// must set exactly one of the `FileIdOrUrl` variants. Text extraction is supported
+        /// for common document formats (Word, PowerPoint, Excel, PDF, RTF, and Dropbox
+        /// document types); see the route description for the supported formats. Requests
+        /// against unsupported formats return `unsupported_format_error`. NOTE: for the `url`
+        /// variant, only Dropbox shared links (www.dropbox.com) are supported. External
+        /// (non-Dropbox) URLs are not supported and return `unsupported_format_error`; import
+        /// the file into Dropbox and reference it by `file_id` or `path` instead.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetTextAsync(FileIdOrUrl fileIdOrUrl = null,
+                                                  sys.AsyncCallback callback = null,
+                                                  object callbackState = null)
+        {
+            var getTextArgs = new GetTextArgs(fileIdOrUrl);
+
+            return this.BeginGetTextAsync(getTextArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get text async route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public global::Dropbox.Api.Async.LaunchResultBase EndGetTextAsync(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchResultBase>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns the status or result of specified get_text_async task.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<GetTextAsyncCheckResult> GetTextAsyncCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, GetTextAsyncCheckResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/riviera/get_text_async/check", "app", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Riviera.GetTextAsyncCheckResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get text async check route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetTextAsyncCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetTextAsyncCheckAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the status or result of specified get_text_async task.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<GetTextAsyncCheckResult> GetTextAsyncCheckAsync(string asyncJobId)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.GetTextAsyncCheckAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get text async check route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetTextAsyncCheck(string asyncJobId,
+                                                       sys.AsyncCallback callback,
+                                                       object callbackState = null)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginGetTextAsyncCheck(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get text async check route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public GetTextAsyncCheckResult EndGetTextAsyncCheck(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<GetTextAsyncCheckResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Asynchronous transcript generation for audio and video files. Supported audio
         /// formats: .aac, .aif, .aiff, .flac, .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma.
         /// Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv, .m2t, .m2ts,
