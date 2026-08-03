@@ -6551,6 +6551,29 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectPolicyScheduled</para>
+        /// </summary>
+        public bool IsProtectPolicyScheduled
+        {
+            get
+            {
+                return this is ProtectPolicyScheduled;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectPolicyScheduled, or <c>null</c>.</para>
+        /// </summary>
+        public ProtectPolicyScheduled AsProtectPolicyScheduled
+        {
+            get
+            {
+                return this as ProtectPolicyScheduled;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is ProtectPolicyUpdated</para>
         /// </summary>
         public bool IsProtectPolicyUpdated
@@ -16169,6 +16192,12 @@ namespace Dropbox.Api.TeamLog
                     ProtectPolicyDeactivated.Encoder.EncodeFields((ProtectPolicyDeactivated)value, writer);
                     return;
                 }
+                if (value is ProtectPolicyScheduled)
+                {
+                    WriteProperty(".tag", "protect_policy_scheduled", writer, enc.StringEncoder.Instance);
+                    ProtectPolicyScheduled.Encoder.EncodeFields((ProtectPolicyScheduled)value, writer);
+                    return;
+                }
                 if (value is ProtectPolicyUpdated)
                 {
                     WriteProperty(".tag", "protect_policy_updated", writer, enc.StringEncoder.Instance);
@@ -18833,6 +18862,8 @@ namespace Dropbox.Api.TeamLog
                         return ProtectPolicyActivated.Decoder.DecodeFields(reader);
                     case "protect_policy_deactivated":
                         return ProtectPolicyDeactivated.Decoder.DecodeFields(reader);
+                    case "protect_policy_scheduled":
+                        return ProtectPolicyScheduled.Decoder.DecodeFields(reader);
                     case "protect_policy_updated":
                         return ProtectPolicyUpdated.Decoder.DecodeFields(reader);
                     case "classification_create_report":
@@ -39854,6 +39885,77 @@ namespace Dropbox.Api.TeamLog
                 protected override ProtectPolicyDeactivated Create()
                 {
                     return ProtectPolicyDeactivated.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(protect) Scheduled a Dropbox Protect policy</para>
+        /// </summary>
+        public sealed class ProtectPolicyScheduled : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectPolicyScheduled> Encoder = new ProtectPolicyScheduledEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectPolicyScheduled> Decoder = new ProtectPolicyScheduledDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectPolicyScheduled" />
+            /// class.</para>
+            /// </summary>
+            private ProtectPolicyScheduled()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ProtectPolicyScheduled</para>
+            /// </summary>
+            public static readonly ProtectPolicyScheduled Instance = new ProtectPolicyScheduled();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectPolicyScheduled" />.</para>
+            /// </summary>
+            private class ProtectPolicyScheduledEncoder : enc.StructEncoder<ProtectPolicyScheduled>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectPolicyScheduled value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectPolicyScheduled" />.</para>
+            /// </summary>
+            private class ProtectPolicyScheduledDecoder : enc.StructDecoder<ProtectPolicyScheduled>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ProtectPolicyScheduled"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectPolicyScheduled Create()
+                {
+                    return ProtectPolicyScheduled.Instance;
                 }
 
             }
