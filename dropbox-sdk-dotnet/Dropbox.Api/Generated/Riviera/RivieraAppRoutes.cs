@@ -415,6 +415,199 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
+        /// <para>Asynchronous OCR (optical character recognition) text extraction for images
+        /// and PDFs, including scanned / non-text PDFs. Supported formats: - Image formats:
+        /// .bmp, .gif, .heic, .jpeg, .jpg, .png, .tif, .tiff, .webp. - PDF format: .pdf.
+        /// Unsupported formats return an `unsupported_format_error`. For the `url` variant
+        /// only Dropbox shared links are supported; external URLs return
+        /// `unsupported_format_error`. Text-based PDFs already carry a text layer, so OCR is
+        /// not run against them and the result is empty; use `get_text_async` to read the
+        /// embedded text layer of such a PDF. The result carries the extracted words as plain
+        /// text, plus the same content as hOCR with per-word coordinates.</para>
+        /// </summary>
+        /// <param name="getOcrArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetOcrAsyncAsync(GetOcrArgs getOcrArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<GetOcrArgs, global::Dropbox.Api.Async.LaunchResultBase, enc.Empty>(getOcrArgs, "api", "/riviera/get_ocr_async", "app", global::Dropbox.Api.Riviera.GetOcrArgs.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get ocr async route.</para>
+        /// </summary>
+        /// <param name="getOcrArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetOcrAsync(GetOcrArgs getOcrArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetOcrAsyncAsync(getOcrArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Asynchronous OCR (optical character recognition) text extraction for images
+        /// and PDFs, including scanned / non-text PDFs. Supported formats: - Image formats:
+        /// .bmp, .gif, .heic, .jpeg, .jpg, .png, .tif, .tiff, .webp. - PDF format: .pdf.
+        /// Unsupported formats return an `unsupported_format_error`. For the `url` variant
+        /// only Dropbox shared links are supported; external URLs return
+        /// `unsupported_format_error`. Text-based PDFs already carry a text layer, so OCR is
+        /// not run against them and the result is empty; use `get_text_async` to read the
+        /// embedded text layer of such a PDF. The result carries the extracted words as plain
+        /// text, plus the same content as hOCR with per-word coordinates.</para>
+        /// </summary>
+        /// <param name="fileIdOrUrl">Identifier of the file to run OCR on. Callers must set
+        /// exactly one of the `FileIdOrUrl` variants. OCR is supported for image files and
+        /// PDFs, including scanned / non-text PDFs; see the route description for the
+        /// supported formats. Requests against unsupported formats return
+        /// `unsupported_format_error`. NOTE: for the `url` variant, only Dropbox shared links
+        /// (www.dropbox.com) are supported. External (non-Dropbox) URLs are not supported and
+        /// return `unsupported_format_error`; import the file into Dropbox and reference it by
+        /// `file_id` or `path` instead.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetOcrAsyncAsync(FileIdOrUrl fileIdOrUrl = null)
+        {
+            var getOcrArgs = new GetOcrArgs(fileIdOrUrl);
+
+            return this.GetOcrAsyncAsync(getOcrArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get ocr async route.</para>
+        /// </summary>
+        /// <param name="fileIdOrUrl">Identifier of the file to run OCR on. Callers must set
+        /// exactly one of the `FileIdOrUrl` variants. OCR is supported for image files and
+        /// PDFs, including scanned / non-text PDFs; see the route description for the
+        /// supported formats. Requests against unsupported formats return
+        /// `unsupported_format_error`. NOTE: for the `url` variant, only Dropbox shared links
+        /// (www.dropbox.com) are supported. External (non-Dropbox) URLs are not supported and
+        /// return `unsupported_format_error`; import the file into Dropbox and reference it by
+        /// `file_id` or `path` instead.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetOcrAsync(FileIdOrUrl fileIdOrUrl = null,
+                                                 sys.AsyncCallback callback = null,
+                                                 object callbackState = null)
+        {
+            var getOcrArgs = new GetOcrArgs(fileIdOrUrl);
+
+            return this.BeginGetOcrAsync(getOcrArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get ocr async route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public global::Dropbox.Api.Async.LaunchResultBase EndGetOcrAsync(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchResultBase>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns the status or result of specified get_ocr_async task.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<GetOcrAsyncCheckResult> GetOcrAsyncCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, GetOcrAsyncCheckResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/riviera/get_ocr_async/check", "app", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Riviera.GetOcrAsyncCheckResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get ocr async check route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetOcrAsyncCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetOcrAsyncCheckAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the status or result of specified get_ocr_async task.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<GetOcrAsyncCheckResult> GetOcrAsyncCheckAsync(string asyncJobId)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.GetOcrAsyncCheckAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get ocr async check route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetOcrAsyncCheck(string asyncJobId,
+                                                      sys.AsyncCallback callback,
+                                                      object callbackState = null)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginGetOcrAsyncCheck(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get ocr async check route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public GetOcrAsyncCheckResult EndGetOcrAsyncCheck(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<GetOcrAsyncCheckResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Asynchronous plain-text extraction from documents. Supported formats include:
         /// - Word processing: .doc, .docx, .docm, .rtf. - Presentations: .ppt, .pptx, .pptm. -
         /// Spreadsheets: .xls, .xlsx, .xlsm. - PDF: .pdf. - Dropbox document types: .paper,
