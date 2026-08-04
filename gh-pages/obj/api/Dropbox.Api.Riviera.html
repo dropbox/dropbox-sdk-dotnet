@@ -212,6 +212,29 @@ whose metadata should be extracted.</p>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMetadataResult.html">GetMetadataResult</a></h4>
       <section><p>The get metadata result object</p>
 </section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetOcrArgs.html">GetOcrArgs</a></h4>
+      <section><p>Arguments for the asynchronous `get_ocr_async` route. Exactly one of `file_id`,
+`path`, or `url` must be supplied via `file_id_or_url` to identify the image or PDF
+whose text should be extracted via OCR (optical character recognition).</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetOcrAsyncCheckResult.html">GetOcrAsyncCheckResult</a></h4>
+      <section><p>Result type for EventBus async check - must end in "CheckResult"</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetOcrAsyncCheckResult.Complete.html">GetOcrAsyncCheckResult.Complete</a></h4>
+      <section><p>The complete object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetOcrAsyncCheckResult.Failed.html">GetOcrAsyncCheckResult.Failed</a></h4>
+      <section><p>The failed object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetOcrAsyncCheckResult.InProgress.html">GetOcrAsyncCheckResult.InProgress</a></h4>
+      <section><p>The in progress object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetOcrAsyncCheckResult.Other.html">GetOcrAsyncCheckResult.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetOcrResult.html">GetOcrResult</a></h4>
+      <section><p>The get ocr result object</p>
+</section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetTextArgs.html">GetTextArgs</a></h4>
       <section><p>Arguments for the asynchronous `get_text_async` route. Exactly one of `file_id`,
 `path`, or `url` must be supplied via `file_id_or_url` to identify the document whose
@@ -378,6 +401,45 @@ file type.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataUnion.Pdf.html">MetadataUnion.Pdf</a></h4>
       <section><p>The pdf object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.html">OcrExtractionApiV2Error</a></h4>
+      <section><p>Reason an OCR extraction job failed. Returned in the `failed` variant of
+`GetOcrAsyncCheckResult`. This is a semantic error union: the HTTP status of the poll
+request itself is unaffected (a poll that surfaces a failed job is still a normal
+successful poll response). Callers should branch on the variant.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.ConversionFailureError.html">OcrExtractionApiV2Error.ConversionFailureError</a></h4>
+      <section><p>The conversion failure error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.IsAFolderError.html">OcrExtractionApiV2Error.IsAFolderError</a></h4>
+      <section><p>The target is a folder, not a file.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.LimitExceededError.html">OcrExtractionApiV2Error.LimitExceededError</a></h4>
+      <section><p>The limit exceeded error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.LinkDownloadDisabledError.html">OcrExtractionApiV2Error.LinkDownloadDisabledError</a></h4>
+      <section><p>The link download disabled error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.NotFoundError.html">OcrExtractionApiV2Error.NotFoundError</a></h4>
+      <section><p>The referenced file does not exist or is not accessible.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.Other.html">OcrExtractionApiV2Error.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.ServerError.html">OcrExtractionApiV2Error.ServerError</a></h4>
+      <section><p>An unexpected, typically transient, server-side failure. The string is a
+human-readable message; retrying with backoff may succeed.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.SharedLinkPasswordProtected.html">OcrExtractionApiV2Error.SharedLinkPasswordProtected</a></h4>
+      <section><p>The shared link password protected object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.UnsupportedFormatError.html">OcrExtractionApiV2Error.UnsupportedFormatError</a></h4>
+      <section><p>The unsupported format error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.UserError.html">OcrExtractionApiV2Error.UserError</a></h4>
+      <section><p>The request could not be processed as supplied (a problem with the caller's
+input). The string is a human-readable message; retrying the same request will not
+help.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OfficeFileType.html">OfficeFileType</a></h4>
       <section><p>The kind of MS Office document that produced an `ApiOfficeMetadata`
