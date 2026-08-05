@@ -6779,6 +6779,29 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// ProtectReportViewDetails</para>
+        /// </summary>
+        public bool IsProtectReportViewDetails
+        {
+            get
+            {
+                return this is ProtectReportViewDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectReportViewDetails, or <c>null</c>.</para>
+        /// </summary>
+        public ProtectReportViewDetails AsProtectReportViewDetails
+        {
+            get
+            {
+                return this as ProtectReportViewDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// ClassificationCreateReportDetails</para>
         /// </summary>
         public bool IsClassificationCreateReportDetails
@@ -16612,6 +16635,12 @@ namespace Dropbox.Api.TeamLog
                     ProtectPolicyUpdatedDetails.Encoder.EncodeFields((ProtectPolicyUpdatedDetails)value, writer);
                     return;
                 }
+                if (value is ProtectReportViewDetails)
+                {
+                    WriteProperty(".tag", "protect_report_view_details", writer, enc.StringEncoder.Instance);
+                    ProtectReportViewDetails.Encoder.EncodeFields((ProtectReportViewDetails)value, writer);
+                    return;
+                }
                 if (value is ClassificationCreateReportDetails)
                 {
                     WriteProperty(".tag", "classification_create_report_details", writer, enc.StringEncoder.Instance);
@@ -19280,6 +19309,8 @@ namespace Dropbox.Api.TeamLog
                         return ProtectPolicyScheduledDetails.Decoder.DecodeFields(reader);
                     case "protect_policy_updated_details":
                         return ProtectPolicyUpdatedDetails.Decoder.DecodeFields(reader);
+                    case "protect_report_view_details":
+                        return ProtectReportViewDetails.Decoder.DecodeFields(reader);
                     case "classification_create_report_details":
                         return ClassificationCreateReportDetails.Decoder.DecodeFields(reader);
                     case "classification_create_report_fail_details":
@@ -46048,6 +46079,96 @@ namespace Dropbox.Api.TeamLog
                 public override ProtectPolicyUpdatedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new ProtectPolicyUpdatedDetails(global::Dropbox.Api.TeamLog.ProtectPolicyUpdatedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect report view details object</para>
+        /// </summary>
+        public sealed class ProtectReportViewDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectReportViewDetails> Encoder = new ProtectReportViewDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectReportViewDetails> Decoder = new ProtectReportViewDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectReportViewDetails" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectReportViewDetails(global::Dropbox.Api.TeamLog.ProtectReportViewDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectReportViewDetails" />
+            /// class.</para>
+            /// </summary>
+            private ProtectReportViewDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectReportViewDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectReportViewDetails" />.</para>
+            /// </summary>
+            private class ProtectReportViewDetailsEncoder : enc.StructEncoder<ProtectReportViewDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectReportViewDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_report_view_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectReportViewDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectReportViewDetails" />.</para>
+            /// </summary>
+            private class ProtectReportViewDetailsDecoder : enc.StructDecoder<ProtectReportViewDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ProtectReportViewDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectReportViewDetails Create()
+                {
+                    return new ProtectReportViewDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectReportViewDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectReportViewDetails(global::Dropbox.Api.TeamLog.ProtectReportViewDetails.Decoder.DecodeFields(reader));
                 }
             }
 

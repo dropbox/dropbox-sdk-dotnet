@@ -6596,6 +6596,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is ProtectReportView</para>
+        /// </summary>
+        public bool IsProtectReportView
+        {
+            get
+            {
+                return this is ProtectReportView;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectReportView, or <c>null</c>.</para>
+        /// </summary>
+        public ProtectReportView AsProtectReportView
+        {
+            get
+            {
+                return this as ProtectReportView;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is
         /// ClassificationCreateReport</para>
         /// </summary>
@@ -16204,6 +16226,12 @@ namespace Dropbox.Api.TeamLog
                     ProtectPolicyUpdated.Encoder.EncodeFields((ProtectPolicyUpdated)value, writer);
                     return;
                 }
+                if (value is ProtectReportView)
+                {
+                    WriteProperty(".tag", "protect_report_view", writer, enc.StringEncoder.Instance);
+                    ProtectReportView.Encoder.EncodeFields((ProtectReportView)value, writer);
+                    return;
+                }
                 if (value is ClassificationCreateReport)
                 {
                     WriteProperty(".tag", "classification_create_report", writer, enc.StringEncoder.Instance);
@@ -18866,6 +18894,8 @@ namespace Dropbox.Api.TeamLog
                         return ProtectPolicyScheduled.Decoder.DecodeFields(reader);
                     case "protect_policy_updated":
                         return ProtectPolicyUpdated.Decoder.DecodeFields(reader);
+                    case "protect_report_view":
+                        return ProtectReportView.Decoder.DecodeFields(reader);
                     case "classification_create_report":
                         return ClassificationCreateReport.Decoder.DecodeFields(reader);
                     case "classification_create_report_fail":
@@ -40027,6 +40057,77 @@ namespace Dropbox.Api.TeamLog
                 protected override ProtectPolicyUpdated Create()
                 {
                     return ProtectPolicyUpdated.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(protect) Viewed a Dropbox Protect report</para>
+        /// </summary>
+        public sealed class ProtectReportView : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectReportView> Encoder = new ProtectReportViewEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectReportView> Decoder = new ProtectReportViewDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectReportView" />
+            /// class.</para>
+            /// </summary>
+            private ProtectReportView()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ProtectReportView</para>
+            /// </summary>
+            public static readonly ProtectReportView Instance = new ProtectReportView();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectReportView" />.</para>
+            /// </summary>
+            private class ProtectReportViewEncoder : enc.StructEncoder<ProtectReportView>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectReportView value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectReportView" />.</para>
+            /// </summary>
+            private class ProtectReportViewDecoder : enc.StructDecoder<ProtectReportView>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ProtectReportView"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectReportView Create()
+                {
+                    return ProtectReportView.Instance;
                 }
 
             }
