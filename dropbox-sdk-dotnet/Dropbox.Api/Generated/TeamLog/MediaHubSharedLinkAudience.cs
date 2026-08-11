@@ -80,6 +80,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is PublicLoggedInOnly</para>
+        /// </summary>
+        public bool IsPublicLoggedInOnly
+        {
+            get
+            {
+                return this is PublicLoggedInOnly;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PublicLoggedInOnly, or <c>null</c>.</para>
+        /// </summary>
+        public PublicLoggedInOnly AsPublicLoggedInOnly
+        {
+            get
+            {
+                return this as PublicLoggedInOnly;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is TeamOnly</para>
         /// </summary>
         public bool IsTeamOnly
@@ -149,6 +171,12 @@ namespace Dropbox.Api.TeamLog
                     Public.Encoder.EncodeFields((Public)value, writer);
                     return;
                 }
+                if (value is PublicLoggedInOnly)
+                {
+                    WriteProperty(".tag", "public_logged_in_only", writer, enc.StringEncoder.Instance);
+                    PublicLoggedInOnly.Encoder.EncodeFields((PublicLoggedInOnly)value, writer);
+                    return;
+                }
                 if (value is TeamOnly)
                 {
                     WriteProperty(".tag", "team_only", writer, enc.StringEncoder.Instance);
@@ -198,6 +226,8 @@ namespace Dropbox.Api.TeamLog
                         return NoOne.Decoder.DecodeFields(reader);
                     case "public":
                         return Public.Decoder.DecodeFields(reader);
+                    case "public_logged_in_only":
+                        return PublicLoggedInOnly.Decoder.DecodeFields(reader);
                     case "team_only":
                         return TeamOnly.Decoder.DecodeFields(reader);
                     default:
@@ -339,6 +369,77 @@ namespace Dropbox.Api.TeamLog
                 protected override Public Create()
                 {
                     return Public.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The public logged in only object</para>
+        /// </summary>
+        public sealed class PublicLoggedInOnly : MediaHubSharedLinkAudience
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PublicLoggedInOnly> Encoder = new PublicLoggedInOnlyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PublicLoggedInOnly> Decoder = new PublicLoggedInOnlyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PublicLoggedInOnly" />
+            /// class.</para>
+            /// </summary>
+            private PublicLoggedInOnly()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of PublicLoggedInOnly</para>
+            /// </summary>
+            public static readonly PublicLoggedInOnly Instance = new PublicLoggedInOnly();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PublicLoggedInOnly" />.</para>
+            /// </summary>
+            private class PublicLoggedInOnlyEncoder : enc.StructEncoder<PublicLoggedInOnly>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PublicLoggedInOnly value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PublicLoggedInOnly" />.</para>
+            /// </summary>
+            private class PublicLoggedInOnlyDecoder : enc.StructDecoder<PublicLoggedInOnly>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PublicLoggedInOnly"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PublicLoggedInOnly Create()
+                {
+                    return PublicLoggedInOnly.Instance;
                 }
 
             }
