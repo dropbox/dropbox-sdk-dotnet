@@ -34,9 +34,12 @@ namespace Dropbox.Api.TeamLog
         /// <param name="previousRole">Previous Media Hub project role.</param>
         /// <param name="newRole">New Media Hub project role.</param>
         /// <param name="project">Replay project.</param>
+        /// <param name="invitee">The email address of the Replay project member targeted by
+        /// the event.</param>
         public MediaHubProjectTeamRoleChangedDetails(MediaHubProjectRole previousRole,
                                                      MediaHubProjectRole newRole,
-                                                     MediaHubProjectLogInfo project = null)
+                                                     MediaHubProjectLogInfo project = null,
+                                                     string invitee = null)
         {
             if (previousRole == null)
             {
@@ -48,9 +51,18 @@ namespace Dropbox.Api.TeamLog
                 throw new sys.ArgumentNullException("newRole");
             }
 
+            if (invitee != null)
+            {
+                if (invitee.Length > 255)
+                {
+                    throw new sys.ArgumentOutOfRangeException("invitee", "Length should be at most 255");
+                }
+            }
+
             this.PreviousRole = previousRole;
             this.NewRole = newRole;
             this.Project = project;
+            this.Invitee = invitee;
         }
 
         /// <summary>
@@ -79,6 +91,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public MediaHubProjectLogInfo Project { get; protected set; }
 
+        /// <summary>
+        /// <para>The email address of the Replay project member targeted by the event.</para>
+        /// </summary>
+        public string Invitee { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -98,6 +115,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.Project != null)
                 {
                     WriteProperty("project", value.Project, writer, global::Dropbox.Api.TeamLog.MediaHubProjectLogInfo.Encoder);
+                }
+                if (value.Invitee != null)
+                {
+                    WriteProperty("invitee", value.Invitee, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -140,6 +161,9 @@ namespace Dropbox.Api.TeamLog
                         break;
                     case "project":
                         value.Project = global::Dropbox.Api.TeamLog.MediaHubProjectLogInfo.Decoder.Decode(reader);
+                        break;
+                    case "invitee":
+                        value.Invitee = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();
