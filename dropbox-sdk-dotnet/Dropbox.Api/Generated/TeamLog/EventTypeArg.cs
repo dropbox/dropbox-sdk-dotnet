@@ -13096,6 +13096,54 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// TeamExternalSharingControlsActivationStateChanged</para>
+        /// </summary>
+        public bool IsTeamExternalSharingControlsActivationStateChanged
+        {
+            get
+            {
+                return this is TeamExternalSharingControlsActivationStateChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamExternalSharingControlsActivationStateChanged, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamExternalSharingControlsActivationStateChanged AsTeamExternalSharingControlsActivationStateChanged
+        {
+            get
+            {
+                return this as TeamExternalSharingControlsActivationStateChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamExternalSharingControlsRecipientListsChanged</para>
+        /// </summary>
+        public bool IsTeamExternalSharingControlsRecipientListsChanged
+        {
+            get
+            {
+                return this is TeamExternalSharingControlsRecipientListsChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamExternalSharingControlsRecipientListsChanged, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public TeamExternalSharingControlsRecipientListsChanged AsTeamExternalSharingControlsRecipientListsChanged
+        {
+            get
+            {
+                return this as TeamExternalSharingControlsRecipientListsChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// TeamMemberStorageRequestPolicyChanged</para>
         /// </summary>
         public bool IsTeamMemberStorageRequestPolicyChanged
@@ -17924,6 +17972,18 @@ namespace Dropbox.Api.TeamLog
                     TeamExtensionsPolicyChanged.Encoder.EncodeFields((TeamExtensionsPolicyChanged)value, writer);
                     return;
                 }
+                if (value is TeamExternalSharingControlsActivationStateChanged)
+                {
+                    WriteProperty(".tag", "team_external_sharing_controls_activation_state_changed", writer, enc.StringEncoder.Instance);
+                    TeamExternalSharingControlsActivationStateChanged.Encoder.EncodeFields((TeamExternalSharingControlsActivationStateChanged)value, writer);
+                    return;
+                }
+                if (value is TeamExternalSharingControlsRecipientListsChanged)
+                {
+                    WriteProperty(".tag", "team_external_sharing_controls_recipient_lists_changed", writer, enc.StringEncoder.Instance);
+                    TeamExternalSharingControlsRecipientListsChanged.Encoder.EncodeFields((TeamExternalSharingControlsRecipientListsChanged)value, writer);
+                    return;
+                }
                 if (value is TeamMemberStorageRequestPolicyChanged)
                 {
                     WriteProperty(".tag", "team_member_storage_request_policy_changed", writer, enc.StringEncoder.Instance);
@@ -19460,6 +19520,10 @@ namespace Dropbox.Api.TeamLog
                         return TeamBrandingPolicyChanged.Decoder.DecodeFields(reader);
                     case "team_extensions_policy_changed":
                         return TeamExtensionsPolicyChanged.Decoder.DecodeFields(reader);
+                    case "team_external_sharing_controls_activation_state_changed":
+                        return TeamExternalSharingControlsActivationStateChanged.Decoder.DecodeFields(reader);
+                    case "team_external_sharing_controls_recipient_lists_changed":
+                        return TeamExternalSharingControlsRecipientListsChanged.Decoder.DecodeFields(reader);
                     case "team_member_storage_request_policy_changed":
                         return TeamMemberStorageRequestPolicyChanged.Decoder.DecodeFields(reader);
                     case "team_selective_sync_policy_changed":
@@ -60194,6 +60258,155 @@ namespace Dropbox.Api.TeamLog
                 protected override TeamExtensionsPolicyChanged Create()
                 {
                     return TeamExtensionsPolicyChanged.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed external sharing controls activation state</para>
+        /// </summary>
+        public sealed class TeamExternalSharingControlsActivationStateChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamExternalSharingControlsActivationStateChanged> Encoder = new TeamExternalSharingControlsActivationStateChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamExternalSharingControlsActivationStateChanged> Decoder = new TeamExternalSharingControlsActivationStateChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamExternalSharingControlsActivationStateChanged" /> class.</para>
+            /// </summary>
+            private TeamExternalSharingControlsActivationStateChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of
+            /// TeamExternalSharingControlsActivationStateChanged</para>
+            /// </summary>
+            public static readonly TeamExternalSharingControlsActivationStateChanged Instance = new TeamExternalSharingControlsActivationStateChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see
+            /// cref="TeamExternalSharingControlsActivationStateChanged" />.</para>
+            /// </summary>
+            private class TeamExternalSharingControlsActivationStateChangedEncoder : enc.StructEncoder<TeamExternalSharingControlsActivationStateChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamExternalSharingControlsActivationStateChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see
+            /// cref="TeamExternalSharingControlsActivationStateChanged" />.</para>
+            /// </summary>
+            private class TeamExternalSharingControlsActivationStateChangedDecoder : enc.StructDecoder<TeamExternalSharingControlsActivationStateChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamExternalSharingControlsActivationStateChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamExternalSharingControlsActivationStateChanged Create()
+                {
+                    return TeamExternalSharingControlsActivationStateChanged.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(team_policies) Changed approved or blocked entries for external sharing
+        /// controls</para>
+        /// </summary>
+        public sealed class TeamExternalSharingControlsRecipientListsChanged : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamExternalSharingControlsRecipientListsChanged> Encoder = new TeamExternalSharingControlsRecipientListsChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamExternalSharingControlsRecipientListsChanged> Decoder = new TeamExternalSharingControlsRecipientListsChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="TeamExternalSharingControlsRecipientListsChanged" /> class.</para>
+            /// </summary>
+            private TeamExternalSharingControlsRecipientListsChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of
+            /// TeamExternalSharingControlsRecipientListsChanged</para>
+            /// </summary>
+            public static readonly TeamExternalSharingControlsRecipientListsChanged Instance = new TeamExternalSharingControlsRecipientListsChanged();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamExternalSharingControlsRecipientListsChanged"
+            /// />.</para>
+            /// </summary>
+            private class TeamExternalSharingControlsRecipientListsChangedEncoder : enc.StructEncoder<TeamExternalSharingControlsRecipientListsChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamExternalSharingControlsRecipientListsChanged value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamExternalSharingControlsRecipientListsChanged"
+            /// />.</para>
+            /// </summary>
+            private class TeamExternalSharingControlsRecipientListsChangedDecoder : enc.StructDecoder<TeamExternalSharingControlsRecipientListsChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="TeamExternalSharingControlsRecipientListsChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamExternalSharingControlsRecipientListsChanged Create()
+                {
+                    return TeamExternalSharingControlsRecipientListsChanged.Instance;
                 }
 
             }
