@@ -6437,6 +6437,29 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// ProtectActionRemoveDomains</para>
+        /// </summary>
+        public bool IsProtectActionRemoveDomains
+        {
+            get
+            {
+                return this is ProtectActionRemoveDomains;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectActionRemoveDomains, or <c>null</c>.</para>
+        /// </summary>
+        public ProtectActionRemoveDomains AsProtectActionRemoveDomains
+        {
+            get
+            {
+                return this as ProtectActionRemoveDomains;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// ProtectActionRemoveLink</para>
         /// </summary>
         public bool IsProtectActionRemoveLink
@@ -16232,6 +16255,12 @@ namespace Dropbox.Api.TeamLog
                     ProtectActionRemoveCollaborator.Encoder.EncodeFields((ProtectActionRemoveCollaborator)value, writer);
                     return;
                 }
+                if (value is ProtectActionRemoveDomains)
+                {
+                    WriteProperty(".tag", "protect_action_remove_domains", writer, enc.StringEncoder.Instance);
+                    ProtectActionRemoveDomains.Encoder.EncodeFields((ProtectActionRemoveDomains)value, writer);
+                    return;
+                }
                 if (value is ProtectActionRemoveLink)
                 {
                     WriteProperty(".tag", "protect_action_remove_link", writer, enc.StringEncoder.Instance);
@@ -18940,6 +18969,8 @@ namespace Dropbox.Api.TeamLog
                         return ProtectActionExport.Decoder.DecodeFields(reader);
                     case "protect_action_remove_collaborator":
                         return ProtectActionRemoveCollaborator.Decoder.DecodeFields(reader);
+                    case "protect_action_remove_domains":
+                        return ProtectActionRemoveDomains.Decoder.DecodeFields(reader);
                     case "protect_action_remove_link":
                         return ProtectActionRemoveLink.Decoder.DecodeFields(reader);
                     case "protect_action_stop_sharing":
@@ -39624,6 +39655,77 @@ namespace Dropbox.Api.TeamLog
                 protected override ProtectActionRemoveCollaborator Create()
                 {
                     return ProtectActionRemoveCollaborator.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(protect) Removed domains via Dropbox Protect</para>
+        /// </summary>
+        public sealed class ProtectActionRemoveDomains : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectActionRemoveDomains> Encoder = new ProtectActionRemoveDomainsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectActionRemoveDomains> Decoder = new ProtectActionRemoveDomainsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ProtectActionRemoveDomains"
+            /// /> class.</para>
+            /// </summary>
+            private ProtectActionRemoveDomains()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ProtectActionRemoveDomains</para>
+            /// </summary>
+            public static readonly ProtectActionRemoveDomains Instance = new ProtectActionRemoveDomains();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectActionRemoveDomains" />.</para>
+            /// </summary>
+            private class ProtectActionRemoveDomainsEncoder : enc.StructEncoder<ProtectActionRemoveDomains>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectActionRemoveDomains value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectActionRemoveDomains" />.</para>
+            /// </summary>
+            private class ProtectActionRemoveDomainsDecoder : enc.StructDecoder<ProtectActionRemoveDomains>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ProtectActionRemoveDomains"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectActionRemoveDomains Create()
+                {
+                    return ProtectActionRemoveDomains.Instance;
                 }
 
             }
