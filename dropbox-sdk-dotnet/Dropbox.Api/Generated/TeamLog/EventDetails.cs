@@ -6614,6 +6614,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// ProtectActionRemoveDomainsDetails</para>
+        /// </summary>
+        public bool IsProtectActionRemoveDomainsDetails
+        {
+            get
+            {
+                return this is ProtectActionRemoveDomainsDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectActionRemoveDomainsDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ProtectActionRemoveDomainsDetails AsProtectActionRemoveDomainsDetails
+        {
+            get
+            {
+                return this as ProtectActionRemoveDomainsDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// ProtectActionRemoveLinkDetails</para>
         /// </summary>
         public bool IsProtectActionRemoveLinkDetails
@@ -16641,6 +16665,12 @@ namespace Dropbox.Api.TeamLog
                     ProtectActionRemoveCollaboratorDetails.Encoder.EncodeFields((ProtectActionRemoveCollaboratorDetails)value, writer);
                     return;
                 }
+                if (value is ProtectActionRemoveDomainsDetails)
+                {
+                    WriteProperty(".tag", "protect_action_remove_domains_details", writer, enc.StringEncoder.Instance);
+                    ProtectActionRemoveDomainsDetails.Encoder.EncodeFields((ProtectActionRemoveDomainsDetails)value, writer);
+                    return;
+                }
                 if (value is ProtectActionRemoveLinkDetails)
                 {
                     WriteProperty(".tag", "protect_action_remove_link_details", writer, enc.StringEncoder.Instance);
@@ -19355,6 +19385,8 @@ namespace Dropbox.Api.TeamLog
                         return ProtectActionExportDetails.Decoder.DecodeFields(reader);
                     case "protect_action_remove_collaborator_details":
                         return ProtectActionRemoveCollaboratorDetails.Decoder.DecodeFields(reader);
+                    case "protect_action_remove_domains_details":
+                        return ProtectActionRemoveDomainsDetails.Decoder.DecodeFields(reader);
                     case "protect_action_remove_link_details":
                         return ProtectActionRemoveLinkDetails.Decoder.DecodeFields(reader);
                     case "protect_action_stop_sharing_details":
@@ -45513,6 +45545,96 @@ namespace Dropbox.Api.TeamLog
                 public override ProtectActionRemoveCollaboratorDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new ProtectActionRemoveCollaboratorDetails(global::Dropbox.Api.TeamLog.ProtectActionRemoveCollaboratorDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect action remove domains details object</para>
+        /// </summary>
+        public sealed class ProtectActionRemoveDomainsDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectActionRemoveDomainsDetails> Encoder = new ProtectActionRemoveDomainsDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectActionRemoveDomainsDetails> Decoder = new ProtectActionRemoveDomainsDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectActionRemoveDomainsDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectActionRemoveDomainsDetails(global::Dropbox.Api.TeamLog.ProtectActionRemoveDomainsDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectActionRemoveDomainsDetails" /> class.</para>
+            /// </summary>
+            private ProtectActionRemoveDomainsDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectActionRemoveDomainsDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectActionRemoveDomainsDetails" />.</para>
+            /// </summary>
+            private class ProtectActionRemoveDomainsDetailsEncoder : enc.StructEncoder<ProtectActionRemoveDomainsDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectActionRemoveDomainsDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_action_remove_domains_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectActionRemoveDomainsDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectActionRemoveDomainsDetails" />.</para>
+            /// </summary>
+            private class ProtectActionRemoveDomainsDetailsDecoder : enc.StructDecoder<ProtectActionRemoveDomainsDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProtectActionRemoveDomainsDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectActionRemoveDomainsDetails Create()
+                {
+                    return new ProtectActionRemoveDomainsDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectActionRemoveDomainsDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectActionRemoveDomainsDetails(global::Dropbox.Api.TeamLog.ProtectActionRemoveDomainsDetails.Decoder.DecodeFields(reader));
                 }
             }
 
