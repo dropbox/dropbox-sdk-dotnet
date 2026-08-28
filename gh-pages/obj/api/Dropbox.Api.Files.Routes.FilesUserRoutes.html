@@ -17026,32 +17026,7 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.Fi
   </span>
   <a id="Dropbox_Api_Files_Routes_FilesUserRoutes_GetTemporaryUploadLinkAsync_" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.GetTemporaryUploadLinkAsync*"></a>
   <h4 id="Dropbox_Api_Files_Routes_FilesUserRoutes_GetTemporaryUploadLinkAsync_Dropbox_Api_Files_CommitInfo_System_Double_" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.GetTemporaryUploadLinkAsync(Dropbox.Api.Files.CommitInfo,System.Double)">GetTemporaryUploadLinkAsync(CommitInfo, double)</h4>
-  <div class="markdown level1 summary"><p>Get a one-time use temporary upload link to upload a file to a Dropbox
-location.  This endpoint acts as a delayed upload(). The returned temporary upload
-link may be used to make a POST request with the data to be uploaded. The upload
-will then be perfomed with the CommitInfo previously provided to
-getTemporaryUploadLink() but evaluated only upon consumption. Hence, errors
-stemming from invalid CommitInfo with respect to the state of the user's Dropbox
-will only be communicated at consumption time. Additionally, these errors are
-surfaced as generic HTTP 409 Conflict responses, potentially hiding issue details.
-The maximum temporary upload link duration is 4 hours. Upon consumption or
-expiration, a new link will have to be generated. Multiple links may exist for a
-specific upload path at any given time.  The POST request on the temporary upload
-link must have its Content-Type set to "application/octet-stream".  Example
-temporary upload link consumption request:  curl -X POST
-https://content.dropboxapi.com/apitul/1/bNi2uIYF51cVBND --header "Content-Type:
-application/octet-stream" --data-binary @local_file.txt  A successful temporary
-upload link consumption request returns the content hash of the uploaded data in
-JSON format. Example successful temporary upload link consumption response:
-{"content-hash": "599d71033d700ac892a0e48fa61b125d2f5994"}  An unsuccessful
-temporary upload link consumption request returns any of the following status
-codes:  HTTP 400 Bad Request: Content-Type is not one of application/octet-stream
-and text/plain or request is invalid. HTTP 409 Conflict: The temporary upload link
-does not exist or is currently unavailable, the upload failed, or another error
-happened. HTTP 410 Gone: The temporary upload link is expired or consumed. Example
-unsuccessful temporary upload link consumption response: Temporary upload link has
-been recently consumed.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -17070,17 +17045,12 @@ been recently consumed.</p>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Files.CommitInfo.html">CommitInfo</a></td>
         <td><span class="parametername">commitInfo</span></td>
-        <td><p>Contains the path and other optional modifiers for the
-future upload commit. Equivalent to the parameters provided to <a class="xref" href="Dropbox.Api.Files.Routes.FilesUserRoutes.html#Dropbox_Api_Files_Routes_FilesUserRoutes_UploadAsync_Dropbox_Api_Files_UploadArg_System_IO_Stream_">UploadAsync(UploadArg, Stream)</a>.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
         <td><span class="parametername">duration</span></td>
-        <td><p>How long before this link expires, in seconds. Attempting to
-start an upload with this link longer than this period of time after link creation
-will result in an error.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -17095,9 +17065,7 @@ will result in an error.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Files.GetTemporaryUploadLinkResult.html">GetTemporaryUploadLinkResult</a>&gt;</td>
-        <td><p>The task that represents the asynchronous send operation. The TResult
-parameter contains the response from the server.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -17107,32 +17075,7 @@ parameter contains the response from the server.</p>
   </span>
   <a id="Dropbox_Api_Files_Routes_FilesUserRoutes_GetTemporaryUploadLinkAsync_" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.GetTemporaryUploadLinkAsync*"></a>
   <h4 id="Dropbox_Api_Files_Routes_FilesUserRoutes_GetTemporaryUploadLinkAsync_Dropbox_Api_Files_GetTemporaryUploadLinkArg_" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.GetTemporaryUploadLinkAsync(Dropbox.Api.Files.GetTemporaryUploadLinkArg)">GetTemporaryUploadLinkAsync(GetTemporaryUploadLinkArg)</h4>
-  <div class="markdown level1 summary"><p>Get a one-time use temporary upload link to upload a file to a Dropbox
-location.  This endpoint acts as a delayed upload(). The returned temporary upload
-link may be used to make a POST request with the data to be uploaded. The upload
-will then be perfomed with the CommitInfo previously provided to
-getTemporaryUploadLink() but evaluated only upon consumption. Hence, errors
-stemming from invalid CommitInfo with respect to the state of the user's Dropbox
-will only be communicated at consumption time. Additionally, these errors are
-surfaced as generic HTTP 409 Conflict responses, potentially hiding issue details.
-The maximum temporary upload link duration is 4 hours. Upon consumption or
-expiration, a new link will have to be generated. Multiple links may exist for a
-specific upload path at any given time.  The POST request on the temporary upload
-link must have its Content-Type set to "application/octet-stream".  Example
-temporary upload link consumption request:  curl -X POST
-https://content.dropboxapi.com/apitul/1/bNi2uIYF51cVBND --header "Content-Type:
-application/octet-stream" --data-binary @local_file.txt  A successful temporary
-upload link consumption request returns the content hash of the uploaded data in
-JSON format. Example successful temporary upload link consumption response:
-{"content-hash": "599d71033d700ac892a0e48fa61b125d2f5994"}  An unsuccessful
-temporary upload link consumption request returns any of the following status
-codes:  HTTP 400 Bad Request: Content-Type is not one of application/octet-stream
-and text/plain or request is invalid. HTTP 409 Conflict: The temporary upload link
-does not exist or is currently unavailable, the upload failed, or another error
-happened. HTTP 410 Gone: The temporary upload link is expired or consumed. Example
-unsuccessful temporary upload link consumption response: Temporary upload link has
-been recently consumed.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -17151,8 +17094,7 @@ been recently consumed.</p>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Files.GetTemporaryUploadLinkArg.html">GetTemporaryUploadLinkArg</a></td>
         <td><span class="parametername">getTemporaryUploadLinkArg</span></td>
-        <td><p>The request parameters</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -17167,9 +17109,7 @@ been recently consumed.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Files.GetTemporaryUploadLinkResult.html">GetTemporaryUploadLinkResult</a>&gt;</td>
-        <td><p>The task that represents the asynchronous send operation. The TResult
-parameter contains the response from the server.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
