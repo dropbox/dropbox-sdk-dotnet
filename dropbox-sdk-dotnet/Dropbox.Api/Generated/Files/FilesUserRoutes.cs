@@ -2653,18 +2653,18 @@ namespace Dropbox.Api.Files.Routes
         /// specific upload path at any given time.  The POST request on the temporary upload
         /// link must have its Content-Type set to "application/octet-stream".  Example
         /// temporary upload link consumption request:  curl -X POST
-        /// https://content.dropboxapi.com/apitul/1/bNi2uIYF51cVBND --header "Content-Type:
-        /// application/octet-stream" --data-binary @local_file.txt  A successful temporary
-        /// upload link consumption request returns the content hash of the uploaded data in
-        /// JSON format. Example successful temporary upload link consumption response:
-        /// {"content-hash": "599d71033d700ac892a0e48fa61b125d2f5994"}  An unsuccessful
-        /// temporary upload link consumption request returns any of the following status
-        /// codes:  HTTP 400 Bad Request: Content-Type is not one of application/octet-stream
-        /// and text/plain or request is invalid. HTTP 409 Conflict: The temporary upload link
-        /// does not exist or is currently unavailable, the upload failed, or another error
-        /// happened. HTTP 410 Gone: The temporary upload link is expired or consumed. Example
-        /// unsuccessful temporary upload link consumption response: Temporary upload link has
-        /// been recently consumed.</para>
+        /// <temporary_upload_link_url> --header "Content-Type: application/octet-stream"
+        /// --data-binary @local_file.txt  A successful temporary upload link consumption
+        /// request returns the content hash of the uploaded data in JSON format. Example
+        /// successful temporary upload link consumption response: {"content-hash":
+        /// "599d71033d700ac892a0e48fa61b125d2f5994"}  An unsuccessful temporary upload link
+        /// consumption request returns any of the following status codes:  HTTP 400 Bad
+        /// Request: Content-Type is not one of application/octet-stream and text/plain or
+        /// request is invalid. HTTP 409 Conflict: The temporary upload link does not exist or
+        /// is currently unavailable, the upload failed, or another error happened. HTTP 410
+        /// Gone: The temporary upload link is expired or consumed. Example unsuccessful
+        /// temporary upload link consumption response: Temporary upload link has been recently
+        /// consumed.</para>
         /// </summary>
         /// <param name="getTemporaryUploadLinkArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -2704,18 +2704,18 @@ namespace Dropbox.Api.Files.Routes
         /// specific upload path at any given time.  The POST request on the temporary upload
         /// link must have its Content-Type set to "application/octet-stream".  Example
         /// temporary upload link consumption request:  curl -X POST
-        /// https://content.dropboxapi.com/apitul/1/bNi2uIYF51cVBND --header "Content-Type:
-        /// application/octet-stream" --data-binary @local_file.txt  A successful temporary
-        /// upload link consumption request returns the content hash of the uploaded data in
-        /// JSON format. Example successful temporary upload link consumption response:
-        /// {"content-hash": "599d71033d700ac892a0e48fa61b125d2f5994"}  An unsuccessful
-        /// temporary upload link consumption request returns any of the following status
-        /// codes:  HTTP 400 Bad Request: Content-Type is not one of application/octet-stream
-        /// and text/plain or request is invalid. HTTP 409 Conflict: The temporary upload link
-        /// does not exist or is currently unavailable, the upload failed, or another error
-        /// happened. HTTP 410 Gone: The temporary upload link is expired or consumed. Example
-        /// unsuccessful temporary upload link consumption response: Temporary upload link has
-        /// been recently consumed.</para>
+        /// <temporary_upload_link_url> --header "Content-Type: application/octet-stream"
+        /// --data-binary @local_file.txt  A successful temporary upload link consumption
+        /// request returns the content hash of the uploaded data in JSON format. Example
+        /// successful temporary upload link consumption response: {"content-hash":
+        /// "599d71033d700ac892a0e48fa61b125d2f5994"}  An unsuccessful temporary upload link
+        /// consumption request returns any of the following status codes:  HTTP 400 Bad
+        /// Request: Content-Type is not one of application/octet-stream and text/plain or
+        /// request is invalid. HTTP 409 Conflict: The temporary upload link does not exist or
+        /// is currently unavailable, the upload failed, or another error happened. HTTP 410
+        /// Gone: The temporary upload link is expired or consumed. Example unsuccessful
+        /// temporary upload link consumption response: Temporary upload link has been recently
+        /// consumed.</para>
         /// </summary>
         /// <param name="commitInfo">Contains the path and other optional modifiers for the
         /// future upload commit. Equivalent to the parameters provided to <see
