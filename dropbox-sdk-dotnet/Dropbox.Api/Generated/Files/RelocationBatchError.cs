@@ -369,6 +369,52 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamFolderInsufficientQuota</para>
+        /// </summary>
+        public bool IsTeamFolderInsufficientQuota
+        {
+            get
+            {
+                return this is TeamFolderInsufficientQuota;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamFolderInsufficientQuota, or <c>null</c>.</para>
+        /// </summary>
+        public TeamFolderInsufficientQuota AsTeamFolderInsufficientQuota
+        {
+            get
+            {
+                return this as TeamFolderInsufficientQuota;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MemberFolderInsufficientQuota</para>
+        /// </summary>
+        public bool IsMemberFolderInsufficientQuota
+        {
+            get
+            {
+                return this is MemberFolderInsufficientQuota;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MemberFolderInsufficientQuota, or <c>null</c>.</para>
+        /// </summary>
+        public MemberFolderInsufficientQuota AsMemberFolderInsufficientQuota
+        {
+            get
+            {
+                return this as MemberFolderInsufficientQuota;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -494,6 +540,18 @@ namespace Dropbox.Api.Files
                     CantMoveIntoFamily.Encoder.EncodeFields((CantMoveIntoFamily)value, writer);
                     return;
                 }
+                if (value is TeamFolderInsufficientQuota)
+                {
+                    WriteProperty(".tag", "team_folder_insufficient_quota", writer, enc.StringEncoder.Instance);
+                    TeamFolderInsufficientQuota.Encoder.EncodeFields((TeamFolderInsufficientQuota)value, writer);
+                    return;
+                }
+                if (value is MemberFolderInsufficientQuota)
+                {
+                    WriteProperty(".tag", "member_folder_insufficient_quota", writer, enc.StringEncoder.Instance);
+                    MemberFolderInsufficientQuota.Encoder.EncodeFields((MemberFolderInsufficientQuota)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -562,6 +620,10 @@ namespace Dropbox.Api.Files
                         return CantMoveIntoVault.Decoder.DecodeFields(reader);
                     case "cant_move_into_family":
                         return CantMoveIntoFamily.Decoder.DecodeFields(reader);
+                    case "team_folder_insufficient_quota":
+                        return TeamFolderInsufficientQuota.Decoder.DecodeFields(reader);
+                    case "member_folder_insufficient_quota":
+                        return MemberFolderInsufficientQuota.Decoder.DecodeFields(reader);
                     case "other":
                         return Other.Decoder.DecodeFields(reader);
                     default:
@@ -1771,6 +1833,148 @@ namespace Dropbox.Api.Files
                             break;
                     }
                 }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The destination team folder has reached its storage limit.</para>
+        /// </summary>
+        public sealed class TeamFolderInsufficientQuota : RelocationBatchError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamFolderInsufficientQuota> Encoder = new TeamFolderInsufficientQuotaEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamFolderInsufficientQuota> Decoder = new TeamFolderInsufficientQuotaDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamFolderInsufficientQuota"
+            /// /> class.</para>
+            /// </summary>
+            private TeamFolderInsufficientQuota()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TeamFolderInsufficientQuota</para>
+            /// </summary>
+            public static readonly TeamFolderInsufficientQuota Instance = new TeamFolderInsufficientQuota();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamFolderInsufficientQuota" />.</para>
+            /// </summary>
+            private class TeamFolderInsufficientQuotaEncoder : enc.StructEncoder<TeamFolderInsufficientQuota>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamFolderInsufficientQuota value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamFolderInsufficientQuota" />.</para>
+            /// </summary>
+            private class TeamFolderInsufficientQuotaDecoder : enc.StructDecoder<TeamFolderInsufficientQuota>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamFolderInsufficientQuota"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamFolderInsufficientQuota Create()
+                {
+                    return TeamFolderInsufficientQuota.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user's member folder has reached its storage limit.</para>
+        /// </summary>
+        public sealed class MemberFolderInsufficientQuota : RelocationBatchError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MemberFolderInsufficientQuota> Encoder = new MemberFolderInsufficientQuotaEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MemberFolderInsufficientQuota> Decoder = new MemberFolderInsufficientQuotaDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MemberFolderInsufficientQuota" /> class.</para>
+            /// </summary>
+            private MemberFolderInsufficientQuota()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MemberFolderInsufficientQuota</para>
+            /// </summary>
+            public static readonly MemberFolderInsufficientQuota Instance = new MemberFolderInsufficientQuota();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MemberFolderInsufficientQuota" />.</para>
+            /// </summary>
+            private class MemberFolderInsufficientQuotaEncoder : enc.StructEncoder<MemberFolderInsufficientQuota>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MemberFolderInsufficientQuota value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MemberFolderInsufficientQuota" />.</para>
+            /// </summary>
+            private class MemberFolderInsufficientQuotaDecoder : enc.StructDecoder<MemberFolderInsufficientQuota>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MemberFolderInsufficientQuota" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MemberFolderInsufficientQuota Create()
+                {
+                    return MemberFolderInsufficientQuota.Instance;
+                }
+
             }
 
             #endregion
