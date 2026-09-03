@@ -234,6 +234,52 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// TeamFolderInsufficientSpace</para>
+        /// </summary>
+        public bool IsTeamFolderInsufficientSpace
+        {
+            get
+            {
+                return this is TeamFolderInsufficientSpace;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TeamFolderInsufficientSpace, or <c>null</c>.</para>
+        /// </summary>
+        public TeamFolderInsufficientSpace AsTeamFolderInsufficientSpace
+        {
+            get
+            {
+                return this as TeamFolderInsufficientSpace;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// MemberFolderInsufficientSpace</para>
+        /// </summary>
+        public bool IsMemberFolderInsufficientSpace
+        {
+            get
+            {
+                return this is MemberFolderInsufficientSpace;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a MemberFolderInsufficientSpace, or <c>null</c>.</para>
+        /// </summary>
+        public MemberFolderInsufficientSpace AsMemberFolderInsufficientSpace
+        {
+            get
+            {
+                return this as MemberFolderInsufficientSpace;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -323,6 +369,18 @@ namespace Dropbox.Api.Files
                     AccessRestricted.Encoder.EncodeFields((AccessRestricted)value, writer);
                     return;
                 }
+                if (value is TeamFolderInsufficientSpace)
+                {
+                    WriteProperty(".tag", "team_folder_insufficient_space", writer, enc.StringEncoder.Instance);
+                    TeamFolderInsufficientSpace.Encoder.EncodeFields((TeamFolderInsufficientSpace)value, writer);
+                    return;
+                }
+                if (value is MemberFolderInsufficientSpace)
+                {
+                    WriteProperty(".tag", "member_folder_insufficient_space", writer, enc.StringEncoder.Instance);
+                    MemberFolderInsufficientSpace.Encoder.EncodeFields((MemberFolderInsufficientSpace)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -379,6 +437,10 @@ namespace Dropbox.Api.Files
                         return TooManyWriteOperations.Decoder.DecodeFields(reader);
                     case "access_restricted":
                         return AccessRestricted.Decoder.DecodeFields(reader);
+                    case "team_folder_insufficient_space":
+                        return TeamFolderInsufficientSpace.Decoder.DecodeFields(reader);
+                    case "member_folder_insufficient_space":
+                        return MemberFolderInsufficientSpace.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -1077,6 +1139,148 @@ namespace Dropbox.Api.Files
                 protected override AccessRestricted Create()
                 {
                     return AccessRestricted.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The destination team folder has reached its storage limit.</para>
+        /// </summary>
+        public sealed class TeamFolderInsufficientSpace : WriteError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TeamFolderInsufficientSpace> Encoder = new TeamFolderInsufficientSpaceEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TeamFolderInsufficientSpace> Decoder = new TeamFolderInsufficientSpaceDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TeamFolderInsufficientSpace"
+            /// /> class.</para>
+            /// </summary>
+            private TeamFolderInsufficientSpace()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of TeamFolderInsufficientSpace</para>
+            /// </summary>
+            public static readonly TeamFolderInsufficientSpace Instance = new TeamFolderInsufficientSpace();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TeamFolderInsufficientSpace" />.</para>
+            /// </summary>
+            private class TeamFolderInsufficientSpaceEncoder : enc.StructEncoder<TeamFolderInsufficientSpace>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TeamFolderInsufficientSpace value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TeamFolderInsufficientSpace" />.</para>
+            /// </summary>
+            private class TeamFolderInsufficientSpaceDecoder : enc.StructDecoder<TeamFolderInsufficientSpace>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TeamFolderInsufficientSpace"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TeamFolderInsufficientSpace Create()
+                {
+                    return TeamFolderInsufficientSpace.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user's member folder has reached its storage limit.</para>
+        /// </summary>
+        public sealed class MemberFolderInsufficientSpace : WriteError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<MemberFolderInsufficientSpace> Encoder = new MemberFolderInsufficientSpaceEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<MemberFolderInsufficientSpace> Decoder = new MemberFolderInsufficientSpaceDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="MemberFolderInsufficientSpace" /> class.</para>
+            /// </summary>
+            private MemberFolderInsufficientSpace()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of MemberFolderInsufficientSpace</para>
+            /// </summary>
+            public static readonly MemberFolderInsufficientSpace Instance = new MemberFolderInsufficientSpace();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="MemberFolderInsufficientSpace" />.</para>
+            /// </summary>
+            private class MemberFolderInsufficientSpaceEncoder : enc.StructEncoder<MemberFolderInsufficientSpace>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(MemberFolderInsufficientSpace value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="MemberFolderInsufficientSpace" />.</para>
+            /// </summary>
+            private class MemberFolderInsufficientSpaceDecoder : enc.StructDecoder<MemberFolderInsufficientSpace>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="MemberFolderInsufficientSpace" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override MemberFolderInsufficientSpace Create()
+                {
+                    return MemberFolderInsufficientSpace.Instance;
                 }
 
             }
