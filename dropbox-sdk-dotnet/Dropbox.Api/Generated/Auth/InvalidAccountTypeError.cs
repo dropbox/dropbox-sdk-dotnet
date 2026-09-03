@@ -179,8 +179,7 @@ namespace Dropbox.Api.Auth
         #endregion
 
         /// <summary>
-        /// <para>Current account type doesn't have permission to access this route
-        /// endpoint.</para>
+        /// <para>Current account type doesn't have permission to access this endpoint.</para>
         /// </summary>
         public sealed class Endpoint : InvalidAccountTypeError
         {

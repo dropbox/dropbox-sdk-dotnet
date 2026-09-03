@@ -31,6 +31,231 @@ namespace Dropbox.Api.Riviera.Routes
         internal enc.ITransport Transport { get; private set; }
 
         /// <summary>
+        /// <para>Asynchronous scene-change keyframe extraction for video files. Detects scene
+        /// changes in the source video and returns one representative keyframe per detected
+        /// scene, each tagged with its timestamp (seconds from the start of the video) and
+        /// scene-change score. Set `include_images = true` to also receive each frame as a
+        /// base64-encoded JPEG; when the field is omitted the response carries keyframe
+        /// metadata only. Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv,
+        /// .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv,
+        /// .rm, .ts, .vob, .webm, .wmv. Unsupported formats return an
+        /// `unsupported_format_error`. Limits: the source file must be at most 10 GB. To keep
+        /// responses within service limits the number of keyframes and the total image payload
+        /// are bounded; requests that would exceed these limits return a
+        /// `limit_exceeded_error` -- raise `scene_change_threshold` or set `include_images =
+        /// false` to stay within bounds.</para>
+        /// </summary>
+        /// <param name="getKeyframesArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetKeyframesAsyncAsync(GetKeyframesArgs getKeyframesArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<GetKeyframesArgs, global::Dropbox.Api.Async.LaunchResultBase, enc.Empty>(getKeyframesArgs, "api", "/riviera/get_keyframes_async", "app", global::Dropbox.Api.Riviera.GetKeyframesArgs.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get keyframes async route.</para>
+        /// </summary>
+        /// <param name="getKeyframesArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetKeyframesAsync(GetKeyframesArgs getKeyframesArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetKeyframesAsyncAsync(getKeyframesArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Asynchronous scene-change keyframe extraction for video files. Detects scene
+        /// changes in the source video and returns one representative keyframe per detected
+        /// scene, each tagged with its timestamp (seconds from the start of the video) and
+        /// scene-change score. Set `include_images = true` to also receive each frame as a
+        /// base64-encoded JPEG; when the field is omitted the response carries keyframe
+        /// metadata only. Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv,
+        /// .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv,
+        /// .rm, .ts, .vob, .webm, .wmv. Unsupported formats return an
+        /// `unsupported_format_error`. Limits: the source file must be at most 10 GB. To keep
+        /// responses within service limits the number of keyframes and the total image payload
+        /// are bounded; requests that would exceed these limits return a
+        /// `limit_exceeded_error` -- raise `scene_change_threshold` or set `include_images =
+        /// false` to stay within bounds.</para>
+        /// </summary>
+        /// <param name="fileIdOrUrl">Identifier of the video file to extract keyframes from.
+        /// Callers must set exactly one of the `FileIdOrUrl` variants. Keyframe extraction is
+        /// supported for video files only; see the route description for the supported
+        /// formats. Requests against unsupported formats return
+        /// `unsupported_format_error`.</param>
+        /// <param name="sceneChangeThreshold">Sensitivity of scene-change detection. A
+        /// keyframe is emitted whenever the frame-to-frame scene score crosses this threshold,
+        /// so a LOWER value yields MORE keyframes. Valid range is (0.0, 1.0]. When omitted
+        /// (0.0) the service uses a default of 0.3, which is a good starting point for most
+        /// videos.</param>
+        /// <param name="includeImages">When true, each returned keyframe includes the JPEG
+        /// image bytes, base64-encoded, in `ApiKeyframe.image_base64`. When false, the
+        /// response contains only per-keyframe metadata (timestamp and scene score) and
+        /// `image_base64` is left empty -- useful when you only need the scene boundaries and
+        /// want a small response. NOTE: because the field defaults to false in proto3, callers
+        /// who want images must set this explicitly to true.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetKeyframesAsyncAsync(FileIdOrUrl fileIdOrUrl = null,
+                                                                                         double sceneChangeThreshold = 0.0D,
+                                                                                         bool includeImages = false)
+        {
+            var getKeyframesArgs = new GetKeyframesArgs(fileIdOrUrl,
+                                                        sceneChangeThreshold,
+                                                        includeImages);
+
+            return this.GetKeyframesAsyncAsync(getKeyframesArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get keyframes async route.</para>
+        /// </summary>
+        /// <param name="fileIdOrUrl">Identifier of the video file to extract keyframes from.
+        /// Callers must set exactly one of the `FileIdOrUrl` variants. Keyframe extraction is
+        /// supported for video files only; see the route description for the supported
+        /// formats. Requests against unsupported formats return
+        /// `unsupported_format_error`.</param>
+        /// <param name="sceneChangeThreshold">Sensitivity of scene-change detection. A
+        /// keyframe is emitted whenever the frame-to-frame scene score crosses this threshold,
+        /// so a LOWER value yields MORE keyframes. Valid range is (0.0, 1.0]. When omitted
+        /// (0.0) the service uses a default of 0.3, which is a good starting point for most
+        /// videos.</param>
+        /// <param name="includeImages">When true, each returned keyframe includes the JPEG
+        /// image bytes, base64-encoded, in `ApiKeyframe.image_base64`. When false, the
+        /// response contains only per-keyframe metadata (timestamp and scene score) and
+        /// `image_base64` is left empty -- useful when you only need the scene boundaries and
+        /// want a small response. NOTE: because the field defaults to false in proto3, callers
+        /// who want images must set this explicitly to true.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetKeyframesAsync(FileIdOrUrl fileIdOrUrl = null,
+                                                       double sceneChangeThreshold = 0.0D,
+                                                       bool includeImages = false,
+                                                       sys.AsyncCallback callback = null,
+                                                       object callbackState = null)
+        {
+            var getKeyframesArgs = new GetKeyframesArgs(fileIdOrUrl,
+                                                        sceneChangeThreshold,
+                                                        includeImages);
+
+            return this.BeginGetKeyframesAsync(getKeyframesArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get keyframes async route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public global::Dropbox.Api.Async.LaunchResultBase EndGetKeyframesAsync(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchResultBase>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns the status or result of specified get_keyframes_async task.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<GetKeyframesAsyncCheckResult> GetKeyframesAsyncCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, GetKeyframesAsyncCheckResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/riviera/get_keyframes_async/check", "app", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Riviera.GetKeyframesAsyncCheckResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get keyframes async check route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetKeyframesAsyncCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetKeyframesAsyncCheckAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the status or result of specified get_keyframes_async task.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<GetKeyframesAsyncCheckResult> GetKeyframesAsyncCheckAsync(string asyncJobId)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.GetKeyframesAsyncCheckAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get keyframes async check route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetKeyframesAsyncCheck(string asyncJobId,
+                                                            sys.AsyncCallback callback,
+                                                            object callbackState = null)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginGetKeyframesAsyncCheck(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get keyframes async check
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public GetKeyframesAsyncCheckResult EndGetKeyframesAsyncCheck(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<GetKeyframesAsyncCheckResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Asynchronous document-to-markdown conversion for supported file formats.
         /// Supported formats: .binder, .docx, .html, .paper, .papert, .pptx, .xlsx, .gsheet,
         /// .ods, .pdf. Unsupported formats return an `unsupported_format_error`. Size limit:
