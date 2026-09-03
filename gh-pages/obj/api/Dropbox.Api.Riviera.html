@@ -84,6 +84,9 @@ file.</p>
       <section><p>Image EXIF metadata. Mirrors the useful subset of the internal
 `riviera.ExifMetadata` message. Fields are best-effort and may be empty.</p>
 </section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ApiKeyframe.html">ApiKeyframe</a></h4>
+      <section><p>A single extracted scene-change keyframe.</p>
+</section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ApiMediaMetadata.html">ApiMediaMetadata</a></h4>
       <section><p>Audio/video container and per-stream metadata. Mirrors the useful subset of the
 internal `riviera.MediaMetadata` message.</p>
@@ -165,6 +168,29 @@ protected by a password are rejected with `shared_link_password_protected`; link
 with downloads disabled are rejected with `link_download_disabled_error`. -
 External URLs are fetched through the backend's egress proxy and must point at a
 supported file extension.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetKeyframesArgs.html">GetKeyframesArgs</a></h4>
+      <section><p>Arguments for the asynchronous `get_keyframes_async` route. Exactly one of
+`file_id`, `path`, or `url` must be supplied via `file_id_or_url` to identify the video
+whose scene-change keyframes should be extracted.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetKeyframesAsyncCheckResult.html">GetKeyframesAsyncCheckResult</a></h4>
+      <section><p>Result type for EventBus async check - must end in "CheckResult"</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetKeyframesAsyncCheckResult.Complete.html">GetKeyframesAsyncCheckResult.Complete</a></h4>
+      <section><p>The complete object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetKeyframesAsyncCheckResult.Failed.html">GetKeyframesAsyncCheckResult.Failed</a></h4>
+      <section><p>The failed object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetKeyframesAsyncCheckResult.InProgress.html">GetKeyframesAsyncCheckResult.InProgress</a></h4>
+      <section><p>The in progress object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetKeyframesAsyncCheckResult.Other.html">GetKeyframesAsyncCheckResult.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetKeyframesResult.html">GetKeyframesResult</a></h4>
+      <section><p>The get keyframes result object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMarkdownArgs.html">GetMarkdownArgs</a></h4>
       <section><p>Arguments for the asynchronous `get_markdown_async` route. Exactly one of
@@ -280,6 +306,48 @@ or video asset to transcribe.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetTranscriptResult.html">GetTranscriptResult</a></h4>
       <section><p>The get transcript result object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.html">KeyframesExtractionApiV2Error</a></h4>
+      <section><p>Reason a keyframe extraction job failed. Returned in the `failed` variant of
+`GetKeyframesAsyncCheckResult`. This is a semantic error union: the HTTP status of the
+poll request itself is unaffected (a poll that surfaces a failed job is still a normal
+successful poll response). Callers should branch on the variant.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.ConversionFailureError.html">KeyframesExtractionApiV2Error.ConversionFailureError</a></h4>
+      <section><p>The conversion failure error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.IsAFolderError.html">KeyframesExtractionApiV2Error.IsAFolderError</a></h4>
+      <section><p>The target is a folder, not a file.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.LimitExceededError.html">KeyframesExtractionApiV2Error.LimitExceededError</a></h4>
+      <section><p>The request exceeded a service limit -- for example the source video is too
+large, or the extraction produced more keyframes / more total image data than the
+response can carry. Lower the resolution, raise `scene_change_threshold`, or set
+`include_images = false`.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.LinkDownloadDisabledError.html">KeyframesExtractionApiV2Error.LinkDownloadDisabledError</a></h4>
+      <section><p>The link download disabled error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.NotFoundError.html">KeyframesExtractionApiV2Error.NotFoundError</a></h4>
+      <section><p>The referenced file does not exist or is not accessible.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.Other.html">KeyframesExtractionApiV2Error.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.ServerError.html">KeyframesExtractionApiV2Error.ServerError</a></h4>
+      <section><p>An unexpected, typically transient, server-side failure. The string is a
+human-readable message; retrying with backoff may succeed.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.SharedLinkPasswordProtected.html">KeyframesExtractionApiV2Error.SharedLinkPasswordProtected</a></h4>
+      <section><p>The shared link password protected object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.UnsupportedFormatError.html">KeyframesExtractionApiV2Error.UnsupportedFormatError</a></h4>
+      <section><p>The unsupported format error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.UserError.html">KeyframesExtractionApiV2Error.UserError</a></h4>
+      <section><p>The request could not be processed as supplied (a problem with the caller's
+input). The string is a human-readable message; retrying the same request will not
+help.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.html">MarkdownConversionApiV2Error</a></h4>
       <section><p>Reason a markdown conversion job failed. Returned in the `failed` variant of

@@ -115,6 +115,276 @@
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraAppRoutes.cs">View Source</a>
   </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_BeginGetKeyframesAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.BeginGetKeyframesAsync*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_BeginGetKeyframesAsync_Dropbox_Api_Riviera_FileIdOrUrl_System_Double_System_Boolean_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.BeginGetKeyframesAsync(Dropbox.Api.Riviera.FileIdOrUrl,System.Double,System.Boolean,System.AsyncCallback,System.Object)">BeginGetKeyframesAsync(FileIdOrUrl, double, bool, AsyncCallback, object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the get keyframes async route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGetKeyframesAsync(FileIdOrUrl fileIdOrUrl = null, double sceneChangeThreshold = 0, bool includeImages = false, AsyncCallback callback = null, object callbackState = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
+        <td><span class="parametername">fileIdOrUrl</span></td>
+        <td><p>Identifier of the video file to extract keyframes from.
+Callers must set exactly one of the <code>FileIdOrUrl</code> variants. Keyframe extraction is
+supported for video files only; see the route description for the supported
+formats. Requests against unsupported formats return
+<code>unsupported_format_error</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">sceneChangeThreshold</span></td>
+        <td><p>Sensitivity of scene-change detection. A
+keyframe is emitted whenever the frame-to-frame scene score crosses this threshold,
+so a LOWER value yields MORE keyframes. Valid range is (0.0, 1.0]. When omitted
+(0.0) the service uses a default of 0.3, which is a good starting point for most
+videos.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">includeImages</span></td>
+        <td><p>When true, each returned keyframe includes the JPEG
+image bytes, base64-encoded, in <code>ApiKeyframe.image_base64</code>. When false, the
+response contains only per-keyframe metadata (timestamp and scene score) and
+<code>image_base64</code> is left empty -- useful when you only need the scene boundaries and
+want a small response. NOTE: because the field defaults to false in proto3, callers
+who want images must set this explicitly to true.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">callbackState</span></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraAppRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_BeginGetKeyframesAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.BeginGetKeyframesAsync*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_BeginGetKeyframesAsync_Dropbox_Api_Riviera_GetKeyframesArgs_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.BeginGetKeyframesAsync(Dropbox.Api.Riviera.GetKeyframesArgs,System.AsyncCallback,System.Object)">BeginGetKeyframesAsync(GetKeyframesArgs, AsyncCallback, object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the get keyframes async route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGetKeyframesAsync(GetKeyframesArgs getKeyframesArgs, AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Riviera.GetKeyframesArgs.html">GetKeyframesArgs</a></td>
+        <td><span class="parametername">getKeyframesArgs</span></td>
+        <td><p>The request parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraAppRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_BeginGetKeyframesAsyncCheck_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.BeginGetKeyframesAsyncCheck*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_BeginGetKeyframesAsyncCheck_Dropbox_Api_Async_PollArg_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.BeginGetKeyframesAsyncCheck(Dropbox.Api.Async.PollArg,System.AsyncCallback,System.Object)">BeginGetKeyframesAsyncCheck(PollArg, AsyncCallback, object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the get keyframes async check route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGetKeyframesAsyncCheck(PollArg pollArg, AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Async.PollArg.html">PollArg</a></td>
+        <td><span class="parametername">pollArg</span></td>
+        <td><p>The request parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraAppRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_BeginGetKeyframesAsyncCheck_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.BeginGetKeyframesAsyncCheck*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_BeginGetKeyframesAsyncCheck_System_String_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.BeginGetKeyframesAsyncCheck(System.String,System.AsyncCallback,System.Object)">BeginGetKeyframesAsyncCheck(string, AsyncCallback, object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the get keyframes async check route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGetKeyframesAsyncCheck(string asyncJobId, AsyncCallback callback, object callbackState = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">asyncJobId</span></td>
+        <td><p>Id of the asynchronous job. This is the value of a
+response returned from the method that launched the job.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">callbackState</span></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraAppRoutes.cs">View Source</a>
+  </span>
   <a id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_BeginGetMarkdownAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.BeginGetMarkdownAsync*"></a>
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_BeginGetMarkdownAsync_Dropbox_Api_Riviera_FileIdOrUrl_System_Boolean_System_Boolean_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.BeginGetMarkdownAsync(Dropbox.Api.Riviera.FileIdOrUrl,System.Boolean,System.Boolean,System.AsyncCallback,System.Object)">BeginGetMarkdownAsync(FileIdOrUrl, bool, bool, AsyncCallback, object)</h4>
   <div class="markdown level1 summary"><p>Begins an asynchronous send to the get markdown async route.</p>
@@ -1408,6 +1678,121 @@ from other send requests.</p>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraAppRoutes.cs">View Source</a>
   </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_EndGetKeyframesAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.EndGetKeyframesAsync*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_EndGetKeyframesAsync_System_IAsyncResult_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.EndGetKeyframesAsync(System.IAsyncResult)">EndGetKeyframesAsync(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the get keyframes async route to
+complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LaunchResultBase EndGetKeyframesAsync(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Async.LaunchResultBase.html">LaunchResultBase</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraAppRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_EndGetKeyframesAsyncCheck_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.EndGetKeyframesAsyncCheck*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_EndGetKeyframesAsyncCheck_System_IAsyncResult_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.EndGetKeyframesAsyncCheck(System.IAsyncResult)">EndGetKeyframesAsyncCheck(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the get keyframes async check
+route to complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GetKeyframesAsyncCheckResult EndGetKeyframesAsyncCheck(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Riviera.GetKeyframesAsyncCheckResult.html">GetKeyframesAsyncCheckResult</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.Async.PollError.html">PollError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraAppRoutes.cs">View Source</a>
+  </span>
   <a id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_EndGetMarkdownAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.EndGetMarkdownAsync*"></a>
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_EndGetMarkdownAsync_System_IAsyncResult_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.EndGetMarkdownAsync(System.IAsyncResult)">EndGetMarkdownAsync(IAsyncResult)</h4>
   <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the get markdown async route to
@@ -1958,6 +2343,282 @@ request</p>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.html">GetTranscriptAsyncCheckResult</a></td>
         <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.Async.PollError.html">PollError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraAppRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetKeyframesAsyncAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetKeyframesAsyncAsync*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetKeyframesAsyncAsync_Dropbox_Api_Riviera_FileIdOrUrl_System_Double_System_Boolean_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetKeyframesAsyncAsync(Dropbox.Api.Riviera.FileIdOrUrl,System.Double,System.Boolean)">GetKeyframesAsyncAsync(FileIdOrUrl, double, bool)</h4>
+  <div class="markdown level1 summary"><p>Asynchronous scene-change keyframe extraction for video files. Detects scene
+changes in the source video and returns one representative keyframe per detected
+scene, each tagged with its timestamp (seconds from the start of the video) and
+scene-change score. Set `include_images = true` to also receive each frame as a
+base64-encoded JPEG; when the field is omitted the response carries keyframe
+metadata only. Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv,
+.m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv,
+.rm, .ts, .vob, .webm, .wmv. Unsupported formats return an
+`unsupported_format_error`. Limits: the source file must be at most 10 GB. To keep
+responses within service limits the number of keyframes and the total image payload
+are bounded; requests that would exceed these limits return a
+`limit_exceeded_error` -- raise `scene_change_threshold` or set `include_images =
+false` to stay within bounds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;LaunchResultBase&gt; GetKeyframesAsyncAsync(FileIdOrUrl fileIdOrUrl = null, double sceneChangeThreshold = 0, bool includeImages = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
+        <td><span class="parametername">fileIdOrUrl</span></td>
+        <td><p>Identifier of the video file to extract keyframes from.
+Callers must set exactly one of the <code>FileIdOrUrl</code> variants. Keyframe extraction is
+supported for video files only; see the route description for the supported
+formats. Requests against unsupported formats return
+<code>unsupported_format_error</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">sceneChangeThreshold</span></td>
+        <td><p>Sensitivity of scene-change detection. A
+keyframe is emitted whenever the frame-to-frame scene score crosses this threshold,
+so a LOWER value yields MORE keyframes. Valid range is (0.0, 1.0]. When omitted
+(0.0) the service uses a default of 0.3, which is a good starting point for most
+videos.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">includeImages</span></td>
+        <td><p>When true, each returned keyframe includes the JPEG
+image bytes, base64-encoded, in <code>ApiKeyframe.image_base64</code>. When false, the
+response contains only per-keyframe metadata (timestamp and scene score) and
+<code>image_base64</code> is left empty -- useful when you only need the scene boundaries and
+want a small response. NOTE: because the field defaults to false in proto3, callers
+who want images must set this explicitly to true.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Async.LaunchResultBase.html">LaunchResultBase</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraAppRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetKeyframesAsyncAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetKeyframesAsyncAsync*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetKeyframesAsyncAsync_Dropbox_Api_Riviera_GetKeyframesArgs_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetKeyframesAsyncAsync(Dropbox.Api.Riviera.GetKeyframesArgs)">GetKeyframesAsyncAsync(GetKeyframesArgs)</h4>
+  <div class="markdown level1 summary"><p>Asynchronous scene-change keyframe extraction for video files. Detects scene
+changes in the source video and returns one representative keyframe per detected
+scene, each tagged with its timestamp (seconds from the start of the video) and
+scene-change score. Set `include_images = true` to also receive each frame as a
+base64-encoded JPEG; when the field is omitted the response carries keyframe
+metadata only. Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv,
+.m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv,
+.rm, .ts, .vob, .webm, .wmv. Unsupported formats return an
+`unsupported_format_error`. Limits: the source file must be at most 10 GB. To keep
+responses within service limits the number of keyframes and the total image payload
+are bounded; requests that would exceed these limits return a
+`limit_exceeded_error` -- raise `scene_change_threshold` or set `include_images =
+false` to stay within bounds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;LaunchResultBase&gt; GetKeyframesAsyncAsync(GetKeyframesArgs getKeyframesArgs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Riviera.GetKeyframesArgs.html">GetKeyframesArgs</a></td>
+        <td><span class="parametername">getKeyframesArgs</span></td>
+        <td><p>The request parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Async.LaunchResultBase.html">LaunchResultBase</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraAppRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetKeyframesAsyncCheckAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetKeyframesAsyncCheckAsync*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetKeyframesAsyncCheckAsync_Dropbox_Api_Async_PollArg_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetKeyframesAsyncCheckAsync(Dropbox.Api.Async.PollArg)">GetKeyframesAsyncCheckAsync(PollArg)</h4>
+  <div class="markdown level1 summary"><p>Returns the status or result of specified get_keyframes_async task.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;GetKeyframesAsyncCheckResult&gt; GetKeyframesAsyncCheckAsync(PollArg pollArg)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Async.PollArg.html">PollArg</a></td>
+        <td><span class="parametername">pollArg</span></td>
+        <td><p>The request parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Riviera.GetKeyframesAsyncCheckResult.html">GetKeyframesAsyncCheckResult</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.Async.PollError.html">PollError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraAppRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetKeyframesAsyncCheckAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetKeyframesAsyncCheckAsync*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetKeyframesAsyncCheckAsync_System_String_" data-uid="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetKeyframesAsyncCheckAsync(System.String)">GetKeyframesAsyncCheckAsync(string)</h4>
+  <div class="markdown level1 summary"><p>Returns the status or result of specified get_keyframes_async task.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;GetKeyframesAsyncCheckResult&gt; GetKeyframesAsyncCheckAsync(string asyncJobId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">asyncJobId</span></td>
+        <td><p>Id of the asynchronous job. This is the value of a
+response returned from the method that launched the job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Riviera.GetKeyframesAsyncCheckResult.html">GetKeyframesAsyncCheckResult</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
 </td>
       </tr>
     </tbody>

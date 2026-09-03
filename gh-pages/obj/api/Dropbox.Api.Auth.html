@@ -101,7 +101,11 @@ resource.</p>
       <section><p>The access token has expired.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.AuthError.InvalidAccessToken.html">AuthError.InvalidAccessToken</a></h4>
-      <section><p>The access token is invalid.</p>
+      <section><p>The access token is invalid. This can happen if the access token has been
+revoked by Dropbox or the user. To fix this, you should re-authenticate the user.
+Note: Access tokens that are not returned exactly as provisioned will return this
+error. Be sure not to truncate or otherwise malform access tokens provided by
+Dropbox.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.AuthError.InvalidSelectAdmin.html">AuthError.InvalidSelectAdmin</a></h4>
       <section><p>The user specified in 'Dropbox-API-Select-Admin' is not a Dropbox Business
@@ -127,8 +131,7 @@ team.</p>
       <section><p>The invalid account type error object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.InvalidAccountTypeError.Endpoint.html">InvalidAccountTypeError.Endpoint</a></h4>
-      <section><p>Current account type doesn't have permission to access this route
-endpoint.</p>
+      <section><p>Current account type doesn't have permission to access this endpoint.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Auth.InvalidAccountTypeError.Feature.html">InvalidAccountTypeError.Feature</a></h4>
       <section><p>Current account type doesn't have permission to access this feature.</p>

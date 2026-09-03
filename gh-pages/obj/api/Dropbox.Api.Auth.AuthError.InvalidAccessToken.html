@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class AuthError.InvalidAccessToken | Dropbox .NET SDK API Reference ">
     
-    <meta name="description" content="The access token is invalid.">
+    <meta name="description" content="The access token is invalid. This can happen if the access token has been revoked by Dropbox or the user. To fix this, you should re-authenticate the user. Note: Access tokens that are not returned exactly as provisioned will return this error. Be sure not to truncate or otherwise malform access tokens provided by Dropbox.">
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
@@ -71,7 +71,11 @@
 
 
   <h1 id="Dropbox_Api_Auth_AuthError_InvalidAccessToken" data-uid="Dropbox.Api.Auth.AuthError.InvalidAccessToken" class="text-break">Class AuthError.InvalidAccessToken</h1>
-  <div class="markdown level0 summary"><p>The access token is invalid.</p>
+  <div class="markdown level0 summary"><p>The access token is invalid. This can happen if the access token has been
+revoked by Dropbox or the user. To fix this, you should re-authenticate the user.
+Note: Access tokens that are not returned exactly as provisioned will return this
+error. Be sure not to truncate or otherwise malform access tokens provided by
+Dropbox.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
