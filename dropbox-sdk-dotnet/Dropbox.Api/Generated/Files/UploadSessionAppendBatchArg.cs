@@ -32,10 +32,10 @@ namespace Dropbox.Api.Files
         /// class.</para>
         /// </summary>
         /// <param name="entries">Append information for each file in the batch.</param>
-        /// <param name="contentHash">A hash of the entire request body which is all the
-        /// concatenated pieces of file content that were uploaded in this call. If provided
-        /// and the uploaded content does not match this hash, an error will be returned. For
-        /// more information see our <a
+        /// <param name="contentHash">A single hash of all the concatenated file contents
+        /// uploaded in this call. If provided and the uploaded content does not match this
+        /// hash, an error will be returned. Optional, but recommended to avoid committing data
+        /// corrupted in transit. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         public UploadSessionAppendBatchArg(col.IEnumerable<UploadSessionAppendBatchArgEntry> entries,
@@ -85,11 +85,12 @@ namespace Dropbox.Api.Files
         public col.IList<UploadSessionAppendBatchArgEntry> Entries { get; protected set; }
 
         /// <summary>
-        /// <para>A hash of the entire request body which is all the concatenated pieces of
-        /// file content that were uploaded in this call. If provided and the uploaded content
-        /// does not match this hash, an error will be returned. For more information see our
-        /// <a href="https://www.dropbox.com/developers/reference/content-hash">Content
-        /// hash</a> page.</para>
+        /// <para>A single hash of all the concatenated file contents uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. Optional, but recommended to avoid committing data corrupted in transit.
+        /// For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</para>
         /// </summary>
         public string ContentHash { get; protected set; }
 

@@ -54,7 +54,8 @@ namespace Dropbox.Api.Files
         /// with identical contents.</param>
         /// <param name="contentHash">A hash of the file content uploaded in this call. If
         /// provided and the uploaded content does not match this hash, an error will be
-        /// returned. For more information see our <a
+        /// returned. Optional, but recommended to avoid committing data corrupted in transit.
+        /// For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         public UploadArg(string path,
@@ -94,10 +95,10 @@ namespace Dropbox.Api.Files
 
         /// <summary>
         /// <para>A hash of the file content uploaded in this call. If provided and the
-        /// uploaded content does not match this hash, an error will be returned. For more
-        /// information see our <a
-        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
-        /// page.</para>
+        /// uploaded content does not match this hash, an error will be returned. Optional, but
+        /// recommended to avoid committing data corrupted in transit. For more information see
+        /// our <a href="https://www.dropbox.com/developers/reference/content-hash">Content
+        /// hash</a> page.</para>
         /// </summary>
         public string ContentHash { get; protected set; }
 
