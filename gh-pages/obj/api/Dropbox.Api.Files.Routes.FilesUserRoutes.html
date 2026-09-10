@@ -442,7 +442,8 @@ with identical contents.</p>
         <td><span class="parametername">contentHash</span></td>
         <td><p>A hash of the file content uploaded in this call. If
 provided and the uploaded content does not match this hash, an error will be
-returned. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+returned. Optional, but recommended to avoid committing data corrupted in transit.
+For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
 page.</p>
 </td>
       </tr>
@@ -799,7 +800,8 @@ with identical contents.</p>
         <td><span class="parametername">contentHash</span></td>
         <td><p>A hash of the file content uploaded in this call. If
 provided and the uploaded content does not match this hash, an error will be
-returned. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+returned. Optional, but recommended to avoid committing data corrupted in transit.
+For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
 page.</p>
 </td>
       </tr>
@@ -8455,7 +8457,8 @@ with identical contents.</p>
         <td><span class="parametername">contentHash</span></td>
         <td><p>A hash of the file content uploaded in this call. If
 provided and the uploaded content does not match this hash, an error will be
-returned. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+returned. Optional, but recommended to avoid committing data corrupted in transit.
+For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
 page.</p>
 </td>
       </tr>
@@ -8740,10 +8743,10 @@ send requests.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">contentHash</span></td>
-        <td><p>A hash of the entire request body which is all the
-concatenated pieces of file content that were uploaded in this call. If provided
-and the uploaded content does not match this hash, an error will be returned. For
-more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        <td><p>A single hash of all the concatenated file contents
+uploaded in this call. If provided and the uploaded content does not match this
+hash, an error will be returned. Optional, but recommended to avoid committing data
+corrupted in transit. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
 page.</p>
 </td>
       </tr>
@@ -8894,7 +8897,8 @@ anymore with the current session.</p>
         <td><span class="parametername">contentHash</span></td>
         <td><p>A hash of the file content uploaded in this call. If
 provided and the uploaded content does not match this hash, an error will be
-returned. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+returned. Optional, but recommended to avoid committing data corrupted in transit.
+For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
 page.</p>
 </td>
       </tr>
@@ -8977,7 +8981,8 @@ commit.</p>
         <td><span class="parametername">contentHash</span></td>
         <td><p>A hash of the file content uploaded in this call. If
 provided and the uploaded content does not match this hash, an error will be
-returned. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+returned. Optional, but recommended to avoid committing data corrupted in transit.
+For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
 page.</p>
 </td>
       </tr>
@@ -9567,7 +9572,8 @@ specified, default is <a class="xref" href="Dropbox.Api.Files.UploadSessionType.
         <td><span class="parametername">contentHash</span></td>
         <td><p>A hash of the file content uploaded in this call. If
 provided and the uploaded content does not match this hash, an error will be
-returned. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+returned. Optional, but recommended to avoid committing data corrupted in transit.
+For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
 page.</p>
 </td>
       </tr>
@@ -21930,7 +21936,8 @@ with identical contents.</p>
         <td><span class="parametername">contentHash</span></td>
         <td><p>A hash of the file content uploaded in this call. If
 provided and the uploaded content does not match this hash, an error will be
-returned. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+returned. Optional, but recommended to avoid committing data corrupted in transit.
+For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
 page.</p>
 </td>
       </tr>
@@ -22259,10 +22266,10 @@ https://www.dropbox.com/developers/reference/data-transport-limit.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">contentHash</span></td>
-        <td><p>A hash of the entire request body which is all the
-concatenated pieces of file content that were uploaded in this call. If provided
-and the uploaded content does not match this hash, an error will be returned. For
-more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        <td><p>A single hash of all the concatenated file contents
+uploaded in this call. If provided and the uploaded content does not match this
+hash, an error will be returned. Optional, but recommended to avoid committing data
+corrupted in transit. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
 page.</p>
 </td>
       </tr>
@@ -22432,7 +22439,8 @@ anymore with the current session.</p>
         <td><span class="parametername">contentHash</span></td>
         <td><p>A hash of the file content uploaded in this call. If
 provided and the uploaded content does not match this hash, an error will be
-returned. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+returned. Optional, but recommended to avoid committing data corrupted in transit.
+For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
 page.</p>
 </td>
       </tr>
@@ -22524,7 +22532,8 @@ commit.</p>
         <td><span class="parametername">contentHash</span></td>
         <td><p>A hash of the file content uploaded in this call. If
 provided and the uploaded content does not match this hash, an error will be
-returned. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+returned. Optional, but recommended to avoid committing data corrupted in transit.
+For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
 page.</p>
 </td>
       </tr>
@@ -23194,7 +23203,8 @@ specified, default is <a class="xref" href="Dropbox.Api.Files.UploadSessionType.
         <td><span class="parametername">contentHash</span></td>
         <td><p>A hash of the file content uploaded in this call. If
 provided and the uploaded content does not match this hash, an error will be
-returned. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+returned. Optional, but recommended to avoid committing data corrupted in transit.
+For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
 page.</p>
 </td>
       </tr>

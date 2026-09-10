@@ -155,7 +155,8 @@ specified, default is <a class="xref" href="Dropbox.Api.Files.UploadSessionType.
         <td><span class="parametername">contentHash</span></td>
         <td><p>A hash of the file content uploaded in this call. If
 provided and the uploaded content does not match this hash, an error will be
-returned. For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+returned. Optional, but recommended to avoid committing data corrupted in transit.
+For more information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
 page.</p>
 </td>
       </tr>
@@ -200,9 +201,10 @@ anymore with the current session.</p>
   <a id="Dropbox_Api_Files_UploadSessionStartArg_ContentHash_" data-uid="Dropbox.Api.Files.UploadSessionStartArg.ContentHash*"></a>
   <h4 id="Dropbox_Api_Files_UploadSessionStartArg_ContentHash" data-uid="Dropbox.Api.Files.UploadSessionStartArg.ContentHash">ContentHash</h4>
   <div class="markdown level1 summary"><p>A hash of the file content uploaded in this call. If provided and the
-uploaded content does not match this hash, an error will be returned. For more
-information see our <a href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
-page.</p>
+uploaded content does not match this hash, an error will be returned. Optional, but
+recommended to avoid committing data corrupted in transit. For more information see
+our <a href="https://www.dropbox.com/developers/reference/content-hash">Content
+hash</a> page.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
