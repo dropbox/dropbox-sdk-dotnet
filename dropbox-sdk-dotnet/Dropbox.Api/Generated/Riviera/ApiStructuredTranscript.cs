@@ -11,7 +11,7 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Structured transcript for APIv2</para>
+    /// <para>A transcript, split into segments.</para>
     /// </summary>
     public class ApiStructuredTranscript
     {
@@ -31,8 +31,10 @@ namespace Dropbox.Api.Riviera
         /// <para>Initializes a new instance of the <see cref="ApiStructuredTranscript" />
         /// class.</para>
         /// </summary>
-        /// <param name="segments">The segments</param>
-        /// <param name="transcriptLocale">The transcript locale</param>
+        /// <param name="segments">The segments of the transcript, in playback order.</param>
+        /// <param name="transcriptLocale">The language of the transcript, as an ISO 639-1 code
+        /// (e.g. "en"). This is the language detected in the audio, or the one supplied in
+        /// <see cref="Dropbox.Api.Riviera.GetTranscriptArgs.AudioLanguage" />.</param>
         public ApiStructuredTranscript(col.IEnumerable<ApiTranscriptSegment> segments = null,
                                        string transcriptLocale = "")
         {
@@ -60,12 +62,14 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>Gets the segments of the api structured transcript</para>
+        /// <para>The segments of the transcript, in playback order.</para>
         /// </summary>
         public col.IList<ApiTranscriptSegment> Segments { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the transcript locale of the api structured transcript</para>
+        /// <para>The language of the transcript, as an ISO 639-1 code (e.g. "en"). This is the
+        /// language detected in the audio, or the one supplied in <see
+        /// cref="Dropbox.Api.Riviera.GetTranscriptArgs.AudioLanguage" />.</para>
         /// </summary>
         public string TranscriptLocale { get; protected set; }
 

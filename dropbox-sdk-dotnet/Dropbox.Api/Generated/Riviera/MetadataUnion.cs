@@ -11,7 +11,8 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Exactly one variant is populated, corresponding to `metadata_type`.</para>
+    /// <para>The extracted metadata. Exactly one variant is populated, corresponding to <see
+    /// cref="Dropbox.Api.Riviera.GetMetadataResult.MetadataType" />.</para>
     /// </summary>
     public class MetadataUnion
     {
@@ -237,7 +238,7 @@ namespace Dropbox.Api.Riviera
         #endregion
 
         /// <summary>
-        /// <para>The exif object</para>
+        /// <para>EXIF metadata, for image files.</para>
         /// </summary>
         public sealed class Exif : MetadataUnion
         {
@@ -324,7 +325,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The media object</para>
+        /// <para>Container and per-stream metadata, for audio and video files.</para>
         /// </summary>
         public sealed class Media : MetadataUnion
         {
@@ -411,7 +412,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The pdf object</para>
+        /// <para>Document metadata, for PDFs.</para>
         /// </summary>
         public sealed class Pdf : MetadataUnion
         {
@@ -498,7 +499,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The office object</para>
+        /// <para>Document metadata, for MS Office files.</para>
         /// </summary>
         public sealed class Office : MetadataUnion
         {

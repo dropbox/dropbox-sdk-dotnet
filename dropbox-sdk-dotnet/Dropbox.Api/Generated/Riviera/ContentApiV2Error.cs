@@ -11,10 +11,11 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Reason a transcript job failed. Returned in the `failed` variant of
-    /// `GetTranscriptAsyncCheckResult`. This is a semantic error union: the HTTP status of the
-    /// poll request itself is unaffected (a poll that surfaces a failed job is still a normal
-    /// successful poll response). Callers should branch on the variant.</para>
+    /// <para>Reason a transcript job failed. Returned in the <see
+    /// cref="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Failed" /> variant. This is a
+    /// semantic error union: the HTTP status of the poll request itself is unaffected (a poll
+    /// that surfaces a failed job is still a normal successful poll response). Callers should
+    /// branch on the variant.</para>
     /// </summary>
     public class ContentApiV2Error
     {
@@ -590,7 +591,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The media duration error object</para>
+        /// <para>The audio to transcribe is longer than the supported maximum.</para>
         /// </summary>
         public sealed class MediaDurationError : ContentApiV2Error
         {
@@ -680,7 +681,8 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The no audio error object</para>
+        /// <para>The file has no audio track, or no audio content could be detected in
+        /// it.</para>
         /// </summary>
         public sealed class NoAudioError : ContentApiV2Error
         {
@@ -750,7 +752,8 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The link download disabled error object</para>
+        /// <para><see cref="Dropbox.Api.Riviera.FileIdOrUrl.Url" /> referenced a Dropbox
+        /// shared link whose owner has disabled downloads.</para>
         /// </summary>
         public sealed class LinkDownloadDisabledError : ContentApiV2Error
         {
@@ -821,7 +824,9 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The shared link password protected object</para>
+        /// <para><see cref="Dropbox.Api.Riviera.FileIdOrUrl.Url" /> referenced a
+        /// password-protected Dropbox shared link. Riviera cannot supply the password, so such
+        /// links cannot be transcribed.</para>
         /// </summary>
         public sealed class SharedLinkPasswordProtected : ContentApiV2Error
         {
@@ -892,7 +897,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The limit exceeded error object</para>
+        /// <para>A resource limit was exceeded while producing the result.</para>
         /// </summary>
         public sealed class LimitExceededError : ContentApiV2Error
         {

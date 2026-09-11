@@ -11,8 +11,8 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Image EXIF metadata. Mirrors the useful subset of the internal
-    /// `riviera.ExifMetadata` message. Fields are best-effort and may be empty.</para>
+    /// <para>Image EXIF metadata. Fields are populated on a best-effort basis and may be empty
+    /// when absent from the source file.</para>
     /// </summary>
     public class ApiExifMetadata
     {
@@ -32,25 +32,33 @@ namespace Dropbox.Api.Riviera
         /// <para>Initializes a new instance of the <see cref="ApiExifMetadata" />
         /// class.</para>
         /// </summary>
-        /// <param name="imageWidth">The image width</param>
-        /// <param name="imageHeight">The image height</param>
-        /// <param name="cameraMake">The camera make</param>
-        /// <param name="cameraModel">The camera model</param>
-        /// <param name="lensModel">The lens model</param>
+        /// <param name="imageWidth">Width of the image, in pixels.</param>
+        /// <param name="imageHeight">Height of the image, in pixels.</param>
+        /// <param name="cameraMake">Manufacturer of the device that captured the image, e.g.
+        /// "Apple".</param>
+        /// <param name="cameraModel">Model of the device that captured the image, e.g. "iPhone
+        /// 15 Pro".</param>
+        /// <param name="lensModel">Model of the lens the image was captured with, when the
+        /// source records it.</param>
         /// <param name="dateTimeOriginal">Capture time in the EXIF-provided format (local time
         /// of the camera).</param>
-        /// <param name="offsetTimeOriginal">Timezone offset for `date_time_original`, e.g.
+        /// <param name="offsetTimeOriginal">Timezone offset for <see
+        /// cref="Dropbox.Api.Riviera.ApiExifMetadata.DateTimeOriginal" />, e.g.
         /// "+09:00".</param>
         /// <param name="orientation">EXIF orientation value (1-8). See the EXIF spec; 1 is the
         /// normal upright orientation.</param>
-        /// <param name="exposureTime">fraction in string form, e.g. "1/250"</param>
-        /// <param name="apertureValue">The aperture value</param>
-        /// <param name="isoSpeed">The iso speed</param>
-        /// <param name="focalLength">e.g. "26.0 mm"</param>
-        /// <param name="megapixels">The megapixels</param>
-        /// <param name="artist">The artist</param>
-        /// <param name="copyright">The copyright</param>
-        /// <param name="gpsMetadata">The gps metadata</param>
+        /// <param name="exposureTime">Exposure time the image was captured with, as a
+        /// fractional-second string, e.g. "1/250".</param>
+        /// <param name="apertureValue">Aperture the image was captured at, as reported by the
+        /// EXIF aperture tag.</param>
+        /// <param name="isoSpeed">ISO sensitivity the image was captured at.</param>
+        /// <param name="focalLength">Focal length the image was captured at, including the
+        /// unit, e.g. "26.0 mm".</param>
+        /// <param name="megapixels">Total pixel count of the image, in megapixels.</param>
+        /// <param name="artist">Creator credited in the EXIF artist tag.</param>
+        /// <param name="copyright">Copyright notice from the EXIF copyright tag.</param>
+        /// <param name="gpsMetadata">Location tags from the image, when the source recorded a
+        /// location.</param>
         public ApiExifMetadata(uint imageWidth = 0U,
                                uint imageHeight = 0U,
                                string cameraMake = "",
@@ -158,27 +166,28 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>Gets the image width of the api exif metadata</para>
+        /// <para>Width of the image, in pixels.</para>
         /// </summary>
         public uint ImageWidth { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the image height of the api exif metadata</para>
+        /// <para>Height of the image, in pixels.</para>
         /// </summary>
         public uint ImageHeight { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the camera make of the api exif metadata</para>
+        /// <para>Manufacturer of the device that captured the image, e.g. "Apple".</para>
         /// </summary>
         public string CameraMake { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the camera model of the api exif metadata</para>
+        /// <para>Model of the device that captured the image, e.g. "iPhone 15 Pro".</para>
         /// </summary>
         public string CameraModel { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the lens model of the api exif metadata</para>
+        /// <para>Model of the lens the image was captured with, when the source records
+        /// it.</para>
         /// </summary>
         public string LensModel { get; protected set; }
 
@@ -188,7 +197,9 @@ namespace Dropbox.Api.Riviera
         public string DateTimeOriginal { get; protected set; }
 
         /// <summary>
-        /// <para>Timezone offset for `date_time_original`, e.g. "+09:00".</para>
+        /// <para>Timezone offset for <see
+        /// cref="Dropbox.Api.Riviera.ApiExifMetadata.DateTimeOriginal" />, e.g.
+        /// "+09:00".</para>
         /// </summary>
         public string OffsetTimeOriginal { get; protected set; }
 
@@ -199,42 +210,45 @@ namespace Dropbox.Api.Riviera
         public uint Orientation { get; protected set; }
 
         /// <summary>
-        /// <para>fraction in string form, e.g. "1/250"</para>
+        /// <para>Exposure time the image was captured with, as a fractional-second string,
+        /// e.g. "1/250".</para>
         /// </summary>
         public string ExposureTime { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the aperture value of the api exif metadata</para>
+        /// <para>Aperture the image was captured at, as reported by the EXIF aperture
+        /// tag.</para>
         /// </summary>
         public double ApertureValue { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the iso speed of the api exif metadata</para>
+        /// <para>ISO sensitivity the image was captured at.</para>
         /// </summary>
         public uint IsoSpeed { get; protected set; }
 
         /// <summary>
-        /// <para>e.g. "26.0 mm"</para>
+        /// <para>Focal length the image was captured at, including the unit, e.g. "26.0
+        /// mm".</para>
         /// </summary>
         public string FocalLength { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the megapixels of the api exif metadata</para>
+        /// <para>Total pixel count of the image, in megapixels.</para>
         /// </summary>
         public double Megapixels { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the artist of the api exif metadata</para>
+        /// <para>Creator credited in the EXIF artist tag.</para>
         /// </summary>
         public string Artist { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the copyright of the api exif metadata</para>
+        /// <para>Copyright notice from the EXIF copyright tag.</para>
         /// </summary>
         public string Copyright { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the gps metadata of the api exif metadata</para>
+        /// <para>Location tags from the image, when the source recorded a location.</para>
         /// </summary>
         public ApiExifGpsMetadata GpsMetadata { get; protected set; }
 

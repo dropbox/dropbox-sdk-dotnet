@@ -31,7 +31,7 @@ namespace Dropbox.Api.Riviera
         /// <para>Initializes a new instance of the <see cref="GetMarkdownResult" />
         /// class.</para>
         /// </summary>
-        /// <param name="markdown">The converted markdown content</param>
+        /// <param name="markdown">The markdown the source document was converted to.</param>
         public GetMarkdownResult(string markdown = "")
         {
             if (markdown == null)
@@ -55,7 +55,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The converted markdown content</para>
+        /// <para>The markdown the source document was converted to.</para>
         /// </summary>
         public string Markdown { get; protected set; }
 

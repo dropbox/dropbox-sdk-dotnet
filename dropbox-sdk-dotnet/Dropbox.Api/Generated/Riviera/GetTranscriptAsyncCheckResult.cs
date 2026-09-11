@@ -11,7 +11,13 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Result type for EventBus async check - must end in "CheckResult"</para>
+    /// <para>Status of a transcript job started by <see
+    /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetTranscriptAsyncAsync" /> <see
+    /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetTranscriptAsyncAsync" />, as
+    /// returned by <see
+    /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetTranscriptAsyncCheckAsync" /> <see
+    /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetTranscriptAsyncCheckAsync"
+    /// />.</para>
     /// </summary>
     public class GetTranscriptAsyncCheckResult
     {
@@ -209,7 +215,7 @@ namespace Dropbox.Api.Riviera
         #endregion
 
         /// <summary>
-        /// <para>The in progress object</para>
+        /// <para>The job has not finished yet. Poll again.</para>
         /// </summary>
         public sealed class InProgress : GetTranscriptAsyncCheckResult
         {
@@ -278,7 +284,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The complete object</para>
+        /// <para>The job finished successfully.</para>
         /// </summary>
         public sealed class Complete : GetTranscriptAsyncCheckResult
         {
@@ -365,7 +371,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The failed object</para>
+        /// <para>The job finished unsuccessfully.</para>
         /// </summary>
         public sealed class Failed : GetTranscriptAsyncCheckResult
         {

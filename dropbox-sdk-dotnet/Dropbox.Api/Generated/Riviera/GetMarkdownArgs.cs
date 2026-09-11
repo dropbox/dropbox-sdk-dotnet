@@ -11,9 +11,14 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Arguments for the asynchronous `get_markdown_async` route. Exactly one of
-    /// `file_id`, `path`, or `url` must be supplied via `file_id_or_url` to identify the
-    /// document to convert to markdown.</para>
+    /// <para>Arguments for the asynchronous <see
+    /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetMarkdownAsyncAsync" /> <see
+    /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMarkdownAsyncAsync" /> route.
+    /// Exactly one of <see cref="Dropbox.Api.Riviera.FileIdOrUrl.FileId" />, <see
+    /// cref="Dropbox.Api.Riviera.FileIdOrUrl.Path" />, or <see
+    /// cref="Dropbox.Api.Riviera.FileIdOrUrl.Url" /> must be supplied via <see
+    /// cref="Dropbox.Api.Riviera.GetMarkdownArgs.FileIdOrUrl" /> to identify the document to
+    /// convert to markdown.</para>
     /// </summary>
     public class GetMarkdownArgs
     {
@@ -34,9 +39,10 @@ namespace Dropbox.Api.Riviera
         /// class.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the document to convert. Callers must set
-        /// exactly one of the `FileIdOrUrl` variants. The referenced file must be a document
-        /// in a supported format (see the route description for the list); requests against
-        /// unsupported formats return `unsupported_format_error`.</param>
+        /// exactly one of the <see cref="FileIdOrUrl" /> variants. The referenced file must be
+        /// a document in a supported format (see the route description for the list); requests
+        /// against unsupported formats fail with <see
+        /// cref="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError" />.</param>
         /// <param name="enableOcr">Enable OCR for PDF documents. Processing is slower when
         /// enabled.</param>
         /// <param name="embedImages">When true, embed images as base64 data URIs in the
@@ -65,9 +71,10 @@ namespace Dropbox.Api.Riviera
 
         /// <summary>
         /// <para>Identifier of the document to convert. Callers must set exactly one of the
-        /// `FileIdOrUrl` variants. The referenced file must be a document in a supported
-        /// format (see the route description for the list); requests against unsupported
-        /// formats return `unsupported_format_error`.</para>
+        /// <see cref="FileIdOrUrl" /> variants. The referenced file must be a document in a
+        /// supported format (see the route description for the list); requests against
+        /// unsupported formats fail with <see
+        /// cref="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError" />.</para>
         /// </summary>
         public FileIdOrUrl FileIdOrUrl { get; protected set; }
 

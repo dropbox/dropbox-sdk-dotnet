@@ -11,9 +11,10 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>MS Office document metadata. Mirrors the internal `riviera.OfficeMetadata`
-    /// message. Some fields apply only to specific document types (e.g. `slides` for
-    /// PowerPoint, `words`/`pages` for Word).</para>
+    /// <para>MS Office document metadata. Some fields apply only to specific document types
+    /// (e.g. <see cref="Dropbox.Api.Riviera.ApiOfficeMetadata.Slides" /> for PowerPoint, <see
+    /// cref="Dropbox.Api.Riviera.ApiOfficeMetadata.Words" /> and <see
+    /// cref="Dropbox.Api.Riviera.ApiOfficeMetadata.Pages" /> for Word).</para>
     /// </summary>
     public class ApiOfficeMetadata
     {
@@ -33,18 +34,26 @@ namespace Dropbox.Api.Riviera
         /// <para>Initializes a new instance of the <see cref="ApiOfficeMetadata" />
         /// class.</para>
         /// </summary>
-        /// <param name="fileType">The file type</param>
-        /// <param name="creator">The creator</param>
-        /// <param name="company">The company</param>
-        /// <param name="title">The title</param>
-        /// <param name="subject">The subject</param>
-        /// <param name="keywords">The keywords</param>
-        /// <param name="description">The description</param>
-        /// <param name="totalEditTimeMinutes">The total edit time minutes</param>
-        /// <param name="pages">Word only.</param>
-        /// <param name="words">The words</param>
-        /// <param name="slides">PowerPoint only.</param>
-        /// <param name="revisionNumber">The revision number</param>
+        /// <param name="fileType">Which kind of Office document this metadata was extracted
+        /// from.</param>
+        /// <param name="creator">Author recorded in the document properties.</param>
+        /// <param name="company">Company recorded in the document properties.</param>
+        /// <param name="title">Title recorded in the document properties.</param>
+        /// <param name="subject">Subject recorded in the document properties.</param>
+        /// <param name="keywords">Keywords recorded in the document properties, in the
+        /// document's own formatting (typically a single comma- or space-separated
+        /// string).</param>
+        /// <param name="description">Description recorded in the document properties.</param>
+        /// <param name="totalEditTimeMinutes">Total editing time recorded in the document
+        /// properties, in minutes.</param>
+        /// <param name="pages">Page count recorded in the document properties. Word documents
+        /// only; zero for PowerPoint and Excel.</param>
+        /// <param name="words">Word count recorded in the document properties. Word documents
+        /// only; zero for PowerPoint and Excel.</param>
+        /// <param name="slides">Slide count recorded in the document properties. PowerPoint
+        /// documents only; zero for Word and Excel.</param>
+        /// <param name="revisionNumber">Revision number recorded in the document
+        /// properties.</param>
         public ApiOfficeMetadata(OfficeFileType fileType = null,
                                  string creator = "",
                                  string company = "",
@@ -135,62 +144,66 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>Gets the file type of the api office metadata</para>
+        /// <para>Which kind of Office document this metadata was extracted from.</para>
         /// </summary>
         public OfficeFileType FileType { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the creator of the api office metadata</para>
+        /// <para>Author recorded in the document properties.</para>
         /// </summary>
         public string Creator { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the company of the api office metadata</para>
+        /// <para>Company recorded in the document properties.</para>
         /// </summary>
         public string Company { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the title of the api office metadata</para>
+        /// <para>Title recorded in the document properties.</para>
         /// </summary>
         public string Title { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the subject of the api office metadata</para>
+        /// <para>Subject recorded in the document properties.</para>
         /// </summary>
         public string Subject { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the keywords of the api office metadata</para>
+        /// <para>Keywords recorded in the document properties, in the document's own
+        /// formatting (typically a single comma- or space-separated string).</para>
         /// </summary>
         public string Keywords { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the description of the api office metadata</para>
+        /// <para>Description recorded in the document properties.</para>
         /// </summary>
         public string Description { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the total edit time minutes of the api office metadata</para>
+        /// <para>Total editing time recorded in the document properties, in minutes.</para>
         /// </summary>
         public uint TotalEditTimeMinutes { get; protected set; }
 
         /// <summary>
-        /// <para>Word only.</para>
+        /// <para>Page count recorded in the document properties. Word documents only; zero for
+        /// PowerPoint and Excel.</para>
         /// </summary>
         public uint Pages { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the words of the api office metadata</para>
+        /// <para>Word count recorded in the document properties. Word documents only; zero for
+        /// PowerPoint and Excel.</para>
         /// </summary>
         public uint Words { get; protected set; }
 
         /// <summary>
-        /// <para>PowerPoint only.</para>
+        /// <para>Slide count recorded in the document properties. PowerPoint documents only;
+        /// zero for Word and Excel.</para>
         /// </summary>
         public uint Slides { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the revision number of the api office metadata</para>
+        /// <para>Revision number recorded in the document properties.</para>
         /// </summary>
         public string RevisionNumber { get; protected set; }
 

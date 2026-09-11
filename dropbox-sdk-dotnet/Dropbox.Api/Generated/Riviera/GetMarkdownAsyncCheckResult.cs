@@ -11,7 +11,13 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Result type for EventBus async check</para>
+    /// <para>Status of a markdown conversion job started by <see
+    /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetMarkdownAsyncAsync" /> <see
+    /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMarkdownAsyncAsync" />, as
+    /// returned by <see
+    /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetMarkdownAsyncCheckAsync" /> <see
+    /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMarkdownAsyncCheckAsync"
+    /// />.</para>
     /// </summary>
     public class GetMarkdownAsyncCheckResult
     {
@@ -209,7 +215,7 @@ namespace Dropbox.Api.Riviera
         #endregion
 
         /// <summary>
-        /// <para>The in progress object</para>
+        /// <para>The job has not finished yet. Poll again.</para>
         /// </summary>
         public sealed class InProgress : GetMarkdownAsyncCheckResult
         {
@@ -278,7 +284,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The complete object</para>
+        /// <para>The job finished successfully.</para>
         /// </summary>
         public sealed class Complete : GetMarkdownAsyncCheckResult
         {
@@ -365,7 +371,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The failed object</para>
+        /// <para>The job finished unsuccessfully.</para>
         /// </summary>
         public sealed class Failed : GetMarkdownAsyncCheckResult
         {

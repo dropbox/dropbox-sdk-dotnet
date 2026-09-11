@@ -593,7 +593,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The unsupported format error object</para>
+        /// <para>The source file is not in a format this route supports.</para>
         /// </summary>
         public sealed class UnsupportedFormatError : TextExtractionApiV2Error
         {
@@ -664,7 +664,8 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The link download disabled error object</para>
+        /// <para><see cref="Dropbox.Api.Riviera.FileIdOrUrl.Url" /> referenced a Dropbox
+        /// shared link whose owner has disabled downloads.</para>
         /// </summary>
         public sealed class LinkDownloadDisabledError : TextExtractionApiV2Error
         {
@@ -735,7 +736,9 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The shared link password protected object</para>
+        /// <para><see cref="Dropbox.Api.Riviera.FileIdOrUrl.Url" /> referenced a
+        /// password-protected Dropbox shared link. Riviera cannot supply the password, so such
+        /// links cannot be processed.</para>
         /// </summary>
         public sealed class SharedLinkPasswordProtected : TextExtractionApiV2Error
         {
@@ -806,7 +809,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The limit exceeded error object</para>
+        /// <para>A resource limit was exceeded while producing the result.</para>
         /// </summary>
         public sealed class LimitExceededError : TextExtractionApiV2Error
         {
@@ -877,7 +880,8 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The conversion failure error object</para>
+        /// <para>The source file was readable but could not be processed, for example because
+        /// it is corrupt.</para>
         /// </summary>
         public sealed class ConversionFailureError : TextExtractionApiV2Error
         {

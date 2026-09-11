@@ -11,8 +11,8 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Audio/video container and per-stream metadata. Mirrors the useful subset of the
-    /// internal `riviera.MediaMetadata` message.</para>
+    /// <para>Audio/video container and per-stream metadata. Fields are populated on a
+    /// best-effort basis and may be empty when absent from the source file.</para>
     /// </summary>
     public class ApiMediaMetadata
     {
@@ -32,10 +32,12 @@ namespace Dropbox.Api.Riviera
         /// <para>Initializes a new instance of the <see cref="ApiMediaMetadata" />
         /// class.</para>
         /// </summary>
-        /// <param name="bitrateBps">The bitrate bps</param>
-        /// <param name="durationS">The duration s</param>
+        /// <param name="bitrateBps">Overall bitrate of the container, in bits per
+        /// second.</param>
+        /// <param name="durationS">Duration of the media, in seconds.</param>
         /// <param name="creationTime">Container-level creation time, when present.</param>
-        /// <param name="streams">The streams</param>
+        /// <param name="streams">The audio and video streams the container holds, in container
+        /// order.</param>
         public ApiMediaMetadata(ulong bitrateBps = 0UL,
                                 double durationS = 0.0D,
                                 string creationTime = "",
@@ -69,12 +71,12 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>Gets the bitrate bps of the api media metadata</para>
+        /// <para>Overall bitrate of the container, in bits per second.</para>
         /// </summary>
         public ulong BitrateBps { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the duration s of the api media metadata</para>
+        /// <para>Duration of the media, in seconds.</para>
         /// </summary>
         public double DurationS { get; protected set; }
 
@@ -84,7 +86,7 @@ namespace Dropbox.Api.Riviera
         public string CreationTime { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the streams of the api media metadata</para>
+        /// <para>The audio and video streams the container holds, in container order.</para>
         /// </summary>
         public col.IList<ApiMediaStream> Streams { get; protected set; }
 
