@@ -11,7 +11,8 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Transcript segment for APIv2</para>
+    /// <para>A contiguous span of transcribed speech. The span covered by a segment depends on
+    /// the requested <see cref="TimestampLevel" />.</para>
     /// </summary>
     public class ApiTranscriptSegment
     {
@@ -31,9 +32,11 @@ namespace Dropbox.Api.Riviera
         /// <para>Initializes a new instance of the <see cref="ApiTranscriptSegment" />
         /// class.</para>
         /// </summary>
-        /// <param name="text">The text</param>
-        /// <param name="startTime">The start time</param>
-        /// <param name="endTime">The end time</param>
+        /// <param name="text">The transcribed text of this segment.</param>
+        /// <param name="startTime">Offset of the start of this segment, in seconds from the
+        /// beginning of the media.</param>
+        /// <param name="endTime">Offset of the end of this segment, in seconds from the
+        /// beginning of the media.</param>
         public ApiTranscriptSegment(string text = "",
                                     double startTime = 0.0D,
                                     double endTime = 0.0D)
@@ -63,17 +66,19 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>Gets the text of the api transcript segment</para>
+        /// <para>The transcribed text of this segment.</para>
         /// </summary>
         public string Text { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the start time of the api transcript segment</para>
+        /// <para>Offset of the start of this segment, in seconds from the beginning of the
+        /// media.</para>
         /// </summary>
         public double StartTime { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the end time of the api transcript segment</para>
+        /// <para>Offset of the end of this segment, in seconds from the beginning of the
+        /// media.</para>
         /// </summary>
         public double EndTime { get; protected set; }
 

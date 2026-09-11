@@ -30,9 +30,9 @@ namespace Dropbox.Api.Riviera
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ApiPdfMetadata" /> class.</para>
         /// </summary>
-        /// <param name="pages">The pages</param>
-        /// <param name="width">Width / height of the first page, in PDF points.</param>
-        /// <param name="height">The height</param>
+        /// <param name="pages">Number of pages in the document.</param>
+        /// <param name="width">Width of the first page, in PDF points.</param>
+        /// <param name="height">Height of the first page, in PDF points.</param>
         public ApiPdfMetadata(uint pages = 0U,
                               uint width = 0U,
                               uint height = 0U)
@@ -56,17 +56,17 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>Gets the pages of the api pdf metadata</para>
+        /// <para>Number of pages in the document.</para>
         /// </summary>
         public uint Pages { get; protected set; }
 
         /// <summary>
-        /// <para>Width / height of the first page, in PDF points.</para>
+        /// <para>Width of the first page, in PDF points.</para>
         /// </summary>
         public uint Width { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the height of the api pdf metadata</para>
+        /// <para>Height of the first page, in PDF points.</para>
         /// </summary>
         public uint Height { get; protected set; }
 

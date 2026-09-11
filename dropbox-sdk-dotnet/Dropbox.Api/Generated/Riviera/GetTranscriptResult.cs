@@ -31,9 +31,8 @@ namespace Dropbox.Api.Riviera
         /// <para>Initializes a new instance of the <see cref="GetTranscriptResult" />
         /// class.</para>
         /// </summary>
-        /// <param name="structuredTranscript">The structured transcript produced for the
-        /// requested media asset, with per-segment text, start/end offsets (in seconds from
-        /// the beginning of the media), and the detected or caller-supplied locale.</param>
+        /// <param name="structuredTranscript">The transcript produced for the requested media
+        /// asset.</param>
         public GetTranscriptResult(ApiStructuredTranscript structuredTranscript = null)
         {
             this.StructuredTranscript = structuredTranscript;
@@ -51,9 +50,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The structured transcript produced for the requested media asset, with
-        /// per-segment text, start/end offsets (in seconds from the beginning of the media),
-        /// and the detected or caller-supplied locale.</para>
+        /// <para>The transcript produced for the requested media asset.</para>
         /// </summary>
         public ApiStructuredTranscript StructuredTranscript { get; protected set; }
 

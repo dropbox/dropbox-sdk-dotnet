@@ -258,8 +258,16 @@ namespace Dropbox.Api.Riviera.Routes
         /// <summary>
         /// <para>Asynchronous document-to-markdown conversion for supported file formats.
         /// Supported formats: .binder, .docx, .html, .paper, .papert, .pptx, .xlsx, .gsheet,
-        /// .ods, .pdf. Unsupported formats return an `unsupported_format_error`. Size limit:
-        /// the source file must be at most 50 MB. Larger files are rejected.</para>
+        /// .ods, .pdf. Files in other formats fail with <see
+        /// cref="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError" />. Size limit:
+        /// the source file must be at most 50 MB. Larger files fail with <see
+        /// cref="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError" />. The markdown
+        /// is not returned by this route. Poll <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetMarkdownAsyncCheckAsync" />
+        /// <see cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMarkdownAsyncCheckAsync"
+        /// /> with the returned async job ID until it reports <see
+        /// cref="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.Complete" /> or <see
+        /// cref="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.Failed" />.</para>
         /// </summary>
         /// <param name="getMarkdownArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -288,13 +296,22 @@ namespace Dropbox.Api.Riviera.Routes
         /// <summary>
         /// <para>Asynchronous document-to-markdown conversion for supported file formats.
         /// Supported formats: .binder, .docx, .html, .paper, .papert, .pptx, .xlsx, .gsheet,
-        /// .ods, .pdf. Unsupported formats return an `unsupported_format_error`. Size limit:
-        /// the source file must be at most 50 MB. Larger files are rejected.</para>
+        /// .ods, .pdf. Files in other formats fail with <see
+        /// cref="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError" />. Size limit:
+        /// the source file must be at most 50 MB. Larger files fail with <see
+        /// cref="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError" />. The markdown
+        /// is not returned by this route. Poll <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetMarkdownAsyncCheckAsync" />
+        /// <see cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMarkdownAsyncCheckAsync"
+        /// /> with the returned async job ID until it reports <see
+        /// cref="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.Complete" /> or <see
+        /// cref="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.Failed" />.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the document to convert. Callers must set
-        /// exactly one of the `FileIdOrUrl` variants. The referenced file must be a document
-        /// in a supported format (see the route description for the list); requests against
-        /// unsupported formats return `unsupported_format_error`.</param>
+        /// exactly one of the <see cref="FileIdOrUrl" /> variants. The referenced file must be
+        /// a document in a supported format (see the route description for the list); requests
+        /// against unsupported formats fail with <see
+        /// cref="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError" />.</param>
         /// <param name="enableOcr">Enable OCR for PDF documents. Processing is slower when
         /// enabled.</param>
         /// <param name="embedImages">When true, embed images as base64 data URIs in the
@@ -316,9 +333,10 @@ namespace Dropbox.Api.Riviera.Routes
         /// <para>Begins an asynchronous send to the get markdown async route.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the document to convert. Callers must set
-        /// exactly one of the `FileIdOrUrl` variants. The referenced file must be a document
-        /// in a supported format (see the route description for the list); requests against
-        /// unsupported formats return `unsupported_format_error`.</param>
+        /// exactly one of the <see cref="FileIdOrUrl" /> variants. The referenced file must be
+        /// a document in a supported format (see the route description for the list); requests
+        /// against unsupported formats fail with <see
+        /// cref="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError" />.</param>
         /// <param name="enableOcr">Enable OCR for PDF documents. Processing is slower when
         /// enabled.</param>
         /// <param name="embedImages">When true, embed images as base64 data URIs in the
@@ -456,7 +474,18 @@ namespace Dropbox.Api.Riviera.Routes
         /// .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma, .3gp, .3gpp, .3gpp2, .asf, .avi, .dv,
         /// .flv, .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora,
         /// .ogv, .rm, .ts, .vob, .webm, .wmv. - PDF format: .pdf. - MS Office formats: .docx,
-        /// .pptx, .xlsx. Unsupported formats return an `unsupported_format_error`.</para>
+        /// .pptx, .xlsx. Files in other formats fail with <see
+        /// cref="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError" />. Size limits
+        /// depend on the kind of metadata being extracted: at most 200 MB for image (EXIF)
+        /// files, 100 GB for audio/video files, 500 MB for PDFs, and 288 MB for MS Office
+        /// files. Files over the limit for their kind fail with <see
+        /// cref="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError" />. The metadata
+        /// is not returned by this route. Poll <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetMetadataAsyncCheckAsync" />
+        /// <see cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMetadataAsyncCheckAsync"
+        /// /> with the returned async job ID until it reports <see
+        /// cref="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Complete" /> or <see
+        /// cref="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Failed" />.</para>
         /// </summary>
         /// <param name="getMetadataArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -492,15 +521,26 @@ namespace Dropbox.Api.Riviera.Routes
         /// .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma, .3gp, .3gpp, .3gpp2, .asf, .avi, .dv,
         /// .flv, .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora,
         /// .ogv, .rm, .ts, .vob, .webm, .wmv. - PDF format: .pdf. - MS Office formats: .docx,
-        /// .pptx, .xlsx. Unsupported formats return an `unsupported_format_error`.</para>
+        /// .pptx, .xlsx. Files in other formats fail with <see
+        /// cref="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError" />. Size limits
+        /// depend on the kind of metadata being extracted: at most 200 MB for image (EXIF)
+        /// files, 100 GB for audio/video files, 500 MB for PDFs, and 288 MB for MS Office
+        /// files. Files over the limit for their kind fail with <see
+        /// cref="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError" />. The metadata
+        /// is not returned by this route. Poll <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetMetadataAsyncCheckAsync" />
+        /// <see cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMetadataAsyncCheckAsync"
+        /// /> with the returned async job ID until it reports <see
+        /// cref="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Complete" /> or <see
+        /// cref="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Failed" />.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the file to extract metadata from. Callers
-        /// must set exactly one of the `FileIdOrUrl` variants. The kind of metadata returned
-        /// is determined by the file type: image files return EXIF metadata, audio/video files
-        /// return media metadata, PDFs return PDF metadata, and MS Office documents (docx,
-        /// pptx, xlsx) return Office metadata. See the route description for the supported
-        /// formats. Requests against unsupported formats return
-        /// `unsupported_format_error`.</param>
+        /// must set exactly one of the <see cref="FileIdOrUrl" /> variants. The kind of
+        /// metadata returned is determined by the file type: image files return EXIF metadata,
+        /// audio/video files return media metadata, PDFs return PDF metadata, and MS Office
+        /// documents (docx, pptx, xlsx) return Office metadata. See the route description for
+        /// the supported formats. Requests against unsupported formats fail with <see
+        /// cref="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError" />.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetMetadataAsyncAsync(FileIdOrUrl fileIdOrUrl = null)
@@ -514,12 +554,12 @@ namespace Dropbox.Api.Riviera.Routes
         /// <para>Begins an asynchronous send to the get metadata async route.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the file to extract metadata from. Callers
-        /// must set exactly one of the `FileIdOrUrl` variants. The kind of metadata returned
-        /// is determined by the file type: image files return EXIF metadata, audio/video files
-        /// return media metadata, PDFs return PDF metadata, and MS Office documents (docx,
-        /// pptx, xlsx) return Office metadata. See the route description for the supported
-        /// formats. Requests against unsupported formats return
-        /// `unsupported_format_error`.</param>
+        /// must set exactly one of the <see cref="FileIdOrUrl" /> variants. The kind of
+        /// metadata returned is determined by the file type: image files return EXIF metadata,
+        /// audio/video files return media metadata, PDFs return PDF metadata, and MS Office
+        /// documents (docx, pptx, xlsx) return Office metadata. See the route description for
+        /// the supported formats. Requests against unsupported formats fail with <see
+        /// cref="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError" />.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -1026,9 +1066,18 @@ namespace Dropbox.Api.Riviera.Routes
         /// formats: .aac, .aif, .aiff, .flac, .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma.
         /// Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv, .m2t, .m2ts,
         /// .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv, .rm, .ts, .vob,
-        /// .webm, .wmv. Unsupported formats return an `unsupported_format_error`. Size limits:
-        /// the source file must be at most 10 GB and its audio track at most 1 hour in
-        /// duration. Files exceeding these limits are rejected.</para>
+        /// .webm, .wmv. Files in other formats fail with <see
+        /// cref="Dropbox.Api.Riviera.ContentApiV2Error.UserError" />. Size limits: the source
+        /// file must be at most 10 GB and its audio track at most 1 hour in duration. Files
+        /// exceeding either limit fail with <see
+        /// cref="Dropbox.Api.Riviera.ContentApiV2Error.UserError" />. The transcript is not
+        /// returned by this route. Poll <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetTranscriptAsyncCheckAsync" />
+        /// <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetTranscriptAsyncCheckAsync" />
+        /// with the returned async job ID until it reports <see
+        /// cref="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Complete" /> or <see
+        /// cref="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Failed" />.</para>
         /// </summary>
         /// <param name="getTranscriptArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -1059,27 +1108,36 @@ namespace Dropbox.Api.Riviera.Routes
         /// formats: .aac, .aif, .aiff, .flac, .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma.
         /// Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv, .m2t, .m2ts,
         /// .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv, .rm, .ts, .vob,
-        /// .webm, .wmv. Unsupported formats return an `unsupported_format_error`. Size limits:
-        /// the source file must be at most 10 GB and its audio track at most 1 hour in
-        /// duration. Files exceeding these limits are rejected.</para>
+        /// .webm, .wmv. Files in other formats fail with <see
+        /// cref="Dropbox.Api.Riviera.ContentApiV2Error.UserError" />. Size limits: the source
+        /// file must be at most 10 GB and its audio track at most 1 hour in duration. Files
+        /// exceeding either limit fail with <see
+        /// cref="Dropbox.Api.Riviera.ContentApiV2Error.UserError" />. The transcript is not
+        /// returned by this route. Poll <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetTranscriptAsyncCheckAsync" />
+        /// <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetTranscriptAsyncCheckAsync" />
+        /// with the returned async job ID until it reports <see
+        /// cref="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Complete" /> or <see
+        /// cref="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Failed" />.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the media asset to transcribe. Callers must
-        /// set exactly one of the `FileIdOrUrl` variants. The referenced asset must be an
-        /// audio or video file in a supported format (see the route description for the list);
-        /// requests against files with no audio track return a `no_audio_error`.</param>
+        /// set exactly one of the <see cref="FileIdOrUrl" /> variants. The referenced asset
+        /// must be an audio or video file in a supported format (see the route description for
+        /// the list); requests against files with no audio track fail with <see
+        /// cref="Dropbox.Api.Riviera.ContentApiV2Error.NoAudioError" />.</param>
         /// <param name="timestampLevel">Granularity of the time offsets returned for each
-        /// transcript segment. Defaults to `SENTENCE` when the field is omitted. - SENTENCE:
-        /// one segment per spoken sentence (recommended). - WORD: one segment per word, useful
-        /// for fine-grained alignment such as captioning or highlight-as-you-listen
-        /// experiences.</param>
+        /// transcript segment. Defaults to <see
+        /// cref="Dropbox.Api.Riviera.TimestampLevel.Sentence" /> when the field is
+        /// omitted.</param>
         /// <param name="includedSpecialWords">Comma-delimited list of non-lexical filler words
         /// to preserve in the transcript output, e.g. `"uh, ah, uhm"`. By default these
         /// fillers are stripped. Unrecognized tokens are ignored. Leave empty to use the
         /// default filtering behavior.</param>
-        /// <param name="audioLanguage">Optional ISO 639-1 two-letter language code hinting the
-        /// spoken language of the source audio (e.g. "en", "ja"). When empty, the service
-        /// auto-detects the language; supplying a hint improves accuracy and latency for short
-        /// or ambiguous clips. Unsupported languages fall back to auto-detection.</param>
+        /// <param name="audioLanguage">Hint for the spoken language of the source audio, as an
+        /// ISO 639-1 code (e.g. "en", "ja"). When empty, the service auto-detects the
+        /// language; supplying a hint improves accuracy and latency for short or ambiguous
+        /// clips. Languages the service does not support fall back to auto-detection.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetTranscriptAsyncAsync(FileIdOrUrl fileIdOrUrl = null,
@@ -1099,22 +1157,22 @@ namespace Dropbox.Api.Riviera.Routes
         /// <para>Begins an asynchronous send to the get transcript async route.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the media asset to transcribe. Callers must
-        /// set exactly one of the `FileIdOrUrl` variants. The referenced asset must be an
-        /// audio or video file in a supported format (see the route description for the list);
-        /// requests against files with no audio track return a `no_audio_error`.</param>
+        /// set exactly one of the <see cref="FileIdOrUrl" /> variants. The referenced asset
+        /// must be an audio or video file in a supported format (see the route description for
+        /// the list); requests against files with no audio track fail with <see
+        /// cref="Dropbox.Api.Riviera.ContentApiV2Error.NoAudioError" />.</param>
         /// <param name="timestampLevel">Granularity of the time offsets returned for each
-        /// transcript segment. Defaults to `SENTENCE` when the field is omitted. - SENTENCE:
-        /// one segment per spoken sentence (recommended). - WORD: one segment per word, useful
-        /// for fine-grained alignment such as captioning or highlight-as-you-listen
-        /// experiences.</param>
+        /// transcript segment. Defaults to <see
+        /// cref="Dropbox.Api.Riviera.TimestampLevel.Sentence" /> when the field is
+        /// omitted.</param>
         /// <param name="includedSpecialWords">Comma-delimited list of non-lexical filler words
         /// to preserve in the transcript output, e.g. `"uh, ah, uhm"`. By default these
         /// fillers are stripped. Unrecognized tokens are ignored. Leave empty to use the
         /// default filtering behavior.</param>
-        /// <param name="audioLanguage">Optional ISO 639-1 two-letter language code hinting the
-        /// spoken language of the source audio (e.g. "en", "ja"). When empty, the service
-        /// auto-detects the language; supplying a hint improves accuracy and latency for short
-        /// or ambiguous clips. Unsupported languages fall back to auto-detection.</param>
+        /// <param name="audioLanguage">Hint for the spoken language of the source audio, as an
+        /// ISO 639-1 code (e.g. "en", "ja"). When empty, the service auto-detects the
+        /// language; supplying a hint improves accuracy and latency for short or ambiguous
+        /// clips. Languages the service does not support fall back to auto-detection.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send

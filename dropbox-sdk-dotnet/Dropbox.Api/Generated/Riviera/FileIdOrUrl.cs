@@ -207,8 +207,8 @@ namespace Dropbox.Api.Riviera
         #endregion
 
         /// <summary>
-        /// <para>A Dropbox-issued file id (format: "id:<id>") for a file the authenticated
-        /// user has access to.</para>
+        /// <para>A Dropbox-issued file ID for a file the authenticated user has access to,
+        /// e.g. "id:a4ayc_80_OEAAAAAAAAAYa".</para>
         /// </summary>
         public sealed class FileId : FileIdOrUrl
         {
@@ -304,15 +304,14 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>Either a Dropbox shared link (www.dropbox.com) or an external HTTP or HTTPS
-        /// URL pointing to a supported file. - Dropbox shared links are resolved internally
-        /// using the caller's authenticated identity and the link's visibility / download
-        /// settings. They therefore require an authenticated user context (anonymous `url`
-        /// requests against Dropbox links are rejected with an `access_error`). Links
-        /// protected by a password are rejected with `shared_link_password_protected`; links
-        /// with downloads disabled are rejected with `link_download_disabled_error`. -
-        /// External URLs are fetched through the backend's egress proxy and must point at a
-        /// supported file extension.</para>
+        /// <para>Either a Dropbox shared link (www.dropbox.com) or an internet-accessible URL
+        /// pointing to a supported file. - Dropbox shared links are resolved internally using
+        /// the caller's authenticated identity and the link's visibility / download settings.
+        /// They therefore require an authenticated user context; requests made with app auth
+        /// alone are rejected. Password-protected links and links with downloads disabled are
+        /// rejected as well. - Other URLs are fetched by Dropbox's servers, so they must be
+        /// reachable from the public internet -- not only from the calling application's
+        /// network -- and must point at a supported file extension.</para>
         /// </summary>
         public sealed class Url : FileIdOrUrl
         {

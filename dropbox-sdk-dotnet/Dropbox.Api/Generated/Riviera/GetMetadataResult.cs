@@ -32,8 +32,8 @@ namespace Dropbox.Api.Riviera
         /// class.</para>
         /// </summary>
         /// <param name="metadataType">The kind of metadata that was extracted for the
-        /// requested file. Callers should read the matching field of the `metadata`
-        /// oneof.</param>
+        /// requested file. Callers should read the matching variant of <see
+        /// cref="Dropbox.Api.Riviera.GetMetadataResult.Metadata" />.</param>
         /// <param name="metadata">The metadata</param>
         public GetMetadataResult(MetadataType metadataType = null,
                                  MetadataUnion metadata = null)
@@ -60,7 +60,8 @@ namespace Dropbox.Api.Riviera
 
         /// <summary>
         /// <para>The kind of metadata that was extracted for the requested file. Callers
-        /// should read the matching field of the `metadata` oneof.</para>
+        /// should read the matching variant of <see
+        /// cref="Dropbox.Api.Riviera.GetMetadataResult.Metadata" />.</para>
         /// </summary>
         public MetadataType MetadataType { get; protected set; }
 

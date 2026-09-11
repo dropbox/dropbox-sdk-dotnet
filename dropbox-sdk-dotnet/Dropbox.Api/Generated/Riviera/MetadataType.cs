@@ -11,8 +11,8 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Which metadata variant is populated in a `GetMetadataResult`, derived from the
-    /// file type.</para>
+    /// <para>Which metadata variant is populated in a <see cref="GetMetadataResult" />,
+    /// derived from the file type.</para>
     /// </summary>
     public class MetadataType
     {
@@ -268,7 +268,15 @@ namespace Dropbox.Api.Riviera
         #endregion
 
         /// <summary>
-        /// <para>The metadata type unknown object</para>
+        /// <para>No metadata kind applies to the file, so no variant of <see
+        /// cref="Dropbox.Api.Riviera.GetMetadataResult.Metadata" /> is populated. Riviera only
+        /// produces metadata for the formats listed on <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetMetadataAsyncAsync" /> <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMetadataAsyncAsync" />; a
+        /// request for any other file normally fails with <see
+        /// cref="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError" /> rather than
+        /// completing with this value. An app that does receive it should treat the file as
+        /// having no extractable metadata; retrying will not change the outcome.</para>
         /// </summary>
         public sealed class MetadataTypeUnknown : MetadataType
         {
@@ -339,7 +347,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The metadata type exif object</para>
+        /// <para><see cref="Dropbox.Api.Riviera.MetadataUnion.Exif" /> is populated.</para>
         /// </summary>
         public sealed class MetadataTypeExif : MetadataType
         {
@@ -409,7 +417,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The metadata type media object</para>
+        /// <para><see cref="Dropbox.Api.Riviera.MetadataUnion.Media" /> is populated.</para>
         /// </summary>
         public sealed class MetadataTypeMedia : MetadataType
         {
@@ -480,7 +488,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The metadata type pdf object</para>
+        /// <para><see cref="Dropbox.Api.Riviera.MetadataUnion.Pdf" /> is populated.</para>
         /// </summary>
         public sealed class MetadataTypePdf : MetadataType
         {
@@ -550,7 +558,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The metadata type office object</para>
+        /// <para><see cref="Dropbox.Api.Riviera.MetadataUnion.Office" /> is populated.</para>
         /// </summary>
         public sealed class MetadataTypeOffice : MetadataType
         {

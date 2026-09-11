@@ -33,15 +33,15 @@ namespace Dropbox.Api.Riviera
         /// <para>Initializes a new instance of the <see cref="ApiExifGpsMetadata" />
         /// class.</para>
         /// </summary>
-        /// <param name="latitude">Latitude / longitude in decimal degrees (positive = N/E,
-        /// negative = S/W).</param>
-        /// <param name="longitude">The longitude</param>
+        /// <param name="latitude">Latitude in decimal degrees (positive = north, negative =
+        /// south).</param>
+        /// <param name="longitude">Longitude in decimal degrees (positive = east, negative =
+        /// west).</param>
         /// <param name="altitude">Altitude in meters, as reported by the source (string to
         /// preserve the original representation, which may include a reference
         /// direction).</param>
-        /// <param name="timestamp">Timestamp / datestamp of the GPS fix, in the EXIF-provided
-        /// format.</param>
-        /// <param name="datestamp">The datestamp</param>
+        /// <param name="timestamp">Time of the GPS fix, in the EXIF-provided format.</param>
+        /// <param name="datestamp">Date of the GPS fix, in the EXIF-provided format.</param>
         public ApiExifGpsMetadata(float latitude = 0.0F,
                                   float longitude = 0.0F,
                                   string altitude = "",
@@ -87,13 +87,12 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>Latitude / longitude in decimal degrees (positive = N/E, negative =
-        /// S/W).</para>
+        /// <para>Latitude in decimal degrees (positive = north, negative = south).</para>
         /// </summary>
         public float Latitude { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the longitude of the api exif gps metadata</para>
+        /// <para>Longitude in decimal degrees (positive = east, negative = west).</para>
         /// </summary>
         public float Longitude { get; protected set; }
 
@@ -104,12 +103,12 @@ namespace Dropbox.Api.Riviera
         public string Altitude { get; protected set; }
 
         /// <summary>
-        /// <para>Timestamp / datestamp of the GPS fix, in the EXIF-provided format.</para>
+        /// <para>Time of the GPS fix, in the EXIF-provided format.</para>
         /// </summary>
         public string Timestamp { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the datestamp of the api exif gps metadata</para>
+        /// <para>Date of the GPS fix, in the EXIF-provided format.</para>
         /// </summary>
         public string Datestamp { get; protected set; }
 

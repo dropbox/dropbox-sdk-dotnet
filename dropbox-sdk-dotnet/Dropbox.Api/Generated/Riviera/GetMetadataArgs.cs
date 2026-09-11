@@ -11,9 +11,14 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Arguments for the asynchronous `get_metadata_async` route. Exactly one of
-    /// `file_id`, `path`, or `url` must be supplied via `file_id_or_url` to identify the file
-    /// whose metadata should be extracted.</para>
+    /// <para>Arguments for the asynchronous <see
+    /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetMetadataAsyncAsync" /> <see
+    /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMetadataAsyncAsync" /> route.
+    /// Exactly one of <see cref="Dropbox.Api.Riviera.FileIdOrUrl.FileId" />, <see
+    /// cref="Dropbox.Api.Riviera.FileIdOrUrl.Path" />, or <see
+    /// cref="Dropbox.Api.Riviera.FileIdOrUrl.Url" /> must be supplied via <see
+    /// cref="Dropbox.Api.Riviera.GetMetadataArgs.FileIdOrUrl" /> to identify the file whose
+    /// metadata should be extracted.</para>
     /// </summary>
     public class GetMetadataArgs
     {
@@ -34,12 +39,12 @@ namespace Dropbox.Api.Riviera
         /// class.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the file to extract metadata from. Callers
-        /// must set exactly one of the `FileIdOrUrl` variants. The kind of metadata returned
-        /// is determined by the file type: image files return EXIF metadata, audio/video files
-        /// return media metadata, PDFs return PDF metadata, and MS Office documents (docx,
-        /// pptx, xlsx) return Office metadata. See the route description for the supported
-        /// formats. Requests against unsupported formats return
-        /// `unsupported_format_error`.</param>
+        /// must set exactly one of the <see cref="FileIdOrUrl" /> variants. The kind of
+        /// metadata returned is determined by the file type: image files return EXIF metadata,
+        /// audio/video files return media metadata, PDFs return PDF metadata, and MS Office
+        /// documents (docx, pptx, xlsx) return Office metadata. See the route description for
+        /// the supported formats. Requests against unsupported formats fail with <see
+        /// cref="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError" />.</param>
         public GetMetadataArgs(FileIdOrUrl fileIdOrUrl = null)
         {
             this.FileIdOrUrl = fileIdOrUrl;
@@ -58,11 +63,12 @@ namespace Dropbox.Api.Riviera
 
         /// <summary>
         /// <para>Identifier of the file to extract metadata from. Callers must set exactly one
-        /// of the `FileIdOrUrl` variants. The kind of metadata returned is determined by the
-        /// file type: image files return EXIF metadata, audio/video files return media
-        /// metadata, PDFs return PDF metadata, and MS Office documents (docx, pptx, xlsx)
-        /// return Office metadata. See the route description for the supported formats.
-        /// Requests against unsupported formats return `unsupported_format_error`.</para>
+        /// of the <see cref="FileIdOrUrl" /> variants. The kind of metadata returned is
+        /// determined by the file type: image files return EXIF metadata, audio/video files
+        /// return media metadata, PDFs return PDF metadata, and MS Office documents (docx,
+        /// pptx, xlsx) return Office metadata. See the route description for the supported
+        /// formats. Requests against unsupported formats fail with <see
+        /// cref="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError" />.</para>
         /// </summary>
         public FileIdOrUrl FileIdOrUrl { get; protected set; }
 

@@ -11,7 +11,7 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The timestamp level object</para>
+    /// <para>Granularity of the time offsets returned for each transcript segment.</para>
     /// </summary>
     public class TimestampLevel
     {
@@ -177,7 +177,8 @@ namespace Dropbox.Api.Riviera
         #endregion
 
         /// <summary>
-        /// <para>The sentence object</para>
+        /// <para>One segment per spoken sentence (recommended). This is the default when <see
+        /// cref="Dropbox.Api.Riviera.GetTranscriptArgs.TimestampLevel" /> is omitted.</para>
         /// </summary>
         public sealed class Sentence : TimestampLevel
         {
@@ -246,7 +247,8 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The word object</para>
+        /// <para>One segment per word, useful for fine-grained alignment such as captioning or
+        /// highlight-as-you-listen experiences.</para>
         /// </summary>
         public sealed class Word : TimestampLevel
         {

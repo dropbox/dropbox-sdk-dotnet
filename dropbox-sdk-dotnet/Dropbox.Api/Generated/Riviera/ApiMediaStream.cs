@@ -30,20 +30,30 @@ namespace Dropbox.Api.Riviera
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="ApiMediaStream" /> class.</para>
         /// </summary>
-        /// <param name="index">The index</param>
-        /// <param name="codecType">"audio", "video", etc.</param>
-        /// <param name="codecName">The codec name</param>
-        /// <param name="bitrateBps">The bitrate bps</param>
-        /// <param name="durationS">The duration s</param>
-        /// <param name="width">Video-specific fields (zero / empty for audio streams).</param>
-        /// <param name="height">The height</param>
-        /// <param name="framesPerSecond">The frames per second</param>
-        /// <param name="rotation">The rotation</param>
-        /// <param name="displayAspectRatio">e.g. "16:9"</param>
-        /// <param name="channels">Audio-specific fields (zero / empty for video
-        /// streams).</param>
-        /// <param name="channelLayout">The channel layout</param>
-        /// <param name="sampleRateS">The sample rate s</param>
+        /// <param name="index">Zero-based index of the stream within the container.</param>
+        /// <param name="codecType">Kind of media the stream carries, e.g. "audio" or
+        /// "video".</param>
+        /// <param name="codecName">Name of the codec the stream is encoded with, e.g. "h264"
+        /// or "aac".</param>
+        /// <param name="bitrateBps">Bitrate of this stream, in bits per second.</param>
+        /// <param name="durationS">Duration of this stream, in seconds.</param>
+        /// <param name="width">Width of the video frame, in pixels. Zero for audio
+        /// streams.</param>
+        /// <param name="height">Height of the video frame, in pixels. Zero for audio
+        /// streams.</param>
+        /// <param name="framesPerSecond">Frame rate of the stream, in frames per second. Zero
+        /// for audio streams.</param>
+        /// <param name="rotation">Rotation to apply on playback, in degrees, as recorded in
+        /// the stream metadata. Zero for audio streams and for video that needs no
+        /// rotation.</param>
+        /// <param name="displayAspectRatio">Aspect ratio the video should be displayed at, as
+        /// a "width:height" string, e.g. "16:9". Empty for audio streams.</param>
+        /// <param name="channels">Number of audio channels in the stream. Zero for video
+        /// streams.</param>
+        /// <param name="channelLayout">Layout of the audio channels, e.g. "stereo". Empty for
+        /// video streams.</param>
+        /// <param name="sampleRateS">Sample rate of the audio stream, in samples per second.
+        /// Zero for video streams.</param>
         /// <param name="languageIso639">ISO 639 language code for the stream, when
         /// present.</param>
         public ApiMediaStream(uint index = 0U,
@@ -127,67 +137,71 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>Gets the index of the api media stream</para>
+        /// <para>Zero-based index of the stream within the container.</para>
         /// </summary>
         public uint Index { get; protected set; }
 
         /// <summary>
-        /// <para>"audio", "video", etc.</para>
+        /// <para>Kind of media the stream carries, e.g. "audio" or "video".</para>
         /// </summary>
         public string CodecType { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the codec name of the api media stream</para>
+        /// <para>Name of the codec the stream is encoded with, e.g. "h264" or "aac".</para>
         /// </summary>
         public string CodecName { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the bitrate bps of the api media stream</para>
+        /// <para>Bitrate of this stream, in bits per second.</para>
         /// </summary>
         public ulong BitrateBps { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the duration s of the api media stream</para>
+        /// <para>Duration of this stream, in seconds.</para>
         /// </summary>
         public double DurationS { get; protected set; }
 
         /// <summary>
-        /// <para>Video-specific fields (zero / empty for audio streams).</para>
+        /// <para>Width of the video frame, in pixels. Zero for audio streams.</para>
         /// </summary>
         public uint Width { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the height of the api media stream</para>
+        /// <para>Height of the video frame, in pixels. Zero for audio streams.</para>
         /// </summary>
         public uint Height { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the frames per second of the api media stream</para>
+        /// <para>Frame rate of the stream, in frames per second. Zero for audio
+        /// streams.</para>
         /// </summary>
         public double FramesPerSecond { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the rotation of the api media stream</para>
+        /// <para>Rotation to apply on playback, in degrees, as recorded in the stream
+        /// metadata. Zero for audio streams and for video that needs no rotation.</para>
         /// </summary>
         public int Rotation { get; protected set; }
 
         /// <summary>
-        /// <para>e.g. "16:9"</para>
+        /// <para>Aspect ratio the video should be displayed at, as a "width:height" string,
+        /// e.g. "16:9". Empty for audio streams.</para>
         /// </summary>
         public string DisplayAspectRatio { get; protected set; }
 
         /// <summary>
-        /// <para>Audio-specific fields (zero / empty for video streams).</para>
+        /// <para>Number of audio channels in the stream. Zero for video streams.</para>
         /// </summary>
         public uint Channels { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the channel layout of the api media stream</para>
+        /// <para>Layout of the audio channels, e.g. "stereo". Empty for video streams.</para>
         /// </summary>
         public string ChannelLayout { get; protected set; }
 
         /// <summary>
-        /// <para>Gets the sample rate s of the api media stream</para>
+        /// <para>Sample rate of the audio stream, in samples per second. Zero for video
+        /// streams.</para>
         /// </summary>
         public ulong SampleRateS { get; protected set; }
 

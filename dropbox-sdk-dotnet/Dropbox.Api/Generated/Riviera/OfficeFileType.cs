@@ -11,7 +11,7 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The kind of MS Office document that produced an `ApiOfficeMetadata`
+    /// <para>The kind of MS Office document that produced an <see cref="ApiOfficeMetadata" />
     /// result.</para>
     /// </summary>
     public class OfficeFileType

@@ -11,9 +11,14 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Arguments for the asynchronous `get_transcript_async` route. Exactly one of
-    /// `file_id`, `path`, or `url` must be supplied via `file_id_or_url` to identify the audio
-    /// or video asset to transcribe.</para>
+    /// <para>Arguments for the asynchronous <see
+    /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.GetTranscriptAsyncAsync" /> <see
+    /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetTranscriptAsyncAsync" /> route.
+    /// Exactly one of <see cref="Dropbox.Api.Riviera.FileIdOrUrl.FileId" />, <see
+    /// cref="Dropbox.Api.Riviera.FileIdOrUrl.Path" />, or <see
+    /// cref="Dropbox.Api.Riviera.FileIdOrUrl.Url" /> must be supplied via <see
+    /// cref="Dropbox.Api.Riviera.GetTranscriptArgs.FileIdOrUrl" /> to identify the audio or
+    /// video asset to transcribe.</para>
     /// </summary>
     public class GetTranscriptArgs
     {
@@ -34,22 +39,22 @@ namespace Dropbox.Api.Riviera
         /// class.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the media asset to transcribe. Callers must
-        /// set exactly one of the `FileIdOrUrl` variants. The referenced asset must be an
-        /// audio or video file in a supported format (see the route description for the list);
-        /// requests against files with no audio track return a `no_audio_error`.</param>
+        /// set exactly one of the <see cref="FileIdOrUrl" /> variants. The referenced asset
+        /// must be an audio or video file in a supported format (see the route description for
+        /// the list); requests against files with no audio track fail with <see
+        /// cref="Dropbox.Api.Riviera.ContentApiV2Error.NoAudioError" />.</param>
         /// <param name="timestampLevel">Granularity of the time offsets returned for each
-        /// transcript segment. Defaults to `SENTENCE` when the field is omitted. - SENTENCE:
-        /// one segment per spoken sentence (recommended). - WORD: one segment per word, useful
-        /// for fine-grained alignment such as captioning or highlight-as-you-listen
-        /// experiences.</param>
+        /// transcript segment. Defaults to <see
+        /// cref="Dropbox.Api.Riviera.TimestampLevel.Sentence" /> when the field is
+        /// omitted.</param>
         /// <param name="includedSpecialWords">Comma-delimited list of non-lexical filler words
         /// to preserve in the transcript output, e.g. `"uh, ah, uhm"`. By default these
         /// fillers are stripped. Unrecognized tokens are ignored. Leave empty to use the
         /// default filtering behavior.</param>
-        /// <param name="audioLanguage">Optional ISO 639-1 two-letter language code hinting the
-        /// spoken language of the source audio (e.g. "en", "ja"). When empty, the service
-        /// auto-detects the language; supplying a hint improves accuracy and latency for short
-        /// or ambiguous clips. Unsupported languages fall back to auto-detection.</param>
+        /// <param name="audioLanguage">Hint for the spoken language of the source audio, as an
+        /// ISO 639-1 code (e.g. "en", "ja"). When empty, the service auto-detects the
+        /// language; supplying a hint improves accuracy and latency for short or ambiguous
+        /// clips. Languages the service does not support fall back to auto-detection.</param>
         public GetTranscriptArgs(FileIdOrUrl fileIdOrUrl = null,
                                  TimestampLevel timestampLevel = null,
                                  string includedSpecialWords = "",
@@ -91,18 +96,17 @@ namespace Dropbox.Api.Riviera
 
         /// <summary>
         /// <para>Identifier of the media asset to transcribe. Callers must set exactly one of
-        /// the `FileIdOrUrl` variants. The referenced asset must be an audio or video file in
-        /// a supported format (see the route description for the list); requests against files
-        /// with no audio track return a `no_audio_error`.</para>
+        /// the <see cref="FileIdOrUrl" /> variants. The referenced asset must be an audio or
+        /// video file in a supported format (see the route description for the list); requests
+        /// against files with no audio track fail with <see
+        /// cref="Dropbox.Api.Riviera.ContentApiV2Error.NoAudioError" />.</para>
         /// </summary>
         public FileIdOrUrl FileIdOrUrl { get; protected set; }
 
         /// <summary>
         /// <para>Granularity of the time offsets returned for each transcript segment.
-        /// Defaults to `SENTENCE` when the field is omitted. - SENTENCE: one segment per
-        /// spoken sentence (recommended). - WORD: one segment per word, useful for
-        /// fine-grained alignment such as captioning or highlight-as-you-listen
-        /// experiences.</para>
+        /// Defaults to <see cref="Dropbox.Api.Riviera.TimestampLevel.Sentence" /> when the
+        /// field is omitted.</para>
         /// </summary>
         public TimestampLevel TimestampLevel { get; protected set; }
 
@@ -115,10 +119,10 @@ namespace Dropbox.Api.Riviera
         public string IncludedSpecialWords { get; protected set; }
 
         /// <summary>
-        /// <para>Optional ISO 639-1 two-letter language code hinting the spoken language of
-        /// the source audio (e.g. "en", "ja"). When empty, the service auto-detects the
-        /// language; supplying a hint improves accuracy and latency for short or ambiguous
-        /// clips. Unsupported languages fall back to auto-detection.</para>
+        /// <para>Hint for the spoken language of the source audio, as an ISO 639-1 code (e.g.
+        /// "en", "ja"). When empty, the service auto-detects the language; supplying a hint
+        /// improves accuracy and latency for short or ambiguous clips. Languages the service
+        /// does not support fall back to auto-detection.</para>
         /// </summary>
         public string AudioLanguage { get; protected set; }
 

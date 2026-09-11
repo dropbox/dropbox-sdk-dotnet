@@ -31,7 +31,8 @@ namespace Dropbox.Api.Riviera
         /// <para>Initializes a new instance of the <see cref="MediaDurationError" />
         /// class.</para>
         /// </summary>
-        /// <param name="limit">The limit</param>
+        /// <param name="limit">The maximum supported duration, in seconds, of the audio to
+        /// transcribe.</param>
         public MediaDurationError(int limit = 0)
         {
             this.Limit = limit;
@@ -50,7 +51,8 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>Gets the limit of the media duration error</para>
+        /// <para>The maximum supported duration, in seconds, of the audio to
+        /// transcribe.</para>
         /// </summary>
         public int Limit { get; protected set; }
 

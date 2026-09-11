@@ -11,10 +11,11 @@ namespace Dropbox.Api.Riviera
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Reason a metadata extraction job failed. Returned in the `failed` variant of
-    /// `GetMetadataAsyncCheckResult`. This is a semantic error union: the HTTP status of the
-    /// poll request itself is unaffected (a poll that surfaces a failed job is still a normal
-    /// successful poll response). Callers should branch on the variant.</para>
+    /// <para>Reason a metadata extraction job failed. Returned in the <see
+    /// cref="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Failed" /> variant. This is a
+    /// semantic error union: the HTTP status of the poll request itself is unaffected (a poll
+    /// that surfaces a failed job is still a normal successful poll response). Callers should
+    /// branch on the variant.</para>
     /// </summary>
     public class MetadataExtractionApiV2Error
     {
@@ -496,8 +497,9 @@ namespace Dropbox.Api.Riviera
 
         /// <summary>
         /// <para>The request could not be processed as supplied (a problem with the caller's
-        /// input). The string is a human-readable message; retrying the same request will not
-        /// help.</para>
+        /// input) -- for example an unsupported file format or a file over the size limit for
+        /// its metadata kind. The string is a human-readable message; retrying the same
+        /// request will not help.</para>
         /// </summary>
         public sealed class UserError : MetadataExtractionApiV2Error
         {
@@ -593,7 +595,8 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The unsupported format error object</para>
+        /// <para>The source file is not in a format this route can extract metadata
+        /// from.</para>
         /// </summary>
         public sealed class UnsupportedFormatError : MetadataExtractionApiV2Error
         {
@@ -664,7 +667,8 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The link download disabled error object</para>
+        /// <para><see cref="Dropbox.Api.Riviera.FileIdOrUrl.Url" /> referenced a Dropbox
+        /// shared link whose owner has disabled downloads.</para>
         /// </summary>
         public sealed class LinkDownloadDisabledError : MetadataExtractionApiV2Error
         {
@@ -735,7 +739,9 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The shared link password protected object</para>
+        /// <para><see cref="Dropbox.Api.Riviera.FileIdOrUrl.Url" /> referenced a
+        /// password-protected Dropbox shared link. Riviera cannot supply the password, so
+        /// metadata cannot be extracted from such links.</para>
         /// </summary>
         public sealed class SharedLinkPasswordProtected : MetadataExtractionApiV2Error
         {
@@ -806,7 +812,7 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The limit exceeded error object</para>
+        /// <para>A resource limit was exceeded while producing the result.</para>
         /// </summary>
         public sealed class LimitExceededError : MetadataExtractionApiV2Error
         {
@@ -877,7 +883,8 @@ namespace Dropbox.Api.Riviera
         }
 
         /// <summary>
-        /// <para>The conversion failure error object</para>
+        /// <para>The source file was readable but its metadata could not be extracted, for
+        /// example because the file is corrupt.</para>
         /// </summary>
         public sealed class ConversionFailureError : MetadataExtractionApiV2Error
         {
