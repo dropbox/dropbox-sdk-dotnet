@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class ApiTranscriptSegment | Dropbox .NET SDK API Reference ">
     
-    <meta name="description" content="Transcript segment for APIv2">
+    <meta name="description" content="A contiguous span of transcribed speech. The span covered by a segment depends on the requested .">
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
@@ -71,7 +71,8 @@
 
 
   <h1 id="Dropbox_Api_Riviera_ApiTranscriptSegment" data-uid="Dropbox.Api.Riviera.ApiTranscriptSegment" class="text-break">Class ApiTranscriptSegment</h1>
-  <div class="markdown level0 summary"><p>Transcript segment for APIv2</p>
+  <div class="markdown level0 summary"><p>A contiguous span of transcribed speech. The span covered by a segment depends on
+the requested <a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.html">TimestampLevel</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -138,19 +139,21 @@ class.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">text</span></td>
-        <td><p>The text</p>
+        <td><p>The transcribed text of this segment.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
         <td><span class="parametername">startTime</span></td>
-        <td><p>The start time</p>
+        <td><p>Offset of the start of this segment, in seconds from the
+beginning of the media.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
         <td><span class="parametername">endTime</span></td>
-        <td><p>The end time</p>
+        <td><p>Offset of the end of this segment, in seconds from the
+beginning of the media.</p>
 </td>
       </tr>
     </tbody>
@@ -163,7 +166,8 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiTranscriptSegment_EndTime_" data-uid="Dropbox.Api.Riviera.ApiTranscriptSegment.EndTime*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiTranscriptSegment_EndTime" data-uid="Dropbox.Api.Riviera.ApiTranscriptSegment.EndTime">EndTime</h4>
-  <div class="markdown level1 summary"><p>Gets the end time of the api transcript segment</p>
+  <div class="markdown level1 summary"><p>Offset of the end of this segment, in seconds from the beginning of the
+media.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -191,7 +195,8 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiTranscriptSegment_StartTime_" data-uid="Dropbox.Api.Riviera.ApiTranscriptSegment.StartTime*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiTranscriptSegment_StartTime" data-uid="Dropbox.Api.Riviera.ApiTranscriptSegment.StartTime">StartTime</h4>
-  <div class="markdown level1 summary"><p>Gets the start time of the api transcript segment</p>
+  <div class="markdown level1 summary"><p>Offset of the start of this segment, in seconds from the beginning of the
+media.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -219,7 +224,7 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiTranscriptSegment_Text_" data-uid="Dropbox.Api.Riviera.ApiTranscriptSegment.Text*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiTranscriptSegment_Text" data-uid="Dropbox.Api.Riviera.ApiTranscriptSegment.Text">Text</h4>
-  <div class="markdown level1 summary"><p>Gets the text of the api transcript segment</p>
+  <div class="markdown level1 summary"><p>The transcribed text of this segment.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

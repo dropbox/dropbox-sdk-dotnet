@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class ApiOfficeMetadata | Dropbox .NET SDK API Reference ">
     
-    <meta name="description" content="MS Office document metadata. Mirrors the internal `riviera.OfficeMetadata` message. Some fields apply only to specific document types (e.g. `slides` for PowerPoint, `words`/`pages` for Word).">
+    <meta name="description" content="MS Office document metadata. Some fields apply only to specific document types (e.g.  for PowerPoint,  and  for Word).">
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
@@ -71,9 +71,8 @@
 
 
   <h1 id="Dropbox_Api_Riviera_ApiOfficeMetadata" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata" class="text-break">Class ApiOfficeMetadata</h1>
-  <div class="markdown level0 summary"><p>MS Office document metadata. Mirrors the internal `riviera.OfficeMetadata`
-message. Some fields apply only to specific document types (e.g. `slides` for
-PowerPoint, `words`/`pages` for Word).</p>
+  <div class="markdown level0 summary"><p>MS Office document metadata. Some fields apply only to specific document types
+(e.g. <a class="xref" href="Dropbox.Api.Riviera.ApiOfficeMetadata.html#Dropbox_Api_Riviera_ApiOfficeMetadata_Slides">Slides</a> for PowerPoint, <a class="xref" href="Dropbox.Api.Riviera.ApiOfficeMetadata.html#Dropbox_Api_Riviera_ApiOfficeMetadata_Words">Words</a> and <a class="xref" href="Dropbox.Api.Riviera.ApiOfficeMetadata.html#Dropbox_Api_Riviera_ApiOfficeMetadata_Pages">Pages</a> for Word).</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -140,73 +139,81 @@ class.</p>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.OfficeFileType.html">OfficeFileType</a></td>
         <td><span class="parametername">fileType</span></td>
-        <td><p>The file type</p>
+        <td><p>Which kind of Office document this metadata was extracted
+from.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">creator</span></td>
-        <td><p>The creator</p>
+        <td><p>Author recorded in the document properties.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">company</span></td>
-        <td><p>The company</p>
+        <td><p>Company recorded in the document properties.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">title</span></td>
-        <td><p>The title</p>
+        <td><p>Title recorded in the document properties.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">subject</span></td>
-        <td><p>The subject</p>
+        <td><p>Subject recorded in the document properties.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">keywords</span></td>
-        <td><p>The keywords</p>
+        <td><p>Keywords recorded in the document properties, in the
+document's own formatting (typically a single comma- or space-separated
+string).</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">description</span></td>
-        <td><p>The description</p>
+        <td><p>Description recorded in the document properties.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
         <td><span class="parametername">totalEditTimeMinutes</span></td>
-        <td><p>The total edit time minutes</p>
+        <td><p>Total editing time recorded in the document
+properties, in minutes.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
         <td><span class="parametername">pages</span></td>
-        <td><p>Word only.</p>
+        <td><p>Page count recorded in the document properties. Word documents
+only; zero for PowerPoint and Excel.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
         <td><span class="parametername">words</span></td>
-        <td><p>The words</p>
+        <td><p>Word count recorded in the document properties. Word documents
+only; zero for PowerPoint and Excel.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
         <td><span class="parametername">slides</span></td>
-        <td><p>PowerPoint only.</p>
+        <td><p>Slide count recorded in the document properties. PowerPoint
+documents only; zero for Word and Excel.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">revisionNumber</span></td>
-        <td><p>The revision number</p>
+        <td><p>Revision number recorded in the document
+properties.</p>
 </td>
       </tr>
     </tbody>
@@ -219,7 +226,7 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiOfficeMetadata_Company_" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Company*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiOfficeMetadata_Company" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Company">Company</h4>
-  <div class="markdown level1 summary"><p>Gets the company of the api office metadata</p>
+  <div class="markdown level1 summary"><p>Company recorded in the document properties.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -247,7 +254,7 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiOfficeMetadata_Creator_" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Creator*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiOfficeMetadata_Creator" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Creator">Creator</h4>
-  <div class="markdown level1 summary"><p>Gets the creator of the api office metadata</p>
+  <div class="markdown level1 summary"><p>Author recorded in the document properties.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -275,7 +282,7 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiOfficeMetadata_Description_" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Description*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiOfficeMetadata_Description" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Description">Description</h4>
-  <div class="markdown level1 summary"><p>Gets the description of the api office metadata</p>
+  <div class="markdown level1 summary"><p>Description recorded in the document properties.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -303,7 +310,7 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiOfficeMetadata_FileType_" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.FileType*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiOfficeMetadata_FileType" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.FileType">FileType</h4>
-  <div class="markdown level1 summary"><p>Gets the file type of the api office metadata</p>
+  <div class="markdown level1 summary"><p>Which kind of Office document this metadata was extracted from.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -331,7 +338,8 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiOfficeMetadata_Keywords_" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Keywords*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiOfficeMetadata_Keywords" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Keywords">Keywords</h4>
-  <div class="markdown level1 summary"><p>Gets the keywords of the api office metadata</p>
+  <div class="markdown level1 summary"><p>Keywords recorded in the document properties, in the document's own
+formatting (typically a single comma- or space-separated string).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -359,7 +367,8 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiOfficeMetadata_Pages_" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Pages*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiOfficeMetadata_Pages" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Pages">Pages</h4>
-  <div class="markdown level1 summary"><p>Word only.</p>
+  <div class="markdown level1 summary"><p>Page count recorded in the document properties. Word documents only; zero for
+PowerPoint and Excel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -387,7 +396,7 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiOfficeMetadata_RevisionNumber_" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.RevisionNumber*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiOfficeMetadata_RevisionNumber" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.RevisionNumber">RevisionNumber</h4>
-  <div class="markdown level1 summary"><p>Gets the revision number of the api office metadata</p>
+  <div class="markdown level1 summary"><p>Revision number recorded in the document properties.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -415,7 +424,8 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiOfficeMetadata_Slides_" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Slides*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiOfficeMetadata_Slides" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Slides">Slides</h4>
-  <div class="markdown level1 summary"><p>PowerPoint only.</p>
+  <div class="markdown level1 summary"><p>Slide count recorded in the document properties. PowerPoint documents only;
+zero for Word and Excel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -443,7 +453,7 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiOfficeMetadata_Subject_" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Subject*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiOfficeMetadata_Subject" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Subject">Subject</h4>
-  <div class="markdown level1 summary"><p>Gets the subject of the api office metadata</p>
+  <div class="markdown level1 summary"><p>Subject recorded in the document properties.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -471,7 +481,7 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiOfficeMetadata_Title_" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Title*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiOfficeMetadata_Title" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Title">Title</h4>
-  <div class="markdown level1 summary"><p>Gets the title of the api office metadata</p>
+  <div class="markdown level1 summary"><p>Title recorded in the document properties.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -499,7 +509,7 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiOfficeMetadata_TotalEditTimeMinutes_" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.TotalEditTimeMinutes*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiOfficeMetadata_TotalEditTimeMinutes" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.TotalEditTimeMinutes">TotalEditTimeMinutes</h4>
-  <div class="markdown level1 summary"><p>Gets the total edit time minutes of the api office metadata</p>
+  <div class="markdown level1 summary"><p>Total editing time recorded in the document properties, in minutes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -527,7 +537,8 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiOfficeMetadata_Words_" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Words*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiOfficeMetadata_Words" data-uid="Dropbox.Api.Riviera.ApiOfficeMetadata.Words">Words</h4>
-  <div class="markdown level1 summary"><p>Gets the words of the api office metadata</p>
+  <div class="markdown level1 summary"><p>Word count recorded in the document properties. Word documents only; zero for
+PowerPoint and Excel.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

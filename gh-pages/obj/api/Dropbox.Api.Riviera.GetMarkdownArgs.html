@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class GetMarkdownArgs | Dropbox .NET SDK API Reference ">
     
-    <meta name="description" content="Arguments for the asynchronous `get_markdown_async` route. Exactly one of `file_id`, `path`, or `url` must be supplied via `file_id_or_url` to identify the document to convert to markdown.">
+    <meta name="description" content="Arguments for the asynchronous   route. Exactly one of , , or  must be supplied via  to identify the document to convert to markdown.">
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
@@ -71,9 +71,9 @@
 
 
   <h1 id="Dropbox_Api_Riviera_GetMarkdownArgs" data-uid="Dropbox.Api.Riviera.GetMarkdownArgs" class="text-break">Class GetMarkdownArgs</h1>
-  <div class="markdown level0 summary"><p>Arguments for the asynchronous `get_markdown_async` route. Exactly one of
-`file_id`, `path`, or `url` must be supplied via `file_id_or_url` to identify the
-document to convert to markdown.</p>
+  <div class="markdown level0 summary"><p>Arguments for the asynchronous <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetMarkdownAsyncAsync_Dropbox_Api_Riviera_GetMarkdownArgs_">GetMarkdownAsyncAsync(GetMarkdownArgs)</a> <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMarkdownAsyncAsync_Dropbox_Api_Riviera_GetMarkdownArgs_">GetMarkdownAsyncAsync(GetMarkdownArgs)</a> route.
+Exactly one of <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.FileId.html">FileIdOrUrl.FileId</a>, <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Path.html">FileIdOrUrl.Path</a>, or <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> must be supplied via <a class="xref" href="Dropbox.Api.Riviera.GetMarkdownArgs.html#Dropbox_Api_Riviera_GetMarkdownArgs_FileIdOrUrl">FileIdOrUrl</a> to identify the document to
+convert to markdown.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -141,9 +141,9 @@ class.</p>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
         <td><p>Identifier of the document to convert. Callers must set
-exactly one of the <code>FileIdOrUrl</code> variants. The referenced file must be a document
-in a supported format (see the route description for the list); requests against
-unsupported formats return <code>unsupported_format_error</code>.</p>
+exactly one of the <a class="xref" href="Dropbox.Api.Riviera.GetMarkdownArgs.html#Dropbox_Api_Riviera_GetMarkdownArgs_FileIdOrUrl">FileIdOrUrl</a> variants. The referenced file must be
+a document in a supported format (see the route description for the list); requests
+against unsupported formats fail with <a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError.html">MarkdownConversionApiV2Error.UserError</a>.</p>
 </td>
       </tr>
       <tr>
@@ -228,9 +228,9 @@ significantly increase output size.</p>
   <a id="Dropbox_Api_Riviera_GetMarkdownArgs_FileIdOrUrl_" data-uid="Dropbox.Api.Riviera.GetMarkdownArgs.FileIdOrUrl*"></a>
   <h4 id="Dropbox_Api_Riviera_GetMarkdownArgs_FileIdOrUrl" data-uid="Dropbox.Api.Riviera.GetMarkdownArgs.FileIdOrUrl">FileIdOrUrl</h4>
   <div class="markdown level1 summary"><p>Identifier of the document to convert. Callers must set exactly one of the
-`FileIdOrUrl` variants. The referenced file must be a document in a supported
-format (see the route description for the list); requests against unsupported
-formats return `unsupported_format_error`.</p>
+<a class="xref" href="Dropbox.Api.Riviera.GetMarkdownArgs.html#Dropbox_Api_Riviera_GetMarkdownArgs_FileIdOrUrl">FileIdOrUrl</a> variants. The referenced file must be a document in a
+supported format (see the route description for the list); requests against
+unsupported formats fail with <a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError.html">MarkdownConversionApiV2Error.UserError</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

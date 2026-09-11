@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class ApiExifMetadata | Dropbox .NET SDK API Reference ">
     
-    <meta name="description" content="Image EXIF metadata. Mirrors the useful subset of the internal `riviera.ExifMetadata` message. Fields are best-effort and may be empty.">
+    <meta name="description" content="Image EXIF metadata. Fields are populated on a best-effort basis and may be empty when absent from the source file.">
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
@@ -71,8 +71,8 @@
 
 
   <h1 id="Dropbox_Api_Riviera_ApiExifMetadata" data-uid="Dropbox.Api.Riviera.ApiExifMetadata" class="text-break">Class ApiExifMetadata</h1>
-  <div class="markdown level0 summary"><p>Image EXIF metadata. Mirrors the useful subset of the internal
-`riviera.ExifMetadata` message. Fields are best-effort and may be empty.</p>
+  <div class="markdown level0 summary"><p>Image EXIF metadata. Fields are populated on a best-effort basis and may be empty
+when absent from the source file.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -139,31 +139,34 @@ class.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
         <td><span class="parametername">imageWidth</span></td>
-        <td><p>The image width</p>
+        <td><p>Width of the image, in pixels.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
         <td><span class="parametername">imageHeight</span></td>
-        <td><p>The image height</p>
+        <td><p>Height of the image, in pixels.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">cameraMake</span></td>
-        <td><p>The camera make</p>
+        <td><p>Manufacturer of the device that captured the image, e.g.
+&quot;Apple&quot;.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">cameraModel</span></td>
-        <td><p>The camera model</p>
+        <td><p>Model of the device that captured the image, e.g. &quot;iPhone
+15 Pro&quot;.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">lensModel</span></td>
-        <td><p>The lens model</p>
+        <td><p>Model of the lens the image was captured with, when the
+source records it.</p>
 </td>
       </tr>
       <tr>
@@ -176,7 +179,7 @@ of the camera).</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">offsetTimeOriginal</span></td>
-        <td><p>Timezone offset for <code>date_time_original</code>, e.g.
+        <td><p>Timezone offset for <a class="xref" href="Dropbox.Api.Riviera.ApiExifMetadata.html#Dropbox_Api_Riviera_ApiExifMetadata_DateTimeOriginal">DateTimeOriginal</a>, e.g.
 &quot;+09:00&quot;.</p>
 </td>
       </tr>
@@ -190,49 +193,53 @@ normal upright orientation.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">exposureTime</span></td>
-        <td><p>fraction in string form, e.g. &quot;1/250&quot;</p>
+        <td><p>Exposure time the image was captured with, as a
+fractional-second string, e.g. &quot;1/250&quot;.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
         <td><span class="parametername">apertureValue</span></td>
-        <td><p>The aperture value</p>
+        <td><p>Aperture the image was captured at, as reported by the
+EXIF aperture tag.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
         <td><span class="parametername">isoSpeed</span></td>
-        <td><p>The iso speed</p>
+        <td><p>ISO sensitivity the image was captured at.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">focalLength</span></td>
-        <td><p>e.g. &quot;26.0 mm&quot;</p>
+        <td><p>Focal length the image was captured at, including the
+unit, e.g. &quot;26.0 mm&quot;.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
         <td><span class="parametername">megapixels</span></td>
-        <td><p>The megapixels</p>
+        <td><p>Total pixel count of the image, in megapixels.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">artist</span></td>
-        <td><p>The artist</p>
+        <td><p>Creator credited in the EXIF artist tag.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">copyright</span></td>
-        <td><p>The copyright</p>
+        <td><p>Copyright notice from the EXIF copyright tag.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.ApiExifGpsMetadata.html">ApiExifGpsMetadata</a></td>
         <td><span class="parametername">gpsMetadata</span></td>
-        <td><p>The gps metadata</p>
+        <td><p>Location tags from the image, when the source recorded a
+location.</p>
 </td>
       </tr>
     </tbody>
@@ -245,7 +252,8 @@ normal upright orientation.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiExifMetadata_ApertureValue_" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.ApertureValue*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiExifMetadata_ApertureValue" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.ApertureValue">ApertureValue</h4>
-  <div class="markdown level1 summary"><p>Gets the aperture value of the api exif metadata</p>
+  <div class="markdown level1 summary"><p>Aperture the image was captured at, as reported by the EXIF aperture
+tag.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -273,7 +281,7 @@ normal upright orientation.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiExifMetadata_Artist_" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.Artist*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiExifMetadata_Artist" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.Artist">Artist</h4>
-  <div class="markdown level1 summary"><p>Gets the artist of the api exif metadata</p>
+  <div class="markdown level1 summary"><p>Creator credited in the EXIF artist tag.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -301,7 +309,7 @@ normal upright orientation.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiExifMetadata_CameraMake_" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.CameraMake*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiExifMetadata_CameraMake" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.CameraMake">CameraMake</h4>
-  <div class="markdown level1 summary"><p>Gets the camera make of the api exif metadata</p>
+  <div class="markdown level1 summary"><p>Manufacturer of the device that captured the image, e.g. "Apple".</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -329,7 +337,7 @@ normal upright orientation.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiExifMetadata_CameraModel_" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.CameraModel*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiExifMetadata_CameraModel" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.CameraModel">CameraModel</h4>
-  <div class="markdown level1 summary"><p>Gets the camera model of the api exif metadata</p>
+  <div class="markdown level1 summary"><p>Model of the device that captured the image, e.g. "iPhone 15 Pro".</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -357,7 +365,7 @@ normal upright orientation.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiExifMetadata_Copyright_" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.Copyright*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiExifMetadata_Copyright" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.Copyright">Copyright</h4>
-  <div class="markdown level1 summary"><p>Gets the copyright of the api exif metadata</p>
+  <div class="markdown level1 summary"><p>Copyright notice from the EXIF copyright tag.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -413,7 +421,8 @@ normal upright orientation.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiExifMetadata_ExposureTime_" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.ExposureTime*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiExifMetadata_ExposureTime" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.ExposureTime">ExposureTime</h4>
-  <div class="markdown level1 summary"><p>fraction in string form, e.g. "1/250"</p>
+  <div class="markdown level1 summary"><p>Exposure time the image was captured with, as a fractional-second string,
+e.g. "1/250".</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -441,7 +450,8 @@ normal upright orientation.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiExifMetadata_FocalLength_" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.FocalLength*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiExifMetadata_FocalLength" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.FocalLength">FocalLength</h4>
-  <div class="markdown level1 summary"><p>e.g. "26.0 mm"</p>
+  <div class="markdown level1 summary"><p>Focal length the image was captured at, including the unit, e.g. "26.0
+mm".</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -469,7 +479,7 @@ normal upright orientation.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiExifMetadata_GpsMetadata_" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.GpsMetadata*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiExifMetadata_GpsMetadata" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.GpsMetadata">GpsMetadata</h4>
-  <div class="markdown level1 summary"><p>Gets the gps metadata of the api exif metadata</p>
+  <div class="markdown level1 summary"><p>Location tags from the image, when the source recorded a location.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -497,7 +507,7 @@ normal upright orientation.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiExifMetadata_ImageHeight_" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.ImageHeight*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiExifMetadata_ImageHeight" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.ImageHeight">ImageHeight</h4>
-  <div class="markdown level1 summary"><p>Gets the image height of the api exif metadata</p>
+  <div class="markdown level1 summary"><p>Height of the image, in pixels.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -525,7 +535,7 @@ normal upright orientation.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiExifMetadata_ImageWidth_" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.ImageWidth*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiExifMetadata_ImageWidth" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.ImageWidth">ImageWidth</h4>
-  <div class="markdown level1 summary"><p>Gets the image width of the api exif metadata</p>
+  <div class="markdown level1 summary"><p>Width of the image, in pixels.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -553,7 +563,7 @@ normal upright orientation.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiExifMetadata_IsoSpeed_" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.IsoSpeed*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiExifMetadata_IsoSpeed" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.IsoSpeed">IsoSpeed</h4>
-  <div class="markdown level1 summary"><p>Gets the iso speed of the api exif metadata</p>
+  <div class="markdown level1 summary"><p>ISO sensitivity the image was captured at.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -581,7 +591,8 @@ normal upright orientation.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiExifMetadata_LensModel_" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.LensModel*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiExifMetadata_LensModel" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.LensModel">LensModel</h4>
-  <div class="markdown level1 summary"><p>Gets the lens model of the api exif metadata</p>
+  <div class="markdown level1 summary"><p>Model of the lens the image was captured with, when the source records
+it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -609,7 +620,7 @@ normal upright orientation.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiExifMetadata_Megapixels_" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.Megapixels*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiExifMetadata_Megapixels" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.Megapixels">Megapixels</h4>
-  <div class="markdown level1 summary"><p>Gets the megapixels of the api exif metadata</p>
+  <div class="markdown level1 summary"><p>Total pixel count of the image, in megapixels.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -637,7 +648,8 @@ normal upright orientation.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiExifMetadata_OffsetTimeOriginal_" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.OffsetTimeOriginal*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiExifMetadata_OffsetTimeOriginal" data-uid="Dropbox.Api.Riviera.ApiExifMetadata.OffsetTimeOriginal">OffsetTimeOriginal</h4>
-  <div class="markdown level1 summary"><p>Timezone offset for `date_time_original`, e.g. "+09:00".</p>
+  <div class="markdown level1 summary"><p>Timezone offset for <a class="xref" href="Dropbox.Api.Riviera.ApiExifMetadata.html#Dropbox_Api_Riviera_ApiExifMetadata_DateTimeOriginal">DateTimeOriginal</a>, e.g.
+"+09:00".</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class ApiStructuredTranscript | Dropbox .NET SDK API Reference ">
     
-    <meta name="description" content="Structured transcript for APIv2">
+    <meta name="description" content="A transcript, split into segments.">
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
@@ -71,7 +71,7 @@
 
 
   <h1 id="Dropbox_Api_Riviera_ApiStructuredTranscript" data-uid="Dropbox.Api.Riviera.ApiStructuredTranscript" class="text-break">Class ApiStructuredTranscript</h1>
-  <div class="markdown level0 summary"><p>Structured transcript for APIv2</p>
+  <div class="markdown level0 summary"><p>A transcript, split into segments.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -138,13 +138,15 @@ class.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Dropbox.Api.Riviera.ApiTranscriptSegment.html">ApiTranscriptSegment</a>&gt;</td>
         <td><span class="parametername">segments</span></td>
-        <td><p>The segments</p>
+        <td><p>The segments of the transcript, in playback order.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">transcriptLocale</span></td>
-        <td><p>The transcript locale</p>
+        <td><p>The language of the transcript, as an ISO 639-1 code
+(e.g. &quot;en&quot;). This is the language detected in the audio, or the one supplied in
+<a class="xref" href="Dropbox.Api.Riviera.GetTranscriptArgs.html#Dropbox_Api_Riviera_GetTranscriptArgs_AudioLanguage">AudioLanguage</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -157,7 +159,7 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiStructuredTranscript_Segments_" data-uid="Dropbox.Api.Riviera.ApiStructuredTranscript.Segments*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiStructuredTranscript_Segments" data-uid="Dropbox.Api.Riviera.ApiStructuredTranscript.Segments">Segments</h4>
-  <div class="markdown level1 summary"><p>Gets the segments of the api structured transcript</p>
+  <div class="markdown level1 summary"><p>The segments of the transcript, in playback order.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -185,7 +187,8 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiStructuredTranscript_TranscriptLocale_" data-uid="Dropbox.Api.Riviera.ApiStructuredTranscript.TranscriptLocale*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiStructuredTranscript_TranscriptLocale" data-uid="Dropbox.Api.Riviera.ApiStructuredTranscript.TranscriptLocale">TranscriptLocale</h4>
-  <div class="markdown level1 summary"><p>Gets the transcript locale of the api structured transcript</p>
+  <div class="markdown level1 summary"><p>The language of the transcript, as an ISO 639-1 code (e.g. "en"). This is the
+language detected in the audio, or the one supplied in <a class="xref" href="Dropbox.Api.Riviera.GetTranscriptArgs.html#Dropbox_Api_Riviera_GetTranscriptArgs_AudioLanguage">AudioLanguage</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

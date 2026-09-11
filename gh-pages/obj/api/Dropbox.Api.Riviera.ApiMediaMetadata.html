@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class ApiMediaMetadata | Dropbox .NET SDK API Reference ">
     
-    <meta name="description" content="Audio/video container and per-stream metadata. Mirrors the useful subset of the internal `riviera.MediaMetadata` message.">
+    <meta name="description" content="Audio/video container and per-stream metadata. Fields are populated on a best-effort basis and may be empty when absent from the source file.">
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
@@ -71,8 +71,8 @@
 
 
   <h1 id="Dropbox_Api_Riviera_ApiMediaMetadata" data-uid="Dropbox.Api.Riviera.ApiMediaMetadata" class="text-break">Class ApiMediaMetadata</h1>
-  <div class="markdown level0 summary"><p>Audio/video container and per-stream metadata. Mirrors the useful subset of the
-internal `riviera.MediaMetadata` message.</p>
+  <div class="markdown level0 summary"><p>Audio/video container and per-stream metadata. Fields are populated on a
+best-effort basis and may be empty when absent from the source file.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -139,13 +139,14 @@ class.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></td>
         <td><span class="parametername">bitrateBps</span></td>
-        <td><p>The bitrate bps</p>
+        <td><p>Overall bitrate of the container, in bits per
+second.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
         <td><span class="parametername">durationS</span></td>
-        <td><p>The duration s</p>
+        <td><p>Duration of the media, in seconds.</p>
 </td>
       </tr>
       <tr>
@@ -157,7 +158,8 @@ class.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Dropbox.Api.Riviera.ApiMediaStream.html">ApiMediaStream</a>&gt;</td>
         <td><span class="parametername">streams</span></td>
-        <td><p>The streams</p>
+        <td><p>The audio and video streams the container holds, in container
+order.</p>
 </td>
       </tr>
     </tbody>
@@ -170,7 +172,7 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaMetadata_BitrateBps_" data-uid="Dropbox.Api.Riviera.ApiMediaMetadata.BitrateBps*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaMetadata_BitrateBps" data-uid="Dropbox.Api.Riviera.ApiMediaMetadata.BitrateBps">BitrateBps</h4>
-  <div class="markdown level1 summary"><p>Gets the bitrate bps of the api media metadata</p>
+  <div class="markdown level1 summary"><p>Overall bitrate of the container, in bits per second.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -226,7 +228,7 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaMetadata_DurationS_" data-uid="Dropbox.Api.Riviera.ApiMediaMetadata.DurationS*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaMetadata_DurationS" data-uid="Dropbox.Api.Riviera.ApiMediaMetadata.DurationS">DurationS</h4>
-  <div class="markdown level1 summary"><p>Gets the duration s of the api media metadata</p>
+  <div class="markdown level1 summary"><p>Duration of the media, in seconds.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -254,7 +256,7 @@ class.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaMetadata_Streams_" data-uid="Dropbox.Api.Riviera.ApiMediaMetadata.Streams*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaMetadata_Streams" data-uid="Dropbox.Api.Riviera.ApiMediaMetadata.Streams">Streams</h4>
-  <div class="markdown level1 summary"><p>Gets the streams of the api media metadata</p>
+  <div class="markdown level1 summary"><p>The audio and video streams the container holds, in container order.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

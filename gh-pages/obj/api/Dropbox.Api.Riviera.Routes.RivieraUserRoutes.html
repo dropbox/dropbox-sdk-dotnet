@@ -408,9 +408,9 @@ from other send requests.</p>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
         <td><p>Identifier of the document to convert. Callers must set
-exactly one of the <code>FileIdOrUrl</code> variants. The referenced file must be a document
-in a supported format (see the route description for the list); requests against
-unsupported formats return <code>unsupported_format_error</code>.</p>
+exactly one of the <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a> variants. The referenced file must be
+a document in a supported format (see the route description for the list); requests
+against unsupported formats fail with <a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError.html">MarkdownConversionApiV2Error.UserError</a>.</p>
 </td>
       </tr>
       <tr>
@@ -670,12 +670,11 @@ from other send requests.</p>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
         <td><p>Identifier of the file to extract metadata from. Callers
-must set exactly one of the <code>FileIdOrUrl</code> variants. The kind of metadata returned
-is determined by the file type: image files return EXIF metadata, audio/video files
-return media metadata, PDFs return PDF metadata, and MS Office documents (docx,
-pptx, xlsx) return Office metadata. See the route description for the supported
-formats. Requests against unsupported formats return
-<code>unsupported_format_error</code>.</p>
+must set exactly one of the <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a> variants. The kind of
+metadata returned is determined by the file type: image files return EXIF metadata,
+audio/video files return media metadata, PDFs return PDF metadata, and MS Office
+documents (docx, pptx, xlsx) return Office metadata. See the route description for
+the supported formats. Requests against unsupported formats fail with <a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError.html">MetadataExtractionApiV2Error.UserError</a>.</p>
 </td>
       </tr>
       <tr>
@@ -1425,19 +1424,17 @@ from other send requests.</p>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
         <td><p>Identifier of the media asset to transcribe. Callers must
-set exactly one of the <code>FileIdOrUrl</code> variants. The referenced asset must be an
-audio or video file in a supported format (see the route description for the list);
-requests against files with no audio track return a <code>no_audio_error</code>.</p>
+set exactly one of the <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a> variants. The referenced asset
+must be an audio or video file in a supported format (see the route description for
+the list); requests against files with no audio track fail with <a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.NoAudioError.html">ContentApiV2Error.NoAudioError</a>.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.html">TimestampLevel</a></td>
         <td><span class="parametername">timestampLevel</span></td>
         <td><p>Granularity of the time offsets returned for each
-transcript segment. Defaults to <code>SENTENCE</code> when the field is omitted. - SENTENCE:
-one segment per spoken sentence (recommended). - WORD: one segment per word, useful
-for fine-grained alignment such as captioning or highlight-as-you-listen
-experiences.</p>
+transcript segment. Defaults to <a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.Sentence.html">TimestampLevel.Sentence</a> when the field is
+omitted.</p>
 </td>
       </tr>
       <tr>
@@ -1452,10 +1449,10 @@ default filtering behavior.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">audioLanguage</span></td>
-        <td><p>Optional ISO 639-1 two-letter language code hinting the
-spoken language of the source audio (e.g. &quot;en&quot;, &quot;ja&quot;). When empty, the service
-auto-detects the language; supplying a hint improves accuracy and latency for short
-or ambiguous clips. Unsupported languages fall back to auto-detection.</p>
+        <td><p>Hint for the spoken language of the source audio, as an
+ISO 639-1 code (e.g. &quot;en&quot;, &quot;ja&quot;). When empty, the service auto-detects the
+language; supplying a hint improves accuracy and latency for short or ambiguous
+clips. Languages the service does not support fall back to auto-detection.</p>
 </td>
       </tr>
       <tr>
@@ -2648,8 +2645,10 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMarkdownAsyncAsync_Dropbox_Api_Riviera_FileIdOrUrl_System_Boolean_System_Boolean_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMarkdownAsyncAsync(Dropbox.Api.Riviera.FileIdOrUrl,System.Boolean,System.Boolean)">GetMarkdownAsyncAsync(FileIdOrUrl, bool, bool)</h4>
   <div class="markdown level1 summary"><p>Asynchronous document-to-markdown conversion for supported file formats.
 Supported formats: .binder, .docx, .html, .paper, .papert, .pptx, .xlsx, .gsheet,
-.ods, .pdf. Unsupported formats return an `unsupported_format_error`. Size limit:
-the source file must be at most 50 MB. Larger files are rejected.</p>
+.ods, .pdf. Files in other formats fail with <a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError.html">MarkdownConversionApiV2Error.UserError</a>. Size limit:
+the source file must be at most 50 MB. Larger files fail with <a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError.html">MarkdownConversionApiV2Error.UserError</a>. The markdown
+is not returned by this route. Poll <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetMarkdownAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetMarkdownAsyncCheckAsync(PollArg)</a>
+<a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMarkdownAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetMarkdownAsyncCheckAsync(PollArg)</a> with the returned async job ID until it reports <a class="xref" href="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.Complete.html">GetMarkdownAsyncCheckResult.Complete</a> or <a class="xref" href="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.Failed.html">GetMarkdownAsyncCheckResult.Failed</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2670,9 +2669,9 @@ the source file must be at most 50 MB. Larger files are rejected.</p>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
         <td><p>Identifier of the document to convert. Callers must set
-exactly one of the <code>FileIdOrUrl</code> variants. The referenced file must be a document
-in a supported format (see the route description for the list); requests against
-unsupported formats return <code>unsupported_format_error</code>.</p>
+exactly one of the <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a> variants. The referenced file must be
+a document in a supported format (see the route description for the list); requests
+against unsupported formats fail with <a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError.html">MarkdownConversionApiV2Error.UserError</a>.</p>
 </td>
       </tr>
       <tr>
@@ -2716,8 +2715,10 @@ parameter contains the response from the server.</p>
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMarkdownAsyncAsync_Dropbox_Api_Riviera_GetMarkdownArgs_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.GetMarkdownAsyncAsync(Dropbox.Api.Riviera.GetMarkdownArgs)">GetMarkdownAsyncAsync(GetMarkdownArgs)</h4>
   <div class="markdown level1 summary"><p>Asynchronous document-to-markdown conversion for supported file formats.
 Supported formats: .binder, .docx, .html, .paper, .papert, .pptx, .xlsx, .gsheet,
-.ods, .pdf. Unsupported formats return an `unsupported_format_error`. Size limit:
-the source file must be at most 50 MB. Larger files are rejected.</p>
+.ods, .pdf. Files in other formats fail with <a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError.html">MarkdownConversionApiV2Error.UserError</a>. Size limit:
+the source file must be at most 50 MB. Larger files fail with <a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError.html">MarkdownConversionApiV2Error.UserError</a>. The markdown
+is not returned by this route. Poll <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetMarkdownAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetMarkdownAsyncCheckAsync(PollArg)</a>
+<a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMarkdownAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetMarkdownAsyncCheckAsync(PollArg)</a> with the returned async job ID until it reports <a class="xref" href="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.Complete.html">GetMarkdownAsyncCheckResult.Complete</a> or <a class="xref" href="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.Failed.html">GetMarkdownAsyncCheckResult.Failed</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2905,7 +2906,12 @@ metadata returned depends on the file type: - Image (EXIF) formats: .3fr, .arw,
 .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma, .3gp, .3gpp, .3gpp2, .asf, .avi, .dv,
 .flv, .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora,
 .ogv, .rm, .ts, .vob, .webm, .wmv. - PDF format: .pdf. - MS Office formats: .docx,
-.pptx, .xlsx. Unsupported formats return an `unsupported_format_error`.</p>
+.pptx, .xlsx. Files in other formats fail with <a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError.html">MetadataExtractionApiV2Error.UserError</a>. Size limits
+depend on the kind of metadata being extracted: at most 200 MB for image (EXIF)
+files, 100 GB for audio/video files, 500 MB for PDFs, and 288 MB for MS Office
+files. Files over the limit for their kind fail with <a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError.html">MetadataExtractionApiV2Error.UserError</a>. The metadata
+is not returned by this route. Poll <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetMetadataAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetMetadataAsyncCheckAsync(PollArg)</a>
+<a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMetadataAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetMetadataAsyncCheckAsync(PollArg)</a> with the returned async job ID until it reports <a class="xref" href="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Complete.html">GetMetadataAsyncCheckResult.Complete</a> or <a class="xref" href="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Failed.html">GetMetadataAsyncCheckResult.Failed</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2926,12 +2932,11 @@ metadata returned depends on the file type: - Image (EXIF) formats: .3fr, .arw,
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
         <td><p>Identifier of the file to extract metadata from. Callers
-must set exactly one of the <code>FileIdOrUrl</code> variants. The kind of metadata returned
-is determined by the file type: image files return EXIF metadata, audio/video files
-return media metadata, PDFs return PDF metadata, and MS Office documents (docx,
-pptx, xlsx) return Office metadata. See the route description for the supported
-formats. Requests against unsupported formats return
-<code>unsupported_format_error</code>.</p>
+must set exactly one of the <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a> variants. The kind of
+metadata returned is determined by the file type: image files return EXIF metadata,
+audio/video files return media metadata, PDFs return PDF metadata, and MS Office
+documents (docx, pptx, xlsx) return Office metadata. See the route description for
+the supported formats. Requests against unsupported formats fail with <a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError.html">MetadataExtractionApiV2Error.UserError</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -2968,7 +2973,12 @@ metadata returned depends on the file type: - Image (EXIF) formats: .3fr, .arw,
 .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma, .3gp, .3gpp, .3gpp2, .asf, .avi, .dv,
 .flv, .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora,
 .ogv, .rm, .ts, .vob, .webm, .wmv. - PDF format: .pdf. - MS Office formats: .docx,
-.pptx, .xlsx. Unsupported formats return an `unsupported_format_error`.</p>
+.pptx, .xlsx. Files in other formats fail with <a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError.html">MetadataExtractionApiV2Error.UserError</a>. Size limits
+depend on the kind of metadata being extracted: at most 200 MB for image (EXIF)
+files, 100 GB for audio/video files, 500 MB for PDFs, and 288 MB for MS Office
+files. Files over the limit for their kind fail with <a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError.html">MetadataExtractionApiV2Error.UserError</a>. The metadata
+is not returned by this route. Poll <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetMetadataAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetMetadataAsyncCheckAsync(PollArg)</a>
+<a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMetadataAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetMetadataAsyncCheckAsync(PollArg)</a> with the returned async job ID until it reports <a class="xref" href="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Complete.html">GetMetadataAsyncCheckResult.Complete</a> or <a class="xref" href="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Failed.html">GetMetadataAsyncCheckResult.Failed</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3647,9 +3657,12 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
 formats: .aac, .aif, .aiff, .flac, .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma.
 Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv, .m2t, .m2ts,
 .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv, .rm, .ts, .vob,
-.webm, .wmv. Unsupported formats return an `unsupported_format_error`. Size limits:
-the source file must be at most 10 GB and its audio track at most 1 hour in
-duration. Files exceeding these limits are rejected.</p>
+.webm, .wmv. Files in other formats fail with <a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.UserError.html">ContentApiV2Error.UserError</a>. Size limits: the source
+file must be at most 10 GB and its audio track at most 1 hour in duration. Files
+exceeding either limit fail with <a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.UserError.html">ContentApiV2Error.UserError</a>. The transcript is not
+returned by this route. Poll <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetTranscriptAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetTranscriptAsyncCheckAsync(PollArg)</a>
+<a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetTranscriptAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetTranscriptAsyncCheckAsync(PollArg)</a>
+with the returned async job ID until it reports <a class="xref" href="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Complete.html">GetTranscriptAsyncCheckResult.Complete</a> or <a class="xref" href="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Failed.html">GetTranscriptAsyncCheckResult.Failed</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3670,19 +3683,17 @@ duration. Files exceeding these limits are rejected.</p>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
         <td><p>Identifier of the media asset to transcribe. Callers must
-set exactly one of the <code>FileIdOrUrl</code> variants. The referenced asset must be an
-audio or video file in a supported format (see the route description for the list);
-requests against files with no audio track return a <code>no_audio_error</code>.</p>
+set exactly one of the <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a> variants. The referenced asset
+must be an audio or video file in a supported format (see the route description for
+the list); requests against files with no audio track fail with <a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.NoAudioError.html">ContentApiV2Error.NoAudioError</a>.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.html">TimestampLevel</a></td>
         <td><span class="parametername">timestampLevel</span></td>
         <td><p>Granularity of the time offsets returned for each
-transcript segment. Defaults to <code>SENTENCE</code> when the field is omitted. - SENTENCE:
-one segment per spoken sentence (recommended). - WORD: one segment per word, useful
-for fine-grained alignment such as captioning or highlight-as-you-listen
-experiences.</p>
+transcript segment. Defaults to <a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.Sentence.html">TimestampLevel.Sentence</a> when the field is
+omitted.</p>
 </td>
       </tr>
       <tr>
@@ -3697,10 +3708,10 @@ default filtering behavior.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">audioLanguage</span></td>
-        <td><p>Optional ISO 639-1 two-letter language code hinting the
-spoken language of the source audio (e.g. &quot;en&quot;, &quot;ja&quot;). When empty, the service
-auto-detects the language; supplying a hint improves accuracy and latency for short
-or ambiguous clips. Unsupported languages fall back to auto-detection.</p>
+        <td><p>Hint for the spoken language of the source audio, as an
+ISO 639-1 code (e.g. &quot;en&quot;, &quot;ja&quot;). When empty, the service auto-detects the
+language; supplying a hint improves accuracy and latency for short or ambiguous
+clips. Languages the service does not support fall back to auto-detection.</p>
 </td>
       </tr>
     </tbody>
@@ -3732,9 +3743,12 @@ parameter contains the response from the server.</p>
 formats: .aac, .aif, .aiff, .flac, .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma.
 Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv, .m2t, .m2ts,
 .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv, .rm, .ts, .vob,
-.webm, .wmv. Unsupported formats return an `unsupported_format_error`. Size limits:
-the source file must be at most 10 GB and its audio track at most 1 hour in
-duration. Files exceeding these limits are rejected.</p>
+.webm, .wmv. Files in other formats fail with <a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.UserError.html">ContentApiV2Error.UserError</a>. Size limits: the source
+file must be at most 10 GB and its audio track at most 1 hour in duration. Files
+exceeding either limit fail with <a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.UserError.html">ContentApiV2Error.UserError</a>. The transcript is not
+returned by this route. Poll <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetTranscriptAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetTranscriptAsyncCheckAsync(PollArg)</a>
+<a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetTranscriptAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetTranscriptAsyncCheckAsync(PollArg)</a>
+with the returned async job ID until it reports <a class="xref" href="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Complete.html">GetTranscriptAsyncCheckResult.Complete</a> or <a class="xref" href="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Failed.html">GetTranscriptAsyncCheckResult.Failed</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

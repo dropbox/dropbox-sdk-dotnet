@@ -81,53 +81,55 @@ populated on a best-effort basis and may be empty when absent from the source
 file.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ApiExifMetadata.html">ApiExifMetadata</a></h4>
-      <section><p>Image EXIF metadata. Mirrors the useful subset of the internal
-`riviera.ExifMetadata` message. Fields are best-effort and may be empty.</p>
+      <section><p>Image EXIF metadata. Fields are populated on a best-effort basis and may be empty
+when absent from the source file.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ApiKeyframe.html">ApiKeyframe</a></h4>
       <section><p>A single extracted scene-change keyframe.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ApiMediaMetadata.html">ApiMediaMetadata</a></h4>
-      <section><p>Audio/video container and per-stream metadata. Mirrors the useful subset of the
-internal `riviera.MediaMetadata` message.</p>
+      <section><p>Audio/video container and per-stream metadata. Fields are populated on a
+best-effort basis and may be empty when absent from the source file.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ApiMediaStream.html">ApiMediaStream</a></h4>
       <section><p>A single audio or video stream within a media file.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ApiOfficeMetadata.html">ApiOfficeMetadata</a></h4>
-      <section><p>MS Office document metadata. Mirrors the internal `riviera.OfficeMetadata`
-message. Some fields apply only to specific document types (e.g. `slides` for
-PowerPoint, `words`/`pages` for Word).</p>
+      <section><p>MS Office document metadata. Some fields apply only to specific document types
+(e.g. <a class="xref" href="Dropbox.Api.Riviera.ApiOfficeMetadata.html#Dropbox_Api_Riviera_ApiOfficeMetadata_Slides">Slides</a> for PowerPoint, <a class="xref" href="Dropbox.Api.Riviera.ApiOfficeMetadata.html#Dropbox_Api_Riviera_ApiOfficeMetadata_Words">Words</a> and <a class="xref" href="Dropbox.Api.Riviera.ApiOfficeMetadata.html#Dropbox_Api_Riviera_ApiOfficeMetadata_Pages">Pages</a> for Word).</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ApiPdfMetadata.html">ApiPdfMetadata</a></h4>
       <section><p>PDF document metadata.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ApiStructuredTranscript.html">ApiStructuredTranscript</a></h4>
-      <section><p>Structured transcript for APIv2</p>
+      <section><p>A transcript, split into segments.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ApiTranscriptSegment.html">ApiTranscriptSegment</a></h4>
-      <section><p>Transcript segment for APIv2</p>
+      <section><p>A contiguous span of transcribed speech. The span covered by a segment depends on
+the requested <a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.html">TimestampLevel</a>.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.html">ContentApiV2Error</a></h4>
-      <section><p>Reason a transcript job failed. Returned in the `failed` variant of
-`GetTranscriptAsyncCheckResult`. This is a semantic error union: the HTTP status of the
-poll request itself is unaffected (a poll that surfaces a failed job is still a normal
-successful poll response). Callers should branch on the variant.</p>
+      <section><p>Reason a transcript job failed. Returned in the <a class="xref" href="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Failed.html">GetTranscriptAsyncCheckResult.Failed</a> variant. This is a
+semantic error union: the HTTP status of the poll request itself is unaffected (a poll
+that surfaces a failed job is still a normal successful poll response). Callers should
+branch on the variant.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.IsAFolderError.html">ContentApiV2Error.IsAFolderError</a></h4>
       <section><p>The target is a folder, not a file.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.LimitExceededError.html">ContentApiV2Error.LimitExceededError</a></h4>
-      <section><p>The limit exceeded error object</p>
+      <section><p>A resource limit was exceeded while producing the result.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.LinkDownloadDisabledError.html">ContentApiV2Error.LinkDownloadDisabledError</a></h4>
-      <section><p>The link download disabled error object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> referenced a Dropbox
+shared link whose owner has disabled downloads.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.MediaDurationError.html">ContentApiV2Error.MediaDurationError</a></h4>
-      <section><p>The media duration error object</p>
+      <section><p>The audio to transcribe is longer than the supported maximum.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.NoAudioError.html">ContentApiV2Error.NoAudioError</a></h4>
-      <section><p>The no audio error object</p>
+      <section><p>The file has no audio track, or no audio content could be detected in
+it.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.NotFoundError.html">ContentApiV2Error.NotFoundError</a></h4>
       <section><p>The referenced file does not exist or is not accessible.</p>
@@ -140,7 +142,9 @@ successful poll response). Callers should branch on the variant.</p>
 human-readable message; retrying with backoff may succeed.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.SharedLinkPasswordProtected.html">ContentApiV2Error.SharedLinkPasswordProtected</a></h4>
-      <section><p>The shared link password protected object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> referenced a
+password-protected Dropbox shared link. Riviera cannot supply the password, so such
+links cannot be transcribed.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.UserError.html">ContentApiV2Error.UserError</a></h4>
       <section><p>The request could not be processed as supplied (a problem with the caller's
@@ -151,7 +155,9 @@ help.</p>
       <section><p>The file id or url object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.FileId.html">FileIdOrUrl.FileId</a></h4>
-      <section></section>
+      <section><p>A Dropbox-issued file ID for a file the authenticated user has access to,
+e.g. "id:a4ayc_80_OEAAAAAAAAAYa".</p>
+</section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Other.html">FileIdOrUrl.Other</a></h4>
       <section><p>The other object</p>
 </section>
@@ -159,15 +165,14 @@ help.</p>
       <section><p>An absolute Dropbox path, e.g. "/folder/example.pdf".</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a></h4>
-      <section><p>Either a Dropbox shared link (www.dropbox.com) or an external HTTP or HTTPS
-URL pointing to a supported file. - Dropbox shared links are resolved internally
-using the caller's authenticated identity and the link's visibility / download
-settings. They therefore require an authenticated user context (anonymous `url`
-requests against Dropbox links are rejected with an `access_error`). Links
-protected by a password are rejected with `shared_link_password_protected`; links
-with downloads disabled are rejected with `link_download_disabled_error`. -
-External URLs are fetched through the backend's egress proxy and must point at a
-supported file extension.</p>
+      <section><p>Either a Dropbox shared link (www.dropbox.com) or an internet-accessible URL
+pointing to a supported file. - Dropbox shared links are resolved internally using
+the caller's authenticated identity and the link's visibility / download settings.
+They therefore require an authenticated user context; requests made with app auth
+alone are rejected. Password-protected links and links with downloads disabled are
+rejected as well. - Other URLs are fetched by Dropbox's servers, so they must be
+reachable from the public internet -- not only from the calling application's
+network -- and must point at a supported file extension.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetKeyframesArgs.html">GetKeyframesArgs</a></h4>
       <section><p>Arguments for the asynchronous `get_keyframes_async` route. Exactly one of
@@ -193,21 +198,22 @@ whose scene-change keyframes should be extracted.</p>
       <section><p>The get keyframes result object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMarkdownArgs.html">GetMarkdownArgs</a></h4>
-      <section><p>Arguments for the asynchronous `get_markdown_async` route. Exactly one of
-`file_id`, `path`, or `url` must be supplied via `file_id_or_url` to identify the
-document to convert to markdown.</p>
+      <section><p>Arguments for the asynchronous <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetMarkdownAsyncAsync_Dropbox_Api_Riviera_GetMarkdownArgs_">GetMarkdownAsyncAsync(GetMarkdownArgs)</a> <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMarkdownAsyncAsync_Dropbox_Api_Riviera_GetMarkdownArgs_">GetMarkdownAsyncAsync(GetMarkdownArgs)</a> route.
+Exactly one of <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.FileId.html">FileIdOrUrl.FileId</a>, <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Path.html">FileIdOrUrl.Path</a>, or <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> must be supplied via <a class="xref" href="Dropbox.Api.Riviera.GetMarkdownArgs.html#Dropbox_Api_Riviera_GetMarkdownArgs_FileIdOrUrl">FileIdOrUrl</a> to identify the document to
+convert to markdown.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.html">GetMarkdownAsyncCheckResult</a></h4>
-      <section><p>Result type for EventBus async check</p>
+      <section><p>Status of a markdown conversion job started by <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetMarkdownAsyncAsync_Dropbox_Api_Riviera_GetMarkdownArgs_">GetMarkdownAsyncAsync(GetMarkdownArgs)</a> <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMarkdownAsyncAsync_Dropbox_Api_Riviera_GetMarkdownArgs_">GetMarkdownAsyncAsync(GetMarkdownArgs)</a>, as
+returned by <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetMarkdownAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetMarkdownAsyncCheckAsync(PollArg)</a> <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMarkdownAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetMarkdownAsyncCheckAsync(PollArg)</a>.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.Complete.html">GetMarkdownAsyncCheckResult.Complete</a></h4>
-      <section><p>The complete object</p>
+      <section><p>The job finished successfully.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.Failed.html">GetMarkdownAsyncCheckResult.Failed</a></h4>
-      <section><p>The failed object</p>
+      <section><p>The job finished unsuccessfully.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.InProgress.html">GetMarkdownAsyncCheckResult.InProgress</a></h4>
-      <section><p>The in progress object</p>
+      <section><p>The job has not finished yet. Poll again.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.Other.html">GetMarkdownAsyncCheckResult.Other</a></h4>
       <section><p>The other object</p>
@@ -216,21 +222,22 @@ document to convert to markdown.</p>
       <section><p>The get markdown result object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMetadataArgs.html">GetMetadataArgs</a></h4>
-      <section><p>Arguments for the asynchronous `get_metadata_async` route. Exactly one of
-`file_id`, `path`, or `url` must be supplied via `file_id_or_url` to identify the file
-whose metadata should be extracted.</p>
+      <section><p>Arguments for the asynchronous <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetMetadataAsyncAsync_Dropbox_Api_Riviera_GetMetadataArgs_">GetMetadataAsyncAsync(GetMetadataArgs)</a> <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMetadataAsyncAsync_Dropbox_Api_Riviera_GetMetadataArgs_">GetMetadataAsyncAsync(GetMetadataArgs)</a> route.
+Exactly one of <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.FileId.html">FileIdOrUrl.FileId</a>, <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Path.html">FileIdOrUrl.Path</a>, or <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> must be supplied via <a class="xref" href="Dropbox.Api.Riviera.GetMetadataArgs.html#Dropbox_Api_Riviera_GetMetadataArgs_FileIdOrUrl">FileIdOrUrl</a> to identify the file whose
+metadata should be extracted.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.html">GetMetadataAsyncCheckResult</a></h4>
-      <section><p>Result type for EventBus async check - must end in "CheckResult"</p>
+      <section><p>Status of a metadata extraction job started by <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetMetadataAsyncAsync_Dropbox_Api_Riviera_GetMetadataArgs_">GetMetadataAsyncAsync(GetMetadataArgs)</a> <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMetadataAsyncAsync_Dropbox_Api_Riviera_GetMetadataArgs_">GetMetadataAsyncAsync(GetMetadataArgs)</a>, as
+returned by <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetMetadataAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetMetadataAsyncCheckAsync(PollArg)</a> <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMetadataAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetMetadataAsyncCheckAsync(PollArg)</a>.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Complete.html">GetMetadataAsyncCheckResult.Complete</a></h4>
-      <section><p>The complete object</p>
+      <section><p>The job finished successfully.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Failed.html">GetMetadataAsyncCheckResult.Failed</a></h4>
-      <section><p>The failed object</p>
+      <section><p>The job finished unsuccessfully.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.InProgress.html">GetMetadataAsyncCheckResult.InProgress</a></h4>
-      <section><p>The in progress object</p>
+      <section><p>The job has not finished yet. Poll again.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Other.html">GetMetadataAsyncCheckResult.Other</a></h4>
       <section><p>The other object</p>
@@ -285,21 +292,22 @@ plain-text content should be extracted.</p>
       <section><p>The get text result object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetTranscriptArgs.html">GetTranscriptArgs</a></h4>
-      <section><p>Arguments for the asynchronous `get_transcript_async` route. Exactly one of
-`file_id`, `path`, or `url` must be supplied via `file_id_or_url` to identify the audio
-or video asset to transcribe.</p>
+      <section><p>Arguments for the asynchronous <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetTranscriptAsyncAsync_Dropbox_Api_Riviera_GetTranscriptArgs_">GetTranscriptAsyncAsync(GetTranscriptArgs)</a> <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetTranscriptAsyncAsync_Dropbox_Api_Riviera_GetTranscriptArgs_">GetTranscriptAsyncAsync(GetTranscriptArgs)</a> route.
+Exactly one of <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.FileId.html">FileIdOrUrl.FileId</a>, <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Path.html">FileIdOrUrl.Path</a>, or <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> must be supplied via <a class="xref" href="Dropbox.Api.Riviera.GetTranscriptArgs.html#Dropbox_Api_Riviera_GetTranscriptArgs_FileIdOrUrl">FileIdOrUrl</a> to identify the audio or
+video asset to transcribe.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.html">GetTranscriptAsyncCheckResult</a></h4>
-      <section><p>Result type for EventBus async check - must end in "CheckResult"</p>
+      <section><p>Status of a transcript job started by <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetTranscriptAsyncAsync_Dropbox_Api_Riviera_GetTranscriptArgs_">GetTranscriptAsyncAsync(GetTranscriptArgs)</a> <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetTranscriptAsyncAsync_Dropbox_Api_Riviera_GetTranscriptArgs_">GetTranscriptAsyncAsync(GetTranscriptArgs)</a>, as
+returned by <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetTranscriptAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetTranscriptAsyncCheckAsync(PollArg)</a> <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetTranscriptAsyncCheckAsync_Dropbox_Api_Async_PollArg_">GetTranscriptAsyncCheckAsync(PollArg)</a>.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Complete.html">GetTranscriptAsyncCheckResult.Complete</a></h4>
-      <section><p>The complete object</p>
+      <section><p>The job finished successfully.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Failed.html">GetTranscriptAsyncCheckResult.Failed</a></h4>
-      <section><p>The failed object</p>
+      <section><p>The job finished unsuccessfully.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.InProgress.html">GetTranscriptAsyncCheckResult.InProgress</a></h4>
-      <section><p>The in progress object</p>
+      <section><p>The job has not finished yet. Poll again.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Other.html">GetTranscriptAsyncCheckResult.Other</a></h4>
       <section><p>The other object</p>
@@ -314,7 +322,8 @@ poll request itself is unaffected (a poll that surfaces a failed job is still a 
 successful poll response). Callers should branch on the variant.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.ConversionFailureError.html">KeyframesExtractionApiV2Error.ConversionFailureError</a></h4>
-      <section><p>The conversion failure error object</p>
+      <section><p>The source file was readable but could not be processed, for example because
+it is corrupt.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.IsAFolderError.html">KeyframesExtractionApiV2Error.IsAFolderError</a></h4>
       <section><p>The target is a folder, not a file.</p>
@@ -326,7 +335,8 @@ response can carry. Lower the resolution, raise `scene_change_threshold`, or set
 `include_images = false`.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.LinkDownloadDisabledError.html">KeyframesExtractionApiV2Error.LinkDownloadDisabledError</a></h4>
-      <section><p>The link download disabled error object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> referenced a Dropbox
+shared link whose owner has disabled downloads.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.NotFoundError.html">KeyframesExtractionApiV2Error.NotFoundError</a></h4>
       <section><p>The referenced file does not exist or is not accessible.</p>
@@ -339,10 +349,12 @@ response can carry. Lower the resolution, raise `scene_change_threshold`, or set
 human-readable message; retrying with backoff may succeed.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.SharedLinkPasswordProtected.html">KeyframesExtractionApiV2Error.SharedLinkPasswordProtected</a></h4>
-      <section><p>The shared link password protected object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> referenced a
+password-protected Dropbox shared link. Riviera cannot supply the password, so such
+links cannot be processed.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.UnsupportedFormatError.html">KeyframesExtractionApiV2Error.UnsupportedFormatError</a></h4>
-      <section><p>The unsupported format error object</p>
+      <section><p>The source file is not in a format this route supports.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.UserError.html">KeyframesExtractionApiV2Error.UserError</a></h4>
       <section><p>The request could not be processed as supplied (a problem with the caller's
@@ -350,22 +362,24 @@ input). The string is a human-readable message; retrying the same request will n
 help.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.html">MarkdownConversionApiV2Error</a></h4>
-      <section><p>Reason a markdown conversion job failed. Returned in the `failed` variant of
-`GetMarkdownAsyncCheckResult`. This is a semantic error union: the HTTP status of the
-poll request itself is unaffected (a poll that surfaces a failed job is still a normal
-successful poll response). Callers should branch on the variant.</p>
+      <section><p>Reason a markdown conversion job failed. Returned in the <a class="xref" href="Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.Failed.html">GetMarkdownAsyncCheckResult.Failed</a> variant. This is a
+semantic error union: the HTTP status of the poll request itself is unaffected (a poll
+that surfaces a failed job is still a normal successful poll response). Callers should
+branch on the variant.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.ConversionFailureError.html">MarkdownConversionApiV2Error.ConversionFailureError</a></h4>
-      <section><p>The conversion failure error object</p>
+      <section><p>The source file was readable but could not be converted, for example because
+it is corrupt.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.IsAFolderError.html">MarkdownConversionApiV2Error.IsAFolderError</a></h4>
       <section><p>The target is a folder, not a file.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.LimitExceededError.html">MarkdownConversionApiV2Error.LimitExceededError</a></h4>
-      <section><p>The limit exceeded error object</p>
+      <section><p>A resource limit was exceeded while producing the result.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.LinkDownloadDisabledError.html">MarkdownConversionApiV2Error.LinkDownloadDisabledError</a></h4>
-      <section><p>The link download disabled error object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> referenced a Dropbox
+shared link whose owner has disabled downloads.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.NotFoundError.html">MarkdownConversionApiV2Error.NotFoundError</a></h4>
       <section><p>The referenced file does not exist or is not accessible.</p>
@@ -378,36 +392,40 @@ successful poll response). Callers should branch on the variant.</p>
 human-readable message; retrying with backoff may succeed.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.SharedLinkPasswordProtected.html">MarkdownConversionApiV2Error.SharedLinkPasswordProtected</a></h4>
-      <section><p>The shared link password protected object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> referenced a
+password-protected Dropbox shared link. Riviera cannot supply the password, so such
+links cannot be converted.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UnsupportedFormatError.html">MarkdownConversionApiV2Error.UnsupportedFormatError</a></h4>
-      <section><p>The unsupported format error object</p>
+      <section><p>The source file is not in a format this route can convert.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError.html">MarkdownConversionApiV2Error.UserError</a></h4>
       <section><p>The request could not be processed as supplied (a problem with the caller's
-input). The string is a human-readable message; retrying the same request will not
-help.</p>
+input) -- for example an unsupported file format or a file over the size limit. The
+string is a human-readable message; retrying the same request will not help.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MediaDurationError.html">MediaDurationError</a></h4>
       <section><p>The media duration error object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.html">MetadataExtractionApiV2Error</a></h4>
-      <section><p>Reason a metadata extraction job failed. Returned in the `failed` variant of
-`GetMetadataAsyncCheckResult`. This is a semantic error union: the HTTP status of the
-poll request itself is unaffected (a poll that surfaces a failed job is still a normal
-successful poll response). Callers should branch on the variant.</p>
+      <section><p>Reason a metadata extraction job failed. Returned in the <a class="xref" href="Dropbox.Api.Riviera.GetMetadataAsyncCheckResult.Failed.html">GetMetadataAsyncCheckResult.Failed</a> variant. This is a
+semantic error union: the HTTP status of the poll request itself is unaffected (a poll
+that surfaces a failed job is still a normal successful poll response). Callers should
+branch on the variant.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.ConversionFailureError.html">MetadataExtractionApiV2Error.ConversionFailureError</a></h4>
-      <section><p>The conversion failure error object</p>
+      <section><p>The source file was readable but its metadata could not be extracted, for
+example because the file is corrupt.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.IsAFolderError.html">MetadataExtractionApiV2Error.IsAFolderError</a></h4>
       <section><p>The target is a folder, not a file.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.LimitExceededError.html">MetadataExtractionApiV2Error.LimitExceededError</a></h4>
-      <section><p>The limit exceeded error object</p>
+      <section><p>A resource limit was exceeded while producing the result.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.LinkDownloadDisabledError.html">MetadataExtractionApiV2Error.LinkDownloadDisabledError</a></h4>
-      <section><p>The link download disabled error object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> referenced a Dropbox
+shared link whose owner has disabled downloads.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.NotFoundError.html">MetadataExtractionApiV2Error.NotFoundError</a></h4>
       <section><p>The referenced file does not exist or is not accessible.</p>
@@ -420,55 +438,63 @@ successful poll response). Callers should branch on the variant.</p>
 human-readable message; retrying with backoff may succeed.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.SharedLinkPasswordProtected.html">MetadataExtractionApiV2Error.SharedLinkPasswordProtected</a></h4>
-      <section><p>The shared link password protected object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> referenced a
+password-protected Dropbox shared link. Riviera cannot supply the password, so
+metadata cannot be extracted from such links.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UnsupportedFormatError.html">MetadataExtractionApiV2Error.UnsupportedFormatError</a></h4>
-      <section><p>The unsupported format error object</p>
+      <section><p>The source file is not in a format this route can extract metadata
+from.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError.html">MetadataExtractionApiV2Error.UserError</a></h4>
       <section><p>The request could not be processed as supplied (a problem with the caller's
-input). The string is a human-readable message; retrying the same request will not
-help.</p>
+input) -- for example an unsupported file format or a file over the size limit for
+its metadata kind. The string is a human-readable message; retrying the same
+request will not help.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataType.html">MetadataType</a></h4>
-      <section><p>Which metadata variant is populated in a `GetMetadataResult`, derived from the
-file type.</p>
+      <section><p>Which metadata variant is populated in a <a class="xref" href="Dropbox.Api.Riviera.GetMetadataResult.html">GetMetadataResult</a>,
+derived from the file type.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataType.MetadataTypeExif.html">MetadataType.MetadataTypeExif</a></h4>
-      <section><p>The metadata type exif object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.MetadataUnion.Exif.html">MetadataUnion.Exif</a> is populated.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataType.MetadataTypeMedia.html">MetadataType.MetadataTypeMedia</a></h4>
-      <section><p>The metadata type media object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.MetadataUnion.Media.html">MetadataUnion.Media</a> is populated.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataType.MetadataTypeOffice.html">MetadataType.MetadataTypeOffice</a></h4>
-      <section><p>The metadata type office object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.MetadataUnion.Office.html">MetadataUnion.Office</a> is populated.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataType.MetadataTypePdf.html">MetadataType.MetadataTypePdf</a></h4>
-      <section><p>The metadata type pdf object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.MetadataUnion.Pdf.html">MetadataUnion.Pdf</a> is populated.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataType.MetadataTypeUnknown.html">MetadataType.MetadataTypeUnknown</a></h4>
-      <section><p>The metadata type unknown object</p>
+      <section><p>No metadata kind applies to the file, so no variant of <a class="xref" href="Dropbox.Api.Riviera.GetMetadataResult.html#Dropbox_Api_Riviera_GetMetadataResult_Metadata">Metadata</a> is populated. Riviera only
+produces metadata for the formats listed on <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetMetadataAsyncAsync_Dropbox_Api_Riviera_GetMetadataArgs_">GetMetadataAsyncAsync(GetMetadataArgs)</a> <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMetadataAsyncAsync_Dropbox_Api_Riviera_GetMetadataArgs_">GetMetadataAsyncAsync(GetMetadataArgs)</a>; a
+request for any other file normally fails with <a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError.html">MetadataExtractionApiV2Error.UserError</a> rather than
+completing with this value. An app that does receive it should treat the file as
+having no extractable metadata; retrying will not change the outcome.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataType.Other.html">MetadataType.Other</a></h4>
       <section><p>The other object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataUnion.html">MetadataUnion</a></h4>
-      <section><p>Exactly one variant is populated, corresponding to `metadata_type`.</p>
+      <section><p>The extracted metadata. Exactly one variant is populated, corresponding to <a class="xref" href="Dropbox.Api.Riviera.GetMetadataResult.html#Dropbox_Api_Riviera_GetMetadataResult_MetadataType">MetadataType</a>.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataUnion.Exif.html">MetadataUnion.Exif</a></h4>
-      <section><p>The exif object</p>
+      <section><p>EXIF metadata, for image files.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataUnion.Media.html">MetadataUnion.Media</a></h4>
-      <section><p>The media object</p>
+      <section><p>Container and per-stream metadata, for audio and video files.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataUnion.Office.html">MetadataUnion.Office</a></h4>
-      <section><p>The office object</p>
+      <section><p>Document metadata, for MS Office files.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataUnion.Other.html">MetadataUnion.Other</a></h4>
       <section><p>The other object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataUnion.Pdf.html">MetadataUnion.Pdf</a></h4>
-      <section><p>The pdf object</p>
+      <section><p>Document metadata, for PDFs.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.html">OcrExtractionApiV2Error</a></h4>
       <section><p>Reason an OCR extraction job failed. Returned in the `failed` variant of
@@ -477,16 +503,18 @@ request itself is unaffected (a poll that surfaces a failed job is still a norma
 successful poll response). Callers should branch on the variant.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.ConversionFailureError.html">OcrExtractionApiV2Error.ConversionFailureError</a></h4>
-      <section><p>The conversion failure error object</p>
+      <section><p>The source file was readable but could not be processed, for example because
+it is corrupt.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.IsAFolderError.html">OcrExtractionApiV2Error.IsAFolderError</a></h4>
       <section><p>The target is a folder, not a file.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.LimitExceededError.html">OcrExtractionApiV2Error.LimitExceededError</a></h4>
-      <section><p>The limit exceeded error object</p>
+      <section><p>A resource limit was exceeded while producing the result.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.LinkDownloadDisabledError.html">OcrExtractionApiV2Error.LinkDownloadDisabledError</a></h4>
-      <section><p>The link download disabled error object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> referenced a Dropbox
+shared link whose owner has disabled downloads.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.NotFoundError.html">OcrExtractionApiV2Error.NotFoundError</a></h4>
       <section><p>The referenced file does not exist or is not accessible.</p>
@@ -499,10 +527,12 @@ successful poll response). Callers should branch on the variant.</p>
 human-readable message; retrying with backoff may succeed.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.SharedLinkPasswordProtected.html">OcrExtractionApiV2Error.SharedLinkPasswordProtected</a></h4>
-      <section><p>The shared link password protected object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> referenced a
+password-protected Dropbox shared link. Riviera cannot supply the password, so such
+links cannot be processed.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.UnsupportedFormatError.html">OcrExtractionApiV2Error.UnsupportedFormatError</a></h4>
-      <section><p>The unsupported format error object</p>
+      <section><p>The source file is not in a format this route supports.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.UserError.html">OcrExtractionApiV2Error.UserError</a></h4>
       <section><p>The request could not be processed as supplied (a problem with the caller's
@@ -510,7 +540,7 @@ input). The string is a human-readable message; retrying the same request will n
 help.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OfficeFileType.html">OfficeFileType</a></h4>
-      <section><p>The kind of MS Office document that produced an `ApiOfficeMetadata`
+      <section><p>The kind of MS Office document that produced an <a class="xref" href="Dropbox.Api.Riviera.ApiOfficeMetadata.html">ApiOfficeMetadata</a>
 result.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OfficeFileType.OfficeFiletypeExcel.html">OfficeFileType.OfficeFiletypeExcel</a></h4>
@@ -535,16 +565,18 @@ request itself is unaffected (a poll that surfaces a failed job is still a norma
 successful poll response). Callers should branch on the variant.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.ConversionFailureError.html">TextExtractionApiV2Error.ConversionFailureError</a></h4>
-      <section><p>The conversion failure error object</p>
+      <section><p>The source file was readable but could not be processed, for example because
+it is corrupt.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.IsAFolderError.html">TextExtractionApiV2Error.IsAFolderError</a></h4>
       <section><p>The target is a folder, not a file.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.LimitExceededError.html">TextExtractionApiV2Error.LimitExceededError</a></h4>
-      <section><p>The limit exceeded error object</p>
+      <section><p>A resource limit was exceeded while producing the result.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.LinkDownloadDisabledError.html">TextExtractionApiV2Error.LinkDownloadDisabledError</a></h4>
-      <section><p>The link download disabled error object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> referenced a Dropbox
+shared link whose owner has disabled downloads.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.NotFoundError.html">TextExtractionApiV2Error.NotFoundError</a></h4>
       <section><p>The referenced file does not exist or is not accessible.</p>
@@ -557,10 +589,12 @@ successful poll response). Callers should branch on the variant.</p>
 human-readable message; retrying with backoff may succeed.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.SharedLinkPasswordProtected.html">TextExtractionApiV2Error.SharedLinkPasswordProtected</a></h4>
-      <section><p>The shared link password protected object</p>
+      <section><p><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> referenced a
+password-protected Dropbox shared link. Riviera cannot supply the password, so such
+links cannot be processed.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.UnsupportedFormatError.html">TextExtractionApiV2Error.UnsupportedFormatError</a></h4>
-      <section><p>The unsupported format error object</p>
+      <section><p>The source file is not in a format this route supports.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.UserError.html">TextExtractionApiV2Error.UserError</a></h4>
       <section><p>The request could not be processed as supplied (a problem with the caller's
@@ -568,16 +602,17 @@ input). The string is a human-readable message; retrying the same request will n
 help.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.html">TimestampLevel</a></h4>
-      <section><p>The timestamp level object</p>
+      <section><p>Granularity of the time offsets returned for each transcript segment.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.Other.html">TimestampLevel.Other</a></h4>
       <section><p>The other object</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.Sentence.html">TimestampLevel.Sentence</a></h4>
-      <section><p>The sentence object</p>
+      <section><p>One segment per spoken sentence (recommended). This is the default when <a class="xref" href="Dropbox.Api.Riviera.GetTranscriptArgs.html#Dropbox_Api_Riviera_GetTranscriptArgs_TimestampLevel">TimestampLevel</a> is omitted.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.Word.html">TimestampLevel.Word</a></h4>
-      <section><p>The word object</p>
+      <section><p>One segment per word, useful for fine-grained alignment such as captioning or
+highlight-as-you-listen experiences.</p>
 </section>
 
 

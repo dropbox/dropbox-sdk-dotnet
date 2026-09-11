@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class GetTranscriptArgs | Dropbox .NET SDK API Reference ">
     
-    <meta name="description" content="Arguments for the asynchronous `get_transcript_async` route. Exactly one of `file_id`, `path`, or `url` must be supplied via `file_id_or_url` to identify the audio or video asset to transcribe.">
+    <meta name="description" content="Arguments for the asynchronous   route. Exactly one of , , or  must be supplied via  to identify the audio or video asset to transcribe.">
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
@@ -71,9 +71,9 @@
 
 
   <h1 id="Dropbox_Api_Riviera_GetTranscriptArgs" data-uid="Dropbox.Api.Riviera.GetTranscriptArgs" class="text-break">Class GetTranscriptArgs</h1>
-  <div class="markdown level0 summary"><p>Arguments for the asynchronous `get_transcript_async` route. Exactly one of
-`file_id`, `path`, or `url` must be supplied via `file_id_or_url` to identify the audio
-or video asset to transcribe.</p>
+  <div class="markdown level0 summary"><p>Arguments for the asynchronous <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetTranscriptAsyncAsync_Dropbox_Api_Riviera_GetTranscriptArgs_">GetTranscriptAsyncAsync(GetTranscriptArgs)</a> <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetTranscriptAsyncAsync_Dropbox_Api_Riviera_GetTranscriptArgs_">GetTranscriptAsyncAsync(GetTranscriptArgs)</a> route.
+Exactly one of <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.FileId.html">FileIdOrUrl.FileId</a>, <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Path.html">FileIdOrUrl.Path</a>, or <a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.Url.html">FileIdOrUrl.Url</a> must be supplied via <a class="xref" href="Dropbox.Api.Riviera.GetTranscriptArgs.html#Dropbox_Api_Riviera_GetTranscriptArgs_FileIdOrUrl">FileIdOrUrl</a> to identify the audio or
+video asset to transcribe.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -141,19 +141,17 @@ class.</p>
         <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
         <td><span class="parametername">fileIdOrUrl</span></td>
         <td><p>Identifier of the media asset to transcribe. Callers must
-set exactly one of the <code>FileIdOrUrl</code> variants. The referenced asset must be an
-audio or video file in a supported format (see the route description for the list);
-requests against files with no audio track return a <code>no_audio_error</code>.</p>
+set exactly one of the <a class="xref" href="Dropbox.Api.Riviera.GetTranscriptArgs.html#Dropbox_Api_Riviera_GetTranscriptArgs_FileIdOrUrl">FileIdOrUrl</a> variants. The referenced asset
+must be an audio or video file in a supported format (see the route description for
+the list); requests against files with no audio track fail with <a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.NoAudioError.html">ContentApiV2Error.NoAudioError</a>.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.html">TimestampLevel</a></td>
         <td><span class="parametername">timestampLevel</span></td>
         <td><p>Granularity of the time offsets returned for each
-transcript segment. Defaults to <code>SENTENCE</code> when the field is omitted. - SENTENCE:
-one segment per spoken sentence (recommended). - WORD: one segment per word, useful
-for fine-grained alignment such as captioning or highlight-as-you-listen
-experiences.</p>
+transcript segment. Defaults to <a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.Sentence.html">TimestampLevel.Sentence</a> when the field is
+omitted.</p>
 </td>
       </tr>
       <tr>
@@ -168,10 +166,10 @@ default filtering behavior.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">audioLanguage</span></td>
-        <td><p>Optional ISO 639-1 two-letter language code hinting the
-spoken language of the source audio (e.g. &quot;en&quot;, &quot;ja&quot;). When empty, the service
-auto-detects the language; supplying a hint improves accuracy and latency for short
-or ambiguous clips. Unsupported languages fall back to auto-detection.</p>
+        <td><p>Hint for the spoken language of the source audio, as an
+ISO 639-1 code (e.g. &quot;en&quot;, &quot;ja&quot;). When empty, the service auto-detects the
+language; supplying a hint improves accuracy and latency for short or ambiguous
+clips. Languages the service does not support fall back to auto-detection.</p>
 </td>
       </tr>
     </tbody>
@@ -184,10 +182,10 @@ or ambiguous clips. Unsupported languages fall back to auto-detection.</p>
   </span>
   <a id="Dropbox_Api_Riviera_GetTranscriptArgs_AudioLanguage_" data-uid="Dropbox.Api.Riviera.GetTranscriptArgs.AudioLanguage*"></a>
   <h4 id="Dropbox_Api_Riviera_GetTranscriptArgs_AudioLanguage" data-uid="Dropbox.Api.Riviera.GetTranscriptArgs.AudioLanguage">AudioLanguage</h4>
-  <div class="markdown level1 summary"><p>Optional ISO 639-1 two-letter language code hinting the spoken language of
-the source audio (e.g. "en", "ja"). When empty, the service auto-detects the
-language; supplying a hint improves accuracy and latency for short or ambiguous
-clips. Unsupported languages fall back to auto-detection.</p>
+  <div class="markdown level1 summary"><p>Hint for the spoken language of the source audio, as an ISO 639-1 code (e.g.
+"en", "ja"). When empty, the service auto-detects the language; supplying a hint
+improves accuracy and latency for short or ambiguous clips. Languages the service
+does not support fall back to auto-detection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -216,9 +214,9 @@ clips. Unsupported languages fall back to auto-detection.</p>
   <a id="Dropbox_Api_Riviera_GetTranscriptArgs_FileIdOrUrl_" data-uid="Dropbox.Api.Riviera.GetTranscriptArgs.FileIdOrUrl*"></a>
   <h4 id="Dropbox_Api_Riviera_GetTranscriptArgs_FileIdOrUrl" data-uid="Dropbox.Api.Riviera.GetTranscriptArgs.FileIdOrUrl">FileIdOrUrl</h4>
   <div class="markdown level1 summary"><p>Identifier of the media asset to transcribe. Callers must set exactly one of
-the `FileIdOrUrl` variants. The referenced asset must be an audio or video file in
-a supported format (see the route description for the list); requests against files
-with no audio track return a `no_audio_error`.</p>
+the <a class="xref" href="Dropbox.Api.Riviera.GetTranscriptArgs.html#Dropbox_Api_Riviera_GetTranscriptArgs_FileIdOrUrl">FileIdOrUrl</a> variants. The referenced asset must be an audio or
+video file in a supported format (see the route description for the list); requests
+against files with no audio track fail with <a class="xref" href="Dropbox.Api.Riviera.ContentApiV2Error.NoAudioError.html">ContentApiV2Error.NoAudioError</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -278,10 +276,8 @@ behavior.</p>
   <a id="Dropbox_Api_Riviera_GetTranscriptArgs_TimestampLevel_" data-uid="Dropbox.Api.Riviera.GetTranscriptArgs.TimestampLevel*"></a>
   <h4 id="Dropbox_Api_Riviera_GetTranscriptArgs_TimestampLevel" data-uid="Dropbox.Api.Riviera.GetTranscriptArgs.TimestampLevel">TimestampLevel</h4>
   <div class="markdown level1 summary"><p>Granularity of the time offsets returned for each transcript segment.
-Defaults to `SENTENCE` when the field is omitted. - SENTENCE: one segment per
-spoken sentence (recommended). - WORD: one segment per word, useful for
-fine-grained alignment such as captioning or highlight-as-you-listen
-experiences.</p>
+Defaults to <a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.Sentence.html">TimestampLevel.Sentence</a> when the
+field is omitted.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

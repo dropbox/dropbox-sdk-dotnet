@@ -137,80 +137,90 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
         <td><span class="parametername">index</span></td>
-        <td><p>The index</p>
+        <td><p>Zero-based index of the stream within the container.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">codecType</span></td>
-        <td><p>&quot;audio&quot;, &quot;video&quot;, etc.</p>
+        <td><p>Kind of media the stream carries, e.g. &quot;audio&quot; or
+&quot;video&quot;.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">codecName</span></td>
-        <td><p>The codec name</p>
+        <td><p>Name of the codec the stream is encoded with, e.g. &quot;h264&quot;
+or &quot;aac&quot;.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></td>
         <td><span class="parametername">bitrateBps</span></td>
-        <td><p>The bitrate bps</p>
+        <td><p>Bitrate of this stream, in bits per second.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
         <td><span class="parametername">durationS</span></td>
-        <td><p>The duration s</p>
+        <td><p>Duration of this stream, in seconds.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
         <td><span class="parametername">width</span></td>
-        <td><p>Video-specific fields (zero / empty for audio streams).</p>
+        <td><p>Width of the video frame, in pixels. Zero for audio
+streams.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
         <td><span class="parametername">height</span></td>
-        <td><p>The height</p>
+        <td><p>Height of the video frame, in pixels. Zero for audio
+streams.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
         <td><span class="parametername">framesPerSecond</span></td>
-        <td><p>The frames per second</p>
+        <td><p>Frame rate of the stream, in frames per second. Zero
+for audio streams.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
         <td><span class="parametername">rotation</span></td>
-        <td><p>The rotation</p>
+        <td><p>Rotation to apply on playback, in degrees, as recorded in
+the stream metadata. Zero for audio streams and for video that needs no
+rotation.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">displayAspectRatio</span></td>
-        <td><p>e.g. &quot;16:9&quot;</p>
+        <td><p>Aspect ratio the video should be displayed at, as
+a &quot;width:height&quot; string, e.g. &quot;16:9&quot;. Empty for audio streams.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
         <td><span class="parametername">channels</span></td>
-        <td><p>Audio-specific fields (zero / empty for video
-streams).</p>
+        <td><p>Number of audio channels in the stream. Zero for video
+streams.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">channelLayout</span></td>
-        <td><p>The channel layout</p>
+        <td><p>Layout of the audio channels, e.g. &quot;stereo&quot;. Empty for
+video streams.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></td>
         <td><span class="parametername">sampleRateS</span></td>
-        <td><p>The sample rate s</p>
+        <td><p>Sample rate of the audio stream, in samples per second.
+Zero for video streams.</p>
 </td>
       </tr>
       <tr>
@@ -230,7 +240,7 @@ present.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaStream_BitrateBps_" data-uid="Dropbox.Api.Riviera.ApiMediaStream.BitrateBps*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaStream_BitrateBps" data-uid="Dropbox.Api.Riviera.ApiMediaStream.BitrateBps">BitrateBps</h4>
-  <div class="markdown level1 summary"><p>Gets the bitrate bps of the api media stream</p>
+  <div class="markdown level1 summary"><p>Bitrate of this stream, in bits per second.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -258,7 +268,7 @@ present.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaStream_ChannelLayout_" data-uid="Dropbox.Api.Riviera.ApiMediaStream.ChannelLayout*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaStream_ChannelLayout" data-uid="Dropbox.Api.Riviera.ApiMediaStream.ChannelLayout">ChannelLayout</h4>
-  <div class="markdown level1 summary"><p>Gets the channel layout of the api media stream</p>
+  <div class="markdown level1 summary"><p>Layout of the audio channels, e.g. "stereo". Empty for video streams.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -286,7 +296,7 @@ present.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaStream_Channels_" data-uid="Dropbox.Api.Riviera.ApiMediaStream.Channels*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaStream_Channels" data-uid="Dropbox.Api.Riviera.ApiMediaStream.Channels">Channels</h4>
-  <div class="markdown level1 summary"><p>Audio-specific fields (zero / empty for video streams).</p>
+  <div class="markdown level1 summary"><p>Number of audio channels in the stream. Zero for video streams.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -314,7 +324,7 @@ present.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaStream_CodecName_" data-uid="Dropbox.Api.Riviera.ApiMediaStream.CodecName*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaStream_CodecName" data-uid="Dropbox.Api.Riviera.ApiMediaStream.CodecName">CodecName</h4>
-  <div class="markdown level1 summary"><p>Gets the codec name of the api media stream</p>
+  <div class="markdown level1 summary"><p>Name of the codec the stream is encoded with, e.g. "h264" or "aac".</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -342,7 +352,7 @@ present.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaStream_CodecType_" data-uid="Dropbox.Api.Riviera.ApiMediaStream.CodecType*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaStream_CodecType" data-uid="Dropbox.Api.Riviera.ApiMediaStream.CodecType">CodecType</h4>
-  <div class="markdown level1 summary"><p>"audio", "video", etc.</p>
+  <div class="markdown level1 summary"><p>Kind of media the stream carries, e.g. "audio" or "video".</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -370,7 +380,8 @@ present.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaStream_DisplayAspectRatio_" data-uid="Dropbox.Api.Riviera.ApiMediaStream.DisplayAspectRatio*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaStream_DisplayAspectRatio" data-uid="Dropbox.Api.Riviera.ApiMediaStream.DisplayAspectRatio">DisplayAspectRatio</h4>
-  <div class="markdown level1 summary"><p>e.g. "16:9"</p>
+  <div class="markdown level1 summary"><p>Aspect ratio the video should be displayed at, as a "width:height" string,
+e.g. "16:9". Empty for audio streams.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -398,7 +409,7 @@ present.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaStream_DurationS_" data-uid="Dropbox.Api.Riviera.ApiMediaStream.DurationS*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaStream_DurationS" data-uid="Dropbox.Api.Riviera.ApiMediaStream.DurationS">DurationS</h4>
-  <div class="markdown level1 summary"><p>Gets the duration s of the api media stream</p>
+  <div class="markdown level1 summary"><p>Duration of this stream, in seconds.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -426,7 +437,8 @@ present.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaStream_FramesPerSecond_" data-uid="Dropbox.Api.Riviera.ApiMediaStream.FramesPerSecond*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaStream_FramesPerSecond" data-uid="Dropbox.Api.Riviera.ApiMediaStream.FramesPerSecond">FramesPerSecond</h4>
-  <div class="markdown level1 summary"><p>Gets the frames per second of the api media stream</p>
+  <div class="markdown level1 summary"><p>Frame rate of the stream, in frames per second. Zero for audio
+streams.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -454,7 +466,7 @@ present.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaStream_Height_" data-uid="Dropbox.Api.Riviera.ApiMediaStream.Height*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaStream_Height" data-uid="Dropbox.Api.Riviera.ApiMediaStream.Height">Height</h4>
-  <div class="markdown level1 summary"><p>Gets the height of the api media stream</p>
+  <div class="markdown level1 summary"><p>Height of the video frame, in pixels. Zero for audio streams.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -482,7 +494,7 @@ present.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaStream_Index_" data-uid="Dropbox.Api.Riviera.ApiMediaStream.Index*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaStream_Index" data-uid="Dropbox.Api.Riviera.ApiMediaStream.Index">Index</h4>
-  <div class="markdown level1 summary"><p>Gets the index of the api media stream</p>
+  <div class="markdown level1 summary"><p>Zero-based index of the stream within the container.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -538,7 +550,8 @@ present.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaStream_Rotation_" data-uid="Dropbox.Api.Riviera.ApiMediaStream.Rotation*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaStream_Rotation" data-uid="Dropbox.Api.Riviera.ApiMediaStream.Rotation">Rotation</h4>
-  <div class="markdown level1 summary"><p>Gets the rotation of the api media stream</p>
+  <div class="markdown level1 summary"><p>Rotation to apply on playback, in degrees, as recorded in the stream
+metadata. Zero for audio streams and for video that needs no rotation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -566,7 +579,8 @@ present.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaStream_SampleRateS_" data-uid="Dropbox.Api.Riviera.ApiMediaStream.SampleRateS*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaStream_SampleRateS" data-uid="Dropbox.Api.Riviera.ApiMediaStream.SampleRateS">SampleRateS</h4>
-  <div class="markdown level1 summary"><p>Gets the sample rate s of the api media stream</p>
+  <div class="markdown level1 summary"><p>Sample rate of the audio stream, in samples per second. Zero for video
+streams.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -594,7 +608,7 @@ present.</p>
   </span>
   <a id="Dropbox_Api_Riviera_ApiMediaStream_Width_" data-uid="Dropbox.Api.Riviera.ApiMediaStream.Width*"></a>
   <h4 id="Dropbox_Api_Riviera_ApiMediaStream_Width" data-uid="Dropbox.Api.Riviera.ApiMediaStream.Width">Width</h4>
-  <div class="markdown level1 summary"><p>Video-specific fields (zero / empty for audio streams).</p>
+  <div class="markdown level1 summary"><p>Width of the video frame, in pixels. Zero for audio streams.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

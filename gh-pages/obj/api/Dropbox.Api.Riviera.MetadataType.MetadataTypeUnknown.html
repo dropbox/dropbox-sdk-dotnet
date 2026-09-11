@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class MetadataType.MetadataTypeUnknown | Dropbox .NET SDK API Reference ">
     
-    <meta name="description" content="The metadata type unknown object">
+    <meta name="description" content="No metadata kind applies to the file, so no variant of  is populated. Riviera only produces metadata for the formats listed on  ; a request for any other file normally fails with  rather than completing with this value. An app that does receive it should treat the file as having no extractable metadata; retrying will not change the outcome.">
       <link rel="shortcut icon" href="../../../favicon.ico">
       <link rel="stylesheet" href="../../../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../../../styles/docfx.css">
@@ -71,7 +71,11 @@
 
 
   <h1 id="Dropbox_Api_Riviera_MetadataType_MetadataTypeUnknown" data-uid="Dropbox.Api.Riviera.MetadataType.MetadataTypeUnknown" class="text-break">Class MetadataType.MetadataTypeUnknown</h1>
-  <div class="markdown level0 summary"><p>The metadata type unknown object</p>
+  <div class="markdown level0 summary"><p>No metadata kind applies to the file, so no variant of <a class="xref" href="Dropbox.Api.Riviera.GetMetadataResult.html#Dropbox_Api_Riviera_GetMetadataResult_Metadata">Metadata</a> is populated. Riviera only
+produces metadata for the formats listed on <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.html#Dropbox_Api_Riviera_Routes_RivieraAppRoutes_GetMetadataAsyncAsync_Dropbox_Api_Riviera_GetMetadataArgs_">GetMetadataAsyncAsync(GetMetadataArgs)</a> <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.html#Dropbox_Api_Riviera_Routes_RivieraUserRoutes_GetMetadataAsyncAsync_Dropbox_Api_Riviera_GetMetadataArgs_">GetMetadataAsyncAsync(GetMetadataArgs)</a>; a
+request for any other file normally fails with <a class="xref" href="Dropbox.Api.Riviera.MetadataExtractionApiV2Error.UserError.html">MetadataExtractionApiV2Error.UserError</a> rather than
+completing with this value. An app that does receive it should treat the file as
+having no extractable metadata; retrying will not change the outcome.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
