@@ -116,13 +116,13 @@
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesAppRoutes.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Files_Routes_FilesAppRoutes_BeginGetThumbnailV2_" data-uid="Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2*"></a>
-  <h4 id="Dropbox_Api_Files_Routes_FilesAppRoutes_BeginGetThumbnailV2_Dropbox_Api_Files_PathOrLink_Dropbox_Api_Files_ThumbnailFormat_Dropbox_Api_Files_ThumbnailSize_Dropbox_Api_Files_ThumbnailMode_Dropbox_Api_Files_ThumbnailQuality_System_Nullable_System_Boolean__System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,Dropbox.Api.Files.ThumbnailQuality,System.Nullable{System.Boolean},System.AsyncCallback,System.Object)">BeginGetThumbnailV2(PathOrLink, ThumbnailFormat, ThumbnailSize, ThumbnailMode, ThumbnailQuality, bool?, AsyncCallback, object)</h4>
+  <h4 id="Dropbox_Api_Files_Routes_FilesAppRoutes_BeginGetThumbnailV2_Dropbox_Api_Files_PathOrLink_Dropbox_Api_Files_ThumbnailFormat_Dropbox_Api_Files_ThumbnailSize_Dropbox_Api_Files_ThumbnailMode_Dropbox_Api_Files_ThumbnailQuality_System_Nullable_System_Boolean__System_Boolean_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,Dropbox.Api.Files.ThumbnailQuality,System.Nullable{System.Boolean},System.Boolean,System.AsyncCallback,System.Object)">BeginGetThumbnailV2(PathOrLink, ThumbnailFormat, ThumbnailSize, ThumbnailMode, ThumbnailQuality, bool?, bool, AsyncCallback, object)</h4>
   <div class="markdown level1 summary"><p>Begins an asynchronous send to the get thumbnail route.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGetThumbnailV2(PathOrLink resource, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null, ThumbnailQuality quality = null, bool? excludeMediaInfo = null, AsyncCallback callback = null, object callbackState = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGetThumbnailV2(PathOrLink resource, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null, ThumbnailQuality quality = null, bool? excludeMediaInfo = null, bool preserveTransparency = false, AsyncCallback callback = null, object callbackState = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -177,6 +177,14 @@ thumbnail image.</p>
 this flag is true, <a class="xref" href="Dropbox.Api.Files.FileMetadata.html#Dropbox_Api_Files_FileMetadata_MediaInfo">MediaInfo</a> is not
 populated. This improves latency for use cases where <code>media_info</code> is not
 needed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">preserveTransparency</span></td>
+        <td><p>Whether to preserve the original image's
+transparency in the thumbnail. This is supported only when the output format is PNG
+or WebP. Requests that set this flag with JPEG output return an error.</p>
 </td>
       </tr>
       <tr>
@@ -796,7 +804,7 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.Fi
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesAppRoutes.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Files_Routes_FilesAppRoutes_GetThumbnailV2Async_" data-uid="Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async*"></a>
-  <h4 id="Dropbox_Api_Files_Routes_FilesAppRoutes_GetThumbnailV2Async_Dropbox_Api_Files_PathOrLink_Dropbox_Api_Files_ThumbnailFormat_Dropbox_Api_Files_ThumbnailSize_Dropbox_Api_Files_ThumbnailMode_Dropbox_Api_Files_ThumbnailQuality_System_Nullable_System_Boolean__" data-uid="Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,Dropbox.Api.Files.ThumbnailQuality,System.Nullable{System.Boolean})">GetThumbnailV2Async(PathOrLink, ThumbnailFormat, ThumbnailSize, ThumbnailMode, ThumbnailQuality, bool?)</h4>
+  <h4 id="Dropbox_Api_Files_Routes_FilesAppRoutes_GetThumbnailV2Async_Dropbox_Api_Files_PathOrLink_Dropbox_Api_Files_ThumbnailFormat_Dropbox_Api_Files_ThumbnailSize_Dropbox_Api_Files_ThumbnailMode_Dropbox_Api_Files_ThumbnailQuality_System_Nullable_System_Boolean__System_Boolean_" data-uid="Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,Dropbox.Api.Files.ThumbnailQuality,System.Nullable{System.Boolean},System.Boolean)">GetThumbnailV2Async(PathOrLink, ThumbnailFormat, ThumbnailSize, ThumbnailMode, ThumbnailQuality, bool?, bool)</h4>
   <div class="markdown level1 summary"><p>Get a thumbnail for an image. This method currently supports files with the
 following file extensions: jpg, jpeg, png, tiff, tif, gif, webp, ppm and bmp.
 Photos that are larger than 20MB in size won't be converted to a thumbnail.</p>
@@ -804,7 +812,7 @@ Photos that are larger than 20MB in size won't be converted to a thumbnail.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IDownloadResponse&lt;PreviewResult&gt;&gt; GetThumbnailV2Async(PathOrLink resource, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null, ThumbnailQuality quality = null, bool? excludeMediaInfo = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IDownloadResponse&lt;PreviewResult&gt;&gt; GetThumbnailV2Async(PathOrLink resource, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null, ThumbnailQuality quality = null, bool? excludeMediaInfo = null, bool preserveTransparency = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -859,6 +867,14 @@ thumbnail image.</p>
 this flag is true, <a class="xref" href="Dropbox.Api.Files.FileMetadata.html#Dropbox_Api_Files_FileMetadata_MediaInfo">MediaInfo</a> is not
 populated. This improves latency for use cases where <code>media_info</code> is not
 needed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">preserveTransparency</span></td>
+        <td><p>Whether to preserve the original image's
+transparency in the thumbnail. This is supported only when the output format is PNG
+or WebP. Requests that set this flag with JPEG output return an error.</p>
 </td>
       </tr>
     </tbody>
