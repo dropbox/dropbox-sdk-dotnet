@@ -44,15 +44,12 @@ namespace Dropbox.Api.Sharing
         /// want to give new members.</param>
         /// <param name="addMessageAsComment">If the custom message should be added as a
         /// comment on the file. Only meant for Paper files.</param>
-        /// <param name="fpSealedResult">Field is only returned for "internal" callers. The
-        /// FingerprintJS Sealed Client Result value</param>
         public AddFileMemberArgs(string file,
                                  col.IEnumerable<MemberSelector> members,
                                  string customMessage = null,
                                  bool quiet = false,
                                  AccessLevel accessLevel = null,
-                                 bool addMessageAsComment = false,
-                                 string fpSealedResult = null)
+                                 bool addMessageAsComment = false)
         {
             if (file == null)
             {
@@ -80,7 +77,6 @@ namespace Dropbox.Api.Sharing
             this.Quiet = quiet;
             this.AccessLevel = accessLevel;
             this.AddMessageAsComment = addMessageAsComment;
-            this.FpSealedResult = fpSealedResult;
         }
 
         /// <summary>
@@ -131,12 +127,6 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public bool AddMessageAsComment { get; protected set; }
 
-        /// <summary>
-        /// <para>Field is only returned for "internal" callers. The FingerprintJS Sealed
-        /// Client Result value</para>
-        /// </summary>
-        public string FpSealedResult { get; protected set; }
-
         #region Encoder class
 
         /// <summary>
@@ -163,10 +153,6 @@ namespace Dropbox.Api.Sharing
                     WriteProperty("access_level", value.AccessLevel, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
                 }
                 WriteProperty("add_message_as_comment", value.AddMessageAsComment, writer, enc.BooleanEncoder.Instance);
-                if (value.FpSealedResult != null)
-                {
-                    WriteProperty("fp_sealed_result", value.FpSealedResult, writer, enc.StringEncoder.Instance);
-                }
             }
         }
 
@@ -216,9 +202,6 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "add_message_as_comment":
                         value.AddMessageAsComment = enc.BooleanDecoder.Instance.Decode(reader);
-                        break;
-                    case "fp_sealed_result":
-                        value.FpSealedResult = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -37,8 +37,6 @@ namespace Dropbox.Api.Files
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
-        /// <param name="quality">Field is only returned for "internal" callers. Quality of the
-        /// thumbnail image.</param>
         /// <param name="excludeMediaInfo">Normally, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
         /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
@@ -48,7 +46,6 @@ namespace Dropbox.Api.Files
                             ThumbnailFormat format = null,
                             ThumbnailSize size = null,
                             ThumbnailMode mode = null,
-                            ThumbnailQuality quality = null,
                             bool? excludeMediaInfo = null)
         {
             if (path == null)
@@ -72,15 +69,10 @@ namespace Dropbox.Api.Files
             {
                 mode = global::Dropbox.Api.Files.ThumbnailMode.Strict.Instance;
             }
-            if (quality == null)
-            {
-                quality = global::Dropbox.Api.Files.ThumbnailQuality.Quality80.Instance;
-            }
             this.Path = path;
             this.Format = format;
             this.Size = size;
             this.Mode = mode;
-            this.Quality = quality;
             this.ExcludeMediaInfo = excludeMediaInfo;
         }
 
@@ -95,7 +87,6 @@ namespace Dropbox.Api.Files
             this.Format = global::Dropbox.Api.Files.ThumbnailFormat.Jpeg.Instance;
             this.Size = global::Dropbox.Api.Files.ThumbnailSize.W64h64.Instance;
             this.Mode = global::Dropbox.Api.Files.ThumbnailMode.Strict.Instance;
-            this.Quality = global::Dropbox.Api.Files.ThumbnailQuality.Quality80.Instance;
         }
 
         /// <summary>
@@ -119,12 +110,6 @@ namespace Dropbox.Api.Files
         /// <para>How to resize and crop the image to achieve the desired size.</para>
         /// </summary>
         public ThumbnailMode Mode { get; protected set; }
-
-        /// <summary>
-        /// <para>Field is only returned for "internal" callers. Quality of the thumbnail
-        /// image.</para>
-        /// </summary>
-        public ThumbnailQuality Quality { get; protected set; }
 
         /// <summary>
         /// <para>Normally, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for
@@ -152,7 +137,6 @@ namespace Dropbox.Api.Files
                 WriteProperty("format", value.Format, writer, global::Dropbox.Api.Files.ThumbnailFormat.Encoder);
                 WriteProperty("size", value.Size, writer, global::Dropbox.Api.Files.ThumbnailSize.Encoder);
                 WriteProperty("mode", value.Mode, writer, global::Dropbox.Api.Files.ThumbnailMode.Encoder);
-                WriteProperty("quality", value.Quality, writer, global::Dropbox.Api.Files.ThumbnailQuality.Encoder);
                 if (value.ExcludeMediaInfo != null)
                 {
                     WriteProperty("exclude_media_info", value.ExcludeMediaInfo.Value, writer, enc.BooleanEncoder.Instance);
@@ -200,9 +184,6 @@ namespace Dropbox.Api.Files
                         break;
                     case "mode":
                         value.Mode = global::Dropbox.Api.Files.ThumbnailMode.Decoder.Decode(reader);
-                        break;
-                    case "quality":
-                        value.Quality = global::Dropbox.Api.Files.ThumbnailQuality.Decoder.Decode(reader);
                         break;
                     case "exclude_media_info":
                         value.ExcludeMediaInfo = enc.BooleanDecoder.Instance.Decode(reader);
