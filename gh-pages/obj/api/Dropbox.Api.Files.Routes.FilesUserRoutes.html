@@ -4048,13 +4048,13 @@ send requests.</p>
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesUserRoutes.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Files_Routes_FilesUserRoutes_BeginGetThumbnail_" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.BeginGetThumbnail*"></a>
-  <h4 id="Dropbox_Api_Files_Routes_FilesUserRoutes_BeginGetThumbnail_System_String_Dropbox_Api_Files_ThumbnailFormat_Dropbox_Api_Files_ThumbnailSize_Dropbox_Api_Files_ThumbnailMode_Dropbox_Api_Files_ThumbnailQuality_System_Nullable_System_Boolean__System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.BeginGetThumbnail(System.String,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,Dropbox.Api.Files.ThumbnailQuality,System.Nullable{System.Boolean},System.AsyncCallback,System.Object)">BeginGetThumbnail(string, ThumbnailFormat, ThumbnailSize, ThumbnailMode, ThumbnailQuality, bool?, AsyncCallback, object)</h4>
+  <h4 id="Dropbox_Api_Files_Routes_FilesUserRoutes_BeginGetThumbnail_System_String_Dropbox_Api_Files_ThumbnailFormat_Dropbox_Api_Files_ThumbnailSize_Dropbox_Api_Files_ThumbnailMode_System_Nullable_System_Boolean__System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.BeginGetThumbnail(System.String,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,System.Nullable{System.Boolean},System.AsyncCallback,System.Object)">BeginGetThumbnail(string, ThumbnailFormat, ThumbnailSize, ThumbnailMode, bool?, AsyncCallback, object)</h4>
   <div class="markdown level1 summary"><p>Begins an asynchronous send to the get thumbnail route.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGetThumbnail(string path, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null, ThumbnailQuality quality = null, bool? excludeMediaInfo = null, AsyncCallback callback = null, object callbackState = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGetThumbnail(string path, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null, bool? excludeMediaInfo = null, AsyncCallback callback = null, object callbackState = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4091,13 +4091,6 @@ screenshots and digital arts, and web for compression.</p>
         <td><span class="parametername">mode</span></td>
         <td><p>How to resize and crop the image to achieve the desired
 size.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Dropbox.Api.Files.ThumbnailQuality.html">ThumbnailQuality</a></td>
-        <td><span class="parametername">quality</span></td>
-        <td><p>Field is only returned for &quot;internal&quot; callers. Quality of the
-thumbnail image.</p>
 </td>
       </tr>
       <tr>
@@ -4268,13 +4261,13 @@ from other send requests.</p>
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesUserRoutes.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Files_Routes_FilesUserRoutes_BeginGetThumbnailV2_" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.BeginGetThumbnailV2*"></a>
-  <h4 id="Dropbox_Api_Files_Routes_FilesUserRoutes_BeginGetThumbnailV2_Dropbox_Api_Files_PathOrLink_Dropbox_Api_Files_ThumbnailFormat_Dropbox_Api_Files_ThumbnailSize_Dropbox_Api_Files_ThumbnailMode_Dropbox_Api_Files_ThumbnailQuality_System_Nullable_System_Boolean__System_Boolean_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.BeginGetThumbnailV2(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,Dropbox.Api.Files.ThumbnailQuality,System.Nullable{System.Boolean},System.Boolean,System.AsyncCallback,System.Object)">BeginGetThumbnailV2(PathOrLink, ThumbnailFormat, ThumbnailSize, ThumbnailMode, ThumbnailQuality, bool?, bool, AsyncCallback, object)</h4>
+  <h4 id="Dropbox_Api_Files_Routes_FilesUserRoutes_BeginGetThumbnailV2_Dropbox_Api_Files_PathOrLink_Dropbox_Api_Files_ThumbnailFormat_Dropbox_Api_Files_ThumbnailSize_Dropbox_Api_Files_ThumbnailMode_System_Nullable_System_Boolean__System_Boolean_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.BeginGetThumbnailV2(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,System.Nullable{System.Boolean},System.Boolean,System.AsyncCallback,System.Object)">BeginGetThumbnailV2(PathOrLink, ThumbnailFormat, ThumbnailSize, ThumbnailMode, bool?, bool, AsyncCallback, object)</h4>
   <div class="markdown level1 summary"><p>Begins an asynchronous send to the get thumbnail route.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGetThumbnailV2(PathOrLink resource, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null, ThumbnailQuality quality = null, bool? excludeMediaInfo = null, bool preserveTransparency = false, AsyncCallback callback = null, object callbackState = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginGetThumbnailV2(PathOrLink resource, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null, bool? excludeMediaInfo = null, bool preserveTransparency = false, AsyncCallback callback = null, object callbackState = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -4313,13 +4306,6 @@ screenshots and digital arts, and web for compression.</p>
         <td><span class="parametername">mode</span></td>
         <td><p>How to resize and crop the image to achieve the desired
 size.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Dropbox.Api.Files.ThumbnailQuality.html">ThumbnailQuality</a></td>
-        <td><span class="parametername">quality</span></td>
-        <td><p>Field is only returned for &quot;internal&quot; callers. Quality of the
-thumbnail image.</p>
 </td>
       </tr>
       <tr>
@@ -17199,7 +17185,7 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.Fi
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesUserRoutes.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Files_Routes_FilesUserRoutes_GetThumbnailAsync_" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.GetThumbnailAsync*"></a>
-  <h4 id="Dropbox_Api_Files_Routes_FilesUserRoutes_GetThumbnailAsync_System_String_Dropbox_Api_Files_ThumbnailFormat_Dropbox_Api_Files_ThumbnailSize_Dropbox_Api_Files_ThumbnailMode_Dropbox_Api_Files_ThumbnailQuality_System_Nullable_System_Boolean__" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.GetThumbnailAsync(System.String,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,Dropbox.Api.Files.ThumbnailQuality,System.Nullable{System.Boolean})">GetThumbnailAsync(string, ThumbnailFormat, ThumbnailSize, ThumbnailMode, ThumbnailQuality, bool?)</h4>
+  <h4 id="Dropbox_Api_Files_Routes_FilesUserRoutes_GetThumbnailAsync_System_String_Dropbox_Api_Files_ThumbnailFormat_Dropbox_Api_Files_ThumbnailSize_Dropbox_Api_Files_ThumbnailMode_System_Nullable_System_Boolean__" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.GetThumbnailAsync(System.String,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,System.Nullable{System.Boolean})">GetThumbnailAsync(string, ThumbnailFormat, ThumbnailSize, ThumbnailMode, bool?)</h4>
   <div class="markdown level1 summary"><p>Get a thumbnail for an image. This method currently supports files with the
 following file extensions: jpg, jpeg, png, tiff, tif, gif, webp, ppm and bmp.
 Photos that are larger than 20MB in size won't be converted to a thumbnail.</p>
@@ -17207,7 +17193,7 @@ Photos that are larger than 20MB in size won't be converted to a thumbnail.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IDownloadResponse&lt;FileMetadata&gt;&gt; GetThumbnailAsync(string path, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null, ThumbnailQuality quality = null, bool? excludeMediaInfo = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IDownloadResponse&lt;FileMetadata&gt;&gt; GetThumbnailAsync(string path, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null, bool? excludeMediaInfo = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -17244,13 +17230,6 @@ screenshots and digital arts, and web for compression.</p>
         <td><span class="parametername">mode</span></td>
         <td><p>How to resize and crop the image to achieve the desired
 size.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Dropbox.Api.Files.ThumbnailQuality.html">ThumbnailQuality</a></td>
-        <td><span class="parametername">quality</span></td>
-        <td><p>Field is only returned for &quot;internal&quot; callers. Quality of the
-thumbnail image.</p>
 </td>
       </tr>
       <tr>
@@ -17439,7 +17418,7 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.Fi
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesUserRoutes.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Files_Routes_FilesUserRoutes_GetThumbnailV2Async_" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.GetThumbnailV2Async*"></a>
-  <h4 id="Dropbox_Api_Files_Routes_FilesUserRoutes_GetThumbnailV2Async_Dropbox_Api_Files_PathOrLink_Dropbox_Api_Files_ThumbnailFormat_Dropbox_Api_Files_ThumbnailSize_Dropbox_Api_Files_ThumbnailMode_Dropbox_Api_Files_ThumbnailQuality_System_Nullable_System_Boolean__System_Boolean_" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.GetThumbnailV2Async(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,Dropbox.Api.Files.ThumbnailQuality,System.Nullable{System.Boolean},System.Boolean)">GetThumbnailV2Async(PathOrLink, ThumbnailFormat, ThumbnailSize, ThumbnailMode, ThumbnailQuality, bool?, bool)</h4>
+  <h4 id="Dropbox_Api_Files_Routes_FilesUserRoutes_GetThumbnailV2Async_Dropbox_Api_Files_PathOrLink_Dropbox_Api_Files_ThumbnailFormat_Dropbox_Api_Files_ThumbnailSize_Dropbox_Api_Files_ThumbnailMode_System_Nullable_System_Boolean__System_Boolean_" data-uid="Dropbox.Api.Files.Routes.FilesUserRoutes.GetThumbnailV2Async(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,System.Nullable{System.Boolean},System.Boolean)">GetThumbnailV2Async(PathOrLink, ThumbnailFormat, ThumbnailSize, ThumbnailMode, bool?, bool)</h4>
   <div class="markdown level1 summary"><p>Get a thumbnail for an image. This method currently supports files with the
 following file extensions: jpg, jpeg, png, tiff, tif, gif, webp, ppm and bmp.
 Photos that are larger than 20MB in size won't be converted to a thumbnail.</p>
@@ -17447,7 +17426,7 @@ Photos that are larger than 20MB in size won't be converted to a thumbnail.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IDownloadResponse&lt;PreviewResult&gt;&gt; GetThumbnailV2Async(PathOrLink resource, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null, ThumbnailQuality quality = null, bool? excludeMediaInfo = null, bool preserveTransparency = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IDownloadResponse&lt;PreviewResult&gt;&gt; GetThumbnailV2Async(PathOrLink resource, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null, bool? excludeMediaInfo = null, bool preserveTransparency = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -17486,13 +17465,6 @@ screenshots and digital arts, and web for compression.</p>
         <td><span class="parametername">mode</span></td>
         <td><p>How to resize and crop the image to achieve the desired
 size.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Dropbox.Api.Files.ThumbnailQuality.html">ThumbnailQuality</a></td>
-        <td><span class="parametername">quality</span></td>
-        <td><p>Field is only returned for &quot;internal&quot; callers. Quality of the
-thumbnail image.</p>
 </td>
       </tr>
       <tr>

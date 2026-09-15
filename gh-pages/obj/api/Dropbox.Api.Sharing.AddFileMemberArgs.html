@@ -116,14 +116,14 @@
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Sharing_AddFileMemberArgs__ctor_" data-uid="Dropbox.Api.Sharing.AddFileMemberArgs.#ctor*"></a>
-  <h4 id="Dropbox_Api_Sharing_AddFileMemberArgs__ctor_System_String_System_Collections_Generic_IEnumerable_Dropbox_Api_Sharing_MemberSelector__System_String_System_Boolean_Dropbox_Api_Sharing_AccessLevel_System_Boolean_System_String_" data-uid="Dropbox.Api.Sharing.AddFileMemberArgs.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberSelector},System.String,System.Boolean,Dropbox.Api.Sharing.AccessLevel,System.Boolean,System.String)">AddFileMemberArgs(string, IEnumerable&lt;MemberSelector&gt;, string, bool, AccessLevel, bool, string)</h4>
+  <h4 id="Dropbox_Api_Sharing_AddFileMemberArgs__ctor_System_String_System_Collections_Generic_IEnumerable_Dropbox_Api_Sharing_MemberSelector__System_String_System_Boolean_Dropbox_Api_Sharing_AccessLevel_System_Boolean_" data-uid="Dropbox.Api.Sharing.AddFileMemberArgs.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberSelector},System.String,System.Boolean,Dropbox.Api.Sharing.AccessLevel,System.Boolean)">AddFileMemberArgs(string, IEnumerable&lt;MemberSelector&gt;, string, bool, AccessLevel, bool)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Sharing.AddFileMemberArgs.html">AddFileMemberArgs</a>
 class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AddFileMemberArgs(string file, IEnumerable&lt;MemberSelector&gt; members, string customMessage = null, bool quiet = false, AccessLevel accessLevel = null, bool addMessageAsComment = false, string fpSealedResult = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AddFileMemberArgs(string file, IEnumerable&lt;MemberSelector&gt; members, string customMessage = null, bool quiet = false, AccessLevel accessLevel = null, bool addMessageAsComment = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -175,13 +175,6 @@ want to give new members.</p>
         <td><span class="parametername">addMessageAsComment</span></td>
         <td><p>If the custom message should be added as a
 comment on the file. Only meant for Paper files.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">fpSealedResult</span></td>
-        <td><p>Field is only returned for &quot;internal&quot; callers. The
-FingerprintJS Sealed Client Result value</p>
 </td>
       </tr>
     </tbody>
@@ -286,35 +279,6 @@ for Paper files.</p>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string File { get; protected set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs">View Source</a>
-  </span>
-  <a id="Dropbox_Api_Sharing_AddFileMemberArgs_FpSealedResult_" data-uid="Dropbox.Api.Sharing.AddFileMemberArgs.FpSealedResult*"></a>
-  <h4 id="Dropbox_Api_Sharing_AddFileMemberArgs_FpSealedResult" data-uid="Dropbox.Api.Sharing.AddFileMemberArgs.FpSealedResult">FpSealedResult</h4>
-  <div class="markdown level1 summary"><p>Field is only returned for "internal" callers. The FingerprintJS Sealed
-Client Result value</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string FpSealedResult { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">

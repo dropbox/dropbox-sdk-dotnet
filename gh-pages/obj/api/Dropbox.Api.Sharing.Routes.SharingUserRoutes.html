@@ -181,13 +181,13 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.Sh
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserRoutes.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Sharing_Routes_SharingUserRoutes_AddFileMemberAsync_" data-uid="Dropbox.Api.Sharing.Routes.SharingUserRoutes.AddFileMemberAsync*"></a>
-  <h4 id="Dropbox_Api_Sharing_Routes_SharingUserRoutes_AddFileMemberAsync_System_String_System_Collections_Generic_IEnumerable_Dropbox_Api_Sharing_MemberSelector__System_String_System_Boolean_Dropbox_Api_Sharing_AccessLevel_System_Boolean_System_String_" data-uid="Dropbox.Api.Sharing.Routes.SharingUserRoutes.AddFileMemberAsync(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberSelector},System.String,System.Boolean,Dropbox.Api.Sharing.AccessLevel,System.Boolean,System.String)">AddFileMemberAsync(string, IEnumerable&lt;MemberSelector&gt;, string, bool, AccessLevel, bool, string)</h4>
+  <h4 id="Dropbox_Api_Sharing_Routes_SharingUserRoutes_AddFileMemberAsync_System_String_System_Collections_Generic_IEnumerable_Dropbox_Api_Sharing_MemberSelector__System_String_System_Boolean_Dropbox_Api_Sharing_AccessLevel_System_Boolean_" data-uid="Dropbox.Api.Sharing.Routes.SharingUserRoutes.AddFileMemberAsync(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberSelector},System.String,System.Boolean,Dropbox.Api.Sharing.AccessLevel,System.Boolean)">AddFileMemberAsync(string, IEnumerable&lt;MemberSelector&gt;, string, bool, AccessLevel, bool)</h4>
   <div class="markdown level1 summary"><p>Adds specified members to a file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;FileMemberActionResult&gt;&gt; AddFileMemberAsync(string file, IEnumerable&lt;MemberSelector&gt; members, string customMessage = null, bool quiet = false, AccessLevel accessLevel = null, bool addMessageAsComment = false, string fpSealedResult = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;FileMemberActionResult&gt;&gt; AddFileMemberAsync(string file, IEnumerable&lt;MemberSelector&gt; members, string customMessage = null, bool quiet = false, AccessLevel accessLevel = null, bool addMessageAsComment = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -239,13 +239,6 @@ want to give new members.</p>
         <td><span class="parametername">addMessageAsComment</span></td>
         <td><p>If the custom message should be added as a
 comment on the file. Only meant for Paper files.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">fpSealedResult</span></td>
-        <td><p>Field is only returned for &quot;internal&quot; callers. The
-FingerprintJS Sealed Client Result value</p>
 </td>
       </tr>
     </tbody>
@@ -356,7 +349,7 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.Sh
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserRoutes.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Sharing_Routes_SharingUserRoutes_AddFolderMemberAsync_" data-uid="Dropbox.Api.Sharing.Routes.SharingUserRoutes.AddFolderMemberAsync*"></a>
-  <h4 id="Dropbox_Api_Sharing_Routes_SharingUserRoutes_AddFolderMemberAsync_System_String_System_Collections_Generic_IEnumerable_Dropbox_Api_Sharing_AddMember__System_Boolean_System_String_System_String_" data-uid="Dropbox.Api.Sharing.Routes.SharingUserRoutes.AddFolderMemberAsync(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.AddMember},System.Boolean,System.String,System.String)">AddFolderMemberAsync(string, IEnumerable&lt;AddMember&gt;, bool, string, string)</h4>
+  <h4 id="Dropbox_Api_Sharing_Routes_SharingUserRoutes_AddFolderMemberAsync_System_String_System_Collections_Generic_IEnumerable_Dropbox_Api_Sharing_AddMember__System_Boolean_System_String_" data-uid="Dropbox.Api.Sharing.Routes.SharingUserRoutes.AddFolderMemberAsync(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.AddMember},System.Boolean,System.String)">AddFolderMemberAsync(string, IEnumerable&lt;AddMember&gt;, bool, string)</h4>
   <div class="markdown level1 summary"><p>Allows an owner or editor (if the ACL update policy allows) of a shared
 folder to add another member. For the new member to get access to all the
 functionality for this folder, you will need to call <a class="xref" href="Dropbox.Api.Sharing.Routes.SharingUserRoutes.html#Dropbox_Api_Sharing_Routes_SharingUserRoutes_MountFolderAsync_Dropbox_Api_Sharing_MountFolderArg_">MountFolderAsync(MountFolderArg)</a> on their
@@ -365,7 +358,7 @@ behalf.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task AddFolderMemberAsync(string sharedFolderId, IEnumerable&lt;AddMember&gt; members, bool quiet = false, string customMessage = null, string fpSealedResult = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task AddFolderMemberAsync(string sharedFolderId, IEnumerable&lt;AddMember&gt; members, bool quiet = false, string customMessage = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -402,13 +395,6 @@ notifications of their invite.</p>
         <td><span class="parametername">customMessage</span></td>
         <td><p>Optional message to display to added members in their
 invitation.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">fpSealedResult</span></td>
-        <td><p>Field is only returned for &quot;internal&quot; callers. The
-FingerprintJS Sealed Client Result value</p>
 </td>
       </tr>
     </tbody>
@@ -512,13 +498,13 @@ send requests.</p>
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserRoutes.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Sharing_Routes_SharingUserRoutes_BeginAddFileMember_" data-uid="Dropbox.Api.Sharing.Routes.SharingUserRoutes.BeginAddFileMember*"></a>
-  <h4 id="Dropbox_Api_Sharing_Routes_SharingUserRoutes_BeginAddFileMember_System_String_System_Collections_Generic_IEnumerable_Dropbox_Api_Sharing_MemberSelector__System_String_System_Boolean_Dropbox_Api_Sharing_AccessLevel_System_Boolean_System_String_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Sharing.Routes.SharingUserRoutes.BeginAddFileMember(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberSelector},System.String,System.Boolean,Dropbox.Api.Sharing.AccessLevel,System.Boolean,System.String,System.AsyncCallback,System.Object)">BeginAddFileMember(string, IEnumerable&lt;MemberSelector&gt;, string, bool, AccessLevel, bool, string, AsyncCallback, object)</h4>
+  <h4 id="Dropbox_Api_Sharing_Routes_SharingUserRoutes_BeginAddFileMember_System_String_System_Collections_Generic_IEnumerable_Dropbox_Api_Sharing_MemberSelector__System_String_System_Boolean_Dropbox_Api_Sharing_AccessLevel_System_Boolean_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Sharing.Routes.SharingUserRoutes.BeginAddFileMember(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberSelector},System.String,System.Boolean,Dropbox.Api.Sharing.AccessLevel,System.Boolean,System.AsyncCallback,System.Object)">BeginAddFileMember(string, IEnumerable&lt;MemberSelector&gt;, string, bool, AccessLevel, bool, AsyncCallback, object)</h4>
   <div class="markdown level1 summary"><p>Begins an asynchronous send to the add file member route.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncResult BeginAddFileMember(string file, IEnumerable&lt;MemberSelector&gt; members, string customMessage = null, bool quiet = false, AccessLevel accessLevel = null, bool addMessageAsComment = false, string fpSealedResult = null, AsyncCallback callback = null, object callbackState = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginAddFileMember(string file, IEnumerable&lt;MemberSelector&gt; members, string customMessage = null, bool quiet = false, AccessLevel accessLevel = null, bool addMessageAsComment = false, AsyncCallback callback = null, object callbackState = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -570,13 +556,6 @@ want to give new members.</p>
         <td><span class="parametername">addMessageAsComment</span></td>
         <td><p>If the custom message should be added as a
 comment on the file. Only meant for Paper files.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">fpSealedResult</span></td>
-        <td><p>Field is only returned for &quot;internal&quot; callers. The
-FingerprintJS Sealed Client Result value</p>
 </td>
       </tr>
       <tr>
@@ -677,13 +656,13 @@ send requests.</p>
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserRoutes.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Sharing_Routes_SharingUserRoutes_BeginAddFolderMember_" data-uid="Dropbox.Api.Sharing.Routes.SharingUserRoutes.BeginAddFolderMember*"></a>
-  <h4 id="Dropbox_Api_Sharing_Routes_SharingUserRoutes_BeginAddFolderMember_System_String_System_Collections_Generic_IEnumerable_Dropbox_Api_Sharing_AddMember__System_Boolean_System_String_System_String_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Sharing.Routes.SharingUserRoutes.BeginAddFolderMember(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.AddMember},System.Boolean,System.String,System.String,System.AsyncCallback,System.Object)">BeginAddFolderMember(string, IEnumerable&lt;AddMember&gt;, bool, string, string, AsyncCallback, object)</h4>
+  <h4 id="Dropbox_Api_Sharing_Routes_SharingUserRoutes_BeginAddFolderMember_System_String_System_Collections_Generic_IEnumerable_Dropbox_Api_Sharing_AddMember__System_Boolean_System_String_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Sharing.Routes.SharingUserRoutes.BeginAddFolderMember(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.AddMember},System.Boolean,System.String,System.AsyncCallback,System.Object)">BeginAddFolderMember(string, IEnumerable&lt;AddMember&gt;, bool, string, AsyncCallback, object)</h4>
   <div class="markdown level1 summary"><p>Begins an asynchronous send to the add folder member route.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncResult BeginAddFolderMember(string sharedFolderId, IEnumerable&lt;AddMember&gt; members, bool quiet = false, string customMessage = null, string fpSealedResult = null, AsyncCallback callback = null, object callbackState = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginAddFolderMember(string sharedFolderId, IEnumerable&lt;AddMember&gt; members, bool quiet = false, string customMessage = null, AsyncCallback callback = null, object callbackState = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -720,13 +699,6 @@ notifications of their invite.</p>
         <td><span class="parametername">customMessage</span></td>
         <td><p>Optional message to display to added members in their
 invitation.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">fpSealedResult</span></td>
-        <td><p>Field is only returned for &quot;internal&quot; callers. The
-FingerprintJS Sealed Client Result value</p>
 </td>
       </tr>
       <tr>
