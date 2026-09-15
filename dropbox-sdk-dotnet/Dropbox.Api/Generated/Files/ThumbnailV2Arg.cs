@@ -46,12 +46,16 @@ namespace Dropbox.Api.Files
         /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
         /// populated. This improves latency for use cases where `media_info` is not
         /// needed.</param>
+        /// <param name="preserveTransparency">Whether to preserve the original image's
+        /// transparency in the thumbnail. This is supported only when the output format is PNG
+        /// or WebP. Requests that set this flag with JPEG output return an error.</param>
         public ThumbnailV2Arg(PathOrLink resource,
                               ThumbnailFormat format = null,
                               ThumbnailSize size = null,
                               ThumbnailMode mode = null,
                               ThumbnailQuality quality = null,
-                              bool? excludeMediaInfo = null)
+                              bool? excludeMediaInfo = null,
+                              bool preserveTransparency = false)
         {
             if (resource == null)
             {
@@ -80,6 +84,7 @@ namespace Dropbox.Api.Files
             this.Mode = mode;
             this.Quality = quality;
             this.ExcludeMediaInfo = excludeMediaInfo;
+            this.PreserveTransparency = preserveTransparency;
         }
 
         /// <summary>
@@ -94,6 +99,7 @@ namespace Dropbox.Api.Files
             this.Size = global::Dropbox.Api.Files.ThumbnailSize.W64h64.Instance;
             this.Mode = global::Dropbox.Api.Files.ThumbnailMode.Strict.Instance;
             this.Quality = global::Dropbox.Api.Files.ThumbnailQuality.Quality80.Instance;
+            this.PreserveTransparency = false;
         }
 
         /// <summary>
@@ -134,6 +140,13 @@ namespace Dropbox.Api.Files
         /// </summary>
         public bool? ExcludeMediaInfo { get; protected set; }
 
+        /// <summary>
+        /// <para>Whether to preserve the original image's transparency in the thumbnail. This
+        /// is supported only when the output format is PNG or WebP. Requests that set this
+        /// flag with JPEG output return an error.</para>
+        /// </summary>
+        public bool PreserveTransparency { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -157,6 +170,7 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty("exclude_media_info", value.ExcludeMediaInfo.Value, writer, enc.BooleanEncoder.Instance);
                 }
+                WriteProperty("preserve_transparency", value.PreserveTransparency, writer, enc.BooleanEncoder.Instance);
             }
         }
 
@@ -206,6 +220,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "exclude_media_info":
                         value.ExcludeMediaInfo = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "preserve_transparency":
+                        value.PreserveTransparency = enc.BooleanDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

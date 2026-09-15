@@ -82,6 +82,9 @@ namespace Dropbox.Api.Files.Routes
         /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
         /// populated. This improves latency for use cases where `media_info` is not
         /// needed.</param>
+        /// <param name="preserveTransparency">Whether to preserve the original image's
+        /// transparency in the thumbnail. This is supported only when the output format is PNG
+        /// or WebP. Requests that set this flag with JPEG output return an error.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -92,14 +95,16 @@ namespace Dropbox.Api.Files.Routes
                                                                                 ThumbnailSize size = null,
                                                                                 ThumbnailMode mode = null,
                                                                                 ThumbnailQuality quality = null,
-                                                                                bool? excludeMediaInfo = null)
+                                                                                bool? excludeMediaInfo = null,
+                                                                                bool preserveTransparency = false)
         {
             var thumbnailV2Arg = new ThumbnailV2Arg(resource,
                                                     format,
                                                     size,
                                                     mode,
                                                     quality,
-                                                    excludeMediaInfo);
+                                                    excludeMediaInfo,
+                                                    preserveTransparency);
 
             return this.GetThumbnailV2Async(thumbnailV2Arg);
         }
@@ -123,6 +128,9 @@ namespace Dropbox.Api.Files.Routes
         /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
         /// populated. This improves latency for use cases where `media_info` is not
         /// needed.</param>
+        /// <param name="preserveTransparency">Whether to preserve the original image's
+        /// transparency in the thumbnail. This is supported only when the output format is PNG
+        /// or WebP. Requests that set this flag with JPEG output return an error.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -134,6 +142,7 @@ namespace Dropbox.Api.Files.Routes
                                                     ThumbnailMode mode = null,
                                                     ThumbnailQuality quality = null,
                                                     bool? excludeMediaInfo = null,
+                                                    bool preserveTransparency = false,
                                                     sys.AsyncCallback callback = null,
                                                     object callbackState = null)
         {
@@ -142,7 +151,8 @@ namespace Dropbox.Api.Files.Routes
                                                     size,
                                                     mode,
                                                     quality,
-                                                    excludeMediaInfo);
+                                                    excludeMediaInfo,
+                                                    preserveTransparency);
 
             return this.BeginGetThumbnailV2(thumbnailV2Arg, callback, callbackState);
         }

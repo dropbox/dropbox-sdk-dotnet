@@ -190,6 +190,29 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// UnsupportedOutputFormat</para>
+        /// </summary>
+        public bool IsUnsupportedOutputFormat
+        {
+            get
+            {
+                return this is UnsupportedOutputFormat;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UnsupportedOutputFormat, or <c>null</c>.</para>
+        /// </summary>
+        public UnsupportedOutputFormat AsUnsupportedOutputFormat
+        {
+            get
+            {
+                return this as UnsupportedOutputFormat;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -267,6 +290,12 @@ namespace Dropbox.Api.Files
                     NotFound.Encoder.EncodeFields((NotFound)value, writer);
                     return;
                 }
+                if (value is UnsupportedOutputFormat)
+                {
+                    WriteProperty(".tag", "unsupported_output_format", writer, enc.StringEncoder.Instance);
+                    UnsupportedOutputFormat.Encoder.EncodeFields((UnsupportedOutputFormat)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -319,6 +348,8 @@ namespace Dropbox.Api.Files
                         return AccessDenied.Decoder.DecodeFields(reader);
                     case "not_found":
                         return NotFound.Decoder.DecodeFields(reader);
+                    case "unsupported_output_format":
+                        return UnsupportedOutputFormat.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -836,6 +867,77 @@ namespace Dropbox.Api.Files
                 protected override NotFound Create()
                 {
                     return NotFound.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Transparency preservation is supported only for PNG and WebP output.</para>
+        /// </summary>
+        public sealed class UnsupportedOutputFormat : ThumbnailV2Error
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UnsupportedOutputFormat> Encoder = new UnsupportedOutputFormatEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UnsupportedOutputFormat> Decoder = new UnsupportedOutputFormatDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UnsupportedOutputFormat" />
+            /// class.</para>
+            /// </summary>
+            private UnsupportedOutputFormat()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UnsupportedOutputFormat</para>
+            /// </summary>
+            public static readonly UnsupportedOutputFormat Instance = new UnsupportedOutputFormat();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UnsupportedOutputFormat" />.</para>
+            /// </summary>
+            private class UnsupportedOutputFormatEncoder : enc.StructEncoder<UnsupportedOutputFormat>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UnsupportedOutputFormat value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UnsupportedOutputFormat" />.</para>
+            /// </summary>
+            private class UnsupportedOutputFormatDecoder : enc.StructDecoder<UnsupportedOutputFormat>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UnsupportedOutputFormat"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UnsupportedOutputFormat Create()
+                {
+                    return UnsupportedOutputFormat.Instance;
                 }
 
             }
