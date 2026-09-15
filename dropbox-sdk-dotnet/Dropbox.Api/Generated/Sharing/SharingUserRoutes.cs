@@ -75,8 +75,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// want to give new members.</param>
         /// <param name="addMessageAsComment">If the custom message should be added as a
         /// comment on the file. Only meant for Paper files.</param>
-        /// <param name="fpSealedResult">Field is only returned for "internal" callers. The
-        /// FingerprintJS Sealed Client Result value</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
@@ -87,16 +85,14 @@ namespace Dropbox.Api.Sharing.Routes
                                                                            string customMessage = null,
                                                                            bool quiet = false,
                                                                            AccessLevel accessLevel = null,
-                                                                           bool addMessageAsComment = false,
-                                                                           string fpSealedResult = null)
+                                                                           bool addMessageAsComment = false)
         {
             var addFileMemberArgs = new AddFileMemberArgs(file,
                                                           members,
                                                           customMessage,
                                                           quiet,
                                                           accessLevel,
-                                                          addMessageAsComment,
-                                                          fpSealedResult);
+                                                          addMessageAsComment);
 
             return this.AddFileMemberAsync(addFileMemberArgs);
         }
@@ -116,8 +112,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// want to give new members.</param>
         /// <param name="addMessageAsComment">If the custom message should be added as a
         /// comment on the file. Only meant for Paper files.</param>
-        /// <param name="fpSealedResult">Field is only returned for "internal" callers. The
-        /// FingerprintJS Sealed Client Result value</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -129,7 +123,6 @@ namespace Dropbox.Api.Sharing.Routes
                                                    bool quiet = false,
                                                    AccessLevel accessLevel = null,
                                                    bool addMessageAsComment = false,
-                                                   string fpSealedResult = null,
                                                    sys.AsyncCallback callback = null,
                                                    object callbackState = null)
         {
@@ -138,8 +131,7 @@ namespace Dropbox.Api.Sharing.Routes
                                                           customMessage,
                                                           quiet,
                                                           accessLevel,
-                                                          addMessageAsComment,
-                                                          fpSealedResult);
+                                                          addMessageAsComment);
 
             return this.BeginAddFileMember(addFileMemberArgs, callback, callbackState);
         }
@@ -212,8 +204,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// notifications of their invite.</param>
         /// <param name="customMessage">Optional message to display to added members in their
         /// invitation.</param>
-        /// <param name="fpSealedResult">Field is only returned for "internal" callers. The
-        /// FingerprintJS Sealed Client Result value</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
@@ -221,14 +211,12 @@ namespace Dropbox.Api.Sharing.Routes
         public t.Task AddFolderMemberAsync(string sharedFolderId,
                                            col.IEnumerable<AddMember> members,
                                            bool quiet = false,
-                                           string customMessage = null,
-                                           string fpSealedResult = null)
+                                           string customMessage = null)
         {
             var addFolderMemberArg = new AddFolderMemberArg(sharedFolderId,
                                                             members,
                                                             quiet,
-                                                            customMessage,
-                                                            fpSealedResult);
+                                                            customMessage);
 
             return this.AddFolderMemberAsync(addFolderMemberArg);
         }
@@ -243,8 +231,6 @@ namespace Dropbox.Api.Sharing.Routes
         /// notifications of their invite.</param>
         /// <param name="customMessage">Optional message to display to added members in their
         /// invitation.</param>
-        /// <param name="fpSealedResult">Field is only returned for "internal" callers. The
-        /// FingerprintJS Sealed Client Result value</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
@@ -254,15 +240,13 @@ namespace Dropbox.Api.Sharing.Routes
                                                      col.IEnumerable<AddMember> members,
                                                      bool quiet = false,
                                                      string customMessage = null,
-                                                     string fpSealedResult = null,
                                                      sys.AsyncCallback callback = null,
                                                      object callbackState = null)
         {
             var addFolderMemberArg = new AddFolderMemberArg(sharedFolderId,
                                                             members,
                                                             quiet,
-                                                            customMessage,
-                                                            fpSealedResult);
+                                                            customMessage);
 
             return this.BeginAddFolderMember(addFolderMemberArg, callback, callbackState);
         }

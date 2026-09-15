@@ -2823,8 +2823,6 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
-        /// <param name="quality">Field is only returned for "internal" callers. Quality of the
-        /// thumbnail image.</param>
         /// <param name="excludeMediaInfo">Normally, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
         /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
@@ -2839,14 +2837,12 @@ namespace Dropbox.Api.Files.Routes
                                                                              ThumbnailFormat format = null,
                                                                              ThumbnailSize size = null,
                                                                              ThumbnailMode mode = null,
-                                                                             ThumbnailQuality quality = null,
                                                                              bool? excludeMediaInfo = null)
         {
             var thumbnailArg = new ThumbnailArg(path,
                                                 format,
                                                 size,
                                                 mode,
-                                                quality,
                                                 excludeMediaInfo);
 
             return this.GetThumbnailAsync(thumbnailArg);
@@ -2862,8 +2858,6 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
-        /// <param name="quality">Field is only returned for "internal" callers. Quality of the
-        /// thumbnail image.</param>
         /// <param name="excludeMediaInfo">Normally, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
         /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
@@ -2878,7 +2872,6 @@ namespace Dropbox.Api.Files.Routes
                                                   ThumbnailFormat format = null,
                                                   ThumbnailSize size = null,
                                                   ThumbnailMode mode = null,
-                                                  ThumbnailQuality quality = null,
                                                   bool? excludeMediaInfo = null,
                                                   sys.AsyncCallback callback = null,
                                                   object callbackState = null)
@@ -2887,7 +2880,6 @@ namespace Dropbox.Api.Files.Routes
                                                 format,
                                                 size,
                                                 mode,
-                                                quality,
                                                 excludeMediaInfo);
 
             return this.BeginGetThumbnail(thumbnailArg, callback, callbackState);
@@ -2960,8 +2952,6 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
-        /// <param name="quality">Field is only returned for "internal" callers. Quality of the
-        /// thumbnail image.</param>
         /// <param name="excludeMediaInfo">Normally, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
         /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
@@ -2979,7 +2969,6 @@ namespace Dropbox.Api.Files.Routes
                                                                                 ThumbnailFormat format = null,
                                                                                 ThumbnailSize size = null,
                                                                                 ThumbnailMode mode = null,
-                                                                                ThumbnailQuality quality = null,
                                                                                 bool? excludeMediaInfo = null,
                                                                                 bool preserveTransparency = false)
         {
@@ -2987,7 +2976,6 @@ namespace Dropbox.Api.Files.Routes
                                                     format,
                                                     size,
                                                     mode,
-                                                    quality,
                                                     excludeMediaInfo,
                                                     preserveTransparency);
 
@@ -3006,8 +2994,6 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="size">The size for the thumbnail image.</param>
         /// <param name="mode">How to resize and crop the image to achieve the desired
         /// size.</param>
-        /// <param name="quality">Field is only returned for "internal" callers. Quality of the
-        /// thumbnail image.</param>
         /// <param name="excludeMediaInfo">Normally, <see
         /// cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is set for photo and video. When
         /// this flag is true, <see cref="Dropbox.Api.Files.FileMetadata.MediaInfo" /> is not
@@ -3025,7 +3011,6 @@ namespace Dropbox.Api.Files.Routes
                                                     ThumbnailFormat format = null,
                                                     ThumbnailSize size = null,
                                                     ThumbnailMode mode = null,
-                                                    ThumbnailQuality quality = null,
                                                     bool? excludeMediaInfo = null,
                                                     bool preserveTransparency = false,
                                                     sys.AsyncCallback callback = null,
@@ -3035,7 +3020,6 @@ namespace Dropbox.Api.Files.Routes
                                                     format,
                                                     size,
                                                     mode,
-                                                    quality,
                                                     excludeMediaInfo,
                                                     preserveTransparency);
 
