@@ -280,6 +280,29 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// UploadTrafficLimitReached</para>
+        /// </summary>
+        public bool IsUploadTrafficLimitReached
+        {
+            get
+            {
+                return this is UploadTrafficLimitReached;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UploadTrafficLimitReached, or <c>null</c>.</para>
+        /// </summary>
+        public UploadTrafficLimitReached AsUploadTrafficLimitReached
+        {
+            get
+            {
+                return this as UploadTrafficLimitReached;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -381,6 +404,12 @@ namespace Dropbox.Api.Files
                     MemberFolderInsufficientSpace.Encoder.EncodeFields((MemberFolderInsufficientSpace)value, writer);
                     return;
                 }
+                if (value is UploadTrafficLimitReached)
+                {
+                    WriteProperty(".tag", "upload_traffic_limit_reached", writer, enc.StringEncoder.Instance);
+                    UploadTrafficLimitReached.Encoder.EncodeFields((UploadTrafficLimitReached)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -441,6 +470,8 @@ namespace Dropbox.Api.Files
                         return TeamFolderInsufficientSpace.Decoder.DecodeFields(reader);
                     case "member_folder_insufficient_space":
                         return MemberFolderInsufficientSpace.Decoder.DecodeFields(reader);
+                    case "upload_traffic_limit_reached":
+                        return UploadTrafficLimitReached.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -1281,6 +1312,77 @@ namespace Dropbox.Api.Files
                 protected override MemberFolderInsufficientSpace Create()
                 {
                     return MemberFolderInsufficientSpace.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user has reached their monthly upload traffic limit.</para>
+        /// </summary>
+        public sealed class UploadTrafficLimitReached : WriteError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UploadTrafficLimitReached> Encoder = new UploadTrafficLimitReachedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UploadTrafficLimitReached> Decoder = new UploadTrafficLimitReachedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UploadTrafficLimitReached"
+            /// /> class.</para>
+            /// </summary>
+            private UploadTrafficLimitReached()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UploadTrafficLimitReached</para>
+            /// </summary>
+            public static readonly UploadTrafficLimitReached Instance = new UploadTrafficLimitReached();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UploadTrafficLimitReached" />.</para>
+            /// </summary>
+            private class UploadTrafficLimitReachedEncoder : enc.StructEncoder<UploadTrafficLimitReached>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UploadTrafficLimitReached value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UploadTrafficLimitReached" />.</para>
+            /// </summary>
+            private class UploadTrafficLimitReachedDecoder : enc.StructDecoder<UploadTrafficLimitReached>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UploadTrafficLimitReached"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UploadTrafficLimitReached Create()
+                {
+                    return UploadTrafficLimitReached.Instance;
                 }
 
             }
