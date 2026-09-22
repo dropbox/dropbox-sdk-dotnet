@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Setup .NET
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@v6
         with:
           dotnet-version: |
             8.x
@@ -42,7 +42,7 @@ jobs:
           cp "$runtime_ref_dir/mscorlib.dll" "$output/docfx-ref/"
           cp "$runtime_ref_dir/mscorlib.dll" "$output/"
       - name: Generate API metadata
-        run: dotnet "$HOME/.nuget/packages/docfx/2.78.5/tools/net10.0/any/docfx.dll" metadata docfx.json
+        run: dotnet tool run docfx metadata docfx.json
       - name: Upload API metadata
         uses: actions/upload-artifact@v7
         with:
@@ -62,7 +62,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Setup .NET 10
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@v6
         with:
           dotnet-version: 10.x
       - name: Restore DocFX tool
@@ -117,7 +117,7 @@ jobs:
           cp docfx-api.json partition/
       - name: Build API partition
         working-directory: partition
-        run: dotnet "$HOME/.nuget/packages/docfx/2.78.5/tools/net10.0/any/docfx.dll" build docfx-api.json
+        run: dotnet tool run docfx build docfx-api.json
       - name: Upload API partition
         uses: actions/upload-artifact@v7
         with:
@@ -133,13 +133,13 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Setup .NET 10
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@v6
         with:
           dotnet-version: 10.x
       - name: Restore DocFX tool
         run: dotnet tool restore
       - name: Build conceptual documentation
-        run: dotnet "$HOME/.nuget/packages/docfx/2.78.5/tools/net10.0/any/docfx.dll" build docfx-content.json
+        run: dotnet tool run docfx build docfx-content.json
       - name: Upload conceptual documentation
         uses: actions/upload-artifact@v7
         with:
@@ -205,7 +205,7 @@ jobs:
           name: documentation-site
           path: _site
       - name: Publish documentation
-        uses: JamesIves/github-pages-deploy-action@v4.8.0
+        uses: JamesIves/github-pages-deploy-action@v4.9.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages-holder
