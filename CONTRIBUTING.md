@@ -56,7 +56,13 @@ dotnet format --check --fix-whitespace --fix-style info --fix-analyzers info dro
 
 ### Cutting New Versions (for Dropboxers)
 
-To cut a new version, create a new GitHub release using `vX.Y.Z` as the tag name. GitHub Actions will automatically build the SDK and publish it to NuGet as version `X.Y.Z`.
+Repository admins can cut a new version from the GitHub Actions page:
+
+1. Select the **Release** workflow and click **Run workflow**.
+2. Select the `main` branch and enter the version as `X.Y.Z` (without the `v` prefix).
+3. Run the workflow. It validates the request, publishes version `X.Y.Z` to NuGet, and creates the GitHub release and `vX.Y.Z` tag.
+
+Creating a GitHub release manually with a `vX.Y.Z` tag remains supported and automatically publishes version `X.Y.Z` to NuGet.
 
 [issues]: https://github.com/dropbox/dropbox-sdk-dotnet/issues
 [pr]: https://github.com/dropbox/dropbox-sdk-dotnet/pulls
