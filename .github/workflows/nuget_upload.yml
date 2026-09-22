@@ -1,49 +1,148 @@
-name: Publish to NuGet
+name: Release
+run-name: Release ${{ inputs.version || github.event.release.tag_name }}
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: Version to release (for example, 7.4.0)
+        required: true
+        type: string
   release:
     types: [created]
 
-permissions:  # least privilege; the deploy job overrides this for OIDC
+permissions:
   contents: read
 
+concurrency:
+  group: release
+  cancel-in-progress: false
+
 jobs:
-  deploy:
+  prepare:
     runs-on: ubuntu-latest
-    permissions:  # required for OIDC authentication
+    permissions:
+      contents: read
+    outputs:
+      tag: ${{ steps.release.outputs.tag }}
+      version: ${{ steps.release.outputs.version }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Require repository admin permission
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          permission=$(gh api \
+            "repos/$GITHUB_REPOSITORY/collaborators/$GITHUB_ACTOR/permission" \
+            --jq '.permission')
+          if [[ "$permission" != "admin" ]]; then
+            echo "Only repository admins can run a release; $GITHUB_ACTOR has $permission permission."
+            exit 1
+          fi
+
+      - name: Validate release
+        id: release
+        env:
+          MANUAL_VERSION: ${{ inputs.version }}
+          RELEASE_EVENT_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          set -euo pipefail
+
+          if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]]; then
+            if [[ "$GITHUB_REF" != "refs/heads/main" ]]; then
+              echo "Manual releases must run from main, not $GITHUB_REF."
+              exit 1
+            fi
+            tag="v$MANUAL_VERSION"
+          else
+            tag="$RELEASE_EVENT_TAG"
+          fi
+
+          if [[ ! "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]; then
+            echo "Invalid release tag: $tag. Expected vX.Y.Z or vX.Y.Z-prerelease."
+            exit 1
+          fi
+
+          if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]] && \
+             git ls-remote --exit-code --tags origin "refs/tags/$tag" >/dev/null 2>&1; then
+            echo "Tag $tag already exists."
+            exit 1
+          fi
+
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "version=${tag#v}" >> "$GITHUB_OUTPUT"
+
+  publish:
+    needs: prepare
+    runs-on: ubuntu-latest
+    permissions:
       id-token: write
       contents: read
     steps:
       - uses: actions/checkout@v7
+
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: arn:aws:iam::082972943155:role/oidc-github-dropbox-dropbox-sdk-dotnet-repo
           aws-region: us-west-2
+
       - name: Get NuGet token from AWS Secrets Manager
         uses: aws-actions/aws-secretsmanager-get-secrets@v3
         with:
           secret-ids: |
             NUGET_TOKEN,nuget-api-token-dropbox-sdk-dotnet
           parse-json-secrets: false
+
       - name: Pack
         env:
-          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          VERSION: ${{ needs.prepare.outputs.version }}
         run: |
-          version=$(echo "$RELEASE_TAG" | cut -c 2-)
           dotnet pack \
-          dropbox-sdk-dotnet/Dropbox.Api \
-          -p:Configuration=Release \
-          -p:Version="$version" \
-          -p:AssemblyOriginatorKeyFile=dropbox_api_key.snk \
-          -p:SignAssembly=true
+            dropbox-sdk-dotnet/Dropbox.Api \
+            -p:Configuration=Release \
+            -p:Version="$VERSION" \
+            -p:AssemblyOriginatorKeyFile=dropbox_api_key.snk \
+            -p:SignAssembly=true
+
       - name: Push
         env:
-          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          VERSION: ${{ needs.prepare.outputs.version }}
         run: |
-          version=$(echo "$RELEASE_TAG" | cut -c 2-)
           dotnet nuget push \
-          "dropbox-sdk-dotnet/Dropbox.Api/bin/Release/Dropbox.Api.$version.nupkg" \
-          --source https://api.nuget.org/v3/index.json \
-          --api-key "$NUGET_TOKEN"
+            "dropbox-sdk-dotnet/Dropbox.Api/bin/Release/Dropbox.Api.$VERSION.nupkg" \
+            --source https://api.nuget.org/v3/index.json \
+            --api-key "$NUGET_TOKEN"
+
+  create-release:
+    if: github.event_name == 'workflow_dispatch'
+    needs: [prepare, publish]
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: write
+    steps:
+      # Events created with GITHUB_TOKEN do not start another workflow. NuGet is
+      # therefore published above, and documentation is dispatched explicitly.
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ needs.prepare.outputs.tag }}
+        run: |
+          gh release create "$RELEASE_TAG" \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "$RELEASE_TAG" \
+            --generate-notes
+
+      - name: Publish documentation
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run documentation.yml \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref main
