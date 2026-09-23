@@ -96,11 +96,11 @@ jobs:
             -p:AssemblyOriginatorKeyFile=dropbox_api_key.snk \
             -p:SignAssembly=true
 
-      - name: NuGet login (OIDC → temporary API key)
+      - name: NuGet login
         uses: NuGet/login@v1
         id: login
         with:
-          user: dropbox
+          user: dropboxapi
 
       - name: Push
         env:
