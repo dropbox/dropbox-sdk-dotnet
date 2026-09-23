@@ -8,6 +8,7 @@ namespace Dropbox.Api.Unit.Tests
 {
     using System;
     using Dropbox.Api.Files;
+    using Dropbox.Api.Sharing;
     using Dropbox.Api.Stone;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -31,6 +32,17 @@ namespace Dropbox.Api.Unit.Tests
 
             Assert.IsTrue(obj.IsPath);
             Assert.IsTrue(obj.AsPath.Value.IsNotFound);
+        }
+
+        /// <summary>
+        /// Null optional lists are omitted when encoding a struct.
+        /// </summary>
+        [TestMethod]
+        public void TestListFoldersArgsWithNullActions()
+        {
+            var result = JsonWriter.Write(new ListFoldersArgs(), ListFoldersArgs.Encoder);
+
+            Assert.AreEqual("{\"limit\":1000}", result);
         }
     }
 }

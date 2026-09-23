@@ -1248,7 +1248,7 @@ class _CSharpGenerator(CodeBackend):
         if is_nullable:
             nullable = True
             if is_list:
-                null_block = self.if_('value.{}.Count > 0'.format(field_public_name))
+                null_block = self.if_('value.{} != null && value.{}.Count > 0'.format(field_public_name, field_public_name))
             else:
                 null_block = self.if_('value.{} != null'.format(field_public_name))
             null_block.__enter__()
