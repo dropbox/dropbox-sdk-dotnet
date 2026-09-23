@@ -85,19 +85,6 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Configure AWS credentials (OIDC)
-        uses: aws-actions/configure-aws-credentials@v6
-        with:
-          role-to-assume: arn:aws:iam::082972943155:role/oidc-github-dropbox-dropbox-sdk-dotnet-repo
-          aws-region: us-west-2
-
-      - name: Get NuGet token from AWS Secrets Manager
-        uses: aws-actions/aws-secretsmanager-get-secrets@v3
-        with:
-          secret-ids: |
-            NUGET_TOKEN,nuget-api-token-dropbox-sdk-dotnet
-          parse-json-secrets: false
-
       - name: Pack
         env:
           VERSION: ${{ needs.prepare.outputs.version }}
@@ -109,6 +96,12 @@ jobs:
             -p:AssemblyOriginatorKeyFile=dropbox_api_key.snk \
             -p:SignAssembly=true
 
+      - name: NuGet login
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: dropboxapi
+
       - name: Push
         env:
           VERSION: ${{ needs.prepare.outputs.version }}
@@ -116,7 +109,7 @@ jobs:
           dotnet nuget push \
             "dropbox-sdk-dotnet/Dropbox.Api/bin/Release/Dropbox.Api.$VERSION.nupkg" \
             --source https://api.nuget.org/v3/index.json \
-            --api-key "$NUGET_TOKEN"
+            --api-key "${{ steps.login.outputs.NUGET_API_KEY }}"
 
   create-release:
     if: github.event_name == 'workflow_dispatch'

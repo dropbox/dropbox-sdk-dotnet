@@ -238,7 +238,11 @@ namespace SimpleTest
 
                     http.Start();
 
-                    System.Diagnostics.Process.Start(authorizeUri.ToString());
+                    System.Diagnostics.Process.Start(
+                        new System.Diagnostics.ProcessStartInfo(authorizeUri.ToString())
+                        {
+                            UseShellExecute = true
+                        });
 
                     // Handle OAuth redirect and send URL fragment to local server using JS.
                     await HandleOAuth2Redirect(http);
