@@ -137,38 +137,44 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">familyName</span></td>
-        <td><p>Last name of user.</p>
+        <td><p>Last name of the user.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">givenName</span></td>
-        <td><p>First name of user.</p>
+        <td><p>First name of the user.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">email</span></td>
-        <td><p>Email address of user.</p>
+        <td><p>The user's email address. Be aware it's possible that the user
+has since lost access to their email. Note: email is not a unique or stable
+identifier for a Dropbox account. Users can change their email, and emails can be
+reused by different accounts. Apps should not use email as a key for account
+identification; use <code class="paramref">sub</code> instead.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
         <td><span class="parametername">emailVerified</span></td>
-        <td><p>If user is email verified.</p>
+        <td><p>If the user's email address is verified.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">iss</span></td>
-        <td><p>Issuer of token (in this case Dropbox).</p>
+        <td><p>Issuer of the token (in this case Dropbox).</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">sub</span></td>
         <td><p>An identifier for the user. This is the Dropbox account_id, a
-string value such as dbid:AAH4f99T0taONIb-OurWxbNQ6ywGRopQngc.</p>
+string value such as dbid:AAH4f99T0taONIb-OurWxbNQ6ywGRopQngc. The account_id is a
+unique and stable identifier for a Dropbox account, suitable for use as a key in
+authentication and account management.</p>
 </td>
       </tr>
     </tbody>
@@ -181,7 +187,11 @@ string value such as dbid:AAH4f99T0taONIb-OurWxbNQ6ywGRopQngc.</p>
   </span>
   <a id="Dropbox_Api_Openid_UserInfoResult_Email_" data-uid="Dropbox.Api.Openid.UserInfoResult.Email*"></a>
   <h4 id="Dropbox_Api_Openid_UserInfoResult_Email" data-uid="Dropbox.Api.Openid.UserInfoResult.Email">Email</h4>
-  <div class="markdown level1 summary"><p>Email address of user.</p>
+  <div class="markdown level1 summary"><p>The user's email address. Be aware it's possible that the user has since lost
+access to their email. Note: email is not a unique or stable identifier for a
+Dropbox account. Users can change their email, and emails can be reused by
+different accounts. Apps should not use email as a key for account identification;
+use <a class="xref" href="Dropbox.Api.Openid.UserInfoResult.html#Dropbox_Api_Openid_UserInfoResult_Sub">Sub</a> instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -209,7 +219,7 @@ string value such as dbid:AAH4f99T0taONIb-OurWxbNQ6ywGRopQngc.</p>
   </span>
   <a id="Dropbox_Api_Openid_UserInfoResult_EmailVerified_" data-uid="Dropbox.Api.Openid.UserInfoResult.EmailVerified*"></a>
   <h4 id="Dropbox_Api_Openid_UserInfoResult_EmailVerified" data-uid="Dropbox.Api.Openid.UserInfoResult.EmailVerified">EmailVerified</h4>
-  <div class="markdown level1 summary"><p>If user is email verified.</p>
+  <div class="markdown level1 summary"><p>If the user's email address is verified.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -237,7 +247,7 @@ string value such as dbid:AAH4f99T0taONIb-OurWxbNQ6ywGRopQngc.</p>
   </span>
   <a id="Dropbox_Api_Openid_UserInfoResult_FamilyName_" data-uid="Dropbox.Api.Openid.UserInfoResult.FamilyName*"></a>
   <h4 id="Dropbox_Api_Openid_UserInfoResult_FamilyName" data-uid="Dropbox.Api.Openid.UserInfoResult.FamilyName">FamilyName</h4>
-  <div class="markdown level1 summary"><p>Last name of user.</p>
+  <div class="markdown level1 summary"><p>Last name of the user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -265,7 +275,7 @@ string value such as dbid:AAH4f99T0taONIb-OurWxbNQ6ywGRopQngc.</p>
   </span>
   <a id="Dropbox_Api_Openid_UserInfoResult_GivenName_" data-uid="Dropbox.Api.Openid.UserInfoResult.GivenName*"></a>
   <h4 id="Dropbox_Api_Openid_UserInfoResult_GivenName" data-uid="Dropbox.Api.Openid.UserInfoResult.GivenName">GivenName</h4>
-  <div class="markdown level1 summary"><p>First name of user.</p>
+  <div class="markdown level1 summary"><p>First name of the user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -293,7 +303,7 @@ string value such as dbid:AAH4f99T0taONIb-OurWxbNQ6ywGRopQngc.</p>
   </span>
   <a id="Dropbox_Api_Openid_UserInfoResult_Iss_" data-uid="Dropbox.Api.Openid.UserInfoResult.Iss*"></a>
   <h4 id="Dropbox_Api_Openid_UserInfoResult_Iss" data-uid="Dropbox.Api.Openid.UserInfoResult.Iss">Iss</h4>
-  <div class="markdown level1 summary"><p>Issuer of token (in this case Dropbox).</p>
+  <div class="markdown level1 summary"><p>Issuer of the token (in this case Dropbox).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -322,7 +332,9 @@ string value such as dbid:AAH4f99T0taONIb-OurWxbNQ6ywGRopQngc.</p>
   <a id="Dropbox_Api_Openid_UserInfoResult_Sub_" data-uid="Dropbox.Api.Openid.UserInfoResult.Sub*"></a>
   <h4 id="Dropbox_Api_Openid_UserInfoResult_Sub" data-uid="Dropbox.Api.Openid.UserInfoResult.Sub">Sub</h4>
   <div class="markdown level1 summary"><p>An identifier for the user. This is the Dropbox account_id, a string value
-such as dbid:AAH4f99T0taONIb-OurWxbNQ6ywGRopQngc.</p>
+such as dbid:AAH4f99T0taONIb-OurWxbNQ6ywGRopQngc. The account_id is a unique and
+stable identifier for a Dropbox account, suitable for use as a key in
+authentication and account management.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

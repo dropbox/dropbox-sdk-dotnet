@@ -140,7 +140,7 @@ and the user making the query.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">accountId</span></td>
-        <td><p>The user's unique Dropbox ID.</p>
+        <td><p>The user's unique and stable Dropbox ID.</p>
 </td>
       </tr>
       <tr>
@@ -154,7 +154,10 @@ and the user making the query.</p>
         <td><span class="parametername">email</span></td>
         <td><p>The user's email address. Do not rely on this without checking
 the <code class="paramref">emailVerified</code> field. Even then, it's possible that the user
-has since lost access to their email.</p>
+has since lost access to their email. Note: email is not a unique or stable
+identifier for a Dropbox account. Users can change their email, and emails can be
+reused by different accounts. Apps should not use email as a key for account
+identification; use <code class="paramref">accountId</code> instead.</p>
 </td>
       </tr>
       <tr>
@@ -187,7 +190,7 @@ set.</p>
   </span>
   <a id="Dropbox_Api_Users_Account_AccountId_" data-uid="Dropbox.Api.Users.Account.AccountId*"></a>
   <h4 id="Dropbox_Api_Users_Account_AccountId" data-uid="Dropbox.Api.Users.Account.AccountId">AccountId</h4>
-  <div class="markdown level1 summary"><p>The user's unique Dropbox ID.</p>
+  <div class="markdown level1 summary"><p>The user's unique and stable Dropbox ID.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -244,7 +247,10 @@ set.</p>
   <a id="Dropbox_Api_Users_Account_Email_" data-uid="Dropbox.Api.Users.Account.Email*"></a>
   <h4 id="Dropbox_Api_Users_Account_Email" data-uid="Dropbox.Api.Users.Account.Email">Email</h4>
   <div class="markdown level1 summary"><p>The user's email address. Do not rely on this without checking the <a class="xref" href="Dropbox.Api.Users.Account.html#Dropbox_Api_Users_Account_EmailVerified">EmailVerified</a> field. Even then, it's possible that the user has since
-lost access to their email.</p>
+lost access to their email. Note: email is not a unique or stable identifier for a
+Dropbox account. Users can change their email, and emails can be reused by
+different accounts. Apps should not use email as a key for account identification;
+use <a class="xref" href="Dropbox.Api.Users.Account.html#Dropbox_Api_Users_Account_AccountId">AccountId</a> instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

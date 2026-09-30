@@ -156,7 +156,7 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">accountId</span></td>
-        <td><p>The user's unique Dropbox ID.</p>
+        <td><p>The user's unique and stable Dropbox ID.</p>
 </td>
       </tr>
       <tr>
@@ -170,7 +170,10 @@
         <td><span class="parametername">email</span></td>
         <td><p>The user's email address. Do not rely on this without checking
 the <code class="paramref">emailVerified</code> field. Even then, it's possible that the user
-has since lost access to their email.</p>
+has since lost access to their email. Note: email is not a unique or stable
+identifier for a Dropbox account. Users can change their email, and emails can be
+reused by different accounts. Apps should not use email as a key for account
+identification; use <code class="paramref">accountId</code> instead.</p>
 </td>
       </tr>
       <tr>
