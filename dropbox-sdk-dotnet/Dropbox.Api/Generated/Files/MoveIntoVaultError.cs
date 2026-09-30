@@ -11,7 +11,7 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The move into vault error object</para>
+    /// <para>Deprecated: the server no longer emits this error.</para>
     /// </summary>
     public class MoveIntoVaultError
     {

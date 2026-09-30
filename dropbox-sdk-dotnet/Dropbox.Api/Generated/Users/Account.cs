@@ -33,11 +33,14 @@ namespace Dropbox.Api.Users
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="Account" /> class.</para>
         /// </summary>
-        /// <param name="accountId">The user's unique Dropbox ID.</param>
+        /// <param name="accountId">The user's unique and stable Dropbox ID.</param>
         /// <param name="name">Details of a user's name.</param>
         /// <param name="email">The user's email address. Do not rely on this without checking
         /// the <paramref name="emailVerified" /> field. Even then, it's possible that the user
-        /// has since lost access to their email.</param>
+        /// has since lost access to their email. Note: email is not a unique or stable
+        /// identifier for a Dropbox account. Users can change their email, and emails can be
+        /// reused by different accounts. Apps should not use email as a key for account
+        /// identification; use <paramref name="accountId" /> instead.</param>
         /// <param name="emailVerified">Whether the user has verified their email
         /// address.</param>
         /// <param name="disabled">Whether the user has been disabled.</param>
@@ -92,7 +95,7 @@ namespace Dropbox.Api.Users
         }
 
         /// <summary>
-        /// <para>The user's unique Dropbox ID.</para>
+        /// <para>The user's unique and stable Dropbox ID.</para>
         /// </summary>
         public string AccountId { get; protected set; }
 
@@ -104,7 +107,10 @@ namespace Dropbox.Api.Users
         /// <summary>
         /// <para>The user's email address. Do not rely on this without checking the <see
         /// cref="EmailVerified" /> field. Even then, it's possible that the user has since
-        /// lost access to their email.</para>
+        /// lost access to their email. Note: email is not a unique or stable identifier for a
+        /// Dropbox account. Users can change their email, and emails can be reused by
+        /// different accounts. Apps should not use email as a key for account identification;
+        /// use <see cref="AccountId" /> instead.</para>
         /// </summary>
         public string Email { get; protected set; }
 
