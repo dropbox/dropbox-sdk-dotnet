@@ -12739,6 +12739,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// PaperOfflineModePolicyChangedDetails</para>
+        /// </summary>
+        public bool IsPaperOfflineModePolicyChangedDetails
+        {
+            get
+            {
+                return this is PaperOfflineModePolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PaperOfflineModePolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public PaperOfflineModePolicyChangedDetails AsPaperOfflineModePolicyChangedDetails
+        {
+            get
+            {
+                return this as PaperOfflineModePolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// PasskeyLoginPolicyChangedDetails</para>
         /// </summary>
         public bool IsPasskeyLoginPolicyChangedDetails
@@ -18225,6 +18249,12 @@ namespace Dropbox.Api.TeamLog
                     PaperEnabledUsersGroupRemovalDetails.Encoder.EncodeFields((PaperEnabledUsersGroupRemovalDetails)value, writer);
                     return;
                 }
+                if (value is PaperOfflineModePolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "paper_offline_mode_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    PaperOfflineModePolicyChangedDetails.Encoder.EncodeFields((PaperOfflineModePolicyChangedDetails)value, writer);
+                    return;
+                }
                 if (value is PasskeyLoginPolicyChangedDetails)
                 {
                     WriteProperty(".tag", "passkey_login_policy_changed_details", writer, enc.StringEncoder.Instance);
@@ -19905,6 +19935,8 @@ namespace Dropbox.Api.TeamLog
                         return PaperEnabledUsersGroupAdditionDetails.Decoder.DecodeFields(reader);
                     case "paper_enabled_users_group_removal_details":
                         return PaperEnabledUsersGroupRemovalDetails.Decoder.DecodeFields(reader);
+                    case "paper_offline_mode_policy_changed_details":
+                        return PaperOfflineModePolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "passkey_login_policy_changed_details":
                         return PasskeyLoginPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "password_strength_requirements_change_policy_details":
@@ -69061,6 +69093,96 @@ namespace Dropbox.Api.TeamLog
                 public override PaperEnabledUsersGroupRemovalDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new PaperEnabledUsersGroupRemovalDetails(global::Dropbox.Api.TeamLog.PaperEnabledUsersGroupRemovalDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The paper offline mode policy changed details object</para>
+        /// </summary>
+        public sealed class PaperOfflineModePolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PaperOfflineModePolicyChangedDetails> Encoder = new PaperOfflineModePolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PaperOfflineModePolicyChangedDetails> Decoder = new PaperOfflineModePolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="PaperOfflineModePolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public PaperOfflineModePolicyChangedDetails(global::Dropbox.Api.TeamLog.PaperOfflineModePolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="PaperOfflineModePolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private PaperOfflineModePolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.PaperOfflineModePolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PaperOfflineModePolicyChangedDetails" />.</para>
+            /// </summary>
+            private class PaperOfflineModePolicyChangedDetailsEncoder : enc.StructEncoder<PaperOfflineModePolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PaperOfflineModePolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("paper_offline_mode_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.PaperOfflineModePolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PaperOfflineModePolicyChangedDetails" />.</para>
+            /// </summary>
+            private class PaperOfflineModePolicyChangedDetailsDecoder : enc.StructDecoder<PaperOfflineModePolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="PaperOfflineModePolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PaperOfflineModePolicyChangedDetails Create()
+                {
+                    return new PaperOfflineModePolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override PaperOfflineModePolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new PaperOfflineModePolicyChangedDetails(global::Dropbox.Api.TeamLog.PaperOfflineModePolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 

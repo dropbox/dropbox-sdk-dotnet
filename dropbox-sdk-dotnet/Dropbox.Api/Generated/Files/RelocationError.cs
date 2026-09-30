@@ -1534,8 +1534,9 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Some content cannot be moved into Vault under certain circumstances, see
-        /// detailed error.</para>
+        /// <para>Field is deprecated. Some content cannot be moved into Vault under certain
+        /// circumstances, see detailed error. Deprecated: the server no longer emits this
+        /// error.</para>
         /// </summary>
         public sealed class CantMoveIntoVault : RelocationError
         {

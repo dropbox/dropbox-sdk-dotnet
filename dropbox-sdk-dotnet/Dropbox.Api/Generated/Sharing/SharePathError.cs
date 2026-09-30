@@ -1532,7 +1532,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>We do not support sharing the Vault folder.</para>
+        /// <para>Field is deprecated. We do not support sharing the Vault folder. Deprecated:
+        /// Vault sharing errors are no longer emitted.</para>
         /// </summary>
         public sealed class IsVault : SharePathError
         {
@@ -1601,7 +1602,8 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
-        /// <para>We do not support sharing a folder inside a locked Vault.</para>
+        /// <para>Field is deprecated. We do not support sharing a folder inside a locked
+        /// Vault. Deprecated: Vault sharing errors are no longer emitted.</para>
         /// </summary>
         public sealed class IsVaultLocked : SharePathError
         {
