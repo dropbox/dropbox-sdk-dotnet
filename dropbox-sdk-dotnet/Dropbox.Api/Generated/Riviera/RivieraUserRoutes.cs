@@ -31,6 +31,105 @@ namespace Dropbox.Api.Riviera.Routes
         internal enc.ITransport Transport { get; private set; }
 
         /// <summary>
+        /// <para>Download the output of a completed `get_transform_async` job. Pass the
+        /// `output_handle` from the job's `complete` result. The body is the produced file,
+        /// and the `Dropbox-API-Result` header describes it. A handle can only be redeemed by
+        /// the user who requested the transform, and only until its `expires_ts`; after that
+        /// this route fails with `expired_handle_error`, and the transform has to be requested
+        /// again. A handle that was never valid, or that belongs to another user, fails with
+        /// `user_error`.</para>
+        /// </summary>
+        /// <param name="downloadTransformOutputArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TransformApiV2Error"/>.</exception>
+        public t.Task<enc.IDownloadResponse<DownloadTransformOutputResult>> DownloadTransformOutputAsync(DownloadTransformOutputArgs downloadTransformOutputArgs)
+        {
+            return this.Transport.SendDownloadRequestAsync<DownloadTransformOutputArgs, DownloadTransformOutputResult, TransformApiV2Error>(downloadTransformOutputArgs, "content", "/riviera/download_transform_output", "user", global::Dropbox.Api.Riviera.DownloadTransformOutputArgs.Encoder, global::Dropbox.Api.Riviera.DownloadTransformOutputResult.Decoder, global::Dropbox.Api.Riviera.TransformApiV2Error.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the download transform output route.</para>
+        /// </summary>
+        /// <param name="downloadTransformOutputArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDownloadTransformOutput(DownloadTransformOutputArgs downloadTransformOutputArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.DownloadTransformOutputAsync(downloadTransformOutputArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Download the output of a completed `get_transform_async` job. Pass the
+        /// `output_handle` from the job's `complete` result. The body is the produced file,
+        /// and the `Dropbox-API-Result` header describes it. A handle can only be redeemed by
+        /// the user who requested the transform, and only until its `expires_ts`; after that
+        /// this route fails with `expired_handle_error`, and the transform has to be requested
+        /// again. A handle that was never valid, or that belongs to another user, fails with
+        /// `user_error`.</para>
+        /// </summary>
+        /// <param name="outputHandle">The `output_handle` from a `complete`
+        /// `get_transform_async/check` result.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TransformApiV2Error"/>.</exception>
+        public t.Task<enc.IDownloadResponse<DownloadTransformOutputResult>> DownloadTransformOutputAsync(string outputHandle)
+        {
+            var downloadTransformOutputArgs = new DownloadTransformOutputArgs(outputHandle);
+
+            return this.DownloadTransformOutputAsync(downloadTransformOutputArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the download transform output route.</para>
+        /// </summary>
+        /// <param name="outputHandle">The `output_handle` from a `complete`
+        /// `get_transform_async/check` result.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginDownloadTransformOutput(string outputHandle,
+                                                             sys.AsyncCallback callback,
+                                                             object callbackState = null)
+        {
+            var downloadTransformOutputArgs = new DownloadTransformOutputArgs(outputHandle);
+
+            return this.BeginDownloadTransformOutput(downloadTransformOutputArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the download transform output
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TransformApiV2Error"/>.</exception>
+        public enc.IDownloadResponse<DownloadTransformOutputResult> EndDownloadTransformOutput(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<enc.IDownloadResponse<DownloadTransformOutputResult>>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Asynchronous scene-change keyframe extraction for video files. Detects scene
         /// changes in the source video and returns one representative keyframe per detected
         /// scene, each tagged with its timestamp (seconds from the start of the video) and
@@ -1290,6 +1389,271 @@ namespace Dropbox.Api.Riviera.Routes
         public GetTranscriptAsyncCheckResult EndGetTranscriptAsyncCheck(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GetTranscriptAsyncCheckResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Asynchronous file transformation: produces a new file from an existing one.
+        /// One route covers many conversions. Name the source file in `file_id_or_url`, say
+        /// what you want back in `transform_type`, and supply that type's options message if
+        /// it needs one: - `pdf`: documents and images, to PDF. - `html`: spreadsheets, to
+        /// HTML, preserving the sheet layout. - `image`: images and single document pages, to
+        /// JPEG or PNG. - `thumbnail`: any thumbnailable source, resized to a named size
+        /// bucket. - `image_pdf`: documents, to a page image rendered by way of PDF. -
+        /// `video_frame`: one still frame from a video, at a requested offset. The accepted
+        /// input formats differ per transform -- they are not one shared list -- and each is
+        /// the intersection of the source format with the pipeline that transform uses: -
+        /// `pdf` and `image_pdf`: word-processing, presentation and spreadsheet documents
+        /// (.doc, .docx, .ppt, .pptx, .xls, .xlsx, .odt, .odp, .ods, .rtf, .epub, .gdoc,
+        /// .gslides, .hwp, .ai, .eps, .dwg among others). Images are not accepted. - `html`:
+        /// spreadsheets only -- .xls, .xlsm, .xlsx, .ods, .gsheet. This is the complete list.
+        /// Note that .csv and .txt are *not* accepted here. - `image`: the documents above,
+        /// plus .pdf and .html, plus the iWork and design formats .pages, .key, .numbers,
+        /// .sketch, .xd, .indd and .psd, plus .avif, .heic, .svg and camera RAW, plus fonts
+        /// (.otf, .ttf), plus video. Formats a browser can already display (.bmp, .gif, .ico,
+        /// .jpeg, .png, .tif, .tiff, .webp) are not accepted; use `thumbnail` for those. -
+        /// `thumbnail`: everything `image` accepts, plus .bmp, .gif, .ico, .jpeg, .png, .tif,
+        /// .tiff, .webp and JPEG 2000. - `video_frame`: .3g2, .3gp, .3gpp, .3gpp2, .asf, .avi,
+        /// .dv, .flv, .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .ogv, .rm,
+        /// .ts, .vob, .webm, .wmv. This is the complete list. These lists track Riviera's
+        /// capability registry
+        /// (`dropbox/riviera/supported_types/previews_supported_types.yaml`), which is
+        /// generated and authoritative; treat it rather than this comment as the final word.
+        /// Formats the requested transform does not support fail with
+        /// `unsupported_format_error`. Options belonging to a different transform type than
+        /// the one requested fail with `invalid_options_error`. The produced bytes are not
+        /// returned by this route, and not by its `/check` poll either. Poll
+        /// `get_transform_async/check` with the returned async job ID until it reports
+        /// `complete` or `failed`; a `complete` result carries a `TransformOutput` whose
+        /// `output_handle` `download_transform_output` exchanges for the bytes. Splitting
+        /// retrieval out this way is what lets the route return outputs larger than an async
+        /// result can carry.</para>
+        /// </summary>
+        /// <param name="transformArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetTransformAsyncAsync(TransformArgs transformArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<TransformArgs, global::Dropbox.Api.Async.LaunchResultBase, enc.Empty>(transformArgs, "api", "/riviera/get_transform_async", "user", global::Dropbox.Api.Riviera.TransformArgs.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get transform async route.</para>
+        /// </summary>
+        /// <param name="transformArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetTransformAsync(TransformArgs transformArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetTransformAsyncAsync(transformArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Asynchronous file transformation: produces a new file from an existing one.
+        /// One route covers many conversions. Name the source file in `file_id_or_url`, say
+        /// what you want back in `transform_type`, and supply that type's options message if
+        /// it needs one: - `pdf`: documents and images, to PDF. - `html`: spreadsheets, to
+        /// HTML, preserving the sheet layout. - `image`: images and single document pages, to
+        /// JPEG or PNG. - `thumbnail`: any thumbnailable source, resized to a named size
+        /// bucket. - `image_pdf`: documents, to a page image rendered by way of PDF. -
+        /// `video_frame`: one still frame from a video, at a requested offset. The accepted
+        /// input formats differ per transform -- they are not one shared list -- and each is
+        /// the intersection of the source format with the pipeline that transform uses: -
+        /// `pdf` and `image_pdf`: word-processing, presentation and spreadsheet documents
+        /// (.doc, .docx, .ppt, .pptx, .xls, .xlsx, .odt, .odp, .ods, .rtf, .epub, .gdoc,
+        /// .gslides, .hwp, .ai, .eps, .dwg among others). Images are not accepted. - `html`:
+        /// spreadsheets only -- .xls, .xlsm, .xlsx, .ods, .gsheet. This is the complete list.
+        /// Note that .csv and .txt are *not* accepted here. - `image`: the documents above,
+        /// plus .pdf and .html, plus the iWork and design formats .pages, .key, .numbers,
+        /// .sketch, .xd, .indd and .psd, plus .avif, .heic, .svg and camera RAW, plus fonts
+        /// (.otf, .ttf), plus video. Formats a browser can already display (.bmp, .gif, .ico,
+        /// .jpeg, .png, .tif, .tiff, .webp) are not accepted; use `thumbnail` for those. -
+        /// `thumbnail`: everything `image` accepts, plus .bmp, .gif, .ico, .jpeg, .png, .tif,
+        /// .tiff, .webp and JPEG 2000. - `video_frame`: .3g2, .3gp, .3gpp, .3gpp2, .asf, .avi,
+        /// .dv, .flv, .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .ogv, .rm,
+        /// .ts, .vob, .webm, .wmv. This is the complete list. These lists track Riviera's
+        /// capability registry
+        /// (`dropbox/riviera/supported_types/previews_supported_types.yaml`), which is
+        /// generated and authoritative; treat it rather than this comment as the final word.
+        /// Formats the requested transform does not support fail with
+        /// `unsupported_format_error`. Options belonging to a different transform type than
+        /// the one requested fail with `invalid_options_error`. The produced bytes are not
+        /// returned by this route, and not by its `/check` poll either. Poll
+        /// `get_transform_async/check` with the returned async job ID until it reports
+        /// `complete` or `failed`; a `complete` result carries a `TransformOutput` whose
+        /// `output_handle` `download_transform_output` exchanges for the bytes. Splitting
+        /// retrieval out this way is what lets the route return outputs larger than an async
+        /// result can carry.</para>
+        /// </summary>
+        /// <param name="transformType">What to produce from the source file. Required.</param>
+        /// <param name="fileIdOrUrl">Identifier of the source file to transform. Callers must
+        /// set exactly one of the `FileIdOrUrl` variants. The referenced file must be in a
+        /// format the requested `transform_type` supports; see the route description for the
+        /// per-transform format lists. Requests against unsupported formats fail with
+        /// `unsupported_format_error`.</param>
+        /// <param name="thumbnail">Options for `TransformType.thumbnail`.</param>
+        /// <param name="image">Options for `TransformType.image` and
+        /// `TransformType.image_pdf`.</param>
+        /// <param name="videoFrame">Options for `TransformType.video_frame`.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetTransformAsyncAsync(TransformType transformType,
+                                                                                         FileIdOrUrl fileIdOrUrl = null,
+                                                                                         ThumbnailOptions thumbnail = null,
+                                                                                         ImageOptions image = null,
+                                                                                         VideoFrameOptions videoFrame = null)
+        {
+            var transformArgs = new TransformArgs(transformType,
+                                                  fileIdOrUrl,
+                                                  thumbnail,
+                                                  image,
+                                                  videoFrame);
+
+            return this.GetTransformAsyncAsync(transformArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get transform async route.</para>
+        /// </summary>
+        /// <param name="transformType">What to produce from the source file. Required.</param>
+        /// <param name="fileIdOrUrl">Identifier of the source file to transform. Callers must
+        /// set exactly one of the `FileIdOrUrl` variants. The referenced file must be in a
+        /// format the requested `transform_type` supports; see the route description for the
+        /// per-transform format lists. Requests against unsupported formats fail with
+        /// `unsupported_format_error`.</param>
+        /// <param name="thumbnail">Options for `TransformType.thumbnail`.</param>
+        /// <param name="image">Options for `TransformType.image` and
+        /// `TransformType.image_pdf`.</param>
+        /// <param name="videoFrame">Options for `TransformType.video_frame`.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetTransformAsync(TransformType transformType,
+                                                       FileIdOrUrl fileIdOrUrl = null,
+                                                       ThumbnailOptions thumbnail = null,
+                                                       ImageOptions image = null,
+                                                       VideoFrameOptions videoFrame = null,
+                                                       sys.AsyncCallback callback = null,
+                                                       object callbackState = null)
+        {
+            var transformArgs = new TransformArgs(transformType,
+                                                  fileIdOrUrl,
+                                                  thumbnail,
+                                                  image,
+                                                  videoFrame);
+
+            return this.BeginGetTransformAsync(transformArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get transform async route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public global::Dropbox.Api.Async.LaunchResultBase EndGetTransformAsync(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchResultBase>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns the status or result of specified get_transform_async task.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<GetTransformAsyncCheckResult> GetTransformAsyncCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, GetTransformAsyncCheckResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/riviera/get_transform_async/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Riviera.GetTransformAsyncCheckResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get transform async check route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetTransformAsyncCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.GetTransformAsyncCheckAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the status or result of specified get_transform_async task.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<GetTransformAsyncCheckResult> GetTransformAsyncCheckAsync(string asyncJobId)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.GetTransformAsyncCheckAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the get transform async check route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginGetTransformAsyncCheck(string asyncJobId,
+                                                            sys.AsyncCallback callback,
+                                                            object callbackState = null)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginGetTransformAsyncCheck(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the get transform async check
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public GetTransformAsyncCheckResult EndGetTransformAsyncCheck(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<GetTransformAsyncCheckResult>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
