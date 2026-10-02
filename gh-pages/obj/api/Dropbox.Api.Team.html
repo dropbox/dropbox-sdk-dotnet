@@ -1876,6 +1876,130 @@ does not exist on this team.</p>
       <h4><a class="xref" href="Dropbox.Api.Team.MembersSetProfilePhotoError.UserNotInTeam.html">MembersSetProfilePhotoError.UserNotInTeam</a></h4>
       <section><p>The user is not a member of the team.</p>
 </section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchArg.html">MembersSuspendBatchArg</a></h4>
+      <section><p>Launches one action-specific member suspension batch job.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchComplete.html">MembersSuspendBatchComplete</a></h4>
+      <section><p>The members suspend batch complete object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchError.html">MembersSuspendBatchError</a></h4>
+      <section><p>A typed launch rejection. Authorization failures continue to use the API v2
+authentication/permission error surface.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchError.ActingAdmin.html">MembersSuspendBatchError.ActingAdmin</a></h4>
+      <section><p>The acting administrator cannot suspend their own account.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchError.DuplicateClientItemId.html">MembersSuspendBatchError.DuplicateClientItemId</a></h4>
+      <section><p>More than one target uses the same client item ID.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchError.DuplicateTeamMemberId.html">MembersSuspendBatchError.DuplicateTeamMemberId</a></h4>
+      <section><p>More than one target selects the same team member.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchError.LastAdmin.html">MembersSuspendBatchError.LastAdmin</a></h4>
+      <section><p>Suspending the selected members would leave the team without an active
+admin.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchError.Other.html">MembersSuspendBatchError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchError.TooManyMembers.html">MembersSuspendBatchError.TooManyMembers</a></h4>
+      <section><p>The request contains more than 500 members.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchJobStatus.html">MembersSuspendBatchJobStatus</a></h4>
+      <section><p>Coarse job state. Live row progress and report contents are intentionally
+omitted; the authorized team admin who initiated the batch receives row details in the
+terminal email report.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchJobStatus.Complete.html">MembersSuspendBatchJobStatus.Complete</a></h4>
+      <section><p>The complete object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchJobStatus.Failed.html">MembersSuspendBatchJobStatus.Failed</a></h4>
+      <section><p>The failed object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchJobStatus.InProgress.html">MembersSuspendBatchJobStatus.InProgress</a></h4>
+      <section><p>The asynchronous job is still in progress.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchJobStatus.Other.html">MembersSuspendBatchJobStatus.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchReportDeliveryStatus.html">MembersSuspendBatchReportDeliveryStatus</a></h4>
+      <section><p>The members suspend batch report delivery status object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchReportDeliveryStatus.MembersSuspendBatchReportDeliveryStatusDelivered.html">MembersSuspendBatchReportDeliveryStatus.MembersSuspendBatchReportDeliveryStatusDelivered</a></h4>
+      <section><p>The members suspend batch report delivery status delivered object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchReportDeliveryStatus.MembersSuspendBatchReportDeliveryStatusFailed.html">MembersSuspendBatchReportDeliveryStatus.MembersSuspendBatchReportDeliveryStatusFailed</a></h4>
+      <section><p>The members suspend batch report delivery status failed object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchReportDeliveryStatus.MembersSuspendBatchReportDeliveryStatusPending.html">MembersSuspendBatchReportDeliveryStatus.MembersSuspendBatchReportDeliveryStatusPending</a></h4>
+      <section><p>The members suspend batch report delivery status pending object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchReportDeliveryStatus.MembersSuspendBatchReportDeliveryStatusUnspecified.html">MembersSuspendBatchReportDeliveryStatus.MembersSuspendBatchReportDeliveryStatusUnspecified</a></h4>
+      <section><p>The members suspend batch report delivery status unspecified object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchReportDeliveryStatus.Other.html">MembersSuspendBatchReportDeliveryStatus.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowFailure.html">MembersSuspendBatchRowFailure</a></h4>
+      <section><p>Stable machine-readable reasons used by the terminal row report.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowFailure.Other.html">MembersSuspendBatchRowFailure.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowFailure.PermissionChanged.html">MembersSuspendBatchRowFailure.PermissionChanged</a></h4>
+      <section><p>The permission changed object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowFailure.ProtectedActingAdmin.html">MembersSuspendBatchRowFailure.ProtectedActingAdmin</a></h4>
+      <section><p>The protected acting admin object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowFailure.SuspendFailed.html">MembersSuspendBatchRowFailure.SuspendFailed</a></h4>
+      <section><p>The suspend failed object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowFailure.SuspendInactiveUser.html">MembersSuspendBatchRowFailure.SuspendInactiveUser</a></h4>
+      <section><p>The user is not active, so it cannot be suspended.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowFailure.SuspendLastAdmin.html">MembersSuspendBatchRowFailure.SuspendLastAdmin</a></h4>
+      <section><p>The user is the last admin of the team, so it cannot be suspended.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowFailure.TeamLicenseLimit.html">MembersSuspendBatchRowFailure.TeamLicenseLimit</a></h4>
+      <section><p>Team is full. The organization has no available licenses.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowFailure.UserNotFound.html">MembersSuspendBatchRowFailure.UserNotFound</a></h4>
+      <section><p>No matching user found. The provided team_member_id, email, or external_id
+does not exist on this team.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowFailure.UserNotInTeam.html">MembersSuspendBatchRowFailure.UserNotInTeam</a></h4>
+      <section><p>The user is not a member of the team.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowOutcome.html">MembersSuspendBatchRowOutcome</a></h4>
+      <section><p>The terminal outcome for one requested member. Row outcomes are delivered in the
+report rather than embedded in the status response.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowOutcome.Failed.html">MembersSuspendBatchRowOutcome.Failed</a></h4>
+      <section><p>The failed object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowOutcome.Other.html">MembersSuspendBatchRowOutcome.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowOutcome.Suspended.html">MembersSuspendBatchRowOutcome.Suspended</a></h4>
+      <section><p>The suspended object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchRowOutcome.Unknown.html">MembersSuspendBatchRowOutcome.Unknown</a></h4>
+      <section><p>The unknown object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchTarget.html">MembersSuspendBatchTarget</a></h4>
+      <section><p>One member selected for suspension. The opaque client item ID correlates the
+eventual report row with the caller's input without sending CSV data.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchTaskFailure.html">MembersSuspendBatchTaskFailure</a></h4>
+      <section><p>The members suspend batch task failure object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchTaskFailure.Other.html">MembersSuspendBatchTaskFailure.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchTaskFailure.UnusableResult.html">MembersSuspendBatchTaskFailure.UnusableResult</a></h4>
+      <section><p>The unusable result object</p>
+</section>
       <h4><a class="xref" href="Dropbox.Api.Team.MembersSuspendError.html">MembersSuspendError</a></h4>
       <section><p>The members suspend error object</p>
 </section>

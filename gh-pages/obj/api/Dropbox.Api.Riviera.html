@@ -151,6 +151,13 @@ links cannot be transcribed.</p>
 input). The string is a human-readable message; retrying the same request will not
 help.</p>
 </section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.DownloadTransformOutputArgs.html">DownloadTransformOutputArgs</a></h4>
+      <section><p>Arguments for `download_transform_output`.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.DownloadTransformOutputResult.html">DownloadTransformOutputResult</a></h4>
+      <section><p>Describes the bytes in the response body. Returned in the `Dropbox-API-Result`
+header.</p>
+</section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></h4>
       <section><p>The file id or url object</p>
 </section>
@@ -314,6 +321,25 @@ returned by <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.ht
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.GetTranscriptResult.html">GetTranscriptResult</a></h4>
       <section><p>The get transcript result object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetTransformAsyncCheckResult.html">GetTransformAsyncCheckResult</a></h4>
+      <section><p>Result type for EventBus async check - must end in "CheckResult"</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetTransformAsyncCheckResult.Complete.html">GetTransformAsyncCheckResult.Complete</a></h4>
+      <section><p>The job finished successfully.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetTransformAsyncCheckResult.Failed.html">GetTransformAsyncCheckResult.Failed</a></h4>
+      <section><p>The job finished unsuccessfully.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetTransformAsyncCheckResult.InProgress.html">GetTransformAsyncCheckResult.InProgress</a></h4>
+      <section><p>The job has not finished yet. Poll again.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.GetTransformAsyncCheckResult.Other.html">GetTransformAsyncCheckResult.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ImageOptions.html">ImageOptions</a></h4>
+      <section><p>Options for `TransformType.image` and `TransformType.image_pdf`. Supplying this
+message with any other transform type fails with `invalid_options_error`.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.html">KeyframesExtractionApiV2Error</a></h4>
       <section><p>Reason a keyframe extraction job failed. Returned in the `failed` variant of
@@ -601,6 +627,84 @@ links cannot be processed.</p>
 input). The string is a human-readable message; retrying the same request will not
 help.</p>
 </section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailFormat.html">ThumbnailFormat</a></h4>
+      <section><p>The encoding of the produced image. These match `files/get_thumbnail`'s formats:
+JPEG is the better choice for photographs, PNG for screenshots, line art, and anything
+with sharp text edges or transparency.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailFormat.Jpeg.html">ThumbnailFormat.Jpeg</a></h4>
+      <section><p>Lossy JPEG. The default, and the right choice for photographic
+sources.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailFormat.Other.html">ThumbnailFormat.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailFormat.Png.html">ThumbnailFormat.Png</a></h4>
+      <section><p>Lossless PNG, with alpha preserved.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailFormat.Webp.html">ThumbnailFormat.Webp</a></h4>
+      <section><p>WebP, which compresses better than either JPEG or PNG at comparable quality
+but is not readable by every consumer.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailMode.html">ThumbnailMode</a></h4>
+      <section><p>How to resize and crop the source to reach the requested `ThumbnailSize`. These
+match `files/get_thumbnail`'s modes.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailMode.Bestfit.html">ThumbnailMode.Bestfit</a></h4>
+      <section><p>Scale down the image to fit within the given size or its transpose.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailMode.FitoneBestfit.html">ThumbnailMode.FitoneBestfit</a></h4>
+      <section><p>Scale down the image to completely cover the given size or its
+transpose.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailMode.Original.html">ThumbnailMode.Original</a></h4>
+      <section><p>Don't resize the image at all.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailMode.Other.html">ThumbnailMode.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailMode.Strict.html">ThumbnailMode.Strict</a></h4>
+      <section><p>Scale down the image to fit within the given size.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailOptions.html">ThumbnailOptions</a></h4>
+      <section><p>Options for `TransformType.thumbnail`. Supplying this message with any other
+transform type fails with `invalid_options_error`.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailSize.html">ThumbnailSize</a></h4>
+      <section><p>The size of the thumbnail to produce. These are the same named size buckets
+`files/get_thumbnail` supports, with the same meanings; arbitrary pixel dimensions are
+not accepted.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailSize.Other.html">ThumbnailSize.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailSize.W1024h768.html">ThumbnailSize.W1024h768</a></h4>
+      <section><p>1024 by 768 px.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailSize.W128h128.html">ThumbnailSize.W128h128</a></h4>
+      <section><p>128 by 128 px.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailSize.W2048h1536.html">ThumbnailSize.W2048h1536</a></h4>
+      <section><p>2048 by 1536 px.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailSize.W256h256.html">ThumbnailSize.W256h256</a></h4>
+      <section><p>256 by 256 px.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailSize.W32h32.html">ThumbnailSize.W32h32</a></h4>
+      <section><p>32 by 32 px.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailSize.W480h320.html">ThumbnailSize.W480h320</a></h4>
+      <section><p>480 by 320 px.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailSize.W640h480.html">ThumbnailSize.W640h480</a></h4>
+      <section><p>640 by 480 px.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailSize.W64h64.html">ThumbnailSize.W64h64</a></h4>
+      <section><p>64 by 64 px.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ThumbnailSize.W960h640.html">ThumbnailSize.W960h640</a></h4>
+      <section><p>960 by 640 px.</p>
+</section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.html">TimestampLevel</a></h4>
       <section><p>Granularity of the time offsets returned for each transcript segment.</p>
 </section>
@@ -613,6 +717,128 @@ help.</p>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.Word.html">TimestampLevel.Word</a></h4>
       <section><p>One segment per word, useful for fine-grained alignment such as captioning or
 highlight-as-you-listen experiences.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformApiV2Error.html">TransformApiV2Error</a></h4>
+      <section><p>Reason a transform job failed. Returned in the `failed` variant of
+`GetTransformAsyncCheckResult`, and by `download_transform_output`. This is a semantic
+error union: the HTTP status of the poll request itself is unaffected (a poll that
+surfaces a failed job is still a normal successful poll response). Callers should
+branch on the variant.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformApiV2Error.ConversionFailureError.html">TransformApiV2Error.ConversionFailureError</a></h4>
+      <section><p>The source file was readable but could not be converted, for example because
+it is corrupt.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformApiV2Error.ExpiredHandleError.html">TransformApiV2Error.ExpiredHandleError</a></h4>
+      <section><p>The `output_handle` presented to `download_transform_output` has passed its
+`TransformOutput.expires_ts`. Request the transform again to get a fresh handle.
+Only `download_transform_output` produces this; a poll never does.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformApiV2Error.InvalidOptionsError.html">TransformApiV2Error.InvalidOptionsError</a></h4>
+      <section><p>`transform_type` was missing, or the supplied options did not match the
+requested transform type, or an option was out of range. The request is malformed;
+fix it rather than retrying it.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformApiV2Error.IsAFolderError.html">TransformApiV2Error.IsAFolderError</a></h4>
+      <section><p>The target is a folder, not a file.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformApiV2Error.LimitExceededError.html">TransformApiV2Error.LimitExceededError</a></h4>
+      <section><p>A resource limit was exceeded while producing the result -- for example the
+source file is larger than the requested transform accepts.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformApiV2Error.LinkDownloadDisabledError.html">TransformApiV2Error.LinkDownloadDisabledError</a></h4>
+      <section><p>`FileIdOrUrl.url` referenced a Dropbox shared link whose owner has disabled
+downloads.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformApiV2Error.NotFoundError.html">TransformApiV2Error.NotFoundError</a></h4>
+      <section><p>The referenced file does not exist or is not accessible.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformApiV2Error.Other.html">TransformApiV2Error.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformApiV2Error.ServerError.html">TransformApiV2Error.ServerError</a></h4>
+      <section><p>An unexpected, typically transient, server-side failure. The string is a
+human-readable message; retrying with backoff may succeed.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformApiV2Error.SharedLinkPasswordProtected.html">TransformApiV2Error.SharedLinkPasswordProtected</a></h4>
+      <section><p>`FileIdOrUrl.url` referenced a password-protected Dropbox shared link.
+Riviera cannot supply the password, so such links cannot be transformed.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformApiV2Error.UnsupportedFormatError.html">TransformApiV2Error.UnsupportedFormatError</a></h4>
+      <section><p>The source file is not in a format the requested `transform_type` can
+convert.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformApiV2Error.UserError.html">TransformApiV2Error.UserError</a></h4>
+      <section><p>The request could not be processed as supplied (a problem with the caller's
+input). The string is a human-readable message; retrying the same request will not
+help.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformArgs.html">TransformArgs</a></h4>
+      <section><p>Arguments for the asynchronous `get_transform_async` route. Exactly one of
+`file_id`, `path`, or `url` must be supplied via `file_id_or_url` to identify the
+source file, and exactly one variant of `transform_type` must be set to say what to
+produce from it. At most one options message may be set, and it must be the one
+belonging to the requested `transform_type`. Options that belong to a different
+transform type are rejected with `invalid_options_error` rather than ignored, so that a
+request whose parameters were misassembled fails visibly instead of quietly producing
+the wrong output.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformOutput.html">TransformOutput</a></h4>
+      <section><p>A completed transform: a handle for retrieving the produced bytes, plus enough
+metadata to decide whether to retrieve them. The bytes themselves are deliberately not
+carried here. A completed async result is persisted, so it is bounded by a row-size
+limit well below the size of a typical converted document -- an inline payload would
+fail for exactly the large documents this route exists to convert. The transform
+therefore completes by caching its output and handing back `output_handle`, which
+`download_transform_output` exchanges for the bytes.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformType.html">TransformType</a></h4>
+      <section><p>Which derived file to produce from the source file. Unlike the other Riviera
+content routes, which each expose one capability, `get_transform_async` is a single
+route over many conversions: the caller names the source file and the output it wants,
+and the service picks the conversion pipeline. Exactly one variant must be set; a
+request with none set fails with `invalid_options_error`.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformType.Html.html">TransformType.Html</a></h4>
+      <section><p>Convert the source document to HTML. Supported for spreadsheets only, where
+HTML preserves the sheet layout that a PDF rendering flattens.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformType.Image.html">TransformType.Image</a></h4>
+      <section><p>Re-encode the source as a web-safe raster image (JPEG or PNG). This is the
+transform to use to normalize formats a browser cannot display directly -- HEIC,
+camera RAW, PSD, SVG -- and to render a single page of a document as an image.
+Formats a browser can already display, such as JPEG and PNG, are not accepted; use
+`thumbnail` to resize or re-encode those. Configured by
+`TransformArgs.image`.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformType.ImagePdf.html">TransformType.ImagePdf</a></h4>
+      <section><p>Render the source as a page image by way of a PDF conversion, rather than by
+whichever image pipeline the source format would otherwise use. Prefer `image`
+unless you specifically need the PDF-rendered result; the two differ for formats
+that have a native image pipeline of their own (ebooks, for example). Configured by
+`TransformArgs.image`.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformType.Other.html">TransformType.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformType.Pdf.html">TransformType.Pdf</a></h4>
+      <section><p>Convert the source document to PDF. Supported for word-processing,
+presentation, and spreadsheet documents; images are not accepted.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformType.Thumbnail.html">TransformType.Thumbnail</a></h4>
+      <section><p>Produce a resized thumbnail of the source at one of the supported sizes.
+Configured by `TransformArgs.thumbnail`.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TransformType.VideoFrame.html">TransformType.VideoFrame</a></h4>
+      <section><p>Extract a single frame from a video as a still image. Configured by
+`TransformArgs.video_frame`. This produces one frame at one requested offset. To
+get the set of scene-change keyframes across a whole video, use
+`get_keyframes_async`, which returns every detected frame with its timestamp and
+scene score.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.VideoFrameOptions.html">VideoFrameOptions</a></h4>
+      <section><p>Options for `TransformType.video_frame`. Supplying this message with any other
+transform type fails with `invalid_options_error`.</p>
 </section>
 
 
