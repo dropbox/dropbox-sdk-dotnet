@@ -13,7 +13,6 @@ namespace Dropbox.Api.Team
     /// <summary>
     /// <para>The members deactivate arg object</para>
     /// </summary>
-    /// <seealso cref="BulkSuspendMemberTarget" />
     /// <seealso cref="MembersRemoveArg" />
     /// <seealso cref="MembersSuspendBatchTarget" />
     /// <seealso cref="Global::Dropbox.Api.Team.MembersDeactivateBaseArg" />

@@ -3917,39 +3917,39 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Launch a bulk suspend job. The server enforces a maximum of 500
-        /// members.</para>
+        /// <para>Deprecated compatibility alias for MembersSuspendBatch.</para>
         /// </summary>
-        /// <param name="bulkSuspendArg">The request parameters</param>
+        /// <param name="membersSuspendBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="BulkSuspendError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> MembersBulkSuspendAsync(BulkSuspendArg bulkSuspendArg)
+        /// cref="MembersSuspendBatchError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> MembersBulkSuspendAsync(MembersSuspendBatchArg membersSuspendBatchArg)
         {
-            return this.Transport.SendRpcRequestAsync<BulkSuspendArg, global::Dropbox.Api.Async.LaunchResultBase, BulkSuspendError>(bulkSuspendArg, "api", "/team/members/bulk_suspend", "team", global::Dropbox.Api.Team.BulkSuspendArg.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, global::Dropbox.Api.Team.BulkSuspendError.Decoder);
+            return this.Transport.SendRpcRequestAsync<MembersSuspendBatchArg, global::Dropbox.Api.Async.LaunchResultBase, MembersSuspendBatchError>(membersSuspendBatchArg, "api", "/team/members/bulk_suspend", "team", global::Dropbox.Api.Team.MembersSuspendBatchArg.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, global::Dropbox.Api.Team.MembersSuspendBatchError.Decoder);
         }
 
         /// <summary>
         /// <para>Begins an asynchronous send to the members bulk suspend route.</para>
         /// </summary>
-        /// <param name="bulkSuspendArg">The request parameters.</param>
+        /// <param name="membersSuspendBatchArg">The request parameters.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersBulkSuspend(BulkSuspendArg bulkSuspendArg, sys.AsyncCallback callback, object state = null)
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginMembersBulkSuspend(MembersSuspendBatchArg membersSuspendBatchArg, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.MembersBulkSuspendAsync(bulkSuspendArg);
+            var task = this.MembersBulkSuspendAsync(membersSuspendBatchArg);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Launch a bulk suspend job. The server enforces a maximum of 500
-        /// members.</para>
+        /// <para>Deprecated compatibility alias for MembersSuspendBatch.</para>
         /// </summary>
         /// <param name="members">Must contain between 1 and 500 targets. The launch handler
         /// also rejects duplicate client item IDs and duplicate member selectors.</param>
@@ -3957,12 +3957,13 @@ namespace Dropbox.Api.Team.Routes
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="BulkSuspendError"/>.</exception>
-        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> MembersBulkSuspendAsync(col.IEnumerable<BulkSuspendMemberTarget> members)
+        /// cref="MembersSuspendBatchError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> MembersBulkSuspendAsync(col.IEnumerable<MembersSuspendBatchTarget> members)
         {
-            var bulkSuspendArg = new BulkSuspendArg(members);
+            var membersSuspendBatchArg = new MembersSuspendBatchArg(members);
 
-            return this.MembersBulkSuspendAsync(bulkSuspendArg);
+            return this.MembersBulkSuspendAsync(membersSuspendBatchArg);
         }
 
         /// <summary>
@@ -3975,13 +3976,14 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginMembersBulkSuspend(col.IEnumerable<BulkSuspendMemberTarget> members,
+        [sys.Obsolete("This function is deprecated")]
+        public sys.IAsyncResult BeginMembersBulkSuspend(col.IEnumerable<MembersSuspendBatchTarget> members,
                                                         sys.AsyncCallback callback,
                                                         object callbackState = null)
         {
-            var bulkSuspendArg = new BulkSuspendArg(members);
+            var membersSuspendBatchArg = new MembersSuspendBatchArg(members);
 
-            return this.BeginMembersBulkSuspend(bulkSuspendArg, callback, callbackState);
+            return this.BeginMembersBulkSuspend(membersSuspendBatchArg, callback, callbackState);
         }
 
         /// <summary>
@@ -3993,7 +3995,8 @@ namespace Dropbox.Api.Team.Routes
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="BulkSuspendError"/>.</exception>
+        /// cref="MembersSuspendBatchError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public global::Dropbox.Api.Async.LaunchResultBase EndMembersBulkSuspend(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchResultBase>;
@@ -4006,7 +4009,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Poll a previously launched bulk suspend job.</para>
+        /// <para>Deprecated compatibility alias for MembersSuspendBatchJobStatusCheck.</para>
         /// </summary>
         /// <param name="pollArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
@@ -4014,9 +4017,10 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<BulkSuspendJobStatus> MembersBulkSuspendJobStatusCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<MembersSuspendBatchJobStatus> MembersBulkSuspendJobStatusCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
-            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, BulkSuspendJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/bulk_suspend/job_status/check", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Team.BulkSuspendJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, MembersSuspendBatchJobStatus, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/team/members/bulk_suspend/job_status/check", "team", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Team.MembersSuspendBatchJobStatus.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
         }
 
         /// <summary>
@@ -4029,6 +4033,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginMembersBulkSuspendJobStatusCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.MembersBulkSuspendJobStatusCheckAsync(pollArg);
@@ -4037,7 +4042,7 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
-        /// <para>Poll a previously launched bulk suspend job.</para>
+        /// <para>Deprecated compatibility alias for MembersSuspendBatchJobStatusCheck.</para>
         /// </summary>
         /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
         /// response returned from the method that launched the job.</param>
@@ -4046,7 +4051,8 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public t.Task<BulkSuspendJobStatus> MembersBulkSuspendJobStatusCheckAsync(string asyncJobId)
+        [sys.Obsolete("This function is deprecated")]
+        public t.Task<MembersSuspendBatchJobStatus> MembersBulkSuspendJobStatusCheckAsync(string asyncJobId)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
 
@@ -4064,6 +4070,7 @@ namespace Dropbox.Api.Team.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginMembersBulkSuspendJobStatusCheck(string asyncJobId,
                                                                       sys.AsyncCallback callback,
                                                                       object callbackState = null)
@@ -4083,9 +4090,10 @@ namespace Dropbox.Api.Team.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
-        public BulkSuspendJobStatus EndMembersBulkSuspendJobStatusCheck(sys.IAsyncResult asyncResult)
+        [sys.Obsolete("This function is deprecated")]
+        public MembersSuspendBatchJobStatus EndMembersBulkSuspendJobStatusCheck(sys.IAsyncResult asyncResult)
         {
-            var task = asyncResult as t.Task<BulkSuspendJobStatus>;
+            var task = asyncResult as t.Task<MembersSuspendBatchJobStatus>;
             if (task == null)
             {
                 throw new sys.InvalidOperationException();
