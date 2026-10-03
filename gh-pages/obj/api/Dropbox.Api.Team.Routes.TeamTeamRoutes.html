@@ -5289,13 +5289,14 @@ from other send requests.</p>
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamTeamRoutes.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Team_Routes_TeamTeamRoutes_BeginMembersBulkSuspend_" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.BeginMembersBulkSuspend*"></a>
-  <h4 id="Dropbox_Api_Team_Routes_TeamTeamRoutes_BeginMembersBulkSuspend_Dropbox_Api_Team_BulkSuspendArg_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.BeginMembersBulkSuspend(Dropbox.Api.Team.BulkSuspendArg,System.AsyncCallback,System.Object)">BeginMembersBulkSuspend(BulkSuspendArg, AsyncCallback, object)</h4>
+  <h4 id="Dropbox_Api_Team_Routes_TeamTeamRoutes_BeginMembersBulkSuspend_Dropbox_Api_Team_MembersSuspendBatchArg_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.BeginMembersBulkSuspend(Dropbox.Api.Team.MembersSuspendBatchArg,System.AsyncCallback,System.Object)">BeginMembersBulkSuspend(MembersSuspendBatchArg, AsyncCallback, object)</h4>
   <div class="markdown level1 summary"><p>Begins an asynchronous send to the members bulk suspend route.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncResult BeginMembersBulkSuspend(BulkSuspendArg bulkSuspendArg, AsyncCallback callback, object state = null)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This function is deprecated&quot;)]
+public IAsyncResult BeginMembersBulkSuspend(MembersSuspendBatchArg membersSuspendBatchArg, AsyncCallback callback, object state = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5308,8 +5309,8 @@ from other send requests.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Dropbox.Api.Team.BulkSuspendArg.html">BulkSuspendArg</a></td>
-        <td><span class="parametername">bulkSuspendArg</span></td>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchArg.html">MembersSuspendBatchArg</a></td>
+        <td><span class="parametername">membersSuspendBatchArg</span></td>
         <td><p>The request parameters.</p>
 </td>
       </tr>
@@ -5350,13 +5351,14 @@ send requests.</p>
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamTeamRoutes.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Team_Routes_TeamTeamRoutes_BeginMembersBulkSuspend_" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.BeginMembersBulkSuspend*"></a>
-  <h4 id="Dropbox_Api_Team_Routes_TeamTeamRoutes_BeginMembersBulkSuspend_System_Collections_Generic_IEnumerable_Dropbox_Api_Team_BulkSuspendMemberTarget__System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.BeginMembersBulkSuspend(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.BulkSuspendMemberTarget},System.AsyncCallback,System.Object)">BeginMembersBulkSuspend(IEnumerable&lt;BulkSuspendMemberTarget&gt;, AsyncCallback, object)</h4>
+  <h4 id="Dropbox_Api_Team_Routes_TeamTeamRoutes_BeginMembersBulkSuspend_System_Collections_Generic_IEnumerable_Dropbox_Api_Team_MembersSuspendBatchTarget__System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.BeginMembersBulkSuspend(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MembersSuspendBatchTarget},System.AsyncCallback,System.Object)">BeginMembersBulkSuspend(IEnumerable&lt;MembersSuspendBatchTarget&gt;, AsyncCallback, object)</h4>
   <div class="markdown level1 summary"><p>Begins an asynchronous send to the members bulk suspend route.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncResult BeginMembersBulkSuspend(IEnumerable&lt;BulkSuspendMemberTarget&gt; members, AsyncCallback callback, object callbackState = null)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This function is deprecated&quot;)]
+public IAsyncResult BeginMembersBulkSuspend(IEnumerable&lt;MembersSuspendBatchTarget&gt; members, AsyncCallback callback, object callbackState = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5369,7 +5371,7 @@ send requests.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Dropbox.Api.Team.BulkSuspendMemberTarget.html">BulkSuspendMemberTarget</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchTarget.html">MembersSuspendBatchTarget</a>&gt;</td>
         <td><span class="parametername">members</span></td>
         <td><p>Must contain between 1 and 500 targets. The launch handler
 also rejects duplicate client item IDs and duplicate member selectors.</p>
@@ -5419,7 +5421,8 @@ route.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncResult BeginMembersBulkSuspendJobStatusCheck(PollArg pollArg, AsyncCallback callback, object state = null)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This function is deprecated&quot;)]
+public IAsyncResult BeginMembersBulkSuspendJobStatusCheck(PollArg pollArg, AsyncCallback callback, object state = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -5481,7 +5484,8 @@ route.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IAsyncResult BeginMembersBulkSuspendJobStatusCheck(string asyncJobId, AsyncCallback callback, object callbackState = null)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This function is deprecated&quot;)]
+public IAsyncResult BeginMembersBulkSuspendJobStatusCheck(string asyncJobId, AsyncCallback callback, object callbackState = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -15466,7 +15470,8 @@ complete</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LaunchResultBase EndMembersBulkSuspend(IAsyncResult asyncResult)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This function is deprecated&quot;)]
+public LaunchResultBase EndMembersBulkSuspend(IAsyncResult asyncResult)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -15515,7 +15520,7 @@ request</p>
       <tr>
         <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
         <td><p>Thrown if there is an error
-processing the request; This will contain a <a class="xref" href="Dropbox.Api.Team.BulkSuspendError.html">BulkSuspendError</a>.</p>
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchError.html">MembersSuspendBatchError</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -15532,7 +15537,8 @@ status check route to complete</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BulkSuspendJobStatus EndMembersBulkSuspendJobStatusCheck(IAsyncResult asyncResult)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This function is deprecated&quot;)]
+public MembersSuspendBatchJobStatus EndMembersBulkSuspendJobStatusCheck(IAsyncResult asyncResult)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -15563,7 +15569,7 @@ request</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Dropbox.Api.Team.BulkSuspendJobStatus.html">BulkSuspendJobStatus</a></td>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchJobStatus.html">MembersSuspendBatchJobStatus</a></td>
         <td><p>The response to the send request</p>
 </td>
       </tr>
@@ -23716,14 +23722,14 @@ parameter contains the response from the server.</p>
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamTeamRoutes.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Team_Routes_TeamTeamRoutes_MembersBulkSuspendAsync_" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersBulkSuspendAsync*"></a>
-  <h4 id="Dropbox_Api_Team_Routes_TeamTeamRoutes_MembersBulkSuspendAsync_Dropbox_Api_Team_BulkSuspendArg_" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersBulkSuspendAsync(Dropbox.Api.Team.BulkSuspendArg)">MembersBulkSuspendAsync(BulkSuspendArg)</h4>
-  <div class="markdown level1 summary"><p>Launch a bulk suspend job. The server enforces a maximum of 500
-members.</p>
+  <h4 id="Dropbox_Api_Team_Routes_TeamTeamRoutes_MembersBulkSuspendAsync_Dropbox_Api_Team_MembersSuspendBatchArg_" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersBulkSuspendAsync(Dropbox.Api.Team.MembersSuspendBatchArg)">MembersBulkSuspendAsync(MembersSuspendBatchArg)</h4>
+  <div class="markdown level1 summary"><p>Deprecated compatibility alias for MembersSuspendBatch.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;LaunchResultBase&gt; MembersBulkSuspendAsync(BulkSuspendArg bulkSuspendArg)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This function is deprecated&quot;)]
+public Task&lt;LaunchResultBase&gt; MembersBulkSuspendAsync(MembersSuspendBatchArg membersSuspendBatchArg)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -23736,8 +23742,8 @@ members.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Dropbox.Api.Team.BulkSuspendArg.html">BulkSuspendArg</a></td>
-        <td><span class="parametername">bulkSuspendArg</span></td>
+        <td><a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchArg.html">MembersSuspendBatchArg</a></td>
+        <td><span class="parametername">membersSuspendBatchArg</span></td>
         <td><p>The request parameters</p>
 </td>
       </tr>
@@ -23772,7 +23778,7 @@ parameter contains the response from the server.</p>
       <tr>
         <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
         <td><p>Thrown if there is an error
-processing the request; This will contain a <a class="xref" href="Dropbox.Api.Team.BulkSuspendError.html">BulkSuspendError</a>.</p>
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchError.html">MembersSuspendBatchError</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -23782,14 +23788,14 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.Te
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamTeamRoutes.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Team_Routes_TeamTeamRoutes_MembersBulkSuspendAsync_" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersBulkSuspendAsync*"></a>
-  <h4 id="Dropbox_Api_Team_Routes_TeamTeamRoutes_MembersBulkSuspendAsync_System_Collections_Generic_IEnumerable_Dropbox_Api_Team_BulkSuspendMemberTarget__" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersBulkSuspendAsync(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.BulkSuspendMemberTarget})">MembersBulkSuspendAsync(IEnumerable&lt;BulkSuspendMemberTarget&gt;)</h4>
-  <div class="markdown level1 summary"><p>Launch a bulk suspend job. The server enforces a maximum of 500
-members.</p>
+  <h4 id="Dropbox_Api_Team_Routes_TeamTeamRoutes_MembersBulkSuspendAsync_System_Collections_Generic_IEnumerable_Dropbox_Api_Team_MembersSuspendBatchTarget__" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersBulkSuspendAsync(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MembersSuspendBatchTarget})">MembersBulkSuspendAsync(IEnumerable&lt;MembersSuspendBatchTarget&gt;)</h4>
+  <div class="markdown level1 summary"><p>Deprecated compatibility alias for MembersSuspendBatch.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;LaunchResultBase&gt; MembersBulkSuspendAsync(IEnumerable&lt;BulkSuspendMemberTarget&gt; members)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This function is deprecated&quot;)]
+public Task&lt;LaunchResultBase&gt; MembersBulkSuspendAsync(IEnumerable&lt;MembersSuspendBatchTarget&gt; members)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -23802,7 +23808,7 @@ members.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Dropbox.Api.Team.BulkSuspendMemberTarget.html">BulkSuspendMemberTarget</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchTarget.html">MembersSuspendBatchTarget</a>&gt;</td>
         <td><span class="parametername">members</span></td>
         <td><p>Must contain between 1 and 500 targets. The launch handler
 also rejects duplicate client item IDs and duplicate member selectors.</p>
@@ -23839,7 +23845,7 @@ parameter contains the response from the server.</p>
       <tr>
         <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
         <td><p>Thrown if there is an error
-processing the request; This will contain a <a class="xref" href="Dropbox.Api.Team.BulkSuspendError.html">BulkSuspendError</a>.</p>
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchError.html">MembersSuspendBatchError</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -23850,12 +23856,13 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.Te
   </span>
   <a id="Dropbox_Api_Team_Routes_TeamTeamRoutes_MembersBulkSuspendJobStatusCheckAsync_" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersBulkSuspendJobStatusCheckAsync*"></a>
   <h4 id="Dropbox_Api_Team_Routes_TeamTeamRoutes_MembersBulkSuspendJobStatusCheckAsync_Dropbox_Api_Async_PollArg_" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersBulkSuspendJobStatusCheckAsync(Dropbox.Api.Async.PollArg)">MembersBulkSuspendJobStatusCheckAsync(PollArg)</h4>
-  <div class="markdown level1 summary"><p>Poll a previously launched bulk suspend job.</p>
+  <div class="markdown level1 summary"><p>Deprecated compatibility alias for MembersSuspendBatchJobStatusCheck.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BulkSuspendJobStatus&gt; MembersBulkSuspendJobStatusCheckAsync(PollArg pollArg)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This function is deprecated&quot;)]
+public Task&lt;MembersSuspendBatchJobStatus&gt; MembersBulkSuspendJobStatusCheckAsync(PollArg pollArg)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -23885,7 +23892,7 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.Te
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Team.BulkSuspendJobStatus.html">BulkSuspendJobStatus</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchJobStatus.html">MembersSuspendBatchJobStatus</a>&gt;</td>
         <td><p>The task that represents the asynchronous send operation. The TResult
 parameter contains the response from the server.</p>
 </td>
@@ -23915,12 +23922,13 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.As
   </span>
   <a id="Dropbox_Api_Team_Routes_TeamTeamRoutes_MembersBulkSuspendJobStatusCheckAsync_" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersBulkSuspendJobStatusCheckAsync*"></a>
   <h4 id="Dropbox_Api_Team_Routes_TeamTeamRoutes_MembersBulkSuspendJobStatusCheckAsync_System_String_" data-uid="Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersBulkSuspendJobStatusCheckAsync(System.String)">MembersBulkSuspendJobStatusCheckAsync(string)</h4>
-  <div class="markdown level1 summary"><p>Poll a previously launched bulk suspend job.</p>
+  <div class="markdown level1 summary"><p>Deprecated compatibility alias for MembersSuspendBatchJobStatusCheck.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;BulkSuspendJobStatus&gt; MembersBulkSuspendJobStatusCheckAsync(string asyncJobId)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This function is deprecated&quot;)]
+public Task&lt;MembersSuspendBatchJobStatus&gt; MembersBulkSuspendJobStatusCheckAsync(string asyncJobId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -23951,7 +23959,7 @@ response returned from the method that launched the job.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Team.BulkSuspendJobStatus.html">BulkSuspendJobStatus</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Team.MembersSuspendBatchJobStatus.html">MembersSuspendBatchJobStatus</a>&gt;</td>
         <td><p>The task that represents the asynchronous send operation. The TResult
 parameter contains the response from the server.</p>
 </td>
