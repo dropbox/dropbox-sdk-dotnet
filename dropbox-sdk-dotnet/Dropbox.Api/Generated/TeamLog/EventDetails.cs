@@ -6686,6 +6686,126 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// ProtectCustomDataTypeCreatedDetails</para>
+        /// </summary>
+        public bool IsProtectCustomDataTypeCreatedDetails
+        {
+            get
+            {
+                return this is ProtectCustomDataTypeCreatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectCustomDataTypeCreatedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ProtectCustomDataTypeCreatedDetails AsProtectCustomDataTypeCreatedDetails
+        {
+            get
+            {
+                return this as ProtectCustomDataTypeCreatedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectCustomDataTypeDeletedDetails</para>
+        /// </summary>
+        public bool IsProtectCustomDataTypeDeletedDetails
+        {
+            get
+            {
+                return this is ProtectCustomDataTypeDeletedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectCustomDataTypeDeletedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ProtectCustomDataTypeDeletedDetails AsProtectCustomDataTypeDeletedDetails
+        {
+            get
+            {
+                return this as ProtectCustomDataTypeDeletedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectCustomDataTypeDisabledDetails</para>
+        /// </summary>
+        public bool IsProtectCustomDataTypeDisabledDetails
+        {
+            get
+            {
+                return this is ProtectCustomDataTypeDisabledDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectCustomDataTypeDisabledDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ProtectCustomDataTypeDisabledDetails AsProtectCustomDataTypeDisabledDetails
+        {
+            get
+            {
+                return this as ProtectCustomDataTypeDisabledDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectCustomDataTypeEnabledDetails</para>
+        /// </summary>
+        public bool IsProtectCustomDataTypeEnabledDetails
+        {
+            get
+            {
+                return this is ProtectCustomDataTypeEnabledDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectCustomDataTypeEnabledDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ProtectCustomDataTypeEnabledDetails AsProtectCustomDataTypeEnabledDetails
+        {
+            get
+            {
+                return this as ProtectCustomDataTypeEnabledDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ProtectCustomDataTypeModifiedDetails</para>
+        /// </summary>
+        public bool IsProtectCustomDataTypeModifiedDetails
+        {
+            get
+            {
+                return this is ProtectCustomDataTypeModifiedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ProtectCustomDataTypeModifiedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ProtectCustomDataTypeModifiedDetails AsProtectCustomDataTypeModifiedDetails
+        {
+            get
+            {
+                return this as ProtectCustomDataTypeModifiedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// ProtectInternalDomainsChangedDetails</para>
         /// </summary>
         public bool IsProtectInternalDomainsChangedDetails
@@ -16707,6 +16827,36 @@ namespace Dropbox.Api.TeamLog
                     ProtectActionStopSharingDetails.Encoder.EncodeFields((ProtectActionStopSharingDetails)value, writer);
                     return;
                 }
+                if (value is ProtectCustomDataTypeCreatedDetails)
+                {
+                    WriteProperty(".tag", "protect_custom_data_type_created_details", writer, enc.StringEncoder.Instance);
+                    ProtectCustomDataTypeCreatedDetails.Encoder.EncodeFields((ProtectCustomDataTypeCreatedDetails)value, writer);
+                    return;
+                }
+                if (value is ProtectCustomDataTypeDeletedDetails)
+                {
+                    WriteProperty(".tag", "protect_custom_data_type_deleted_details", writer, enc.StringEncoder.Instance);
+                    ProtectCustomDataTypeDeletedDetails.Encoder.EncodeFields((ProtectCustomDataTypeDeletedDetails)value, writer);
+                    return;
+                }
+                if (value is ProtectCustomDataTypeDisabledDetails)
+                {
+                    WriteProperty(".tag", "protect_custom_data_type_disabled_details", writer, enc.StringEncoder.Instance);
+                    ProtectCustomDataTypeDisabledDetails.Encoder.EncodeFields((ProtectCustomDataTypeDisabledDetails)value, writer);
+                    return;
+                }
+                if (value is ProtectCustomDataTypeEnabledDetails)
+                {
+                    WriteProperty(".tag", "protect_custom_data_type_enabled_details", writer, enc.StringEncoder.Instance);
+                    ProtectCustomDataTypeEnabledDetails.Encoder.EncodeFields((ProtectCustomDataTypeEnabledDetails)value, writer);
+                    return;
+                }
+                if (value is ProtectCustomDataTypeModifiedDetails)
+                {
+                    WriteProperty(".tag", "protect_custom_data_type_modified_details", writer, enc.StringEncoder.Instance);
+                    ProtectCustomDataTypeModifiedDetails.Encoder.EncodeFields((ProtectCustomDataTypeModifiedDetails)value, writer);
+                    return;
+                }
                 if (value is ProtectInternalDomainsChangedDetails)
                 {
                     WriteProperty(".tag", "protect_internal_domains_changed_details", writer, enc.StringEncoder.Instance);
@@ -19421,6 +19571,16 @@ namespace Dropbox.Api.TeamLog
                         return ProtectActionRemoveLinkDetails.Decoder.DecodeFields(reader);
                     case "protect_action_stop_sharing_details":
                         return ProtectActionStopSharingDetails.Decoder.DecodeFields(reader);
+                    case "protect_custom_data_type_created_details":
+                        return ProtectCustomDataTypeCreatedDetails.Decoder.DecodeFields(reader);
+                    case "protect_custom_data_type_deleted_details":
+                        return ProtectCustomDataTypeDeletedDetails.Decoder.DecodeFields(reader);
+                    case "protect_custom_data_type_disabled_details":
+                        return ProtectCustomDataTypeDisabledDetails.Decoder.DecodeFields(reader);
+                    case "protect_custom_data_type_enabled_details":
+                        return ProtectCustomDataTypeEnabledDetails.Decoder.DecodeFields(reader);
+                    case "protect_custom_data_type_modified_details":
+                        return ProtectCustomDataTypeModifiedDetails.Decoder.DecodeFields(reader);
                     case "protect_internal_domains_changed_details":
                         return ProtectInternalDomainsChangedDetails.Decoder.DecodeFields(reader);
                     case "protect_policy_activated_details":
@@ -45847,6 +46007,456 @@ namespace Dropbox.Api.TeamLog
                 public override ProtectActionStopSharingDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new ProtectActionStopSharingDetails(global::Dropbox.Api.TeamLog.ProtectActionStopSharingDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect custom data type created details object</para>
+        /// </summary>
+        public sealed class ProtectCustomDataTypeCreatedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectCustomDataTypeCreatedDetails> Encoder = new ProtectCustomDataTypeCreatedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectCustomDataTypeCreatedDetails> Decoder = new ProtectCustomDataTypeCreatedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectCustomDataTypeCreatedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectCustomDataTypeCreatedDetails(global::Dropbox.Api.TeamLog.ProtectCustomDataTypeCreatedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectCustomDataTypeCreatedDetails" /> class.</para>
+            /// </summary>
+            private ProtectCustomDataTypeCreatedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectCustomDataTypeCreatedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectCustomDataTypeCreatedDetails" />.</para>
+            /// </summary>
+            private class ProtectCustomDataTypeCreatedDetailsEncoder : enc.StructEncoder<ProtectCustomDataTypeCreatedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectCustomDataTypeCreatedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_custom_data_type_created_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectCustomDataTypeCreatedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectCustomDataTypeCreatedDetails" />.</para>
+            /// </summary>
+            private class ProtectCustomDataTypeCreatedDetailsDecoder : enc.StructDecoder<ProtectCustomDataTypeCreatedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProtectCustomDataTypeCreatedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectCustomDataTypeCreatedDetails Create()
+                {
+                    return new ProtectCustomDataTypeCreatedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectCustomDataTypeCreatedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectCustomDataTypeCreatedDetails(global::Dropbox.Api.TeamLog.ProtectCustomDataTypeCreatedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect custom data type deleted details object</para>
+        /// </summary>
+        public sealed class ProtectCustomDataTypeDeletedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectCustomDataTypeDeletedDetails> Encoder = new ProtectCustomDataTypeDeletedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectCustomDataTypeDeletedDetails> Decoder = new ProtectCustomDataTypeDeletedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectCustomDataTypeDeletedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectCustomDataTypeDeletedDetails(global::Dropbox.Api.TeamLog.ProtectCustomDataTypeDeletedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectCustomDataTypeDeletedDetails" /> class.</para>
+            /// </summary>
+            private ProtectCustomDataTypeDeletedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectCustomDataTypeDeletedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectCustomDataTypeDeletedDetails" />.</para>
+            /// </summary>
+            private class ProtectCustomDataTypeDeletedDetailsEncoder : enc.StructEncoder<ProtectCustomDataTypeDeletedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectCustomDataTypeDeletedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_custom_data_type_deleted_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectCustomDataTypeDeletedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectCustomDataTypeDeletedDetails" />.</para>
+            /// </summary>
+            private class ProtectCustomDataTypeDeletedDetailsDecoder : enc.StructDecoder<ProtectCustomDataTypeDeletedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProtectCustomDataTypeDeletedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectCustomDataTypeDeletedDetails Create()
+                {
+                    return new ProtectCustomDataTypeDeletedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectCustomDataTypeDeletedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectCustomDataTypeDeletedDetails(global::Dropbox.Api.TeamLog.ProtectCustomDataTypeDeletedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect custom data type disabled details object</para>
+        /// </summary>
+        public sealed class ProtectCustomDataTypeDisabledDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectCustomDataTypeDisabledDetails> Encoder = new ProtectCustomDataTypeDisabledDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectCustomDataTypeDisabledDetails> Decoder = new ProtectCustomDataTypeDisabledDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectCustomDataTypeDisabledDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectCustomDataTypeDisabledDetails(global::Dropbox.Api.TeamLog.ProtectCustomDataTypeDisabledDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectCustomDataTypeDisabledDetails" /> class.</para>
+            /// </summary>
+            private ProtectCustomDataTypeDisabledDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectCustomDataTypeDisabledDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectCustomDataTypeDisabledDetails" />.</para>
+            /// </summary>
+            private class ProtectCustomDataTypeDisabledDetailsEncoder : enc.StructEncoder<ProtectCustomDataTypeDisabledDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectCustomDataTypeDisabledDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_custom_data_type_disabled_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectCustomDataTypeDisabledDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectCustomDataTypeDisabledDetails" />.</para>
+            /// </summary>
+            private class ProtectCustomDataTypeDisabledDetailsDecoder : enc.StructDecoder<ProtectCustomDataTypeDisabledDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProtectCustomDataTypeDisabledDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectCustomDataTypeDisabledDetails Create()
+                {
+                    return new ProtectCustomDataTypeDisabledDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectCustomDataTypeDisabledDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectCustomDataTypeDisabledDetails(global::Dropbox.Api.TeamLog.ProtectCustomDataTypeDisabledDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect custom data type enabled details object</para>
+        /// </summary>
+        public sealed class ProtectCustomDataTypeEnabledDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectCustomDataTypeEnabledDetails> Encoder = new ProtectCustomDataTypeEnabledDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectCustomDataTypeEnabledDetails> Decoder = new ProtectCustomDataTypeEnabledDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectCustomDataTypeEnabledDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectCustomDataTypeEnabledDetails(global::Dropbox.Api.TeamLog.ProtectCustomDataTypeEnabledDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectCustomDataTypeEnabledDetails" /> class.</para>
+            /// </summary>
+            private ProtectCustomDataTypeEnabledDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectCustomDataTypeEnabledDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectCustomDataTypeEnabledDetails" />.</para>
+            /// </summary>
+            private class ProtectCustomDataTypeEnabledDetailsEncoder : enc.StructEncoder<ProtectCustomDataTypeEnabledDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectCustomDataTypeEnabledDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_custom_data_type_enabled_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectCustomDataTypeEnabledDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectCustomDataTypeEnabledDetails" />.</para>
+            /// </summary>
+            private class ProtectCustomDataTypeEnabledDetailsDecoder : enc.StructDecoder<ProtectCustomDataTypeEnabledDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProtectCustomDataTypeEnabledDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectCustomDataTypeEnabledDetails Create()
+                {
+                    return new ProtectCustomDataTypeEnabledDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectCustomDataTypeEnabledDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectCustomDataTypeEnabledDetails(global::Dropbox.Api.TeamLog.ProtectCustomDataTypeEnabledDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The protect custom data type modified details object</para>
+        /// </summary>
+        public sealed class ProtectCustomDataTypeModifiedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ProtectCustomDataTypeModifiedDetails> Encoder = new ProtectCustomDataTypeModifiedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ProtectCustomDataTypeModifiedDetails> Decoder = new ProtectCustomDataTypeModifiedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectCustomDataTypeModifiedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ProtectCustomDataTypeModifiedDetails(global::Dropbox.Api.TeamLog.ProtectCustomDataTypeModifiedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ProtectCustomDataTypeModifiedDetails" /> class.</para>
+            /// </summary>
+            private ProtectCustomDataTypeModifiedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.ProtectCustomDataTypeModifiedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ProtectCustomDataTypeModifiedDetails" />.</para>
+            /// </summary>
+            private class ProtectCustomDataTypeModifiedDetailsEncoder : enc.StructEncoder<ProtectCustomDataTypeModifiedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ProtectCustomDataTypeModifiedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("protect_custom_data_type_modified_details", value.Value, writer, global::Dropbox.Api.TeamLog.ProtectCustomDataTypeModifiedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ProtectCustomDataTypeModifiedDetails" />.</para>
+            /// </summary>
+            private class ProtectCustomDataTypeModifiedDetailsDecoder : enc.StructDecoder<ProtectCustomDataTypeModifiedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ProtectCustomDataTypeModifiedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ProtectCustomDataTypeModifiedDetails Create()
+                {
+                    return new ProtectCustomDataTypeModifiedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ProtectCustomDataTypeModifiedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ProtectCustomDataTypeModifiedDetails(global::Dropbox.Api.TeamLog.ProtectCustomDataTypeModifiedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
