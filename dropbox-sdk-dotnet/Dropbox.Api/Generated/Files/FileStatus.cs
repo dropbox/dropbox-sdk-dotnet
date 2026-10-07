@@ -246,7 +246,13 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>The deleted object</para>
+        /// <para>Field is deprecated. Deprecated. Deleted-file search does not work and should
+        /// not be used. Use <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> with <see
+        /// cref="Dropbox.Api.Files.ListFolderArg.IncludeDeleted" /> set to <c>true</c> to
+        /// enumerate deleted entries; this does not provide equivalent full-text
+        /// search.</para>
         /// </summary>
         public sealed class Deleted : FileStatus
         {

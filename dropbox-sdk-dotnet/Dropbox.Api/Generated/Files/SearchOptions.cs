@@ -35,7 +35,10 @@ namespace Dropbox.Api.Files
         /// <param name="maxResults">The maximum number of search results to return.</param>
         /// <param name="orderBy">Specified property of the order of search results. By
         /// default, results are sorted by relevance.</param>
-        /// <param name="fileStatus">Restricts search to the given file status.</param>
+        /// <param name="fileStatus">Restricts search to the given file status. The <see
+        /// cref="Dropbox.Api.Files.FileStatus.Deleted" /> value is deprecated and should not
+        /// be used. This also applies to searches continued with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async" />.</param>
         /// <param name="filenameOnly">Restricts search to only match on filenames.</param>
         /// <param name="fileExtensions">Restricts search to only the extensions specified.
         /// Only supported for active file search.</param>
@@ -129,7 +132,10 @@ namespace Dropbox.Api.Files
         public SearchOrderBy OrderBy { get; protected set; }
 
         /// <summary>
-        /// <para>Restricts search to the given file status.</para>
+        /// <para>Restricts search to the given file status. The <see
+        /// cref="Dropbox.Api.Files.FileStatus.Deleted" /> value is deprecated and should not
+        /// be used. This also applies to searches continued with <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async" />.</para>
         /// </summary>
         public FileStatus FileStatus { get; protected set; }
 
