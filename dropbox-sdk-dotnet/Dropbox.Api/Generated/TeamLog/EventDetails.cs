@@ -11973,6 +11973,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// EnterpriseManagedAuthPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsEnterpriseManagedAuthPolicyChangedDetails
+        {
+            get
+            {
+                return this is EnterpriseManagedAuthPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EnterpriseManagedAuthPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public EnterpriseManagedAuthPolicyChangedDetails AsEnterpriseManagedAuthPolicyChangedDetails
+        {
+            get
+            {
+                return this as EnterpriseManagedAuthPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// ExtendedVersionHistoryChangePolicyDetails</para>
         /// </summary>
         public bool IsExtendedVersionHistoryChangePolicyDetails
@@ -18177,6 +18201,12 @@ namespace Dropbox.Api.TeamLog
                     EmmRemoveExceptionDetails.Encoder.EncodeFields((EmmRemoveExceptionDetails)value, writer);
                     return;
                 }
+                if (value is EnterpriseManagedAuthPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "enterprise_managed_auth_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    EnterpriseManagedAuthPolicyChangedDetails.Encoder.EncodeFields((EnterpriseManagedAuthPolicyChangedDetails)value, writer);
+                    return;
+                }
                 if (value is ExtendedVersionHistoryChangePolicyDetails)
                 {
                     WriteProperty(".tag", "extended_version_history_change_policy_details", writer, enc.StringEncoder.Instance);
@@ -20021,6 +20051,8 @@ namespace Dropbox.Api.TeamLog
                         return EmmChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "emm_remove_exception_details":
                         return EmmRemoveExceptionDetails.Decoder.DecodeFields(reader);
+                    case "enterprise_managed_auth_policy_changed_details":
+                        return EnterpriseManagedAuthPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "extended_version_history_change_policy_details":
                         return ExtendedVersionHistoryChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "external_drive_backup_policy_changed_details":
@@ -66347,6 +66379,98 @@ namespace Dropbox.Api.TeamLog
                 public override EmmRemoveExceptionDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new EmmRemoveExceptionDetails(global::Dropbox.Api.TeamLog.EmmRemoveExceptionDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The enterprise managed auth policy changed details object</para>
+        /// </summary>
+        public sealed class EnterpriseManagedAuthPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EnterpriseManagedAuthPolicyChangedDetails> Encoder = new EnterpriseManagedAuthPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EnterpriseManagedAuthPolicyChangedDetails> Decoder = new EnterpriseManagedAuthPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EnterpriseManagedAuthPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public EnterpriseManagedAuthPolicyChangedDetails(global::Dropbox.Api.TeamLog.EnterpriseManagedAuthPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EnterpriseManagedAuthPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private EnterpriseManagedAuthPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.EnterpriseManagedAuthPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EnterpriseManagedAuthPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class EnterpriseManagedAuthPolicyChangedDetailsEncoder : enc.StructEncoder<EnterpriseManagedAuthPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EnterpriseManagedAuthPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("enterprise_managed_auth_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.EnterpriseManagedAuthPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EnterpriseManagedAuthPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class EnterpriseManagedAuthPolicyChangedDetailsDecoder : enc.StructDecoder<EnterpriseManagedAuthPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="EnterpriseManagedAuthPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EnterpriseManagedAuthPolicyChangedDetails Create()
+                {
+                    return new EnterpriseManagedAuthPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EnterpriseManagedAuthPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new EnterpriseManagedAuthPolicyChangedDetails(global::Dropbox.Api.TeamLog.EnterpriseManagedAuthPolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
