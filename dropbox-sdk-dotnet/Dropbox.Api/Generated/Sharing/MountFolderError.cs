@@ -190,6 +190,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is TooManyMounts</para>
+        /// </summary>
+        public bool IsTooManyMounts
+        {
+            get
+            {
+                return this is TooManyMounts;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a TooManyMounts, or <c>null</c>.</para>
+        /// </summary>
+        public TooManyMounts AsTooManyMounts
+        {
+            get
+            {
+                return this as TooManyMounts;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -267,6 +289,12 @@ namespace Dropbox.Api.Sharing
                     MustAutomount.Encoder.EncodeFields((MustAutomount)value, writer);
                     return;
                 }
+                if (value is TooManyMounts)
+                {
+                    WriteProperty(".tag", "too_many_mounts", writer, enc.StringEncoder.Instance);
+                    TooManyMounts.Encoder.EncodeFields((TooManyMounts)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -319,6 +347,8 @@ namespace Dropbox.Api.Sharing
                         return NotMountable.Decoder.DecodeFields(reader);
                     case "must_automount":
                         return MustAutomount.Decoder.DecodeFields(reader);
+                    case "too_many_mounts":
+                        return TooManyMounts.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -865,6 +895,104 @@ namespace Dropbox.Api.Sharing
                     return MustAutomount.Instance;
                 }
 
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>User will have too many mounts after this operation.</para>
+        /// </summary>
+        public sealed class TooManyMounts : MountFolderError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<TooManyMounts> Encoder = new TooManyMountsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<TooManyMounts> Decoder = new TooManyMountsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TooManyMounts" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public TooManyMounts(TooManyMountsError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="TooManyMounts" />
+            /// class.</para>
+            /// </summary>
+            private TooManyMounts()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public TooManyMountsError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="TooManyMounts" />.</para>
+            /// </summary>
+            private class TooManyMountsEncoder : enc.StructEncoder<TooManyMounts>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(TooManyMounts value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("too_many_mounts", value.Value, writer, global::Dropbox.Api.Sharing.TooManyMountsError.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="TooManyMounts" />.</para>
+            /// </summary>
+            private class TooManyMountsDecoder : enc.StructDecoder<TooManyMounts>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="TooManyMounts" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override TooManyMounts Create()
+                {
+                    return new TooManyMounts();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(TooManyMounts value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "too_many_mounts":
+                            value.Value = global::Dropbox.Api.Sharing.TooManyMountsError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
             }
 
             #endregion
