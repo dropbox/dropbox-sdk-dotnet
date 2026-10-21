@@ -48,6 +48,10 @@ namespace Dropbox.Api.Sharing
         /// <param name="contentOwnerTeamInfo">The team information of the content's owner.
         /// This field will only be present if the content's owner is a team member and the
         /// content's owner team is different from the link's owner team.</param>
+        /// <param name="previewType">The preview type is determined by the file extension of
+        /// the shared link. It will be null if the file cannot be previewed by the file
+        /// viewer.</param>
+        /// <param name="createdTimestamp">The time the shared link was created.</param>
         protected SharedLinkMetadata(string url,
                                      string name,
                                      LinkPermissions linkPermissions,
@@ -55,7 +59,9 @@ namespace Dropbox.Api.Sharing
                                      sys.DateTime? expires = null,
                                      string pathLower = null,
                                      TeamMemberInfo teamMemberInfo = null,
-                                     global::Dropbox.Api.Users.Team contentOwnerTeamInfo = null)
+                                     global::Dropbox.Api.Users.Team contentOwnerTeamInfo = null,
+                                     string previewType = null,
+                                     sys.DateTime? createdTimestamp = null)
         {
             if (url == null)
             {
@@ -88,6 +94,8 @@ namespace Dropbox.Api.Sharing
             this.PathLower = pathLower;
             this.TeamMemberInfo = teamMemberInfo;
             this.ContentOwnerTeamInfo = contentOwnerTeamInfo;
+            this.PreviewType = previewType;
+            this.CreatedTimestamp = createdTimestamp;
         }
 
         /// <summary>
@@ -193,6 +201,17 @@ namespace Dropbox.Api.Sharing
         /// </summary>
         public global::Dropbox.Api.Users.Team ContentOwnerTeamInfo { get; protected set; }
 
+        /// <summary>
+        /// <para>The preview type is determined by the file extension of the shared link. It
+        /// will be null if the file cannot be previewed by the file viewer.</para>
+        /// </summary>
+        public string PreviewType { get; protected set; }
+
+        /// <summary>
+        /// <para>The time the shared link was created.</para>
+        /// </summary>
+        public sys.DateTime? CreatedTimestamp { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -241,6 +260,14 @@ namespace Dropbox.Api.Sharing
                 if (value.ContentOwnerTeamInfo != null)
                 {
                     WriteProperty("content_owner_team_info", value.ContentOwnerTeamInfo, writer, global::Dropbox.Api.Users.Team.Encoder);
+                }
+                if (value.PreviewType != null)
+                {
+                    WriteProperty("preview_type", value.PreviewType, writer, enc.StringEncoder.Instance);
+                }
+                if (value.CreatedTimestamp != null)
+                {
+                    WriteProperty("created_timestamp", value.CreatedTimestamp.Value, writer, enc.DateTimeEncoder.Instance);
                 }
             }
         }
@@ -315,6 +342,12 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "content_owner_team_info":
                         value.ContentOwnerTeamInfo = global::Dropbox.Api.Users.Team.Decoder.Decode(reader);
+                        break;
+                    case "preview_type":
+                        value.PreviewType = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "created_timestamp":
+                        value.CreatedTimestamp = enc.DateTimeDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

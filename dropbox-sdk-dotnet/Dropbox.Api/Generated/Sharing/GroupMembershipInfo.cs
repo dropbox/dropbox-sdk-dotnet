@@ -39,12 +39,15 @@ namespace Dropbox.Api.Sharing
         /// The set of permissions corresponds to the MemberActions in the request.</param>
         /// <param name="initials">Field is deprecated. Never set.</param>
         /// <param name="isInherited">True if the member has access on a parent folder.</param>
+        /// <param name="inheritedAccessType">The access type from parent folder for this
+        /// member.</param>
         public GroupMembershipInfo(AccessLevel accessType,
                                    GroupInfo @group,
                                    col.IEnumerable<MemberPermission> permissions = null,
                                    string initials = null,
-                                   bool isInherited = false)
-            : base(accessType, permissions, initials, isInherited)
+                                   bool isInherited = false,
+                                   AccessLevel inheritedAccessType = null)
+            : base(accessType, permissions, initials, isInherited, inheritedAccessType)
         {
             if (@group == null)
             {
@@ -95,6 +98,10 @@ namespace Dropbox.Api.Sharing
                     WriteProperty("initials", value.Initials, writer, enc.StringEncoder.Instance);
                 }
                 WriteProperty("is_inherited", value.IsInherited, writer, enc.BooleanEncoder.Instance);
+                if (value.InheritedAccessType != null)
+                {
+                    WriteProperty("inherited_access_type", value.InheritedAccessType, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
+                }
             }
         }
 
@@ -141,6 +148,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "is_inherited":
                         value.IsInherited = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "inherited_access_type":
+                        value.InheritedAccessType = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();

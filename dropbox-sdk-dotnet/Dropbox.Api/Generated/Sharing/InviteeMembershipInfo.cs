@@ -39,14 +39,17 @@ namespace Dropbox.Api.Sharing
         /// The set of permissions corresponds to the MemberActions in the request.</param>
         /// <param name="initials">Field is deprecated. Never set.</param>
         /// <param name="isInherited">True if the member has access on a parent folder.</param>
+        /// <param name="inheritedAccessType">The access type from parent folder for this
+        /// member.</param>
         /// <param name="user">The user this invitation is tied to, if available.</param>
         public InviteeMembershipInfo(AccessLevel accessType,
                                      InviteeInfo invitee,
                                      col.IEnumerable<MemberPermission> permissions = null,
                                      string initials = null,
                                      bool isInherited = false,
+                                     AccessLevel inheritedAccessType = null,
                                      UserInfo user = null)
-            : base(accessType, permissions, initials, isInherited)
+            : base(accessType, permissions, initials, isInherited, inheritedAccessType)
         {
             if (invitee == null)
             {
@@ -103,6 +106,10 @@ namespace Dropbox.Api.Sharing
                     WriteProperty("initials", value.Initials, writer, enc.StringEncoder.Instance);
                 }
                 WriteProperty("is_inherited", value.IsInherited, writer, enc.BooleanEncoder.Instance);
+                if (value.InheritedAccessType != null)
+                {
+                    WriteProperty("inherited_access_type", value.InheritedAccessType, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
+                }
                 if (value.User != null)
                 {
                     WriteProperty("user", value.User, writer, global::Dropbox.Api.Sharing.UserInfo.Encoder);
@@ -154,6 +161,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "is_inherited":
                         value.IsInherited = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "inherited_access_type":
+                        value.InheritedAccessType = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
                     case "user":
                         value.User = global::Dropbox.Api.Sharing.UserInfo.Decoder.Decode(reader);
