@@ -11664,6 +11664,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// DefaultTeamFolderSyncPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsDefaultTeamFolderSyncPolicyChangedDetails
+        {
+            get
+            {
+                return this is DefaultTeamFolderSyncPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DefaultTeamFolderSyncPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DefaultTeamFolderSyncPolicyChangedDetails AsDefaultTeamFolderSyncPolicyChangedDetails
+        {
+            get
+            {
+                return this as DefaultTeamFolderSyncPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// DeviceApprovalsAddExceptionDetails</para>
         /// </summary>
         public bool IsDeviceApprovalsAddExceptionDetails
@@ -18123,6 +18147,12 @@ namespace Dropbox.Api.TeamLog
                     DataPlacementRestrictionSatisfyPolicyDetails.Encoder.EncodeFields((DataPlacementRestrictionSatisfyPolicyDetails)value, writer);
                     return;
                 }
+                if (value is DefaultTeamFolderSyncPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "default_team_folder_sync_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    DefaultTeamFolderSyncPolicyChangedDetails.Encoder.EncodeFields((DefaultTeamFolderSyncPolicyChangedDetails)value, writer);
+                    return;
+                }
                 if (value is DeviceApprovalsAddExceptionDetails)
                 {
                     WriteProperty(".tag", "device_approvals_add_exception_details", writer, enc.StringEncoder.Instance);
@@ -20025,6 +20055,8 @@ namespace Dropbox.Api.TeamLog
                         return DataPlacementRestrictionChangePolicyDetails.Decoder.DecodeFields(reader);
                     case "data_placement_restriction_satisfy_policy_details":
                         return DataPlacementRestrictionSatisfyPolicyDetails.Decoder.DecodeFields(reader);
+                    case "default_team_folder_sync_policy_changed_details":
+                        return DefaultTeamFolderSyncPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "device_approvals_add_exception_details":
                         return DeviceApprovalsAddExceptionDetails.Decoder.DecodeFields(reader);
                     case "device_approvals_change_desktop_policy_details":
@@ -65197,6 +65229,98 @@ namespace Dropbox.Api.TeamLog
                 public override DataPlacementRestrictionSatisfyPolicyDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new DataPlacementRestrictionSatisfyPolicyDetails(global::Dropbox.Api.TeamLog.DataPlacementRestrictionSatisfyPolicyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The default team folder sync policy changed details object</para>
+        /// </summary>
+        public sealed class DefaultTeamFolderSyncPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DefaultTeamFolderSyncPolicyChangedDetails> Encoder = new DefaultTeamFolderSyncPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DefaultTeamFolderSyncPolicyChangedDetails> Decoder = new DefaultTeamFolderSyncPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DefaultTeamFolderSyncPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DefaultTeamFolderSyncPolicyChangedDetails(global::Dropbox.Api.TeamLog.DefaultTeamFolderSyncPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DefaultTeamFolderSyncPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private DefaultTeamFolderSyncPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DefaultTeamFolderSyncPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DefaultTeamFolderSyncPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class DefaultTeamFolderSyncPolicyChangedDetailsEncoder : enc.StructEncoder<DefaultTeamFolderSyncPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DefaultTeamFolderSyncPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("default_team_folder_sync_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.DefaultTeamFolderSyncPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DefaultTeamFolderSyncPolicyChangedDetails"
+            /// />.</para>
+            /// </summary>
+            private class DefaultTeamFolderSyncPolicyChangedDetailsDecoder : enc.StructDecoder<DefaultTeamFolderSyncPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DefaultTeamFolderSyncPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DefaultTeamFolderSyncPolicyChangedDetails Create()
+                {
+                    return new DefaultTeamFolderSyncPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DefaultTeamFolderSyncPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DefaultTeamFolderSyncPolicyChangedDetails(global::Dropbox.Api.TeamLog.DefaultTeamFolderSyncPolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 

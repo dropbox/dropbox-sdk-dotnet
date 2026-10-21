@@ -80,6 +80,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is PermissionDenied</para>
+        /// </summary>
+        public bool IsPermissionDenied
+        {
+            get
+            {
+                return this is PermissionDenied;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PermissionDenied, or <c>null</c>.</para>
+        /// </summary>
+        public PermissionDenied AsPermissionDenied
+        {
+            get
+            {
+                return this as PermissionDenied;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +149,12 @@ namespace Dropbox.Api.Sharing
                     Reset.Encoder.EncodeFields((Reset)value, writer);
                     return;
                 }
+                if (value is PermissionDenied)
+                {
+                    WriteProperty(".tag", "permission_denied", writer, enc.StringEncoder.Instance);
+                    PermissionDenied.Encoder.EncodeFields((PermissionDenied)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -169,6 +197,8 @@ namespace Dropbox.Api.Sharing
                         return Path.Decoder.DecodeFields(reader);
                     case "reset":
                         return Reset.Decoder.DecodeFields(reader);
+                    case "permission_denied":
+                        return PermissionDenied.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -337,6 +367,76 @@ namespace Dropbox.Api.Sharing
                 protected override Reset Create()
                 {
                     return Reset.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The user does not have permissions to list links to the content.</para>
+        /// </summary>
+        public sealed class PermissionDenied : ListSharedLinksError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PermissionDenied> Encoder = new PermissionDeniedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PermissionDenied> Decoder = new PermissionDeniedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PermissionDenied" />
+            /// class.</para>
+            /// </summary>
+            private PermissionDenied()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of PermissionDenied</para>
+            /// </summary>
+            public static readonly PermissionDenied Instance = new PermissionDenied();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PermissionDenied" />.</para>
+            /// </summary>
+            private class PermissionDeniedEncoder : enc.StructEncoder<PermissionDenied>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PermissionDenied value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PermissionDenied" />.</para>
+            /// </summary>
+            private class PermissionDeniedDecoder : enc.StructDecoder<PermissionDenied>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PermissionDenied" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PermissionDenied Create()
+                {
+                    return PermissionDenied.Instance;
                 }
 
             }

@@ -40,6 +40,8 @@ namespace Dropbox.Api.Sharing
         /// The set of permissions corresponds to the MemberActions in the request.</param>
         /// <param name="initials">Field is deprecated. Never set.</param>
         /// <param name="isInherited">True if the member has access on a parent folder.</param>
+        /// <param name="inheritedAccessType">The access type from parent folder for this
+        /// member.</param>
         /// <param name="timeLastSeen">The UTC timestamp of when the user has last seen the
         /// content. Only populated if the user has seen the content and the caller has a plan
         /// that includes viewer history.</param>
@@ -50,9 +52,10 @@ namespace Dropbox.Api.Sharing
                                       col.IEnumerable<MemberPermission> permissions = null,
                                       string initials = null,
                                       bool isInherited = false,
+                                      AccessLevel inheritedAccessType = null,
                                       sys.DateTime? timeLastSeen = null,
                                       global::Dropbox.Api.SeenState.PlatformType platformType = null)
-            : base(accessType, user, permissions, initials, isInherited)
+            : base(accessType, user, permissions, initials, isInherited, inheritedAccessType)
         {
             this.TimeLastSeen = timeLastSeen;
             this.PlatformType = platformType;
@@ -106,6 +109,10 @@ namespace Dropbox.Api.Sharing
                     WriteProperty("initials", value.Initials, writer, enc.StringEncoder.Instance);
                 }
                 WriteProperty("is_inherited", value.IsInherited, writer, enc.BooleanEncoder.Instance);
+                if (value.InheritedAccessType != null)
+                {
+                    WriteProperty("inherited_access_type", value.InheritedAccessType, writer, global::Dropbox.Api.Sharing.AccessLevel.Encoder);
+                }
                 if (value.TimeLastSeen != null)
                 {
                     WriteProperty("time_last_seen", value.TimeLastSeen.Value, writer, enc.DateTimeEncoder.Instance);
@@ -161,6 +168,9 @@ namespace Dropbox.Api.Sharing
                         break;
                     case "is_inherited":
                         value.IsInherited = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "inherited_access_type":
+                        value.InheritedAccessType = global::Dropbox.Api.Sharing.AccessLevel.Decoder.Decode(reader);
                         break;
                     case "time_last_seen":
                         value.TimeLastSeen = enc.DateTimeDecoder.Instance.Decode(reader);
