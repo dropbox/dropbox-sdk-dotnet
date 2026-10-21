@@ -118,14 +118,14 @@
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkMetadata.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Sharing_SharedLinkMetadata__ctor_" data-uid="Dropbox.Api.Sharing.SharedLinkMetadata.#ctor*"></a>
-  <h4 id="Dropbox_Api_Sharing_SharedLinkMetadata__ctor_System_String_System_String_Dropbox_Api_Sharing_LinkPermissions_System_String_System_Nullable_System_DateTime__System_String_Dropbox_Api_Sharing_TeamMemberInfo_Dropbox_Api_Users_Team_" data-uid="Dropbox.Api.Sharing.SharedLinkMetadata.#ctor(System.String,System.String,Dropbox.Api.Sharing.LinkPermissions,System.String,System.Nullable{System.DateTime},System.String,Dropbox.Api.Sharing.TeamMemberInfo,Dropbox.Api.Users.Team)">SharedLinkMetadata(string, string, LinkPermissions, string, DateTime?, string, TeamMemberInfo, Team)</h4>
+  <h4 id="Dropbox_Api_Sharing_SharedLinkMetadata__ctor_System_String_System_String_Dropbox_Api_Sharing_LinkPermissions_System_String_System_Nullable_System_DateTime__System_String_Dropbox_Api_Sharing_TeamMemberInfo_Dropbox_Api_Users_Team_System_String_System_Nullable_System_DateTime__" data-uid="Dropbox.Api.Sharing.SharedLinkMetadata.#ctor(System.String,System.String,Dropbox.Api.Sharing.LinkPermissions,System.String,System.Nullable{System.DateTime},System.String,Dropbox.Api.Sharing.TeamMemberInfo,Dropbox.Api.Users.Team,System.String,System.Nullable{System.DateTime})">SharedLinkMetadata(string, string, LinkPermissions, string, DateTime?, string, TeamMemberInfo, Team, string, DateTime?)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Sharing.SharedLinkMetadata.html">SharedLinkMetadata</a>
 class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected SharedLinkMetadata(string url, string name, LinkPermissions linkPermissions, string id = null, DateTime? expires = null, string pathLower = null, TeamMemberInfo teamMemberInfo = null, Team contentOwnerTeamInfo = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected SharedLinkMetadata(string url, string name, LinkPermissions linkPermissions, string id = null, DateTime? expires = null, string pathLower = null, TeamMemberInfo teamMemberInfo = null, Team contentOwnerTeamInfo = null, string previewType = null, DateTime? createdTimestamp = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -190,6 +190,20 @@ This field will only be present if the link's owner is a team member.</p>
         <td><p>The team information of the content's owner.
 This field will only be present if the content's owner is a team member and the
 content's owner team is different from the link's owner team.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">previewType</span></td>
+        <td><p>The preview type is determined by the file extension of
+the shared link. It will be null if the file cannot be previewed by the file
+viewer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</td>
+        <td><span class="parametername">createdTimestamp</span></td>
+        <td><p>The time the shared link was created.</p>
 </td>
       </tr>
     </tbody>
@@ -280,6 +294,34 @@ from the link's owner team.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Users.Team.html">Team</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkMetadata.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_SharedLinkMetadata_CreatedTimestamp_" data-uid="Dropbox.Api.Sharing.SharedLinkMetadata.CreatedTimestamp*"></a>
+  <h4 id="Dropbox_Api_Sharing_SharedLinkMetadata_CreatedTimestamp" data-uid="Dropbox.Api.Sharing.SharedLinkMetadata.CreatedTimestamp">CreatedTimestamp</h4>
+  <div class="markdown level1 summary"><p>The time the shared link was created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime? CreatedTimestamp { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -467,6 +509,35 @@ authenticated user's dropbox and the user is the owner of the link.</p>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string PathLower { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkMetadata.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_SharedLinkMetadata_PreviewType_" data-uid="Dropbox.Api.Sharing.SharedLinkMetadata.PreviewType*"></a>
+  <h4 id="Dropbox_Api_Sharing_SharedLinkMetadata_PreviewType" data-uid="Dropbox.Api.Sharing.SharedLinkMetadata.PreviewType">PreviewType</h4>
+  <div class="markdown level1 summary"><p>The preview type is determined by the file extension of the shared link. It
+will be null if the file cannot be previewed by the file viewer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PreviewType { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">

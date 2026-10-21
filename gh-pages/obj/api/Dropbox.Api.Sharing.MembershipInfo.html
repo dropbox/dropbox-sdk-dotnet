@@ -119,13 +119,13 @@
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MembershipInfo.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_Sharing_MembershipInfo__ctor_" data-uid="Dropbox.Api.Sharing.MembershipInfo.#ctor*"></a>
-  <h4 id="Dropbox_Api_Sharing_MembershipInfo__ctor_Dropbox_Api_Sharing_AccessLevel_System_Collections_Generic_IEnumerable_Dropbox_Api_Sharing_MemberPermission__System_String_System_Boolean_" data-uid="Dropbox.Api.Sharing.MembershipInfo.#ctor(Dropbox.Api.Sharing.AccessLevel,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission},System.String,System.Boolean)">MembershipInfo(AccessLevel, IEnumerable&lt;MemberPermission&gt;, string, bool)</h4>
+  <h4 id="Dropbox_Api_Sharing_MembershipInfo__ctor_Dropbox_Api_Sharing_AccessLevel_System_Collections_Generic_IEnumerable_Dropbox_Api_Sharing_MemberPermission__System_String_System_Boolean_Dropbox_Api_Sharing_AccessLevel_" data-uid="Dropbox.Api.Sharing.MembershipInfo.#ctor(Dropbox.Api.Sharing.AccessLevel,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission},System.String,System.Boolean,Dropbox.Api.Sharing.AccessLevel)">MembershipInfo(AccessLevel, IEnumerable&lt;MemberPermission&gt;, string, bool, AccessLevel)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.Sharing.MembershipInfo.html">MembershipInfo</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MembershipInfo(AccessLevel accessType, IEnumerable&lt;MemberPermission&gt; permissions = null, string initials = null, bool isInherited = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public MembershipInfo(AccessLevel accessType, IEnumerable&lt;MemberPermission&gt; permissions = null, string initials = null, bool isInherited = false, AccessLevel inheritedAccessType = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -163,6 +163,13 @@ The set of permissions corresponds to the MemberActions in the request.</p>
         <td><p>True if the member has access on a parent folder.</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.AccessLevel.html">AccessLevel</a></td>
+        <td><span class="parametername">inheritedAccessType</span></td>
+        <td><p>The access type from parent folder for this
+member.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
@@ -180,6 +187,34 @@ parent folder, and acquired access type from this folder.</p>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public AccessLevel AccessType { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Sharing.AccessLevel.html">AccessLevel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MembershipInfo.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Sharing_MembershipInfo_InheritedAccessType_" data-uid="Dropbox.Api.Sharing.MembershipInfo.InheritedAccessType*"></a>
+  <h4 id="Dropbox_Api_Sharing_MembershipInfo_InheritedAccessType" data-uid="Dropbox.Api.Sharing.MembershipInfo.InheritedAccessType">InheritedAccessType</h4>
+  <div class="markdown level1 summary"><p>The access type from parent folder for this member.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AccessLevel InheritedAccessType { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
