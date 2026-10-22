@@ -9189,6 +9189,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// SharedFolderTransferMembership</para>
+        /// </summary>
+        public bool IsSharedFolderTransferMembership
+        {
+            get
+            {
+                return this is SharedFolderTransferMembership;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a SharedFolderTransferMembership, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public SharedFolderTransferMembership AsSharedFolderTransferMembership
+        {
+            get
+            {
+                return this as SharedFolderTransferMembership;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// SharedFolderTransferOwnership</para>
         /// </summary>
         public bool IsSharedFolderTransferOwnership
@@ -17161,6 +17185,12 @@ namespace Dropbox.Api.TeamLog
                     SharedFolderNest.Encoder.EncodeFields((SharedFolderNest)value, writer);
                     return;
                 }
+                if (value is SharedFolderTransferMembership)
+                {
+                    WriteProperty(".tag", "shared_folder_transfer_membership", writer, enc.StringEncoder.Instance);
+                    SharedFolderTransferMembership.Encoder.EncodeFields((SharedFolderTransferMembership)value, writer);
+                    return;
+                }
                 if (value is SharedFolderTransferOwnership)
                 {
                     WriteProperty(".tag", "shared_folder_transfer_ownership", writer, enc.StringEncoder.Instance);
@@ -19443,6 +19473,8 @@ namespace Dropbox.Api.TeamLog
                         return SharedFolderMount.Decoder.DecodeFields(reader);
                     case "shared_folder_nest":
                         return SharedFolderNest.Decoder.DecodeFields(reader);
+                    case "shared_folder_transfer_membership":
+                        return SharedFolderTransferMembership.Decoder.DecodeFields(reader);
                     case "shared_folder_transfer_ownership":
                         return SharedFolderTransferOwnership.Decoder.DecodeFields(reader);
                     case "shared_folder_unmount":
@@ -56066,6 +56098,96 @@ namespace Dropbox.Api.TeamLog
                 public override SharedFolderNest DecodeFields(enc.IJsonReader reader)
                 {
                     return new SharedFolderNest(global::Dropbox.Api.TeamLog.SharedFolderNestType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(sharing) Transferred shared folder membership to another member</para>
+        /// </summary>
+        public sealed class SharedFolderTransferMembership : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<SharedFolderTransferMembership> Encoder = new SharedFolderTransferMembershipEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<SharedFolderTransferMembership> Decoder = new SharedFolderTransferMembershipDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharedFolderTransferMembership" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public SharedFolderTransferMembership(SharedFolderTransferMembershipType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="SharedFolderTransferMembership" /> class.</para>
+            /// </summary>
+            private SharedFolderTransferMembership()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public SharedFolderTransferMembershipType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="SharedFolderTransferMembership" />.</para>
+            /// </summary>
+            private class SharedFolderTransferMembershipEncoder : enc.StructEncoder<SharedFolderTransferMembership>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(SharedFolderTransferMembership value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("shared_folder_transfer_membership", value.Value, writer, global::Dropbox.Api.TeamLog.SharedFolderTransferMembershipType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="SharedFolderTransferMembership" />.</para>
+            /// </summary>
+            private class SharedFolderTransferMembershipDecoder : enc.StructDecoder<SharedFolderTransferMembership>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="SharedFolderTransferMembership" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override SharedFolderTransferMembership Create()
+                {
+                    return new SharedFolderTransferMembership();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override SharedFolderTransferMembership DecodeFields(enc.IJsonReader reader)
+                {
+                    return new SharedFolderTransferMembership(global::Dropbox.Api.TeamLog.SharedFolderTransferMembershipType.Decoder.DecodeFields(reader));
                 }
             }
 
