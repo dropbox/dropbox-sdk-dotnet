@@ -22,18 +22,6 @@
                 namespace.</para>
             </summary>
         </member>
-        <member name="N:Dropbox.Api.AccountId">
-            <summary>
-                <para>Contains the types used by the routes declared in <see
-                cref="T:Dropbox.Api.AccountId.Routes.AccountIdRoutes" />.</para>
-            </summary>
-        </member>
-        <member name="N:Dropbox.Api.AccountId.Routes">
-            <summary>
-                <para>Contains the routes for the <see cref="N:Dropbox.Api.AccountId" />
-                namespace.</para>
-            </summary>
-        </member>
         <member name="N:Dropbox.Api.Async">
             <summary>
                 <para>Contains the types used by the routes declared in <see
