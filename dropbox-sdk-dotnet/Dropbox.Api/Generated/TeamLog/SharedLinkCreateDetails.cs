@@ -33,9 +33,13 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="sharedLinkAccessLevel">Defines who can access the shared link. Might
         /// be missing due to historical data gap.</param>
-        public SharedLinkCreateDetails(SharedLinkAccessLevel sharedLinkAccessLevel = null)
+        /// <param name="subdomain">Team subdomain associated with this shared-link
+        /// action.</param>
+        public SharedLinkCreateDetails(SharedLinkAccessLevel sharedLinkAccessLevel = null,
+                                       string subdomain = null)
         {
             this.SharedLinkAccessLevel = sharedLinkAccessLevel;
+            this.Subdomain = subdomain;
         }
 
         /// <summary>
@@ -55,6 +59,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public SharedLinkAccessLevel SharedLinkAccessLevel { get; protected set; }
 
+        /// <summary>
+        /// <para>Team subdomain associated with this shared-link action.</para>
+        /// </summary>
+        public string Subdomain { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -72,6 +81,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.SharedLinkAccessLevel != null)
                 {
                     WriteProperty("shared_link_access_level", value.SharedLinkAccessLevel, writer, global::Dropbox.Api.TeamLog.SharedLinkAccessLevel.Encoder);
+                }
+                if (value.Subdomain != null)
+                {
+                    WriteProperty("subdomain", value.Subdomain, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -108,6 +121,9 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "shared_link_access_level":
                         value.SharedLinkAccessLevel = global::Dropbox.Api.TeamLog.SharedLinkAccessLevel.Decoder.Decode(reader);
+                        break;
+                    case "subdomain":
+                        value.Subdomain = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();
