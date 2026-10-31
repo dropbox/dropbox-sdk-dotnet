@@ -109,14 +109,14 @@
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkViewDetails.cs">View Source</a>
   </span>
   <a id="Dropbox_Api_TeamLog_SharedLinkViewDetails__ctor_" data-uid="Dropbox.Api.TeamLog.SharedLinkViewDetails.#ctor*"></a>
-  <h4 id="Dropbox_Api_TeamLog_SharedLinkViewDetails__ctor_Dropbox_Api_TeamLog_UserLogInfo_" data-uid="Dropbox.Api.TeamLog.SharedLinkViewDetails.#ctor(Dropbox.Api.TeamLog.UserLogInfo)">SharedLinkViewDetails(UserLogInfo)</h4>
+  <h4 id="Dropbox_Api_TeamLog_SharedLinkViewDetails__ctor_Dropbox_Api_TeamLog_UserLogInfo_System_String_" data-uid="Dropbox.Api.TeamLog.SharedLinkViewDetails.#ctor(Dropbox.Api.TeamLog.UserLogInfo,System.String)">SharedLinkViewDetails(UserLogInfo, string)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Dropbox.Api.TeamLog.SharedLinkViewDetails.html">SharedLinkViewDetails</a>
 class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SharedLinkViewDetails(UserLogInfo sharedLinkOwner = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public SharedLinkViewDetails(UserLogInfo sharedLinkOwner = null, string subdomain = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -133,6 +133,12 @@ class.</p>
         <td><span class="parametername">sharedLinkOwner</span></td>
         <td><p>Shared link owner details. Might be missing due to
 historical data gap.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">subdomain</span></td>
+        <td><p>Team subdomain used to access the shared link.</p>
 </td>
       </tr>
     </tbody>
@@ -164,6 +170,34 @@ gap.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Dropbox.Api.TeamLog.UserLogInfo.html">UserLogInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkViewDetails.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_TeamLog_SharedLinkViewDetails_Subdomain_" data-uid="Dropbox.Api.TeamLog.SharedLinkViewDetails.Subdomain*"></a>
+  <h4 id="Dropbox_Api_TeamLog_SharedLinkViewDetails_Subdomain" data-uid="Dropbox.Api.TeamLog.SharedLinkViewDetails.Subdomain">Subdomain</h4>
+  <div class="markdown level1 summary"><p>Team subdomain used to access the shared link.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Subdomain { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td></td>
       </tr>
     </tbody>
