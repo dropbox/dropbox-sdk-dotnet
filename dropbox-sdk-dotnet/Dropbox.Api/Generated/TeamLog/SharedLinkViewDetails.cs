@@ -33,9 +33,12 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="sharedLinkOwner">Shared link owner details. Might be missing due to
         /// historical data gap.</param>
-        public SharedLinkViewDetails(UserLogInfo sharedLinkOwner = null)
+        /// <param name="subdomain">Team subdomain used to access the shared link.</param>
+        public SharedLinkViewDetails(UserLogInfo sharedLinkOwner = null,
+                                     string subdomain = null)
         {
             this.SharedLinkOwner = sharedLinkOwner;
+            this.Subdomain = subdomain;
         }
 
         /// <summary>
@@ -55,6 +58,11 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         public UserLogInfo SharedLinkOwner { get; protected set; }
 
+        /// <summary>
+        /// <para>Team subdomain used to access the shared link.</para>
+        /// </summary>
+        public string Subdomain { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -72,6 +80,10 @@ namespace Dropbox.Api.TeamLog
                 if (value.SharedLinkOwner != null)
                 {
                     WriteProperty("shared_link_owner", value.SharedLinkOwner, writer, global::Dropbox.Api.TeamLog.UserLogInfo.Encoder);
+                }
+                if (value.Subdomain != null)
+                {
+                    WriteProperty("subdomain", value.Subdomain, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -108,6 +120,9 @@ namespace Dropbox.Api.TeamLog
                 {
                     case "shared_link_owner":
                         value.SharedLinkOwner = global::Dropbox.Api.TeamLog.UserLogInfo.Decoder.Decode(reader);
+                        break;
+                    case "subdomain":
+                        value.Subdomain = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();
