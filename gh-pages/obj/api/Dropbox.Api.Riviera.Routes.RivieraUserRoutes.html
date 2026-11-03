@@ -238,6 +238,260 @@ from other send requests.</p>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraUserRoutes.cs">View Source</a>
   </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginExtractAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginExtractAsync*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginExtractAsync_Dropbox_Api_Riviera_ExtractArgs_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginExtractAsync(Dropbox.Api.Riviera.ExtractArgs,System.AsyncCallback,System.Object)">BeginExtractAsync(ExtractArgs, AsyncCallback, object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the extract async route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginExtractAsync(ExtractArgs extractArgs, AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Riviera.ExtractArgs.html">ExtractArgs</a></td>
+        <td><span class="parametername">extractArgs</span></td>
+        <td><p>The request parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraUserRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginExtractAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginExtractAsync*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginExtractAsync_Dropbox_Api_Riviera_ExtractType_Dropbox_Api_Riviera_FileIdOrUrl_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginExtractAsync(Dropbox.Api.Riviera.ExtractType,Dropbox.Api.Riviera.FileIdOrUrl,System.AsyncCallback,System.Object)">BeginExtractAsync(ExtractType, FileIdOrUrl, AsyncCallback, object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the extract async route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginExtractAsync(ExtractType extractType, FileIdOrUrl fileIdOrUrl = null, AsyncCallback callback = null, object callbackState = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Riviera.ExtractType.html">ExtractType</a></td>
+        <td><span class="parametername">extractType</span></td>
+        <td><p>What to extract, and that extraction's options.
+Required.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
+        <td><span class="parametername">fileIdOrUrl</span></td>
+        <td><p>Identifier of the source file. Callers must set exactly
+one of the <code>FileIdOrUrl</code> variants. The file must be in a format the requested
+<code>extract_type</code> supports; see <code>ExtractType</code> for the per-type lists.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">callbackState</span></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraUserRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginExtractAsyncCheck_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginExtractAsyncCheck*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginExtractAsyncCheck_Dropbox_Api_Async_PollArg_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginExtractAsyncCheck(Dropbox.Api.Async.PollArg,System.AsyncCallback,System.Object)">BeginExtractAsyncCheck(PollArg, AsyncCallback, object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the extract async check route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginExtractAsyncCheck(PollArg pollArg, AsyncCallback callback, object state = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Async.PollArg.html">PollArg</a></td>
+        <td><span class="parametername">pollArg</span></td>
+        <td><p>The request parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>A user provided object that distinguished this send from other
+send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraUserRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginExtractAsyncCheck_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginExtractAsyncCheck*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginExtractAsyncCheck_System_String_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginExtractAsyncCheck(System.String,System.AsyncCallback,System.Object)">BeginExtractAsyncCheck(string, AsyncCallback, object)</h4>
+  <div class="markdown level1 summary"><p>Begins an asynchronous send to the extract async check route.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IAsyncResult BeginExtractAsyncCheck(string asyncJobId, AsyncCallback callback, object callbackState = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">asyncJobId</span></td>
+        <td><p>Id of the asynchronous job. This is the value of a
+response returned from the method that launched the job.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.asynccallback">AsyncCallback</a></td>
+        <td><span class="parametername">callback</span></td>
+        <td><p>The method to be called when the asynchronous send is
+completed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">callbackState</span></td>
+        <td><p>A user provided object that distinguished this send
+from other send requests.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
+        <td><p>An object that represents the asynchronous send request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraUserRoutes.cs">View Source</a>
+  </span>
   <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginGetKeyframesAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginGetKeyframesAsync*"></a>
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_BeginGetKeyframesAsync_Dropbox_Api_Riviera_FileIdOrUrl_System_Double_System_Boolean_System_AsyncCallback_System_Object_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.BeginGetKeyframesAsync(Dropbox.Api.Riviera.FileIdOrUrl,System.Double,System.Boolean,System.AsyncCallback,System.Object)">BeginGetKeyframesAsync(FileIdOrUrl, double, bool, AsyncCallback, object)</h4>
   <div class="markdown level1 summary"><p>Begins an asynchronous send to the get keyframes async route.</p>
@@ -2281,6 +2535,121 @@ processing the request; This will contain a <a class="xref" href="Dropbox.Api.Ri
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraUserRoutes.cs">View Source</a>
   </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_EndExtractAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.EndExtractAsync*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_EndExtractAsync_System_IAsyncResult_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.EndExtractAsync(System.IAsyncResult)">EndExtractAsync(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the extract async route to
+complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LaunchResultBase EndExtractAsync(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Async.LaunchResultBase.html">LaunchResultBase</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraUserRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_EndExtractAsyncCheck_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.EndExtractAsyncCheck*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_EndExtractAsyncCheck_System_IAsyncResult_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.EndExtractAsyncCheck(System.IAsyncResult)">EndExtractAsyncCheck(IAsyncResult)</h4>
+  <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the extract async check route to
+complete</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExtractAsyncCheckResult EndExtractAsyncCheck(IAsyncResult asyncResult)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncresult">IAsyncResult</a></td>
+        <td><span class="parametername">asyncResult</span></td>
+        <td><p>The reference to the pending asynchronous send
+request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Riviera.ExtractAsyncCheckResult.html">ExtractAsyncCheckResult</a></td>
+        <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.Async.PollError.html">PollError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraUserRoutes.cs">View Source</a>
+  </span>
   <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_EndGetKeyframesAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.EndGetKeyframesAsync*"></a>
   <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_EndGetKeyframesAsync_System_IAsyncResult_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.EndGetKeyframesAsync(System.IAsyncResult)">EndGetKeyframesAsync(IAsyncResult)</h4>
   <div class="markdown level1 summary"><p>Waits for the pending asynchronous send to the get keyframes async route to
@@ -3061,6 +3430,268 @@ request</p>
       <tr>
         <td><a class="xref" href="Dropbox.Api.Riviera.GetTransformAsyncCheckResult.html">GetTransformAsyncCheckResult</a></td>
         <td><p>The response to the send request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.Async.PollError.html">PollError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraUserRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_ExtractAsyncAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncAsync*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_ExtractAsyncAsync_Dropbox_Api_Riviera_ExtractArgs_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncAsync(Dropbox.Api.Riviera.ExtractArgs)">ExtractAsyncAsync(ExtractArgs)</h4>
+  <div class="markdown level1 summary"><p>Asynchronous content extraction from a single file. One route covers every
+Riviera extraction. Name the source file in `file_id_or_url`, and say what to
+extract in `extract_type`, whose variant carries that extraction's options: -
+`markdown`: a document, converted to markdown that preserves its structure. -
+`text`: the plain text of a document. - `ocr`: the text of an image or scanned PDF,
+plus hOCR with per-word coordinates. - `transcript`: the timestamped transcript of
+an audio or video file. - `keyframes`: one keyframe per scene change in a video.
+The accepted formats and size limits differ per extraction; see `ExtractType`.
+Formats the requested extraction does not support fail with
+`unsupported_format_error`, and files over its size limit fail with
+`limit_exceeded_error`. The result is not returned by this route. Poll
+`extract_async/check` with the returned async job ID until it reports `complete` or
+`failed`. A `complete` result is an `ExtractResult` whose variant matches the
+requested `extract_type`.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;LaunchResultBase&gt; ExtractAsyncAsync(ExtractArgs extractArgs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Riviera.ExtractArgs.html">ExtractArgs</a></td>
+        <td><span class="parametername">extractArgs</span></td>
+        <td><p>The request parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Async.LaunchResultBase.html">LaunchResultBase</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraUserRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_ExtractAsyncAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncAsync*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_ExtractAsyncAsync_Dropbox_Api_Riviera_ExtractType_Dropbox_Api_Riviera_FileIdOrUrl_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncAsync(Dropbox.Api.Riviera.ExtractType,Dropbox.Api.Riviera.FileIdOrUrl)">ExtractAsyncAsync(ExtractType, FileIdOrUrl)</h4>
+  <div class="markdown level1 summary"><p>Asynchronous content extraction from a single file. One route covers every
+Riviera extraction. Name the source file in `file_id_or_url`, and say what to
+extract in `extract_type`, whose variant carries that extraction's options: -
+`markdown`: a document, converted to markdown that preserves its structure. -
+`text`: the plain text of a document. - `ocr`: the text of an image or scanned PDF,
+plus hOCR with per-word coordinates. - `transcript`: the timestamped transcript of
+an audio or video file. - `keyframes`: one keyframe per scene change in a video.
+The accepted formats and size limits differ per extraction; see `ExtractType`.
+Formats the requested extraction does not support fail with
+`unsupported_format_error`, and files over its size limit fail with
+`limit_exceeded_error`. The result is not returned by this route. Poll
+`extract_async/check` with the returned async job ID until it reports `complete` or
+`failed`. A `complete` result is an `ExtractResult` whose variant matches the
+requested `extract_type`.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;LaunchResultBase&gt; ExtractAsyncAsync(ExtractType extractType, FileIdOrUrl fileIdOrUrl = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Riviera.ExtractType.html">ExtractType</a></td>
+        <td><span class="parametername">extractType</span></td>
+        <td><p>What to extract, and that extraction's options.
+Required.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></td>
+        <td><span class="parametername">fileIdOrUrl</span></td>
+        <td><p>Identifier of the source file. Callers must set exactly
+one of the <code>FileIdOrUrl</code> variants. The file must be in a format the requested
+<code>extract_type</code> supports; see <code>ExtractType</code> for the per-type lists.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Async.LaunchResultBase.html">LaunchResultBase</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraUserRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_ExtractAsyncCheckAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncCheckAsync*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_ExtractAsyncCheckAsync_Dropbox_Api_Async_PollArg_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncCheckAsync(Dropbox.Api.Async.PollArg)">ExtractAsyncCheckAsync(PollArg)</h4>
+  <div class="markdown level1 summary"><p>Returns the status or result of specified extract_async task.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ExtractAsyncCheckResult&gt; ExtractAsyncCheckAsync(PollArg pollArg)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.Async.PollArg.html">PollArg</a></td>
+        <td><span class="parametername">pollArg</span></td>
+        <td><p>The request parameters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Riviera.ExtractAsyncCheckResult.html">ExtractAsyncCheckResult</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.ApiException-1.html">ApiException</a>&lt;TError&gt;</td>
+        <td><p>Thrown if there is an error
+processing the request; This will contain a <a class="xref" href="Dropbox.Api.Async.PollError.html">PollError</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/Generated/Riviera/RivieraUserRoutes.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_ExtractAsyncCheckAsync_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncCheckAsync*"></a>
+  <h4 id="Dropbox_Api_Riviera_Routes_RivieraUserRoutes_ExtractAsyncCheckAsync_System_String_" data-uid="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncCheckAsync(System.String)">ExtractAsyncCheckAsync(string)</h4>
+  <div class="markdown level1 summary"><p>Returns the status or result of specified extract_async task.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ExtractAsyncCheckResult&gt; ExtractAsyncCheckAsync(string asyncJobId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">asyncJobId</span></td>
+        <td><p>Id of the asynchronous job. This is the value of a
+response returned from the method that launched the job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Dropbox.Api.Riviera.ExtractAsyncCheckResult.html">ExtractAsyncCheckResult</a>&gt;</td>
+        <td><p>The task that represents the asynchronous send operation. The TResult
+parameter contains the response from the server.</p>
 </td>
       </tr>
     </tbody>

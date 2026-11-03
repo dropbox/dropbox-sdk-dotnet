@@ -158,6 +158,137 @@ help.</p>
       <section><p>Describes the bytes in the response body. Returned in the `Dropbox-API-Result`
 header.</p>
 </section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractApiV2Error.html">ExtractApiV2Error</a></h4>
+      <section><p>Reason an extraction job failed. Returned in the `failed` variant of
+`ExtractAsyncCheckResult`. This is a semantic error union: the HTTP status of the poll
+request itself is unaffected (a poll that surfaces a failed job is still a normal
+successful poll response). Callers should branch on the variant.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractApiV2Error.ConversionFailureError.html">ExtractApiV2Error.ConversionFailureError</a></h4>
+      <section><p>The source file was readable but could not be processed, for example because
+it is corrupt.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractApiV2Error.IsAFolderError.html">ExtractApiV2Error.IsAFolderError</a></h4>
+      <section><p>The target is a folder, not a file.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractApiV2Error.LimitExceededError.html">ExtractApiV2Error.LimitExceededError</a></h4>
+      <section><p>A resource limit was exceeded: the source file is larger than the requested
+`extract_type` accepts, or the result would be too large to return. For
+`keyframes`, raise `scene_change_threshold` or turn off `include_images`; for
+`markdown`, turn off `embed_images`.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractApiV2Error.LinkDownloadDisabledError.html">ExtractApiV2Error.LinkDownloadDisabledError</a></h4>
+      <section><p>`FileIdOrUrl.url` referenced a Dropbox shared link whose owner has disabled
+downloads.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractApiV2Error.NoAudioError.html">ExtractApiV2Error.NoAudioError</a></h4>
+      <section><p>`transcript` only: the source file has no audio track.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractApiV2Error.NotFoundError.html">ExtractApiV2Error.NotFoundError</a></h4>
+      <section><p>The referenced file does not exist or is not accessible.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractApiV2Error.Other.html">ExtractApiV2Error.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractApiV2Error.ServerError.html">ExtractApiV2Error.ServerError</a></h4>
+      <section><p>An unexpected, typically transient, server-side failure. The string is a
+human-readable message; retrying with backoff may succeed.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractApiV2Error.SharedLinkPasswordProtected.html">ExtractApiV2Error.SharedLinkPasswordProtected</a></h4>
+      <section><p>`FileIdOrUrl.url` referenced a password-protected Dropbox shared link.
+Riviera cannot supply the password, so such links cannot be read.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractApiV2Error.UnsupportedFormatError.html">ExtractApiV2Error.UnsupportedFormatError</a></h4>
+      <section><p>The source file is not in a format the requested `extract_type`
+supports.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractApiV2Error.UserError.html">ExtractApiV2Error.UserError</a></h4>
+      <section><p>The request could not be processed as supplied (a problem with the caller's
+input), for example an out-of-range option. The string is a human-readable message;
+retrying the same request will not help.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractArgs.html">ExtractArgs</a></h4>
+      <section><p>Arguments for the asynchronous `extract_async` route. Exactly one of `file_id`,
+`path`, or `url` must be supplied via `file_id_or_url` to identify the source file, and
+`extract_type` must say what to extract from it.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractAsyncCheckResult.html">ExtractAsyncCheckResult</a></h4>
+      <section><p>Status of an extraction job started by `extract_async`, as returned by
+`extract_async/check`.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractAsyncCheckResult.Complete.html">ExtractAsyncCheckResult.Complete</a></h4>
+      <section><p>The job finished successfully.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractAsyncCheckResult.Failed.html">ExtractAsyncCheckResult.Failed</a></h4>
+      <section><p>The job finished unsuccessfully.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractAsyncCheckResult.InProgress.html">ExtractAsyncCheckResult.InProgress</a></h4>
+      <section><p>The job has not finished yet. Poll again.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractAsyncCheckResult.Other.html">ExtractAsyncCheckResult.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractResult.html">ExtractResult</a></h4>
+      <section><p>A completed extraction. The variant always matches the `ExtractType` that was
+requested.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractResult.Keyframes.html">ExtractResult.Keyframes</a></h4>
+      <section><p>The keyframes. Empty when no scene changes are detected.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractResult.Markdown.html">ExtractResult.Markdown</a></h4>
+      <section><p>The markdown the document was converted to. May be empty when the document
+has no extractable text.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractResult.Ocr.html">ExtractResult.Ocr</a></h4>
+      <section><p>The OCR text and hOCR. Both may be empty when no text is detected.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractResult.Other.html">ExtractResult.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractResult.Text.html">ExtractResult.Text</a></h4>
+      <section><p>The plain text of the document. May be empty when no text is found.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractResult.Transcript.html">ExtractResult.Transcript</a></h4>
+      <section><p>The transcript. Its segments are empty when no speech is detected.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractType.html">ExtractType</a></h4>
+      <section><p>What to extract from the source file, with that extraction's options. Exactly one
+variant must be set. Every variant carries an options message, so always send the
+object form -- for example `{".tag": "text"}` -- rather than a bare tag string. Option
+fields may be omitted to take their defaults.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractType.Keyframes.html">ExtractType.Keyframes</a></h4>
+      <section><p>Detect scene changes in a video and return one keyframe per scene. Supported
+formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv, .m2t, .m2ts, .m4v, .mkv, .mov,
+.mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv, .rm, .ts, .vob, .webm, .wmv. At
+most 10 GB.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractType.Markdown.html">ExtractType.Markdown</a></h4>
+      <section><p>Convert a document to markdown, preserving structure such as headings, lists,
+and tables. Supported formats: .binder, .docx, .html, .paper, .papert, .pptx,
+.xlsx, .gsheet, .ods, .pdf. At most 50 MB.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractType.Ocr.html">ExtractType.Ocr</a></h4>
+      <section><p>Run OCR on an image or a scanned PDF, returning reading-ordered text plus
+hOCR with per-word coordinates. Supported formats: .bmp, .gif, .heic, .jpeg, .jpg,
+.png, .tif, .tiff, .webp, .pdf. A PDF that already has a text layer is not OCRed
+and yields an empty result; use `text` for it. External (non-Dropbox) URLs are not
+supported.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractType.Other.html">ExtractType.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractType.Text.html">ExtractType.Text</a></h4>
+      <section><p>Extract the plain text of a document. Supported formats: .doc, .docx, .docm,
+.rtf, .ppt, .pptx, .pptm, .xls, .xlsx, .xlsm, .pdf, .paper, .papert, .binder,
+.gdoc, .gsheet, .gslides, .txt, .vtt. At most 50 MB.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.ExtractType.Transcript.html">ExtractType.Transcript</a></h4>
+      <section><p>Transcribe the audio of an audio or video file into timestamped segments.
+Supported audio formats: .aac, .aif, .aiff, .flac, .m4a, .m4r, .mp3, .oga, .ogg,
+.wav, .wma; video formats as for `keyframes`. At most 10 GB, with at most 1 hour of
+audio. A file with no audio track fails with `no_audio_error`.</p>
+</section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.FileIdOrUrl.html">FileIdOrUrl</a></h4>
       <section><p>The file id or url object</p>
 </section>
@@ -341,6 +472,9 @@ returned by <a class="xref" href="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.ht
       <section><p>Options for `TransformType.image` and `TransformType.image_pdf`. Supplying this
 message with any other transform type fails with `invalid_options_error`.</p>
 </section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractOptions.html">KeyframesExtractOptions</a></h4>
+      <section><p>Options for `ExtractType.keyframes`.</p>
+</section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.KeyframesExtractionApiV2Error.html">KeyframesExtractionApiV2Error</a></h4>
       <section><p>Reason a keyframe extraction job failed. Returned in the `failed` variant of
 `GetKeyframesAsyncCheckResult`. This is a semantic error union: the HTTP status of the
@@ -429,6 +563,9 @@ links cannot be converted.</p>
       <section><p>The request could not be processed as supplied (a problem with the caller's
 input) -- for example an unsupported file format or a file over the size limit. The
 string is a human-readable message; retrying the same request will not help.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.MarkdownExtractOptions.html">MarkdownExtractOptions</a></h4>
+      <section><p>Options for `ExtractType.markdown`.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MediaDurationError.html">MediaDurationError</a></h4>
       <section><p>The media duration error object</p>
@@ -522,6 +659,10 @@ having no extractable metadata; retrying will not change the outcome.</p>
       <h4><a class="xref" href="Dropbox.Api.Riviera.MetadataUnion.Pdf.html">MetadataUnion.Pdf</a></h4>
       <section><p>Document metadata, for PDFs.</p>
 </section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractOptions.html">OcrExtractOptions</a></h4>
+      <section><p>Options for `ExtractType.ocr`. There are none yet; the variant carries a message
+so that options can be added later without changing its shape.</p>
+</section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OcrExtractionApiV2Error.html">OcrExtractionApiV2Error</a></h4>
       <section><p>Reason an OCR extraction job failed. Returned in the `failed` variant of
 `GetOcrAsyncCheckResult`. This is a semantic error union: the HTTP status of the poll
@@ -583,6 +724,10 @@ result.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.OfficeFileType.Other.html">OfficeFileType.Other</a></h4>
       <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractOptions.html">TextExtractOptions</a></h4>
+      <section><p>Options for `ExtractType.text`. There are none yet; the variant carries a message
+so that options can be added later without changing its shape.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TextExtractionApiV2Error.html">TextExtractionApiV2Error</a></h4>
       <section><p>Reason a text extraction job failed. Returned in the `failed` variant of
@@ -717,6 +862,9 @@ not accepted.</p>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TimestampLevel.Word.html">TimestampLevel.Word</a></h4>
       <section><p>One segment per word, useful for fine-grained alignment such as captioning or
 highlight-as-you-listen experiences.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Riviera.TranscriptExtractOptions.html">TranscriptExtractOptions</a></h4>
+      <section><p>Options for `ExtractType.transcript`.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Riviera.TransformApiV2Error.html">TransformApiV2Error</a></h4>
       <section><p>Reason a transform job failed. Returned in the `failed` variant of
