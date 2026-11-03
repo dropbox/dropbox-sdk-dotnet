@@ -190,6 +190,28 @@ namespace Dropbox.Api.Paper
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is FolderNotFound</para>
+        /// </summary>
+        public bool IsFolderNotFound
+        {
+            get
+            {
+                return this is FolderNotFound;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a FolderNotFound, or <c>null</c>.</para>
+        /// </summary>
+        public FolderNotFound AsFolderNotFound
+        {
+            get
+            {
+                return this as FolderNotFound;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is
         /// InsufficientPermissions</para>
         /// </summary>
@@ -290,6 +312,12 @@ namespace Dropbox.Api.Paper
                     DocNotFound.Encoder.EncodeFields((DocNotFound)value, writer);
                     return;
                 }
+                if (value is FolderNotFound)
+                {
+                    WriteProperty(".tag", "folder_not_found", writer, enc.StringEncoder.Instance);
+                    FolderNotFound.Encoder.EncodeFields((FolderNotFound)value, writer);
+                    return;
+                }
                 if (value is InsufficientPermissions)
                 {
                     WriteProperty(".tag", "insufficient_permissions", writer, enc.StringEncoder.Instance);
@@ -348,6 +376,8 @@ namespace Dropbox.Api.Paper
                         return DocDeleted.Decoder.DecodeFields(reader);
                     case "doc_not_found":
                         return DocNotFound.Decoder.DecodeFields(reader);
+                    case "folder_not_found":
+                        return FolderNotFound.Decoder.DecodeFields(reader);
                     case "insufficient_permissions":
                         return InsufficientPermissions.Decoder.DecodeFields(reader);
                     case "other":
@@ -846,6 +876,77 @@ namespace Dropbox.Api.Paper
                 protected override DocNotFound Create()
                 {
                     return DocNotFound.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Cloud Docs do not have legacy Paper folders. Use the Dropbox filesystem APIs
+        /// to look up their containing folders.</para>
+        /// </summary>
+        public sealed class FolderNotFound : PaperDocUpdateError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<FolderNotFound> Encoder = new FolderNotFoundEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<FolderNotFound> Decoder = new FolderNotFoundDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="FolderNotFound" />
+            /// class.</para>
+            /// </summary>
+            private FolderNotFound()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of FolderNotFound</para>
+            /// </summary>
+            public static readonly FolderNotFound Instance = new FolderNotFound();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="FolderNotFound" />.</para>
+            /// </summary>
+            private class FolderNotFoundEncoder : enc.StructEncoder<FolderNotFound>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(FolderNotFound value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="FolderNotFound" />.</para>
+            /// </summary>
+            private class FolderNotFoundDecoder : enc.StructDecoder<FolderNotFound>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="FolderNotFound" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override FolderNotFound Create()
+                {
+                    return FolderNotFound.Instance;
                 }
 
             }
