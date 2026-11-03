@@ -130,6 +130,207 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
+        /// <para>Asynchronous content extraction from a single file. One route covers every
+        /// Riviera extraction. Name the source file in `file_id_or_url`, and say what to
+        /// extract in `extract_type`, whose variant carries that extraction's options: -
+        /// `markdown`: a document, converted to markdown that preserves its structure. -
+        /// `text`: the plain text of a document. - `ocr`: the text of an image or scanned PDF,
+        /// plus hOCR with per-word coordinates. - `transcript`: the timestamped transcript of
+        /// an audio or video file. - `keyframes`: one keyframe per scene change in a video.
+        /// The accepted formats and size limits differ per extraction; see `ExtractType`.
+        /// Formats the requested extraction does not support fail with
+        /// `unsupported_format_error`, and files over its size limit fail with
+        /// `limit_exceeded_error`. The result is not returned by this route. Poll
+        /// `extract_async/check` with the returned async job ID until it reports `complete` or
+        /// `failed`. A `complete` result is an `ExtractResult` whose variant matches the
+        /// requested `extract_type`.</para>
+        /// </summary>
+        /// <param name="extractArgs">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> ExtractAsyncAsync(ExtractArgs extractArgs)
+        {
+            return this.Transport.SendRpcRequestAsync<ExtractArgs, global::Dropbox.Api.Async.LaunchResultBase, enc.Empty>(extractArgs, "api", "/riviera/extract_async", "user", global::Dropbox.Api.Riviera.ExtractArgs.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the extract async route.</para>
+        /// </summary>
+        /// <param name="extractArgs">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginExtractAsync(ExtractArgs extractArgs, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.ExtractAsyncAsync(extractArgs);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Asynchronous content extraction from a single file. One route covers every
+        /// Riviera extraction. Name the source file in `file_id_or_url`, and say what to
+        /// extract in `extract_type`, whose variant carries that extraction's options: -
+        /// `markdown`: a document, converted to markdown that preserves its structure. -
+        /// `text`: the plain text of a document. - `ocr`: the text of an image or scanned PDF,
+        /// plus hOCR with per-word coordinates. - `transcript`: the timestamped transcript of
+        /// an audio or video file. - `keyframes`: one keyframe per scene change in a video.
+        /// The accepted formats and size limits differ per extraction; see `ExtractType`.
+        /// Formats the requested extraction does not support fail with
+        /// `unsupported_format_error`, and files over its size limit fail with
+        /// `limit_exceeded_error`. The result is not returned by this route. Poll
+        /// `extract_async/check` with the returned async job ID until it reports `complete` or
+        /// `failed`. A `complete` result is an `ExtractResult` whose variant matches the
+        /// requested `extract_type`.</para>
+        /// </summary>
+        /// <param name="extractType">What to extract, and that extraction's options.
+        /// Required.</param>
+        /// <param name="fileIdOrUrl">Identifier of the source file. Callers must set exactly
+        /// one of the `FileIdOrUrl` variants. The file must be in a format the requested
+        /// `extract_type` supports; see `ExtractType` for the per-type lists.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<global::Dropbox.Api.Async.LaunchResultBase> ExtractAsyncAsync(ExtractType extractType,
+                                                                                    FileIdOrUrl fileIdOrUrl = null)
+        {
+            var extractArgs = new ExtractArgs(extractType,
+                                              fileIdOrUrl);
+
+            return this.ExtractAsyncAsync(extractArgs);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the extract async route.</para>
+        /// </summary>
+        /// <param name="extractType">What to extract, and that extraction's options.
+        /// Required.</param>
+        /// <param name="fileIdOrUrl">Identifier of the source file. Callers must set exactly
+        /// one of the `FileIdOrUrl` variants. The file must be in a format the requested
+        /// `extract_type` supports; see `ExtractType` for the per-type lists.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginExtractAsync(ExtractType extractType,
+                                                  FileIdOrUrl fileIdOrUrl = null,
+                                                  sys.AsyncCallback callback = null,
+                                                  object callbackState = null)
+        {
+            var extractArgs = new ExtractArgs(extractType,
+                                              fileIdOrUrl);
+
+            return this.BeginExtractAsync(extractArgs, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the extract async route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public global::Dropbox.Api.Async.LaunchResultBase EndExtractAsync(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchResultBase>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Returns the status or result of specified extract_async task.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<ExtractAsyncCheckResult> ExtractAsyncCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
+        {
+            return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, ExtractAsyncCheckResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/riviera/extract_async/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Riviera.ExtractAsyncCheckResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the extract async check route.</para>
+        /// </summary>
+        /// <param name="pollArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginExtractAsyncCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.ExtractAsyncCheckAsync(pollArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the status or result of specified extract_async task.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public t.Task<ExtractAsyncCheckResult> ExtractAsyncCheckAsync(string asyncJobId)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.ExtractAsyncCheckAsync(pollArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the extract async check route.</para>
+        /// </summary>
+        /// <param name="asyncJobId">Id of the asynchronous job. This is the value of a
+        /// response returned from the method that launched the job.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginExtractAsyncCheck(string asyncJobId,
+                                                       sys.AsyncCallback callback,
+                                                       object callbackState = null)
+        {
+            var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
+
+            return this.BeginExtractAsyncCheck(pollArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the extract async check route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        public ExtractAsyncCheckResult EndExtractAsyncCheck(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<ExtractAsyncCheckResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Asynchronous scene-change keyframe extraction for video files. Detects scene
         /// changes in the source video and returns one representative keyframe per detected
         /// scene, each tagged with its timestamp (seconds from the start of the video) and
