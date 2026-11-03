@@ -34,8 +34,8 @@ namespace Dropbox.Api.TeamLog
         /// </summary>
         /// <param name="newValue">To.</param>
         /// <param name="previousValue">From.</param>
-        public SharingChangeLinkAllowChangeExpirationPolicyDetails(EnforceLinkPasswordPolicy newValue,
-                                                                   EnforceLinkPasswordPolicy previousValue = null)
+        public SharingChangeLinkAllowChangeExpirationPolicyDetails(ChangeLinkExpirationPolicy newValue,
+                                                                   ChangeLinkExpirationPolicy previousValue = null)
         {
             if (newValue == null)
             {
@@ -60,12 +60,12 @@ namespace Dropbox.Api.TeamLog
         /// <summary>
         /// <para>To.</para>
         /// </summary>
-        public EnforceLinkPasswordPolicy NewValue { get; protected set; }
+        public ChangeLinkExpirationPolicy NewValue { get; protected set; }
 
         /// <summary>
         /// <para>From.</para>
         /// </summary>
-        public EnforceLinkPasswordPolicy PreviousValue { get; protected set; }
+        public ChangeLinkExpirationPolicy PreviousValue { get; protected set; }
 
         #region Encoder class
 
@@ -82,10 +82,10 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharingChangeLinkAllowChangeExpirationPolicyDetails value, enc.IJsonWriter writer)
             {
-                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.EnforceLinkPasswordPolicy.Encoder);
+                WriteProperty("new_value", value.NewValue, writer, global::Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Encoder);
                 if (value.PreviousValue != null)
                 {
-                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.EnforceLinkPasswordPolicy.Encoder);
+                    WriteProperty("previous_value", value.PreviousValue, writer, global::Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Encoder);
                 }
             }
         }
@@ -122,10 +122,10 @@ namespace Dropbox.Api.TeamLog
                 switch (fieldName)
                 {
                     case "new_value":
-                        value.NewValue = global::Dropbox.Api.TeamLog.EnforceLinkPasswordPolicy.Decoder.Decode(reader);
+                        value.NewValue = global::Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Decoder.Decode(reader);
                         break;
                     case "previous_value":
-                        value.PreviousValue = global::Dropbox.Api.TeamLog.EnforceLinkPasswordPolicy.Decoder.Decode(reader);
+                        value.PreviousValue = global::Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Decoder.Decode(reader);
                         break;
                     default:
                         reader.Skip();
