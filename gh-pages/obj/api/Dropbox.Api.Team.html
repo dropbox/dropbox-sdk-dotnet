@@ -2326,6 +2326,26 @@ match any of the team's team folders.</p>
       <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.html">TeamFolderGetInfoItem.TeamFolderMetadata</a></h4>
       <section><p>Properties of a team folder.</p>
 </section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderGetSpaceLimitError.html">TeamFolderGetSpaceLimitError</a></h4>
+      <section><p>Errors for <a class="xref" href="Dropbox.Api.Team.Routes.TeamTeamRoutes.html#Dropbox_Api_Team_Routes_TeamTeamRoutes_TeamFolderSpaceLimitGetAsync_Dropbox_Api_Team_TeamFolderIdArg_">TeamFolderSpaceLimitGetAsync(TeamFolderIdArg)</a>.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderGetSpaceLimitError.AccessError.html">TeamFolderGetSpaceLimitError.AccessError</a></h4>
+      <section><p>The access error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderGetSpaceLimitError.Other.html">TeamFolderGetSpaceLimitError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderGetSpaceLimitError.StatusError.html">TeamFolderGetSpaceLimitError.StatusError</a></h4>
+      <section><p>The status error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderGetSpaceLimitError.TeamSharedDropboxError.html">TeamFolderGetSpaceLimitError.TeamSharedDropboxError</a></h4>
+      <section><p>The team shared dropbox error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderGetSpaceLimitResponse.html">TeamFolderGetSpaceLimitResponse</a></h4>
+      <section><p>The space limit configuration of a team folder. If no space limit has ever been
+set for the team folder, <a class="xref" href="Dropbox.Api.Team.TeamFolderGetSpaceLimitResponse.html#Dropbox_Api_Team_TeamFolderGetSpaceLimitResponse_SpaceLimitBytes">SpaceLimitBytes</a> is 0, <a class="xref" href="Dropbox.Api.Team.TeamFolderGetSpaceLimitResponse.html#Dropbox_Api_Team_TeamFolderGetSpaceLimitResponse_CapsType">CapsType</a>
+is <a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Off.html">TeamFolderSpaceLimitCapsType.Off</a>, and <a class="xref" href="Dropbox.Api.Team.TeamFolderGetSpaceLimitResponse.html#Dropbox_Api_Team_TeamFolderGetSpaceLimitResponse_NotificationTarget">NotificationTarget</a> is <a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitNotificationTarget.Admins.html">TeamFolderSpaceLimitNotificationTarget.Admins</a>.</p>
+</section>
       <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderIdArg.html">TeamFolderIdArg</a></h4>
       <section><p>The team folder id arg object</p>
 </section>
@@ -2431,6 +2451,76 @@ plan.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderRestoreError.TeamSharedDropboxError.html">TeamFolderRestoreError.TeamSharedDropboxError</a></h4>
       <section><p>The team shared dropbox error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSetSpaceLimitArg.html">TeamFolderSetSpaceLimitArg</a></h4>
+      <section><p>Arguments for <a class="xref" href="Dropbox.Api.Team.Routes.TeamTeamRoutes.html#Dropbox_Api_Team_Routes_TeamTeamRoutes_TeamFolderSpaceLimitSetAsync_Dropbox_Api_Team_TeamFolderSetSpaceLimitArg_">TeamFolderSpaceLimitSetAsync(TeamFolderSetSpaceLimitArg)</a>.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSetSpaceLimitError.html">TeamFolderSetSpaceLimitError</a></h4>
+      <section><p>Errors for <a class="xref" href="Dropbox.Api.Team.Routes.TeamTeamRoutes.html#Dropbox_Api_Team_Routes_TeamTeamRoutes_TeamFolderSpaceLimitSetAsync_Dropbox_Api_Team_TeamFolderSetSpaceLimitArg_">TeamFolderSpaceLimitSetAsync(TeamFolderSetSpaceLimitArg)</a>.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSetSpaceLimitError.AccessError.html">TeamFolderSetSpaceLimitError.AccessError</a></h4>
+      <section><p>The access error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSetSpaceLimitError.LimitBelowMinimum.html">TeamFolderSetSpaceLimitError.LimitBelowMinimum</a></h4>
+      <section><p><a class="xref" href="Dropbox.Api.Team.TeamFolderSetSpaceLimitArg.html#Dropbox_Api_Team_TeamFolderSetSpaceLimitArg_SpaceLimitBytes">SpaceLimitBytes</a> is
+below the 2 GB minimum. Only returned when <a class="xref" href="Dropbox.Api.Team.TeamFolderSetSpaceLimitArg.html#Dropbox_Api_Team_TeamFolderSetSpaceLimitArg_CapsType">CapsType</a> is <a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Soft.html">TeamFolderSpaceLimitCapsType.Soft</a> or <a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Hard.html">TeamFolderSpaceLimitCapsType.Hard</a>.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSetSpaceLimitError.LimitExceedsTeamQuota.html">TeamFolderSetSpaceLimitError.LimitExceedsTeamQuota</a></h4>
+      <section><p><a class="xref" href="Dropbox.Api.Team.TeamFolderSetSpaceLimitArg.html#Dropbox_Api_Team_TeamFolderSetSpaceLimitArg_SpaceLimitBytes">SpaceLimitBytes</a>
+exceeds the team's total storage capacity.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSetSpaceLimitError.Other.html">TeamFolderSetSpaceLimitError.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSetSpaceLimitError.StatusError.html">TeamFolderSetSpaceLimitError.StatusError</a></h4>
+      <section><p>The status error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSetSpaceLimitError.TeamSharedDropboxError.html">TeamFolderSetSpaceLimitError.TeamSharedDropboxError</a></h4>
+      <section><p>The team shared dropbox error object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.html">TeamFolderSpaceLimitCapsType</a></h4>
+      <section><p>How a team folder's space limit is enforced.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Hard.html">TeamFolderSpaceLimitCapsType.Hard</a></h4>
+      <section><p>The space limit is enforced. Once the total size of the team folder,
+including all of its subfolders, reaches the limit, uploads and other writes that
+add content to the team folder fail until space is freed or the limit is raised.
+Usage notifications are sent as for <a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Soft.html">TeamFolderSpaceLimitCapsType.Soft</a>.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Off.html">TeamFolderSpaceLimitCapsType.Off</a></h4>
+      <section><p>No space limit is enforced and no usage notifications are sent. Any stored
+space limit value is ignored.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Other.html">TeamFolderSpaceLimitCapsType.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Soft.html">TeamFolderSpaceLimitCapsType.Soft</a></h4>
+      <section><p>The space limit is advisory. Members can keep adding content after the team
+folder reaches the limit, but usage notifications are sent as described in <a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitNotificationTarget.html">TeamFolderSpaceLimitNotificationTarget</a>.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitNotificationTarget.html">TeamFolderSpaceLimitNotificationTarget</a></h4>
+      <section><p>Who receives email notifications when a team folder's usage reaches 80% of its
+space limit, and when usage reaches or exceeds the limit. These notifications are sent
+asynchronously, so they can arrive some time after usage crosses a threshold. They are
+only sent when the caps type is <a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Soft.html">TeamFolderSpaceLimitCapsType.Soft</a> or <a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Hard.html">TeamFolderSpaceLimitCapsType.Hard</a>. Regardless of this
+setting, team admins and all members with edit access to the team folder are notified
+when a space limit is added, changed, or removed.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitNotificationTarget.Admins.html">TeamFolderSpaceLimitNotificationTarget.Admins</a></h4>
+      <section><p>Team admins who can manage team folders.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitNotificationTarget.Both.html">TeamFolderSpaceLimitNotificationTarget.Both</a></h4>
+      <section><p>Both team admins who can manage team folders and members with edit access to
+the team folder.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitNotificationTarget.Editors.html">TeamFolderSpaceLimitNotificationTarget.Editors</a></h4>
+      <section><p>Members with edit access to the team folder, excluding team admins.</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitNotificationTarget.Other.html">TeamFolderSpaceLimitNotificationTarget.Other</a></h4>
+      <section><p>The other object</p>
+</section>
+      <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderSpaceLimitNotificationTarget.Silent.html">TeamFolderSpaceLimitNotificationTarget.Silent</a></h4>
+      <section><p>No usage notifications are sent.</p>
 </section>
       <h4><a class="xref" href="Dropbox.Api.Team.TeamFolderStatus.html">TeamFolderStatus</a></h4>
       <section><p>The team folder status object</p>
