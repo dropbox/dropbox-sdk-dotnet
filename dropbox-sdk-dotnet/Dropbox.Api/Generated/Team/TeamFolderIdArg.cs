@@ -15,6 +15,7 @@ namespace Dropbox.Api.Team
     /// </summary>
     /// <seealso cref="TeamFolderArchiveArg" />
     /// <seealso cref="TeamFolderRenameArg" />
+    /// <seealso cref="TeamFolderSetSpaceLimitArg" />
     /// <seealso cref="TeamFolderUpdateSyncSettingsArg" />
     public class TeamFolderIdArg
     {
