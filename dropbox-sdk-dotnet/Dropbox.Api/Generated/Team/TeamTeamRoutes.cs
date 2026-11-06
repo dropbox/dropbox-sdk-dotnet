@@ -8333,6 +8333,211 @@ namespace Dropbox.Api.Team.Routes
         }
 
         /// <summary>
+        /// <para>Returns the space limit configuration of a team folder. See <see
+        /// cref="TeamFolderSpaceLimitCapsType" /> for how space limits are enforced.</para>
+        /// </summary>
+        /// <param name="teamFolderIdArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderGetSpaceLimitError"/>.</exception>
+        public t.Task<TeamFolderGetSpaceLimitResponse> TeamFolderSpaceLimitGetAsync(TeamFolderIdArg teamFolderIdArg)
+        {
+            return this.Transport.SendRpcRequestAsync<TeamFolderIdArg, TeamFolderGetSpaceLimitResponse, TeamFolderGetSpaceLimitError>(teamFolderIdArg, "api", "/team/team_folder/space_limit/get", "team", global::Dropbox.Api.Team.TeamFolderIdArg.Encoder, global::Dropbox.Api.Team.TeamFolderGetSpaceLimitResponse.Decoder, global::Dropbox.Api.Team.TeamFolderGetSpaceLimitError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder space limit get route.</para>
+        /// </summary>
+        /// <param name="teamFolderIdArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderSpaceLimitGet(TeamFolderIdArg teamFolderIdArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TeamFolderSpaceLimitGetAsync(teamFolderIdArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Returns the space limit configuration of a team folder. See <see
+        /// cref="TeamFolderSpaceLimitCapsType" /> for how space limits are enforced.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderGetSpaceLimitError"/>.</exception>
+        public t.Task<TeamFolderGetSpaceLimitResponse> TeamFolderSpaceLimitGetAsync(string teamFolderId)
+        {
+            var teamFolderIdArg = new TeamFolderIdArg(teamFolderId);
+
+            return this.TeamFolderSpaceLimitGetAsync(teamFolderIdArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder space limit get route.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderSpaceLimitGet(string teamFolderId,
+                                                             sys.AsyncCallback callback,
+                                                             object callbackState = null)
+        {
+            var teamFolderIdArg = new TeamFolderIdArg(teamFolderId);
+
+            return this.BeginTeamFolderSpaceLimitGet(teamFolderIdArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the team folder space limit get
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderGetSpaceLimitError"/>.</exception>
+        public TeamFolderGetSpaceLimitResponse EndTeamFolderSpaceLimitGet(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<TeamFolderGetSpaceLimitResponse>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Sets the space limit configuration of a team folder, replacing any existing
+        /// configuration. See <see cref="TeamFolderSpaceLimitCapsType" /> for how space limits
+        /// are enforced.</para>
+        /// </summary>
+        /// <param name="teamFolderSetSpaceLimitArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderSetSpaceLimitError"/>.</exception>
+        public t.Task TeamFolderSpaceLimitSetAsync(TeamFolderSetSpaceLimitArg teamFolderSetSpaceLimitArg)
+        {
+            return this.Transport.SendRpcRequestAsync<TeamFolderSetSpaceLimitArg, enc.Empty, TeamFolderSetSpaceLimitError>(teamFolderSetSpaceLimitArg, "api", "/team/team_folder/space_limit/set", "team", global::Dropbox.Api.Team.TeamFolderSetSpaceLimitArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Team.TeamFolderSetSpaceLimitError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder space limit set route.</para>
+        /// </summary>
+        /// <param name="teamFolderSetSpaceLimitArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderSpaceLimitSet(TeamFolderSetSpaceLimitArg teamFolderSetSpaceLimitArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TeamFolderSpaceLimitSetAsync(teamFolderSetSpaceLimitArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Sets the space limit configuration of a team folder, replacing any existing
+        /// configuration. See <see cref="TeamFolderSpaceLimitCapsType" /> for how space limits
+        /// are enforced.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <param name="spaceLimitBytes">The maximum total size, in bytes, of all content in
+        /// the team folder and its subfolders. When <paramref name="capsType" /> is <see
+        /// cref="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Soft" /> or <see
+        /// cref="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Hard" />, this must be at least
+        /// 2 GB (2147483648 bytes). It must never exceed the team's total storage capacity.
+        /// When <paramref name="capsType" /> is <see
+        /// cref="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Off" />, the value is stored
+        /// but has no effect, and it may be 0.</param>
+        /// <param name="capsType">The caps type to apply to the specified team folder.</param>
+        /// <param name="notificationTarget">Who receives usage notifications for the specified
+        /// team folder.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderSetSpaceLimitError"/>.</exception>
+        public t.Task TeamFolderSpaceLimitSetAsync(string teamFolderId,
+                                                   ulong spaceLimitBytes,
+                                                   TeamFolderSpaceLimitCapsType capsType,
+                                                   TeamFolderSpaceLimitNotificationTarget notificationTarget)
+        {
+            var teamFolderSetSpaceLimitArg = new TeamFolderSetSpaceLimitArg(teamFolderId,
+                                                                            spaceLimitBytes,
+                                                                            capsType,
+                                                                            notificationTarget);
+
+            return this.TeamFolderSpaceLimitSetAsync(teamFolderSetSpaceLimitArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the team folder space limit set route.</para>
+        /// </summary>
+        /// <param name="teamFolderId">The ID of the team folder.</param>
+        /// <param name="spaceLimitBytes">The maximum total size, in bytes, of all content in
+        /// the team folder and its subfolders. When <paramref name="capsType" /> is <see
+        /// cref="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Soft" /> or <see
+        /// cref="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Hard" />, this must be at least
+        /// 2 GB (2147483648 bytes). It must never exceed the team's total storage capacity.
+        /// When <paramref name="capsType" /> is <see
+        /// cref="Dropbox.Api.Team.TeamFolderSpaceLimitCapsType.Off" />, the value is stored
+        /// but has no effect, and it may be 0.</param>
+        /// <param name="capsType">The caps type to apply to the specified team folder.</param>
+        /// <param name="notificationTarget">Who receives usage notifications for the specified
+        /// team folder.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTeamFolderSpaceLimitSet(string teamFolderId,
+                                                             ulong spaceLimitBytes,
+                                                             TeamFolderSpaceLimitCapsType capsType,
+                                                             TeamFolderSpaceLimitNotificationTarget notificationTarget,
+                                                             sys.AsyncCallback callback,
+                                                             object callbackState = null)
+        {
+            var teamFolderSetSpaceLimitArg = new TeamFolderSetSpaceLimitArg(teamFolderId,
+                                                                            spaceLimitBytes,
+                                                                            capsType,
+                                                                            notificationTarget);
+
+            return this.BeginTeamFolderSpaceLimitSet(teamFolderSetSpaceLimitArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the team folder space limit set
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="TeamFolderSetSpaceLimitError"/>.</exception>
+        public void EndTeamFolderSpaceLimitSet(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+        }
+
+        /// <summary>
         /// <para>Updates the sync settings on a team folder or its contents.  Use of this
         /// endpoint requires that the team has team selective sync enabled.</para>
         /// </summary>
