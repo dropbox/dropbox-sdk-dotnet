@@ -301,8 +301,7 @@ namespace Dropbox.Api
                 var json = JObject.Parse(await response.Content.ReadAsStringAsync());
                 string accessToken = json["access_token"].ToString();
                 DateTime tokenExpiration = DateTime.Now.AddSeconds(json["expires_in"].ToObject<int>());
-                this.options.OAuth2AccessToken = accessToken;
-                this.options.OAuth2AccessTokenExpiresAt = tokenExpiration;
+                this.options.UpdateAccessToken(accessToken, tokenExpiration);
                 return true;
             }
 
@@ -316,6 +315,15 @@ namespace Dropbox.Api
         {
             this.Dispose(true);
             GC.SuppressFinalize(this);
+        }
+
+        /// <summary>
+        /// Reads the shared cached access token and expiration without refreshing.
+        /// </summary>
+        /// <returns>The snapshot, or null if no access token is cached.</returns>
+        internal AccessTokenSnapshot GetAccessTokenSnapshot()
+        {
+            return this.options.GetAccessTokenSnapshot();
         }
 
         /// <summary>
@@ -750,9 +758,15 @@ namespace Dropbox.Api
         private async Task<bool> CheckAndRefreshAccessToken()
         {
             bool canRefresh = this.options.OAuth2RefreshToken != null && this.options.AppKey != null;
-            bool needsRefresh = (this.options.OAuth2AccessTokenExpiresAt.HasValue && DateTime.Now.AddSeconds(TokenExpirationBuffer) >= this.options.OAuth2AccessTokenExpiresAt.Value) ||
-                (this.options.OAuth2RefreshToken != null && !this.options.OAuth2AccessTokenExpiresAt.HasValue);
-            bool needsToken = this.options.OAuth2AccessToken == null;
+            bool needsRefresh;
+            bool needsToken;
+            lock (this.options.AuthStateLock)
+            {
+                needsRefresh = (this.options.OAuth2AccessTokenExpiresAt.HasValue && DateTime.Now.AddSeconds(TokenExpirationBuffer) >= this.options.OAuth2AccessTokenExpiresAt.Value) ||
+                    (this.options.OAuth2RefreshToken != null && !this.options.OAuth2AccessTokenExpiresAt.HasValue);
+                needsToken = this.options.OAuth2AccessToken == null;
+            }
+
             if ((needsRefresh || needsToken) && canRefresh)
             {
                 return await this.RefreshAccessToken();
@@ -1081,6 +1095,10 @@ namespace Dropbox.Api
         /// </summary>
         private const string BaseUserAgent = "OfficialDropboxDotNetSDKv2";
 
+        private string oauth2AccessToken;
+
+        private DateTime? oauth2AccessTokenExpiresAt;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DropboxRequestHandlerOptions"/> class.
         /// </summary>
@@ -1164,9 +1182,8 @@ namespace Dropbox.Api
             this.LongPollHttpClient = longPollHttpClient;
             this.DisposeUploadStream = disposeUploadStream;
             this.AutoContentHash = autoContentHash;
-            this.OAuth2AccessToken = string.IsNullOrEmpty(oauth2AccessToken) ? null : oauth2AccessToken;
+            this.UpdateAccessToken(string.IsNullOrEmpty(oauth2AccessToken) ? null : oauth2AccessToken, oauth2AccessTokenExpiresAt);
             this.OAuth2RefreshToken = string.IsNullOrEmpty(oauth2RefreshToken) ? null : oauth2RefreshToken;
-            this.OAuth2AccessTokenExpiresAt = oauth2AccessTokenExpiresAt;
             this.AppKey = appKey;
             this.AppSecret = appSecret;
             this.MaxClientRetries = maxRetriesOnError;
@@ -1184,9 +1201,18 @@ namespace Dropbox.Api
         public int MaxClientRetries { get; private set; }
 
         /// <summary>
-        /// Gets or sets the OAuth2 token.
+        /// Gets the OAuth2 token.
         /// </summary>
-        public string OAuth2AccessToken { get; set; }
+        public string OAuth2AccessToken
+        {
+            get
+            {
+                lock (this.AuthStateLock)
+                {
+                    return this.oauth2AccessToken;
+                }
+            }
+        }
 
         /// <summary>
         /// Gets get the OAuth2 refresh token.
@@ -1194,9 +1220,18 @@ namespace Dropbox.Api
         public string OAuth2RefreshToken { get; private set; }
 
         /// <summary>
-        /// Gets or sets the time the access token expires at.
+        /// Gets the time the access token expires at.
         /// </summary>
-        public DateTime? OAuth2AccessTokenExpiresAt { get; set; }
+        public DateTime? OAuth2AccessTokenExpiresAt
+        {
+            get
+            {
+                lock (this.AuthStateLock)
+                {
+                    return this.oauth2AccessTokenExpiresAt;
+                }
+            }
+        }
 
         /// <summary>
         /// Gets the app key to use when refreshing tokens.
@@ -1238,5 +1273,40 @@ namespace Dropbox.Api
         /// Gets the maps from host types to domain names.
         /// </summary>
         public IDictionary<string, string> HostMap { get; private set; }
+
+        /// <summary>
+        /// Gets the lock shared by all handlers using these credentials.
+        /// </summary>
+        internal object AuthStateLock { get; } = new object();
+
+        /// <summary>
+        /// Publishes a complete token/expiration pair after a successful refresh.
+        /// </summary>
+        /// <param name="accessToken">The access token.</param>
+        /// <param name="expiresAt">The expiration in the existing SDK DateTime convention.</param>
+        internal void UpdateAccessToken(string accessToken, DateTime? expiresAt)
+        {
+            lock (this.AuthStateLock)
+            {
+                this.oauth2AccessToken = accessToken;
+                this.oauth2AccessTokenExpiresAt = expiresAt;
+            }
+        }
+
+        /// <summary>
+        /// Reads one coherent state, treating unspecified DateTime values as local,
+        /// consistent with the SDK's DateTime.Now expiration convention.
+        /// </summary>
+        /// <returns>The snapshot, or null if no access token is cached.</returns>
+        internal AccessTokenSnapshot GetAccessTokenSnapshot()
+        {
+            lock (this.AuthStateLock)
+            {
+                DateTimeOffset? expiresAt = this.oauth2AccessTokenExpiresAt.HasValue
+                    ? new DateTimeOffset(this.oauth2AccessTokenExpiresAt.Value.ToUniversalTime())
+                    : (DateTimeOffset?)null;
+                return this.oauth2AccessToken == null ? null : new AccessTokenSnapshot(this.oauth2AccessToken, expiresAt);
+            }
+        }
     }
 }

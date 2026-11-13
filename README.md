@@ -74,6 +74,40 @@ var config = new DropboxClientConfig
 };
 ```
 
+## Reusing a cached access token
+
+`DropboxClient.GetAccessTokenSnapshot()` and `DropboxTeamClient.GetAccessTokenSnapshot()`
+read local cached credentials without HTTP requests or refresh. The immutable snapshot
+is null until an access token is available. Its nullable `ExpiresAt` is UTC; an unknown
+expiration does not imply an unlimited lifetime. Cached tokens may be expired or revoked.
+Access tokens are sensitive: store them securely and never log them.
+
+After an ordinary SDK call (which refreshes automatically when needed), reuse the
+snapshot with an existing constructor. Keep refresh credentials separately:
+
+```csharp
+await client.Users.GetCurrentAccountAsync();
+var snapshot = client.GetAccessTokenSnapshot();
+if (snapshot != null)
+{
+    // refreshToken, appKey and appSecret come from the application's secure storage.
+    using (var nextClient = snapshot.ExpiresAt.HasValue
+        ? new DropboxClient(snapshot.AccessToken, refreshToken,
+            snapshot.ExpiresAt.Value.LocalDateTime, appKey, appSecret)
+        : new DropboxClient(snapshot.AccessToken, refreshToken,
+            appKey, appSecret, new DropboxClientConfig()))
+    {
+        await nextClient.Users.GetCurrentAccountAsync();
+    }
+}
+```
+
+The example converts known expiration to local `DateTime` for the existing constructors,
+consistent with the SDK's refresh timing convention. An existing explicit
+`await client.RefreshAccessToken(null)` also updates the cache; snapshot reads themselves
+do not require refresh. Clients created with `WithPathRoot`, `AsMember`, and `AsAdmin`
+share cached credentials and see refreshes performed by any of those clients.
+
 ## Getting Help
 
 If you find a bug, please see [CONTRIBUTING.md][contributing] for information on how to report it.
