@@ -331,14 +331,19 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous scene-change keyframe extraction for video files. Detects scene
-        /// changes in the source video and returns one representative keyframe per detected
-        /// scene, each tagged with its timestamp (seconds from the start of the video) and
-        /// scene-change score. Set `include_images = true` to also receive each frame as a
-        /// base64-encoded JPEG; when the field is omitted the response carries keyframe
-        /// metadata only. Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv,
-        /// .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv,
-        /// .rm, .ts, .vob, .webm, .wmv. Unsupported formats return an
+        /// <para>Deprecated: use <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.ExtractAsyncAsync" /> <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncAsync" /> with
+        /// `extract_type` set to <see cref="Dropbox.Api.Riviera.ExtractType.Keyframes" />
+        /// instead, which takes the same options. This route will be turned off by December
+        /// 31, 2026. Asynchronous scene-change keyframe extraction for video files. Detects
+        /// scene changes in the source video and returns one representative keyframe per
+        /// detected scene, each tagged with its timestamp (seconds from the start of the
+        /// video) and scene-change score. Set `include_images = true` to also receive each
+        /// frame as a base64-encoded JPEG; when the field is omitted the response carries
+        /// keyframe metadata only. Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi,
+        /// .dv, .flv, .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf,
+        /// .oggtheora, .ogv, .rm, .ts, .vob, .webm, .wmv. Unsupported formats return an
         /// `unsupported_format_error`. Limits: the source file must be at most 10 GB. To keep
         /// responses within service limits the number of keyframes and the total image payload
         /// are bounded; requests that would exceed these limits return a
@@ -348,6 +353,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="getKeyframesArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetKeyframesAsyncAsync(GetKeyframesArgs getKeyframesArgs)
         {
             return this.Transport.SendRpcRequestAsync<GetKeyframesArgs, global::Dropbox.Api.Async.LaunchResultBase, enc.Empty>(getKeyframesArgs, "api", "/riviera/get_keyframes_async", "user", global::Dropbox.Api.Riviera.GetKeyframesArgs.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, enc.EmptyDecoder.Instance);
@@ -362,6 +368,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetKeyframesAsync(GetKeyframesArgs getKeyframesArgs, sys.AsyncCallback callback, object state = null)
         {
             var task = this.GetKeyframesAsyncAsync(getKeyframesArgs);
@@ -370,14 +377,19 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous scene-change keyframe extraction for video files. Detects scene
-        /// changes in the source video and returns one representative keyframe per detected
-        /// scene, each tagged with its timestamp (seconds from the start of the video) and
-        /// scene-change score. Set `include_images = true` to also receive each frame as a
-        /// base64-encoded JPEG; when the field is omitted the response carries keyframe
-        /// metadata only. Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv,
-        /// .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv,
-        /// .rm, .ts, .vob, .webm, .wmv. Unsupported formats return an
+        /// <para>Deprecated: use <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.ExtractAsyncAsync" /> <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncAsync" /> with
+        /// `extract_type` set to <see cref="Dropbox.Api.Riviera.ExtractType.Keyframes" />
+        /// instead, which takes the same options. This route will be turned off by December
+        /// 31, 2026. Asynchronous scene-change keyframe extraction for video files. Detects
+        /// scene changes in the source video and returns one representative keyframe per
+        /// detected scene, each tagged with its timestamp (seconds from the start of the
+        /// video) and scene-change score. Set `include_images = true` to also receive each
+        /// frame as a base64-encoded JPEG; when the field is omitted the response carries
+        /// keyframe metadata only. Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi,
+        /// .dv, .flv, .m2t, .m2ts, .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf,
+        /// .oggtheora, .ogv, .rm, .ts, .vob, .webm, .wmv. Unsupported formats return an
         /// `unsupported_format_error`. Limits: the source file must be at most 10 GB. To keep
         /// responses within service limits the number of keyframes and the total image payload
         /// are bounded; requests that would exceed these limits return a
@@ -402,6 +414,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// who want images must set this explicitly to true.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetKeyframesAsyncAsync(FileIdOrUrl fileIdOrUrl = null,
                                                                                          double sceneChangeThreshold = 0.0D,
                                                                                          bool includeImages = false)
@@ -437,6 +450,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetKeyframesAsync(FileIdOrUrl fileIdOrUrl = null,
                                                        double sceneChangeThreshold = 0.0D,
                                                        bool includeImages = false,
@@ -457,6 +471,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
+        [sys.Obsolete("This function is deprecated")]
         public global::Dropbox.Api.Async.LaunchResultBase EndGetKeyframesAsync(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchResultBase>;
@@ -477,6 +492,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetKeyframesAsyncCheckResult> GetKeyframesAsyncCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
             return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, GetKeyframesAsyncCheckResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/riviera/get_keyframes_async/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Riviera.GetKeyframesAsyncCheckResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
@@ -491,6 +507,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetKeyframesAsyncCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.GetKeyframesAsyncCheckAsync(pollArg);
@@ -508,6 +525,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetKeyframesAsyncCheckResult> GetKeyframesAsyncCheckAsync(string asyncJobId)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
@@ -525,6 +543,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetKeyframesAsyncCheck(string asyncJobId,
                                                             sys.AsyncCallback callback,
                                                             object callbackState = null)
@@ -544,6 +563,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public GetKeyframesAsyncCheckResult EndGetKeyframesAsyncCheck(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GetKeyframesAsyncCheckResult>;
@@ -556,7 +576,12 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous document-to-markdown conversion for supported file formats.
+        /// <para>Deprecated: use <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.ExtractAsyncAsync" /> <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncAsync" /> with
+        /// `extract_type` set to <see cref="Dropbox.Api.Riviera.ExtractType.Markdown" />
+        /// instead, which takes the same options. This route will be turned off by December
+        /// 31, 2026. Asynchronous document-to-markdown conversion for supported file formats.
         /// Supported formats: .binder, .docx, .html, .paper, .papert, .pptx, .xlsx, .gsheet,
         /// .ods, .pdf. Files in other formats fail with <see
         /// cref="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError" />. Size limit:
@@ -572,6 +597,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="getMarkdownArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetMarkdownAsyncAsync(GetMarkdownArgs getMarkdownArgs)
         {
             return this.Transport.SendRpcRequestAsync<GetMarkdownArgs, global::Dropbox.Api.Async.LaunchResultBase, enc.Empty>(getMarkdownArgs, "api", "/riviera/get_markdown_async", "user", global::Dropbox.Api.Riviera.GetMarkdownArgs.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, enc.EmptyDecoder.Instance);
@@ -586,6 +612,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetMarkdownAsync(GetMarkdownArgs getMarkdownArgs, sys.AsyncCallback callback, object state = null)
         {
             var task = this.GetMarkdownAsyncAsync(getMarkdownArgs);
@@ -594,7 +621,12 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous document-to-markdown conversion for supported file formats.
+        /// <para>Deprecated: use <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.ExtractAsyncAsync" /> <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncAsync" /> with
+        /// `extract_type` set to <see cref="Dropbox.Api.Riviera.ExtractType.Markdown" />
+        /// instead, which takes the same options. This route will be turned off by December
+        /// 31, 2026. Asynchronous document-to-markdown conversion for supported file formats.
         /// Supported formats: .binder, .docx, .html, .paper, .papert, .pptx, .xlsx, .gsheet,
         /// .ods, .pdf. Files in other formats fail with <see
         /// cref="Dropbox.Api.Riviera.MarkdownConversionApiV2Error.UserError" />. Size limit:
@@ -618,6 +650,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// markdown output. This can significantly increase output size.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetMarkdownAsyncAsync(FileIdOrUrl fileIdOrUrl = null,
                                                                                         bool enableOcr = false,
                                                                                         bool embedImages = false)
@@ -646,6 +679,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetMarkdownAsync(FileIdOrUrl fileIdOrUrl = null,
                                                       bool enableOcr = false,
                                                       bool embedImages = false,
@@ -666,6 +700,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
+        [sys.Obsolete("This function is deprecated")]
         public global::Dropbox.Api.Async.LaunchResultBase EndGetMarkdownAsync(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchResultBase>;
@@ -686,6 +721,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetMarkdownAsyncCheckResult> GetMarkdownAsyncCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
             return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, GetMarkdownAsyncCheckResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/riviera/get_markdown_async/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Riviera.GetMarkdownAsyncCheckResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
@@ -700,6 +736,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetMarkdownAsyncCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.GetMarkdownAsyncCheckAsync(pollArg);
@@ -717,6 +754,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetMarkdownAsyncCheckResult> GetMarkdownAsyncCheckAsync(string asyncJobId)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
@@ -734,6 +772,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetMarkdownAsyncCheck(string asyncJobId,
                                                            sys.AsyncCallback callback,
                                                            object callbackState = null)
@@ -753,6 +792,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public GetMarkdownAsyncCheckResult EndGetMarkdownAsyncCheck(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GetMarkdownAsyncCheckResult>;
@@ -980,19 +1020,25 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous OCR (optical character recognition) text extraction for images
-        /// and PDFs, including scanned / non-text PDFs. Supported formats: - Image formats:
-        /// .bmp, .gif, .heic, .jpeg, .jpg, .png, .tif, .tiff, .webp. - PDF format: .pdf.
-        /// Unsupported formats return an `unsupported_format_error`. For the `url` variant
-        /// only Dropbox shared links are supported; external URLs return
-        /// `unsupported_format_error`. Text-based PDFs already carry a text layer, so OCR is
-        /// not run against them and the result is empty; use `get_text_async` to read the
-        /// embedded text layer of such a PDF. The result carries the extracted words as plain
-        /// text, plus the same content as hOCR with per-word coordinates.</para>
+        /// <para>Deprecated: use <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.ExtractAsyncAsync" /> <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncAsync" /> with
+        /// `extract_type` set to <see cref="Dropbox.Api.Riviera.ExtractType.Ocr" /> instead,
+        /// which takes the same options. This route will be turned off by December 31, 2026.
+        /// Asynchronous OCR (optical character recognition) text extraction for images and
+        /// PDFs, including scanned / non-text PDFs. Supported formats: - Image formats: .bmp,
+        /// .gif, .heic, .jpeg, .jpg, .png, .tif, .tiff, .webp. - PDF format: .pdf. Unsupported
+        /// formats return an `unsupported_format_error`. For the `url` variant only Dropbox
+        /// shared links are supported; external URLs return `unsupported_format_error`.
+        /// Text-based PDFs already carry a text layer, so OCR is not run against them and the
+        /// result is empty; use `get_text_async` to read the embedded text layer of such a
+        /// PDF. The result carries the extracted words as plain text, plus the same content as
+        /// hOCR with per-word coordinates.</para>
         /// </summary>
         /// <param name="getOcrArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetOcrAsyncAsync(GetOcrArgs getOcrArgs)
         {
             return this.Transport.SendRpcRequestAsync<GetOcrArgs, global::Dropbox.Api.Async.LaunchResultBase, enc.Empty>(getOcrArgs, "api", "/riviera/get_ocr_async", "user", global::Dropbox.Api.Riviera.GetOcrArgs.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, enc.EmptyDecoder.Instance);
@@ -1007,6 +1053,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetOcrAsync(GetOcrArgs getOcrArgs, sys.AsyncCallback callback, object state = null)
         {
             var task = this.GetOcrAsyncAsync(getOcrArgs);
@@ -1015,15 +1062,20 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous OCR (optical character recognition) text extraction for images
-        /// and PDFs, including scanned / non-text PDFs. Supported formats: - Image formats:
-        /// .bmp, .gif, .heic, .jpeg, .jpg, .png, .tif, .tiff, .webp. - PDF format: .pdf.
-        /// Unsupported formats return an `unsupported_format_error`. For the `url` variant
-        /// only Dropbox shared links are supported; external URLs return
-        /// `unsupported_format_error`. Text-based PDFs already carry a text layer, so OCR is
-        /// not run against them and the result is empty; use `get_text_async` to read the
-        /// embedded text layer of such a PDF. The result carries the extracted words as plain
-        /// text, plus the same content as hOCR with per-word coordinates.</para>
+        /// <para>Deprecated: use <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.ExtractAsyncAsync" /> <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncAsync" /> with
+        /// `extract_type` set to <see cref="Dropbox.Api.Riviera.ExtractType.Ocr" /> instead,
+        /// which takes the same options. This route will be turned off by December 31, 2026.
+        /// Asynchronous OCR (optical character recognition) text extraction for images and
+        /// PDFs, including scanned / non-text PDFs. Supported formats: - Image formats: .bmp,
+        /// .gif, .heic, .jpeg, .jpg, .png, .tif, .tiff, .webp. - PDF format: .pdf. Unsupported
+        /// formats return an `unsupported_format_error`. For the `url` variant only Dropbox
+        /// shared links are supported; external URLs return `unsupported_format_error`.
+        /// Text-based PDFs already carry a text layer, so OCR is not run against them and the
+        /// result is empty; use `get_text_async` to read the embedded text layer of such a
+        /// PDF. The result carries the extracted words as plain text, plus the same content as
+        /// hOCR with per-word coordinates.</para>
         /// </summary>
         /// <param name="fileIdOrUrl">Identifier of the file to run OCR on. Callers must set
         /// exactly one of the `FileIdOrUrl` variants. OCR is supported for image files and
@@ -1035,6 +1087,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// `file_id` or `path` instead.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetOcrAsyncAsync(FileIdOrUrl fileIdOrUrl = null)
         {
             var getOcrArgs = new GetOcrArgs(fileIdOrUrl);
@@ -1058,6 +1111,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetOcrAsync(FileIdOrUrl fileIdOrUrl = null,
                                                  sys.AsyncCallback callback = null,
                                                  object callbackState = null)
@@ -1074,6 +1128,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
+        [sys.Obsolete("This function is deprecated")]
         public global::Dropbox.Api.Async.LaunchResultBase EndGetOcrAsync(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchResultBase>;
@@ -1094,6 +1149,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetOcrAsyncCheckResult> GetOcrAsyncCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
             return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, GetOcrAsyncCheckResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/riviera/get_ocr_async/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Riviera.GetOcrAsyncCheckResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
@@ -1108,6 +1164,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetOcrAsyncCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.GetOcrAsyncCheckAsync(pollArg);
@@ -1125,6 +1182,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetOcrAsyncCheckResult> GetOcrAsyncCheckAsync(string asyncJobId)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
@@ -1142,6 +1200,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetOcrAsyncCheck(string asyncJobId,
                                                       sys.AsyncCallback callback,
                                                       object callbackState = null)
@@ -1161,6 +1220,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public GetOcrAsyncCheckResult EndGetOcrAsyncCheck(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GetOcrAsyncCheckResult>;
@@ -1173,8 +1233,13 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous plain-text extraction from documents. Supported formats include:
-        /// - Word processing: .doc, .docx, .docm, .rtf. - Presentations: .ppt, .pptx, .pptm. -
+        /// <para>Deprecated: use <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.ExtractAsyncAsync" /> <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncAsync" /> with
+        /// `extract_type` set to <see cref="Dropbox.Api.Riviera.ExtractType.Text" /> instead,
+        /// which takes the same options. This route will be turned off by December 31, 2026.
+        /// Asynchronous plain-text extraction from documents. Supported formats include: -
+        /// Word processing: .doc, .docx, .docm, .rtf. - Presentations: .ppt, .pptx, .pptm. -
         /// Spreadsheets: .xls, .xlsx, .xlsm. - PDF: .pdf. - Dropbox document types: .paper,
         /// .papert, .binder, .gdoc, .gsheet, .gslides. - Plain text / subtitles: .txt, .vtt.
         /// Unsupported formats return an `unsupported_format_error`. For the `url` variant
@@ -1184,6 +1249,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="getTextArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetTextAsyncAsync(GetTextArgs getTextArgs)
         {
             return this.Transport.SendRpcRequestAsync<GetTextArgs, global::Dropbox.Api.Async.LaunchResultBase, enc.Empty>(getTextArgs, "api", "/riviera/get_text_async", "user", global::Dropbox.Api.Riviera.GetTextArgs.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, enc.EmptyDecoder.Instance);
@@ -1198,6 +1264,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetTextAsync(GetTextArgs getTextArgs, sys.AsyncCallback callback, object state = null)
         {
             var task = this.GetTextAsyncAsync(getTextArgs);
@@ -1206,8 +1273,13 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous plain-text extraction from documents. Supported formats include:
-        /// - Word processing: .doc, .docx, .docm, .rtf. - Presentations: .ppt, .pptx, .pptm. -
+        /// <para>Deprecated: use <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.ExtractAsyncAsync" /> <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncAsync" /> with
+        /// `extract_type` set to <see cref="Dropbox.Api.Riviera.ExtractType.Text" /> instead,
+        /// which takes the same options. This route will be turned off by December 31, 2026.
+        /// Asynchronous plain-text extraction from documents. Supported formats include: -
+        /// Word processing: .doc, .docx, .docm, .rtf. - Presentations: .ppt, .pptx, .pptm. -
         /// Spreadsheets: .xls, .xlsx, .xlsm. - PDF: .pdf. - Dropbox document types: .paper,
         /// .papert, .binder, .gdoc, .gsheet, .gslides. - Plain text / subtitles: .txt, .vtt.
         /// Unsupported formats return an `unsupported_format_error`. For the `url` variant
@@ -1224,6 +1296,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// the file into Dropbox and reference it by `file_id` or `path` instead.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetTextAsyncAsync(FileIdOrUrl fileIdOrUrl = null)
         {
             var getTextArgs = new GetTextArgs(fileIdOrUrl);
@@ -1247,6 +1320,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetTextAsync(FileIdOrUrl fileIdOrUrl = null,
                                                   sys.AsyncCallback callback = null,
                                                   object callbackState = null)
@@ -1263,6 +1337,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
+        [sys.Obsolete("This function is deprecated")]
         public global::Dropbox.Api.Async.LaunchResultBase EndGetTextAsync(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchResultBase>;
@@ -1283,6 +1358,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetTextAsyncCheckResult> GetTextAsyncCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
             return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, GetTextAsyncCheckResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/riviera/get_text_async/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Riviera.GetTextAsyncCheckResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
@@ -1297,6 +1373,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetTextAsyncCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.GetTextAsyncCheckAsync(pollArg);
@@ -1314,6 +1391,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetTextAsyncCheckResult> GetTextAsyncCheckAsync(string asyncJobId)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
@@ -1331,6 +1409,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetTextAsyncCheck(string asyncJobId,
                                                        sys.AsyncCallback callback,
                                                        object callbackState = null)
@@ -1350,6 +1429,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public GetTextAsyncCheckResult EndGetTextAsyncCheck(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GetTextAsyncCheckResult>;
@@ -1362,8 +1442,13 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous transcript generation for audio and video files. Supported audio
-        /// formats: .aac, .aif, .aiff, .flac, .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma.
+        /// <para>Deprecated: use <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.ExtractAsyncAsync" /> <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncAsync" /> with
+        /// `extract_type` set to <see cref="Dropbox.Api.Riviera.ExtractType.Transcript" />
+        /// instead, which takes the same options. This route will be turned off by December
+        /// 31, 2026. Asynchronous transcript generation for audio and video files. Supported
+        /// audio formats: .aac, .aif, .aiff, .flac, .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma.
         /// Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv, .m2t, .m2ts,
         /// .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv, .rm, .ts, .vob,
         /// .webm, .wmv. Files in other formats fail with <see
@@ -1382,6 +1467,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="getTranscriptArgs">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetTranscriptAsyncAsync(GetTranscriptArgs getTranscriptArgs)
         {
             return this.Transport.SendRpcRequestAsync<GetTranscriptArgs, global::Dropbox.Api.Async.LaunchResultBase, enc.Empty>(getTranscriptArgs, "api", "/riviera/get_transcript_async", "user", global::Dropbox.Api.Riviera.GetTranscriptArgs.Encoder, global::Dropbox.Api.Async.LaunchResultBase.Decoder, enc.EmptyDecoder.Instance);
@@ -1396,6 +1482,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetTranscriptAsync(GetTranscriptArgs getTranscriptArgs, sys.AsyncCallback callback, object state = null)
         {
             var task = this.GetTranscriptAsyncAsync(getTranscriptArgs);
@@ -1404,8 +1491,13 @@ namespace Dropbox.Api.Riviera.Routes
         }
 
         /// <summary>
-        /// <para>Asynchronous transcript generation for audio and video files. Supported audio
-        /// formats: .aac, .aif, .aiff, .flac, .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma.
+        /// <para>Deprecated: use <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraAppRoutes.ExtractAsyncAsync" /> <see
+        /// cref="Dropbox.Api.Riviera.Routes.RivieraUserRoutes.ExtractAsyncAsync" /> with
+        /// `extract_type` set to <see cref="Dropbox.Api.Riviera.ExtractType.Transcript" />
+        /// instead, which takes the same options. This route will be turned off by December
+        /// 31, 2026. Asynchronous transcript generation for audio and video files. Supported
+        /// audio formats: .aac, .aif, .aiff, .flac, .m4a, .m4r, .mp3, .oga, .ogg, .wav, .wma.
         /// Supported video formats: .3gp, .3gpp, .3gpp2, .asf, .avi, .dv, .flv, .m2t, .m2ts,
         /// .m4v, .mkv, .mov, .mp4, .mpeg, .mpg, .mts, .mxf, .oggtheora, .ogv, .rm, .ts, .vob,
         /// .webm, .wmv. Files in other formats fail with <see
@@ -1440,6 +1532,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// clips. Languages the service does not support fall back to auto-detection.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<global::Dropbox.Api.Async.LaunchResultBase> GetTranscriptAsyncAsync(FileIdOrUrl fileIdOrUrl = null,
                                                                                           TimestampLevel timestampLevel = null,
                                                                                           string includedSpecialWords = "",
@@ -1478,6 +1571,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetTranscriptAsync(FileIdOrUrl fileIdOrUrl = null,
                                                         TimestampLevel timestampLevel = null,
                                                         string includedSpecialWords = "",
@@ -1500,6 +1594,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
+        [sys.Obsolete("This function is deprecated")]
         public global::Dropbox.Api.Async.LaunchResultBase EndGetTranscriptAsync(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<global::Dropbox.Api.Async.LaunchResultBase>;
@@ -1520,6 +1615,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetTranscriptAsyncCheckResult> GetTranscriptAsyncCheckAsync(global::Dropbox.Api.Async.PollArg pollArg)
         {
             return this.Transport.SendRpcRequestAsync<global::Dropbox.Api.Async.PollArg, GetTranscriptAsyncCheckResult, global::Dropbox.Api.Async.PollError>(pollArg, "api", "/riviera/get_transcript_async/check", "user", global::Dropbox.Api.Async.PollArg.Encoder, global::Dropbox.Api.Riviera.GetTranscriptAsyncCheckResult.Decoder, global::Dropbox.Api.Async.PollError.Decoder);
@@ -1534,6 +1630,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetTranscriptAsyncCheck(global::Dropbox.Api.Async.PollArg pollArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.GetTranscriptAsyncCheckAsync(pollArg);
@@ -1551,6 +1648,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public t.Task<GetTranscriptAsyncCheckResult> GetTranscriptAsyncCheckAsync(string asyncJobId)
         {
             var pollArg = new global::Dropbox.Api.Async.PollArg(asyncJobId);
@@ -1568,6 +1666,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated")]
         public sys.IAsyncResult BeginGetTranscriptAsyncCheck(string asyncJobId,
                                                              sys.AsyncCallback callback,
                                                              object callbackState = null)
@@ -1587,6 +1686,7 @@ namespace Dropbox.Api.Riviera.Routes
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
         /// cref="global::Dropbox.Api.Async.PollError"/>.</exception>
+        [sys.Obsolete("This function is deprecated")]
         public GetTranscriptAsyncCheckResult EndGetTranscriptAsyncCheck(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<GetTranscriptAsyncCheckResult>;
