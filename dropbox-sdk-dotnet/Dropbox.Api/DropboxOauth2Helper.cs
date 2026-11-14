@@ -43,17 +43,17 @@ namespace Dropbox.Api
     public enum TokenAccessType
     {
         /// <summary>
-        /// Creates one long-lived token with no expiration
+        /// Creates one long-lived token with no expiration.
         /// </summary>
         Legacy,
 
         /// <summary>
-        /// Create one short-lived token with an expiration with a refresh token
+        /// Create one short-lived token with an expiration with a refresh token.
         /// </summary>
         Offline,
 
         /// <summary>
-        /// Create one short-lived token with an expiration
+        /// Create one short-lived token with an expiration.
         /// </summary>
         Online,
     }
@@ -64,17 +64,17 @@ namespace Dropbox.Api
     public enum IncludeGrantedScopes
     {
         /// <summary>
-        /// Default, requests only the scopes passed in to the oauth request
+        /// Default, requests only the scopes passed in to the oauth request.
         /// </summary>
         None,
 
         /// <summary>
-        /// Token should include all previously granted user scopes as well as requested scopes
+        /// Token should include all previously granted user scopes as well as requested scopes.
         /// </summary>
         User,
 
         /// <summary>
-        /// Token should include all previously granted team scopes as well as requested scopes
+        /// Token should include all previously granted team scopes as well as requested scopes.
         /// </summary>
         Team,
     }

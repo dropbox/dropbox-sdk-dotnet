@@ -10,6 +10,10 @@ updates:
       - "/dropbox-sdk-dotnet/**"
     schedule:
       interval: "weekly"
+    # Microsoft.Extensions 11 requires .NET 10; integration tests target .NET 8.
+    ignore:
+      - dependency-name: "Microsoft.Extensions.Configuration*"
+        versions: [">=11.0.0"]
     groups:
       nuget:
         patterns:
