@@ -103,7 +103,7 @@
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Dropbox.html">Dropbox</a>.<a class="xref" href="Dropbox.Api.html">Api</a></h6>
+  <h6><strong>Namespace</strong>: <span class="xref">Dropbox</span>.<a class="xref" href="Dropbox.Api.html">Api</a></h6>
   <h6><strong>Assembly</strong>: Dropbox.Api.dll</h6>
   <h5 id="Dropbox_Api_DropboxOAuth2Helper_syntax">Syntax</h5>
   <div class="codewrapper">
@@ -139,56 +139,59 @@ This returns an <a class="xref" href="Dropbox.Api.OAuth2Response.html">OAuth2Res
 <pre><code class="lang-csharp">private async Task HandleOAuth2Redirect(HttpListener http)
 {
     var context = await http.GetContextAsync();
-<pre><code>// We only care about request to RedirectUri endpoint.
-while (context.Request.Url.AbsolutePath != RedirectUri.AbsolutePath)
-{
-    context = await http.GetContextAsync();
+
+    // We only care about request to RedirectUri endpoint.
+    while (context.Request.Url.AbsolutePath != RedirectUri.AbsolutePath)
+    {
+        context = await http.GetContextAsync();
+    }
+
+    // Respond with a HTML page which runs JS to send URl fragment.
+    RespondPageWithJSRedirect();
 }
 
-// Respond with a HTML page which runs JS to send URl fragment.
-RespondPageWithJSRedirect();
-</code></pre>
-<p>}</p>
-<p>private async Task&lt;OAuth2Response&gt; HandleJSRedirect(HttpListener http)
+
+private async Task&lt;OAuth2Response&gt; HandleJSRedirect(HttpListener http)
 {
-var context = await http.GetContextAsync();</p>
-<pre><code>// We only care about request to TokenRedirectUri endpoint.
-while (context.Request.Url.AbsolutePath != JSRedirectUri.AbsolutePath)
-{
-    context = await http.GetContextAsync();
+    var context = await http.GetContextAsync();
+
+    // We only care about request to TokenRedirectUri endpoint.
+    while (context.Request.Url.AbsolutePath != JSRedirectUri.AbsolutePath)
+    {
+        context = await http.GetContextAsync();
+    }
+
+    var redirectUri = new Uri(context.Request.QueryString["url_with_fragment"]);
+
+    var result = DropboxOAuth2Helper.ParseTokenFragment(redirectUri);
+
+    return result;
 }
 
-var redirectUri = new Uri(context.Request.QueryString[&quot;url_with_fragment&quot;]);
+private async Task GetAccessToken() {
+    var state = Guid.NewGuid().ToString("N");
+    var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Token, ApiKey, new Uri(RedirectUri), state: state);
 
-var result = DropboxOAuth2Helper.ParseTokenFragment(redirectUri);
+    var http = new HttpListener();
+    http.Prefixes.Add(RedirectUri);
+    http.Start();
 
-return result;
-</code></pre>
-<p>}</p>
-<p>private async Task GetAccessToken() {
-var state = Guid.NewGuid().ToString(&quot;N&quot;);
-var authorizeUri = DropboxOAuth2Helper.GetAuthorizeUri(OAuthResponseType.Token, ApiKey, new Uri(RedirectUri), state: state);</p>
-<pre><code>var http = new HttpListener();
-http.Prefixes.Add(RedirectUri);
-http.Start();
+    System.Diagnostics.Process.Start(authorizeUri.ToString());
 
-System.Diagnostics.Process.Start(authorizeUri.ToString());
+    // Handle OAuth redirect and send URL fragment to local server using JS.
+    await HandleOAuth2Redirect(http);
 
-// Handle OAuth redirect and send URL fragment to local server using JS.
-await HandleOAuth2Redirect(http);
+    // Handle redirect from JS and process OAuth response.
+    var result = await HandleJSRedirect(http);
 
-// Handle redirect from JS and process OAuth response.
-var result = await HandleJSRedirect(http);
+    if (result.State != state)
+    {
+        // The state in the response doesn't match the state in the request.
+        return null;
+    }
 
-if (result.State != state)
-{
-    // The state in the response doesn't match the state in the request.
-    return null;
-}
-
-Settings.Default.AccessToken = result.AccessToken;
-</code></pre>
-<p>}</p></code></pre>
+    Settings.Default.AccessToken = result.AccessToken;
+}</code></pre>
 <p>
 This shows an example of how to use the code flow. This is part of a controller class on an ASP.Net MVC website.
 </p>
@@ -213,29 +216,30 @@ public ActionResult Connect()
     var user = this.store.CurrentUser();
     user.ConnectState = Guid.NewGuid().ToString("N");
     this.store.SaveChanges();
-<pre><code>var redirect = DropboxOAuth2Helper.GetAuthorizeUri(OauthResponseType.Code, AppKey, RedirectUri, user.ConnectState);
-return Redirect(redirect.ToString());
-</code></pre>
-<p>}</p>
-<p>// GET: /Home/Auth
-public async Task&lt;ActionResult&gt; AuthAsync(string code, string state)
-{
-var user = this.store.CurrentUser();</p>
-<pre><code>if (user.ConnectState != state)
-{
-    this.Flash(&quot;There was an error connecting to Dropbox.&quot;);
-    return this.RedirectToAction(&quot;Index&quot;);
+
+    var redirect = DropboxOAuth2Helper.GetAuthorizeUri(OauthResponseType.Code, AppKey, RedirectUri, user.ConnectState);
+    return Redirect(redirect.ToString());
 }
 
-OAuth2Response response = await DropboxOAuth2Helper.ProcessCodeFlowAsync(code, AppKey, AppSecret, RedirectUri);
+// GET: /Home/Auth
+public async Task&lt;ActionResult&gt; AuthAsync(string code, string state)
+{
+    var user = this.store.CurrentUser();
 
-user.DropboxAccessToken = response.AccessToken;
-await this.store.SaveChangesAsync();
+    if (user.ConnectState != state)
+    {
+        this.Flash("There was an error connecting to Dropbox.");
+        return this.RedirectToAction("Index");
+    }
 
-this.Flash(&quot;This account has been connected to Dropbox.&quot;);
-return this.RedirectToAction(&quot;Profile&quot;);
-</code></pre>
-<p>}</p></code></pre>
+    OAuth2Response response = await DropboxOAuth2Helper.ProcessCodeFlowAsync(code, AppKey, AppSecret, RedirectUri);
+
+    user.DropboxAccessToken = response.AccessToken;
+    await this.store.SaveChangesAsync();
+
+    this.Flash("This account has been connected to Dropbox.");
+    return this.RedirectToAction("Profile");
+}</code></pre>
 
   <h3 id="methods">Methods
 </h3>
