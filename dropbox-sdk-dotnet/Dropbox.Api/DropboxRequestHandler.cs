@@ -157,8 +157,11 @@ namespace Dropbox.Api
 
             if (res.IsError)
             {
-                throw StructuredException<TError>.Decode<ApiException<TError>>(
-                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId));
+                throw DecodeException(
+                    () => StructuredException<TError>.Decode<ApiException<TError>>(
+                        res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId)),
+                    res.RequestId,
+                    res.ResponseMetadata);
             }
 
             return JsonReader.Read(res.ObjectResult, responseDecoder);
@@ -199,8 +202,11 @@ namespace Dropbox.Api
 
             if (res.IsError)
             {
-                throw StructuredException<TError>.Decode<ApiException<TError>>(
-                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId));
+                throw DecodeException(
+                    () => StructuredException<TError>.Decode<ApiException<TError>>(
+                        res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId)),
+                    res.RequestId,
+                    res.ResponseMetadata);
             }
 
             return JsonReader.Read(res.ObjectResult, responseDecoder);
@@ -238,8 +244,11 @@ namespace Dropbox.Api
 
             if (res.IsError)
             {
-                throw StructuredException<TError>.Decode<ApiException<TError>>(
-                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId));
+                throw DecodeException(
+                    () => StructuredException<TError>.Decode<ApiException<TError>>(
+                        res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId)),
+                    res.RequestId,
+                    res.ResponseMetadata);
             }
 
             var response = JsonReader.Read(res.ObjectResult, responseDecoder);
@@ -281,31 +290,35 @@ namespace Dropbox.Api
             var bodyContent = new FormUrlEncodedContent(parameters);
 
             // Honor a caller-supplied HttpClient here too.
-            var response = await this.GetHttpClient(HostType.Api).PostAsync(url, bodyContent).ConfigureAwait(false);
-
-            // A revoked or invalid refresh token returns invalid_grant (as 400 or
-            // 401); surface it as an AuthException instead of a generic error.
-            if (!response.IsSuccessStatusCode)
+            using (var response = await this.GetHttpClient(HostType.Api).PostAsync(url, bodyContent).ConfigureAwait(false))
             {
-                var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                if (this.TryParseOAuthError(reason, out var error, out var description) && error == "invalid_grant")
+                // A revoked or invalid refresh token returns invalid_grant (as 400 or
+                // 401); surface it as an AuthException instead of a generic error.
+                if (!response.IsSuccessStatusCode)
                 {
-                    throw new AuthException(this.GetRequestId(response), description ?? error, (int)response.StatusCode);
+                    var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    if (this.TryParseOAuthError(reason, out var error, out var description) && error == "invalid_grant")
+                    {
+                        throw new AuthException(this.GetRequestId(response), description ?? error, (int)response.StatusCode)
+                        {
+                            ResponseMetadata = HttpResponseMetadata.FromResponse(response),
+                        };
+                    }
                 }
+
+                response.EnsureSuccessStatusCode();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = JObject.Parse(await response.Content.ReadAsStringAsync());
+                    string accessToken = json["access_token"].ToString();
+                    DateTime tokenExpiration = DateTime.Now.AddSeconds(json["expires_in"].ToObject<int>());
+                    this.options.UpdateAccessToken(accessToken, tokenExpiration);
+                    return true;
+                }
+
+                return false;
             }
-
-            response.EnsureSuccessStatusCode();
-
-            if (response.IsSuccessStatusCode)
-            {
-                var json = JObject.Parse(await response.Content.ReadAsStringAsync());
-                string accessToken = json["access_token"].ToString();
-                DateTime tokenExpiration = DateTime.Now.AddSeconds(json["expires_in"].ToObject<int>());
-                this.options.UpdateAccessToken(accessToken, tokenExpiration);
-                return true;
-            }
-
-            return false;
         }
 
         /// <summary>
@@ -343,6 +356,38 @@ namespace Dropbox.Api
                 selectUser: this.selectUser,
                 selectAdmin: this.selectAdmin,
                 pathRoot: pathRoot);
+        }
+
+        /// <summary>Decodes an error while preserving HTTP context if decoding fails.</summary>
+        /// <typeparam name="TException">The structured exception type.</typeparam>
+        /// <param name="decode">The existing error decoder.</param>
+        /// <param name="requestId">The Dropbox request ID.</param>
+        /// <param name="responseMetadata">The response snapshot.</param>
+        /// <returns>The decoded exception.</returns>
+        private static TException DecodeException<TException>(Func<TException> decode, string requestId, HttpResponseMetadata responseMetadata)
+            where TException : DropboxException
+        {
+            TException exception;
+            try
+            {
+                exception = decode();
+                if (exception == null)
+                {
+                    throw new InvalidOperationException("The Dropbox error decoder returned null.");
+                }
+            }
+            catch (Exception inner)
+            {
+                // A malformed error cannot produce a valid structured exception. Keep the
+                // decoding failure as the cause and expose the response on the common base.
+                throw new DropboxException(requestId, "Failed to decode Dropbox error response.", inner)
+                {
+                    ResponseMetadata = responseMetadata,
+                };
+            }
+
+            exception.ResponseMetadata = responseMetadata;
+            return exception;
         }
 
         private static ContentHashAccessor CreateContentHashAccessor(Type requestType)
@@ -672,8 +717,14 @@ namespace Dropbox.Api
             var response = await this.GetHttpClient(host).SendAsync(request, completionOption).ConfigureAwait(false);
 
             var requestId = this.GetRequestId(response);
+            HttpResponseMetadata responseMetadata = null;
             try
             {
+                if (!response.IsSuccessStatusCode)
+                {
+                    responseMetadata = HttpResponseMetadata.FromResponse(response);
+                }
+
                 if ((int)response.StatusCode >= 500)
                 {
                     var text = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
@@ -689,22 +740,22 @@ namespace Dropbox.Api
                 else if (response.StatusCode == HttpStatusCode.Unauthorized)
                 {
                     var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    throw AuthException.Decode(reason, () => new AuthException(this.GetRequestId(response)));
+                    throw DecodeException(() => AuthException.Decode(reason, () => new AuthException(requestId)), requestId, responseMetadata);
                 }
                 else if ((int)response.StatusCode == 429)
                 {
                     var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    throw RateLimitException.Decode(reason, () => new RateLimitException(this.GetRequestId(response)));
+                    throw DecodeException(() => RateLimitException.Decode(reason, () => new RateLimitException(requestId)), requestId, responseMetadata);
                 }
                 else if (response.StatusCode == HttpStatusCode.Forbidden)
                 {
                     var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    throw AccessException.Decode(reason, () => new AccessException(this.GetRequestId(response)));
+                    throw DecodeException(() => AccessException.Decode(reason, () => new AccessException(requestId)), requestId, responseMetadata);
                 }
                 else if ((int)response.StatusCode == 422)
                 {
                     var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    throw PathRootException.Decode(reason, () => new PathRootException(this.GetRequestId(response)));
+                    throw DecodeException(() => PathRootException.Decode(reason, () => new PathRootException(requestId)), requestId, responseMetadata);
                 }
                 else if (response.StatusCode == HttpStatusCode.Conflict ||
                     response.StatusCode == HttpStatusCode.NotFound)
@@ -715,7 +766,8 @@ namespace Dropbox.Api
                     {
                         IsError = true,
                         ObjectResult = reason,
-                        RequestId = this.GetRequestId(response),
+                        RequestId = requestId,
+                        ResponseMetadata = responseMetadata,
                     };
                 }
                 else if ((int)response.StatusCode >= 200 && (int)response.StatusCode <= 299)
@@ -745,6 +797,11 @@ namespace Dropbox.Api
                     text = this.CheckForError(text);
                     throw new HttpException(requestId, (int)response.StatusCode, text, uri);
                 }
+            }
+            catch (DropboxException exception)
+            {
+                exception.ResponseMetadata = responseMetadata;
+                throw;
             }
             finally
             {
@@ -924,6 +981,9 @@ namespace Dropbox.Api
             /// </summary>
             /// <value>The request id.</value>
             public string RequestId { get; set; }
+
+            /// <summary>Gets or sets the snapshot for an error response.</summary>
+            public HttpResponseMetadata ResponseMetadata { get; set; }
 
             /// <summary>
             /// Gets or sets the HTTP response, this is only set if the route was a download route.
