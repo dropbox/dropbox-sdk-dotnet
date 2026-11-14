@@ -1055,6 +1055,40 @@
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/DropboxClient.cs">View Source</a>
   </span>
+  <a id="Dropbox_Api_DropboxClient_GetAccessTokenSnapshot_" data-uid="Dropbox.Api.DropboxClient.GetAccessTokenSnapshot*"></a>
+  <h4 id="Dropbox_Api_DropboxClient_GetAccessTokenSnapshot" data-uid="Dropbox.Api.DropboxClient.GetAccessTokenSnapshot">GetAccessTokenSnapshot()</h4>
+  <div class="markdown level1 summary"><p>Reads the cached access token and expiration without network requests or refresh.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AccessTokenSnapshot GetAccessTokenSnapshot()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dropbox.Api.AccessTokenSnapshot.html">AccessTokenSnapshot</a></td>
+        <td><p>An immutable snapshot, or null if no access token is cached.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Dropbox_Api_DropboxClient_GetAccessTokenSnapshot_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The token may be expired or revoked; reading the cache does not validate it.
+Expiration is UTC, or null if unknown (which does not imply an unlimited lifetime).
+The access token is sensitive and must not be logged or disclosed.</p>
+</div>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/DropboxClient.cs">View Source</a>
+  </span>
   <a id="Dropbox_Api_DropboxClient_RefreshAccessToken_" data-uid="Dropbox.Api.DropboxClient.RefreshAccessToken*"></a>
   <h4 id="Dropbox_Api_DropboxClient_RefreshAccessToken_System_String___" data-uid="Dropbox.Api.DropboxClient.RefreshAccessToken(System.String[])">RefreshAccessToken(string[])</h4>
   <div class="markdown level1 summary"><p>Refreshes access token regardless of if existing token is expired.</p>
