@@ -7,6 +7,7 @@
 namespace Dropbox.Api
 {
     using System;
+    using System.Collections.Generic;
     using System.Globalization;
     using System.Text;
 
@@ -42,6 +43,29 @@ namespace Dropbox.Api
         {
             get { return this.requestId; }
         }
+
+        /// <summary>
+        /// Gets a read-only snapshot of the response and content headers, with case-insensitive names
+        /// and all values preserved. Empty when no HTTP response was received.
+        /// </summary>
+        /// <remarks>The snapshot remains available after the HTTP response is disposed.</remarks>
+        public IReadOnlyDictionary<string, IReadOnlyList<string>> ResponseHeaders
+        {
+            get { return this.ResponseMetadata.Headers; }
+        }
+
+        /// <summary>
+        /// Gets the numeric status code of the actual HTTP response, or null when no response was received.
+        /// </summary>
+        public int? ResponseStatusCode
+        {
+            get { return this.ResponseMetadata.StatusCode; }
+        }
+
+        /// <summary>
+        /// Gets or sets the immutable HTTP response snapshot supplied by the transport.
+        /// </summary>
+        internal HttpResponseMetadata ResponseMetadata { get; set; } = HttpResponseMetadata.Empty;
 
         /// <summary>
         ///  The ToString().

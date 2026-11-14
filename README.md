@@ -108,6 +108,35 @@ consistent with the SDK's refresh timing convention. An existing explicit
 do not require refresh. Clients created with `WithPathRoot`, `AsMember`, and `AsAdmin`
 share cached credentials and see refreshes performed by any of those clients.
 
+## HTTP error metadata
+
+Catch `DropboxException` to read the request ID, actual HTTP status, and a read-only
+snapshot of response and content headers. Header lookup is case-insensitive and preserves
+multiple values, even after the response is disposed. Without an HTTP response, the status
+is null and the headers are empty. Optional headers such as `X-Server-Response-Time`
+may be absent.
+
+```csharp
+try
+{
+    await client.Files.GetMetadataAsync("/file.txt");
+}
+catch (Dropbox.Api.DropboxException ex)
+{
+    var requestId = ex.RequestId;
+    var status = ex.ResponseStatusCode;
+    if (ex.ResponseHeaders.TryGetValue("X-Server-Response-Time", out var values))
+    {
+        // Use all values as needed; this optional header is not interpreted by the SDK.
+    }
+}
+```
+
+Malformed structured error responses raise `DropboxException` with the decoding failure
+in `InnerException` and the HTTP metadata preserved. Existing structured exception types
+and retry behavior are unchanged for valid error responses. `RateLimitException.RetryAfter`
+continues to come from the structured error body.
+
 ## Getting Help
 
 If you find a bug, please see [CONTRIBUTING.md][contributing] for information on how to report it.
