@@ -64,6 +64,8 @@ Repository admins can cut a new version from the GitHub Actions page:
 
 Creating a GitHub release manually with a `vX.Y.Z` tag remains supported and automatically publishes version `X.Y.Z` to NuGet.
 
+NuGet publishing uses the API token stored in the AWS Secrets Manager secret `nuget-api-token-dropbox-sdk-dotnet` in `us-west-2`. Keep this token valid and scoped to publishing `Dropbox.Api`; update the secret when the token expires or is rotated. The workflow accesses AWS using the repository's OIDC role.
+
 [issues]: https://github.com/dropbox/dropbox-sdk-dotnet/issues
 [pr]: https://github.com/dropbox/dropbox-sdk-dotnet/pulls
 [coc]: https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/CODE_OF_CONDUCT.md
