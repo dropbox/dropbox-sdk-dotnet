@@ -207,6 +207,20 @@ namespace Dropbox.Api
         }
 
         /// <summary>
+        /// Reads the cached access token and expiration without network requests or refresh.
+        /// </summary>
+        /// <returns>An immutable snapshot, or null if no access token is cached.</returns>
+        /// <remarks>
+        /// The token may be expired or revoked; reading the cache does not validate it.
+        /// Expiration is UTC, or null if unknown (which does not imply an unlimited lifetime).
+        /// The access token is sensitive and must not be logged or disclosed.
+        /// </remarks>
+        public AccessTokenSnapshot GetAccessTokenSnapshot()
+        {
+            return this.requestHandler.GetAccessTokenSnapshot();
+        }
+
+        /// <summary>
         /// Refreshes access token regardless of if existing token is expired.
         /// </summary>
         /// <param name="scopeList">subset of scopes to refresh token with, or null to refresh with all scopes.</param>
