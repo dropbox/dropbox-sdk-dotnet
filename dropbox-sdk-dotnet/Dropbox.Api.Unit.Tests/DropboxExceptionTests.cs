@@ -195,16 +195,19 @@ namespace Dropbox.Api.Unit.Tests
             }
         }
 
-        /// <summary>Verifies malformed structured responses preserve the original decoder exception types.</summary>
+        /// <summary>Verifies malformed structured responses report decoding failures without wrapping them.</summary>
         /// <param name="body">The invalid error body.</param>
         /// <param name="exceptionType">The original decoder exception type.</param>
         /// <returns>The asynchronous test task.</returns>
         [TestMethod]
         [DataRow("", typeof(InvalidOperationException))]
-        [DataRow("null", typeof(NullReferenceException))]
+        [DataRow("null", typeof(Newtonsoft.Json.JsonReaderException))]
         [DataRow("{", typeof(InvalidOperationException))]
         [DataRow("not-json", typeof(Newtonsoft.Json.JsonReaderException))]
         [DataRow("{\"error_summary\":]}", typeof(Newtonsoft.Json.JsonReaderException))]
+        [DataRow("{\"error_summary\":", typeof(Newtonsoft.Json.JsonReaderException))]
+        [DataRow("{\"unknown\":", typeof(Newtonsoft.Json.JsonReaderException))]
+        [DataRow("{\"error\":{\".tag\":", typeof(Newtonsoft.Json.JsonReaderException))]
         [DataRow("{\"error_summary\":42}", typeof(InvalidCastException))]
         public async Task TestMalformedStructuredResponses(string body, Type exceptionType)
         {
@@ -255,7 +258,8 @@ namespace Dropbox.Api.Unit.Tests
                 calls++;
                 return new ApiException<GetMetadataError>("request-123");
             };
-            Assert.IsNull(StructuredException<GetMetadataError>.Decode("null", GetMetadataError.Decoder, factory));
+            Assert.ThrowsExactly<Newtonsoft.Json.JsonReaderException>(() =>
+                StructuredException<GetMetadataError>.Decode("null", GetMetadataError.Decoder, factory));
             Assert.AreEqual(0, calls);
             Assert.ThrowsExactly<Newtonsoft.Json.JsonReaderException>(() =>
                 StructuredException<GetMetadataError>.Decode("not-json", GetMetadataError.Decoder, factory));

@@ -214,8 +214,13 @@ namespace Dropbox.Api.Stone
         {
             try
             {
+                var isPropertyName = this.reader.TokenType == JsonToken.PropertyName;
                 var value = (T)this.reader.Value;
-                this.reader.Read();
+                if (!this.reader.Read() && isPropertyName)
+                {
+                    throw new JsonReaderException("Unexpected end of JSON after a property name.");
+                }
+
                 return value;
             }
             catch (InvalidCastException)
