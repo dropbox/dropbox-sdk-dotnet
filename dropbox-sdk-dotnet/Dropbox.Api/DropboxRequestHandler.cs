@@ -158,7 +158,11 @@ namespace Dropbox.Api
             if (res.IsError)
             {
                 throw StructuredException<TError>.Decode<ApiException<TError>>(
-                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId), res.ResponseStatusCode, res.ResponseHeaders);
+                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId)
+                    {
+                        ResponseStatusCode = res.ResponseStatusCode,
+                        ResponseHeaders = res.ResponseHeaders,
+                    });
             }
 
             return JsonReader.Read(res.ObjectResult, responseDecoder);
@@ -200,7 +204,11 @@ namespace Dropbox.Api
             if (res.IsError)
             {
                 throw StructuredException<TError>.Decode<ApiException<TError>>(
-                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId), res.ResponseStatusCode, res.ResponseHeaders);
+                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId)
+                    {
+                        ResponseStatusCode = res.ResponseStatusCode,
+                        ResponseHeaders = res.ResponseHeaders,
+                    });
             }
 
             return JsonReader.Read(res.ObjectResult, responseDecoder);
@@ -239,7 +247,11 @@ namespace Dropbox.Api
             if (res.IsError)
             {
                 throw StructuredException<TError>.Decode<ApiException<TError>>(
-                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId), res.ResponseStatusCode, res.ResponseHeaders);
+                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId)
+                    {
+                        ResponseStatusCode = res.ResponseStatusCode,
+                        ResponseHeaders = res.ResponseHeaders,
+                    });
             }
 
             var response = JsonReader.Read(res.ObjectResult, responseDecoder);

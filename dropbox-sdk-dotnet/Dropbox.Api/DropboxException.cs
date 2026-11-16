@@ -91,7 +91,10 @@ namespace Dropbox.Api
 
             return new ReadOnlyDictionary<string, IReadOnlyList<string>>(headers
                 .GroupBy(header => header.Key, StringComparer.OrdinalIgnoreCase)
-                .ToDictionary(group => group.Key, group => (IReadOnlyList<string>)Array.AsReadOnly(group.SelectMany(header => header.Value).ToArray()), StringComparer.OrdinalIgnoreCase));
+                .ToDictionary(
+                    group => group.Key,
+                    group => (IReadOnlyList<string>)Array.AsReadOnly(group.SelectMany(header => header.Value).ToArray()),
+                    StringComparer.OrdinalIgnoreCase));
         }
     }
 

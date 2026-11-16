@@ -195,17 +195,18 @@ namespace Dropbox.Api.Unit.Tests
             }
         }
 
-        /// <summary>Verifies malformed structured responses retain context and the decoder cause.</summary>
+        /// <summary>Verifies malformed structured responses preserve the original decoder exception types.</summary>
         /// <param name="body">The invalid error body.</param>
-        /// <param name="causeType">The original decoder exception type.</param>
+        /// <param name="exceptionType">The original decoder exception type.</param>
         /// <returns>The asynchronous test task.</returns>
         [TestMethod]
         [DataRow("", typeof(InvalidOperationException))]
-        [DataRow("null", typeof(InvalidOperationException))]
+        [DataRow("null", typeof(NullReferenceException))]
         [DataRow("{", typeof(InvalidOperationException))]
         [DataRow("not-json", typeof(Newtonsoft.Json.JsonReaderException))]
+        [DataRow("{\"error_summary\":]}", typeof(Newtonsoft.Json.JsonReaderException))]
         [DataRow("{\"error_summary\":42}", typeof(InvalidCastException))]
-        public async Task TestMalformedStructuredResponses(string body, Type causeType)
+        public async Task TestMalformedStructuredResponses(string body, Type exceptionType)
         {
             foreach (var status in new[] { 401, 409 })
             {
@@ -214,10 +215,9 @@ namespace Dropbox.Api.Unit.Tests
                     var handler = new ResponseHandler(() => CreateResponse((HttpStatusCode)status, body));
                     using (var client = CreateClient(handler))
                     {
-                        var exception = await Assert.ThrowsAsync<DropboxException>(() => InvokeRoute(client, style)).ConfigureAwait(false);
-                        Assert.AreEqual(typeof(DropboxException), exception.GetType());
-                        Assert.AreEqual(causeType, exception.InnerException.GetType());
-                        AssertMetadata(exception, status);
+                        var exception = await Assert.ThrowsAsync<Exception>(() => InvokeRoute(client, style)).ConfigureAwait(false);
+                        Assert.AreEqual(exceptionType, exception.GetType());
+                        Assert.IsNull(exception.InnerException);
                         Assert.IsTrue(((TrackedResponse)handler.LastResponse).Disposed);
                         Assert.AreEqual(1, handler.RequestCount);
                     }
@@ -225,17 +225,43 @@ namespace Dropbox.Api.Unit.Tests
             }
         }
 
-        /// <summary>Verifies decoding leaves unrelated failures and constructor exceptions untouched.</summary>
+        /// <summary>Verifies decoder and factory failures propagate without changing the exception instance.</summary>
+        /// <param name="exceptionType">The failure type to inject.</param>
         [TestMethod]
-        public void TestUnrelatedDecodingFailuresAreNotWrapped()
+        [DataRow(typeof(InvalidOperationException))]
+        [DataRow(typeof(InvalidCastException))]
+        [DataRow(typeof(OverflowException))]
+        [DataRow(typeof(NullReferenceException))]
+        [DataRow(typeof(IOException))]
+        public void TestUnrelatedDecodingFailuresAreNotWrapped(Type exceptionType)
         {
-            var failure = new IOException("decoder I/O failure");
-            Assert.AreSame(failure, Assert.ThrowsExactly<IOException>(() =>
-                StructuredException<GetMetadataError>.Decode("{\"error\":{}}", new FailingDecoder(failure), () => new ApiException<GetMetadataError>(null))));
-            var constructorFailure = new InvalidOperationException("constructor failure");
-            Assert.AreSame(constructorFailure, Assert.ThrowsExactly<InvalidOperationException>(() =>
-                StructuredException<GetMetadataError>.Decode<ApiException<GetMetadataError>>("{}", GetMetadataError.Decoder, () => throw constructorFailure)));
-            var incomplete = StructuredException<GetMetadataError>.Decode("{}", GetMetadataError.Decoder, () => new ApiException<GetMetadataError>("request-123"));
+            var failure = (Exception)Activator.CreateInstance(exceptionType, "unrelated failure");
+            var decoder = new FailingDecoder(failure);
+            var decoded = Assert.Throws<Exception>(() =>
+                StructuredException<GetMetadataError>.Decode("{\"error\":{}}", decoder, () => new ApiException<GetMetadataError>(null)));
+            Assert.AreSame(failure, decoded);
+            var constructed = Assert.Throws<Exception>(() =>
+                StructuredException<GetMetadataError>.Decode<ApiException<GetMetadataError>>("{}", GetMetadataError.Decoder, () => throw failure));
+            Assert.AreSame(failure, constructed);
+        }
+
+        /// <summary>Verifies the original decoder still decides whether to construct an exception.</summary>
+        [TestMethod]
+        public void TestOriginalExceptionConstruction()
+        {
+            var calls = 0;
+            Func<ApiException<GetMetadataError>> factory = () =>
+            {
+                calls++;
+                return new ApiException<GetMetadataError>("request-123");
+            };
+            Assert.IsNull(StructuredException<GetMetadataError>.Decode("null", GetMetadataError.Decoder, factory));
+            Assert.AreEqual(0, calls);
+            Assert.ThrowsExactly<Newtonsoft.Json.JsonReaderException>(() =>
+                StructuredException<GetMetadataError>.Decode("not-json", GetMetadataError.Decoder, factory));
+            Assert.AreEqual(0, calls);
+            var incomplete = StructuredException<GetMetadataError>.Decode("{}", GetMetadataError.Decoder, factory);
+            Assert.AreEqual(1, calls);
             Assert.IsNull(incomplete.ErrorResponse);
             Assert.IsNull(incomplete.Message);
         }
