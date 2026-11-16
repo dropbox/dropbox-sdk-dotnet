@@ -179,6 +179,66 @@
   <h5 id="Dropbox_Api_DropboxException_RequestId_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>This value may be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> when no response was received from Dropbox.</p>
 </div>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_DropboxException_ResponseHeaders_" data-uid="Dropbox.Api.DropboxException.ResponseHeaders*"></a>
+  <h4 id="Dropbox_Api_DropboxException_ResponseHeaders" data-uid="Dropbox.Api.DropboxException.ResponseHeaders">ResponseHeaders</h4>
+  <div class="markdown level1 summary"><p>Gets a read-only snapshot of the response and content headers, with case-insensitive names
+and all values preserved. Empty when no HTTP response was received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyDictionary&lt;string, IReadOnlyList&lt;string&gt;&gt; ResponseHeaders { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Dropbox_Api_DropboxException_ResponseHeaders_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The snapshot remains available after the HTTP response is disposed.</p>
+</div>
+
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/main/dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs">View Source</a>
+  </span>
+  <a id="Dropbox_Api_DropboxException_ResponseStatusCode_" data-uid="Dropbox.Api.DropboxException.ResponseStatusCode*"></a>
+  <h4 id="Dropbox_Api_DropboxException_ResponseStatusCode" data-uid="Dropbox.Api.DropboxException.ResponseStatusCode">ResponseStatusCode</h4>
+  <div class="markdown level1 summary"><p>Gets the numeric status code of the actual HTTP response, or null when no response was received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? ResponseStatusCode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
 </h3>
 
