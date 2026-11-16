@@ -158,7 +158,11 @@ namespace Dropbox.Api
             if (res.IsError)
             {
                 throw StructuredException<TError>.Decode<ApiException<TError>>(
-                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId));
+                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId)
+                    {
+                        ResponseStatusCode = res.ResponseStatusCode,
+                        ResponseHeaders = res.ResponseHeaders,
+                    });
             }
 
             return JsonReader.Read(res.ObjectResult, responseDecoder);
@@ -200,7 +204,11 @@ namespace Dropbox.Api
             if (res.IsError)
             {
                 throw StructuredException<TError>.Decode<ApiException<TError>>(
-                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId));
+                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId)
+                    {
+                        ResponseStatusCode = res.ResponseStatusCode,
+                        ResponseHeaders = res.ResponseHeaders,
+                    });
             }
 
             return JsonReader.Read(res.ObjectResult, responseDecoder);
@@ -239,7 +247,11 @@ namespace Dropbox.Api
             if (res.IsError)
             {
                 throw StructuredException<TError>.Decode<ApiException<TError>>(
-                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId));
+                    res.ObjectResult, errorDecoder, () => new ApiException<TError>(res.RequestId)
+                    {
+                        ResponseStatusCode = res.ResponseStatusCode,
+                        ResponseHeaders = res.ResponseHeaders,
+                    });
             }
 
             var response = JsonReader.Read(res.ObjectResult, responseDecoder);
@@ -281,31 +293,36 @@ namespace Dropbox.Api
             var bodyContent = new FormUrlEncodedContent(parameters);
 
             // Honor a caller-supplied HttpClient here too.
-            var response = await this.GetHttpClient(HostType.Api).PostAsync(url, bodyContent).ConfigureAwait(false);
-
-            // A revoked or invalid refresh token returns invalid_grant (as 400 or
-            // 401); surface it as an AuthException instead of a generic error.
-            if (!response.IsSuccessStatusCode)
+            using (var response = await this.GetHttpClient(HostType.Api).PostAsync(url, bodyContent).ConfigureAwait(false))
             {
-                var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                if (this.TryParseOAuthError(reason, out var error, out var description) && error == "invalid_grant")
+                // A revoked or invalid refresh token returns invalid_grant (as 400 or
+                // 401); surface it as an AuthException instead of a generic error.
+                if (!response.IsSuccessStatusCode)
                 {
-                    throw new AuthException(this.GetRequestId(response), description ?? error, (int)response.StatusCode);
+                    var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    if (this.TryParseOAuthError(reason, out var error, out var description) && error == "invalid_grant")
+                    {
+                        throw new AuthException(this.GetRequestId(response), description ?? error, (int)response.StatusCode)
+                        {
+                            ResponseStatusCode = (int)response.StatusCode,
+                            ResponseHeaders = DropboxException.GetResponseHeaders(response),
+                        };
+                    }
                 }
+
+                response.EnsureSuccessStatusCode();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = JObject.Parse(await response.Content.ReadAsStringAsync());
+                    string accessToken = json["access_token"].ToString();
+                    DateTime tokenExpiration = DateTime.Now.AddSeconds(json["expires_in"].ToObject<int>());
+                    this.options.UpdateAccessToken(accessToken, tokenExpiration);
+                    return true;
+                }
+
+                return false;
             }
-
-            response.EnsureSuccessStatusCode();
-
-            if (response.IsSuccessStatusCode)
-            {
-                var json = JObject.Parse(await response.Content.ReadAsStringAsync());
-                string accessToken = json["access_token"].ToString();
-                DateTime tokenExpiration = DateTime.Now.AddSeconds(json["expires_in"].ToObject<int>());
-                this.options.UpdateAccessToken(accessToken, tokenExpiration);
-                return true;
-            }
-
-            return false;
         }
 
         /// <summary>
@@ -672,8 +689,14 @@ namespace Dropbox.Api
             var response = await this.GetHttpClient(host).SendAsync(request, completionOption).ConfigureAwait(false);
 
             var requestId = this.GetRequestId(response);
+            IReadOnlyDictionary<string, IReadOnlyList<string>> responseHeaders = null;
             try
             {
+                if (!response.IsSuccessStatusCode)
+                {
+                    responseHeaders = DropboxException.GetResponseHeaders(response);
+                }
+
                 if ((int)response.StatusCode >= 500)
                 {
                     var text = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
@@ -689,22 +712,22 @@ namespace Dropbox.Api
                 else if (response.StatusCode == HttpStatusCode.Unauthorized)
                 {
                     var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    throw AuthException.Decode(reason, () => new AuthException(this.GetRequestId(response)));
+                    throw AuthException.Decode(reason, () => new AuthException(requestId));
                 }
                 else if ((int)response.StatusCode == 429)
                 {
                     var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    throw RateLimitException.Decode(reason, () => new RateLimitException(this.GetRequestId(response)));
+                    throw RateLimitException.Decode(reason, () => new RateLimitException(requestId));
                 }
                 else if (response.StatusCode == HttpStatusCode.Forbidden)
                 {
                     var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    throw AccessException.Decode(reason, () => new AccessException(this.GetRequestId(response)));
+                    throw AccessException.Decode(reason, () => new AccessException(requestId));
                 }
                 else if ((int)response.StatusCode == 422)
                 {
                     var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    throw PathRootException.Decode(reason, () => new PathRootException(this.GetRequestId(response)));
+                    throw PathRootException.Decode(reason, () => new PathRootException(requestId));
                 }
                 else if (response.StatusCode == HttpStatusCode.Conflict ||
                     response.StatusCode == HttpStatusCode.NotFound)
@@ -715,7 +738,9 @@ namespace Dropbox.Api
                     {
                         IsError = true,
                         ObjectResult = reason,
-                        RequestId = this.GetRequestId(response),
+                        RequestId = requestId,
+                        ResponseStatusCode = (int)response.StatusCode,
+                        ResponseHeaders = responseHeaders,
                     };
                 }
                 else if ((int)response.StatusCode >= 200 && (int)response.StatusCode <= 299)
@@ -745,6 +770,12 @@ namespace Dropbox.Api
                     text = this.CheckForError(text);
                     throw new HttpException(requestId, (int)response.StatusCode, text, uri);
                 }
+            }
+            catch (DropboxException exception)
+            {
+                exception.ResponseStatusCode = (int)response.StatusCode;
+                exception.ResponseHeaders = responseHeaders ?? exception.ResponseHeaders;
+                throw;
             }
             finally
             {
@@ -924,6 +955,12 @@ namespace Dropbox.Api
             /// </summary>
             /// <value>The request id.</value>
             public string RequestId { get; set; }
+
+            /// <summary>Gets or sets the actual HTTP status for an error response.</summary>
+            public int? ResponseStatusCode { get; set; }
+
+            /// <summary>Gets or sets the headers snapshot for an error response.</summary>
+            public IReadOnlyDictionary<string, IReadOnlyList<string>> ResponseHeaders { get; set; }
 
             /// <summary>
             /// Gets or sets the HTTP response, this is only set if the route was a download route.

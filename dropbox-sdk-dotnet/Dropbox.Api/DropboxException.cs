@@ -7,7 +7,11 @@
 namespace Dropbox.Api
 {
     using System;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
     using System.Globalization;
+    using System.Linq;
+    using System.Net.Http;
     using System.Text;
 
     /// <summary>
@@ -15,6 +19,10 @@ namespace Dropbox.Api
     /// </summary>
     public class DropboxException : Exception
     {
+        /// <summary>The shared empty snapshot for exceptions without an HTTP response.</summary>
+        private static readonly IReadOnlyDictionary<string, IReadOnlyList<string>> EmptyHeaders =
+            new ReadOnlyDictionary<string, IReadOnlyList<string>>(new Dictionary<string, IReadOnlyList<string>>(StringComparer.OrdinalIgnoreCase));
+
         /// <summary>
         /// The request id.
         /// </summary>
@@ -44,6 +52,18 @@ namespace Dropbox.Api
         }
 
         /// <summary>
+        /// Gets a read-only snapshot of the response and content headers, with case-insensitive names
+        /// and all values preserved. Empty when no HTTP response was received.
+        /// </summary>
+        /// <remarks>The snapshot remains available after the HTTP response is disposed.</remarks>
+        public IReadOnlyDictionary<string, IReadOnlyList<string>> ResponseHeaders { get; internal set; } = EmptyHeaders;
+
+        /// <summary>
+        /// Gets the numeric status code of the actual HTTP response, or null when no response was received.
+        /// </summary>
+        public int? ResponseStatusCode { get; internal set; }
+
+        /// <summary>
         ///  The ToString().
         /// </summary>
         /// <returns>A string that represents the current <see cref="DropboxException"/>.</returns>
@@ -56,6 +76,25 @@ namespace Dropbox.Api
             }
 
             return builder.ToString();
+        }
+
+        /// <summary>Copies response and content headers without retaining their mutable collections.</summary>
+        /// <param name="response">The HTTP response to snapshot.</param>
+        /// <returns>A deeply read-only snapshot with case-insensitive header names.</returns>
+        internal static IReadOnlyDictionary<string, IReadOnlyList<string>> GetResponseHeaders(HttpResponseMessage response)
+        {
+            var headers = response.Headers.AsEnumerable();
+            if (response.Content != null)
+            {
+                headers = headers.Concat(response.Content.Headers);
+            }
+
+            return new ReadOnlyDictionary<string, IReadOnlyList<string>>(headers
+                .GroupBy(header => header.Key, StringComparer.OrdinalIgnoreCase)
+                .ToDictionary(
+                    group => group.Key,
+                    group => (IReadOnlyList<string>)Array.AsReadOnly(group.SelectMany(header => header.Value).ToArray()),
+                    StringComparer.OrdinalIgnoreCase));
         }
     }
 

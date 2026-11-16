@@ -71,7 +71,8 @@ namespace Dropbox.Api
         internal static TException Decode<TException>(string json, IDecoder<TError> errorDecoder, Func<TException> exceptionFunc)
             where TException : StructuredException<TError>
         {
-            return JsonReader.Read(json, new StructuredExceptionDecoder<TException>(errorDecoder, exceptionFunc));
+            return JsonReader.Read(json, new StructuredExceptionDecoder<TException>(errorDecoder, exceptionFunc))
+                ?? throw new Newtonsoft.Json.JsonReaderException("Expected a structured error object, got JSON null.");
         }
 
         /// <summary>
