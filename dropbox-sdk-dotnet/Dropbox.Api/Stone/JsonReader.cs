@@ -30,7 +30,7 @@ namespace Dropbox.Api.Stone
         private JsonReader(JsonTextReader reader)
         {
             this.reader = reader;
-            this.reader.Read();
+            this.ReadNext();
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Dropbox.Api.Stone
         /// <returns>If read succeeded.</returns>
         bool IJsonReader.Read()
         {
-            return this.reader.Read();
+            return this.ReadNext();
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace Dropbox.Api.Stone
         void IJsonReader.Skip()
         {
             this.reader.Skip();
-            this.reader.Read();
+            this.ReadNext();
         }
 
         /// <summary>
@@ -205,6 +205,21 @@ namespace Dropbox.Api.Stone
             return this.ReadValue<string>();
         }
 
+        /// <summary>Advances the reader, rejecting EOF inside an unfinished JSON container.</summary>
+        /// <returns>Whether another token was read.</returns>
+        private bool ReadNext()
+        {
+            var insideContainer = this.reader.Depth > 0 ||
+                this.reader.TokenType == JsonToken.StartObject || this.reader.TokenType == JsonToken.StartArray;
+            var hasToken = this.reader.Read();
+            if (!hasToken && insideContainer)
+            {
+                throw new JsonReaderException("Unexpected end of JSON inside an object or array.");
+            }
+
+            return hasToken;
+        }
+
         /// <summary>
         /// Read next token as specific value type.
         /// </summary>
@@ -214,13 +229,8 @@ namespace Dropbox.Api.Stone
         {
             try
             {
-                var isPropertyName = this.reader.TokenType == JsonToken.PropertyName;
                 var value = (T)this.reader.Value;
-                if (!this.reader.Read() && isPropertyName)
-                {
-                    throw new JsonReaderException("Unexpected end of JSON after a property name.");
-                }
-
+                this.ReadNext();
                 return value;
             }
             catch (InvalidCastException)

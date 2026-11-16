@@ -202,11 +202,12 @@ namespace Dropbox.Api.Unit.Tests
         [TestMethod]
         [DataRow("", typeof(InvalidOperationException))]
         [DataRow("null", typeof(Newtonsoft.Json.JsonReaderException))]
-        [DataRow("{", typeof(InvalidOperationException))]
+        [DataRow("{", typeof(Newtonsoft.Json.JsonReaderException))]
         [DataRow("not-json", typeof(Newtonsoft.Json.JsonReaderException))]
         [DataRow("{\"error_summary\":]}", typeof(Newtonsoft.Json.JsonReaderException))]
         [DataRow("{\"error_summary\":", typeof(Newtonsoft.Json.JsonReaderException))]
         [DataRow("{\"unknown\":", typeof(Newtonsoft.Json.JsonReaderException))]
+        [DataRow("{\"unknown\":[[1],", typeof(Newtonsoft.Json.JsonReaderException))]
         [DataRow("{\"error\":{\".tag\":", typeof(Newtonsoft.Json.JsonReaderException))]
         [DataRow("{\"error_summary\":42}", typeof(InvalidCastException))]
         public async Task TestMalformedStructuredResponses(string body, Type exceptionType)
@@ -225,6 +226,21 @@ namespace Dropbox.Api.Unit.Tests
                         Assert.AreEqual(1, handler.RequestCount);
                     }
                 }
+            }
+        }
+
+        /// <summary>Verifies a truncated array in a successful response fails decoding without hanging.</summary>
+        /// <returns>The asynchronous test task.</returns>
+        [TestMethod]
+        public async Task TestTruncatedArrayInSuccessResponse()
+        {
+            var handler = new ResponseHandler(() => CreateResponse(HttpStatusCode.OK, "{\"template_ids\":[\"id\","));
+            using (var client = CreateClient(handler))
+            {
+                await Assert.ThrowsExactlyAsync<Newtonsoft.Json.JsonReaderException>(
+                    () => client.FileProperties.TemplatesListForUserAsync()).ConfigureAwait(false);
+                Assert.IsTrue(((TrackedResponse)handler.LastResponse).Disposed);
+                Assert.AreEqual(1, handler.RequestCount);
             }
         }
 
