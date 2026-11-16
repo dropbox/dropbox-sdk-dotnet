@@ -132,9 +132,9 @@ catch (Dropbox.Api.DropboxException ex)
 }
 ```
 
-Decoding failures propagate with their original exception types. HTTP metadata is available
-on `DropboxException` when decoding succeeds; malformed responses that fail decoding do not
-expose it through this API. Existing exception types and retry behavior are unchanged.
+Malformed JSON and other decoding failures propagate with their original exception types.
+HTTP metadata is not guaranteed when decoding fails. Existing exception types and retry
+behavior are unchanged.
 `RateLimitException.RetryAfter` continues to come from the structured error body.
 
 ## Getting Help

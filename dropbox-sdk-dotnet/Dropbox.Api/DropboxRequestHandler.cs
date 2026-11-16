@@ -774,7 +774,7 @@ namespace Dropbox.Api
             catch (DropboxException exception)
             {
                 exception.ResponseStatusCode = (int)response.StatusCode;
-                exception.ResponseHeaders = responseHeaders;
+                exception.ResponseHeaders = responseHeaders ?? exception.ResponseHeaders;
                 throw;
             }
             finally
