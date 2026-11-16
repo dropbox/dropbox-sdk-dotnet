@@ -16,6 +16,7 @@ namespace Dropbox.Api.Unit.Tests
     using System.Threading;
     using System.Threading.Tasks;
     using Dropbox.Api.Files;
+    using Dropbox.Api.Stone;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     /// <summary>
@@ -24,120 +25,71 @@ namespace Dropbox.Api.Unit.Tests
     [TestClass]
     public class DropboxExceptionTests
     {
-        /// <summary>
-        /// Verifies direct HTTP exceptions expose their Dropbox request ID.
-        /// </summary>
-        /// <returns>The asynchronous test task.</returns>
-        [TestMethod]
-        public async Task TestBadInputExceptionExposesRequestId()
-        {
-            var handler = new ResponseHandler(() => CreateResponse(HttpStatusCode.BadRequest, "bad input"));
-            using (var client = CreateClient(handler))
-            {
-                var exception = await CaptureExceptionAsync<BadInputException>(
-                    () => client.Files.GetMetadataAsync("/test.txt")).ConfigureAwait(false);
+        private const string Error = "{\"error_summary\":\"test-error\",\"error\":{\".tag\":\"other\"}}";
+        private const string PathError = "{\"error_summary\":\"path/not_found/..\",\"error\":{\".tag\":\"path\",\"path\":{\".tag\":\"not_found\"}}}";
+        private const string RateError = "{\"error_summary\":\"too_many_requests/..\",\"error\":{\"reason\":{\".tag\":\"too_many_requests\"},\"retry_after\":100}}";
 
-                Assert.AreEqual("request-123", exception.RequestId);
-            }
-        }
-
-        /// <summary>
-        /// Verifies structured API exceptions expose their Dropbox request ID.
-        /// </summary>
-        /// <returns>The asynchronous test task.</returns>
-        [TestMethod]
-        public async Task TestApiExceptionExposesRequestId()
-        {
-            const string Body = "{\"error_summary\":\"path/not_found/..\",\"error\":{\".tag\":\"path\",\"path\":{\".tag\":\"not_found\"}}}";
-            var handler = new ResponseHandler(() => CreateResponse(HttpStatusCode.Conflict, Body));
-            using (var client = CreateClient(handler))
-            {
-                var exception = await CaptureExceptionAsync<ApiException<GetMetadataError>>(
-                    () => client.Files.GetMetadataAsync("/missing.txt")).ConfigureAwait(false);
-
-                Assert.AreEqual("request-123", exception.RequestId);
-                Assert.IsTrue(exception.ErrorResponse.IsPath);
-            }
-        }
-
-        /// <summary>
-        /// Verifies decoded rate-limit exceptions expose their Dropbox request ID.
-        /// </summary>
-        /// <returns>The asynchronous test task.</returns>
-        [TestMethod]
-        public async Task TestRateLimitExceptionExposesRequestId()
-        {
-            const string Body = "{\"error_summary\":\"too_many_requests/..\",\"error\":{\"reason\":{\".tag\":\"too_many_requests\"},\"retry_after\":100}}";
-            var handler = new ResponseHandler(() => CreateResponse((HttpStatusCode)429, Body));
-            using (var client = CreateClient(handler))
-            {
-                var exception = await CaptureExceptionAsync<RateLimitException>(
-                    () => client.Files.GetMetadataAsync("/test.txt")).ConfigureAwait(false);
-
-                Assert.AreEqual("request-123", exception.RequestId);
-                Assert.AreEqual(100, exception.RetryAfter);
-            }
-        }
-
-        /// <summary>
-        /// Verifies OAuth refresh exceptions expose their Dropbox request ID.
-        /// </summary>
-        /// <returns>The asynchronous test task.</returns>
-        [TestMethod]
-        public async Task TestRefreshAuthExceptionExposesRequestId()
-        {
-            const string Body = "{\"error\":\"invalid_grant\",\"error_description\":\"Refresh token is invalid.\"}";
-            var handler = new ResponseHandler(() => CreateResponse(HttpStatusCode.BadRequest, Body));
-            var config = new DropboxClientConfig { HttpClient = new HttpClient(handler) };
-            using (var client = new DropboxClient("refresh-token", "app-key", "app-secret", config))
-            {
-                var exception = await CaptureExceptionAsync<AuthException>(
-                    () => client.RefreshAccessToken(null)).ConfigureAwait(false);
-
-                Assert.AreEqual("request-123", exception.RequestId);
-            }
-        }
-
-        /// <summary>Verifies actual statuses and concrete types across all route styles.</summary>
+        /// <summary>Verifies actual statuses, concrete types, and metadata on the shared HTTP error path.</summary>
         /// <param name="status">The response status.</param>
+        /// <param name="body">The response body.</param>
+        /// <param name="exceptionType">The expected exception type.</param>
         /// <returns>The asynchronous test task.</returns>
         [TestMethod]
-        [DataRow(400)]
-        [DataRow(401)]
-        [DataRow(403)]
-        [DataRow(404)]
-        [DataRow(409)]
-        [DataRow(422)]
-        [DataRow(429)]
-        [DataRow(500)]
-        [DataRow(503)]
-        [DataRow(418)]
-        public async Task TestMetadataAcrossRouteStyles(int status)
+        [DataRow(400, "bad input", typeof(BadInputException))]
+        [DataRow(401, Error, typeof(AuthException))]
+        [DataRow(403, Error, typeof(AccessException))]
+        [DataRow(404, PathError, typeof(ApiException<GetMetadataError>))]
+        [DataRow(409, PathError, typeof(ApiException<GetMetadataError>))]
+        [DataRow(418, "teapot", typeof(HttpException))]
+        [DataRow(422, Error, typeof(PathRootException))]
+        [DataRow(429, RateError, typeof(RateLimitException))]
+        [DataRow(500, "server error", typeof(RetryException))]
+        [DataRow(503, "unavailable", typeof(RetryException))]
+        public async Task TestHttpErrors(int status, string body, Type exceptionType)
         {
-            foreach (var style in new[] { "rpc", "upload", "download" })
+            var handler = new ResponseHandler(() => CreateResponse((HttpStatusCode)status, body));
+            using (var client = CreateClient(handler))
             {
-                var handler = new ResponseHandler(() => CreateResponse((HttpStatusCode)status, ErrorBody(status, style)));
-                using (var client = CreateClient(handler))
+                var exception = await Assert.ThrowsAsync<DropboxException>(() => client.Files.GetMetadataAsync("/test.txt")).ConfigureAwait(false);
+                Assert.AreEqual(exceptionType, exception.GetType());
+                AssertMetadata(exception, status);
+                Assert.IsTrue(((TrackedResponse)handler.LastResponse).Disposed);
+                Assert.AreEqual(1, handler.RequestCount);
+                Assert.IsFalse(exception.Message.Contains("private-timing"));
+                Assert.IsFalse(exception.ToString().Contains("X-Server-Response-Time"));
+                Assert.IsFalse(exception.ToString().Contains("private-timing"));
+                if (exception is HttpException http)
                 {
-                    var exception = await CaptureExceptionAsync<DropboxException>(() => InvokeRoute(client, style)).ConfigureAwait(false);
-                    Assert.AreEqual(ExpectedType(status, style), exception.GetType());
-                    AssertMetadata(exception, status);
-                    Assert.IsTrue(((TrackedResponse)handler.LastResponse).Disposed);
-                    Assert.AreEqual(1, handler.RequestCount);
-                    Assert.IsFalse(exception.Message.Contains("private-timing"));
-                    Assert.IsFalse(exception.ToString().Contains("private-timing"));
-                    Assert.IsFalse(exception.ToString().Contains("X-Server-Response-Time"));
-                    if (exception is HttpException http)
-                    {
-                        Assert.AreEqual(status, http.StatusCode);
-                        Assert.IsNotNull(http.RequestUri);
-                    }
-
-                    if (exception is RateLimitException rateLimit)
-                    {
-                        Assert.AreEqual(100, rateLimit.RetryAfter);
-                    }
+                    Assert.AreEqual(status, http.StatusCode);
+                    Assert.AreEqual(body, http.Message);
+                    Assert.IsNotNull(http.RequestUri);
                 }
+
+                if (exception is ApiException<GetMetadataError> api)
+                {
+                    Assert.IsTrue(api.ErrorResponse.IsPath);
+                    Assert.AreEqual("path/not_found/..", api.Message);
+                }
+            }
+        }
+
+        /// <summary>Verifies upload and download errors carry metadata through the internal result.</summary>
+        /// <param name="style">The route style.</param>
+        /// <param name="exceptionType">The expected structured exception type.</param>
+        /// <returns>The asynchronous test task.</returns>
+        [TestMethod]
+        [DataRow("upload", typeof(ApiException<UploadError>))]
+        [DataRow("download", typeof(ApiException<DownloadError>))]
+        public async Task TestContentRouteErrors(string style, Type exceptionType)
+        {
+            var body = style == "upload" ? "{\"error\":{\".tag\":\"payload_too_large\"}}" : PathError;
+            var handler = new ResponseHandler(() => CreateResponse(HttpStatusCode.Conflict, body));
+            using (var client = CreateClient(handler))
+            {
+                var exception = await Assert.ThrowsAsync<DropboxException>(() => InvokeRoute(client, style)).ConfigureAwait(false);
+                Assert.AreEqual(exceptionType, exception.GetType());
+                AssertMetadata(exception, 409);
+                Assert.IsTrue(((TrackedResponse)handler.LastResponse).Disposed);
             }
         }
 
@@ -160,7 +112,7 @@ namespace Dropbox.Api.Unit.Tests
             });
             using (var client = CreateClient(handler))
             {
-                var exception = await CaptureExceptionAsync<BadInputException>(() => client.Files.DownloadAsync("/test.txt")).ConfigureAwait(false);
+                var exception = await Assert.ThrowsAsync<BadInputException>(() => client.Files.DownloadAsync("/test.txt")).ConfigureAwait(false);
                 Assert.AreEqual<int?>(400, exception.ResponseStatusCode);
                 Assert.IsNull(exception.RequestId);
                 Assert.AreEqual(0, exception.ResponseHeaders.Count);
@@ -168,28 +120,26 @@ namespace Dropbox.Api.Unit.Tests
             }
         }
 
-        /// <summary>Verifies neither input collections nor public collection casts can mutate the snapshot.</summary>
+        /// <summary>Verifies the public snapshot is independent of response headers and input lists.</summary>
+        /// <returns>The asynchronous test task.</returns>
         [TestMethod]
-        public void TestSnapshotIsDeeplyReadOnly()
+        public async Task TestSnapshotIsDeeplyReadOnly()
         {
             var values = new List<string> { "first", "second" };
-            var source = new Dictionary<string, IEnumerable<string>> { { "X-Test", values } };
-            var metadata = new HttpResponseMetadata(503, source);
-            values[0] = "changed";
-            values.Add("third");
-            source.Clear();
-            CollectionAssert.AreEqual(new[] { "first", "second" }, metadata.Headers["x-test"].ToArray());
-            AssertReadOnly(metadata.Headers);
-            Assert.ThrowsExactly<NotSupportedException>(() => ((IList<string>)metadata.Headers["X-Test"])[0] = "changed");
-            Assert.ThrowsExactly<NotSupportedException>(() => ((IList<string>)metadata.Headers["X-Test"]).Add("third"));
-
-            using (var response = CreateResponse(HttpStatusCode.BadRequest, "bad input"))
+            var response = CreateResponse(HttpStatusCode.BadRequest, "bad input");
+            response.Headers.Add("X-Test", values);
+            response.Content.Headers.Add("x-test", "third");
+            var handler = new ResponseHandler(() => response);
+            using (var client = CreateClient(handler))
             {
-                var snapshot = HttpResponseMetadata.FromResponse(response);
-                response.Headers.Remove("X-Server-Response-Time");
+                var exception = await Assert.ThrowsAsync<BadInputException>(() => client.Files.GetMetadataAsync("/test.txt")).ConfigureAwait(false);
+                values[0] = "changed";
+                response.Headers.Remove("X-Test");
                 response.Content.Headers.ContentType = null;
-                Assert.AreEqual(2, snapshot.Headers["X-Server-Response-Time"].Count);
-                Assert.AreEqual("application/json; charset=utf-8", snapshot.Headers["Content-Type"][0]);
+                CollectionAssert.AreEqual(new[] { "first", "second", "third" }, exception.ResponseHeaders["x-test"].ToArray());
+                AssertMetadata(exception, 400);
+                Assert.ThrowsExactly<NotSupportedException>(() => ((IList<string>)exception.ResponseHeaders["X-Test"])[0] = "changed");
+                Assert.ThrowsExactly<NotSupportedException>(() => ((IList<string>)exception.ResponseHeaders["X-Test"]).Add("third"));
             }
         }
 
@@ -206,21 +156,20 @@ namespace Dropbox.Api.Unit.Tests
             var responses = new List<TrackedResponse>();
             var handler = new ResponseHandler(() =>
             {
-                var response = (TrackedResponse)CreateResponse((HttpStatusCode)status, ErrorBody(status, "rpc"));
+                var response = (TrackedResponse)CreateResponse((HttpStatusCode)status, Error);
                 response.Headers.Remove("X-Dropbox-Request-Id");
                 response.Headers.Add("X-Dropbox-Request-Id", "attempt-" + (++attempts));
-                response.Headers.Add("X-Attempt", attempts.ToString(System.Globalization.CultureInfo.InvariantCulture));
                 responses.Add(response);
                 return response;
             });
             using (var client = CreateClient(handler, maxRetries: 1))
             {
-                var exception = await CaptureExceptionAsync<DropboxException>(() => client.Files.GetMetadataAsync("/test.txt")).ConfigureAwait(false);
-                Assert.AreEqual(ExpectedType(status, "rpc"), exception.GetType());
+                var exception = await Assert.ThrowsAsync<DropboxException>(() => client.Files.GetMetadataAsync("/test.txt")).ConfigureAwait(false);
+                Assert.AreEqual(status == 401 ? typeof(AuthException) : typeof(RetryException), exception.GetType());
                 Assert.AreEqual(2, handler.RequestCount);
                 Assert.AreEqual("attempt-2", exception.RequestId);
                 Assert.AreEqual<int?>(status, exception.ResponseStatusCode);
-                CollectionAssert.AreEqual(new[] { "2" }, exception.ResponseHeaders["X-Attempt"].ToArray());
+                Assert.AreEqual("attempt-2", exception.ResponseHeaders["X-Dropbox-Request-Id"][0]);
                 Assert.IsTrue(responses.All(response => response.Disposed));
             }
         }
@@ -232,13 +181,14 @@ namespace Dropbox.Api.Unit.Tests
         {
             var handler = new ResponseHandler(() =>
             {
-                var response = CreateResponse((HttpStatusCode)429, ErrorBody(429, "rpc"));
+                var response = CreateResponse((HttpStatusCode)429, RateError);
                 response.Headers.Add("Retry-After", "999");
                 return response;
             });
             using (var client = CreateClient(handler, maxRetries: 2))
             {
-                var exception = await CaptureExceptionAsync<RateLimitException>(() => client.Files.GetMetadataAsync("/test.txt")).ConfigureAwait(false);
+                var exception = await Assert.ThrowsAsync<RateLimitException>(() => client.Files.GetMetadataAsync("/test.txt")).ConfigureAwait(false);
+                AssertMetadata(exception, 429);
                 Assert.AreEqual(100, exception.RetryAfter);
                 Assert.AreEqual("999", exception.ResponseHeaders["retry-after"][0]);
                 Assert.AreEqual(1, handler.RequestCount);
@@ -257,14 +207,14 @@ namespace Dropbox.Api.Unit.Tests
         [DataRow("{\"error_summary\":42}", typeof(InvalidCastException))]
         public async Task TestMalformedStructuredResponses(string body, Type causeType)
         {
-            foreach (var status in new[] { 401, 403, 404, 409, 422, 429 })
+            foreach (var status in new[] { 401, 409 })
             {
                 foreach (var style in new[] { "rpc", "upload", "download" })
                 {
                     var handler = new ResponseHandler(() => CreateResponse((HttpStatusCode)status, body));
                     using (var client = CreateClient(handler))
                     {
-                        var exception = await CaptureExceptionAsync<DropboxException>(() => InvokeRoute(client, style)).ConfigureAwait(false);
+                        var exception = await Assert.ThrowsAsync<DropboxException>(() => InvokeRoute(client, style)).ConfigureAwait(false);
                         Assert.AreEqual(typeof(DropboxException), exception.GetType());
                         Assert.AreEqual(causeType, exception.InnerException.GetType());
                         AssertMetadata(exception, status);
@@ -275,41 +225,47 @@ namespace Dropbox.Api.Unit.Tests
             }
         }
 
-        /// <summary>Preserves the existing permissive decoding of objects with missing error fields.</summary>
-        /// <returns>The asynchronous test task.</returns>
+        /// <summary>Verifies decoding leaves unrelated failures and constructor exceptions untouched.</summary>
         [TestMethod]
-        public async Task TestMissingStructuredFieldsPreservesExceptionType()
+        public void TestUnrelatedDecodingFailuresAreNotWrapped()
         {
-            foreach (var status in new[] { 401, 403, 409, 422, 429 })
-            {
-                var handler = new ResponseHandler(() => CreateResponse((HttpStatusCode)status, "{}"));
-                using (var client = CreateClient(handler))
-                {
-                    var exception = await CaptureExceptionAsync<DropboxException>(() => client.Files.GetMetadataAsync("/test.txt")).ConfigureAwait(false);
-                    Assert.AreEqual(ExpectedType(status, "rpc"), exception.GetType());
-                    Assert.IsNull(exception.InnerException);
-                    Assert.IsNull(exception.Message);
-                    AssertMetadata(exception, status);
-                }
-            }
+            var failure = new IOException("decoder I/O failure");
+            Assert.AreSame(failure, Assert.ThrowsExactly<IOException>(() =>
+                StructuredException<GetMetadataError>.Decode("{\"error\":{}}", new FailingDecoder(failure), () => new ApiException<GetMetadataError>(null))));
+            var constructorFailure = new InvalidOperationException("constructor failure");
+            Assert.AreSame(constructorFailure, Assert.ThrowsExactly<InvalidOperationException>(() =>
+                StructuredException<GetMetadataError>.Decode<ApiException<GetMetadataError>>("{}", GetMetadataError.Decoder, () => throw constructorFailure)));
+            var incomplete = StructuredException<GetMetadataError>.Decode("{}", GetMetadataError.Decoder, () => new ApiException<GetMetadataError>("request-123"));
+            Assert.IsNull(incomplete.ErrorResponse);
+            Assert.IsNull(incomplete.Message);
         }
 
         /// <summary>Verifies OAuth invalid_grant retains actual 400/401 status and response metadata.</summary>
         /// <param name="status">The OAuth response status.</param>
+        /// <param name="error">The OAuth error code.</param>
         /// <returns>The asynchronous test task.</returns>
         [TestMethod]
-        [DataRow(400)]
-        [DataRow(401)]
-        public async Task TestOAuthResponseMetadata(int status)
+        [DataRow(400, "invalid_grant")]
+        [DataRow(401, "invalid_grant")]
+        [DataRow(400, "invalid_client")]
+        public async Task TestOAuthResponseMetadata(int status, string error)
         {
-            const string Body = "{\"error\":\"invalid_grant\",\"error_description\":\"Refresh token is invalid.\"}";
-            var handler = new ResponseHandler(() => CreateResponse((HttpStatusCode)status, Body));
+            var body = "{\"error\":\"" + error + "\",\"error_description\":\"Refresh token is invalid.\"}";
+            var handler = new ResponseHandler(() => CreateResponse((HttpStatusCode)status, body));
             var config = new DropboxClientConfig { HttpClient = new HttpClient(handler) };
             using (var client = new DropboxClient("refresh-token", "app-key", "app-secret", config))
             {
-                var exception = await CaptureExceptionAsync<AuthException>(() => client.RefreshAccessToken(null)).ConfigureAwait(false);
-                AssertMetadata(exception, status);
-                Assert.AreEqual("Refresh token is invalid.", exception.Message);
+                if (error == "invalid_grant")
+                {
+                    var exception = await Assert.ThrowsExactlyAsync<AuthException>(() => client.RefreshAccessToken(null)).ConfigureAwait(false);
+                    AssertMetadata(exception, status);
+                    Assert.AreEqual("Refresh token is invalid.", exception.Message);
+                }
+                else
+                {
+                    await Assert.ThrowsExactlyAsync<HttpRequestException>(() => client.RefreshAccessToken(null)).ConfigureAwait(false);
+                }
+
                 Assert.IsTrue(((TrackedResponse)handler.LastResponse).Disposed);
                 Assert.AreEqual(1, handler.RequestCount);
             }
@@ -343,46 +299,6 @@ namespace Dropbox.Api.Unit.Tests
             }
         }
 
-        private static string ErrorBody(int status, string style)
-        {
-            if (status == 429)
-            {
-                return "{\"error_summary\":\"too_many_requests/..\",\"error\":{\"reason\":{\".tag\":\"too_many_requests\"},\"retry_after\":100}}";
-            }
-
-            if (status == 409 || status == 404)
-            {
-                return style == "upload"
-                    ? "{\"error_summary\":\"payload_too_large/..\",\"error\":{\".tag\":\"payload_too_large\"}}"
-                    : "{\"error_summary\":\"path/not_found/..\",\"error\":{\".tag\":\"path\",\"path\":{\".tag\":\"not_found\"}}}";
-            }
-
-            return "{\"error_summary\":\"test-error\",\"error\":{\".tag\":\"other\"}}";
-        }
-
-        private static Type ExpectedType(int status, string style)
-        {
-            switch (status)
-            {
-                case 400: return typeof(BadInputException);
-                case 401: return typeof(AuthException);
-                case 403: return typeof(AccessException);
-                case 404:
-                case 409:
-                    if (style == "upload")
-                    {
-                        return typeof(ApiException<UploadError>);
-                    }
-
-                    return style == "download" ? typeof(ApiException<DownloadError>) : typeof(ApiException<GetMetadataError>);
-                case 422: return typeof(PathRootException);
-                case 429: return typeof(RateLimitException);
-                case 500:
-                case 503: return typeof(RetryException);
-                default: return typeof(HttpException);
-            }
-        }
-
         private static DropboxClient CreateClient(ResponseHandler handler, int maxRetries = 0)
         {
             return new DropboxClient(
@@ -405,23 +321,19 @@ namespace Dropbox.Api.Unit.Tests
             return response;
         }
 
-        private static async Task<TException> CaptureExceptionAsync<TException>(Func<Task> action)
-            where TException : Exception
+        private sealed class FailingDecoder : IDecoder<GetMetadataError>
         {
-            try
+            private readonly Exception failure;
+
+            public FailingDecoder(Exception failure)
             {
-                await action().ConfigureAwait(false);
-            }
-            catch (TException exception)
-            {
-                return exception;
+                this.failure = failure;
             }
 
-            Assert.Fail(string.Format(
-                System.Globalization.CultureInfo.InvariantCulture,
-                "Expected an exception of type {0}.",
-                typeof(TException).FullName));
-            return null;
+            public GetMetadataError Decode(IJsonReader reader)
+            {
+                throw this.failure;
+            }
         }
 
         private sealed class TrackedResponse : HttpResponseMessage

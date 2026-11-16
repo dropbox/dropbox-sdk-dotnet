@@ -132,8 +132,8 @@ catch (Dropbox.Api.DropboxException ex)
 }
 ```
 
-Malformed structured error responses raise `DropboxException` with the decoding failure
-in `InnerException` and the HTTP metadata preserved. Existing structured exception types
+Structured error parsing failures raise `DropboxException` with the original cause
+in `InnerException` and the HTTP metadata preserved. Unrelated decoder failures propagate unchanged. Existing structured exception types
 and retry behavior are unchanged for valid error responses. `RateLimitException.RetryAfter`
 continues to come from the structured error body.
 

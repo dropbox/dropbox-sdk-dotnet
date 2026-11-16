@@ -7,6 +7,7 @@
 namespace Dropbox.Api
 {
     using System;
+    using System.Collections.Generic;
 
     using Dropbox.Api.Stone;
 
@@ -67,11 +68,32 @@ namespace Dropbox.Api
         /// <param name="json">The json.</param>
         /// <param name="errorDecoder">The error json.</param>
         /// <param name="exceptionFunc">The function to create exception.</param>
+        /// <param name="responseStatusCode">The actual HTTP status, if available.</param>
+        /// <param name="responseHeaders">The headers snapshot, if available.</param>
         /// <returns>The structured exception.</returns>
-        internal static TException Decode<TException>(string json, IDecoder<TError> errorDecoder, Func<TException> exceptionFunc)
+        internal static TException Decode<TException>(string json, IDecoder<TError> errorDecoder, Func<TException> exceptionFunc, int? responseStatusCode = null, IReadOnlyDictionary<string, IReadOnlyList<string>> responseHeaders = null)
             where TException : StructuredException<TError>
         {
-            return JsonReader.Read(json, new StructuredExceptionDecoder<TException>(errorDecoder, exceptionFunc));
+            var exception = exceptionFunc();
+            exception.ResponseStatusCode = responseStatusCode;
+            exception.ResponseHeaders = responseHeaders ?? exception.ResponseHeaders;
+            try
+            {
+                if (JsonReader.Read(json, new StructuredExceptionDecoder<TException>(errorDecoder, exception)) == null)
+                {
+                    throw new InvalidOperationException("The Dropbox error decoder returned null.");
+                }
+            }
+            catch (Exception inner) when (inner is Newtonsoft.Json.JsonException || inner is InvalidOperationException || inner is InvalidCastException || inner is OverflowException)
+            {
+                throw new DropboxException(exception.RequestId, "Failed to decode Dropbox error response.", inner)
+                {
+                    ResponseStatusCode = exception.ResponseStatusCode,
+                    ResponseHeaders = exception.ResponseHeaders,
+                };
+            }
+
+            return exception;
         }
 
         /// <summary>
@@ -87,19 +109,19 @@ namespace Dropbox.Api
             private readonly IDecoder<TError> errorDecoder;
 
             /// <summary>
-            /// The function which creates the exception.
+            /// The exception being decoded.
             /// </summary>
-            private readonly Func<TException> execptionFunc;
+            private readonly TException exception;
 
             /// <summary>
             /// Initializes a new instance of the <see cref="StructuredExceptionDecoder{TException}"/> class.
             /// </summary>
             /// <param name="errorDecoder">The error decoder.</param>
-            /// <param name="execptionFunc">The function which creates the exception.</param>
-            public StructuredExceptionDecoder(IDecoder<TError> errorDecoder, Func<TException> execptionFunc)
+            /// <param name="exception">The exception being decoded.</param>
+            public StructuredExceptionDecoder(IDecoder<TError> errorDecoder, TException exception)
             {
                 this.errorDecoder = errorDecoder;
-                this.execptionFunc = execptionFunc;
+                this.exception = exception;
             }
 
             /// <summary>
@@ -108,7 +130,7 @@ namespace Dropbox.Api
             /// <returns>The struct instance.</returns>
             protected override TException Create()
             {
-                return this.execptionFunc();
+                return this.exception;
             }
 
             /// <summary>
