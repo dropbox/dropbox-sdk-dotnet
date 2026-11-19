@@ -46,9 +46,9 @@ namespace Dropbox.Api.Files
             {
                 throw new sys.ArgumentOutOfRangeException("tagText", "Length should be at most 32");
             }
-            if (!re.Regex.IsMatch(tagText, @"\A(?:[\w]+)\z"))
+            if (!re.Regex.IsMatch(tagText, @"\A(?:[\w ]+)\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("tagText", @"Value should match pattern '\A(?:[\w]+)\z'");
+                throw new sys.ArgumentOutOfRangeException("tagText", @"Value should match pattern '\A(?:[\w ]+)\z'");
             }
 
             this.TagText = tagText;
