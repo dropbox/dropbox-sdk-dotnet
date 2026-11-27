@@ -41,7 +41,7 @@ jobs:
           aws-region: us-west-2
       - name: Get Codecov token from AWS Secrets Manager
         if: matrix.os == 'ubuntu-latest' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
-        uses: aws-actions/aws-secretsmanager-get-secrets@v3
+        uses: aws-actions/aws-secretsmanager-get-secrets@v4
         with:
           secret-ids: |
             CODECOV_TOKEN,codecov-token-dropbox-sdk-dotnet
@@ -86,13 +86,13 @@ jobs:
       # single JSON secret. With parse-json-secrets each JSON key is exposed as
       # an env var named CREDS_<KEY> (e.g. CREDS_SCOPED_USER_CLIENT_ID).
       - name: Get integration credentials from AWS Secrets Manager
-        uses: aws-actions/aws-secretsmanager-get-secrets@v3
+        uses: aws-actions/aws-secretsmanager-get-secrets@v4
         with:
           secret-ids: |
             CREDS,api-sdk-integration-test-creds
           parse-json-secrets: true
       - name: Get Codecov token from AWS Secrets Manager
-        uses: aws-actions/aws-secretsmanager-get-secrets@v3
+        uses: aws-actions/aws-secretsmanager-get-secrets@v4
         with:
           secret-ids: |
             CODECOV_TOKEN,codecov-token-dropbox-sdk-dotnet
