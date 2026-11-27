@@ -103,7 +103,7 @@ jobs:
           aws-region: us-west-2
 
       - name: Get NuGet token from AWS Secrets Manager
-        uses: aws-actions/aws-secretsmanager-get-secrets@v3
+        uses: aws-actions/aws-secretsmanager-get-secrets@v4
         with:
           secret-ids: |
             NUGET_TOKEN,nuget-api-token-dropbox-sdk-dotnet
